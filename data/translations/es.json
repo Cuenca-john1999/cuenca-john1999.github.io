@@ -1,0 +1,40 @@
+{
+  "common": {
+    "language": "Idioma",
+    "theme": "Tema",
+    "dark": "Oscuro",
+    "light": "Claro"
+  },
+  "home": {
+    "title": "Helix",
+    "subtitle": "Técnico Superior en Laboratorio Clínico y Biomédico"
+  },
+  "navigation": {
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "education": "Formación",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "sections": {
+    "about": {
+      "title": "Sobre mí"
+    },
+    "experience": {
+      "title": "Experiencia"
+    },
+    "education": {
+      "title": "Formación"
+    },
+    "skills": {
+      "title": "Habilidades"
+    },
+    "projects": {
+      "title": "Proyectos"
+    },
+    "contact": {
+      "title": "Contacto"
+    }
+  }
+}

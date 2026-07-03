@@ -1,0 +1,500 @@
+/* ============================================
+   LAYOUT.CSS - Estructura General
+   ============================================
+
+   Define una base de layout mínima y reutilizable
+   para futuras secciones del proyecto.
+   ============================================ */
+
+:root {
+    --layout-container-width: 76rem;
+    --layout-gutter: var(--spacing-xl);
+}
+
+#app {
+    min-height: 100vh;
+}
+
+main,
+.site-main {
+    display: block;
+}
+
+.container,
+.site-container {
+    width: min(100% - (2 * var(--layout-gutter)), var(--layout-container-width));
+    margin-inline: auto;
+}
+
+.section {
+    padding-block: var(--spacing-3xl);
+}
+
+.stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.cluster {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.site-header {
+    position: fixed;
+    z-index: 20;
+    inset: var(--spacing-xl) var(--spacing-xl) auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-xl);
+    pointer-events: none;
+}
+
+.site-mark,
+.site-nav {
+    pointer-events: auto;
+}
+
+.site-mark {
+    font: 700 0.8125rem/1 var(--font-family-sans);
+    color: var(--color-text);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.75rem, 1.45vw, 1.5rem);
+    padding: 0.65rem 0.85rem;
+    border: 1px solid rgba(174, 183, 194, 0.08);
+    border-radius: 999px;
+    background-color: rgba(11, 13, 16, 0.36);
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+    font: var(--font-small);
+    color: var(--color-text-muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.site-nav a {
+    transition: color var(--transition-fast);
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+    color: var(--color-text);
+}
+
+.opening-stage {
+    position: relative;
+    min-height: 100vh;
+    overflow-x: clip;
+    background:
+        radial-gradient(circle at 82% 22%, rgba(79, 140, 255, 0.11), transparent 28rem),
+        radial-gradient(circle at 74% 76%, rgba(142, 193, 231, 0.07), transparent 24rem),
+        var(--color-bg);
+}
+
+.opening-scene {
+    position: relative;
+    min-height: 100vh;
+    width: min(100% - (2 * var(--layout-gutter)), var(--layout-container-width));
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: center;
+    justify-content: center;
+    padding-block: clamp(7rem, 12vh, 9rem);
+    padding-inline: 0;
+    text-align: left;
+}
+
+.opening-content {
+    position: relative;
+    z-index: 2;
+}
+
+.opening-composition {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.75rem, 1.6vw, 1.25rem);
+}
+
+.js .opening-profession,
+.js .opening-name,
+.js .opening-philosophy,
+.js .opening-divider,
+.js .opening-scroll {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.js .opening-profession.is-visible,
+.js .opening-name.is-visible,
+.js .opening-philosophy.is-visible,
+.js .opening-divider.is-visible,
+.js .opening-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.opening-profession {
+    margin: 0;
+    font: 700 clamp(2.25rem, 6.8vw, 5.85rem)/0.98 var(--font-family-sans);
+    color: var(--color-text);
+    letter-spacing: 0;
+}
+
+.opening-name {
+    margin: 0;
+    font: 600 clamp(1.15rem, 2vw, 1.85rem)/1.2 var(--font-family-sans);
+    color: var(--color-text-muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.opening-philosophy {
+    margin: 0;
+    max-width: 24rem;
+    font: var(--font-body);
+    color: var(--color-text-muted);
+    letter-spacing: 0.02em;
+    line-height: 1.8;
+}
+
+.opening-divider {
+    width: clamp(4rem, 10vw, 7rem);
+    height: 1px;
+    margin-block-start: clamp(2rem, 5vh, 4rem);
+    background-color: var(--color-border);
+}
+
+.opening-scroll {
+    position: absolute;
+    left: 50%;
+    right: auto;
+    bottom: clamp(1.25rem, 4vh, 2.5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font: var(--font-small);
+    color: var(--color-text-muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transform: translate(-50%, 1rem);
+}
+
+.js .opening-scroll {
+    transform: translate(-50%, 1rem);
+}
+
+.js .opening-scroll.is-visible {
+    transform: translate(-50%, 0);
+}
+
+.scroll-arrow {
+    display: block;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-right: 1px solid var(--color-text-muted);
+    border-bottom: 1px solid var(--color-text-muted);
+    transform: rotate(45deg);
+}
+
+.brand-word {
+    margin: 0;
+    font: var(--font-display);
+    color: var(--color-text);
+    letter-spacing: 0.16em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.sequence-section {
+    position: relative;
+    z-index: 2;
+    width: min(100% - (2 * var(--layout-gutter)), var(--layout-container-width));
+    margin-inline: auto;
+    min-height: clamp(34rem, 72vh, 48rem);
+    padding-block: clamp(5.5rem, 11vw, 9rem);
+    padding-inline: 0;
+    transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.js .sequence-section {
+    opacity: 0.76;
+}
+
+.sequence-section.is-sequence-active,
+.sequence-section.is-sequence-revealed {
+    opacity: 1;
+    transform: translateY(-0.25rem);
+}
+
+.js .sequence-section > .section-kicker,
+.js .sequence-section h2,
+.js .sequence-section p,
+.js .sequence-points,
+.js .focus-grid,
+.js .contact-link {
+    opacity: 0.44;
+    transform: translateY(0.75rem);
+    transition: opacity var(--transition-slow), transform var(--transition-slow), color var(--transition-normal);
+}
+
+.js .sequence-section.is-sequence-active > .section-kicker,
+.js .sequence-section.is-sequence-revealed > .section-kicker,
+.js .sequence-section.is-sequence-active h2,
+.js .sequence-section.is-sequence-revealed h2,
+.js .sequence-section.is-sequence-active p,
+.js .sequence-section.is-sequence-revealed p,
+.js .sequence-section.is-sequence-active .sequence-points,
+.js .sequence-section.is-sequence-revealed .sequence-points,
+.js .sequence-section.is-sequence-active .focus-grid,
+.js .sequence-section.is-sequence-revealed .focus-grid,
+.js .sequence-section.is-sequence-active .contact-link,
+.js .sequence-section.is-sequence-revealed .contact-link {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.js .sequence-section.is-sequence-active h2,
+.js .sequence-section.is-sequence-revealed h2 {
+    transition-delay: 80ms;
+}
+
+.js .sequence-section.is-sequence-active p,
+.js .sequence-section.is-sequence-revealed p,
+.js .sequence-section.is-sequence-active .sequence-points,
+.js .sequence-section.is-sequence-revealed .sequence-points,
+.js .sequence-section.is-sequence-active .focus-grid,
+.js .sequence-section.is-sequence-revealed .focus-grid,
+.js .sequence-section.is-sequence-active .contact-link,
+.js .sequence-section.is-sequence-revealed .contact-link {
+    transition-delay: 150ms;
+}
+
+.section-kicker {
+    margin-block-end: var(--spacing-xl);
+    font: 600 0.75rem/1.2 var(--font-family-sans);
+    color: var(--color-accent);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    transition: color var(--transition-normal);
+}
+
+.is-sequence-active > .section-kicker,
+.is-sequence-revealed > .section-kicker {
+    color: var(--color-text);
+}
+
+.sequence-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(13rem, 0.55fr);
+    gap: clamp(2rem, 7vw, 6rem);
+    align-items: start;
+}
+
+.sequence-section h2 {
+    margin: 0;
+    max-width: 58rem;
+    font: 650 clamp(2rem, 5vw, 4.5rem)/1.04 var(--font-family-sans);
+    color: var(--color-text);
+    letter-spacing: 0;
+}
+
+.sequence-section p {
+    margin: 0;
+    max-width: 35rem;
+    font: 400 clamp(1rem, 1.45vw, 1.2rem)/1.8 var(--font-family-sans);
+    color: var(--color-text-muted);
+}
+
+.sequence-section h2 + p {
+    margin-block-start: var(--spacing-xl);
+}
+
+.sequence-points {
+    display: grid;
+    gap: var(--spacing-lg);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: var(--color-text-muted);
+    font: 500 clamp(0.85rem, 1vw, 0.95rem)/1.5 var(--font-family-sans);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.sequence-points li {
+    position: relative;
+    padding-block-start: var(--spacing-md);
+    border-block-start: 1px solid rgba(174, 183, 194, 0.14);
+}
+
+.sequence-points li::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 2.5rem;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(79, 140, 255, 0.72), transparent);
+}
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    margin-block-start: clamp(2.5rem, 6vw, 5rem);
+    background-color: rgba(174, 183, 194, 0.16);
+    border-block: 1px solid rgba(174, 183, 194, 0.16);
+}
+
+.focus-item {
+    min-height: 20rem;
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    background-color: var(--color-bg);
+}
+
+.focus-index {
+    display: block;
+    margin-block-end: clamp(3rem, 7vw, 6rem);
+    font: var(--font-small);
+    color: var(--color-accent-secondary);
+    letter-spacing: 0.12em;
+}
+
+.focus-item h3 {
+    margin: 0 0 var(--spacing-lg);
+    font: var(--font-h3);
+    color: var(--color-text);
+}
+
+.focus-item p {
+    margin: 0;
+    max-width: 22rem;
+    font: var(--font-body);
+    color: var(--color-text-muted);
+}
+
+.contact-section {
+    padding-block-end: clamp(6rem, 12vw, 10rem);
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3rem;
+    padding-inline: 1.2rem;
+    border: 1px solid rgba(174, 183, 194, 0.24);
+    border-radius: 999px;
+    color: var(--color-text);
+    font: 600 0.82rem/1 var(--font-family-sans);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: border-color var(--transition-normal), background-color var(--transition-normal), transform var(--transition-normal);
+}
+
+.contact-link:hover,
+.contact-link:focus-visible {
+    border-color: rgba(79, 140, 255, 0.7);
+    background-color: rgba(79, 140, 255, 0.08);
+    transform: translateY(-0.12rem);
+}
+
+@media (min-width: 768px) {
+    .section {
+        padding-block: var(--spacing-4xl);
+    }
+}
+
+@media (max-width: 980px) {
+    .sequence-layout,
+    .focus-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .focus-item {
+        min-height: 0;
+    }
+
+    .focus-index {
+        margin-block-end: var(--spacing-3xl);
+    }
+}
+
+@media (max-width: 760px) {
+    .opening-scene {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+        width: min(100% - (2 * var(--layout-gutter)), var(--layout-container-width));
+        margin-inline: auto;
+        padding-inline: 0;
+        text-align: center;
+    }
+
+    .opening-content {
+        justify-self: center;
+    }
+
+    .opening-philosophy {
+        margin-inline: auto;
+    }
+
+    .opening-divider {
+        margin-inline: auto;
+    }
+
+}
+
+@media (max-width: 760px) {
+    .sequence-section {
+        width: min(100% - (2 * var(--layout-gutter)), var(--layout-container-width));
+        margin-inline: auto;
+        min-height: auto;
+        padding-inline: 0;
+    }
+
+}
+
+@media (max-width: 640px) {
+    :root {
+        --layout-gutter: var(--spacing-lg);
+    }
+
+    .site-header {
+        inset: var(--spacing-lg) var(--spacing-lg) auto;
+    }
+
+    .site-nav {
+        gap: var(--spacing-lg);
+        font-size: 0.75rem;
+    }
+
+    .site-nav a:nth-child(2),
+    .site-nav a:nth-child(3),
+    .site-nav a:nth-child(4) {
+        display: none;
+    }
+
+    .opening-scene {
+        padding-block: 6.5rem 7rem;
+    }
+
+    .opening-profession {
+        font-size: clamp(2.1rem, 12vw, 3.6rem);
+    }
+
+    .opening-scroll {
+        font-size: 0.7rem;
+    }
+}

@@ -1,0 +1,40 @@
+{
+  "common": {
+    "language": "Sprache",
+    "theme": "Design",
+    "dark": "Dunkel",
+    "light": "Hell"
+  },
+  "home": {
+    "title": "Helix",
+    "subtitle": "Techniker für klinische Laboratorien und Biomedizin"
+  },
+  "navigation": {
+    "about": "Über mich",
+    "experience": "Erfahrung",
+    "education": "Ausbildung",
+    "skills": "Fähigkeiten",
+    "projects": "Projekte",
+    "contact": "Kontakt"
+  },
+  "sections": {
+    "about": {
+      "title": "Über mich"
+    },
+    "experience": {
+      "title": "Erfahrung"
+    },
+    "education": {
+      "title": "Ausbildung"
+    },
+    "skills": {
+      "title": "Fähigkeiten"
+    },
+    "projects": {
+      "title": "Projekte"
+    },
+    "contact": {
+      "title": "Kontakt"
+    }
+  }
+}

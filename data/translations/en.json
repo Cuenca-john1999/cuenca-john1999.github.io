@@ -1,0 +1,40 @@
+{
+  "common": {
+    "language": "Language",
+    "theme": "Theme",
+    "dark": "Dark",
+    "light": "Light"
+  },
+  "home": {
+    "title": "Helix",
+    "subtitle": "Clinical Laboratory and Biomedical Technician"
+  },
+  "navigation": {
+    "about": "About",
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "sections": {
+    "about": {
+      "title": "About"
+    },
+    "experience": {
+      "title": "Experience"
+    },
+    "education": {
+      "title": "Education"
+    },
+    "skills": {
+      "title": "Skills"
+    },
+    "projects": {
+      "title": "Projects"
+    },
+    "contact": {
+      "title": "Contact"
+    }
+  }
+}
