@@ -22,7 +22,7 @@
  */
 
 const Theme = (() => {
-    const STORAGE_KEY = 'helix-theme';
+    const STORAGE_KEY = 'portfolio-theme';
     const DARK_CLASS = 'dark';
     
     let currentTheme = 'light';

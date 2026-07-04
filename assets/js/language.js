@@ -24,7 +24,7 @@
  */
 
 const Language = (() => {
-    const STORAGE_KEY = 'helix-language';
+    const STORAGE_KEY = 'portfolio-language';
     const DEFAULT_LANGUAGE = 'es';
     const AVAILABLE_LANGUAGES = ['es', 'en', 'de'];
     

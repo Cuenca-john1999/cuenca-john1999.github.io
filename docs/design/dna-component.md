@@ -7,7 +7,7 @@ Fase: Página principal inicial
 
 ## Contexto actual
 
-La página principal conserva la estructura editorial inicial de Helix, pero el ADN visual ha sido retirado por completo. El proyecto queda con un slot vacío preparado para programar una nueva dirección desde cero.
+La página principal conserva la estructura editorial inicial de Portfolio, pero el ADN visual ha sido retirado por completo. El proyecto queda con un slot vacío preparado para programar una nueva dirección desde cero.
 
 La versión 1.8 elimina el SVG inline, las bases de sección, las ramas, los peldaños, los estilos visuales del ADN y la lógica JavaScript asociada a `data-dna-*`. Se conserva únicamente `.opening-dna` como contenedor invisible para la futura reinvención.
 
@@ -22,11 +22,11 @@ La lectura principal sigue un orden claro:
 
 La composición conserva un contenedor real, `.opening-dna`, pero está vacío e invisible. Su función actual es actuar como punto de montaje técnico para la próxima versión del componente.
 
-El SVG reutilizable de `assets/svg/dna-helix.svg` también quedó vacío, con un único slot semántico.
+El SVG reutilizable de `assets/svg/dna-strand.svg` también quedó vacío, con un único slot semántico.
 
 ## Propósito narrativo
 
-El ADN debe convertirse en el eje visual y narrativo de Helix. No debe funcionar como un elemento decorativo aislado, sino como una presencia que conecte la identidad del proyecto con la sensibilidad editorial de la Opening Scene.
+El ADN debe convertirse en el eje visual y narrativo de Portfolio. No debe funcionar como un elemento decorativo aislado, sino como una presencia que conecte la identidad del proyecto con la sensibilidad editorial de la Opening Scene.
 
 Su función será reforzar el carácter científico, evolutivo y humano del proyecto sin convertirse en un bloque visual dominante que compita con la lectura principal.
 
@@ -226,7 +226,7 @@ Los riesgos principales son:
 
 ## Decisiones ya tomadas
 
-- El ADN será el eje visual y narrativo de Helix.
+- El ADN será el eje visual y narrativo de Portfolio.
 - No será una imagen estática.
 - No será una decoración independiente.
 - Se construirá con SVG, CSS y JavaScript Vanilla.
@@ -360,7 +360,7 @@ La especificación se considerará lista para prototipo cuando estén definidas:
 
 ### Objetivo
 
-Evaluar visualmente una primera aproximación de la doble hélice como elemento aislado sobre el fondo oscuro de Helix, sin integrar aún la composición de la Opening Scene.
+Evaluar visualmente una primera aproximación de la doble hélice como elemento aislado sobre el fondo oscuro de Portfolio, sin integrar aún la composición de la Opening Scene.
 
 ### Archivos
 
@@ -442,7 +442,7 @@ Llevar la geometría refinada del laboratorio visual a la página principal sin 
 
 ### Cambios aplicados
 
-- Se promovió el SVG refinado a `assets/svg/dna-helix.svg`.
+- Se promovió el SVG refinado a `assets/svg/dna-strand.svg`.
 - Se integró el ADN en la Opening Scene como elemento decorativo con `aria-hidden="true"`.
 - Se transformó la portada en una composición asimétrica con bloque editorial a la izquierda y ADN a la derecha.
 - Se añadió recorte lateral controlado en escritorio para sugerir continuidad fuera del viewport.
@@ -686,7 +686,7 @@ Redibujar la molécula para acercarla a la referencia visual aprobada: un ADN m�
 - Redibujadas las dos cadenas principales con una silueta más vertical y reconocible.
 - Cambiada la paleta del ADN hacia blanco clínico, azul científico y grises suaves.
 - Aumentado el grosor de las cintas, sombras y brillos internos para crear una lectura más ilustrada.
-- Sincronizado `assets/svg/dna-helix.svg` con el SVG inline de la página principal.
+- Sincronizado `assets/svg/dna-strand.svg` con el SVG inline de la página principal.
 - Eliminados restos visuales del lenguaje anterior de puntos/nodos.
 - Reposicionado el ADN lateral para que tenga más presencia sin invadir el contenido editorial.
 - Reducida la atmósfera morada del fondo para mantener un tono más científico y premium.
@@ -709,7 +709,7 @@ Abandonar el enfoque de líneas gruesas y redibujar el ADN en un formato complet
 - Convertidos los peldaños en piezas independientes con sombra, placa y brillo central.
 - Añadido soporte JavaScript para `data-dna-piece`, de forma que las piezas rellenas también puedan sintetizarse con el scroll.
 - Conservadas las ramas con `data-dna-draw` para mantener conexiones hacia las secciones.
-- Sincronizado de nuevo el SVG inline con `assets/svg/dna-helix.svg`.
+- Sincronizado de nuevo el SVG inline con `assets/svg/dna-strand.svg`.
 
 ### Decisiones provisionales
 
@@ -729,7 +729,7 @@ Retirar el ADN actual por completo para evitar seguir iterando sobre una base vi
 - Eliminadas las bases visuales de sección.
 - Eliminados estilos de cintas, peldaños, ramas y piezas del ADN.
 - Eliminada la lógica JavaScript específica de `data-dna-*`.
-- Reemplazado `assets/svg/dna-helix.svg` por un SVG vacío con un slot semántico.
+- Reemplazado `assets/svg/dna-strand.svg` por un SVG vacío con un slot semántico.
 - Conservado `.opening-dna` como contenedor invisible para futura implementación.
 
 ### Decisiones provisionales

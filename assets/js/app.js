@@ -16,10 +16,14 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('[APP] Helix App iniciado');
+    console.log('[APP] Portfolio iniciado');
 
+    const siteHeader = document.querySelector('.site-header');
     const reveals = Array.from(document.querySelectorAll('[data-reveal]'));
     const trackedSections = Array.from(document.querySelectorAll('[data-sequence-section]'));
+    let lastScrollY = window.scrollY;
+    let scrollDirectionStartY = window.scrollY;
+    let scrollDirection = 'up';
 
     reveals.forEach((element, index) => {
         window.setTimeout(() => {
@@ -40,6 +44,65 @@ document.addEventListener('DOMContentLoaded', () => {
                 section.classList.add('is-sequence-revealed');
             }
         });
+    };
+
+    const updateActiveSectionFromViewport = () => {
+        if (trackedSections.length === 0) {
+            return;
+        }
+
+        const viewportAnchor = window.innerHeight * 0.48;
+        const closestSection = trackedSections
+            .map((section) => {
+                const rect = section.getBoundingClientRect();
+                const sectionAnchor = rect.top + (rect.height * 0.32);
+
+                return {
+                    section,
+                    distance: Math.abs(sectionAnchor - viewportAnchor)
+                };
+            })
+            .sort((a, b) => a.distance - b.distance)[0]?.section;
+
+        if (closestSection) {
+            closestSection.classList.add('is-sequence-revealed');
+            setActiveSection(closestSection.id);
+        }
+    };
+
+    const scheduleActiveSectionUpdate = () => {
+        window.requestAnimationFrame(updateActiveSectionFromViewport);
+    };
+
+    const updateHeaderVisibility = () => {
+        if (!siteHeader) {
+            return;
+        }
+
+        const currentScrollY = window.scrollY;
+        const nextDirection = currentScrollY > lastScrollY ? 'down' : 'up';
+
+        if (nextDirection !== scrollDirection) {
+            scrollDirection = nextDirection;
+            scrollDirectionStartY = lastScrollY;
+        }
+
+        const distanceInDirection = Math.abs(currentScrollY - scrollDirectionStartY);
+
+        if (scrollDirection === 'down' && currentScrollY > 120 && distanceInDirection > 18) {
+            siteHeader.classList.add('is-header-hidden');
+        }
+
+        if ((scrollDirection === 'up' && distanceInDirection > 10) || currentScrollY <= 120) {
+            siteHeader.classList.remove('is-header-hidden');
+        }
+
+        lastScrollY = currentScrollY;
+    };
+
+    const handleScroll = () => {
+        scheduleActiveSectionUpdate();
+        updateHeaderVisibility();
     };
 
     if ('IntersectionObserver' in window && trackedSections.length > 0) {
@@ -63,11 +126,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         trackedSections.forEach((section) => sectionObserver.observe(section));
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        window.addEventListener('resize', scheduleActiveSectionUpdate);
     } else {
         trackedSections.forEach((section) => section.classList.add('is-sequence-revealed'));
     }
 
-    setActiveSection('profile');
+    updateActiveSectionFromViewport();
+    updateHeaderVisibility();
 
     console.log('[APP] Módulos inicializados');
 });
