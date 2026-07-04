@@ -592,10 +592,11 @@ main,
 .identity-core::before {
     content: "";
     position: absolute;
-    inset: 12% 8%;
+    inset: 0;
     background:
-        radial-gradient(circle at 50% 18%, rgba(79, 140, 255, 0.16), transparent 16rem),
-        radial-gradient(circle at 50% 78%, rgba(122, 92, 255, 0.14), transparent 14rem);
+        radial-gradient(circle at 50% 24%, rgba(79, 140, 255, 0.18), transparent 17rem),
+        radial-gradient(circle at 50% 76%, rgba(122, 92, 255, 0.14), transparent 18rem),
+        linear-gradient(180deg, rgba(79, 140, 255, 0.06), rgba(122, 92, 255, 0.08) 52%, rgba(11, 13, 16, 0.1));
     pointer-events: none;
 }
 
@@ -726,6 +727,12 @@ main,
 
     .identity-core {
         min-height: auto;
+        padding-block: clamp(2rem, 8vw, 3rem);
+    }
+
+    .identity-strand {
+        width: min(10.5rem, 44vw);
+        height: 15rem;
     }
 }
 
