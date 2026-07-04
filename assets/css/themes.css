@@ -1,0 +1,37 @@
+/* ============================================
+   THEMES.CSS - Temas (Dark/Light)
+   ============================================
+
+   Este archivo prepara la arquitectura de temas
+   sin introducir componentes visuales ni estilos específicos.
+   ============================================ */
+
+:root {
+    color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+    --color-bg: #F5F7FA;
+    --color-surface: #FFFFFF;
+    --color-text: #0B0D10;
+    --color-text-muted: #3A4048;
+    --color-border: #AEB7C2;
+}
+
+@media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+        --color-bg: #F5F7FA;
+        --color-surface: #FFFFFF;
+        --color-text: #0B0D10;
+        --color-text-muted: #3A4048;
+        --color-border: #AEB7C2;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}
