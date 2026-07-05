@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const documentExplorerLabel = document.querySelector('#document-explorer-label');
     const documentExplorerClose = document.querySelector('[data-document-close]');
     const documentOpenLinks = Array.from(document.querySelectorAll('[data-document-open]'));
-    const contactLinks = Array.from(document.querySelectorAll('[data-contact-link]'));
+    const contactForms = Array.from(document.querySelectorAll('[data-contact-form]'));
     let lastScrollY = window.scrollY;
     let scrollDirectionStartY = window.scrollY;
     let scrollDirection = 'up';
@@ -53,31 +53,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initializeOptionalModules();
 
-    const decodeContactPart = (value) => {
-        if (!value) {
-            return '';
-        }
+    contactForms.forEach((form) => {
+        const status = form.querySelector('[data-contact-status]');
+        const submitButton = form.querySelector('button[type="submit"]');
+        const accessKey = form.querySelector('input[name="access_key"]');
+        const hasAccessKey = accessKey && accessKey.value && accessKey.value !== 'WEB3FORMS_ACCESS_KEY';
 
-        try {
-            return window.atob(value);
-        } catch (error) {
-            console.warn('[CONTACT] No se pudo preparar el enlace de contacto', error);
-            return '';
-        }
-    };
-
-    contactLinks.forEach((link) => {
-        const user = decodeContactPart(link.dataset.contactUser);
-        const domain = decodeContactPart(link.dataset.contactDomain);
-
-        if (!user || !domain) {
+        if (!status || !submitButton) {
             return;
         }
 
-        const address = `${user}@${domain}`;
-        const subject = encodeURIComponent('Portfolio contact');
-        link.href = `mailto:${address}?subject=${subject}`;
-        link.setAttribute('aria-label', `Send an email to ${address}`);
+        if (!hasAccessKey) {
+            submitButton.disabled = true;
+            status.textContent = 'Contact form ready. Add the Web3Forms access key to activate it.';
+            return;
+        }
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            submitButton.disabled = true;
+            status.textContent = 'Sending message...';
+
+            try {
+                const response = await window.fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        Accept: 'application/json',
+                    },
+                });
+                const result = await response.json();
+
+                if (!response.ok || !result.success) {
+                    throw new Error(result.message || 'The message could not be sent.');
+                }
+
+                form.reset();
+                status.textContent = 'Message sent. Thank you for reaching out.';
+            } catch (error) {
+                console.warn('[CONTACT] No se pudo enviar el formulario', error);
+                status.textContent = 'The message could not be sent. Please try again later.';
+            } finally {
+                submitButton.disabled = false;
+            }
+        });
     });
 
     const closeDocumentExplorer = () => {

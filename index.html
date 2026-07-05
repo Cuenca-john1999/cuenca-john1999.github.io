@@ -406,8 +406,28 @@
                     <aside class="contact-card" aria-label="Contact mailbox">
                         <span class="contact-card__kicker">Professional mailbox</span>
                         <h3>Tell me what you are building.</h3>
-                        <p>Messages open through a protected contact button instead of exposing the address directly on the page.</p>
-                        <a class="contact-link" href="#contact" data-contact-link data-contact-user="cXhtOGcyeWt3eQ==" data-contact-domain="cHJpdmF0ZXJlbGF5LmFwcGxlaWQuY29t">Send a message</a>
+                        <p>Send a short message without exposing a public email address on the page.</p>
+                        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" data-contact-form>
+                            <input type="hidden" name="access_key" value="b6eeaa2b-b2b7-40ac-94cc-c9a45838a981">
+                            <input type="hidden" name="subject" value="New portfolio contact">
+                            <input type="hidden" name="from_name" value="Jhon Cuenca Portfolio">
+                            <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">
+
+                            <label>
+                                <span>Name</span>
+                                <input type="text" name="name" autocomplete="name" required>
+                            </label>
+                            <label>
+                                <span>Email</span>
+                                <input type="email" name="email" autocomplete="email" required>
+                            </label>
+                            <label>
+                                <span>Message</span>
+                                <textarea name="message" rows="4" required></textarea>
+                            </label>
+                            <button class="contact-submit" type="submit">Send message</button>
+                            <p class="contact-status" data-contact-status role="status" aria-live="polite"></p>
+                        </form>
                     </aside>
                 </div>
             </section>
