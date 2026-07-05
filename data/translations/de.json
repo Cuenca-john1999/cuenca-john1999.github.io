@@ -5,36 +5,75 @@
     "dark": "Dunkel",
     "light": "Hell"
   },
-  "home": {
-    "title": "Jhon M. Cuenca",
-    "subtitle": "Techniker für klinische Laboratorien und Biomedizin"
+  "nav": {
+    "profile": "Profile",
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "concepts": "Concepts",
+    "references": "References",
+    "contact": "Contact"
   },
-  "navigation": {
-    "about": "Über mich",
-    "experience": "Erfahrung",
-    "education": "Ausbildung",
-    "skills": "Fähigkeiten",
-    "projects": "Projekte",
-    "contact": "Kontakt"
+  "hero": {
+    "title": "Clinical &amp; Biomedical<br>Laboratory Technologist",
+    "philosophy": "Committed to a lifetime of learning, discovery and helping others.",
+    "scroll": "Scroll to discover"
   },
   "sections": {
-    "about": {
-      "title": "Über mich"
+    "profile": {
+      "kicker": "Profile",
+      "title": "A laboratory profile shaped by precision, research and continuous learning.",
+      "body": "I am a Higher Technician in Clinical and Biomedical Laboratory and Technician in Laboratory Operations based in Berlin. My training connects clinical diagnostics, molecular biology, immunology and analytical laboratory work under GLP standards.",
+      "pointLanguages": "Spanish native · English B2 · German A2",
+      "pointGerman": "Preparing official German certification"
     },
     "experience": {
-      "title": "Erfahrung"
+      "kicker": "Experience",
+      "title": "From translational immunology to analytical and industrial laboratory work.",
+      "body": "My practical experience includes immunology and molecular biology research in Madrid and biomass analysis in Ireland, combining clinical samples, analytical protocols and independent laboratory responsibility.",
+      "pointResearch": "La Princesa University Hospital research foundation · 2025",
+      "pointBiomass": "Celignis Biomass Analysis Laboratory · Erasmus+ 2023",
+      "pointTeaching": "STEM and educational robotics instructor · 2020-2021"
     },
     "education": {
-      "title": "Ausbildung"
+      "kicker": "Education",
+      "title": "Strong academic results with a clinical, analytical and biomedical foundation.",
+      "body": "I graduated with distinction as a Higher Technician in Clinical and Biomedical Laboratory and as a Technician in Laboratory Operations, with final grades of 9.3/10 and 8.69/10."
     },
     "skills": {
-      "title": "Fähigkeiten"
+      "kicker": "Skills",
+      "title": "Scientific identity: connecting technical skills, curiosity and translational purpose."
     },
-    "projects": {
-      "title": "Projekte"
+    "concepts": {
+      "kicker": "Research Concepts",
+      "title": "Early-stage scientific ideas shaped by laboratory thinking and translational curiosity.",
+      "body": "These concepts are not presented as validated treatments or clinical results. They show how I connect biomedical questions, laboratory methods and responsible research hypotheses.",
+      "pointHypothesis": "Early-stage hypothesis · not clinically validated",
+      "pointMethods": "Biomaterials · microbiology · analytical methods",
+      "pointValidation": "Designed for future experimental validation"
+    },
+    "references": {
+      "kicker": "References",
+      "title": "Professional and academic references can support the laboratory experience shown here.",
+      "body": "References from academic training, research practice and international laboratory experience can be provided according to the opportunity and recruitment process."
     },
     "contact": {
-      "title": "Kontakt"
+      "kicker": "Contact",
+      "title": "Open to laboratory, clinical research and biomedical science opportunities.",
+      "body": "I am interested in molecular biology, immunology, translational research, scientific outreach and international collaboration in laboratory environments."
     }
+  },
+  "contactForm": {
+    "kicker": "Professional contact",
+    "title": "Get in touch.",
+    "body": "For laboratory roles, clinical research opportunities, biomedical projects or scientific collaborations.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Send message",
+    "ready": "Contact form ready. Add the Web3Forms access key to activate it.",
+    "sending": "Sending message...",
+    "success": "Message sent. Thank you for getting in touch.",
+    "error": "The message could not be sent. Please try again in a few minutes."
   }
 }

@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!hasAccessKey) {
             submitButton.disabled = true;
-            status.textContent = 'Contact form ready. Add the Web3Forms access key to activate it.';
+            status.textContent = Language.translate('contactForm.ready');
             return;
         }
 
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
             event.preventDefault();
 
             submitButton.disabled = true;
-            status.textContent = 'Sending message...';
+            status.textContent = Language.translate('contactForm.sending');
 
             try {
                 const response = await window.fetch(form.action, {
@@ -90,10 +90,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 form.reset();
-                status.textContent = 'Message sent. Thank you for getting in touch.';
+                status.textContent = Language.translate('contactForm.success');
             } catch (error) {
                 console.warn('[CONTACT] No se pudo enviar el formulario', error);
-                status.textContent = 'The message could not be sent. Please try again in a few minutes.';
+                status.textContent = Language.translate('contactForm.error');
             } finally {
                 submitButton.disabled = false;
             }

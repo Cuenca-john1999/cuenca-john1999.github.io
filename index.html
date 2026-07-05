@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="assets/css/base.css">
     
     <!-- 3. Layout general -->
-    <link rel="stylesheet" href="assets/css/layout.css?v=20260705-contact">
+    <link rel="stylesheet" href="assets/css/layout.css?v=20260705-language">
     
     <!-- 4. Componentes específicos -->
     <link rel="stylesheet" href="assets/css/components.css">
@@ -32,67 +32,68 @@
     <div id="app">
         <header class="site-header" aria-label="Primary navigation">
             <nav class="site-nav" aria-label="Portfolio sections">
-                <a href="#profile">Profile</a>
-                <a href="#experience">Experience</a>
-                <a href="#education">Education</a>
-                <a href="#skills">Skills</a>
-                <a href="#concepts">Concepts</a>
-                <a href="#references">References</a>
-                <a href="#contact">Contact</a>
+                <a href="#profile" data-i18n="nav.profile">Profile</a>
+                <a href="#experience" data-i18n="nav.experience">Experience</a>
+                <a href="#education" data-i18n="nav.education">Education</a>
+                <a href="#skills" data-i18n="nav.skills">Skills</a>
+                <a href="#concepts" data-i18n="nav.concepts">Concepts</a>
+                <a href="#references" data-i18n="nav.references">References</a>
+                <a href="#contact" data-i18n="nav.contact">Contact</a>
             </nav>
+            <div class="language-switcher" aria-label="Language selector">
+                <button type="button" data-language-set="en" aria-pressed="true">EN</button>
+                <button type="button" data-language-set="es" aria-pressed="false">ES</button>
+                <button type="button" data-language-set="de" aria-pressed="false" aria-disabled="true" title="German version in progress">DE</button>
+            </div>
         </header>
 
         <main class="opening-stage" aria-label="Main portfolio page">
             <section class="opening-scene" id="top" aria-label="Introduction">
                 <div class="opening-content">
                     <div class="opening-composition">
-                        <h1 class="opening-profession" data-reveal>Clinical &amp; Biomedical<br>Laboratory Technologist</h1>
+                        <h1 class="opening-profession" data-reveal data-i18n-html="hero.title">Clinical &amp; Biomedical<br>Laboratory Technologist</h1>
                         <p class="opening-name" data-reveal>Jhon M. Cuenca</p>
-                        <p class="opening-philosophy" data-reveal>Committed to a lifetime of learning, discovery and helping others.</p>
+                        <p class="opening-philosophy" data-reveal data-i18n="hero.philosophy">Committed to a lifetime of learning, discovery and helping others.</p>
                     </div>
                     <div class="opening-divider" data-reveal aria-hidden="true"></div>
                 </div>
 
                 <div class="opening-scroll" data-reveal>
-                    <span>Scroll to discover</span>
+                    <span data-i18n="hero.scroll">Scroll to discover</span>
                     <span class="scroll-arrow" aria-hidden="true"></span>
                 </div>
             </section>
 
             <section class="sequence-section profile-section" id="profile" data-sequence-section aria-labelledby="profile-title">
-                <div class="section-kicker">Profile</div>
+                <div class="section-kicker" data-i18n="sections.profile.kicker">Profile</div>
                 <div class="sequence-layout">
                     <div>
-                        <h2 id="profile-title">A laboratory profile shaped by precision, research and continuous learning.</h2>
+                        <h2 id="profile-title" data-i18n="sections.profile.title">A laboratory profile shaped by precision, research and continuous learning.</h2>
                         <p>
-                            I am a Higher Technician in Clinical and Biomedical Laboratory and Technician in Laboratory
-                            Operations based in Berlin. My training connects clinical diagnostics, molecular biology,
-                            immunology and analytical laboratory work under GLP standards.
+                            <span data-i18n="sections.profile.body">I am a Higher Technician in Clinical and Biomedical Laboratory and Technician in Laboratory Operations based in Berlin. My training connects clinical diagnostics, molecular biology, immunology and analytical laboratory work under GLP standards.</span>
                         </p>
                     </div>
                     <ul class="sequence-points" aria-label="Profile keywords">
                         <li>Berlin, Germany</li>
-                        <li>Spanish native · English B2 · German A2</li>
-                        <li>Preparing official German certification</li>
+                        <li data-i18n="sections.profile.pointLanguages">Spanish native · English B2 · German A2</li>
+                        <li data-i18n="sections.profile.pointGerman">Preparing official German certification</li>
                     </ul>
                 </div>
             </section>
 
             <section class="sequence-section experience-section" id="experience" data-sequence-section aria-labelledby="experience-title">
-                <div class="section-kicker">Experience</div>
+                <div class="section-kicker" data-i18n="sections.experience.kicker">Experience</div>
                 <div class="sequence-layout">
                     <div>
-                        <h2 id="experience-title">From translational immunology to analytical and industrial laboratory work.</h2>
+                        <h2 id="experience-title" data-i18n="sections.experience.title">From translational immunology to analytical and industrial laboratory work.</h2>
                         <p>
-                            My practical experience includes immunology and molecular biology research in Madrid and
-                            biomass analysis in Ireland, combining clinical samples, analytical protocols and independent
-                            laboratory responsibility.
+                            <span data-i18n="sections.experience.body">My practical experience includes immunology and molecular biology research in Madrid and biomass analysis in Ireland, combining clinical samples, analytical protocols and independent laboratory responsibility.</span>
                         </p>
                     </div>
                     <ul class="sequence-points" aria-label="Experience highlights">
-                        <li>La Princesa University Hospital research foundation · 2025</li>
-                        <li>Celignis Biomass Analysis Laboratory · Erasmus+ 2023</li>
-                        <li>STEM and educational robotics instructor · 2020-2021</li>
+                        <li data-i18n="sections.experience.pointResearch">La Princesa University Hospital research foundation · 2025</li>
+                        <li data-i18n="sections.experience.pointBiomass">Celignis Biomass Analysis Laboratory · Erasmus+ 2023</li>
+                        <li data-i18n="sections.experience.pointTeaching">STEM and educational robotics instructor · 2020-2021</li>
                     </ul>
                 </div>
                 <div class="focus-grid">
@@ -136,13 +137,12 @@
             </section>
 
             <section class="sequence-section education-section" id="education" data-sequence-section aria-labelledby="education-title">
-                <div class="section-kicker">Education</div>
+                <div class="section-kicker" data-i18n="sections.education.kicker">Education</div>
                 <div class="sequence-layout">
                     <div>
-                        <h2 id="education-title">Strong academic results with a clinical, analytical and biomedical foundation.</h2>
+                        <h2 id="education-title" data-i18n="sections.education.title">Strong academic results with a clinical, analytical and biomedical foundation.</h2>
                         <p>
-                            I graduated with distinction as a Higher Technician in Clinical and Biomedical Laboratory
-                            and as a Technician in Laboratory Operations, with final grades of 9.3/10 and 8.69/10.
+                            <span data-i18n="sections.education.body">I graduated with distinction as a Higher Technician in Clinical and Biomedical Laboratory and as a Technician in Laboratory Operations, with final grades of 9.3/10 and 8.69/10.</span>
                         </p>
                     </div>
                     <ul class="sequence-points" aria-label="Education highlights">
@@ -192,8 +192,8 @@
             </section>
 
             <section class="sequence-section skills-section" id="skills" data-sequence-section aria-labelledby="skills-title">
-                <div class="section-kicker">Skills</div>
-                <h2 id="skills-title">Scientific identity: connecting technical skills, curiosity and translational purpose.</h2>
+                <div class="section-kicker" data-i18n="sections.skills.kicker">Skills</div>
+                <h2 id="skills-title" data-i18n="sections.skills.title">Scientific identity: connecting technical skills, curiosity and translational purpose.</h2>
                 <div class="identity-map" aria-label="Scientific identity map">
                     <div class="identity-column">
                         <h3>Skills</h3>
@@ -268,19 +268,18 @@
             </section>
 
             <section class="sequence-section concepts-section" id="concepts" data-sequence-section aria-labelledby="concepts-title">
-                <div class="section-kicker">Research Concepts</div>
+                <div class="section-kicker" data-i18n="sections.concepts.kicker">Research Concepts</div>
                 <div class="sequence-layout">
                     <div>
-                        <h2 id="concepts-title">Early-stage scientific ideas shaped by laboratory thinking and translational curiosity.</h2>
+                        <h2 id="concepts-title" data-i18n="sections.concepts.title">Early-stage scientific ideas shaped by laboratory thinking and translational curiosity.</h2>
                         <p>
-                            These concepts are not presented as validated treatments or clinical results. They show how I
-                            connect biomedical questions, laboratory methods and responsible research hypotheses.
+                            <span data-i18n="sections.concepts.body">These concepts are not presented as validated treatments or clinical results. They show how I connect biomedical questions, laboratory methods and responsible research hypotheses.</span>
                         </p>
                     </div>
                     <ul class="sequence-points" aria-label="Research concept principles">
-                        <li>Early-stage hypothesis · not clinically validated</li>
-                        <li>Biomaterials · microbiology · analytical methods</li>
-                        <li>Designed for future experimental validation</li>
+                        <li data-i18n="sections.concepts.pointHypothesis">Early-stage hypothesis · not clinically validated</li>
+                        <li data-i18n="sections.concepts.pointMethods">Biomaterials · microbiology · analytical methods</li>
+                        <li data-i18n="sections.concepts.pointValidation">Designed for future experimental validation</li>
                     </ul>
                 </div>
 
@@ -350,13 +349,12 @@
             </section>
 
             <section class="sequence-section references-section" id="references" data-sequence-section aria-labelledby="references-title">
-                <div class="section-kicker">References</div>
+                <div class="section-kicker" data-i18n="sections.references.kicker">References</div>
                 <div class="sequence-layout">
                     <div>
-                        <h2 id="references-title">Professional and academic references can support the laboratory experience shown here.</h2>
+                        <h2 id="references-title" data-i18n="sections.references.title">Professional and academic references can support the laboratory experience shown here.</h2>
                         <p>
-                            References from academic training, research practice and international laboratory experience
-                            can be provided according to the opportunity and recruitment process.
+                            <span data-i18n="sections.references.body">References from academic training, research practice and international laboratory experience can be provided according to the opportunity and recruitment process.</span>
                         </p>
                     </div>
                     <ul class="sequence-points" aria-label="Reference areas">
@@ -394,19 +392,18 @@
             </section>
 
             <section class="sequence-section contact-section" id="contact" data-sequence-section aria-labelledby="contact-title">
-                <div class="section-kicker">Contact</div>
+                <div class="section-kicker" data-i18n="sections.contact.kicker">Contact</div>
                 <div class="sequence-layout">
                     <div>
-                        <h2 id="contact-title">Open to laboratory, clinical research and biomedical science opportunities.</h2>
+                        <h2 id="contact-title" data-i18n="sections.contact.title">Open to laboratory, clinical research and biomedical science opportunities.</h2>
                         <p>
-                            I am interested in molecular biology, immunology, translational research, scientific outreach
-                            and international collaboration in laboratory environments.
+                            <span data-i18n="sections.contact.body">I am interested in molecular biology, immunology, translational research, scientific outreach and international collaboration in laboratory environments.</span>
                         </p>
                     </div>
                     <aside class="contact-card" aria-label="Contact form">
-                        <span class="contact-card__kicker">Professional contact</span>
-                        <h3>Get in touch.</h3>
-                        <p>For laboratory roles, clinical research opportunities, biomedical projects or scientific collaborations.</p>
+                        <span class="contact-card__kicker" data-i18n="contactForm.kicker">Professional contact</span>
+                        <h3 data-i18n="contactForm.title">Get in touch.</h3>
+                        <p data-i18n="contactForm.body">For laboratory roles, clinical research opportunities, biomedical projects or scientific collaborations.</p>
                         <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" data-contact-form>
                             <input type="hidden" name="access_key" value="b6eeaa2b-b2b7-40ac-94cc-c9a45838a981">
                             <input type="hidden" name="subject" value="New portfolio contact">
@@ -414,18 +411,18 @@
                             <input class="contact-form__botcheck" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" hidden>
 
                             <label class="contact-field">
-                                <span>Name</span>
+                                <span data-i18n="contactForm.name">Name</span>
                                 <input type="text" name="name" autocomplete="name" required>
                             </label>
                             <label class="contact-field">
-                                <span>Email</span>
+                                <span data-i18n="contactForm.email">Email</span>
                                 <input type="email" name="email" autocomplete="email" required>
                             </label>
                             <label class="contact-field">
-                                <span>Message</span>
+                                <span data-i18n="contactForm.message">Message</span>
                                 <textarea name="message" rows="4" required></textarea>
                             </label>
-                            <button class="contact-submit" type="submit">Send message</button>
+                            <button class="contact-submit" type="submit" data-i18n="contactForm.submit">Send message</button>
                             <p class="contact-status" data-contact-status role="status" aria-live="polite"></p>
                         </form>
                     </aside>
@@ -480,9 +477,9 @@
     <!-- JavaScript - Orden de carga importante -->
     <!-- 1. Módulos core (theme, language) -->
     <script src="assets/js/theme.js"></script>
-    <script src="assets/js/language.js"></script>
+    <script src="assets/js/language.js?v=20260705-language"></script>
     
     <!-- 2. Inicializador principal (debe cargarse al final) -->
-    <script src="assets/js/app.js?v=20260705-contact"></script>
+    <script src="assets/js/app.js?v=20260705-language"></script>
 </body>
 </html>

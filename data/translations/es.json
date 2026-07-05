@@ -5,36 +5,75 @@
     "dark": "Oscuro",
     "light": "Claro"
   },
-  "home": {
-    "title": "Jhon M. Cuenca",
-    "subtitle": "Técnico Superior en Laboratorio Clínico y Biomédico"
-  },
-  "navigation": {
-    "about": "Sobre mí",
+  "nav": {
+    "profile": "Perfil",
     "experience": "Experiencia",
     "education": "Formación",
     "skills": "Habilidades",
-    "projects": "Proyectos",
+    "concepts": "Conceptos",
+    "references": "Referencias",
     "contact": "Contacto"
   },
+  "hero": {
+    "title": "Técnico Superior en<br>Laboratorio Clínico y Biomédico",
+    "philosophy": "Comprometido con una vida de aprendizaje, descubrimiento y ayuda a los demás.",
+    "scroll": "Desliza para descubrir"
+  },
   "sections": {
-    "about": {
-      "title": "Sobre mí"
+    "profile": {
+      "kicker": "Perfil",
+      "title": "Un perfil de laboratorio definido por la precisión, la investigación y el aprendizaje continuo.",
+      "body": "Soy Técnico Superior en Laboratorio Clínico y Biomédico y Técnico en Operaciones de Laboratorio, actualmente basado en Berlín. Mi formación conecta el diagnóstico clínico, la biología molecular, la inmunología y el trabajo analítico de laboratorio bajo estándares GLP.",
+      "pointLanguages": "Español nativo · Inglés B2 · Alemán A2",
+      "pointGerman": "Preparando certificación oficial de alemán"
     },
     "experience": {
-      "title": "Experiencia"
+      "kicker": "Experiencia",
+      "title": "De la inmunología traslacional al trabajo analítico e industrial de laboratorio.",
+      "body": "Mi experiencia práctica incluye investigación en inmunología y biología molecular en Madrid y análisis de biomasa en Irlanda, combinando muestras clínicas, protocolos analíticos y responsabilidad independiente en laboratorio.",
+      "pointResearch": "Fundación de investigación del Hospital Universitario La Princesa · 2025",
+      "pointBiomass": "Celignis Biomass Analysis Laboratory · Erasmus+ 2023",
+      "pointTeaching": "Instructor STEM y robótica educativa · 2020-2021"
     },
     "education": {
-      "title": "Formación"
+      "kicker": "Formación",
+      "title": "Resultados académicos sólidos con base clínica, analítica y biomédica.",
+      "body": "Me gradué con distinción como Técnico Superior en Laboratorio Clínico y Biomédico y como Técnico en Operaciones de Laboratorio, con notas finales de 9,3/10 y 8,69/10."
     },
     "skills": {
-      "title": "Habilidades"
+      "kicker": "Habilidades",
+      "title": "Identidad científica: conectar habilidades técnicas, curiosidad y propósito traslacional."
     },
-    "projects": {
-      "title": "Proyectos"
+    "concepts": {
+      "kicker": "Conceptos de investigación",
+      "title": "Ideas científicas en fase inicial moldeadas por pensamiento de laboratorio y curiosidad traslacional.",
+      "body": "Estos conceptos no se presentan como tratamientos validados ni como resultados clínicos. Muestran cómo conecto preguntas biomédicas, métodos de laboratorio e hipótesis de investigación responsables.",
+      "pointHypothesis": "Hipótesis en fase inicial · no validada clínicamente",
+      "pointMethods": "Biomateriales · microbiología · métodos analíticos",
+      "pointValidation": "Diseñado para validación experimental futura"
+    },
+    "references": {
+      "kicker": "Referencias",
+      "title": "Referencias profesionales y académicas pueden respaldar la experiencia de laboratorio mostrada aquí.",
+      "body": "Las referencias de formación académica, prácticas de investigación y experiencia internacional en laboratorio pueden facilitarse según la oportunidad y el proceso de selección."
     },
     "contact": {
-      "title": "Contacto"
+      "kicker": "Contacto",
+      "title": "Abierto a oportunidades en laboratorio, investigación clínica y ciencia biomédica.",
+      "body": "Me interesan la biología molecular, la inmunología, la investigación traslacional, la divulgación científica y la colaboración internacional en entornos de laboratorio."
     }
+  },
+  "contactForm": {
+    "kicker": "Contacto profesional",
+    "title": "Ponte en contacto.",
+    "body": "Para puestos de laboratorio, oportunidades en investigación clínica, proyectos biomédicos o colaboraciones científicas.",
+    "name": "Nombre",
+    "email": "Email",
+    "message": "Mensaje",
+    "submit": "Enviar mensaje",
+    "ready": "Formulario preparado. Falta activar la clave de Web3Forms.",
+    "sending": "Enviando mensaje...",
+    "success": "Mensaje enviado. Gracias por ponerte en contacto.",
+    "error": "No se pudo enviar el mensaje. Inténtalo de nuevo en unos minutos."
   }
 }

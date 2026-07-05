@@ -25,6 +25,7 @@
 
 const Language = (() => {
     const STORAGE_KEY = 'portfolio-language';
+    const TRANSLATION_VERSION = '20260705-language';
     const DEFAULT_LANGUAGE = 'es';
     const AVAILABLE_LANGUAGES = ['es', 'en', 'de'];
     
@@ -60,7 +61,7 @@ const Language = (() => {
         }
 
         try {
-            const response = await fetch(`data/translations/${language}.json`);
+            const response = await fetch(`data/translations/${language}.json?v=${TRANSLATION_VERSION}`);
 
             if (!response.ok) {
                 throw new Error(`HTTP ${response.status}`);
@@ -115,13 +116,20 @@ const Language = (() => {
      * Traducir elemento del DOM
      */
     function translateElement(element) {
-        const key = element.dataset.i18n;
+        const key = element.dataset.i18n || element.dataset.i18nHtml;
 
         if (!key) {
             return;
         }
 
-        element.textContent = translateKey(key);
+        const value = translateKey(key);
+
+        if (element.dataset.i18nHtml) {
+            element.innerHTML = value;
+            return;
+        }
+
+        element.textContent = value;
     }
 
     /**
@@ -144,8 +152,35 @@ const Language = (() => {
      * Traducir todos los elementos de la página
      */
     function translatePage() {
-        document.querySelectorAll('[data-i18n]').forEach(translateElement);
+        document.querySelectorAll('[data-i18n], [data-i18n-html]').forEach(translateElement);
         console.log(`[LANGUAGE] Traduciendo página a: ${currentLanguage}`);
+    }
+
+    /**
+     * Actualizar estado visual y accesible de los controles de idioma
+     */
+    function updateLanguageControls() {
+        document.querySelectorAll('[data-language-set]').forEach((control) => {
+            const language = control.dataset.languageSet;
+            control.setAttribute('aria-pressed', String(language === currentLanguage));
+        });
+    }
+
+    /**
+     * Inicializar botones de idioma
+     */
+    function setupLanguageControls() {
+        document.querySelectorAll('[data-language-set]').forEach((control) => {
+            control.addEventListener('click', () => {
+                if (control.getAttribute('aria-disabled') === 'true') {
+                    return;
+                }
+
+                this.set(control.dataset.languageSet);
+            });
+        });
+
+        updateLanguageControls();
     }
     
     return {
@@ -158,6 +193,8 @@ const Language = (() => {
             document.documentElement.lang = currentLanguage;
             await loadTranslations(currentLanguage);
             translatePage();
+            setupLanguageControls.call(this);
+            updateLanguageControls();
         },
         
         /**
@@ -174,6 +211,7 @@ const Language = (() => {
             await loadTranslations(currentLanguage);
             translatePage();
             saveLanguagePreference(currentLanguage);
+            updateLanguageControls();
         },
         
         /**

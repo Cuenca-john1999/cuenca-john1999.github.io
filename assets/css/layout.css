@@ -54,7 +54,8 @@ main,
     transition: opacity var(--transition-normal), transform var(--transition-normal);
 }
 
-.site-nav {
+.site-nav,
+.language-switcher {
     pointer-events: auto;
 }
 
@@ -64,14 +65,15 @@ main,
     pointer-events: none;
 }
 
-.site-header.is-header-hidden .site-nav {
+.site-header.is-header-hidden .site-nav,
+.site-header.is-header-hidden .language-switcher {
     pointer-events: none;
 }
 
-.site-nav {
+.site-nav,
+.language-switcher {
     display: flex;
     align-items: center;
-    gap: clamp(0.75rem, 1.45vw, 1.5rem);
     padding: 0.65rem 0.85rem;
     border: 1px solid rgba(174, 183, 194, 0.08);
     border-radius: 999px;
@@ -84,6 +86,14 @@ main,
     text-transform: uppercase;
 }
 
+.site-nav {
+    gap: clamp(0.75rem, 1.45vw, 1.5rem);
+}
+
+.language-switcher {
+    gap: 0.25rem;
+}
+
 .site-nav a {
     transition: color var(--transition-fast);
 }
@@ -91,6 +101,37 @@ main,
 .site-nav a:hover,
 .site-nav a:focus-visible {
     color: var(--color-text);
+}
+
+.language-switcher button {
+    min-width: 2.1rem;
+    border: 0;
+    border-radius: 999px;
+    background-color: transparent;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    font: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    transition: color var(--transition-fast), background-color var(--transition-fast), opacity var(--transition-fast);
+}
+
+.language-switcher button:hover,
+.language-switcher button:focus-visible,
+.language-switcher button[aria-pressed="true"] {
+    background-color: rgba(79, 140, 255, 0.14);
+    color: var(--color-text);
+}
+
+.language-switcher button[aria-disabled="true"] {
+    cursor: not-allowed;
+    opacity: 0.42;
+}
+
+.language-switcher button[aria-disabled="true"]:hover,
+.language-switcher button[aria-disabled="true"]:focus-visible {
+    background-color: transparent;
+    color: var(--color-text-muted);
 }
 
 .opening-stage {
@@ -1338,11 +1379,21 @@ body.is-document-explorer-open {
 
     .site-header {
         inset: var(--spacing-lg) var(--spacing-lg) auto;
+        gap: var(--spacing-sm);
     }
 
     .site-nav {
-        gap: var(--spacing-lg);
+        gap: var(--spacing-md);
+        font-size: 0.72rem;
+    }
+
+    .language-switcher {
+        padding-inline: 0.55rem;
         font-size: 0.75rem;
+    }
+
+    .language-switcher button {
+        min-width: 1.85rem;
     }
 
     .site-nav a:nth-child(2),
