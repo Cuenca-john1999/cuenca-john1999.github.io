@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const documentExplorerLabel = document.querySelector('#document-explorer-label');
     const documentExplorerClose = document.querySelector('[data-document-close]');
     const documentOpenLinks = Array.from(document.querySelectorAll('[data-document-open]'));
+    const contactLinks = Array.from(document.querySelectorAll('[data-contact-link]'));
     let lastScrollY = window.scrollY;
     let scrollDirectionStartY = window.scrollY;
     let scrollDirection = 'up';
@@ -51,6 +52,33 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     initializeOptionalModules();
+
+    const decodeContactPart = (value) => {
+        if (!value) {
+            return '';
+        }
+
+        try {
+            return window.atob(value);
+        } catch (error) {
+            console.warn('[CONTACT] No se pudo preparar el enlace de contacto', error);
+            return '';
+        }
+    };
+
+    contactLinks.forEach((link) => {
+        const user = decodeContactPart(link.dataset.contactUser);
+        const domain = decodeContactPart(link.dataset.contactDomain);
+
+        if (!user || !domain) {
+            return;
+        }
+
+        const address = `${user}@${domain}`;
+        const subject = encodeURIComponent('Portfolio contact');
+        link.href = `mailto:${address}?subject=${subject}`;
+        link.setAttribute('aria-label', `Send an email to ${address}`);
+    });
 
     const closeDocumentExplorer = () => {
         if (!documentExplorer) {
@@ -80,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const documentLabel = trigger.dataset.documentLabel || trigger.textContent.trim();
 
         lastFocusedElement = trigger;
-        documentExplorerFrame.src = `${documentUrl}#view=FitH`;
+        documentExplorerFrame.src = `${documentUrl}#zoom=125`;
         documentExplorerFrame.title = `${documentHeading} PDF reader`;
         documentExplorerFallback.href = documentUrl;
 
