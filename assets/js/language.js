@@ -25,7 +25,7 @@
 
 const Language = (() => {
     const STORAGE_KEY = 'portfolio-language';
-    const TRANSLATION_VERSION = '20260706-portfolio-cta';
+    const TRANSLATION_VERSION = '20260706-recruiter';
     const DEFAULT_LANGUAGE = 'es';
     const AVAILABLE_LANGUAGES = ['es', 'en', 'de'];
     

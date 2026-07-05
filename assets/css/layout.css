@@ -172,6 +172,7 @@ main,
 .js .opening-profession,
 .js .opening-name,
 .js .opening-philosophy,
+.js .opening-availability,
 .js .opening-actions,
 .js .opening-divider,
 .js .opening-scroll {
@@ -183,6 +184,7 @@ main,
 .js .opening-profession.is-visible,
 .js .opening-name.is-visible,
 .js .opening-philosophy.is-visible,
+.js .opening-availability.is-visible,
 .js .opening-actions.is-visible,
 .js .opening-divider.is-visible,
 .js .opening-scroll.is-visible {
@@ -216,6 +218,20 @@ main,
     line-height: 1.8;
     text-align: center;
     white-space: nowrap;
+}
+
+.opening-availability {
+    align-self: center;
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(79, 140, 255, 0.28);
+    border-radius: var(--radius-pill);
+    background-color: rgba(79, 140, 255, 0.08);
+    color: var(--color-text);
+    font: 650 clamp(0.86rem, 1vw, 0.95rem)/1.45 var(--font-family-sans);
+    letter-spacing: 0.02em;
+    text-align: center;
 }
 
 .opening-actions {
@@ -474,6 +490,77 @@ main,
     width: 2.5rem;
     height: 1px;
     background: linear-gradient(90deg, rgba(79, 140, 255, 0.72), transparent);
+}
+
+.readiness-strip,
+.technique-strip {
+    margin-block-start: clamp(2rem, 4vw, 3rem);
+    border: 1px solid rgba(174, 183, 194, 0.14);
+    border-radius: var(--radius-sm);
+    background-color: rgba(17, 20, 24, 0.52);
+}
+
+.readiness-strip {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.readiness-strip article {
+    min-width: 0;
+    padding: clamp(1.25rem, 2.4vw, 2rem);
+}
+
+.readiness-strip article + article {
+    border-inline-start: 1px solid rgba(174, 183, 194, 0.14);
+}
+
+.readiness-strip span,
+.technique-strip > span {
+    display: block;
+    margin-block-end: var(--spacing-md);
+    color: var(--color-accent);
+    font: 700 0.72rem/1.2 var(--font-family-sans);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.readiness-strip h3 {
+    max-width: 28rem;
+    margin: 0;
+    color: var(--color-text);
+    font: 650 clamp(1.05rem, 1.5vw, 1.35rem)/1.25 var(--font-family-sans);
+}
+
+.readiness-strip p {
+    margin-block-start: var(--spacing-md);
+    font-size: 0.94rem;
+    line-height: 1.65;
+}
+
+.technique-strip {
+    padding: clamp(1.25rem, 2.4vw, 2rem);
+}
+
+.technique-strip ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.technique-strip li {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2rem;
+    padding-inline: 0.78rem;
+    border: 1px solid rgba(174, 183, 194, 0.18);
+    border-radius: var(--radius-pill);
+    color: var(--color-text);
+    font: 650 0.72rem/1 var(--font-family-sans);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
 }
 
 .focus-grid {
@@ -1075,6 +1162,33 @@ body.is-document-explorer-open {
     font: 400 clamp(1rem, 1.35vw, 1.15rem)/1.75 var(--font-family-sans);
 }
 
+.maturity-scale {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-block-start: var(--spacing-xl);
+}
+
+.maturity-scale span {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.2rem;
+    padding-inline: 0.85rem;
+    border: 1px solid rgba(79, 140, 255, 0.24);
+    border-radius: var(--radius-pill);
+    color: var(--color-text);
+    font: 700 0.7rem/1 var(--font-family-sans);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.maturity-scale span:not(:last-child)::after {
+    content: ">";
+    margin-inline-start: 0.85rem;
+    color: var(--color-accent);
+}
+
 .concept-card__grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1443,6 +1557,15 @@ body.is-document-explorer-open {
         padding-inline: 0;
     }
 
+    .readiness-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .readiness-strip article + article {
+        border-block-start: 1px solid rgba(174, 183, 194, 0.14);
+        border-inline-start: 0;
+    }
+
 }
 
 @media (max-width: 640px) {
@@ -1529,5 +1652,18 @@ body.is-document-explorer-open {
     .opening-philosophy {
         width: auto;
         white-space: normal;
+    }
+
+    .opening-availability {
+        border-radius: var(--radius-sm);
+    }
+
+    .maturity-scale {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .maturity-scale span:not(:last-child)::after {
+        content: none;
     }
 }

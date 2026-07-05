@@ -26,6 +26,8 @@
   "hero": {
     "title": "Clinical &amp; Biomedical<br>Laboratory Technologist",
     "philosophy": "Committed to a lifetime of learning, discovery and helping others.",
+    "availability": "Available for laboratory, clinical research and biomedical science opportunities in Germany and internationally.",
+    "cvCta": "Download CV",
     "contactCta": "Contact",
     "projectsCta": "Explore projects",
     "scroll": "Scroll to discover"
@@ -81,6 +83,18 @@
       "body": "Available for laboratory, clinical research and biomedical science opportunities in Germany and internationally."
     }
   },
+  "readiness": {
+    "germany": {
+      "kicker": "Germany readiness",
+      "title": "Based in Berlin and preparing German certification.",
+      "body": "Open to recognition guidance and laboratory opportunities while continuing language development."
+    },
+    "looking": {
+      "kicker": "What I am looking for",
+      "title": "Laboratory, clinical research and biomedical science environments.",
+      "body": "Especially molecular biology, immunology, microbiology, virology, analytical laboratory work and international teams."
+    }
+  },
   "experienceCards": {
     "immunology": {
       "title": "Immunology &amp; Molecular Biology",
@@ -115,6 +129,9 @@
       "title": "Certified Additional Training",
       "body": "Animal Experimentation training for basic functions A, B and C, including animal care, euthanasia and procedures according to ECC/566/2015. Additional certificates include Healthcare Centre Management and Basic Level Occupational Risk Prevention."
     }
+  },
+  "selectedTechniques": {
+    "title": "Selected techniques"
   },
   "skillsMap": {
     "skillsTitle": "Skills",
@@ -181,9 +198,14 @@
     }
   },
   "conceptCard": {
-    "status": "Concept proposal · AETEL 2025",
+    "status": "Conceptual · Not experimentally validated · AETEL 2025",
     "title": "Chitosan Applications in Medicine: potential for microplastic capture and biomedical study.",
     "body": "An early research hypothesis exploring whether modified chitosan, a biocompatible biopolymer derived from chitin, could be studied as a platform for interacting with microplastics in future biomedical or analytical models.",
+    "maturityScale": {
+      "concept": "Conceptual hypothesis",
+      "literature": "Literature-informed proposal",
+      "validation": "Requires in vitro validation"
+    },
     "context": {
       "title": "Scientific context",
       "body": "Microplastics are an emerging health concern, but human exposure, accumulation and clinical impact still require careful experimental confirmation."

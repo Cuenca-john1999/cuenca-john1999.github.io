@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional portfolio of Jhon M. Cuenca, Clinical &amp; Biomedical Laboratory Technologist.">
+    <meta name="description" content="Clinical &amp; Biomedical Laboratory Technologist based in Berlin. Molecular biology, immunology, analytical laboratory work and research concepts.">
     <meta name="theme-color" content="#0B0D10">
+    <meta property="og:title" content="Jhon M. Cuenca | Scientific Portfolio">
+    <meta property="og:description" content="Clinical &amp; Biomedical Laboratory Technologist based in Berlin. Molecular biology, immunology, analytical laboratory work and research concepts.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cuenca-john1999.github.io/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Jhon M. Cuenca | Scientific Portfolio">
+    <meta name="twitter:description" content="Clinical &amp; Biomedical Laboratory Technologist based in Berlin. Molecular biology, immunology, analytical laboratory work and research concepts.">
     
     <title>Jhon M. Cuenca - Clinical &amp; Biomedical Laboratory Technologist</title>
 
@@ -20,7 +27,7 @@
     <link rel="stylesheet" href="assets/css/base.css">
     
     <!-- 3. Layout general -->
-    <link rel="stylesheet" href="assets/css/layout.css?v=20260706-footer">
+    <link rel="stylesheet" href="assets/css/layout.css?v=20260706-recruiter">
     
     <!-- 4. Componentes específicos -->
     <link rel="stylesheet" href="assets/css/components.css">
@@ -54,7 +61,9 @@
                         <h1 class="opening-profession" data-reveal data-i18n-html="hero.title">Clinical &amp; Biomedical<br>Laboratory Technologist</h1>
                         <p class="opening-name" data-reveal>Jhon M. Cuenca</p>
                         <p class="opening-philosophy" data-reveal data-i18n="hero.philosophy">Committed to a lifetime of learning, discovery and helping others.</p>
+                        <p class="opening-availability" data-reveal data-i18n="hero.availability">Available for laboratory, clinical research and biomedical science opportunities in Germany and internationally.</p>
                         <div class="opening-actions" data-reveal>
+                            <a class="opening-action" href="assets/documents/Jhon_M_Cuenca_CV_Clinical_Biomedical_Laboratory.pdf" target="_blank" rel="noopener" data-i18n="hero.cvCta">Download CV</a>
                             <a class="opening-action opening-action--primary" href="#contact" data-i18n="hero.contactCta">Contact</a>
                             <a class="opening-action" href="#education" data-i18n="hero.projectsCta">Explore projects</a>
                         </div>
@@ -82,6 +91,18 @@
                         <li data-i18n="sections.profile.pointLanguages">Spanish native · English B2 · German A2</li>
                         <li data-i18n="sections.profile.pointGerman">Preparing official German certification</li>
                     </ul>
+                </div>
+                <div class="readiness-strip" aria-label="Germany readiness and opportunity focus">
+                    <article>
+                        <span data-i18n="readiness.germany.kicker">Germany readiness</span>
+                        <h3 data-i18n="readiness.germany.title">Based in Berlin and preparing German certification.</h3>
+                        <p data-i18n="readiness.germany.body">Open to recognition guidance and laboratory opportunities while continuing language development.</p>
+                    </article>
+                    <article>
+                        <span data-i18n="readiness.looking.kicker">What I am looking for</span>
+                        <h3 data-i18n="readiness.looking.title">Laboratory, clinical research and biomedical science environments.</h3>
+                        <p data-i18n="readiness.looking.body">Especially molecular biology, immunology, microbiology, virology, analytical laboratory work and international teams.</p>
+                    </article>
                 </div>
             </section>
 
@@ -198,6 +219,25 @@
             <section class="sequence-section skills-section" id="skills" data-sequence-section aria-labelledby="skills-title">
                 <div class="section-kicker" data-i18n="sections.skills.kicker">Skills</div>
                 <h2 id="skills-title" data-i18n="sections.skills.title">Scientific identity: connecting technical skills, curiosity and translational purpose.</h2>
+                <div class="technique-strip" aria-label="Selected laboratory techniques">
+                    <span data-i18n="selectedTechniques.title">Selected techniques</span>
+                    <ul>
+                        <li>PCR</li>
+                        <li>RNA extraction</li>
+                        <li>ELISA</li>
+                        <li>Western Blot</li>
+                        <li>Cell culture</li>
+                        <li>HaCaT</li>
+                        <li>CD4/CD14 purification</li>
+                        <li>CHNOS</li>
+                        <li>COD</li>
+                        <li>NIR/VISION</li>
+                        <li>GLP</li>
+                        <li>SOP drafting</li>
+                        <li>Microbiology</li>
+                        <li>Virology</li>
+                    </ul>
+                </div>
                 <div class="identity-map" aria-label="Scientific identity map">
                     <div class="identity-column">
                         <h3 data-i18n="skillsMap.skillsTitle">Skills</h3>
@@ -292,6 +332,11 @@
                         <span class="concept-status" data-i18n="conceptCard.status">Concept proposal · AETEL 2025</span>
                         <h3 id="chitosan-concept-title" data-i18n="conceptCard.title">Chitosan Applications in Medicine: potential for microplastic capture and biomedical study.</h3>
                         <p data-i18n="conceptCard.body">An early research hypothesis exploring whether modified chitosan, a biocompatible biopolymer derived from chitin, could be studied as a platform for interacting with microplastics in future biomedical or analytical models.</p>
+                        <div class="maturity-scale" aria-label="Project maturity scale">
+                            <span data-i18n="conceptCard.maturityScale.concept">Conceptual hypothesis</span>
+                            <span data-i18n="conceptCard.maturityScale.literature">Literature-informed proposal</span>
+                            <span data-i18n="conceptCard.maturityScale.validation">Requires in vitro validation</span>
+                        </div>
                     </div>
 
                     <div class="concept-card__grid">
@@ -491,9 +536,9 @@
     <!-- JavaScript - Orden de carga importante -->
     <!-- 1. Módulos core (theme, language) -->
     <script src="assets/js/theme.js"></script>
-    <script src="assets/js/language.js?v=20260706-footer"></script>
+    <script src="assets/js/language.js?v=20260706-recruiter"></script>
     
     <!-- 2. Inicializador principal (debe cargarse al final) -->
-    <script src="assets/js/app.js?v=20260706-footer"></script>
+    <script src="assets/js/app.js?v=20260706-recruiter"></script>
 </body>
 </html>

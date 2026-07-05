@@ -26,6 +26,8 @@
   "hero": {
     "title": "Técnico Superior en<br>Laboratorio Clínico y Biomédico",
     "philosophy": "Comprometido con una vida de aprendizaje, descubrimiento y ayuda a los demás.",
+    "availability": "Disponible para oportunidades en laboratorio, investigación clínica y ciencia biomédica en Alemania y a nivel internacional.",
+    "cvCta": "Descargar CV",
     "contactCta": "Contacto",
     "projectsCta": "Explorar proyectos",
     "scroll": "Desliza para descubrir"
@@ -81,6 +83,18 @@
       "body": "Disponible para oportunidades en laboratorio, investigación clínica y ciencia biomédica en Alemania y a nivel internacional."
     }
   },
+  "readiness": {
+    "germany": {
+      "kicker": "Preparación para Alemania",
+      "title": "Residente en Berlín y preparando certificación de alemán.",
+      "body": "Abierto a orientación sobre reconocimiento profesional y oportunidades de laboratorio mientras continúa el desarrollo del idioma."
+    },
+    "looking": {
+      "kicker": "Qué estoy buscando",
+      "title": "Entornos de laboratorio, investigación clínica y ciencia biomédica.",
+      "body": "Especialmente biología molecular, inmunología, microbiología, virología, trabajo analítico de laboratorio y equipos internacionales."
+    }
+  },
   "experienceCards": {
     "immunology": {
       "title": "Inmunología y Biología Molecular",
@@ -115,6 +129,9 @@
       "title": "Formación adicional certificada",
       "body": "Formación en Experimentación Animal para funciones básicas A, B y C, incluyendo cuidado animal, eutanasia y procedimientos conforme a la Orden ECC/566/2015. Certificados adicionales en Gestión de Centros Sanitarios y Prevención de Riesgos Laborales de nivel básico."
     }
+  },
+  "selectedTechniques": {
+    "title": "Técnicas seleccionadas"
   },
   "skillsMap": {
     "skillsTitle": "Habilidades",
@@ -181,9 +198,14 @@
     }
   },
   "conceptCard": {
-    "status": "Propuesta conceptual · AETEL 2025",
+    "status": "Conceptual · No validado experimentalmente · AETEL 2025",
     "title": "Aplicaciones médicas del quitosano: potencial para la captura de microplásticos y su estudio biomédico.",
     "body": "Hipótesis de investigación en fase inicial que explora si el quitosano modificado, un biopolímero biocompatible derivado de la quitina, podría estudiarse como plataforma para interactuar con microplásticos en futuros modelos biomédicos o analíticos.",
+    "maturityScale": {
+      "concept": "Hipótesis conceptual",
+      "literature": "Propuesta informada por literatura",
+      "validation": "Requiere validación in vitro"
+    },
     "context": {
       "title": "Contexto científico",
       "body": "Los microplásticos son una preocupación emergente para la salud, pero la exposición humana, su posible acumulación y su impacto clínico todavía requieren confirmación experimental cuidadosa."
