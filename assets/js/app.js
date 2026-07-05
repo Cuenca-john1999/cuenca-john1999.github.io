@@ -21,9 +21,109 @@ document.addEventListener('DOMContentLoaded', () => {
     const siteHeader = document.querySelector('.site-header');
     const reveals = Array.from(document.querySelectorAll('[data-reveal]'));
     const trackedSections = Array.from(document.querySelectorAll('[data-sequence-section]'));
+    const documentExplorer = document.querySelector('#document-explorer');
+    const documentExplorerTitle = document.querySelector('#document-explorer-title');
+    const documentExplorerFrame = document.querySelector('#document-explorer-frame');
+    const documentExplorerFallback = document.querySelector('#document-explorer-fallback');
+    const documentExplorerLabel = document.querySelector('#document-explorer-label');
+    const documentExplorerClose = document.querySelector('[data-document-close]');
+    const documentOpenLinks = Array.from(document.querySelectorAll('[data-document-open]'));
     let lastScrollY = window.scrollY;
     let scrollDirectionStartY = window.scrollY;
     let scrollDirection = 'up';
+    let activeSectionFrame = null;
+    let lastFocusedElement = null;
+
+    const initializeOptionalModules = () => {
+        if (typeof Theme !== 'undefined' && typeof Theme.init === 'function') {
+            Theme.init();
+        }
+
+        if (typeof Language !== 'undefined' && typeof Language.init === 'function') {
+            const languageInit = Language.init();
+
+            if (languageInit && typeof languageInit.catch === 'function') {
+                languageInit.catch((error) => {
+                    console.warn('[LANGUAGE] No se pudo inicializar el idioma', error);
+                });
+            }
+        }
+    };
+
+    initializeOptionalModules();
+
+    const closeDocumentExplorer = () => {
+        if (!documentExplorer) {
+            return;
+        }
+
+        documentExplorer.hidden = true;
+        document.body.classList.remove('is-document-explorer-open');
+
+        if (documentExplorerFrame) {
+            documentExplorerFrame.removeAttribute('src');
+        }
+
+        if (lastFocusedElement) {
+            lastFocusedElement.focus();
+            lastFocusedElement = null;
+        }
+    };
+
+    const openDocumentExplorer = (trigger) => {
+        if (!documentExplorer || !documentExplorerFrame || !documentExplorerFallback) {
+            return;
+        }
+
+        const documentUrl = trigger.href;
+        const documentHeading = trigger.dataset.documentHeading || 'Bacteriophage Therapy: Rediscovering an Innovative Therapy';
+        const documentLabel = trigger.dataset.documentLabel || trigger.textContent.trim();
+
+        lastFocusedElement = trigger;
+        documentExplorerFrame.src = `${documentUrl}#view=FitH`;
+        documentExplorerFrame.title = `${documentHeading} PDF reader`;
+        documentExplorerFallback.href = documentUrl;
+
+        if (documentExplorerTitle) {
+            documentExplorerTitle.textContent = documentHeading;
+        }
+
+        if (documentExplorerLabel) {
+            documentExplorerLabel.textContent = documentLabel;
+        }
+
+        documentExplorer.hidden = false;
+        document.body.classList.add('is-document-explorer-open');
+
+        if (documentExplorerClose) {
+            documentExplorerClose.focus();
+        }
+    };
+
+    documentOpenLinks.forEach((link) => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            openDocumentExplorer(link);
+        });
+    });
+
+    if (documentExplorerClose) {
+        documentExplorerClose.addEventListener('click', closeDocumentExplorer);
+    }
+
+    if (documentExplorer) {
+        documentExplorer.addEventListener('click', (event) => {
+            if (event.target === documentExplorer) {
+                closeDocumentExplorer();
+            }
+        });
+    }
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && documentExplorer && !documentExplorer.hidden) {
+            closeDocumentExplorer();
+        }
+    });
 
     reveals.forEach((element, index) => {
         window.setTimeout(() => {
@@ -71,7 +171,14 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const scheduleActiveSectionUpdate = () => {
-        window.requestAnimationFrame(updateActiveSectionFromViewport);
+        if (activeSectionFrame !== null) {
+            return;
+        }
+
+        activeSectionFrame = window.requestAnimationFrame(() => {
+            activeSectionFrame = null;
+            updateActiveSectionFromViewport();
+        });
     };
 
     const updateHeaderVisibility = () => {

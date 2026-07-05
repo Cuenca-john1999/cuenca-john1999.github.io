@@ -7,7 +7,7 @@
  * - Detecta preferencia del sistema (prefers-color-scheme)
  * - Permite cambio manual de tema sin recargar
  * - Guarda preferencia en localStorage
- * - Aplica clase .dark a :root
+ * - Aplica data-theme y clase .dark a :root
  * 
  * Interfaz pública:
  * - Theme.init() - Inicializar el módulo
@@ -24,22 +24,57 @@
 const Theme = (() => {
     const STORAGE_KEY = 'portfolio-theme';
     const DARK_CLASS = 'dark';
+    const AVAILABLE_THEMES = ['dark', 'light'];
     
-    let currentTheme = 'light';
+    let currentTheme = document.documentElement.dataset.theme || 'dark';
+
+    /**
+     * Comprobar que el tema existe
+     */
+    function isSupportedTheme(theme) {
+        return AVAILABLE_THEMES.includes(theme);
+    }
+
+    /**
+     * Leer preferencia guardada sin romper navegadores con storage bloqueado
+     */
+    function getSavedTheme() {
+        try {
+            const savedTheme = window.localStorage.getItem(STORAGE_KEY);
+            return isSupportedTheme(savedTheme) ? savedTheme : null;
+        } catch (error) {
+            console.warn('[THEME] No se pudo leer localStorage', error);
+            return null;
+        }
+    }
     
     /**
      * Obtener tema del sistema
      */
     function getSystemTheme() {
-        // TODO: Implementar detección de tema del sistema
-        return 'light';
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+            return 'light';
+        }
+
+        return 'dark';
     }
     
     /**
      * Obtener tema guardado o del sistema
      */
     function getInitialTheme() {
-        // TODO: Implementar lógica de obtención de tema
+        const savedTheme = getSavedTheme();
+
+        if (savedTheme) {
+            return savedTheme;
+        }
+
+        const documentTheme = document.documentElement.dataset.theme;
+
+        if (isSupportedTheme(documentTheme)) {
+            return documentTheme;
+        }
+
         return getSystemTheme();
     }
     
@@ -47,16 +82,28 @@ const Theme = (() => {
      * Aplicar tema al DOM
      */
     function applyTheme(theme) {
-        // TODO: Implementar aplicación de tema
-        console.log(`[THEME] Aplicando tema: ${theme}`);
-        currentTheme = theme;
+        const nextTheme = isSupportedTheme(theme) ? theme : 'dark';
+        const root = document.documentElement;
+
+        root.dataset.theme = nextTheme;
+        root.classList.toggle(DARK_CLASS, nextTheme === 'dark');
+        root.style.colorScheme = nextTheme;
+
+        currentTheme = nextTheme;
+        console.log(`[THEME] Aplicando tema: ${nextTheme}`);
+
+        return nextTheme;
     }
     
     /**
      * Guardar preferencia del usuario
      */
     function saveThemePreference(theme) {
-        // TODO: Implementar guardado en localStorage
+        try {
+            window.localStorage.setItem(STORAGE_KEY, theme);
+        } catch (error) {
+            console.warn('[THEME] No se pudo guardar localStorage', error);
+        }
     }
     
     return {
@@ -81,8 +128,8 @@ const Theme = (() => {
          * Establecer tema específico
          */
         set(theme) {
-            applyTheme(theme);
-            saveThemePreference(theme);
+            const appliedTheme = applyTheme(theme);
+            saveThemePreference(appliedTheme);
         },
         
         /**
@@ -93,3 +140,5 @@ const Theme = (() => {
         }
     };
 })();
+
+window.Theme = Theme;

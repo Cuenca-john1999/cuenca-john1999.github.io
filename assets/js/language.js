@@ -30,35 +30,121 @@ const Language = (() => {
     
     let currentLanguage = DEFAULT_LANGUAGE;
     let translations = {};
+
+    /**
+     * Comprobar que el idioma existe
+     */
+    function isSupportedLanguage(language) {
+        return AVAILABLE_LANGUAGES.includes(language);
+    }
+
+    /**
+     * Leer preferencia guardada sin romper navegadores con storage bloqueado
+     */
+    function getSavedLanguage() {
+        try {
+            const savedLanguage = window.localStorage.getItem(STORAGE_KEY);
+            return isSupportedLanguage(savedLanguage) ? savedLanguage : null;
+        } catch (error) {
+            console.warn('[LANGUAGE] No se pudo leer localStorage', error);
+            return null;
+        }
+    }
     
     /**
      * Cargar traducciones desde data/translations/*.json
      */
-    async function loadTranslations() {
-        // TODO: Implementar carga de traducciones desde data/translations/
-        console.log('[LANGUAGE] Cargando traducciones...');
+    async function loadTranslations(language = currentLanguage) {
+        if (translations[language]) {
+            return translations[language];
+        }
+
+        try {
+            const response = await fetch(`data/translations/${language}.json`);
+
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}`);
+            }
+
+            translations[language] = await response.json();
+            console.log(`[LANGUAGE] Traducciones cargadas: ${language}`);
+        } catch (error) {
+            console.warn(`[LANGUAGE] No se pudieron cargar traducciones para: ${language}`, error);
+            translations[language] = {};
+        }
+
+        return translations[language];
     }
     
     /**
      * Obtener idioma del navegador
      */
     function getBrowserLanguage() {
-        // TODO: Implementar detección de idioma del navegador
-        return DEFAULT_LANGUAGE;
+        const browserLanguage = (window.navigator.language || DEFAULT_LANGUAGE).slice(0, 2).toLowerCase();
+        return isSupportedLanguage(browserLanguage) ? browserLanguage : DEFAULT_LANGUAGE;
+    }
+
+    /**
+     * Obtener idioma inicial
+     */
+    function getInitialLanguage() {
+        const savedLanguage = getSavedLanguage();
+        const documentLanguage = document.documentElement.lang.slice(0, 2).toLowerCase();
+        const supportedDocumentLanguage = isSupportedLanguage(documentLanguage) ? documentLanguage : null;
+        const hasTranslatableContent = Boolean(document.querySelector('[data-i18n]'));
+
+        if (hasTranslatableContent && savedLanguage) {
+            return savedLanguage;
+        }
+
+        return supportedDocumentLanguage || savedLanguage || getBrowserLanguage();
+    }
+
+    /**
+     * Guardar preferencia del usuario
+     */
+    function saveLanguagePreference(language) {
+        try {
+            window.localStorage.setItem(STORAGE_KEY, language);
+        } catch (error) {
+            console.warn('[LANGUAGE] No se pudo guardar localStorage', error);
+        }
     }
     
     /**
      * Traducir elemento del DOM
      */
     function translateElement(element) {
-        // TODO: Implementar traducción de elementos con data-i18n
+        const key = element.dataset.i18n;
+
+        if (!key) {
+            return;
+        }
+
+        element.textContent = translateKey(key);
+    }
+
+    /**
+     * Obtener traduccion por ruta, por ejemplo common.theme
+     */
+    function translateKey(key) {
+        const dictionary = translations[currentLanguage] || {};
+        const value = key.split('.').reduce((result, pathPart) => {
+            if (result && typeof result === 'object') {
+                return result[pathPart];
+            }
+
+            return undefined;
+        }, dictionary);
+
+        return typeof value === 'string' ? value : key;
     }
     
     /**
      * Traducir todos los elementos de la página
      */
     function translatePage() {
-        // TODO: Traducir todos los elementos con data-i18n
+        document.querySelectorAll('[data-i18n]').forEach(translateElement);
         console.log(`[LANGUAGE] Traduciendo página a: ${currentLanguage}`);
     }
     
@@ -66,22 +152,28 @@ const Language = (() => {
         /**
          * Inicializar módulo de lenguaje
          */
-        init() {
+        async init() {
             console.log('[LANGUAGE] Módulo inicializado');
-            // TODO: Cargar traducciones y aplicar idioma inicial
+            currentLanguage = getInitialLanguage();
+            document.documentElement.lang = currentLanguage;
+            await loadTranslations(currentLanguage);
+            translatePage();
         },
         
         /**
          * Cambiar idioma
          */
-        set(language) {
-            if (!AVAILABLE_LANGUAGES.includes(language)) {
+        async set(language) {
+            if (!isSupportedLanguage(language)) {
                 console.warn(`[LANGUAGE] Idioma no soportado: ${language}`);
                 return;
             }
+
             currentLanguage = language;
+            document.documentElement.lang = currentLanguage;
+            await loadTranslations(currentLanguage);
             translatePage();
-            // TODO: Guardar preferencia en localStorage
+            saveLanguagePreference(currentLanguage);
         },
         
         /**
@@ -95,8 +187,7 @@ const Language = (() => {
          * Obtener traducción
          */
         translate(key) {
-            // TODO: Implementar obtención de traducción
-            return key;
+            return translateKey(key);
         },
         
         /**
@@ -107,3 +198,5 @@ const Language = (() => {
         }
     };
 })();
+
+window.Language = Language;
