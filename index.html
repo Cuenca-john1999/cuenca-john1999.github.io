@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="assets/css/base.css">
     
     <!-- 3. Layout general -->
-    <link rel="stylesheet" href="assets/css/layout.css?v=20260705-es-full">
+    <link rel="stylesheet" href="assets/css/layout.css?v=20260706-footer">
     
     <!-- 4. Componentes específicos -->
     <link rel="stylesheet" href="assets/css/components.css">
@@ -54,6 +54,10 @@
                         <h1 class="opening-profession" data-reveal data-i18n-html="hero.title">Clinical &amp; Biomedical<br>Laboratory Technologist</h1>
                         <p class="opening-name" data-reveal>Jhon M. Cuenca</p>
                         <p class="opening-philosophy" data-reveal data-i18n="hero.philosophy">Committed to a lifetime of learning, discovery and helping others.</p>
+                        <div class="opening-actions" data-reveal>
+                            <a class="opening-action opening-action--primary" href="#contact" data-i18n="hero.contactCta">Contact</a>
+                            <a class="opening-action" href="#education" data-i18n="hero.projectsCta">Explore projects</a>
+                        </div>
                     </div>
                     <div class="opening-divider" data-reveal aria-hidden="true"></div>
                 </div>
@@ -424,6 +428,12 @@
                     </aside>
                 </div>
             </section>
+
+            <footer class="site-footer" aria-label="Copyright and authorship notice">
+                <p data-i18n-html="footer.copyright">&copy; 2026 Jhon M. Cuenca. All rights reserved.</p>
+                <p data-i18n="footer.authorship">Portfolio content, original research concepts and diagrams are authored by Jhon M. Cuenca unless otherwise stated. Co-authored academic work is credited where shown.</p>
+                <p data-i18n="footer.scientificNotice">Scientific hypotheses are presented for educational and professional portfolio purposes only; they do not represent validated clinical treatments.</p>
+            </footer>
         </main>
 
         <div class="document-explorer" id="document-explorer" role="dialog" aria-modal="true" aria-labelledby="document-explorer-title" aria-describedby="document-explorer-description" hidden>
@@ -443,16 +453,24 @@
                             <span id="document-explorer-label">Final project · 61 pages</span>
                             <a id="document-explorer-fallback" href="assets/documents/bacteriophage-therapy-final-project.pdf" target="_blank" rel="noopener" data-i18n="documentExplorer.openNewTab">Open in new tab</a>
                         </div>
-                        <iframe id="document-explorer-frame" class="document-reader__frame" title="Bacteriophage Therapy PDF reader" src="assets/documents/bacteriophage-therapy-final-project.pdf#zoom=125"></iframe>
+                        <iframe id="document-explorer-frame" class="document-reader__frame" title="Bacteriophage Therapy PDF reader"></iframe>
                     </section>
 
                     <aside class="translation-panel" aria-label="Translation window">
                         <span class="translation-panel__kicker" data-i18n="documentExplorer.translationWindow">Translation window</span>
                         <h3 data-i18n="documentExplorer.englishAbstract">English abstract</h3>
+                        <section class="translation-hypothesis" aria-label="Original interdisciplinary hypothesis">
+                            <span>Original interdisciplinary hypothesis</span>
+                            <img class="translation-hypothesis__figure" src="assets/svg/phage-chitosan-microplastics-hypothesis.svg" alt="Conceptual diagram of the original hypothesis combining bacteriophages, chitosan, bacterial biofilms and microplastic-bacteria complex destabilization.">
+                            <p class="translation-hypothesis__caption">Simplified model: phages would target bacteria associated with biofilms, while chitosan-based materials would be studied for microplastic interaction or capture.</p>
+                            <p>As an individual contribution by Jhon Michael Cuenca Jaramillo within this collaborative final project, the work proposes a future research concept combining bacteriophage specificity with chitosan-based adsorption. The hypothesis does not suggest that phages act directly on plastic polymers; instead, it explores an indirect intervention model involving microbiota, microplastic-associated biofilms and functional biomaterials.</p>
+                            <p>In this model, sequencing methods could help identify microorganisms with affinity for microplastic surfaces, supporting the selection or design of highly specific phages. Combined with chitosan, these phages could be studied in controlled laboratory conditions to assess whether biofilm destabilization improves microplastic interaction, capture or later analytical evaluation.</p>
+                            <p>This concept is presented as an original, early-stage research hypothesis. It would require in vitro validation, toxicity assessment, reproducible analytical controls and clinical caution before any biomedical interpretation.</p>
+                        </section>
                         <p>In recent years, what once seemed like a distant warning has begun to take shape: antibiotics are losing their effectiveness. Infections that we could once treat easily now pose a serious threat, especially to the most vulnerable individuals.</p>
                         <p>This work focuses on bacteriophage therapy, a strategy that went unnoticed for decades and is now regaining the attention of the scientific community. More than 70 studies from various databases and in different languages were reviewed, and 51 were selected for their clinical relevance.</p>
-                        <p>The study explains what bacteriophages are, how they work, their replication cycles, advantages, limitations, methods of administration, and the regulatory barriers that hinder their large-scale clinical use. The results show that phage therapy has proven effective in many real-world cases, even in extreme situations where conventional treatments failed.</p>
-                        <p>Among its advantages are its high specificity, minimal impact on the microbiota, and growing evidence suggesting it may also help modulate the immune system. Based on these findings, a novel idea is proposed: combining bacteriophages with chitosan to support the body's elimination of microplastics.</p>
+                        <p>The study explains what bacteriophages are, how they work, their replication cycles, advantages, limitations, methods of administration, and the regulatory barriers that hinder their large-scale clinical use. The reviewed literature describes promising real-world applications of phage therapy, including complex cases where conventional treatments were limited.</p>
+                        <p>Among its advantages are its high specificity, minimal impact on the microbiota, and growing evidence suggesting it may also help modulate the immune system. A future-oriented concept is also proposed: exploring whether bacteriophages and chitosan-based systems could contribute to microplastic interaction, capture or biomedical study.</p>
                         <p>Overall, the study not only explores the therapeutic potential of phages, but also contributes to a more modern and personalized vision of medicine.</p>
                         <p class="translation-panel__keywords" data-i18n="documentExplorer.keywords">Keywords: bacteriophage therapy, multidrug-resistant bacteria, phage treatment, antibiotics, alternative therapy, Staphylococcus aureus, Pseudomonas aeruginosa.</p>
 
@@ -460,8 +478,8 @@
                             <summary data-i18n="documentExplorer.spanishOriginal">Spanish original</summary>
                             <p>En los últimos años, lo que antes parecía una advertencia lejana ha empezado a hacerse realidad: los antibióticos están perdiendo su fuerza. Infecciones que antes podíamos tratar fácilmente ahora representan una amenaza grave, especialmente para quienes son más vulnerables.</p>
                             <p>Este trabajo se enfoca en la bacteriofagoterapia, una estrategia que durante décadas pasó desapercibida y que ahora está volviendo a captar la atención de la comunidad científica. Se revisaron más de 70 estudios de diferentes bases de datos y en varios idiomas, y finalmente se seleccionaron 51 por su importancia clínica.</p>
-                            <p>El estudio explica qué son los bacteriófagos, cómo actúan, sus ciclos de reproducción, ventajas, limitaciones, formas de administrarlos y los obstáculos regulatorios que dificultan que se usen en grande en clínicas. Los resultados muestran que la fagoterapia ha sido efectiva en muchos casos reales, incluso en situaciones extremas donde los tratamientos habituales no funcionaron.</p>
-                            <p>Entre sus ventajas está que es muy específica, afecta poco a la microbiota, y cada vez hay más pruebas de que quizás ayude a mejorar nuestro sistema inmunológico. A partir de estos hallazgos, propongo una idea novedosa: combinar bacteriófagos con quitosano para facilitar que el cuerpo elimine microplásticos.</p>
+                            <p>El estudio explica qué son los bacteriófagos, cómo actúan, sus ciclos de reproducción, ventajas, limitaciones, formas de administrarlos y los obstáculos regulatorios que dificultan que se usen a gran escala en clínicas. La literatura revisada describe aplicaciones reales prometedoras de la fagoterapia, incluyendo casos complejos en los que los tratamientos convencionales eran limitados.</p>
+                            <p>Entre sus ventajas está que es muy específica, afecta poco a la microbiota, y cada vez hay más pruebas de que quizás ayude a modular el sistema inmunológico. También se plantea un concepto orientado al futuro: explorar si los bacteriófagos y los sistemas basados en quitosano podrían contribuir a la interacción, captura o estudio biomédico de microplásticos.</p>
                             <p>En conjunto, el estudio no solo analiza el potencial de los fagos como tratamiento, sino que también aporta a una visión más moderna y personalizada de la medicina.</p>
                         </details>
                     </aside>
@@ -473,9 +491,9 @@
     <!-- JavaScript - Orden de carga importante -->
     <!-- 1. Módulos core (theme, language) -->
     <script src="assets/js/theme.js"></script>
-    <script src="assets/js/language.js?v=20260705-es-full"></script>
+    <script src="assets/js/language.js?v=20260706-footer"></script>
     
     <!-- 2. Inicializador principal (debe cargarse al final) -->
-    <script src="assets/js/app.js?v=20260705-es-full"></script>
+    <script src="assets/js/app.js?v=20260706-footer"></script>
 </body>
 </html>

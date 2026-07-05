@@ -132,7 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
             : trigger.dataset.documentLabel || trigger.textContent.trim();
 
         lastFocusedElement = trigger;
-        documentExplorerFrame.src = `${documentUrl}#zoom=125`;
         documentExplorerFrame.title = `${documentHeading} PDF reader`;
         documentExplorerFallback.href = documentUrl;
 
@@ -146,6 +145,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         documentExplorer.hidden = false;
         document.body.classList.add('is-document-explorer-open');
+
+        window.requestAnimationFrame(() => {
+            documentExplorerFrame.src = `${documentUrl}#zoom=125`;
+        });
 
         if (documentExplorerClose) {
             documentExplorerClose.focus();

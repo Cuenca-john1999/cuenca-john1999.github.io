@@ -26,6 +26,8 @@
   "hero": {
     "title": "Clinical &amp; Biomedical<br>Laboratory Technologist",
     "philosophy": "Committed to a lifetime of learning, discovery and helping others.",
+    "contactCta": "Contact",
+    "projectsCta": "Explore projects",
     "scroll": "Scroll to discover"
   },
   "sections": {
@@ -76,7 +78,7 @@
     "contact": {
       "kicker": "Contact",
       "title": "Open to laboratory, clinical research and biomedical science opportunities.",
-      "body": "I am interested in molecular biology, immunology, translational research, scientific outreach and international collaboration in laboratory environments."
+      "body": "Available for laboratory, clinical research and biomedical science opportunities in Germany and internationally."
     }
   },
   "experienceCards": {
@@ -260,5 +262,10 @@
     "englishAbstract": "English abstract",
     "keywords": "Keywords: bacteriophage therapy, multidrug-resistant bacteria, phage treatment, antibiotics, alternative therapy, Staphylococcus aureus, Pseudomonas aeruginosa.",
     "spanishOriginal": "Spanish original"
+  },
+  "footer": {
+    "copyright": "&copy; 2026 Jhon M. Cuenca. All rights reserved.",
+    "authorship": "Portfolio content, original research concepts and diagrams are authored by Jhon M. Cuenca unless otherwise stated. Co-authored academic work is credited where shown.",
+    "scientificNotice": "Scientific hypotheses are presented for educational and professional portfolio purposes only; they do not represent validated clinical treatments."
   }
 }

@@ -172,6 +172,7 @@ main,
 .js .opening-profession,
 .js .opening-name,
 .js .opening-philosophy,
+.js .opening-actions,
 .js .opening-divider,
 .js .opening-scroll {
     opacity: 0;
@@ -182,6 +183,7 @@ main,
 .js .opening-profession.is-visible,
 .js .opening-name.is-visible,
 .js .opening-philosophy.is-visible,
+.js .opening-actions.is-visible,
 .js .opening-divider.is-visible,
 .js .opening-scroll.is-visible {
     opacity: 1;
@@ -214,6 +216,50 @@ main,
     line-height: 1.8;
     text-align: center;
     white-space: nowrap;
+}
+
+.opening-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-block-start: clamp(0.5rem, 1.5vh, 1rem);
+}
+
+.opening-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    padding: 0.85rem 1.15rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: color-mix(in srgb, var(--color-surface) 68%, transparent);
+    color: var(--color-text);
+    font: 700 0.74rem/1 var(--font-family-sans);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: border-color var(--transition-medium), background-color var(--transition-medium), color var(--transition-medium), transform var(--transition-medium);
+}
+
+.opening-action:hover,
+.opening-action:focus-visible {
+    border-color: var(--color-accent);
+    background: var(--color-surface-raised);
+    color: var(--color-accent);
+    transform: translateY(-2px);
+}
+
+.opening-action--primary {
+    border-color: var(--color-accent);
+    background: var(--color-accent);
+    color: #FFFFFF;
+}
+
+.opening-action--primary:hover,
+.opening-action--primary:focus-visible {
+    background: transparent;
+    color: var(--color-accent);
 }
 
 .opening-divider {
@@ -740,6 +786,46 @@ body.is-document-explorer-open {
     margin-block-start: var(--spacing-md);
 }
 
+.translation-hypothesis {
+    margin-block-end: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    border: 1px solid rgba(79, 140, 255, 0.22);
+    border-radius: var(--radius-sm);
+    background:
+        radial-gradient(circle at 100% 0%, rgba(79, 140, 255, 0.12), transparent 12rem),
+        rgba(79, 140, 255, 0.05);
+}
+
+.translation-hypothesis span {
+    display: block;
+    margin-block-end: var(--spacing-sm);
+    color: var(--color-accent);
+    font: 700 0.68rem/1.2 var(--font-family-sans);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.translation-hypothesis__figure {
+    display: block;
+    width: 100%;
+    margin-block: var(--spacing-md) var(--spacing-lg);
+    border: 1px solid rgba(174, 183, 194, 0.14);
+    border-radius: var(--radius-sm);
+    background-color: rgba(5, 7, 10, 0.34);
+}
+
+.translation-hypothesis__caption {
+    padding-block-end: var(--spacing-lg);
+    border-block-end: 1px solid rgba(174, 183, 194, 0.14);
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+.translation-hypothesis p {
+    font-size: 0.88rem;
+    line-height: 1.65;
+}
+
 .translation-panel__keywords {
     padding-block-start: var(--spacing-lg);
     border-block-start: 1px solid rgba(174, 183, 194, 0.14);
@@ -1235,6 +1321,31 @@ body.is-document-explorer-open {
     min-height: 1.35rem;
     color: var(--color-text-muted);
     font: 600 0.78rem/1.5 var(--font-family-sans);
+}
+
+.site-footer {
+    width: min(100% - (2 * var(--layout-gutter)), var(--layout-container-width));
+    margin: 0 auto;
+    padding: clamp(2rem, 5vw, 3.5rem) 0 clamp(2rem, 4vw, 3rem);
+    border-block-start: 1px solid rgba(174, 183, 194, 0.14);
+    color: var(--color-text-muted);
+    text-align: center;
+}
+
+.site-footer p {
+    max-width: 56rem;
+    margin: 0 auto;
+    font: 500 0.78rem/1.65 var(--font-family-sans);
+}
+
+.site-footer p:first-child {
+    color: var(--color-text);
+    font-weight: 650;
+    letter-spacing: 0.04em;
+}
+
+.site-footer p + p {
+    margin-block-start: var(--spacing-sm);
 }
 
 @media (min-width: 768px) {

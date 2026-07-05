@@ -26,6 +26,8 @@
   "hero": {
     "title": "Técnico Superior en<br>Laboratorio Clínico y Biomédico",
     "philosophy": "Comprometido con una vida de aprendizaje, descubrimiento y ayuda a los demás.",
+    "contactCta": "Contacto",
+    "projectsCta": "Explorar proyectos",
     "scroll": "Desliza para descubrir"
   },
   "sections": {
@@ -76,7 +78,7 @@
     "contact": {
       "kicker": "Contacto",
       "title": "Abierto a oportunidades en laboratorio, investigación clínica y ciencia biomédica.",
-      "body": "Me interesan la biología molecular, la inmunología, la investigación traslacional, la divulgación científica y la colaboración internacional en entornos de laboratorio."
+      "body": "Disponible para oportunidades en laboratorio, investigación clínica y ciencia biomédica en Alemania y a nivel internacional."
     }
   },
   "experienceCards": {
@@ -260,5 +262,10 @@
     "englishAbstract": "Resumen en inglés",
     "keywords": "Palabras clave: bacteriofagoterapia, bacterias multirresistentes, tratamiento con fagos, antibióticos, terapia alternativa, Staphylococcus aureus, Pseudomonas aeruginosa.",
     "spanishOriginal": "Original en español"
+  },
+  "footer": {
+    "copyright": "&copy; 2026 Jhon M. Cuenca. Todos los derechos reservados.",
+    "authorship": "El contenido del portfolio, los conceptos de investigación originales y los diagramas son autoría de Jhon M. Cuenca salvo que se indique lo contrario. Los trabajos académicos en coautoría se acreditan donde corresponde.",
+    "scientificNotice": "Las hipótesis científicas se presentan con fines educativos y de portfolio profesional; no representan tratamientos clínicos validados."
   }
 }
