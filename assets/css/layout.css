@@ -251,6 +251,7 @@ main,
 .js .sequence-points,
 .js .focus-grid,
 .js .identity-map,
+.js .concept-card,
 .js .focus-item,
 .js .focus-index,
 .js .focus-item h3,
@@ -272,6 +273,8 @@ main,
 .js .sequence-section.is-sequence-revealed .focus-grid,
 .js .sequence-section.is-sequence-active .identity-map,
 .js .sequence-section.is-sequence-revealed .identity-map,
+.js .sequence-section.is-sequence-active .concept-card,
+.js .sequence-section.is-sequence-revealed .concept-card,
 .js .sequence-section.is-sequence-active .focus-item,
 .js .sequence-section.is-sequence-revealed .focus-item,
 .js .sequence-section.is-sequence-active .focus-index,
@@ -297,6 +300,8 @@ main,
 .js .sequence-section.is-sequence-revealed .focus-grid,
 .js .sequence-section.is-sequence-active .identity-map,
 .js .sequence-section.is-sequence-revealed .identity-map,
+.js .sequence-section.is-sequence-active .concept-card,
+.js .sequence-section.is-sequence-revealed .concept-card,
 .js .sequence-section.is-sequence-active .contact-link,
 .js .sequence-section.is-sequence-revealed .contact-link {
     transition-delay: 150ms;
@@ -904,6 +909,138 @@ body.is-document-explorer-open {
     border-block-start: 1px solid rgba(174, 183, 194, 0.12);
 }
 
+.concept-card {
+    margin-block-start: clamp(2.5rem, 6vw, 5rem);
+    border: 1px solid rgba(79, 140, 255, 0.18);
+    background:
+        radial-gradient(circle at 82% 18%, rgba(79, 140, 255, 0.14), transparent 20rem),
+        linear-gradient(180deg, rgba(17, 20, 24, 0.86), rgba(17, 20, 24, 0.66));
+    box-shadow: inset 0 1px 0 rgba(245, 247, 250, 0.04), 0 1.5rem 3rem rgba(0, 0, 0, 0.16);
+}
+
+.concept-card__intro {
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    border-block-end: 1px solid rgba(174, 183, 194, 0.14);
+}
+
+.concept-status {
+    display: block;
+    margin-block-end: var(--spacing-lg);
+    color: var(--color-accent-secondary);
+    font: var(--font-small);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.concept-card h3 {
+    max-width: 58rem;
+    margin: 0;
+    color: var(--color-text);
+    font: 650 clamp(1.65rem, 3.6vw, 3rem)/1.08 var(--font-family-sans);
+    letter-spacing: 0;
+}
+
+.concept-card__intro p {
+    max-width: 46rem;
+    margin-block-start: var(--spacing-xl);
+    color: var(--color-text-muted);
+    font: 400 clamp(1rem, 1.35vw, 1.15rem)/1.75 var(--font-family-sans);
+}
+
+.concept-card__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px;
+    background-color: rgba(174, 183, 194, 0.14);
+}
+
+.concept-panel {
+    min-height: 14rem;
+    padding: clamp(1.25rem, 2.4vw, 2rem);
+    background-color: rgba(11, 13, 16, 0.42);
+}
+
+.concept-panel span {
+    display: block;
+    margin-block-end: var(--spacing-xl);
+    color: var(--color-accent);
+    font: 700 0.72rem/1.2 var(--font-family-sans);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.concept-panel p {
+    max-width: none;
+    color: var(--color-text-muted);
+    font: 400 0.95rem/1.7 var(--font-family-sans);
+}
+
+.concept-hypotheses {
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    border-block-start: 1px solid rgba(174, 183, 194, 0.14);
+}
+
+.concept-hypotheses__kicker {
+    display: block;
+    margin-block-end: var(--spacing-lg);
+    color: var(--color-accent);
+    font: 700 0.72rem/1.2 var(--font-family-sans);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.concept-hypotheses h4 {
+    max-width: 42rem;
+    margin: 0;
+    color: var(--color-text);
+    font: 650 clamp(1.2rem, 2vw, 1.65rem)/1.25 var(--font-family-sans);
+}
+
+.concept-hypotheses ol {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    margin: var(--spacing-xl) 0 0;
+    padding: 0;
+    background-color: rgba(174, 183, 194, 0.14);
+    list-style: none;
+}
+
+.concept-hypotheses li {
+    min-height: 10rem;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    background-color: rgba(11, 13, 16, 0.36);
+    color: var(--color-text-muted);
+    font: 400 0.94rem/1.65 var(--font-family-sans);
+}
+
+.concept-hypotheses strong {
+    display: block;
+    margin-block-end: var(--spacing-sm);
+    color: var(--color-text);
+    font-weight: 650;
+}
+
+.concept-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    padding: clamp(1.25rem, 2.4vw, 2rem);
+}
+
+.concept-tags span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.1rem;
+    padding-inline: 0.85rem;
+    border: 1px solid rgba(174, 183, 194, 0.18);
+    border-radius: var(--radius-pill);
+    color: var(--color-text);
+    font: 650 0.72rem/1 var(--font-family-sans);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
 .js .sequence-section.is-sequence-active .focus-item:nth-child(2),
 .js .sequence-section.is-sequence-revealed .focus-item:nth-child(2) {
     transition-delay: 290ms;
@@ -956,6 +1093,14 @@ body.is-document-explorer-open {
     .document-explorer__shell {
         width: 100%;
         height: 100%;
+    }
+
+    .concept-card__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .concept-hypotheses ol {
+        grid-template-columns: 1fr;
     }
 
     .document-explorer__body {
@@ -1056,6 +1201,14 @@ body.is-document-explorer-open {
         min-height: 32rem;
     }
 
+    .concept-card__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .concept-panel {
+        min-height: 0;
+    }
+
     .site-header {
         inset: var(--spacing-lg) var(--spacing-lg) auto;
     }
@@ -1067,7 +1220,8 @@ body.is-document-explorer-open {
 
     .site-nav a:nth-child(2),
     .site-nav a:nth-child(3),
-    .site-nav a:nth-child(4) {
+    .site-nav a:nth-child(4),
+    .site-nav a:nth-child(6) {
         display: none;
     }
 
