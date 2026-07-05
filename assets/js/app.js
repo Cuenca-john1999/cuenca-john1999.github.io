@@ -124,8 +124,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const documentUrl = trigger.href;
-        const documentHeading = trigger.dataset.documentHeading || 'Bacteriophage Therapy: Rediscovering an Innovative Therapy';
-        const documentLabel = trigger.dataset.documentLabel || trigger.textContent.trim();
+        const documentHeading = trigger.dataset.documentHeadingKey && typeof Language !== 'undefined'
+            ? Language.translate(trigger.dataset.documentHeadingKey)
+            : trigger.dataset.documentHeading || 'Bacteriophage Therapy: Rediscovering an Innovative Therapy';
+        const documentLabel = trigger.dataset.documentLabelKey && typeof Language !== 'undefined'
+            ? Language.translate(trigger.dataset.documentLabelKey)
+            : trigger.dataset.documentLabel || trigger.textContent.trim();
 
         lastFocusedElement = trigger;
         documentExplorerFrame.src = `${documentUrl}#zoom=125`;

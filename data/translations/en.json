@@ -5,6 +5,15 @@
     "dark": "Dark",
     "light": "Light"
   },
+  "commonLabels": {
+    "practiceDetails": "Practice details",
+    "academicDetails": "Academic details",
+    "trainingDetails": "Training details",
+    "reference": "Reference",
+    "documentation": "Documentation",
+    "finalProject": "Final project",
+    "readMore": "Read more"
+  },
   "nav": {
     "profile": "Profile",
     "experience": "Experience",
@@ -24,6 +33,7 @@
       "kicker": "Profile",
       "title": "A laboratory profile shaped by precision, research and continuous learning.",
       "body": "I am a Higher Technician in Clinical and Biomedical Laboratory and Technician in Laboratory Operations based in Berlin. My training connects clinical diagnostics, molecular biology, immunology and analytical laboratory work under GLP standards.",
+      "pointLocation": "Berlin, Germany",
       "pointLanguages": "Spanish native · English B2 · German A2",
       "pointGerman": "Preparing official German certification"
     },
@@ -38,7 +48,10 @@
     "education": {
       "kicker": "Education",
       "title": "Strong academic results with a clinical, analytical and biomedical foundation.",
-      "body": "I graduated with distinction as a Higher Technician in Clinical and Biomedical Laboratory and as a Technician in Laboratory Operations, with final grades of 9.3/10 and 8.69/10."
+      "body": "I graduated with distinction as a Higher Technician in Clinical and Biomedical Laboratory and as a Technician in Laboratory Operations, with final grades of 9.3/10 and 8.69/10.",
+      "pointClinical": "Clinical and Biomedical Laboratory · CEAC FP Oficial · 2025",
+      "pointOperations": "Laboratory Operations · IES Virgen de la Paloma · 2023",
+      "pointAdditional": "Animal Experimentation A+B+C · Healthcare Management · Risk Prevention"
     },
     "skills": {
       "kicker": "Skills",
@@ -55,12 +68,174 @@
     "references": {
       "kicker": "References",
       "title": "Professional and academic references can support the laboratory experience shown here.",
-      "body": "References from academic training, research practice and international laboratory experience can be provided according to the opportunity and recruitment process."
+      "body": "References from academic training, research practice and international laboratory experience can be provided according to the opportunity and recruitment process.",
+      "pointClinical": "Clinical and biomedical laboratory training",
+      "pointResearch": "Research foundation practice · Madrid",
+      "pointErasmus": "Erasmus+ analytical laboratory practice · Ireland"
     },
     "contact": {
       "kicker": "Contact",
       "title": "Open to laboratory, clinical research and biomedical science opportunities.",
       "body": "I am interested in molecular biology, immunology, translational research, scientific outreach and international collaboration in laboratory environments."
+    }
+  },
+  "experienceCards": {
+    "immunology": {
+      "title": "Immunology &amp; Molecular Biology",
+      "body": "Cell culture, HaCaT handling, medium preparation, passaging and freezing workflows, CD4/CD14 purification, RNA extraction, PCR, ELISA, Western Blot gel preparation, transfer and blocking, plus human/murine sample processing.",
+      "reference": "Dr. Danay Cibrián Vera, Principal Investigator at Hospital Universitario de La Princesa, highlights responsibility, laboratory commitment, teamwork and active participation in molecular, immunology and sample-processing techniques."
+    },
+    "biomass": {
+      "title": "Biomass Analysis",
+      "body": "Moisture, ash, volatile matter, CHNOS elemental analysis, COD, ammonia, NIR/VISION workflows, vacuum filtration and ash melting analysis; SOP and data-sheet drafting under GLP-based analytical work in Ireland.",
+      "documentation": "Prepared operational guides and data sheets for NIR scans, Thermal Excel workflows, sample batches, labels, reactor sample filtration and analytical result traceability.",
+      "reference": "Cristobal Fernandez Belmonte M.Sc., Lab Manager at Celignis Biomass Analysis Laboratory, highlights GLP standards, technical precision, equipment operation, troubleshooting, teamwork and reliability."
+    },
+    "teaching": {
+      "title": "Teaching &amp; Early Work",
+      "body": "STEM instruction for children aged 6 to 12, didactic material design, class organization and earlier administrative support."
+    }
+  },
+  "educationCards": {
+    "clinical": {
+      "title": "Clinical &amp; Biomedical Laboratory",
+      "body": "CEAC FP Oficial, 2023-2025. Official Higher Technician title, final average grade of 9.3/10 and honours distinctions in General Laboratory Techniques, Immunodiagnostic Techniques and Hematological Analysis Techniques.",
+      "finalProject": "<strong>Bacteriophage Therapy: Rediscovering an Innovative Therapy.</strong> Co-authored with Luis Gonzalo Legua Pérez and published with co-author permission.",
+      "exploreProject": "Explore project",
+      "exploreDefense": "Explore defense",
+      "reference": "Tamara Díaz Jáuregui, biology teacher at CEAC FP Madrid, highlights technical skill, dedication, problem-solving, rapid learning, communication and responsibility."
+    },
+    "operations": {
+      "title": "Laboratory Operations",
+      "body": "IES Virgen de la Paloma, 2021-2023. Official Technician diploma in Laboratory Operations, with strong grades in Applied Chemistry, Physicochemical Testing, Chemical Analysis Operations, Materials Testing and Technical English."
+    },
+    "additional": {
+      "title": "Certified Additional Training",
+      "body": "Animal Experimentation training for basic functions A, B and C, including animal care, euthanasia and procedures according to ECC/566/2015. Additional certificates include Healthcare Centre Management and Basic Level Occupational Risk Prevention."
+    }
+  },
+  "skillsMap": {
+    "skillsTitle": "Skills",
+    "molecular": {
+      "title": "Molecular Biology",
+      "body": "PCR, RNA extraction, electrophoresis, sample preparation and molecular workflows applied to clinical and biomedical laboratory contexts."
+    },
+    "cellCulture": {
+      "title": "Cell Culture",
+      "body": "Handling, maintenance, passaging and freezing of cell cultures, including HaCaT protocol documentation and sterile technique."
+    },
+    "immunology": {
+      "title": "Immunological Techniques",
+      "body": "ELISA, Western Blot gel casting, transfer and blocking, CD4/CD14 purification and immunology-based sample analysis."
+    },
+    "analytical": {
+      "title": "Analytical Methods",
+      "body": "Moisture, ash, volatile matter, CHNOS elemental analysis, COD, ammonia, NIR/VISION, ash melting and vacuum filtration workflows."
+    },
+    "models": {
+      "title": "Experimental Models",
+      "body": "Animal Experimentation A+B+C training covering animal care, euthanasia and procedures, with a responsible research mindset aligned with welfare and 3R principles."
+    },
+    "organization": {
+      "title": "Laboratory Organization",
+      "body": "Sample traceability, batch creation, labeling, inventory habits, Thermal Excel workflows, database updates and methodical independent responsibility."
+    },
+    "documentation": {
+      "title": "Technical Documentation",
+      "body": "SOP drafting, data-sheet design, troubleshooting guides and operational instructions for instruments, Excel workflows and laboratory sample handling."
+    }
+  },
+  "identityCore": {
+    "kicker": "Scientific Identity",
+    "title": "Science connects ideas with life.",
+    "idea": "Idea: curiosity, observation, question",
+    "knowledge": "Knowledge: study, experiment, understand",
+    "research": "Research: method, data, analysis",
+    "discovery": "Discovery: insight, innovation, progress",
+    "application": "Application: translation, impact, solutions",
+    "life": "Life: improving health, helping others, building the future"
+  },
+  "valuesMap": {
+    "title": "Scientific Values",
+    "curiosity": {
+      "title": "Curiosity",
+      "body": "Asking precise questions and approaching unknowns with observation, patience and initiative."
+    },
+    "learning": {
+      "title": "Lifelong Learning",
+      "body": "Continuous development across clinical laboratory science, biomedical research and language learning."
+    },
+    "impact": {
+      "title": "Translational Impact",
+      "body": "Connecting laboratory work with practical outcomes that can improve health and decision-making."
+    },
+    "teamwork": {
+      "title": "Teamwork",
+      "body": "Clear communication, adaptability and collaboration in multicultural laboratory environments."
+    },
+    "future": {
+      "title": "Future Discoveries",
+      "body": "A long-term commitment to research, discovery and scientific work that remains useful to society."
+    }
+  },
+  "conceptCard": {
+    "status": "Concept proposal · AETEL 2025",
+    "title": "Chitosan Applications in Medicine: potential for microplastic capture and biomedical study.",
+    "body": "An early research hypothesis exploring whether modified chitosan, a biocompatible biopolymer derived from chitin, could be studied as a platform for interacting with microplastics in future biomedical or analytical models.",
+    "context": {
+      "title": "Scientific context",
+      "body": "Microplastics are an emerging health concern, but human exposure, accumulation and clinical impact still require careful experimental confirmation."
+    },
+    "idea": {
+      "title": "Central idea",
+      "body": "Explore chitosan-based materials as candidates for microplastic adsorption, retention or controlled laboratory study, without claiming therapeutic efficacy."
+    },
+    "methods": {
+      "title": "Proposed methods",
+      "body": "Biofilm sequencing, MiSeq-based microbial profiling, chitosan modification, FTIR characterization, adsorption assays and biocompatibility testing."
+    },
+    "maturity": {
+      "title": "Project maturity",
+      "body": "Conceptual proposal only. It would need in vitro validation, toxicity assessment, controls and reproducible analytical methods before any clinical interpretation."
+    },
+    "hypotheses": {
+      "kicker": "Working hypotheses",
+      "title": "Expected outcomes reframed as testable early-stage hypotheses.",
+      "adsorption": "<strong>Adsorption hypothesis.</strong> Modified chitosan may show measurable affinity for selected microplastic surfaces under controlled in vitro conditions, supporting retention and later analytical evaluation.",
+      "biofilm": "<strong>Biofilm-guided design hypothesis.</strong> Microorganisms associated with microplastic biofilms may provide useful biological information for selecting or designing more specific chitosan-based materials.",
+      "degradation": "<strong>Degradation-support hypothesis.</strong> If chitosan-microplastic complexes can be characterized reproducibly, enzymatic or biochemical strategies could be explored as future models for microplastic breakdown without assuming clinical efficacy.",
+      "feasibility": "<strong>Biomedical feasibility hypothesis.</strong> Only if specificity, stability and biocompatibility are demonstrated in vitro could this concept move toward future biomedical capture, retention or study models."
+    }
+  },
+  "conceptTags": {
+    "chitosan": "Chitosan",
+    "microplastics": "Microplastics",
+    "biofilms": "Biofilms",
+    "adsorption": "Adsorption assays",
+    "biocompatibility": "Biocompatibility"
+  },
+  "documents": {
+    "finalProject": {
+      "heading": "Bacteriophage Therapy: Rediscovering an Innovative Therapy",
+      "label": "Final project · 61 pages"
+    },
+    "defense": {
+      "heading": "Bacteriophage Therapy: Defense Slides",
+      "label": "Defense slides · 17 pages"
+    }
+  },
+  "referenceCards": {
+    "research": {
+      "title": "Research Laboratory Reference",
+      "body": "Dr. Danay Cibrián Vera, Principal Investigator at the Immunology Service of Hospital Universitario de La Princesa, recommends Jhon after a three-month laboratory placement involving RNA extraction, PCR, electrophoresis, genotyping, biological sample processing, cell culture, staining techniques, protocol design and laboratory material management."
+    },
+    "academic": {
+      "title": "Academic Reference",
+      "body": "Tamara Díaz Jáuregui, biology teacher at CEAC FP Madrid, recommends Jhon for his technical ability, dedication, precision, problem-solving, fast learning, communication and strong sense of responsibility."
+    },
+    "international": {
+      "title": "International Laboratory Reference",
+      "body": "Cristobal Fernandez Belmonte M.Sc., Lab Manager at Celignis Biomass Analysis Laboratory in Limerick, Ireland, recommends Jhon after his internship supporting biomass analyses, instrument operation, GLP workflows, quality controls, sample preparation, teamwork and intern handover training."
     }
   },
   "contactForm": {
@@ -75,5 +250,15 @@
     "sending": "Sending message...",
     "success": "Message sent. Thank you for getting in touch.",
     "error": "The message could not be sent. Please try again in a few minutes."
+  },
+  "documentExplorer": {
+    "kicker": "Document explorer",
+    "description": "Co-authored with Luis Gonzalo Legua Pérez · Published with co-author permission",
+    "close": "Close",
+    "openNewTab": "Open in new tab",
+    "translationWindow": "Translation window",
+    "englishAbstract": "English abstract",
+    "keywords": "Keywords: bacteriophage therapy, multidrug-resistant bacteria, phage treatment, antibiotics, alternative therapy, Staphylococcus aureus, Pseudomonas aeruginosa.",
+    "spanishOriginal": "Spanish original"
   }
 }

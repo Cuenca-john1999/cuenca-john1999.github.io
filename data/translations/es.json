@@ -5,6 +5,15 @@
     "dark": "Oscuro",
     "light": "Claro"
   },
+  "commonLabels": {
+    "practiceDetails": "Detalles de las prácticas",
+    "academicDetails": "Detalles académicos",
+    "trainingDetails": "Detalles de la formación",
+    "reference": "Referencia",
+    "documentation": "Documentación",
+    "finalProject": "Trabajo final",
+    "readMore": "Leer más"
+  },
   "nav": {
     "profile": "Perfil",
     "experience": "Experiencia",
@@ -23,14 +32,15 @@
     "profile": {
       "kicker": "Perfil",
       "title": "Un perfil de laboratorio definido por la precisión, la investigación y el aprendizaje continuo.",
-      "body": "Soy Técnico Superior en Laboratorio Clínico y Biomédico y Técnico en Operaciones de Laboratorio, actualmente basado en Berlín. Mi formación conecta el diagnóstico clínico, la biología molecular, la inmunología y el trabajo analítico de laboratorio bajo estándares GLP.",
+      "body": "Soy Técnico Superior en Laboratorio Clínico y Biomédico y Técnico en Operaciones de Laboratorio. Actualmente resido en Berlín. Mi formación conecta el diagnóstico clínico, la biología molecular, la inmunología y el trabajo analítico de laboratorio bajo normas de buenas prácticas de laboratorio.",
+      "pointLocation": "Berlín, Alemania",
       "pointLanguages": "Español nativo · Inglés B2 · Alemán A2",
       "pointGerman": "Preparando certificación oficial de alemán"
     },
     "experience": {
       "kicker": "Experiencia",
       "title": "De la inmunología traslacional al trabajo analítico e industrial de laboratorio.",
-      "body": "Mi experiencia práctica incluye investigación en inmunología y biología molecular en Madrid y análisis de biomasa en Irlanda, combinando muestras clínicas, protocolos analíticos y responsabilidad independiente en laboratorio.",
+      "body": "Mi experiencia práctica incluye investigación en inmunología y biología molecular en Madrid y análisis de biomasa en Irlanda, combinando muestras clínicas, protocolos analíticos y responsabilidad autónoma en el laboratorio.",
       "pointResearch": "Fundación de investigación del Hospital Universitario La Princesa · 2025",
       "pointBiomass": "Celignis Biomass Analysis Laboratory · Erasmus+ 2023",
       "pointTeaching": "Instructor STEM y robótica educativa · 2020-2021"
@@ -38,7 +48,10 @@
     "education": {
       "kicker": "Formación",
       "title": "Resultados académicos sólidos con base clínica, analítica y biomédica.",
-      "body": "Me gradué con distinción como Técnico Superior en Laboratorio Clínico y Biomédico y como Técnico en Operaciones de Laboratorio, con notas finales de 9,3/10 y 8,69/10."
+      "body": "Me gradué con distinción como Técnico Superior en Laboratorio Clínico y Biomédico y como Técnico en Operaciones de Laboratorio, con notas finales de 9,3/10 y 8,69/10.",
+      "pointClinical": "Laboratorio Clínico y Biomédico · CEAC FP Oficial · 2025",
+      "pointOperations": "Operaciones de Laboratorio · IES Virgen de la Paloma · 2023",
+      "pointAdditional": "Experimentación Animal A+B+C · Gestión Sanitaria · Prevención de Riesgos"
     },
     "skills": {
       "kicker": "Habilidades",
@@ -50,17 +63,179 @@
       "body": "Estos conceptos no se presentan como tratamientos validados ni como resultados clínicos. Muestran cómo conecto preguntas biomédicas, métodos de laboratorio e hipótesis de investigación responsables.",
       "pointHypothesis": "Hipótesis en fase inicial · no validada clínicamente",
       "pointMethods": "Biomateriales · microbiología · métodos analíticos",
-      "pointValidation": "Diseñado para validación experimental futura"
+      "pointValidation": "Diseñado para una futura validación experimental"
     },
     "references": {
       "kicker": "Referencias",
-      "title": "Referencias profesionales y académicas pueden respaldar la experiencia de laboratorio mostrada aquí.",
-      "body": "Las referencias de formación académica, prácticas de investigación y experiencia internacional en laboratorio pueden facilitarse según la oportunidad y el proceso de selección."
+      "title": "Referencias profesionales y académicas que respaldan la experiencia de laboratorio presentada aquí.",
+      "body": "Las referencias de formación académica, prácticas de investigación y experiencia internacional en laboratorio pueden facilitarse según la oportunidad y el proceso de selección.",
+      "pointClinical": "Formación en laboratorio clínico y biomédico",
+      "pointResearch": "Prácticas en fundación de investigación · Madrid",
+      "pointErasmus": "Prácticas Erasmus+ en laboratorio analítico · Irlanda"
     },
     "contact": {
       "kicker": "Contacto",
       "title": "Abierto a oportunidades en laboratorio, investigación clínica y ciencia biomédica.",
       "body": "Me interesan la biología molecular, la inmunología, la investigación traslacional, la divulgación científica y la colaboración internacional en entornos de laboratorio."
+    }
+  },
+  "experienceCards": {
+    "immunology": {
+      "title": "Inmunología y Biología Molecular",
+      "body": "Cultivo celular, manejo de células HaCaT, preparación de medios, pases y congelación celular, purificación de CD4/CD14, extracción de ARN, PCR, ELISA, preparación de geles de Western blot, transferencia y bloqueo, además de procesamiento de muestras humanas y murinas.",
+      "reference": "La Dra. Danay Cibrián Vera, investigadora principal en el Hospital Universitario de La Princesa, destaca la responsabilidad, el compromiso en el laboratorio, el trabajo en equipo y la participación activa en técnicas moleculares, inmunológicas y de procesamiento de muestras."
+    },
+    "biomass": {
+      "title": "Análisis de Biomasa",
+      "body": "Determinación de humedad, cenizas, materia volátil, análisis elemental CHNOS, DQO, amonio, flujos de trabajo NIR/VISION, filtración al vacío y análisis de fusión de cenizas; redacción de SOP y hojas de datos en un entorno analítico basado en buenas prácticas de laboratorio en Irlanda.",
+      "documentation": "Elaboración de guías operativas y hojas de datos para escaneos NIR, flujos de trabajo en Thermal Excel, lotes de muestras, etiquetas, filtración de muestras de reactores y trazabilidad de resultados analíticos.",
+      "reference": "Cristobal Fernandez Belmonte M.Sc., Lab Manager en Celignis Biomass Analysis Laboratory, destaca el trabajo bajo normas GLP, la precisión técnica, el manejo de equipos, la resolución de problemas, el trabajo en equipo y la fiabilidad."
+    },
+    "teaching": {
+      "title": "Docencia y primeras experiencias laborales",
+      "body": "Formación STEM para niños de 6 a 12 años, diseño de material didáctico, organización de clases y experiencia previa en apoyo administrativo."
+    }
+  },
+  "educationCards": {
+    "clinical": {
+      "title": "Laboratorio Clínico y Biomédico",
+      "body": "CEAC FP Oficial, 2023-2025. Título oficial de Técnico Superior, nota media final de 9,3/10 y matrículas de honor en Técnicas Generales de Laboratorio, Técnicas de Inmunodiagnóstico y Técnicas de Análisis Hematológico.",
+      "finalProject": "<strong>Bacteriophage Therapy: Rediscovering an Innovative Therapy.</strong> Trabajo en coautoría con Luis Gonzalo Legua Pérez y publicado con su autorización.",
+      "exploreProject": "Explorar trabajo",
+      "exploreDefense": "Explorar defensa",
+      "reference": "Tamara Díaz Jáuregui, profesora de biología en CEAC FP Madrid, destaca la capacidad técnica, dedicación, precisión, resolución de problemas, rapidez de aprendizaje, comunicación y sentido de la responsabilidad."
+    },
+    "operations": {
+      "title": "Operaciones de Laboratorio",
+      "body": "IES Virgen de la Paloma, 2021-2023. Título oficial de Técnico en Operaciones de Laboratorio, con resultados destacados en Química Aplicada, Ensayos Fisicoquímicos, Operaciones de Análisis Químico, Ensayos de Materiales e Inglés Técnico."
+    },
+    "additional": {
+      "title": "Formación adicional certificada",
+      "body": "Formación en Experimentación Animal para funciones básicas A, B y C, incluyendo cuidado animal, eutanasia y procedimientos conforme a la Orden ECC/566/2015. Certificados adicionales en Gestión de Centros Sanitarios y Prevención de Riesgos Laborales de nivel básico."
+    }
+  },
+  "skillsMap": {
+    "skillsTitle": "Habilidades",
+    "molecular": {
+      "title": "Biología Molecular",
+      "body": "PCR, extracción de ARN, electroforesis, preparación de muestras y flujos de trabajo moleculares aplicados a contextos de laboratorio clínico y biomédico."
+    },
+    "cellCulture": {
+      "title": "Cultivo Celular",
+      "body": "Manejo, mantenimiento, pases y congelación de cultivos celulares, incluyendo documentación de protocolos con células HaCaT y técnica estéril."
+    },
+    "immunology": {
+      "title": "Técnicas Inmunológicas",
+      "body": "ELISA, preparación de geles de Western blot, transferencia y bloqueo, purificación de CD4/CD14 y análisis de muestras basado en técnicas de inmunología."
+    },
+    "analytical": {
+      "title": "Métodos Analíticos",
+      "body": "Determinación de humedad, cenizas, materia volátil, análisis elemental CHNOS, DQO, amonio, NIR/VISION, fusión de cenizas y flujos de filtración al vacío."
+    },
+    "models": {
+      "title": "Modelos Experimentales",
+      "body": "Formación A+B+C en Experimentación Animal, cubriendo cuidado animal, eutanasia y procedimientos, con una mentalidad de investigación responsable alineada con el bienestar animal y los principios de las 3R."
+    },
+    "organization": {
+      "title": "Organización de Laboratorio",
+      "body": "Trazabilidad de muestras, creación de lotes, etiquetado, hábitos de inventario, flujos de trabajo en Thermal Excel, actualización de bases de datos y responsabilidad metódica de forma autónoma."
+    },
+    "documentation": {
+      "title": "Documentación Técnica",
+      "body": "Redacción de procedimientos normalizados de trabajo (SOP), diseño de hojas de datos, guías de resolución de problemas e instrucciones operativas para instrumentos, flujos de Excel y manejo de muestras de laboratorio."
+    }
+  },
+  "identityCore": {
+    "kicker": "Identidad científica",
+    "title": "La ciencia conecta las ideas con la vida.",
+    "idea": "Idea: curiosidad, observación, pregunta",
+    "knowledge": "Conocimiento: estudio, experimento, comprensión",
+    "research": "Investigación: método, datos, análisis",
+    "discovery": "Descubrimiento: hallazgo, innovación, progreso",
+    "application": "Aplicación: traslación, impacto, soluciones",
+    "life": "Vida: mejorar la salud, ayudar a los demás, construir futuro"
+  },
+  "valuesMap": {
+    "title": "Valores científicos",
+    "curiosity": {
+      "title": "Curiosidad",
+      "body": "Formular preguntas precisas y acercarse a lo desconocido con observación, paciencia e iniciativa."
+    },
+    "learning": {
+      "title": "Aprendizaje continuo",
+      "body": "Desarrollo constante en laboratorio clínico, investigación biomédica y aprendizaje de idiomas."
+    },
+    "impact": {
+      "title": "Impacto traslacional",
+      "body": "Conectar el trabajo de laboratorio con resultados prácticos que puedan mejorar la salud y la toma de decisiones."
+    },
+    "teamwork": {
+      "title": "Trabajo en equipo",
+      "body": "Comunicación clara, adaptabilidad y colaboración en entornos de laboratorio multiculturales."
+    },
+    "future": {
+      "title": "Futuros descubrimientos",
+      "body": "Compromiso a largo plazo con la investigación, el descubrimiento y un trabajo científico útil para la sociedad."
+    }
+  },
+  "conceptCard": {
+    "status": "Propuesta conceptual · AETEL 2025",
+    "title": "Aplicaciones médicas del quitosano: potencial para la captura de microplásticos y su estudio biomédico.",
+    "body": "Hipótesis de investigación en fase inicial que explora si el quitosano modificado, un biopolímero biocompatible derivado de la quitina, podría estudiarse como plataforma para interactuar con microplásticos en futuros modelos biomédicos o analíticos.",
+    "context": {
+      "title": "Contexto científico",
+      "body": "Los microplásticos son una preocupación emergente para la salud, pero la exposición humana, su posible acumulación y su impacto clínico todavía requieren confirmación experimental cuidadosa."
+    },
+    "idea": {
+      "title": "Idea central",
+      "body": "Explorar materiales basados en quitosano como candidatos para la adsorción, retención o estudio controlado de microplásticos en laboratorio, sin atribuirles eficacia terapéutica."
+    },
+    "methods": {
+      "title": "Métodos propuestos",
+      "body": "Secuenciación de biopelículas, perfilado microbiano mediante MiSeq, modificación de quitosano, caracterización por FTIR, ensayos de adsorción y pruebas de biocompatibilidad."
+    },
+    "maturity": {
+      "title": "Madurez del proyecto",
+      "body": "Propuesta conceptual. Requeriría validación in vitro, evaluación de toxicidad, controles y métodos analíticos reproducibles antes de cualquier interpretación clínica."
+    },
+    "hypotheses": {
+      "kicker": "Hipótesis de trabajo",
+      "title": "Resultados esperados reformulados como hipótesis iniciales y comprobables.",
+      "adsorption": "<strong>Hipótesis de adsorción.</strong> El quitosano modificado podría mostrar afinidad medible por determinadas superficies de microplásticos bajo condiciones controladas in vitro, permitiendo su retención y posterior evaluación analítica.",
+      "biofilm": "<strong>Hipótesis de diseño guiado por biopelículas.</strong> Los microorganismos asociados a biopelículas sobre microplásticos podrían aportar información biológica útil para seleccionar o diseñar materiales basados en quitosano con mayor especificidad.",
+      "degradation": "<strong>Hipótesis de apoyo a la degradación.</strong> Si los complejos quitosano-microplástico pueden caracterizarse de forma reproducible, podrían explorarse estrategias enzimáticas o bioquímicas como futuros modelos de degradación de microplásticos, sin asumir eficacia clínica.",
+      "feasibility": "<strong>Hipótesis de viabilidad biomédica.</strong> Solo si se demuestran especificidad, estabilidad y biocompatibilidad in vitro, este concepto podría avanzar hacia futuros modelos de captura, retención o estudio biomédico."
+    }
+  },
+  "conceptTags": {
+    "chitosan": "Quitosano",
+    "microplastics": "Microplásticos",
+    "biofilms": "Biopelículas",
+    "adsorption": "Ensayos de adsorción",
+    "biocompatibility": "Biocompatibilidad"
+  },
+  "documents": {
+    "finalProject": {
+      "heading": "Bacteriophage Therapy: Rediscovering an Innovative Therapy",
+      "label": "Trabajo final · 61 páginas"
+    },
+    "defense": {
+      "heading": "Bacteriophage Therapy: Defense Slides",
+      "label": "Defensa · 17 diapositivas"
+    }
+  },
+  "referenceCards": {
+    "research": {
+      "title": "Referencia de laboratorio de investigación",
+      "body": "La Dra. Danay Cibrián Vera, investigadora principal en el Servicio de Inmunología del Hospital Universitario de La Princesa, recomienda a Jhon tras unas prácticas de tres meses en laboratorio que incluyeron extracción de ARN, PCR, electroforesis, genotipado, procesamiento de muestras biológicas, cultivo celular, técnicas de tinción, diseño de protocolos y gestión de material de laboratorio."
+    },
+    "academic": {
+      "title": "Referencia académica",
+      "body": "Tamara Díaz Jáuregui, profesora de biología en CEAC FP Madrid, recomienda a Jhon por su capacidad técnica, dedicación, precisión, resolución de problemas, rapidez de aprendizaje, comunicación y fuerte sentido de la responsabilidad."
+    },
+    "international": {
+      "title": "Referencia internacional de laboratorio",
+      "body": "Cristobal Fernandez Belmonte M.Sc., Lab Manager en Celignis Biomass Analysis Laboratory, en Limerick, Irlanda, recomienda a Jhon tras sus prácticas apoyando análisis de biomasa, manejo instrumental, flujos de trabajo GLP, controles de calidad, preparación de muestras, trabajo en equipo y formación de nuevos estudiantes en prácticas."
     }
   },
   "contactForm": {
@@ -75,5 +250,15 @@
     "sending": "Enviando mensaje...",
     "success": "Mensaje enviado. Gracias por ponerte en contacto.",
     "error": "No se pudo enviar el mensaje. Inténtalo de nuevo en unos minutos."
+  },
+  "documentExplorer": {
+    "kicker": "Explorador de documentos",
+    "description": "Coautoría con Luis Gonzalo Legua Pérez · Publicado con autorización del coautor",
+    "close": "Cerrar",
+    "openNewTab": "Abrir en nueva pestaña",
+    "translationWindow": "Ventana de traducción",
+    "englishAbstract": "Resumen en inglés",
+    "keywords": "Palabras clave: bacteriofagoterapia, bacterias multirresistentes, tratamiento con fagos, antibióticos, terapia alternativa, Staphylococcus aureus, Pseudomonas aeruginosa.",
+    "spanishOriginal": "Original en español"
   }
 }
