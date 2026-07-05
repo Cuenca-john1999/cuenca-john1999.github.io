@@ -90,10 +90,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 form.reset();
-                status.textContent = 'Message sent. Thank you for reaching out.';
+                status.textContent = 'Message sent. Thank you for getting in touch.';
             } catch (error) {
                 console.warn('[CONTACT] No se pudo enviar el formulario', error);
-                status.textContent = 'The message could not be sent. Please try again later.';
+                status.textContent = 'The message could not be sent. Please try again in a few minutes.';
             } finally {
                 submitButton.disabled = false;
             }

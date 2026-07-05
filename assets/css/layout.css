@@ -1096,12 +1096,12 @@ body.is-document-explorer-open {
     margin-block-start: var(--spacing-sm);
 }
 
-.contact-form label {
+.contact-field {
     display: grid;
     gap: var(--spacing-xs);
 }
 
-.contact-form label span {
+.contact-field span {
     color: var(--color-text-muted);
     font: 700 0.68rem/1.2 var(--font-family-sans);
     letter-spacing: 0.14em;
@@ -1110,6 +1110,9 @@ body.is-document-explorer-open {
 
 .contact-form input,
 .contact-form textarea {
+    -webkit-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
     width: 100%;
     border: 1px solid rgba(174, 183, 194, 0.2);
     border-radius: var(--radius-sm);
@@ -1138,18 +1141,25 @@ body.is-document-explorer-open {
     box-shadow: 0 0 0 3px rgba(79, 140, 255, 0.16);
 }
 
-.contact-form input[type="checkbox"] {
+.contact-form__botcheck,
+.contact-form input[type="checkbox"][name="botcheck"] {
     position: absolute;
-    width: 1px;
-    height: 1px;
+    inline-size: 1px;
+    block-size: 1px;
     margin: -1px;
     padding: 0;
     border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
     opacity: 0;
+    overflow: hidden;
     pointer-events: none;
+    white-space: nowrap;
 }
 
 .contact-submit {
+    -webkit-appearance: none;
+    appearance: none;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1158,7 +1168,9 @@ body.is-document-explorer-open {
     padding-inline: 1.2rem;
     border: 1px solid rgba(174, 183, 194, 0.24);
     border-radius: 999px;
+    background-color: transparent;
     color: var(--color-text);
+    cursor: pointer;
     font: 600 0.82rem/1 var(--font-family-sans);
     letter-spacing: 0.1em;
     text-transform: uppercase;

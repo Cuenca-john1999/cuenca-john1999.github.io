@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="assets/css/base.css">
     
     <!-- 3. Layout general -->
-    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/layout.css?v=20260705-contact">
     
     <!-- 4. Componentes específicos -->
     <link rel="stylesheet" href="assets/css/components.css">
@@ -403,25 +403,25 @@
                             and international collaboration in laboratory environments.
                         </p>
                     </div>
-                    <aside class="contact-card" aria-label="Contact mailbox">
-                        <span class="contact-card__kicker">Professional mailbox</span>
-                        <h3>Tell me what you are building.</h3>
-                        <p>Send a short message without exposing a public email address on the page.</p>
+                    <aside class="contact-card" aria-label="Contact form">
+                        <span class="contact-card__kicker">Professional contact</span>
+                        <h3>Get in touch.</h3>
+                        <p>For laboratory roles, clinical research opportunities, biomedical projects or scientific collaborations.</p>
                         <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" data-contact-form>
                             <input type="hidden" name="access_key" value="b6eeaa2b-b2b7-40ac-94cc-c9a45838a981">
                             <input type="hidden" name="subject" value="New portfolio contact">
                             <input type="hidden" name="from_name" value="Jhon Cuenca Portfolio">
-                            <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">
+                            <input class="contact-form__botcheck" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" hidden>
 
-                            <label>
+                            <label class="contact-field">
                                 <span>Name</span>
                                 <input type="text" name="name" autocomplete="name" required>
                             </label>
-                            <label>
+                            <label class="contact-field">
                                 <span>Email</span>
                                 <input type="email" name="email" autocomplete="email" required>
                             </label>
-                            <label>
+                            <label class="contact-field">
                                 <span>Message</span>
                                 <textarea name="message" rows="4" required></textarea>
                             </label>
@@ -483,6 +483,6 @@
     <script src="assets/js/language.js"></script>
     
     <!-- 2. Inicializador principal (debe cargarse al final) -->
-    <script src="assets/js/app.js"></script>
+    <script src="assets/js/app.js?v=20260705-contact"></script>
 </body>
 </html>
