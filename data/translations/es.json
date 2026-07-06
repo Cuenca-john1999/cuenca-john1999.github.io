@@ -12,6 +12,7 @@
     "reference": "Referencia",
     "documentation": "Documentación",
     "finalProject": "Trabajo final",
+    "myRole": "Mi papel",
     "readMore": "Leer más"
   },
   "nav": {
@@ -19,6 +20,7 @@
     "experience": "Experiencia",
     "education": "Formación",
     "skills": "Habilidades",
+    "projects": "Proyectos",
     "concepts": "Conceptos",
     "references": "Referencias",
     "contact": "Contacto"
@@ -49,6 +51,14 @@
       "pointBiomass": "Celignis Biomass Analysis Laboratory · Erasmus+ 2023",
       "pointTeaching": "Instructor STEM y robótica educativa · 2020-2021"
     },
+    "responsibility": {
+      "kicker": "Responsabilidad",
+      "title": "Responsabilidad y liderazgo en prácticas de laboratorio.",
+      "body": "Durante mis prácticas de laboratorio, asumí progresivamente responsabilidades más allá de tareas rutinarias de formación. En entornos analíticos y biomédicos, se me confiaron flujos de trabajo concretos, documentación, apoyo a estudiantes y gestión autónoma de tareas.",
+      "pointWorkflow": "Responsabilidad en flujos de trabajo definidos",
+      "pointDocumentation": "Contribución a SOPs y documentación técnica",
+      "pointTransfer": "Apoyo en formación y transferencia de conocimiento"
+    },
     "education": {
       "kicker": "Formación",
       "title": "Resultados académicos sólidos con base clínica, analítica y biomédica.",
@@ -60,6 +70,14 @@
     "skills": {
       "kicker": "Habilidades",
       "title": "Identidad científica: conectar habilidades técnicas, curiosidad y propósito traslacional."
+    },
+    "projects": {
+      "kicker": "Proyectos seleccionados",
+      "title": "Proyectos académicos y de investigación con contribución personal clara.",
+      "body": "Una vista rápida del trabajo detrás del portfolio: un proyecto académico de revisión bibliográfica y un concepto original en fase inicial, ambos presentados con cautela científica.",
+      "pointAcademic": "Trabajo académico final · 61 páginas",
+      "pointConcept": "Concepto original · formulación de hipótesis",
+      "pointCommunication": "Redacción y comunicación científica"
     },
     "concepts": {
       "kicker": "Conceptos de investigación",
@@ -76,6 +94,14 @@
       "pointClinical": "Formación en laboratorio clínico y biomédico",
       "pointResearch": "Prácticas en fundación de investigación · Madrid",
       "pointErasmus": "Prácticas Erasmus+ en laboratorio analítico · Irlanda"
+    },
+    "development": {
+      "kicker": "Desarrollo actual",
+      "title": "Desarrollo profesional continuo mientras preparo oportunidades de laboratorio.",
+      "body": "Junto con la búsqueda de oportunidades en laboratorio, investigación clínica y ciencia biomédica, continúo con la preparación lingüística, el desarrollo del portfolio científico y la revisión de literatura relacionada con mis áreas de interés.",
+      "pointGerman": "Preparación de certificación oficial de alemán",
+      "pointPortfolio": "Desarrollo del portfolio científico",
+      "pointLiterature": "Revisión de literatura biomédica: fagoterapia, biomateriales y microplásticos"
     },
     "contact": {
       "kicker": "Contacto",
@@ -95,15 +121,44 @@
       "body": "Especialmente biología molecular, inmunología, microbiología, virología, trabajo analítico de laboratorio y equipos internacionales."
     }
   },
+  "snapshot": {
+    "kicker": "Resumen para reclutadores",
+    "location": {
+      "label": "Ubicación",
+      "value": "Berlín, Alemania"
+    },
+    "roles": {
+      "label": "Roles objetivo",
+      "value": "Técnico de laboratorio · Apoyo a investigación clínica · Biología molecular · Inmunología · Laboratorio analítico"
+    },
+    "languages": {
+      "label": "Idiomas",
+      "value": "Español nativo · Inglés B2 · Alemán A2"
+    },
+    "availability": {
+      "label": "Disponibilidad",
+      "value": "Abierto a oportunidades en Alemania e internacionalmente, incluyendo reubicación dentro de Alemania para puestos adecuados de laboratorio o investigación."
+    },
+    "recognition": {
+      "label": "Reconocimiento estatal",
+      "value": "Requisitos de reconocimiento profesional a abordar según el estado federado alemán y el puesto; certificación de alemán en preparación."
+    },
+    "documents": {
+      "label": "Documentos",
+      "value": "CV y referencias disponibles"
+    }
+  },
   "experienceCards": {
     "immunology": {
       "title": "Inmunología y Biología Molecular",
       "body": "Cultivo celular, manejo de células HaCaT, preparación de medios, pases y congelación celular, purificación de CD4/CD14, extracción de ARN, PCR, ELISA, preparación de geles de Western blot, transferencia y bloqueo, además de procesamiento de muestras humanas y murinas.",
+      "role": "Estudiante en prácticas de laboratorio biomédico con responsabilidad progresiva en flujos de cultivo celular, apoyo en biología molecular, técnicas de inmunología y procedimientos con muestras animales.",
       "reference": "La Dra. Danay Cibrián Vera, investigadora principal en el Hospital Universitario de La Princesa, destaca la responsabilidad, el compromiso en el laboratorio, el trabajo en equipo y la participación activa en técnicas moleculares, inmunológicas y de procesamiento de muestras."
     },
     "biomass": {
       "title": "Análisis de Biomasa",
       "body": "Determinación de humedad, cenizas, materia volátil, análisis elemental CHNOS, DQO, amonio, flujos de trabajo NIR/VISION, filtración al vacío y análisis de fusión de cenizas; redacción de SOP y hojas de datos en un entorno analítico basado en buenas prácticas de laboratorio en Irlanda.",
+      "role": "Estudiante en prácticas de laboratorio analítico con responsabilidad progresiva en análisis de materia volátil, documentación técnica, apoyo en SOPs y formación o transferencia de conocimiento para estudiantes o personal entrante.",
       "documentation": "Elaboración de guías operativas y hojas de datos para escaneos NIR, flujos de trabajo en Thermal Excel, lotes de muestras, etiquetas, filtración de muestras de reactores y trazabilidad de resultados analíticos.",
       "reference": "Cristobal Fernandez Belmonte M.Sc., Lab Manager en Celignis Biomass Analysis Laboratory, destaca el trabajo bajo normas GLP, la precisión técnica, el manejo de equipos, la resolución de problemas, el trabajo en equipo y la fiabilidad."
     },
@@ -117,6 +172,7 @@
       "title": "Laboratorio Clínico y Biomédico",
       "body": "CEAC FP Oficial, 2023-2025. Título oficial de Técnico Superior, nota media final de 9,3/10 y matrículas de honor en Técnicas Generales de Laboratorio, Técnicas de Inmunodiagnóstico y Técnicas de Análisis Hematológico.",
       "finalProject": "<strong>Bacteriofagoterapia | Redescubriendo una terapia innovadora.</strong> Trabajo en coautoría con Luis Gonzalo Legua Pérez y publicado con su autorización.",
+      "contribution": "Mi contribución: revisión bibliográfica, redacción científica, estructura del proyecto, desarrollo conceptual y preparación de la defensa, incluyendo la conexión futura entre fagoterapia, quitosano y preguntas biomédicas relacionadas con microplásticos.",
       "exploreProject": "Explorar trabajo",
       "exploreDefense": "Explorar defensa",
       "reference": "Tamara Díaz Jáuregui, profesora de biología en CEAC FP Madrid, destaca la capacidad técnica, dedicación, precisión, resolución de problemas, rapidez de aprendizaje, comunicación y sentido de la responsabilidad."
@@ -132,6 +188,32 @@
   },
   "selectedTechniques": {
     "title": "Técnicas seleccionadas"
+  },
+  "responsibilityCards": {
+    "princesa": {
+      "kicker": "Hospital Universitario de La Princesa",
+      "title": "Cultivo celular y flujos biomédicos",
+      "body": "Mi papel evolucionó desde la participación como estudiante en prácticas hasta una responsabilidad concreta dentro del flujo de cultivo celular. Se me confió el manejo, mantenimiento y rutinas relacionadas con células, y se me llamaba con frecuencia para apoyar procedimientos con muestras animales y flujos de biología molecular o inmunología."
+    },
+    "celignis": {
+      "kicker": "Celignis Biomass Analysis Laboratory",
+      "title": "Responsabilidad analítica y transferencia de conocimiento",
+      "body": "Asumí progresivamente responsabilidad en flujos analíticos concretos, incluyendo el análisis de materia volátil. También apoyé la transferencia de conocimiento formando a estudiantes y personal entrante, compartiendo información técnica con distintos equipos y contribuyendo a SOPs, guías operativas y documentación de laboratorio."
+    }
+  },
+  "projectCards": {
+    "phage": {
+      "kicker": "Trabajo académico final · Revisión bibliográfica",
+      "title": "Bacteriofagoterapia",
+      "body": "Mi contribución: revisión bibliográfica, redacción científica, estructura del proyecto, desarrollo conceptual y preparación de la defensa.",
+      "cta": "Explorar proyecto"
+    },
+    "chitosan": {
+      "kicker": "Concepto de investigación inicial · AETEL 2025",
+      "title": "Quitosano y microplásticos",
+      "body": "Mi contribución: desarrollo original del concepto, formulación de hipótesis, metodología propuesta y comunicación científica. El concepto se presenta como hipótesis inicial, no como evidencia experimental o clínica validada.",
+      "cta": "Explorar concepto"
+    }
   },
   "skillsMap": {
     "skillsTitle": "Habilidades",

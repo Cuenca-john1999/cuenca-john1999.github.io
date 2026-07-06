@@ -493,11 +493,56 @@ main,
 }
 
 .readiness-strip,
-.technique-strip {
+.technique-strip,
+.snapshot-card {
     margin-block-start: clamp(2rem, 4vw, 3rem);
     border: 1px solid rgba(174, 183, 194, 0.14);
     border-radius: var(--radius-sm);
     background-color: rgba(17, 20, 24, 0.52);
+}
+
+.snapshot-card {
+    padding: clamp(1.25rem, 2.4vw, 2rem);
+}
+
+.snapshot-card > span {
+    display: block;
+    margin-block-end: var(--spacing-lg);
+    color: var(--color-accent);
+    font: 700 0.72rem/1.2 var(--font-family-sans);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.snapshot-card dl {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: var(--spacing-sm);
+    margin: 0;
+}
+
+.snapshot-card div {
+    min-width: 0;
+    padding: clamp(1rem, 1.6vw, 1.35rem);
+    border: 1px solid rgba(174, 183, 194, 0.12);
+    border-radius: var(--radius-sm);
+    background:
+        linear-gradient(180deg, rgba(245, 247, 250, 0.035), transparent),
+        rgba(11, 13, 16, 0.42);
+}
+
+.snapshot-card dt {
+    margin-block-end: var(--spacing-sm);
+    color: var(--color-accent-secondary);
+    font: 700 0.68rem/1.2 var(--font-family-sans);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.snapshot-card dd {
+    margin: 0;
+    color: var(--color-text);
+    font: 600 clamp(0.88rem, 1vw, 1rem)/1.55 var(--font-family-sans);
 }
 
 .readiness-strip {
@@ -570,6 +615,53 @@ main,
     margin-block-start: clamp(2.5rem, 6vw, 5rem);
     background-color: rgba(174, 183, 194, 0.16);
     border-block: 1px solid rgba(174, 183, 194, 0.16);
+}
+
+.insight-grid,
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    margin-block-start: clamp(2rem, 5vw, 4rem);
+    border-block: 1px solid rgba(174, 183, 194, 0.14);
+    background-color: rgba(174, 183, 194, 0.14);
+}
+
+.insight-grid article,
+.project-grid article {
+    min-width: 0;
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    background-color: rgba(17, 20, 24, 0.68);
+}
+
+.insight-grid span,
+.project-grid span {
+    display: block;
+    margin-block-end: var(--spacing-lg);
+    color: var(--color-accent);
+    font: 700 0.72rem/1.2 var(--font-family-sans);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.insight-grid h3,
+.project-grid h3 {
+    max-width: 32rem;
+    margin: 0;
+    color: var(--color-text);
+    font: 650 clamp(1.25rem, 2vw, 1.8rem)/1.16 var(--font-family-sans);
+}
+
+.insight-grid p,
+.project-grid p {
+    max-width: 36rem;
+    margin-block-start: var(--spacing-lg);
+    color: var(--color-text-muted);
+    font: 400 clamp(0.95rem, 1.2vw, 1.05rem)/1.75 var(--font-family-sans);
+}
+
+.project-grid .document-link {
+    margin-block-start: var(--spacing-xl);
 }
 
 .focus-item {
@@ -1471,7 +1563,9 @@ body.is-document-explorer-open {
 @media (max-width: 980px) {
     .sequence-layout,
     .focus-grid,
-    .identity-map {
+    .identity-map,
+    .insight-grid,
+    .project-grid {
         grid-template-columns: 1fr;
     }
 
@@ -1561,6 +1655,10 @@ body.is-document-explorer-open {
         grid-template-columns: 1fr;
     }
 
+    .snapshot-card dl {
+        grid-template-columns: 1fr;
+    }
+
     .readiness-strip article + article {
         border-block-start: 1px solid rgba(174, 183, 194, 0.14);
         border-inline-start: 0;
@@ -1633,7 +1731,8 @@ body.is-document-explorer-open {
     .site-nav a:nth-child(2),
     .site-nav a:nth-child(3),
     .site-nav a:nth-child(4),
-    .site-nav a:nth-child(6) {
+    .site-nav a:nth-child(6),
+    .site-nav a:nth-child(7) {
         display: none;
     }
 

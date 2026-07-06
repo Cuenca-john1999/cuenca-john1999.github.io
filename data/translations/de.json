@@ -12,6 +12,7 @@
     "reference": "Reference",
     "documentation": "Documentation",
     "finalProject": "Final project",
+    "myRole": "My role",
     "readMore": "Read more"
   },
   "nav": {
@@ -19,6 +20,7 @@
     "experience": "Experience",
     "education": "Education",
     "skills": "Skills",
+    "projects": "Projects",
     "concepts": "Concepts",
     "references": "References",
     "contact": "Contact"
@@ -49,6 +51,14 @@
       "pointBiomass": "Celignis Biomass Analysis Laboratory · Erasmus+ 2023",
       "pointTeaching": "STEM and educational robotics instructor · 2020-2021"
     },
+    "responsibility": {
+      "kicker": "Responsibility",
+      "title": "Responsibility and leadership in laboratory practice.",
+      "body": "During my laboratory placements, I progressively assumed responsibilities beyond routine training tasks. In analytical and biomedical laboratory environments, I was trusted with specific workflows, documentation duties, student support and independent task management.",
+      "pointWorkflow": "Trusted with defined laboratory workflows",
+      "pointDocumentation": "Contributed to SOPs and technical documentation",
+      "pointTransfer": "Supported training and knowledge transfer"
+    },
     "education": {
       "kicker": "Education",
       "title": "Strong academic results with a clinical, analytical and biomedical foundation.",
@@ -60,6 +70,14 @@
     "skills": {
       "kicker": "Skills",
       "title": "Scientific identity: connecting technical skills, curiosity and translational purpose."
+    },
+    "projects": {
+      "kicker": "Selected Projects",
+      "title": "Academic and research-oriented projects with clear personal contribution.",
+      "body": "A quick view of the project work behind the portfolio: one academic literature-review project and one original early-stage concept, both framed with scientific caution.",
+      "pointAcademic": "Final academic project · 61 pages",
+      "pointConcept": "Original concept · hypothesis framing",
+      "pointCommunication": "Scientific writing and communication"
     },
     "concepts": {
       "kicker": "Research Concepts",
@@ -76,6 +94,14 @@
       "pointClinical": "Clinical and biomedical laboratory training",
       "pointResearch": "Research foundation practice · Madrid",
       "pointErasmus": "Erasmus+ analytical laboratory practice · Ireland"
+    },
+    "development": {
+      "kicker": "Current Development",
+      "title": "Continuing professional development while preparing for laboratory opportunities.",
+      "body": "Alongside applications for laboratory, clinical research and biomedical science roles, I am continuing language preparation, scientific portfolio development and literature review in areas connected to my research interests.",
+      "pointGerman": "German language certification preparation",
+      "pointPortfolio": "Scientific portfolio development",
+      "pointLiterature": "Biomedical literature review: phage therapy, biomaterials and microplastics"
     },
     "contact": {
       "kicker": "Contact",
@@ -95,28 +121,58 @@
       "body": "Especially molecular biology, immunology, microbiology, virology, analytical laboratory work and international teams."
     }
   },
+  "snapshot": {
+    "kicker": "Recruiter Snapshot",
+    "location": {
+      "label": "Location",
+      "value": "Berlin, Germany"
+    },
+    "roles": {
+      "label": "Target roles",
+      "value": "Laboratory technician · Clinical research support · Molecular biology · Immunology · Analytical laboratory work"
+    },
+    "languages": {
+      "label": "Languages",
+      "value": "Spanish native · English B2 · German A2"
+    },
+    "availability": {
+      "label": "Availability",
+      "value": "Open to opportunities in Germany and internationally, including relocation within Germany for suitable laboratory or research roles."
+    },
+    "recognition": {
+      "label": "State recognition",
+      "value": "Recognition requirements to be addressed according to the German federal state and role; German language certification in progress."
+    },
+    "documents": {
+      "label": "Documents",
+      "value": "CV and references available"
+    }
+  },
   "experienceCards": {
     "immunology": {
-      "title": "Immunology &amp; Molecular Biology",
+      "title": "Immunology & Molecular Biology",
       "body": "Cell culture, HaCaT handling, medium preparation, passaging and freezing workflows, CD4/CD14 purification, RNA extraction, PCR, ELISA, Western Blot gel preparation, transfer and blocking, plus human/murine sample processing.",
+      "role": "Biomedical laboratory trainee with progressive responsibility in cell culture workflows, molecular biology support, immunology techniques and animal-sample extraction procedures.",
       "reference": "Dr. Danay Cibrián Vera, Principal Investigator at Hospital Universitario de La Princesa, highlights responsibility, laboratory commitment, teamwork and active participation in molecular, immunology and sample-processing techniques."
     },
     "biomass": {
       "title": "Biomass Analysis",
       "body": "Moisture, ash, volatile matter, CHNOS elemental analysis, COD, ammonia, NIR/VISION workflows, vacuum filtration and ash melting analysis; SOP and data-sheet drafting under GLP-based analytical work in Ireland.",
+      "role": "Analytical laboratory trainee with progressive responsibility for volatile matter analysis, technical documentation, SOP support and training or knowledge transfer for incoming students or staff.",
       "documentation": "Prepared operational guides and data sheets for NIR scans, Thermal Excel workflows, sample batches, labels, reactor sample filtration and analytical result traceability.",
       "reference": "Cristobal Fernandez Belmonte M.Sc., Lab Manager at Celignis Biomass Analysis Laboratory, highlights GLP standards, technical precision, equipment operation, troubleshooting, teamwork and reliability."
     },
     "teaching": {
-      "title": "Teaching &amp; Early Work",
+      "title": "Teaching & Early Work",
       "body": "STEM instruction for children aged 6 to 12, didactic material design, class organization and earlier administrative support."
     }
   },
   "educationCards": {
     "clinical": {
-      "title": "Clinical &amp; Biomedical Laboratory",
+      "title": "Clinical & Biomedical Laboratory",
       "body": "CEAC FP Oficial, 2023-2025. Official Higher Technician title, final average grade of 9.3/10 and honours distinctions in General Laboratory Techniques, Immunodiagnostic Techniques and Hematological Analysis Techniques.",
       "finalProject": "<strong>Bacteriophage Therapy: Rediscovering an Innovative Therapy.</strong> Co-authored with Luis Gonzalo Legua Pérez and published with co-author permission.",
+      "contribution": "My contribution: literature review, scientific writing, project structure, conceptual development and defense preparation, including the future-oriented connection between bacteriophage therapy, chitosan and microplastic-related biomedical questions.",
       "exploreProject": "Explore project",
       "exploreDefense": "Explore defense",
       "reference": "Tamara Díaz Jáuregui, biology teacher at CEAC FP Madrid, highlights technical skill, dedication, problem-solving, rapid learning, communication and responsibility."
@@ -132,6 +188,32 @@
   },
   "selectedTechniques": {
     "title": "Selected techniques"
+  },
+  "responsibilityCards": {
+    "princesa": {
+      "kicker": "Hospital Universitario de La Princesa",
+      "title": "Cell culture and biomedical workflows",
+      "body": "My role evolved from trainee participation to specific responsibility within the cell culture workflow. I was trusted with cell handling, maintenance and related laboratory routines, and was frequently called to support animal-sample extraction procedures and molecular or immunology workflows."
+    },
+    "celignis": {
+      "kicker": "Celignis Biomass Analysis Laboratory",
+      "title": "Analytical responsibility and knowledge transfer",
+      "body": "I progressively took responsibility for specific analytical workflows, including volatile matter analysis. I also supported knowledge transfer by helping train incoming students and staff, sharing technical information with different teams and contributing to SOPs, operational guides and laboratory documentation."
+    }
+  },
+  "projectCards": {
+    "phage": {
+      "kicker": "Final academic project · Literature review",
+      "title": "Bacteriophage Therapy",
+      "body": "My contribution: literature review, scientific writing, project structure, conceptual development and defense preparation.",
+      "cta": "Explore project"
+    },
+    "chitosan": {
+      "kicker": "Early-stage research concept · AETEL 2025",
+      "title": "Chitosan and Microplastics",
+      "body": "My contribution: original concept development, hypothesis framing, proposed methodology and scientific communication. The concept is presented as an early-stage hypothesis, not as validated experimental or clinical evidence.",
+      "cta": "Explore concept"
+    }
   },
   "skillsMap": {
     "skillsTitle": "Skills",
