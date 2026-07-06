@@ -24,37 +24,6 @@ The research concept sections are included as **early-stage hypotheses** and pro
 
 They are not presented as validated treatments, clinical results, or therapeutic recommendations. Concepts involving bacteriophages, chitosan, biofilms, and microplastics are framed as literature-informed ideas that would require in vitro validation, toxicity assessment, reproducible controls, and further experimental development.
 
-## Project Structure
-
-```text
-.
-├── index.html
-├── assets/
-│   ├── css/
-│   ├── documents/
-│   ├── js/
-│   └── svg/
-├── data/translations/
-├── docs/design/
-└── prototypes/
-```
-
-## Local Preview
-
-This is a static website and can be opened directly in a browser.
-
-For a local server:
-
-```bash
-python3 -m http.server 8000
-```
-
-Then open:
-
-```text
-http://localhost:8000/
-```
-
 ## Authorship And Rights
 
 Portfolio content, original research concepts, and diagrams are authored by **Jhon M. Cuenca** unless otherwise stated.
