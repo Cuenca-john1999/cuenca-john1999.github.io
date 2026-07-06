@@ -129,7 +129,7 @@
     },
     "roles": {
       "label": "Roles objetivo",
-      "value": "Técnico de laboratorio · Apoyo a investigación clínica · Biología molecular · Inmunología · Laboratorio analítico"
+      "value": "Técnico de laboratorio · Apoyo a investigación clínica · Biología molecular · Inmunología"
     },
     "languages": {
       "label": "Idiomas",
@@ -137,15 +137,15 @@
     },
     "availability": {
       "label": "Disponibilidad",
-      "value": "Abierto a oportunidades en Alemania e internacionalmente, incluyendo reubicación dentro de Alemania para puestos adecuados de laboratorio o investigación."
+      "value": "Alemania e internacionalmente · Abierto a reubicación dentro de Alemania"
     },
     "recognition": {
       "label": "Reconocimiento estatal",
-      "value": "Requisitos de reconocimiento profesional a abordar según el estado federado alemán y el puesto; certificación de alemán en preparación."
+      "value": "Ruta de reconocimiento según estado federado y puesto; certificación de alemán en preparación."
     },
     "documents": {
       "label": "Documentos",
-      "value": "CV y referencias disponibles"
+      "value": "CV · Referencias disponibles"
     }
   },
   "experienceCards": {

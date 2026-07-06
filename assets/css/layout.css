@@ -516,14 +516,14 @@ main,
 
 .snapshot-card dl {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--spacing-sm);
     margin: 0;
 }
 
 .snapshot-card div {
     min-width: 0;
-    padding: clamp(1rem, 1.6vw, 1.35rem);
+    padding: clamp(0.9rem, 1.35vw, 1.15rem);
     border: 1px solid rgba(174, 183, 194, 0.12);
     border-radius: var(--radius-sm);
     background:
@@ -542,7 +542,7 @@ main,
 .snapshot-card dd {
     margin: 0;
     color: var(--color-text);
-    font: 600 clamp(0.88rem, 1vw, 1rem)/1.55 var(--font-family-sans);
+    font: 600 clamp(0.84rem, 0.92vw, 0.95rem)/1.5 var(--font-family-sans);
 }
 
 .readiness-strip {
@@ -1656,7 +1656,7 @@ body.is-document-explorer-open {
     }
 
     .snapshot-card dl {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .readiness-strip article + article {
@@ -1755,6 +1755,10 @@ body.is-document-explorer-open {
 
     .opening-availability {
         border-radius: var(--radius-sm);
+    }
+
+    .snapshot-card dl {
+        grid-template-columns: 1fr;
     }
 
     .maturity-scale {

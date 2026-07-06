@@ -129,7 +129,7 @@
     },
     "roles": {
       "label": "Target roles",
-      "value": "Laboratory technician · Clinical research support · Molecular biology · Immunology · Analytical laboratory work"
+      "value": "Lab technician · Clinical research support · Molecular biology · Immunology"
     },
     "languages": {
       "label": "Languages",
@@ -137,15 +137,15 @@
     },
     "availability": {
       "label": "Availability",
-      "value": "Open to opportunities in Germany and internationally, including relocation within Germany for suitable laboratory or research roles."
+      "value": "Germany and internationally · Open to relocation within Germany"
     },
     "recognition": {
       "label": "State recognition",
-      "value": "Recognition requirements to be addressed according to the German federal state and role; German language certification in progress."
+      "value": "Recognition route depends on federal state and role; German certification in progress."
     },
     "documents": {
       "label": "Documents",
-      "value": "CV and references available"
+      "value": "CV · References available"
     }
   },
   "experienceCards": {
