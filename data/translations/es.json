@@ -28,7 +28,7 @@
   "hero": {
     "title": "Técnico Superior en<br>Laboratorio Clínico y Biomédico",
     "philosophy": "Comprometido con una vida de aprendizaje, descubrimiento y ayuda a los demás.",
-    "availability": "Disponible para oportunidades en laboratorio, investigación clínica y ciencia biomédica en Alemania y a nivel internacional.",
+    "availability": "Disponible para oportunidades relacionadas con laboratorio, apoyo a investigación clínica y ciencia biomédica en Alemania y a nivel internacional.",
     "cvCta": "Descargar CV",
     "contactCta": "Contacto",
     "projectsCta": "Explorar proyectos",
@@ -38,10 +38,10 @@
     "profile": {
       "kicker": "Perfil",
       "title": "Un perfil de laboratorio definido por la precisión, la investigación y el aprendizaje continuo.",
-      "body": "Soy Técnico Superior en Laboratorio Clínico y Biomédico y Técnico en Operaciones de Laboratorio. Actualmente resido en Berlín. Mi formación conecta el diagnóstico clínico, la biología molecular, la inmunología y el trabajo analítico de laboratorio bajo normas de buenas prácticas de laboratorio.",
+      "body": "Cuento con titulaciones españolas de Técnico Superior en Laboratorio Clínico y Biomédico y Técnico en Operaciones de Laboratorio. Actualmente resido en Berlín y aplico esta formación al diagnóstico clínico, la biología molecular, la inmunología y el trabajo analítico de laboratorio bajo normas de buenas prácticas de laboratorio.",
       "pointLocation": "Berlín, Alemania",
-      "pointLanguages": "Español nativo · Inglés B2 · Alemán A2",
-      "pointGerman": "Preparando certificación oficial de alemán"
+      "pointLanguages": "Inglés B2 · Alemán A2 · Español nativo",
+      "pointGerman": "Preparación de certificación de alemán"
     },
     "experience": {
       "kicker": "Experiencia",
@@ -62,9 +62,9 @@
     "education": {
       "kicker": "Formación",
       "title": "Resultados académicos sólidos con base clínica, analítica y biomédica.",
-      "body": "Me gradué con distinción como Técnico Superior en Laboratorio Clínico y Biomédico y como Técnico en Operaciones de Laboratorio, con notas finales de 9,3/10 y 8,69/10.",
-      "pointClinical": "Laboratorio Clínico y Biomédico · CEAC FP Oficial · 2025",
-      "pointOperations": "Operaciones de Laboratorio · IES Virgen de la Paloma · 2023",
+      "body": "Completé formación profesional española con distinción: Técnico Superior en Laboratorio Clínico y Biomédico y Técnico en Operaciones de Laboratorio, con notas finales de 9,3/10 y 8,69/10.",
+      "pointClinical": "Técnico Superior en Laboratorio Clínico y Biomédico · CEAC FP Oficial · 2025",
+      "pointOperations": "Técnico en Operaciones de Laboratorio · IES Virgen de la Paloma · 2023",
       "pointAdditional": "Experimentación Animal A+B+C · Gestión Sanitaria · Prevención de Riesgos"
     },
     "skills": {
@@ -98,50 +98,50 @@
     "development": {
       "kicker": "Desarrollo actual",
       "title": "Desarrollo profesional continuo mientras preparo oportunidades de laboratorio.",
-      "body": "Junto con la búsqueda de oportunidades en laboratorio, investigación clínica y ciencia biomédica, continúo con la preparación lingüística, el desarrollo del portfolio científico y la revisión de literatura relacionada con mis áreas de interés.",
-      "pointGerman": "Preparación de certificación oficial de alemán",
+      "body": "Junto con la búsqueda de oportunidades relacionadas con laboratorio, apoyo a investigación clínica y ciencia biomédica, continúo con la preparación de certificación de alemán, el desarrollo del portfolio científico y la revisión de literatura relacionada con mis áreas de interés.",
+      "pointGerman": "Preparación de certificación de alemán",
       "pointPortfolio": "Desarrollo del portfolio científico",
       "pointLiterature": "Revisión de literatura biomédica: fagoterapia, biomateriales y microplásticos"
     },
     "contact": {
       "kicker": "Contacto",
       "title": "Abierto a oportunidades en laboratorio, investigación clínica y ciencia biomédica.",
-      "body": "Disponible para oportunidades en laboratorio, investigación clínica y ciencia biomédica en Alemania y a nivel internacional."
+      "body": "Disponible para oportunidades relacionadas con laboratorio, apoyo a investigación clínica y ciencia biomédica en Alemania y a nivel internacional."
     }
   },
   "readiness": {
     "germany": {
       "kicker": "Preparación para Alemania",
       "title": "Residente en Berlín y preparando certificación de alemán.",
-      "body": "Abierto a orientación sobre reconocimiento profesional y oportunidades de laboratorio mientras continúa el desarrollo del idioma."
+      "body": "La aceptación académica universitaria para acceso o admisión a estudios es distinta del reconocimiento profesional en Alemania (Anerkennung). El reconocimiento profesional puede exigirse en puestos clínico-asistenciales regulados y depende del Bundesland, el puesto, el empleador y la autoridad competente."
     },
     "looking": {
       "kicker": "Qué estoy buscando",
       "title": "Entornos de laboratorio, investigación clínica y ciencia biomédica.",
-      "body": "Especialmente biología molecular, inmunología, microbiología, virología, trabajo analítico de laboratorio y equipos internacionales."
+      "body": "Especialmente puestos de investigación, laboratorios universitarios, institutos, laboratorios privados y puestos técnicos no regulados; los puestos clínico-asistenciales regulados en hospitales pueden exigir reconocimiento profesional como MTL/MTLA."
     }
   },
   "snapshot": {
-    "kicker": "Resumen para reclutadores",
+    "kicker": "Resumen para reclutadores · perfil en 20 segundos",
     "location": {
       "label": "Ubicación",
       "value": "Berlín, Alemania"
     },
     "roles": {
       "label": "Roles objetivo",
-      "value": "Técnico de laboratorio · Apoyo a investigación clínica · Biología molecular · Inmunología"
+      "value": "Puestos de técnico de laboratorio / apoyo a investigación · Biología molecular · Inmunología · Laboratorio analítico"
     },
     "languages": {
       "label": "Idiomas",
-      "value": "Español nativo · Inglés B2 · Alemán A2"
+      "value": "Inglés B2 · Alemán A2 · Español nativo"
     },
     "availability": {
       "label": "Disponibilidad",
       "value": "Alemania e internacionalmente · Abierto a reubicación dentro de Alemania"
     },
     "recognition": {
-      "label": "Reconocimiento estatal",
-      "value": "Ruta de reconocimiento según estado federado y puesto; certificación de alemán en preparación."
+      "label": "Contexto alemán",
+      "value": "La aceptación previa por una universidad alemana fue académica y no equivale a Anerkennung profesional; los requisitos dependen del Bundesland, el puesto, el empleador y la autoridad competente."
     },
     "documents": {
       "label": "Documentos",
@@ -170,7 +170,7 @@
   "educationCards": {
     "clinical": {
       "title": "Laboratorio Clínico y Biomédico",
-      "body": "CEAC FP Oficial, 2023-2025. Título oficial de Técnico Superior, nota media final de 9,3/10 y matrículas de honor en Técnicas Generales de Laboratorio, Técnicas de Inmunodiagnóstico y Técnicas de Análisis Hematológico.",
+      "body": "Titulación española: Técnico Superior en Laboratorio Clínico y Biomédico, CEAC FP Oficial, 2023-2025. Aceptada previamente por una universidad alemana para acceso o admisión a estudios; esto es contexto académico y no reconocimiento profesional en Alemania. Nota media final de 9,3/10 y matrículas de honor en Técnicas Generales de Laboratorio, Técnicas de Inmunodiagnóstico y Técnicas de Análisis Hematológico.",
       "finalProject": "<strong>Bacteriofagoterapia | Redescubriendo una terapia innovadora.</strong> Trabajo en coautoría con Luis Gonzalo Legua Pérez y publicado con su autorización.",
       "contribution": "Mi contribución: revisión bibliográfica, redacción científica, estructura del proyecto, desarrollo conceptual y preparación de la defensa, incluyendo la conexión futura entre fagoterapia, quitosano y preguntas biomédicas relacionadas con microplásticos.",
       "exploreProject": "Explorar trabajo",
@@ -179,7 +179,7 @@
     },
     "operations": {
       "title": "Operaciones de Laboratorio",
-      "body": "IES Virgen de la Paloma, 2021-2023. Título oficial de Técnico en Operaciones de Laboratorio, con resultados destacados en Química Aplicada, Ensayos Fisicoquímicos, Operaciones de Análisis Químico, Ensayos de Materiales e Inglés Técnico."
+      "body": "Titulación española: Técnico en Operaciones de Laboratorio, IES Virgen de la Paloma, 2021-2023. Resultados destacados en Química Aplicada, Ensayos Fisicoquímicos, Operaciones de Análisis Químico, Ensayos de Materiales e Inglés Técnico."
     },
     "additional": {
       "title": "Formación adicional certificada",

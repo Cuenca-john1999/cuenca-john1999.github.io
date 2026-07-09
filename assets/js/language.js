@@ -25,9 +25,9 @@
 
 const Language = (() => {
     const STORAGE_KEY = 'portfolio-language';
-    const TRANSLATION_VERSION = '20260706-responsibility';
+    const TRANSLATION_VERSION = '20260709-german-active';
     const DEFAULT_LANGUAGE = 'es';
-    const AVAILABLE_LANGUAGES = ['es', 'en', 'de'];
+    const AVAILABLE_LANGUAGES = ['en', 'de', 'es'];
     
     let currentLanguage = DEFAULT_LANGUAGE;
     let translations = {};

@@ -6,370 +6,370 @@
     "light": "Hell"
   },
   "commonLabels": {
-    "practiceDetails": "Practice details",
-    "academicDetails": "Academic details",
-    "trainingDetails": "Training details",
-    "reference": "Reference",
-    "documentation": "Documentation",
-    "finalProject": "Final project",
-    "myRole": "My role",
-    "readMore": "Read more"
+    "practiceDetails": "Praxisdetails",
+    "academicDetails": "Ausbildungsdetails",
+    "trainingDetails": "Weiterbildungsdetails",
+    "reference": "Referenz",
+    "documentation": "Dokumentation",
+    "finalProject": "Abschlussprojekt",
+    "myRole": "Meine Rolle",
+    "readMore": "Mehr lesen"
   },
   "nav": {
-    "profile": "Profile",
-    "experience": "Experience",
-    "education": "Education",
-    "skills": "Skills",
-    "projects": "Projects",
-    "concepts": "Concepts",
-    "references": "References",
-    "contact": "Contact"
+    "profile": "Profil",
+    "experience": "Erfahrung",
+    "education": "Ausbildung",
+    "skills": "Kompetenzen",
+    "projects": "Projekte",
+    "concepts": "Konzepte",
+    "references": "Referenzen",
+    "contact": "Kontakt"
   },
   "hero": {
-    "title": "Clinical &amp; Biomedical<br>Laboratory Technologist",
-    "philosophy": "Committed to a lifetime of learning, discovery and helping others.",
-    "availability": "Available for laboratory, clinical research and biomedical science opportunities in Germany and internationally.",
-    "cvCta": "Download CV",
-    "contactCta": "Contact",
-    "projectsCta": "Explore projects",
-    "scroll": "Scroll to discover"
+    "title": "Klinisch-biomedizinisches<br>Laborprofil",
+    "philosophy": "Engagiert für lebenslanges Lernen, Entdeckung und Hilfe für andere.",
+    "availability": "Verfügbar für laborbezogene Positionen, Unterstützung in klinischer Forschung und biomedizinische Wissenschaft in Deutschland und international.",
+    "cvCta": "CV herunterladen",
+    "contactCta": "Kontakt",
+    "projectsCta": "Projekte ansehen",
+    "scroll": "Scrollen"
   },
   "sections": {
     "profile": {
-      "kicker": "Profile",
-      "title": "A laboratory profile shaped by precision, research and continuous learning.",
-      "body": "I am a Higher Technician in Clinical and Biomedical Laboratory and Technician in Laboratory Operations based in Berlin. My training connects clinical diagnostics, molecular biology, immunology and analytical laboratory work under GLP standards.",
-      "pointLocation": "Berlin, Germany",
-      "pointLanguages": "Spanish native · English B2 · German A2",
-      "pointGerman": "Preparing official German certification"
+      "kicker": "Profil",
+      "title": "Ein Laborprofil geprägt von Präzision, Forschung und kontinuierlichem Lernen.",
+      "body": "Ich verfüge über spanische berufliche Qualifikationen: Técnico Superior en Laboratorio Clínico y Biomédico (englische Übersetzung: Higher Technician in Clinical and Biomedical Laboratory) und Técnico en Operaciones de Laboratorio (englische Übersetzung: Technician in Laboratory Operations). In Berlin wende ich diese Ausbildung in klinischer Diagnostik, Molekularbiologie, Immunologie und analytischer Laborarbeit nach GLP-Standards an.",
+      "pointLocation": "Berlin, Deutschland",
+      "pointLanguages": "Englisch B2 · Deutsch A2 · Spanisch Muttersprache",
+      "pointGerman": "Vorbereitung auf Deutschzertifizierung"
     },
     "experience": {
-      "kicker": "Experience",
-      "title": "From translational immunology to analytical and industrial laboratory work.",
-      "body": "My practical experience includes immunology and molecular biology research in Madrid and biomass analysis in Ireland, combining clinical samples, analytical protocols and independent laboratory responsibility.",
-      "pointResearch": "La Princesa University Hospital research foundation · 2025",
+      "kicker": "Erfahrung",
+      "title": "Von translationaler Immunologie bis zu analytischer und industrieller Laborarbeit.",
+      "body": "Meine praktische Erfahrung umfasst Immunologie- und Molekularbiologieforschung in Madrid sowie Biomasseanalytik in Irland, mit klinischen Proben, analytischen Protokollen und eigenverantwortlicher Laborarbeit.",
+      "pointResearch": "Forschungsstiftung des Hospital Universitario La Princesa · 2025",
       "pointBiomass": "Celignis Biomass Analysis Laboratory · Erasmus+ 2023",
-      "pointTeaching": "STEM and educational robotics instructor · 2020-2021"
+      "pointTeaching": "STEM- und Bildungsrobotik-Instructor · 2020-2021"
     },
     "responsibility": {
-      "kicker": "Responsibility",
-      "title": "Responsibility and leadership in laboratory practice.",
-      "body": "During my laboratory placements, I progressively assumed responsibilities beyond routine training tasks. In analytical and biomedical laboratory environments, I was trusted with specific workflows, documentation duties, student support and independent task management.",
-      "pointWorkflow": "Trusted with defined laboratory workflows",
-      "pointDocumentation": "Contributed to SOPs and technical documentation",
-      "pointTransfer": "Supported training and knowledge transfer"
+      "kicker": "Verantwortung",
+      "title": "Verantwortung und Führung in der Laborpraxis.",
+      "body": "Während meiner Laborpraktika übernahm ich schrittweise Aufgaben über reine Ausbildungsroutinen hinaus. In analytischen und biomedizinischen Laborumgebungen wurden mir definierte Arbeitsabläufe, Dokumentationsaufgaben, Unterstützung von Studierenden und eigenständiges Aufgabenmanagement anvertraut.",
+      "pointWorkflow": "Verantwortung für definierte Laborabläufe",
+      "pointDocumentation": "Mitwirkung an SOPs und technischer Dokumentation",
+      "pointTransfer": "Unterstützung von Training und Wissenstransfer"
     },
     "education": {
-      "kicker": "Education",
-      "title": "Strong academic results with a clinical, analytical and biomedical foundation.",
-      "body": "I graduated with distinction as a Higher Technician in Clinical and Biomedical Laboratory and as a Technician in Laboratory Operations, with final grades of 9.3/10 and 8.69/10.",
-      "pointClinical": "Clinical and Biomedical Laboratory · CEAC FP Oficial · 2025",
-      "pointOperations": "Laboratory Operations · IES Virgen de la Paloma · 2023",
-      "pointAdditional": "Animal Experimentation A+B+C · Healthcare Management · Risk Prevention"
+      "kicker": "Ausbildung",
+      "title": "Starke akademische Ergebnisse mit klinischer, analytischer und biomedizinischer Grundlage.",
+      "body": "Ich habe eine spanische Berufsausbildung mit Auszeichnung abgeschlossen: Técnico Superior en Laboratorio Clínico y Biomédico und Técnico en Operaciones de Laboratorio, mit Abschlussnoten von 9,3/10 und 8,69/10.",
+      "pointClinical": "Técnico Superior en Laboratorio Clínico y Biomédico · CEAC FP Oficial · 2025",
+      "pointOperations": "Técnico en Operaciones de Laboratorio · IES Virgen de la Paloma · 2023",
+      "pointAdditional": "Experimentación Animal A+B+C · Gesundheitsmanagement · Arbeitsschutz"
     },
     "skills": {
-      "kicker": "Skills",
-      "title": "Scientific identity: connecting technical skills, curiosity and translational purpose."
+      "kicker": "Kompetenzen",
+      "title": "Wissenschaftliche Identität: technische Fähigkeiten, Neugier und translationaler Zweck."
     },
     "projects": {
-      "kicker": "Selected Projects",
-      "title": "Academic and research-oriented projects with clear personal contribution.",
-      "body": "A quick view of the project work behind the portfolio: one academic literature-review project and one original early-stage concept, both framed with scientific caution.",
-      "pointAcademic": "Final academic project · 61 pages",
-      "pointConcept": "Original concept · hypothesis framing",
-      "pointCommunication": "Scientific writing and communication"
+      "kicker": "Ausgewählte Projekte",
+      "title": "Akademische und forschungsorientierte Projekte mit klarer persönlicher Mitwirkung.",
+      "body": "Ein schneller Überblick über die Projektarbeit im Portfolio: ein akademisches Literaturreview-Projekt und ein originales Frühphasen-Konzept, beide mit wissenschaftlicher Vorsicht dargestellt.",
+      "pointAcademic": "Abschlussprojekt · 61 Seiten",
+      "pointConcept": "Originales Konzept · Hypothesenformulierung",
+      "pointCommunication": "Wissenschaftliches Schreiben und Kommunikation"
     },
     "concepts": {
-      "kicker": "Research Concepts",
-      "title": "Early-stage scientific ideas shaped by laboratory thinking and translational curiosity.",
-      "body": "These concepts are not presented as validated treatments or clinical results. They show how I connect biomedical questions, laboratory methods and responsible research hypotheses.",
-      "pointHypothesis": "Early-stage hypothesis · not clinically validated",
-      "pointMethods": "Biomaterials · microbiology · analytical methods",
-      "pointValidation": "Designed for future experimental validation"
+      "kicker": "Forschungskonzepte",
+      "title": "Wissenschaftliche Ideen in einer frühen Phase, geprägt durch Labordenken und translationale Neugier.",
+      "body": "Diese Konzepte werden nicht als validierte Behandlungen oder klinische Ergebnisse dargestellt. Sie zeigen, wie ich biomedizinische Fragen, Labormethoden und verantwortungsvolle Forschungshypothesen verbinde.",
+      "pointHypothesis": "Frühphasen-Hypothese · nicht klinisch validiert",
+      "pointMethods": "Biomaterialien · Mikrobiologie · analytische Methoden",
+      "pointValidation": "Für zukünftige experimentelle Validierung gedacht"
     },
     "references": {
-      "kicker": "References",
-      "title": "Professional and academic references can support the laboratory experience shown here.",
-      "body": "References from academic training, research practice and international laboratory experience can be provided according to the opportunity and recruitment process.",
-      "pointClinical": "Clinical and biomedical laboratory training",
-      "pointResearch": "Research foundation practice · Madrid",
-      "pointErasmus": "Erasmus+ analytical laboratory practice · Ireland"
+      "kicker": "Referenzen",
+      "title": "Professionelle und akademische Referenzen können die hier dargestellte Laborerfahrung unterstützen.",
+      "body": "Referenzen aus Ausbildung, Forschungspraxis und internationaler Laborerfahrung können je nach Stelle und Auswahlverfahren bereitgestellt werden.",
+      "pointClinical": "Ausbildung im klinisch-biomedizinischen Laborbereich",
+      "pointResearch": "Forschungspraxis · Madrid",
+      "pointErasmus": "Erasmus+ Praktikum im analytischen Labor · Irland"
     },
     "development": {
-      "kicker": "Current Development",
-      "title": "Continuing professional development while preparing for laboratory opportunities.",
-      "body": "Alongside applications for laboratory, clinical research and biomedical science roles, I am continuing language preparation, scientific portfolio development and literature review in areas connected to my research interests.",
-      "pointGerman": "German language certification preparation",
-      "pointPortfolio": "Scientific portfolio development",
-      "pointLiterature": "Biomedical literature review: phage therapy, biomaterials and microplastics"
+      "kicker": "Aktuelle Entwicklung",
+      "title": "Kontinuierliche berufliche Entwicklung während der Vorbereitung auf Laborchancen.",
+      "body": "Parallel zu Bewerbungen für laborbezogene Positionen, Unterstützung in klinischer Forschung und biomedizinische Wissenschaft bereite ich mich weiter auf eine Deutschzertifizierung vor, entwickle mein wissenschaftliches Portfolio und vertiefe Literaturrecherche in meinen Interessengebieten.",
+      "pointGerman": "Vorbereitung auf Deutschzertifizierung",
+      "pointPortfolio": "Entwicklung des wissenschaftlichen Portfolios",
+      "pointLiterature": "Biomedizinische Literaturrecherche: Phagentherapie, Biomaterialien und Mikroplastik"
     },
     "contact": {
-      "kicker": "Contact",
-      "title": "Open to laboratory, clinical research and biomedical science opportunities.",
-      "body": "Available for laboratory, clinical research and biomedical science opportunities in Germany and internationally."
+      "kicker": "Kontakt",
+      "title": "Offen für laborbezogene Positionen, klinische Forschungsunterstützung und biomedizinische Wissenschaft.",
+      "body": "Verfügbar für laborbezogene Positionen, Unterstützung in klinischer Forschung und biomedizinische Wissenschaft in Deutschland und international."
     }
   },
   "readiness": {
     "germany": {
-      "kicker": "Germany readiness",
-      "title": "Based in Berlin and preparing German certification.",
-      "body": "Open to recognition guidance and laboratory opportunities while continuing language development."
+      "kicker": "Deutschland-Kontext",
+      "title": "In Berlin ansässig und in Vorbereitung auf eine Deutschzertifizierung.",
+      "body": "Akademische universitäre Annahme für Studienzugang oder Zulassung ist von beruflicher Anerkennung in Deutschland (Anerkennung) getrennt. Berufliche Anerkennung kann für reglementierte klinische oder Krankenhausrollen erforderlich sein und hängt von Bundesland, Position, Arbeitgeber und zuständiger Behörde ab."
     },
     "looking": {
-      "kicker": "What I am looking for",
-      "title": "Laboratory, clinical research and biomedical science environments.",
-      "body": "Especially molecular biology, immunology, microbiology, virology, analytical laboratory work and international teams."
+      "kicker": "Gesuchte Bereiche",
+      "title": "Laborumgebungen, klinische Forschungsunterstützung und biomedizinische Wissenschaft.",
+      "body": "Besonders Forschungsrollen, Universitätslabore, Institute, private Labore und nicht reglementierte technische Positionen; reglementierte klinisch-assistenzbezogene Krankenhausrollen können berufliche Anerkennung als MTL/MTLA erfordern."
     }
   },
   "snapshot": {
-    "kicker": "Recruiter Snapshot",
+    "kicker": "Recruiter Snapshot · Profil in 20 Sekunden",
     "location": {
-      "label": "Location",
-      "value": "Berlin, Germany"
+      "label": "Standort",
+      "value": "Berlin, Deutschland"
     },
     "roles": {
-      "label": "Target roles",
-      "value": "Lab technician · Clinical research support · Molecular biology · Immunology"
+      "label": "Zielrollen",
+      "value": "Labortechniker- / Forschungsunterstützungsrollen · Molekularbiologie · Immunologie · analytische Laborarbeit"
     },
     "languages": {
-      "label": "Languages",
-      "value": "Spanish native · English B2 · German A2"
+      "label": "Sprachen",
+      "value": "Englisch B2 · Deutsch A2 · Spanisch Muttersprache"
     },
     "availability": {
-      "label": "Availability",
-      "value": "Germany and internationally · Open to relocation within Germany"
+      "label": "Verfügbarkeit",
+      "value": "Deutschland und international · offen für Umzug innerhalb Deutschlands"
     },
     "recognition": {
-      "label": "State recognition",
-      "value": "Recognition route depends on federal state and role; German certification in progress."
+      "label": "Deutschland-Kontext",
+      "value": "Die frühere Annahme durch eine deutsche Universität war akademisch und entspricht nicht einer beruflichen Anerkennung (Anerkennung); Anforderungen hängen von Bundesland, Position, Arbeitgeber und zuständiger Behörde ab."
     },
     "documents": {
-      "label": "Documents",
-      "value": "CV · References available"
+      "label": "Dokumente",
+      "value": "CV · Referenzen verfügbar"
     }
   },
   "experienceCards": {
     "immunology": {
-      "title": "Immunology & Molecular Biology",
-      "body": "Cell culture, HaCaT handling, medium preparation, passaging and freezing workflows, CD4/CD14 purification, RNA extraction, PCR, ELISA, Western Blot gel preparation, transfer and blocking, plus human/murine sample processing.",
-      "role": "Biomedical laboratory trainee with progressive responsibility in cell culture workflows, molecular biology support, immunology techniques and animal-sample extraction procedures.",
-      "reference": "Dr. Danay Cibrián Vera, Principal Investigator at Hospital Universitario de La Princesa, highlights responsibility, laboratory commitment, teamwork and active participation in molecular, immunology and sample-processing techniques."
+      "title": "Immunologie und Molekularbiologie",
+      "body": "Zellkultur, Umgang mit HaCaT-Zellen, Medienvorbereitung, Passagieren und Einfrieren, CD4/CD14-Aufreinigung, RNA-Extraktion, PCR, ELISA, Western-Blot-Gelvorbereitung, Transfer und Blocking sowie Verarbeitung humaner und muriner Proben.",
+      "role": "Praktikant im biomedizinischen Labor mit wachsender Verantwortung in Zellkulturabläufen, molekularbiologischer Unterstützung, immunologischen Techniken und Verfahren mit Tierproben.",
+      "reference": "Dr. Danay Cibrián Vera, Principal Investigator am Hospital Universitario de La Princesa, hebt Verantwortung, Laborengagement, Teamarbeit und aktive Mitwirkung an molekularbiologischen, immunologischen und probenbezogenen Techniken hervor."
     },
     "biomass": {
-      "title": "Biomass Analysis",
-      "body": "Moisture, ash, volatile matter, CHNOS elemental analysis, COD, ammonia, NIR/VISION workflows, vacuum filtration and ash melting analysis; SOP and data-sheet drafting under GLP-based analytical work in Ireland.",
-      "role": "Analytical laboratory trainee with progressive responsibility for volatile matter analysis, technical documentation, SOP support and training or knowledge transfer for incoming students or staff.",
-      "documentation": "Prepared operational guides and data sheets for NIR scans, Thermal Excel workflows, sample batches, labels, reactor sample filtration and analytical result traceability.",
-      "reference": "Cristobal Fernandez Belmonte M.Sc., Lab Manager at Celignis Biomass Analysis Laboratory, highlights GLP standards, technical precision, equipment operation, troubleshooting, teamwork and reliability."
+      "title": "Biomasseanalytik",
+      "body": "Feuchte, Asche, flüchtige Bestandteile, CHNOS-Elementaranalyse, CSB, Ammonium, NIR/VISION-Workflows, Vakuumfiltration und Ascheschmelzanalyse; SOP- und Datenblatt-Erstellung im Rahmen GLP-basierter analytischer Laborarbeit in Irland.",
+      "role": "Praktikant im analytischen Labor mit wachsender Verantwortung für die Analyse flüchtiger Bestandteile, technische Dokumentation, SOP-Unterstützung sowie Training oder Wissenstransfer für neue Studierende oder Mitarbeitende.",
+      "documentation": "Erstellung von Arbeitsanleitungen und Datenblättern für NIR-Scans, Thermal-Excel-Workflows, Probenchargen, Etiketten, Filtration von Reaktorproben und Rückverfolgbarkeit analytischer Ergebnisse.",
+      "reference": "Cristobal Fernandez Belmonte M.Sc., Lab Manager bei Celignis Biomass Analysis Laboratory, hebt GLP-Standards, technische Präzision, Gerätebedienung, Problemlösung, Teamarbeit und Zuverlässigkeit hervor."
     },
     "teaching": {
-      "title": "Teaching & Early Work",
-      "body": "STEM instruction for children aged 6 to 12, didactic material design, class organization and earlier administrative support."
+      "title": "Lehre und frühe Berufserfahrung",
+      "body": "STEM-Unterricht für Kinder von 6 bis 12 Jahren, Erstellung didaktischer Materialien, Kursorganisation und frühere administrative Unterstützung."
     }
   },
   "educationCards": {
     "clinical": {
-      "title": "Clinical & Biomedical Laboratory",
-      "body": "CEAC FP Oficial, 2023-2025. Official Higher Technician title, final average grade of 9.3/10 and honours distinctions in General Laboratory Techniques, Immunodiagnostic Techniques and Hematological Analysis Techniques.",
-      "finalProject": "<strong>Bacteriophage Therapy: Rediscovering an Innovative Therapy.</strong> Co-authored with Luis Gonzalo Legua Pérez and published with co-author permission.",
-      "contribution": "My contribution: literature review, scientific writing, project structure, conceptual development and defense preparation, including the future-oriented connection between bacteriophage therapy, chitosan and microplastic-related biomedical questions.",
-      "exploreProject": "Explore project",
-      "exploreDefense": "Explore defense",
-      "reference": "Tamara Díaz Jáuregui, biology teacher at CEAC FP Madrid, highlights technical skill, dedication, problem-solving, rapid learning, communication and responsibility."
+      "title": "Técnico Superior en Laboratorio Clínico y Biomédico",
+      "body": "Spanische Qualifikation: Técnico Superior en Laboratorio Clínico y Biomédico (englische Übersetzung: Higher Technician in Clinical and Biomedical Laboratory), CEAC FP Oficial, 2023-2025. Zuvor von einer deutschen Universität für Studienzugang oder Zulassung akzeptiert; dies ist akademischer Kontext und keine berufliche Anerkennung in Deutschland. Abschlussnote 9,3/10 und Auszeichnungen in Técnicas Generales de Laboratorio, Técnicas de Inmunodiagnóstico und Técnicas de Análisis Hematológico.",
+      "finalProject": "<strong>Bacteriophage Therapy: Rediscovering an Innovative Therapy.</strong> Gemeinsam mit Luis Gonzalo Legua Pérez verfasst und mit Genehmigung des Co-Autors veröffentlicht.<br><br><strong>Originale interdisziplinäre Hypothese:</strong> Untersuchung, ob Phagenspezifität und chitosanbasierte Adsorption in zukünftigen Labormodellen zur Untersuchung mikroplastikassoziierter Biofilme kombiniert werden könnten, ohne klinische Wirksamkeit zu behaupten.",
+      "contribution": "Mein Beitrag: Literaturrecherche, wissenschaftliches Schreiben, Projektstruktur, konzeptuelle Entwicklung und Vorbereitung der Verteidigung, einschließlich der zukunftsorientierten Verbindung zwischen Phagentherapie, Chitosan und mikroplastikbezogenen biomedizinischen Fragen.",
+      "exploreProject": "Projekt ansehen",
+      "exploreDefense": "Verteidigung ansehen",
+      "reference": "Tamara Díaz Jáuregui, Biologielehrerin bei CEAC FP Madrid, hebt technische Fähigkeit, Einsatzbereitschaft, Problemlösung, schnelle Lernfähigkeit, Kommunikation und Verantwortungsbewusstsein hervor."
     },
     "operations": {
-      "title": "Laboratory Operations",
-      "body": "IES Virgen de la Paloma, 2021-2023. Official Technician diploma in Laboratory Operations, with strong grades in Applied Chemistry, Physicochemical Testing, Chemical Analysis Operations, Materials Testing and Technical English."
+      "title": "Técnico en Operaciones de Laboratorio",
+      "body": "Spanische Qualifikation: Técnico en Operaciones de Laboratorio (englische Übersetzung: Technician in Laboratory Operations), IES Virgen de la Paloma, 2021-2023. Starke Leistungen in angewandter Chemie, physikochemischen Prüfungen, chemischen Analyseoperationen, Materialprüfung und technischem Englisch."
     },
     "additional": {
-      "title": "Certified Additional Training",
-      "body": "Animal Experimentation training for basic functions A, B and C, including animal care, euthanasia and procedures according to ECC/566/2015. Additional certificates include Healthcare Centre Management and Basic Level Occupational Risk Prevention."
+      "title": "Zertifizierte Zusatzqualifikationen",
+      "body": "Training in Experimentación Animal für die Grundfunktionen A, B und C, einschließlich Tierpflege, Euthanasie und Verfahren gemäß ECC/566/2015. Weitere Zertifikate umfassen Management im Gesundheitswesen und grundlegenden Arbeitsschutz."
     }
   },
   "selectedTechniques": {
-    "title": "Selected techniques"
+    "title": "Ausgewählte Techniken"
   },
   "responsibilityCards": {
     "princesa": {
       "kicker": "Hospital Universitario de La Princesa",
-      "title": "Cell culture and biomedical workflows",
-      "body": "My role evolved from trainee participation to specific responsibility within the cell culture workflow. I was trusted with cell handling, maintenance and related laboratory routines, and was frequently called to support animal-sample extraction procedures and molecular or immunology workflows."
+      "title": "Zellkultur und biomedizinische Arbeitsabläufe",
+      "body": "Meine Rolle entwickelte sich von der Praktikumsteilnahme zu konkreter Verantwortung im Zellkulturworkflow. Mir wurden Zellhandling, Pflege und zugehörige Laborroutinen anvertraut, und ich wurde regelmäßig zur Unterstützung bei Verfahren mit Tierproben sowie molekularbiologischen oder immunologischen Workflows hinzugezogen."
     },
     "celignis": {
       "kicker": "Celignis Biomass Analysis Laboratory",
-      "title": "Analytical responsibility and knowledge transfer",
-      "body": "I progressively took responsibility for specific analytical workflows, including volatile matter analysis. I also supported knowledge transfer by helping train incoming students and staff, sharing technical information with different teams and contributing to SOPs, operational guides and laboratory documentation."
+      "title": "Analytische Verantwortung und Wissenstransfer",
+      "body": "Ich übernahm schrittweise Verantwortung für konkrete analytische Workflows, einschließlich der Analyse flüchtiger Bestandteile. Außerdem unterstützte ich den Wissenstransfer durch Anleitung neuer Studierender und Mitarbeitender, Austausch technischer Informationen mit verschiedenen Teams sowie Mitwirkung an SOPs, Arbeitsanleitungen und Labordokumentation."
     }
   },
   "projectCards": {
     "phage": {
-      "kicker": "Final academic project · Literature review",
-      "title": "Bacteriophage Therapy",
-      "body": "My contribution: literature review, scientific writing, project structure, conceptual development and defense preparation.",
-      "cta": "Explore project"
+      "kicker": "Abschlussprojekt · Literaturreview",
+      "title": "Phagentherapie",
+      "body": "Mein Beitrag: Literaturrecherche, wissenschaftliches Schreiben, Projektstruktur, konzeptuelle Entwicklung und Vorbereitung der Verteidigung.",
+      "cta": "Projekt ansehen"
     },
     "chitosan": {
-      "kicker": "Early-stage research concept · AETEL 2025",
-      "title": "Chitosan and Microplastics",
-      "body": "My contribution: original concept development, hypothesis framing, proposed methodology and scientific communication. The concept is presented as an early-stage hypothesis, not as validated experimental or clinical evidence.",
-      "cta": "Explore concept"
+      "kicker": "Frühphasen-Forschungskonzept · AETEL 2025",
+      "title": "Chitosan und Mikroplastik",
+      "body": "Mein Beitrag: originale Konzeptentwicklung, Hypothesenformulierung, vorgeschlagene Methodik und wissenschaftliche Kommunikation. Das Konzept wird als Frühphasen-Hypothese dargestellt, nicht als validierte experimentelle oder klinische Evidenz.",
+      "cta": "Konzept ansehen"
     }
   },
   "skillsMap": {
-    "skillsTitle": "Skills",
+    "skillsTitle": "Kompetenzen",
     "molecular": {
-      "title": "Molecular Biology",
-      "body": "PCR, RNA extraction, electrophoresis, sample preparation and molecular workflows applied to clinical and biomedical laboratory contexts."
+      "title": "Molekularbiologie",
+      "body": "PCR, RNA-Extraktion, Elektrophorese, Probenvorbereitung und molekulare Workflows in klinischen und biomedizinischen Laborkontexten."
     },
     "cellCulture": {
-      "title": "Cell Culture",
-      "body": "Handling, maintenance, passaging and freezing of cell cultures, including HaCaT protocol documentation and sterile technique."
+      "title": "Zellkultur",
+      "body": "Handhabung, Pflege, Passagieren und Einfrieren von Zellkulturen, einschließlich Protokolldokumentation mit HaCaT-Zellen und steriler Technik."
     },
     "immunology": {
-      "title": "Immunological Techniques",
-      "body": "ELISA, Western Blot gel casting, transfer and blocking, CD4/CD14 purification and immunology-based sample analysis."
+      "title": "Immunologische Techniken",
+      "body": "ELISA, Western-Blot-Gelherstellung, Transfer und Blocking, CD4/CD14-Aufreinigung und immunologiebasierte Probenanalyse."
     },
     "analytical": {
-      "title": "Analytical Methods",
-      "body": "Moisture, ash, volatile matter, CHNOS elemental analysis, COD, ammonia, NIR/VISION, ash melting and vacuum filtration workflows."
+      "title": "Analytische Methoden",
+      "body": "Feuchte, Asche, flüchtige Bestandteile, CHNOS-Elementaranalyse, CSB, Ammonium, NIR/VISION, Ascheschmelze und Vakuumfiltration."
     },
     "models": {
-      "title": "Experimental Models",
-      "body": "Animal Experimentation A+B+C training covering animal care, euthanasia and procedures, with a responsible research mindset aligned with welfare and 3R principles."
+      "title": "Experimentelle Modelle",
+      "body": "Ausbildung A+B+C in Experimentación Animal mit Tierpflege, Euthanasie und Verfahren, verbunden mit einer verantwortungsvollen Forschungshaltung im Einklang mit Tierwohl und den 3R-Prinzipien."
     },
     "organization": {
-      "title": "Laboratory Organization",
-      "body": "Sample traceability, batch creation, labeling, inventory habits, Thermal Excel workflows, database updates and methodical independent responsibility."
+      "title": "Labororganisation",
+      "body": "Probenrückverfolgbarkeit, Chargenerstellung, Etikettierung, Inventargewohnheiten, Thermal-Excel-Workflows, Datenbankaktualisierung und methodische eigenständige Verantwortung."
     },
     "documentation": {
-      "title": "Technical Documentation",
-      "body": "SOP drafting, data-sheet design, troubleshooting guides and operational instructions for instruments, Excel workflows and laboratory sample handling."
+      "title": "Technische Dokumentation",
+      "body": "SOP-Erstellung, Datenblattdesign, Troubleshooting-Guides und Arbeitsanweisungen für Instrumente, Excel-Workflows und Laborprobenhandling."
     }
   },
   "identityCore": {
-    "kicker": "Scientific Identity",
-    "title": "Science connects ideas with life.",
-    "idea": "Idea: curiosity, observation, question",
-    "knowledge": "Knowledge: study, experiment, understand",
-    "research": "Research: method, data, analysis",
-    "discovery": "Discovery: insight, innovation, progress",
-    "application": "Application: translation, impact, solutions",
-    "life": "Life: improving health, helping others, building the future"
+    "kicker": "Wissenschaftliche Identität",
+    "title": "Wissenschaft verbindet Ideen mit dem Leben.",
+    "idea": "Idee: Neugier, Beobachtung, Frage",
+    "knowledge": "Wissen: Studium, Experiment, Verstehen",
+    "research": "Forschung: Methode, Daten, Analyse",
+    "discovery": "Entdeckung: Erkenntnis, Innovation, Fortschritt",
+    "application": "Anwendung: Translation, Wirkung, Lösungen",
+    "life": "Leben: Gesundheit verbessern, anderen helfen, Zukunft gestalten"
   },
   "valuesMap": {
-    "title": "Scientific Values",
+    "title": "Wissenschaftliche Werte",
     "curiosity": {
-      "title": "Curiosity",
-      "body": "Asking precise questions and approaching unknowns with observation, patience and initiative."
+      "title": "Neugier",
+      "body": "Präzise Fragen stellen und Unbekanntem mit Beobachtung, Geduld und Initiative begegnen."
     },
     "learning": {
-      "title": "Lifelong Learning",
-      "body": "Continuous development across clinical laboratory science, biomedical research and language learning."
+      "title": "Lebenslanges Lernen",
+      "body": "Kontinuierliche Entwicklung in klinischer Laborwissenschaft, biomedizinischer Forschung und Sprachenlernen."
     },
     "impact": {
-      "title": "Translational Impact",
-      "body": "Connecting laboratory work with practical outcomes that can improve health and decision-making."
+      "title": "Translationaler Impact",
+      "body": "Laborarbeit mit praktischen Ergebnissen verbinden, die Gesundheit und Entscheidungsfindung verbessern können."
     },
     "teamwork": {
-      "title": "Teamwork",
-      "body": "Clear communication, adaptability and collaboration in multicultural laboratory environments."
+      "title": "Teamarbeit",
+      "body": "Klare Kommunikation, Anpassungsfähigkeit und Zusammenarbeit in multikulturellen Laborumgebungen."
     },
     "future": {
-      "title": "Future Discoveries",
-      "body": "A long-term commitment to research, discovery and scientific work that remains useful to society."
+      "title": "Zukünftige Entdeckungen",
+      "body": "Langfristiges Engagement für Forschung, Entdeckung und wissenschaftliche Arbeit, die der Gesellschaft nützt."
     }
   },
   "conceptCard": {
-    "status": "Conceptual · Not experimentally validated · AETEL 2025",
-    "title": "Chitosan Applications in Medicine: potential for microplastic capture and biomedical study.",
-    "body": "An early research hypothesis exploring whether modified chitosan, a biocompatible biopolymer derived from chitin, could be studied as a platform for interacting with microplastics in future biomedical or analytical models.",
+    "status": "Konzeptuell · Nicht experimentell validiert · AETEL 2025",
+    "title": "Medizinische Anwendungen von Chitosan: Potenzial für Mikroplastikbindung und biomedizinische Untersuchung.",
+    "body": "Eine frühe Forschungshypothese, die untersucht, ob modifiziertes Chitosan, ein biokompatibles Biopolymer aus Chitin, als Plattform für die Interaktion mit Mikroplastik in zukünftigen biomedizinischen oder analytischen Modellen untersucht werden könnte.",
     "maturityScale": {
-      "concept": "Conceptual hypothesis",
-      "literature": "Literature-informed proposal",
-      "validation": "Requires in vitro validation"
+      "concept": "Konzeptuelle Hypothese",
+      "literature": "Literaturinformierter Vorschlag",
+      "validation": "Erfordert In-vitro-Validierung"
     },
     "context": {
-      "title": "Scientific context",
-      "body": "Microplastics are an emerging health concern, but human exposure, accumulation and clinical impact still require careful experimental confirmation."
+      "title": "Wissenschaftlicher Kontext",
+      "body": "Mikroplastik ist ein aufkommendes Gesundheitsthema, aber menschliche Exposition, mögliche Akkumulation und klinische Auswirkungen erfordern weiterhin sorgfältige experimentelle Bestätigung."
     },
     "idea": {
-      "title": "Central idea",
-      "body": "Explore chitosan-based materials as candidates for microplastic adsorption, retention or controlled laboratory study, without claiming therapeutic efficacy."
+      "title": "Zentrale Idee",
+      "body": "Chitosanbasierte Materialien als Kandidaten für Adsorption, Retention oder kontrollierte Laboruntersuchung von Mikroplastik erforschen, ohne therapeutische Wirksamkeit zu behaupten."
     },
     "methods": {
-      "title": "Proposed methods",
-      "body": "Biofilm sequencing, MiSeq-based microbial profiling, chitosan modification, FTIR characterization, adsorption assays and biocompatibility testing."
+      "title": "Vorgeschlagene Methoden",
+      "body": "Biofilm-Sequenzierung, MiSeq-basierte mikrobielle Profilierung, Chitosanmodifikation, FTIR-Charakterisierung, Adsorptionsassays und Biokompatibilitätstests."
     },
     "maturity": {
-      "title": "Project maturity",
-      "body": "Conceptual proposal only. It would need in vitro validation, toxicity assessment, controls and reproducible analytical methods before any clinical interpretation."
+      "title": "Projektstand",
+      "body": "Nur ein konzeptueller Vorschlag. Vor jeder klinischen Interpretation wären In-vitro-Validierung, Toxizitätsbewertung, Kontrollen und reproduzierbare analytische Methoden erforderlich."
     },
     "hypotheses": {
-      "kicker": "Working hypotheses",
-      "title": "Expected outcomes reframed as testable early-stage hypotheses.",
-      "adsorption": "<strong>Adsorption hypothesis.</strong> Modified chitosan may show measurable affinity for selected microplastic surfaces under controlled in vitro conditions, supporting retention and later analytical evaluation.",
-      "biofilm": "<strong>Biofilm-guided design hypothesis.</strong> Microorganisms associated with microplastic biofilms may provide useful biological information for selecting or designing more specific chitosan-based materials.",
-      "degradation": "<strong>Degradation-support hypothesis.</strong> If chitosan-microplastic complexes can be characterized reproducibly, enzymatic or biochemical strategies could be explored as future models for microplastic breakdown without assuming clinical efficacy.",
-      "feasibility": "<strong>Biomedical feasibility hypothesis.</strong> Only if specificity, stability and biocompatibility are demonstrated in vitro could this concept move toward future biomedical capture, retention or study models."
+      "kicker": "Arbeitshypothesen",
+      "title": "Erwartete Ergebnisse als überprüfbare Frühphasen-Hypothesen formuliert.",
+      "adsorption": "<strong>Adsorptionshypothese.</strong> Modifiziertes Chitosan könnte unter kontrollierten In-vitro-Bedingungen eine messbare Affinität zu ausgewählten Mikroplastikoberflächen zeigen und so Retention und spätere analytische Bewertung unterstützen.",
+      "biofilm": "<strong>Biofilm-geleitete Designhypothese.</strong> Mikroorganismen in mikroplastikassoziierten Biofilmen könnten nützliche biologische Informationen für die Auswahl oder Gestaltung spezifischerer chitosanbasierter Materialien liefern.",
+      "degradation": "<strong>Hypothese zur Unterstützung des Abbaus.</strong> Wenn Chitosan-Mikroplastik-Komplexe reproduzierbar charakterisiert werden können, könnten enzymatische oder biochemische Strategien als zukünftige Modelle für Mikroplastikabbau untersucht werden, ohne klinische Wirksamkeit anzunehmen.",
+      "feasibility": "<strong>Hypothese zur biomedizinischen Machbarkeit.</strong> Nur wenn Spezifität, Stabilität und Biokompatibilität in vitro gezeigt werden, könnte dieses Konzept in Richtung zukünftiger biomedizinischer Erfassungs-, Retentions- oder Untersuchungsmodelle weiterentwickelt werden."
     }
   },
   "conceptTags": {
     "chitosan": "Chitosan",
-    "microplastics": "Microplastics",
-    "biofilms": "Biofilms",
-    "adsorption": "Adsorption assays",
-    "biocompatibility": "Biocompatibility"
+    "microplastics": "Mikroplastik",
+    "biofilms": "Biofilme",
+    "adsorption": "Adsorptionsassays",
+    "biocompatibility": "Biokompatibilität"
   },
   "documents": {
     "finalProject": {
       "heading": "Bacteriophage Therapy: Rediscovering an Innovative Therapy",
-      "label": "Final project · 61 pages"
+      "label": "Abschlussprojekt · 61 Seiten"
     },
     "defense": {
       "heading": "Bacteriophage Therapy: Defense Slides",
-      "label": "Defense slides · 17 pages"
+      "label": "Verteidigung · 17 Folien"
     }
   },
   "referenceCards": {
     "research": {
-      "title": "Research Laboratory Reference",
-      "body": "Dr. Danay Cibrián Vera, Principal Investigator at the Immunology Service of Hospital Universitario de La Princesa, recommends Jhon after a three-month laboratory placement involving RNA extraction, PCR, electrophoresis, genotyping, biological sample processing, cell culture, staining techniques, protocol design and laboratory material management."
+      "title": "Referenz aus dem Forschungslabor",
+      "body": "Dr. Danay Cibrián Vera, Principal Investigator am Immunologiedienst des Hospital Universitario de La Princesa, empfiehlt Jhon nach einem dreimonatigen Laborpraktikum mit RNA-Extraktion, PCR, Elektrophorese, Genotypisierung, Verarbeitung biologischer Proben, Zellkultur, Färbetechniken, Protokolldesign und Verwaltung von Labormaterial."
     },
     "academic": {
-      "title": "Academic Reference",
-      "body": "Tamara Díaz Jáuregui, biology teacher at CEAC FP Madrid, recommends Jhon for his technical ability, dedication, precision, problem-solving, fast learning, communication and strong sense of responsibility."
+      "title": "Akademische Referenz",
+      "body": "Tamara Díaz Jáuregui, Biologielehrerin bei CEAC FP Madrid, empfiehlt Jhon aufgrund seiner technischen Fähigkeiten, Einsatzbereitschaft, Präzision, Problemlösung, schnellen Lernfähigkeit, Kommunikation und seines ausgeprägten Verantwortungsbewusstseins."
     },
     "international": {
-      "title": "International Laboratory Reference",
-      "body": "Cristobal Fernandez Belmonte M.Sc., Lab Manager at Celignis Biomass Analysis Laboratory in Limerick, Ireland, recommends Jhon after his internship supporting biomass analyses, instrument operation, GLP workflows, quality controls, sample preparation, teamwork and intern handover training."
+      "title": "Internationale Laborreferenz",
+      "body": "Cristobal Fernandez Belmonte M.Sc., Lab Manager bei Celignis Biomass Analysis Laboratory in Limerick, Irland, empfiehlt Jhon nach seinem Praktikum mit Unterstützung bei Biomasseanalysen, Gerätebedienung, GLP-Workflows, Qualitätskontrollen, Probenvorbereitung, Teamarbeit und Einarbeitung neuer Praktikantinnen und Praktikanten."
     }
   },
   "contactForm": {
-    "kicker": "Professional contact",
-    "title": "Get in touch.",
-    "body": "For laboratory roles, clinical research opportunities, biomedical projects or scientific collaborations.",
+    "kicker": "Beruflicher Kontakt",
+    "title": "Kontakt aufnehmen.",
+    "body": "Für laborbezogene Positionen, Unterstützung in klinischer Forschung, biomedizinische Projekte oder wissenschaftliche Kooperationen.",
     "name": "Name",
-    "email": "Email",
-    "message": "Message",
-    "submit": "Send message",
-    "ready": "Contact form ready. Add the Web3Forms access key to activate it.",
-    "sending": "Sending message...",
-    "success": "Message sent. Thank you for getting in touch.",
-    "error": "The message could not be sent. Please try again in a few minutes."
+    "email": "E-Mail",
+    "message": "Nachricht",
+    "submit": "Nachricht senden",
+    "ready": "Kontaktformular bereit. Web3Forms-Zugangsschlüssel hinzufügen, um es zu aktivieren.",
+    "sending": "Nachricht wird gesendet...",
+    "success": "Nachricht gesendet. Vielen Dank für die Kontaktaufnahme.",
+    "error": "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es in einigen Minuten erneut."
   },
   "documentExplorer": {
-    "kicker": "Document explorer",
-    "description": "Co-authored with Luis Gonzalo Legua Pérez · Published with co-author permission",
-    "close": "Close",
-    "openNewTab": "Open in new tab",
-    "translationWindow": "Translation window",
-    "englishAbstract": "English abstract",
-    "keywords": "Keywords: bacteriophage therapy, multidrug-resistant bacteria, phage treatment, antibiotics, alternative therapy, Staphylococcus aureus, Pseudomonas aeruginosa.",
-    "spanishOriginal": "Spanish original"
+    "kicker": "Dokumentenansicht",
+    "description": "Gemeinsam mit Luis Gonzalo Legua Pérez verfasst · Mit Genehmigung des Co-Autors veröffentlicht",
+    "close": "Schließen",
+    "openNewTab": "In neuem Tab öffnen",
+    "translationWindow": "Übersetzungsfenster",
+    "englishAbstract": "Englische Zusammenfassung",
+    "keywords": "Schlüsselwörter: Phagentherapie, multiresistente Bakterien, Phagenbehandlung, Antibiotika, alternative Therapie, Staphylococcus aureus, Pseudomonas aeruginosa.",
+    "spanishOriginal": "Spanisches Original"
   },
   "footer": {
-    "copyright": "&copy; 2026 Jhon M. Cuenca. All rights reserved.",
-    "authorship": "Portfolio content, original research concepts and diagrams are authored by Jhon M. Cuenca unless otherwise stated. Co-authored academic work is credited where shown.",
-    "scientificNotice": "Scientific hypotheses are presented for educational and professional portfolio purposes only; they do not represent validated clinical treatments."
+    "copyright": "&copy; 2026 Jhon M. Cuenca. Alle Rechte vorbehalten.",
+    "authorship": "Portfolio-Inhalte, originale Forschungskonzepte und Diagramme sind, sofern nicht anders angegeben, von Jhon M. Cuenca verfasst. Gemeinsam verfasste akademische Arbeiten werden entsprechend gekennzeichnet.",
+    "scientificNotice": "Wissenschaftliche Hypothesen werden nur zu Bildungszwecken und als professionelles Portfolio dargestellt; sie stellen keine validierten klinischen Behandlungen dar."
   }
 }

@@ -1,3 +1,102 @@
-<svg class="dna-component dna-component--empty" viewBox="0 0 430 1240" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-  <g class="dna-component__slot" data-component-slot="dna"></g>
+<svg viewBox="100 -220 520 1640" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="dna-title dna-desc">
+  <title id="dna-title">Solid DNA double helix</title>
+  <desc id="dna-desc">A polished DNA double helix with thick strands, base pairs and glowing nucleotide nodes.</desc>
+  <defs>
+    <linearGradient id="dna-strand-a" x1="24%" y1="4%" x2="76%" y2="96%">
+      <stop offset="0%" stop-color="#8EC1E7"/>
+      <stop offset="35%" stop-color="#4F8CFF"/>
+      <stop offset="68%" stop-color="#6F75FF"/>
+      <stop offset="100%" stop-color="#7A5CFF"/>
+    </linearGradient>
+    <linearGradient id="dna-strand-b" x1="76%" y1="4%" x2="24%" y2="96%">
+      <stop offset="0%" stop-color="#7A5CFF"/>
+      <stop offset="36%" stop-color="#6F75FF"/>
+      <stop offset="72%" stop-color="#4F8CFF"/>
+      <stop offset="100%" stop-color="#8EC1E7"/>
+    </linearGradient>
+    <linearGradient id="dna-pair-near" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8EC1E7" stop-opacity="0.98"/>
+      <stop offset="48%" stop-color="#F5F7FA" stop-opacity="0.76"/>
+      <stop offset="100%" stop-color="#7A5CFF" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="dna-pair-far" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7A5CFF" stop-opacity="0.42"/>
+      <stop offset="50%" stop-color="#AEB7C2" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#4F8CFF" stop-opacity="0.42"/>
+    </linearGradient>
+    <radialGradient id="dna-node-blue" cx="38%" cy="32%" r="72%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="34%" stop-color="#A9D8FF"/>
+      <stop offset="100%" stop-color="#4F8CFF"/>
+    </radialGradient>
+    <radialGradient id="dna-node-purple" cx="36%" cy="30%" r="74%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="35%" stop-color="#D5CCFF"/>
+      <stop offset="100%" stop-color="#7A5CFF"/>
+    </radialGradient>
+    <filter id="dna-soft-glow" x="-30%" y="-10%" width="160%" height="120%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.24 0 0 0 0 0.43 0 0 0 0 1 0 0 0 0.45 0" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="dna-node-shadow" x="-80%" y="-80%" width="260%" height="260%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#4F8CFF" flood-opacity="0.34"/>
+      <feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#000000" flood-opacity="0.24"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#dna-soft-glow)">
+    <path d="M214.5 -80C236.5 -60 274 -40 316.5 -20C359 0 405.9 20 444 40C482.1 60 510.9 80 522.3 100C533.7 120 527.5 140 505.5 160C483.5 180 446 200 403.5 220C361 240 314.1 260 276 280C237.9 300 209.1 320 197.7 340C186.3 360 192.5 380 214.5 400C236.5 420 274 440 316.5 460C359 480 405.9 500 444 520C482.1 540 510.9 560 522.3 580C533.7 600 527.5 620 505.5 640C483.5 660 446 680 403.5 700C361 720 314.1 740 276 760C237.9 780 209.1 800 197.7 820C186.3 840 192.5 860 214.5 880C236.5 900 274 920 316.5 940C359 960 405.9 980 444 1000C482.1 1020 510.9 1040 522.3 1060C533.7 1080 527.5 1100 505.5 1120C483.5 1140 446 1160 403.5 1180C361 1200 314.1 1220 276 1240" fill="none" stroke="#0B0D10" stroke-opacity="0.58" stroke-width="31" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+    <path d="M505.5 -80C483.5 -60 446 -40 403.5 -20C361 0 314.1 20 276 40C237.9 60 209.1 80 197.7 100C186.3 120 192.5 140 214.5 160C236.5 180 274 200 316.5 220C359 240 405.9 260 444 280C482.1 300 510.9 320 522.3 340C533.7 360 527.5 380 505.5 400C483.5 420 446 440 403.5 460C361 480 314.1 500 276 520C237.9 540 209.1 560 197.7 580C186.3 600 192.5 620 214.5 640C236.5 660 274 680 316.5 700C359 720 405.9 740 444 760C482.1 780 510.9 800 522.3 820C533.7 840 527.5 860 505.5 880C483.5 900 446 920 403.5 940C361 960 314.1 980 276 1000C237.9 1020 209.1 1040 197.7 1060C186.3 1080 192.5 1100 214.5 1120C236.5 1140 274 1160 316.5 1180C359 1200 405.9 1220 444 1240" fill="none" stroke="#0B0D10" stroke-opacity="0.58" stroke-width="31" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+
+    <g opacity="0.94">
+      <path d="M278 279C320 294 400 294 442 279" fill="none" stroke="url(#dna-pair-far)" stroke-width="10" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+      <path d="M194 371C256 350 464 350 526 371" fill="none" stroke="url(#dna-pair-far)" stroke-width="9" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+      <path d="M323 463C354 454 366 454 397 463" fill="none" stroke="url(#dna-pair-far)" stroke-width="8" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+      <path d="M319 739C352 730 368 730 401 739" fill="none" stroke="url(#dna-pair-far)" stroke-width="8" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+      <path d="M193 831C255 810 465 810 527 831" fill="none" stroke="url(#dna-pair-far)" stroke-width="9" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+      <path d="M282 923C322 938 398 938 438 923" fill="none" stroke="url(#dna-pair-far)" stroke-width="10" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+    </g>
+
+    <path d="M214.5 -80C236.5 -60 274 -40 316.5 -20C359 0 405.9 20 444 40C482.1 60 510.9 80 522.3 100C533.7 120 527.5 140 505.5 160C483.5 180 446 200 403.5 220C361 240 314.1 260 276 280C237.9 300 209.1 320 197.7 340C186.3 360 192.5 380 214.5 400C236.5 420 274 440 316.5 460C359 480 405.9 500 444 520C482.1 540 510.9 560 522.3 580C533.7 600 527.5 620 505.5 640C483.5 660 446 680 403.5 700C361 720 314.1 740 276 760C237.9 780 209.1 800 197.7 820C186.3 840 192.5 860 214.5 880C236.5 900 274 920 316.5 940C359 960 405.9 980 444 1000C482.1 1020 510.9 1040 522.3 1060C533.7 1080 527.5 1100 505.5 1120C483.5 1140 446 1160 403.5 1180C361 1200 314.1 1220 276 1240" fill="none" stroke="url(#dna-strand-a)" stroke-width="18" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+    <path d="M505.5 -80C483.5 -60 446 -40 403.5 -20C361 0 314.1 20 276 40C237.9 60 209.1 80 197.7 100C186.3 120 192.5 140 214.5 160C236.5 180 274 200 316.5 220C359 240 405.9 260 444 280C482.1 300 510.9 320 522.3 340C533.7 360 527.5 380 505.5 400C483.5 420 446 440 403.5 460C361 480 314.1 500 276 520C237.9 540 209.1 560 197.7 580C186.3 600 192.5 620 214.5 640C236.5 660 274 680 316.5 700C359 720 405.9 740 444 760C482.1 780 510.9 800 522.3 820C533.7 840 527.5 860 505.5 880C483.5 900 446 920 403.5 940C361 960 314.1 980 276 1000C237.9 1020 209.1 1040 197.7 1060C186.3 1080 192.5 1100 214.5 1120C236.5 1140 274 1160 316.5 1180C359 1200 405.9 1220 444 1240" fill="none" stroke="url(#dna-strand-b)" stroke-width="18" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+
+    <g>
+      <path d="M201 95C262 118 458 118 519 95" fill="none" stroke="url(#dna-pair-near)" stroke-width="12" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+      <path d="M253 187C296 207 424 207 467 187" fill="none" stroke="url(#dna-pair-near)" stroke-width="10" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+      <path d="M220 555C276 576 444 576 500 555" fill="none" stroke="url(#dna-pair-near)" stroke-width="10" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+      <path d="M223 647C278 668 442 668 497 647" fill="none" stroke="url(#dna-pair-near)" stroke-width="10" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+      <path d="M249 1015C293 1035 427 1035 471 1015" fill="none" stroke="url(#dna-pair-near)" stroke-width="10" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+      <path d="M202 1107C263 1130 457 1130 518 1107" fill="none" stroke="url(#dna-pair-near)" stroke-width="12" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+    </g>
+
+    <g filter="url(#dna-node-shadow)">
+      <circle cx="201" cy="95" r="19" fill="url(#dna-node-purple)"/>
+      <circle cx="519" cy="95" r="19" fill="url(#dna-node-blue)"/>
+      <circle cx="253" cy="187" r="15" fill="url(#dna-node-blue)"/>
+      <circle cx="467" cy="187" r="15" fill="url(#dna-node-purple)"/>
+      <circle cx="278" cy="279" r="13" fill="url(#dna-node-purple)" opacity="0.62"/>
+      <circle cx="442" cy="279" r="13" fill="url(#dna-node-blue)" opacity="0.62"/>
+      <circle cx="194" cy="371" r="16" fill="url(#dna-node-blue)" opacity="0.72"/>
+      <circle cx="526" cy="371" r="16" fill="url(#dna-node-purple)" opacity="0.72"/>
+      <circle cx="220" cy="555" r="15" fill="url(#dna-node-purple)"/>
+      <circle cx="500" cy="555" r="15" fill="url(#dna-node-blue)"/>
+      <circle cx="223" cy="647" r="15" fill="url(#dna-node-blue)"/>
+      <circle cx="497" cy="647" r="15" fill="url(#dna-node-purple)"/>
+      <circle cx="193" cy="831" r="16" fill="url(#dna-node-purple)" opacity="0.72"/>
+      <circle cx="527" cy="831" r="16" fill="url(#dna-node-blue)" opacity="0.72"/>
+      <circle cx="249" cy="1015" r="15" fill="url(#dna-node-blue)"/>
+      <circle cx="471" cy="1015" r="15" fill="url(#dna-node-purple)"/>
+      <circle cx="202" cy="1107" r="19" fill="url(#dna-node-purple)"/>
+      <circle cx="518" cy="1107" r="19" fill="url(#dna-node-blue)"/>
+    </g>
+
+    <path d="M444 40C482 60 511 80 522 100C534 120 528 140 506 160" fill="none" stroke="#FFFFFF" stroke-opacity="0.34" stroke-width="4" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+    <path d="M198 340C186 360 193 380 215 400C237 420 274 440 317 460" fill="none" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="3.4" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+    <path d="M522 580C534 600 528 620 506 640C484 660 446 680 404 700" fill="none" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="3.8" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+    <path d="M198 820C186 840 193 860 215 880C237 900 274 920 317 940" fill="none" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="3.4" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+  </g>
 </svg>

@@ -26,9 +26,9 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Clinical &amp; Biomedical<br>Laboratory Technologist",
+    "title": "Clinical &amp; Biomedical<br>Laboratory Profile",
     "philosophy": "Committed to a lifetime of learning, discovery and helping others.",
-    "availability": "Available for laboratory, clinical research and biomedical science opportunities in Germany and internationally.",
+    "availability": "Available for laboratory-related, clinical research support and biomedical science opportunities in Germany and internationally.",
     "cvCta": "Download CV",
     "contactCta": "Contact",
     "projectsCta": "Explore projects",
@@ -38,10 +38,10 @@
     "profile": {
       "kicker": "Profile",
       "title": "A laboratory profile shaped by precision, research and continuous learning.",
-      "body": "I am a Higher Technician in Clinical and Biomedical Laboratory and Technician in Laboratory Operations based in Berlin. My training connects clinical diagnostics, molecular biology, immunology and analytical laboratory work under GLP standards.",
+      "body": "I hold Spanish vocational qualifications as Técnico Superior en Laboratorio Clínico y Biomédico (Higher Technician in Clinical and Biomedical Laboratory) and Técnico en Operaciones de Laboratorio (Technician in Laboratory Operations). Based in Berlin, I apply this training to clinical diagnostics, molecular biology, immunology and analytical laboratory work under GLP standards.",
       "pointLocation": "Berlin, Germany",
-      "pointLanguages": "Spanish native · English B2 · German A2",
-      "pointGerman": "Preparing official German certification"
+      "pointLanguages": "English B2 · German A2 · Spanish native",
+      "pointGerman": "German language certification preparation"
     },
     "experience": {
       "kicker": "Experience",
@@ -62,9 +62,9 @@
     "education": {
       "kicker": "Education",
       "title": "Strong academic results with a clinical, analytical and biomedical foundation.",
-      "body": "I graduated with distinction as a Higher Technician in Clinical and Biomedical Laboratory and as a Technician in Laboratory Operations, with final grades of 9.3/10 and 8.69/10.",
-      "pointClinical": "Clinical and Biomedical Laboratory · CEAC FP Oficial · 2025",
-      "pointOperations": "Laboratory Operations · IES Virgen de la Paloma · 2023",
+      "body": "I completed Spanish vocational training with distinction: Técnico Superior en Laboratorio Clínico y Biomédico and Técnico en Operaciones de Laboratorio, with final grades of 9.3/10 and 8.69/10.",
+      "pointClinical": "Técnico Superior en Laboratorio Clínico y Biomédico · CEAC FP Oficial · 2025",
+      "pointOperations": "Técnico en Operaciones de Laboratorio · IES Virgen de la Paloma · 2023",
       "pointAdditional": "Animal Experimentation A+B+C · Healthcare Management · Risk Prevention"
     },
     "skills": {
@@ -98,7 +98,7 @@
     "development": {
       "kicker": "Current Development",
       "title": "Continuing professional development while preparing for laboratory opportunities.",
-      "body": "Alongside applications for laboratory, clinical research and biomedical science roles, I am continuing language preparation, scientific portfolio development and literature review in areas connected to my research interests.",
+      "body": "Alongside applications for laboratory-related, clinical research support and biomedical science roles, I am continuing German language certification preparation, scientific portfolio development and literature review in areas connected to my research interests.",
       "pointGerman": "German language certification preparation",
       "pointPortfolio": "Scientific portfolio development",
       "pointLiterature": "Biomedical literature review: phage therapy, biomaterials and microplastics"
@@ -106,42 +106,42 @@
     "contact": {
       "kicker": "Contact",
       "title": "Open to laboratory, clinical research and biomedical science opportunities.",
-      "body": "Available for laboratory, clinical research and biomedical science opportunities in Germany and internationally."
+      "body": "Available for laboratory-related, clinical research support and biomedical science opportunities in Germany and internationally."
     }
   },
   "readiness": {
     "germany": {
       "kicker": "Germany readiness",
-      "title": "Based in Berlin and preparing German certification.",
-      "body": "Open to recognition guidance and laboratory opportunities while continuing language development."
+      "title": "Based in Berlin and preparing German language certification.",
+      "body": "Academic university acceptance for study access/admission is separate from professional recognition in Germany (Anerkennung). Professional recognition may be required for regulated clinical or hospital roles and depends on Bundesland, position, employer and competent authority."
     },
     "looking": {
       "kicker": "What I am looking for",
       "title": "Laboratory, clinical research and biomedical science environments.",
-      "body": "Especially molecular biology, immunology, microbiology, virology, analytical laboratory work and international teams."
+      "body": "Especially research roles, university laboratories, institutes, private laboratories and non-regulated technical positions; regulated clinical-assistive hospital roles may require professional recognition as MTL/MTLA."
     }
   },
   "snapshot": {
-    "kicker": "Recruiter Snapshot",
+    "kicker": "Recruiter Snapshot · 20-second profile",
     "location": {
       "label": "Location",
       "value": "Berlin, Germany"
     },
     "roles": {
       "label": "Target roles",
-      "value": "Lab technician · Clinical research support · Molecular biology · Immunology"
+      "value": "Laboratory technician / research support roles · Molecular biology · Immunology · Analytical laboratory work"
     },
     "languages": {
       "label": "Languages",
-      "value": "Spanish native · English B2 · German A2"
+      "value": "English B2 · German A2 · Spanish native"
     },
     "availability": {
       "label": "Availability",
       "value": "Germany and internationally · Open to relocation within Germany"
     },
     "recognition": {
-      "label": "State recognition",
-      "value": "Recognition route depends on federal state and role; German certification in progress."
+      "label": "German context",
+      "value": "Prior German university acceptance was academic only and does not equal professional Anerkennung; requirements depend on Bundesland, position, employer and competent authority."
     },
     "documents": {
       "label": "Documents",
@@ -169,8 +169,8 @@
   },
   "educationCards": {
     "clinical": {
-      "title": "Clinical & Biomedical Laboratory",
-      "body": "CEAC FP Oficial, 2023-2025. Official Higher Technician title, final average grade of 9.3/10 and honours distinctions in General Laboratory Techniques, Immunodiagnostic Techniques and Hematological Analysis Techniques.",
+      "title": "Técnico Superior en Laboratorio Clínico y Biomédico",
+      "body": "Spanish qualification: Técnico Superior en Laboratorio Clínico y Biomédico (translated as Higher Technician in Clinical and Biomedical Laboratory), CEAC FP Oficial, 2023-2025. Previously accepted by a German university for study access/admission; this is academic context and not professional recognition in Germany. Final average grade of 9.3/10 and honours distinctions in General Laboratory Techniques, Immunodiagnostic Techniques and Hematological Analysis Techniques.",
       "finalProject": "<strong>Bacteriophage Therapy: Rediscovering an Innovative Therapy.</strong> Co-authored with Luis Gonzalo Legua Pérez and published with co-author permission.<br><br><strong>Original interdisciplinary hypothesis:</strong> exploring whether phage specificity and chitosan-based adsorption could be combined in future laboratory models to study microplastic-associated biofilms, without claiming clinical efficacy.",
       "contribution": "My contribution: literature review, scientific writing, project structure, conceptual development and defense preparation, including the future-oriented connection between bacteriophage therapy, chitosan and microplastic-related biomedical questions.",
       "exploreProject": "Explore project",
@@ -178,8 +178,8 @@
       "reference": "Tamara Díaz Jáuregui, biology teacher at CEAC FP Madrid, highlights technical skill, dedication, problem-solving, rapid learning, communication and responsibility."
     },
     "operations": {
-      "title": "Laboratory Operations",
-      "body": "IES Virgen de la Paloma, 2021-2023. Official Technician diploma in Laboratory Operations, with strong grades in Applied Chemistry, Physicochemical Testing, Chemical Analysis Operations, Materials Testing and Technical English."
+      "title": "Técnico en Operaciones de Laboratorio",
+      "body": "Spanish qualification: Técnico en Operaciones de Laboratorio (translated as Technician in Laboratory Operations), IES Virgen de la Paloma, 2021-2023. Strong grades in Applied Chemistry, Physicochemical Testing, Chemical Analysis Operations, Materials Testing and Technical English."
     },
     "additional": {
       "title": "Certified Additional Training",
