@@ -65,7 +65,7 @@
       "body": "Completé formación profesional española con distinción: Técnico Superior en Laboratorio Clínico y Biomédico y Técnico en Operaciones de Laboratorio, con notas finales de 9,3/10 y 8,69/10.",
       "pointClinical": "Técnico Superior en Laboratorio Clínico y Biomédico · CEAC FP Oficial · 2025",
       "pointOperations": "Técnico en Operaciones de Laboratorio · IES Virgen de la Paloma · 2023",
-      "pointAdditional": "Experimentación Animal A+B+C · Gestión Sanitaria · Prevención de Riesgos"
+      "pointAdditional": "FELASA A+B+C · Gestión Sanitaria · Prevención de Riesgos"
     },
     "skills": {
       "kicker": "Habilidades",
@@ -183,8 +183,38 @@
     },
     "additional": {
       "title": "Formación adicional certificada",
-      "body": "Formación en Experimentación Animal para funciones básicas A, B y C, incluyendo cuidado animal, eutanasia y procedimientos conforme a la Orden ECC/566/2015. Certificados adicionales en Gestión de Centros Sanitarios y Prevención de Riesgos Laborales de nivel básico."
+      "body": "Formación FELASA A+B+C en experimentación animal para funciones básicas A, B y C, incluyendo cuidado animal, eutanasia y procedimientos conforme a la Orden ECC/566/2015. Certificados adicionales en Gestión de Centros Sanitarios y Prevención de Riesgos Laborales de nivel básico."
     }
+  },
+  "europass": {
+    "kicker": "Documentación Europass",
+    "title": "Suplementos oficiales de las titulaciones",
+    "body": "Un acceso breve a los suplementos Europass oficiales que describen el contenido, nivel, resultados de aprendizaje, módulos y duración de mis titulaciones españolas.",
+    "labels": {
+      "type": "Tipo",
+      "duration": "Duración",
+      "level": "Nivel",
+      "context": "Contexto académico"
+    },
+    "clinical": {
+      "badge": "Suplemento Europass al Título",
+      "original": "Título original en español: Técnico Superior en Laboratorio Clínico y Biomédico",
+      "type": "Titulación superior oficial española de Formación Profesional",
+      "duration": "2.000 horas · 120 ECTS",
+      "level": "EQF Level 5 · ISCED Level 5",
+      "context": "Acceso a estudios universitarios",
+      "cta": "Ver suplemento clínico y biomédico"
+    },
+    "operations": {
+      "badge": "Suplemento Europass al Certificado",
+      "original": "Título original en español: Técnico en Operaciones de Laboratorio",
+      "type": "Titulación oficial española de Formación Profesional",
+      "duration": "2.000 horas",
+      "level": "EQF Level 4 · ISCED Level 3",
+      "context": "Descripción oficial Europass de la titulación",
+      "cta": "Ver suplemento de operaciones de laboratorio"
+    },
+    "note": "Los suplementos Europass ofrecen información oficial sobre el contenido, nivel y resultados de aprendizaje de las titulaciones españolas para facilitar su comprensión internacional. No tienen valor legal independiente ni sustituyen los procedimientos nacionales de reconocimiento profesional que puedan exigirse para puestos o profesiones reguladas."
   },
   "selectedTechniques": {
     "title": "Técnicas seleccionadas"
@@ -235,7 +265,7 @@
     },
     "models": {
       "title": "Modelos Experimentales",
-      "body": "Formación A+B+C en Experimentación Animal, cubriendo cuidado animal, eutanasia y procedimientos, con una mentalidad de investigación responsable alineada con el bienestar animal y los principios de las 3R."
+      "body": "Formación FELASA A+B+C en experimentación animal, cubriendo cuidado animal, eutanasia y procedimientos, con una mentalidad de investigación responsable alineada con el bienestar animal y los principios de las 3R."
     },
     "organization": {
       "title": "Organización de Laboratorio",

@@ -65,7 +65,7 @@
       "body": "Ich habe eine spanische Berufsausbildung mit Auszeichnung abgeschlossen: Técnico Superior en Laboratorio Clínico y Biomédico und Técnico en Operaciones de Laboratorio, mit Abschlussnoten von 9,3/10 und 8,69/10.",
       "pointClinical": "Técnico Superior en Laboratorio Clínico y Biomédico · CEAC FP Oficial · 2025",
       "pointOperations": "Técnico en Operaciones de Laboratorio · IES Virgen de la Paloma · 2023",
-      "pointAdditional": "Experimentación Animal A+B+C · Gesundheitsmanagement · Arbeitsschutz"
+      "pointAdditional": "FELASA A+B+C · Gesundheitsmanagement · Arbeitsschutz"
     },
     "skills": {
       "kicker": "Kompetenzen",
@@ -183,8 +183,38 @@
     },
     "additional": {
       "title": "Zertifizierte Zusatzqualifikationen",
-      "body": "Training in Experimentación Animal für die Grundfunktionen A, B und C, einschließlich Tierpflege, Euthanasie und Verfahren gemäß ECC/566/2015. Weitere Zertifikate umfassen Management im Gesundheitswesen und grundlegenden Arbeitsschutz."
+      "body": "FELASA A+B+C Training in Tierversuchskunde für die Grundfunktionen A, B und C, einschließlich Tierpflege, Euthanasie und Verfahren gemäß ECC/566/2015. Weitere Zertifikate umfassen Management im Gesundheitswesen und grundlegenden Arbeitsschutz."
     }
+  },
+  "europass": {
+    "kicker": "Europass-Dokumentation",
+    "title": "Offizielle Qualifikationssupplements",
+    "body": "Ein kompakter Zugang zu offiziellen Europass-Supplements, die Inhalt, Niveau, Lernergebnisse, Module und Dauer meiner spanischen Qualifikationen beschreiben.",
+    "labels": {
+      "type": "Art",
+      "duration": "Dauer",
+      "level": "Niveau",
+      "context": "Akademischer Kontext"
+    },
+    "clinical": {
+      "badge": "Europass Diploma Supplement",
+      "original": "Originaler spanischer Titel: Técnico Superior en Laboratorio Clínico y Biomédico",
+      "type": "Offizielle spanische höhere berufliche Qualifikation",
+      "duration": "2.000 Stunden · 120 ECTS",
+      "level": "EQF Level 5 · ISCED Level 5",
+      "context": "Zugang zu Hochschulstudien",
+      "cta": "Klinisch-biomedizinisches Supplement ansehen"
+    },
+    "operations": {
+      "badge": "Europass Certificate Supplement",
+      "original": "Originaler spanischer Titel: Técnico en Operaciones de Laboratorio",
+      "type": "Offizielle spanische berufliche Qualifikation",
+      "duration": "2.000 Stunden",
+      "level": "EQF Level 4 · ISCED Level 3",
+      "context": "Offizielle Europass-Beschreibung der Qualifikation",
+      "cta": "Labor-Operations-Supplement ansehen"
+    },
+    "note": "Europass-Supplements liefern offizielle Informationen zu Inhalt, Niveau und Lernergebnissen spanischer Qualifikationen, um das internationale Verständnis zu erleichtern. Sie haben keinen eigenständigen rechtlichen Wert und ersetzen keine nationalen Verfahren zur beruflichen Anerkennung, die für reglementierte Stellen oder Berufe erforderlich sein können."
   },
   "selectedTechniques": {
     "title": "Ausgewählte Techniken"
@@ -235,7 +265,7 @@
     },
     "models": {
       "title": "Experimentelle Modelle",
-      "body": "Ausbildung A+B+C in Experimentación Animal mit Tierpflege, Euthanasie und Verfahren, verbunden mit einer verantwortungsvollen Forschungshaltung im Einklang mit Tierwohl und den 3R-Prinzipien."
+      "body": "FELASA A+B+C Training in Tierversuchskunde mit Tierpflege, Euthanasie und Verfahren, verbunden mit einer verantwortungsvollen Forschungshaltung im Einklang mit Tierwohl und den 3R-Prinzipien."
     },
     "organization": {
       "title": "Labororganisation",

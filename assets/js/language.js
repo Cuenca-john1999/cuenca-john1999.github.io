@@ -25,7 +25,7 @@
 
 const Language = (() => {
     const STORAGE_KEY = 'portfolio-language';
-    const TRANSLATION_VERSION = '20260709-german-active';
+    const TRANSLATION_VERSION = '20260711-europass-felasa';
     const DEFAULT_LANGUAGE = 'es';
     const AVAILABLE_LANGUAGES = ['en', 'de', 'es'];
     

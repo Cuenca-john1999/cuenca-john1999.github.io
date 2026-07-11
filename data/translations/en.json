@@ -65,7 +65,7 @@
       "body": "I completed Spanish vocational training with distinction: Técnico Superior en Laboratorio Clínico y Biomédico and Técnico en Operaciones de Laboratorio, with final grades of 9.3/10 and 8.69/10.",
       "pointClinical": "Técnico Superior en Laboratorio Clínico y Biomédico · CEAC FP Oficial · 2025",
       "pointOperations": "Técnico en Operaciones de Laboratorio · IES Virgen de la Paloma · 2023",
-      "pointAdditional": "Animal Experimentation A+B+C · Healthcare Management · Risk Prevention"
+      "pointAdditional": "FELASA A+B+C · Healthcare Management · Risk Prevention"
     },
     "skills": {
       "kicker": "Skills",
@@ -183,8 +183,38 @@
     },
     "additional": {
       "title": "Certified Additional Training",
-      "body": "Animal Experimentation training for basic functions A, B and C, including animal care, euthanasia and procedures according to ECC/566/2015. Additional certificates include Healthcare Centre Management and Basic Level Occupational Risk Prevention."
+      "body": "FELASA A+B+C animal experimentation training for basic functions A, B and C, including animal care, euthanasia and procedures according to ECC/566/2015. Additional certificates include Healthcare Centre Management and Basic Level Occupational Risk Prevention."
     }
+  },
+  "europass": {
+    "kicker": "Europass documentation",
+    "title": "Official qualification supplements",
+    "body": "A concise access point for official Europass supplements describing the content, level, learning outcomes, modules and duration of my Spanish qualifications.",
+    "labels": {
+      "type": "Type",
+      "duration": "Duration",
+      "level": "Level",
+      "context": "Academic context"
+    },
+    "clinical": {
+      "badge": "Europass Diploma Supplement",
+      "original": "Original Spanish title: Técnico Superior en Laboratorio Clínico y Biomédico",
+      "type": "Official Spanish Higher Vocational Qualification",
+      "duration": "2,000 hours · 120 ECTS",
+      "level": "EQF Level 5 · ISCED Level 5",
+      "context": "Access to university studies",
+      "cta": "View Clinical & Biomedical Supplement"
+    },
+    "operations": {
+      "badge": "Europass Certificate Supplement",
+      "original": "Original Spanish title: Técnico en Operaciones de Laboratorio",
+      "type": "Official Spanish Vocational Qualification",
+      "duration": "2,000 hours",
+      "level": "EQF Level 4 · ISCED Level 3",
+      "context": "Official Europass qualification description",
+      "cta": "View Laboratory Operations Supplement"
+    },
+    "note": "Europass supplements provide official information about the content, level and learning outcomes of Spanish qualifications to support international understanding. They do not have independent legal value and do not replace national professional recognition procedures that may be required for regulated positions or professions."
   },
   "selectedTechniques": {
     "title": "Selected techniques"
@@ -235,7 +265,7 @@
     },
     "models": {
       "title": "Experimental Models",
-      "body": "Animal Experimentation A+B+C training covering animal care, euthanasia and procedures, with a responsible research mindset aligned with welfare and 3R principles."
+      "body": "FELASA A+B+C animal experimentation training covering animal care, euthanasia and procedures, with a responsible research mindset aligned with welfare and 3R principles."
     },
     "organization": {
       "title": "Laboratory Organization",
