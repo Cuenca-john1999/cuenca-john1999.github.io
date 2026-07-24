@@ -49,7 +49,7 @@ main,
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: var(--spacing-xl);
     pointer-events: none;
     transition: opacity var(--transition-normal), transform var(--transition-normal);
@@ -1808,6 +1808,20 @@ body.is-document-explorer-open {
         margin-inline: auto;
     }
 
+}
+
+@media (max-width: 960px) {
+    .site-header {
+        flex-wrap: wrap;
+        row-gap: var(--spacing-sm);
+    }
+
+    .site-nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
 
 @media (max-width: 760px) {
