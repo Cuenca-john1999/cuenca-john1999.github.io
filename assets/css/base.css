@@ -16,6 +16,7 @@ html {
     font-size: 16px;
     color-scheme: dark;
     background-color: var(--color-bg);
+    scroll-padding-top: calc(5.25rem + var(--spacing-xl));
 }
 
 body {
