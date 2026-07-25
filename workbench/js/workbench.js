@@ -7,7 +7,24 @@
 
     const translations = {
         en: {
-            accessibility: { skip: 'Skip to content' },
+            accessibility: {
+                skip: 'Skip to content',
+                workbenchNavigation: 'Workbench navigation',
+                returnProfile: 'Return to professional profile',
+                workbenchSections: 'Workbench sections',
+                languageSelector: 'Language selector',
+                workbenchStatus: 'Workbench status',
+                contentAreas: 'Workbench content areas',
+                carouselRole: 'carousel',
+                slideRole: 'slide',
+                filterEntries: 'Filter entries',
+                openDeutschosEntry: 'Open DeutschOS entry',
+                openPortfolioEntry: 'Open portfolio entry',
+                openPhageEntry: 'Open bacteriophage therapy entry',
+                openChitosanEntry: 'Open chitosan and microplastics entry',
+                footerNotice: 'Copyright, authorship and scientific notice',
+                closeEntry: 'Close entry'
+            },
             nav: { profile: 'Professional profile', featured: 'Featured', entries: 'Entries', principles: 'Method' },
             hero: {
                 eyebrow: 'Independent projects · scientific notes · applied learning',
@@ -81,7 +98,24 @@
             dialog: { problem: 'Problem or motivation', contribution: 'Real contribution', result: 'Result or evidence', next: 'Limitations and next steps' }
         },
         es: {
-            accessibility: { skip: 'Saltar al contenido' },
+            accessibility: {
+                skip: 'Saltar al contenido',
+                workbenchNavigation: 'Navegación del Workbench',
+                returnProfile: 'Volver al perfil profesional',
+                workbenchSections: 'Secciones del Workbench',
+                languageSelector: 'Selector de idioma',
+                workbenchStatus: 'Estado del Workbench',
+                contentAreas: 'Áreas de contenido del Workbench',
+                carouselRole: 'carrusel',
+                slideRole: 'diapositiva',
+                filterEntries: 'Filtrar entradas',
+                openDeutschosEntry: 'Abrir entrada de DeutschOS',
+                openPortfolioEntry: 'Abrir entrada del portafolio',
+                openPhageEntry: 'Abrir entrada sobre bacteriofagoterapia',
+                openChitosanEntry: 'Abrir entrada sobre quitosano y microplásticos',
+                footerNotice: 'Aviso de derechos, autoría y nota científica',
+                closeEntry: 'Cerrar entrada'
+            },
             nav: { profile: 'Perfil profesional', featured: 'Destacado', entries: 'Entradas', principles: 'Método' },
             hero: {
                 eyebrow: 'Proyectos independientes · notas científicas · aprendizaje aplicado',
@@ -155,7 +189,24 @@
             dialog: { problem: 'Problema o motivación', contribution: 'Contribución real', result: 'Resultado o evidencia', next: 'Limitaciones y próximos pasos' }
         },
         de: {
-            accessibility: { skip: 'Zum Inhalt springen' },
+            accessibility: {
+                skip: 'Zum Inhalt springen',
+                workbenchNavigation: 'Workbench-Navigation',
+                returnProfile: 'Zum Berufsprofil zurückkehren',
+                workbenchSections: 'Workbench-Bereiche',
+                languageSelector: 'Sprachauswahl',
+                workbenchStatus: 'Workbench-Status',
+                contentAreas: 'Workbench-Inhaltsbereiche',
+                carouselRole: 'Karussell',
+                slideRole: 'Folie',
+                filterEntries: 'Einträge filtern',
+                openDeutschosEntry: 'DeutschOS-Eintrag öffnen',
+                openPortfolioEntry: 'Portfolio-Eintrag öffnen',
+                openPhageEntry: 'Eintrag zur Bakteriophagentherapie öffnen',
+                openChitosanEntry: 'Eintrag zu Chitosan und Mikroplastik öffnen',
+                footerNotice: 'Hinweis zu Urheberrecht, Autorenschaft und Wissenschaft',
+                closeEntry: 'Eintrag schließen'
+            },
             nav: { profile: 'Berufsprofil', featured: 'Auswahl', entries: 'Einträge', principles: 'Methode' },
             hero: {
                 eyebrow: 'Eigene Projekte · wissenschaftliche Notizen · angewandtes Lernen',
@@ -367,16 +418,19 @@
 
     function translatePage() {
         document.documentElement.lang = currentLanguage;
-        document.querySelectorAll('[data-i18n], [data-i18n-html], [data-i18n-aria-label]').forEach((element) => {
-            const key = element.dataset.i18n || element.dataset.i18nHtml || element.dataset.i18nAriaLabel;
-            const value = getTranslation(key);
-
+        document.querySelectorAll('[data-i18n], [data-i18n-html], [data-i18n-aria-label], [data-i18n-aria-roledescription]').forEach((element) => {
             if (element.dataset.i18nHtml) {
-                element.innerHTML = value;
-            } else if (element.dataset.i18nAriaLabel) {
-                element.setAttribute('aria-label', value);
-            } else {
-                element.textContent = value;
+                element.innerHTML = getTranslation(element.dataset.i18nHtml);
+            } else if (element.dataset.i18n) {
+                element.textContent = getTranslation(element.dataset.i18n);
+            }
+
+            if (element.dataset.i18nAriaLabel) {
+                element.setAttribute('aria-label', getTranslation(element.dataset.i18nAriaLabel));
+            }
+
+            if (element.dataset.i18nAriaRoledescription) {
+                element.setAttribute('aria-roledescription', getTranslation(element.dataset.i18nAriaRoledescription));
             }
         });
 
