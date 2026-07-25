@@ -41,8 +41,10 @@
             featured: {
                 kicker: 'Featured', title: 'Work that best represents how I think and build.',
                 intro: 'Each entry separates the real contribution, current maturity, evidence and unresolved work.',
-                carouselHelp: 'Four featured entries rotate automatically. Use the controls to move between them.',
+                carouselHelp: 'Four featured entries rotate automatically. Use the controls to move, pause or resume the carousel.',
                 dotsLabel: 'Featured entries', previous: 'Previous featured entry', next: 'Next featured entry',
+                pauseRotation: 'Pause featured carousel', resumeRotation: 'Resume featured carousel',
+                pauseRotationLabel: 'Pause featured carousel', resumeRotationLabel: 'Resume featured carousel',
                 show1: 'Show entry 1', show2: 'Show entry 2', show3: 'Show entry 3', show4: 'Show entry 4',
                 slide1: 'Entry 1 of 4', slide2: 'Entry 2 of 4', slide3: 'Entry 3 of 4', slide4: 'Entry 4 of 4'
             },
@@ -132,8 +134,10 @@
             featured: {
                 kicker: 'Destacado', title: 'Trabajos que representan mejor cómo pienso y construyo.',
                 intro: 'Cada entrada separa la contribución real, la madurez actual, la evidencia y el trabajo pendiente.',
-                carouselHelp: 'Cuatro entradas destacadas rotan automáticamente. Usa los controles para desplazarte entre ellas.',
+                carouselHelp: 'Cuatro entradas destacadas rotan automáticamente. Usa los controles para moverte, pausar o reanudar el carrusel.',
                 dotsLabel: 'Entradas destacadas', previous: 'Entrada destacada anterior', next: 'Siguiente entrada destacada',
+                pauseRotation: 'Pausar carrusel destacado', resumeRotation: 'Reanudar carrusel destacado',
+                pauseRotationLabel: 'Pausar carrusel destacado', resumeRotationLabel: 'Reanudar carrusel destacado',
                 show1: 'Mostrar entrada 1', show2: 'Mostrar entrada 2', show3: 'Mostrar entrada 3', show4: 'Mostrar entrada 4',
                 slide1: 'Entrada 1 de 4', slide2: 'Entrada 2 de 4', slide3: 'Entrada 3 de 4', slide4: 'Entrada 4 de 4'
             },
@@ -223,8 +227,10 @@
             featured: {
                 kicker: 'Auswahl', title: 'Arbeiten, die meine Denk- und Arbeitsweise am besten zeigen.',
                 intro: 'Jeder Eintrag trennt den tatsächlichen Beitrag, Reifegrad, Evidenz und offene Arbeit.',
-                carouselHelp: 'Vier ausgewählte Einträge wechseln automatisch. Mit den Steuerelementen kannst du zwischen ihnen navigieren.',
+                carouselHelp: 'Vier ausgewählte Einträge wechseln automatisch. Mit den Steuerelementen kannst du das Karussell bewegen, pausieren oder fortsetzen.',
                 dotsLabel: 'Ausgewählte Einträge', previous: 'Vorheriger ausgewählter Eintrag', next: 'Nächster ausgewählter Eintrag',
+                pauseRotation: 'Ausgewähltes Karussell pausieren', resumeRotation: 'Ausgewähltes Karussell fortsetzen',
+                pauseRotationLabel: 'Ausgewähltes Karussell pausieren', resumeRotationLabel: 'Ausgewähltes Karussell fortsetzen',
                 show1: 'Eintrag 1 anzeigen', show2: 'Eintrag 2 anzeigen', show3: 'Eintrag 3 anzeigen', show4: 'Eintrag 4 anzeigen',
                 slide1: 'Eintrag 1 von 4', slide2: 'Eintrag 2 von 4', slide3: 'Eintrag 3 von 4', slide4: 'Eintrag 4 von 4'
             },
@@ -399,6 +405,8 @@
     };
 
     let currentLanguage = getInitialLanguage();
+    let updateCarouselTranslations = null;
+    let syncCarouselRotation = null;
 
     function getInitialLanguage() {
         try {
@@ -437,6 +445,8 @@
         document.querySelectorAll('[data-language-set]').forEach((button) => {
             button.setAttribute('aria-pressed', String(button.dataset.languageSet === currentLanguage));
         });
+
+        updateCarouselTranslations?.();
     }
 
     function setLanguage(language) {
@@ -509,25 +519,70 @@
         });
     });
 
+    const dialog = document.querySelector('[data-entry-dialog]');
+    const dialogClose = document.querySelector('[data-dialog-close]');
     const featuredCarousel = document.querySelector('[data-featured-carousel]');
 
     if (featuredCarousel) {
         const track = featuredCarousel.querySelector('[data-carousel-track]');
         const slides = Array.from(featuredCarousel.querySelectorAll('[data-carousel-slide]'));
         const dots = Array.from(featuredCarousel.querySelectorAll('[data-carousel-go]'));
+        const toggleButton = featuredCarousel.querySelector('[data-carousel-toggle]');
         const previousButton = featuredCarousel.querySelector('[data-carousel-prev]');
         const nextButton = featuredCarousel.querySelector('[data-carousel-next]');
         const currentCounter = featuredCarousel.querySelector('[data-carousel-current]');
         const progress = featuredCarousel.querySelector('[data-carousel-progress]');
+        const statusRegion = featuredCarousel.querySelector('[data-carousel-status]');
         const viewport = featuredCarousel.querySelector('.carousel-viewport');
         const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
         const rotationDelay = 11000;
         let activeIndex = 0;
         let rotationTimer = null;
         let pointerStartX = null;
+        let userPaused = false;
+        let pointerInside = false;
+        let focusInside = false;
 
-        function updateCarousel() {
+        function isDialogOpen() {
+            return Boolean(dialog?.open);
+        }
+
+        function shouldRotate() {
+            return !userPaused
+                && !pointerInside
+                && !focusInside
+                && !isDialogOpen()
+                && !reduceMotion.matches
+                && !document.hidden
+                && slides.length > 1;
+        }
+
+        function updatePauseButton() {
+            if (!toggleButton) return;
+
+            const textKey = userPaused ? 'featured.resumeRotation' : 'featured.pauseRotation';
+            const labelKey = userPaused ? 'featured.resumeRotationLabel' : 'featured.pauseRotationLabel';
+            const text = getTranslation(textKey);
+            const label = getTranslation(labelKey);
+
+            toggleButton.textContent = text;
+            toggleButton.setAttribute('aria-label', label);
+            toggleButton.classList.toggle('is-paused', userPaused);
+        }
+
+        function announceCurrentSlide() {
+            if (!statusRegion) return;
+
+            const activeSlide = slides[activeIndex];
+            const slideLabel = activeSlide?.getAttribute('aria-label') || '';
+            const title = activeSlide?.querySelector('h3')?.textContent?.trim() || '';
+            statusRegion.textContent = title ? `${slideLabel}: ${title}` : slideLabel;
+        }
+
+        function updateCarousel(options = {}) {
             if (!track || slides.length === 0) return;
+
+            const { userInitiated = false } = options;
 
             track.style.transform = `translateX(-${activeIndex * 100}%)`;
 
@@ -540,11 +595,17 @@
             dots.forEach((dot, index) => {
                 const isActive = index === activeIndex;
                 dot.classList.toggle('is-active', isActive);
-                dot.setAttribute('aria-selected', String(isActive));
+                if (isActive) dot.setAttribute('aria-current', 'true');
+                else dot.removeAttribute('aria-current');
             });
 
             if (currentCounter) currentCounter.textContent = String(activeIndex + 1).padStart(2, '0');
             if (progress) progress.style.transform = `translateX(${activeIndex * 100}%)`;
+
+            if (statusRegion) {
+                if (userInitiated) announceCurrentSlide();
+                else statusRegion.textContent = '';
+            }
         }
 
         function stopRotation() {
@@ -555,34 +616,60 @@
         }
 
         function startRotation() {
-            if (reduceMotion.matches || document.hidden || slides.length < 2 || rotationTimer !== null) return;
+            if (!shouldRotate() || rotationTimer !== null) return;
             rotationTimer = window.setInterval(() => {
                 activeIndex = (activeIndex + 1) % slides.length;
                 updateCarousel();
             }, rotationDelay);
         }
 
-        function restartRotation() {
-            stopRotation();
-            startRotation();
+        function syncRotation() {
+            if (shouldRotate()) startRotation();
+            else stopRotation();
         }
 
-        function goToSlide(index, restart = true) {
+        syncCarouselRotation = syncRotation;
+
+        function restartRotation() {
+            stopRotation();
+            syncRotation();
+        }
+
+        function goToSlide(index, options = {}) {
+            const { userInitiated = false, restart = true } = options;
             activeIndex = (index + slides.length) % slides.length;
-            updateCarousel();
+            updateCarousel({ userInitiated });
             if (restart) restartRotation();
         }
 
-        previousButton?.addEventListener('click', () => goToSlide(activeIndex - 1));
-        nextButton?.addEventListener('click', () => goToSlide(activeIndex + 1));
-        dots.forEach((dot) => dot.addEventListener('click', () => goToSlide(Number(dot.dataset.carouselGo))));
+        updateCarouselTranslations = updatePauseButton;
 
-        featuredCarousel.addEventListener('mouseenter', stopRotation);
-        featuredCarousel.addEventListener('mouseleave', startRotation);
-        featuredCarousel.addEventListener('focusin', stopRotation);
+        previousButton?.addEventListener('click', () => goToSlide(activeIndex - 1, { userInitiated: true }));
+        nextButton?.addEventListener('click', () => goToSlide(activeIndex + 1, { userInitiated: true }));
+        dots.forEach((dot) => dot.addEventListener('click', () => goToSlide(Number(dot.dataset.carouselGo), { userInitiated: true })));
+
+        toggleButton?.addEventListener('click', () => {
+            userPaused = !userPaused;
+            updatePauseButton();
+            syncRotation();
+        });
+
+        featuredCarousel.addEventListener('mouseenter', () => {
+            pointerInside = true;
+            syncRotation();
+        });
+        featuredCarousel.addEventListener('mouseleave', () => {
+            pointerInside = false;
+            syncRotation();
+        });
+        featuredCarousel.addEventListener('focusin', () => {
+            focusInside = true;
+            syncRotation();
+        });
         featuredCarousel.addEventListener('focusout', () => {
             window.setTimeout(() => {
-                if (!featuredCarousel.contains(document.activeElement)) startRotation();
+                focusInside = featuredCarousel.contains(document.activeElement);
+                syncRotation();
             }, 0);
         });
 
@@ -596,29 +683,27 @@
             pointerStartX = null;
 
             if (Math.abs(distance) < 45) return;
-            goToSlide(distance > 0 ? activeIndex - 1 : activeIndex + 1);
+            goToSlide(distance > 0 ? activeIndex - 1 : activeIndex + 1, { userInitiated: true });
         });
 
         viewport?.addEventListener('pointercancel', () => {
             pointerStartX = null;
         });
 
-        document.addEventListener('visibilitychange', () => {
-            if (document.hidden) stopRotation();
-            else startRotation();
-        });
+        document.addEventListener('visibilitychange', syncRotation);
 
-        reduceMotion.addEventListener?.('change', () => {
-            if (reduceMotion.matches) stopRotation();
-            else startRotation();
-        });
+        if (typeof reduceMotion.addEventListener === 'function') {
+            reduceMotion.addEventListener('change', syncRotation);
+        } else if (typeof reduceMotion.addListener === 'function') {
+            reduceMotion.addListener(syncRotation);
+        }
 
+        dialog?.addEventListener('close', syncRotation);
+
+        updatePauseButton();
         updateCarousel();
-        startRotation();
+        syncRotation();
     }
-
-    const dialog = document.querySelector('[data-entry-dialog]');
-    const dialogClose = document.querySelector('[data-dialog-close]');
 
     function populateDialog(entryId) {
         const data = entryData[currentLanguage]?.[entryId] || entryData.en[entryId];
@@ -641,12 +726,31 @@
             populateDialog(button.dataset.entryOpen);
             if (typeof dialog.showModal === 'function') dialog.showModal();
             else dialog.setAttribute('open', '');
+            syncCarouselRotation?.();
         });
     });
 
-    dialogClose?.addEventListener('click', () => dialog.close());
+    dialogClose?.addEventListener('click', () => {
+        if (!dialog) return;
+        if (typeof dialog.close === 'function') dialog.close();
+        else if (dialog.hasAttribute('open')) {
+            dialog.removeAttribute('open');
+            syncCarouselRotation?.();
+        }
+    });
+    dialog?.addEventListener('cancel', () => {
+        window.setTimeout(() => {
+            syncCarouselRotation?.();
+        }, 0);
+    });
     dialog?.addEventListener('click', (event) => {
-        if (event.target === dialog) dialog.close();
+        if (event.target !== dialog) return;
+
+        if (typeof dialog.close === 'function') dialog.close();
+        else if (dialog.hasAttribute('open')) {
+            dialog.removeAttribute('open');
+            syncCarouselRotation?.();
+        }
     });
 
     const revealElements = Array.from(document.querySelectorAll('[data-reveal]'));

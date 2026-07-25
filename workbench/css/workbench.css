@@ -384,7 +384,30 @@ button { color: inherit; }
 .carousel-dots { display: flex; align-items: center; gap: 0.45rem; }
 .carousel-dot { width: 0.55rem; aspect-ratio: 1; padding: 0; border: 1px solid rgba(174, 183, 194, 0.38); border-radius: 50%; background: transparent; cursor: pointer; transition: width var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast); }
 .carousel-dot:hover, .carousel-dot.is-active { width: 1.6rem; border-color: var(--color-accent); border-radius: 999px; background: var(--color-accent); }
-.carousel-buttons { display: flex; align-items: center; gap: 0.55rem; }
+.carousel-buttons { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 0.55rem; }
+.carousel-toggle {
+    min-height: 2.7rem;
+    padding: 0.5rem 0.95rem;
+    border: 1px solid rgba(174, 183, 194, 0.17);
+    border-radius: 999px;
+    background: rgba(17, 20, 24, 0.66);
+    color: var(--color-text);
+    cursor: pointer;
+    font: 700 0.64rem/1.2 var(--font-sans);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    transition: border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
+}
+.carousel-toggle:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    transform: translateY(-2px);
+}
+.carousel-toggle.is-paused {
+    border-color: rgba(79, 140, 255, 0.42);
+    background: rgba(79, 140, 255, 0.12);
+    color: var(--color-accent);
+}
 .carousel-button { width: 2.7rem; aspect-ratio: 1; border: 1px solid rgba(174, 183, 194, 0.17); border-radius: 50%; background: rgba(17, 20, 24, 0.66); cursor: pointer; transition: border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast); }
 .carousel-button:hover { border-color: var(--color-accent); color: var(--color-accent); transform: translateY(-2px); }
 .carousel-counter { min-width: 4.5rem; color: var(--color-text-muted); font: 700 0.7rem/1 var(--font-mono); text-align: center; }
@@ -506,6 +529,8 @@ button { color: inherit; }
     .carousel-controls { grid-template-columns: 1fr auto; }
     .carousel-progress { grid-column: 1 / -1; }
     .carousel-dots { display: none; }
+    .carousel-buttons { justify-content: space-between; }
+    .carousel-toggle { flex: 1 1 100%; }
     .hero-index { grid-template-columns: repeat(2, 1fr); }
     .hero-index > span:nth-child(3) { border-left: 0; border-top: 1px solid rgba(174, 183, 194, 0.13); }
     .hero-index > span:nth-child(4) { border-top: 1px solid rgba(174, 183, 194, 0.13); }
