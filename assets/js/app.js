@@ -28,12 +28,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const documentExplorerLabel = document.querySelector('#document-explorer-label');
     const documentExplorerClose = document.querySelector('[data-document-close]');
     const documentOpenLinks = Array.from(document.querySelectorAll('[data-document-open]'));
+    const appRoot = document.querySelector('#app');
+    const skipLink = document.querySelector('.skip-link');
     const contactForms = Array.from(document.querySelectorAll('[data-contact-form]'));
     let lastScrollY = window.scrollY;
     let scrollDirectionStartY = window.scrollY;
     let scrollDirection = 'up';
     let activeSectionFrame = null;
     let lastFocusedElement = null;
+    let inertedBackgroundElements = [];
 
     const initializeOptionalModules = () => {
         if (typeof Theme !== 'undefined' && typeof Theme.init === 'function') {
@@ -52,6 +55,139 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     initializeOptionalModules();
+
+    const isFocusableCandidateVisible = (element) => {
+        if (!element || element.hidden || element.getAttribute('aria-hidden') === 'true') {
+            return false;
+        }
+
+        const styles = window.getComputedStyle(element);
+
+        if (styles.visibility === 'hidden' || styles.display === 'none') {
+            return false;
+        }
+
+        return element.getClientRects().length > 0;
+    };
+
+    const canReceiveFocus = (element) => (
+        !!element
+        && !element.hasAttribute('disabled')
+        && element.tabIndex !== -1
+        && isFocusableCandidateVisible(element)
+    );
+
+    const getDocumentExplorerFocusableElements = () => {
+        if (!documentExplorer) {
+            return [];
+        }
+
+        return Array.from(documentExplorer.querySelectorAll(
+            'button, [href], input, select, textarea, summary, [tabindex]:not([tabindex="-1"])'
+        )).filter(canReceiveFocus);
+    };
+
+    const setDocumentExplorerBackgroundInert = (shouldInert) => {
+        if (!appRoot) {
+            return;
+        }
+
+        if (shouldInert) {
+            inertedBackgroundElements = [];
+
+            [skipLink, ...Array.from(appRoot.children).filter((element) => element !== documentExplorer)]
+                .filter((element) => element && !element.inert)
+                .forEach((element) => {
+                    element.inert = true;
+                    inertedBackgroundElements.push(element);
+                });
+
+            return;
+        }
+
+        inertedBackgroundElements.forEach((element) => {
+            element.inert = false;
+        });
+
+        inertedBackgroundElements = [];
+    };
+
+    const focusDocumentExplorer = () => {
+        const focusableElements = getDocumentExplorerFocusableElements();
+        const preferredTarget = canReceiveFocus(documentExplorerClose)
+            ? documentExplorerClose
+            : focusableElements[0] || documentExplorer;
+
+        preferredTarget.focus();
+    };
+
+    const restoreDocumentExplorerFocus = () => {
+        const fallbackTarget = document.querySelector('[data-document-open]') || skipLink || document.querySelector('#main-content');
+        const focusTarget = canReceiveFocus(lastFocusedElement)
+            ? lastFocusedElement
+            : (canReceiveFocus(fallbackTarget) ? fallbackTarget : null);
+
+        if (focusTarget) {
+            focusTarget.focus();
+        }
+
+        lastFocusedElement = null;
+    };
+
+    const handleDocumentExplorerKeydown = (event) => {
+        if (!documentExplorer || documentExplorer.hidden) {
+            return;
+        }
+
+        if (event.key === 'Escape') {
+            event.preventDefault();
+            closeDocumentExplorer();
+            return;
+        }
+
+        if (event.key !== 'Tab') {
+            return;
+        }
+
+        const focusableElements = getDocumentExplorerFocusableElements();
+
+        if (focusableElements.length === 0) {
+            event.preventDefault();
+            documentExplorer.focus();
+            return;
+        }
+
+        const firstFocusableElement = focusableElements[0];
+        const lastFocusableElement = focusableElements[focusableElements.length - 1];
+        const activeElement = document.activeElement;
+
+        if (event.shiftKey) {
+            if (activeElement === firstFocusableElement || activeElement === documentExplorer) {
+                event.preventDefault();
+                lastFocusableElement.focus();
+            }
+
+            return;
+        }
+
+        if (activeElement === lastFocusableElement || activeElement === documentExplorer) {
+            event.preventDefault();
+            firstFocusableElement.focus();
+        }
+    };
+
+    const handleDocumentExplorerFocusIn = (event) => {
+        if (!documentExplorer || documentExplorer.hidden) {
+            return;
+        }
+
+        if (event.target === documentExplorerFrame) {
+            const focusableElements = getDocumentExplorerFocusableElements();
+            const fallbackTarget = focusableElements.find((element) => element !== documentExplorerFrame) || documentExplorer;
+
+            fallbackTarget.focus();
+        }
+    };
 
     contactForms.forEach((form) => {
         const status = form.querySelector('[data-contact-status]');
@@ -107,15 +243,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         documentExplorer.hidden = true;
         document.body.classList.remove('is-document-explorer-open');
+        setDocumentExplorerBackgroundInert(false);
 
         if (documentExplorerFrame) {
             documentExplorerFrame.removeAttribute('src');
         }
 
-        if (lastFocusedElement) {
-            lastFocusedElement.focus();
-            lastFocusedElement = null;
-        }
+        restoreDocumentExplorerFocus();
     };
 
     const openDocumentExplorer = (trigger) => {
@@ -145,14 +279,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         documentExplorer.hidden = false;
         document.body.classList.add('is-document-explorer-open');
+        setDocumentExplorerBackgroundInert(true);
 
         window.requestAnimationFrame(() => {
             documentExplorerFrame.src = `${documentUrl}#zoom=125`;
         });
 
-        if (documentExplorerClose) {
-            documentExplorerClose.focus();
-        }
+        focusDocumentExplorer();
     };
 
     documentOpenLinks.forEach((link) => {
@@ -172,6 +305,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 closeDocumentExplorer();
             }
         });
+
+        documentExplorer.addEventListener('keydown', handleDocumentExplorerKeydown);
+        documentExplorer.addEventListener('focusin', handleDocumentExplorerFocusIn);
     }
 
     document.addEventListener('keydown', (event) => {
