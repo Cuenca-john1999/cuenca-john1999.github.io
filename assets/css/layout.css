@@ -55,6 +55,34 @@ main,
     transition: opacity var(--transition-normal), transform var(--transition-normal);
 }
 
+.skip-link {
+    position: fixed;
+    z-index: 50;
+    top: var(--spacing-sm);
+    left: var(--spacing-sm);
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.5rem;
+    padding: 0.65rem 0.95rem;
+    border: 1px solid var(--color-accent);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-text);
+    color: var(--color-bg);
+    font: 700 0.76rem/1 var(--font-family-sans);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    transform: translateY(-140%);
+    transition: transform var(--transition-fast);
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+.skip-link:focus-visible {
+    transform: translateY(0);
+}
+
 .site-nav-link--workbench {
     margin-inline-end: auto;
     display: inline-flex;
@@ -1850,6 +1878,12 @@ body.is-document-explorer-open {
 @media (max-width: 640px) {
     :root {
         --layout-gutter: var(--spacing-lg);
+    }
+
+    .skip-link {
+        top: var(--spacing-xs);
+        left: var(--spacing-xs);
+        max-width: calc(100% - (2 * var(--spacing-xs)));
     }
 
     .document-explorer {

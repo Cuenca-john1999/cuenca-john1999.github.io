@@ -5,6 +5,9 @@
     "dark": "Oscuro",
     "light": "Claro"
   },
+  "accessibility": {
+    "skipToContent": "Saltar al contenido principal"
+  },
   "commonLabels": {
     "practiceDetails": "Detalles de las prácticas",
     "academicDetails": "Detalles académicos",

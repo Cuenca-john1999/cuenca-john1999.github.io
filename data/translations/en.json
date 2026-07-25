@@ -5,6 +5,9 @@
     "dark": "Dark",
     "light": "Light"
   },
+  "accessibility": {
+    "skipToContent": "Skip to main content"
+  },
   "commonLabels": {
     "practiceDetails": "Practice details",
     "academicDetails": "Academic details",

@@ -5,6 +5,9 @@
     "dark": "Dunkel",
     "light": "Hell"
   },
+  "accessibility": {
+    "skipToContent": "Zum Hauptinhalt springen"
+  },
   "commonLabels": {
     "practiceDetails": "Praxisdetails",
     "academicDetails": "Ausbildungsdetails",
