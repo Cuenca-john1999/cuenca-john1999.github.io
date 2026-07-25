@@ -8,7 +8,7 @@
  * - Cambio de idioma sin recargar la página
  * - Guarda preferencia en localStorage
  * - Detecta idioma del navegador
- * - Traduce elementos del DOM usando data-i18n
+ * - Traduce elementos del DOM usando data-i18n y atributos accesibles
  * 
  * Interfaz pública:
  * - Language.init() - Inicializar el módulo
@@ -28,6 +28,11 @@ const Language = (() => {
     const TRANSLATION_VERSION = '20260711-europass-felasa';
     const DEFAULT_LANGUAGE = 'es';
     const AVAILABLE_LANGUAGES = ['en', 'de', 'es'];
+    const TRANSLATABLE_ATTRIBUTES = {
+        i18nAriaLabel: 'aria-label',
+        i18nTitle: 'title',
+        i18nAlt: 'alt'
+    };
     
     let currentLanguage = DEFAULT_LANGUAGE;
     let translations = {};
@@ -92,7 +97,7 @@ const Language = (() => {
         const savedLanguage = getSavedLanguage();
         const documentLanguage = document.documentElement.lang.slice(0, 2).toLowerCase();
         const supportedDocumentLanguage = isSupportedLanguage(documentLanguage) ? documentLanguage : null;
-        const hasTranslatableContent = Boolean(document.querySelector('[data-i18n]'));
+        const hasTranslatableContent = Boolean(document.querySelector('[data-i18n], [data-i18n-html], [data-i18n-aria-label], [data-i18n-title], [data-i18n-alt]'));
 
         if (hasTranslatableContent && savedLanguage) {
             return savedLanguage;
@@ -116,20 +121,27 @@ const Language = (() => {
      * Traducir elemento del DOM
      */
     function translateElement(element) {
-        const key = element.dataset.i18n || element.dataset.i18nHtml;
+        const textKey = element.dataset.i18n || element.dataset.i18nHtml;
 
-        if (!key) {
-            return;
+        if (textKey) {
+            const value = translateKey(textKey);
+
+            if (element.dataset.i18nHtml) {
+                element.innerHTML = value;
+            } else {
+                element.textContent = value;
+            }
         }
 
-        const value = translateKey(key);
+        Object.entries(TRANSLATABLE_ATTRIBUTES).forEach(([datasetKey, attributeName]) => {
+            const attributeKey = element.dataset[datasetKey];
 
-        if (element.dataset.i18nHtml) {
-            element.innerHTML = value;
-            return;
-        }
+            if (!attributeKey) {
+                return;
+            }
 
-        element.textContent = value;
+            element.setAttribute(attributeName, translateKey(attributeKey));
+        });
     }
 
     /**
@@ -152,7 +164,7 @@ const Language = (() => {
      * Traducir todos los elementos de la página
      */
     function translatePage() {
-        document.querySelectorAll('[data-i18n], [data-i18n-html]').forEach(translateElement);
+        document.querySelectorAll('[data-i18n], [data-i18n-html], [data-i18n-aria-label], [data-i18n-title], [data-i18n-alt]').forEach(translateElement);
         console.log(`[LANGUAGE] Traduciendo página a: ${currentLanguage}`);
     }
 
