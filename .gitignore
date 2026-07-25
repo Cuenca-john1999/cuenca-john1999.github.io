@@ -7,6 +7,9 @@ yarn.lock
 .DS_Store
 Thumbs.db
 
+# Configuración local de asistentes (no publicar)
+.continue/
+
 # IDE
 .vscode/
 .idea/

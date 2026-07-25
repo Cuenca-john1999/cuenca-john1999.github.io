@@ -1,31 +1,74 @@
-# Jhon M. Cuenca | Scientific Portfolio
+# Jhon M. Cuenca Portfolio
 
-Professional portfolio website for **Jhon M. Cuenca**, Clinical & Biomedical Laboratory Technologist based in Berlin.
+Static website for the professional portfolio of Jhon M. Cuenca, focused on clinical and biomedical laboratory work.
 
-Live site: [https://cuenca-john1999.github.io/](https://cuenca-john1999.github.io/)
+Public site:
 
-## Overview
+- Professional profile: https://cuenca-john1999.github.io/
+- Workbench: https://cuenca-john1999.github.io/workbench/
 
-This portfolio presents laboratory training, practical experience, selected techniques, academic projects, references, and early-stage research concepts in biomedical science.
+## Purpose
 
-It is designed for recruiters, laboratories, clinical research teams, and scientific collaborators who need a concise view of:
+- Present the professional profile, experience and public professional documentation of Jhon M. Cuenca.
+- Maintain Workbench as a separate space for projects, notes and applied learning.
+- Communicate scientific content by clearly separating evidence, interpretation and hypotheses.
 
-- Clinical and biomedical laboratory background
-- Molecular biology, immunology, microbiology, virology, and analytical laboratory interests
-- Practical laboratory experience in Spain and Ireland
-- Selected techniques such as PCR, RNA extraction, ELISA, Western Blot, cell culture, CHNOS, COD, NIR/VISION, GLP workflows, and SOP drafting
-- Public CV download
-- Final project documentation on bacteriophage therapy
-- Original research concepts presented with scientific caution
+## Repository structure
 
-## Research Concepts
+Current repository paths:
 
-The research concept sections are included as **early-stage hypotheses** and professional portfolio material.
+- /index.html
+- /workbench/
+- /assets/css/
+- /assets/js/
+- /assets/images/
+- /assets/documents/
+- /assets/svg/
+- /data/translations/
+- /robots.txt
+- /sitemap.xml
 
-They are not presented as validated treatments, clinical results, or therapeutic recommendations. Concepts involving bacteriophages, chitosan, biofilms, and microplastics are framed as literature-informed ideas that would require in vitro validation, toxicity assessment, reproducible controls, and further experimental development.
+## Architecture
 
-## Authorship And Rights
+- Static website with no backend.
+- HTML, CSS and vanilla JavaScript.
+- Main portfolio translations are loaded from JSON files in /data/translations/ (EN/DE/ES).
+- Workbench translations are maintained internally in workbench/js/workbench.js (EN/DE/ES).
+- Static structure compatible with GitHub Pages.
+- The published site is available through the public URLs listed above.
 
-Portfolio content, original research concepts, and diagrams are authored by **Jhon M. Cuenca** unless otherwise stated.
+## Local preview
 
-Co-authored academic work is credited where shown. All rights reserved.
+From the project root:
+
+```bash
+python3 -m http.server 8000
+```
+
+Open in a browser:
+
+- http://localhost:8000/
+- http://localhost:8000/workbench/
+
+## Maintenance
+
+- Keep relative paths compatible with GitHub Pages.
+- When visible content is added or updated, update EN/DE/ES where applicable.
+- Check basic accessibility, mobile layout and browser console output before publishing.
+- Do not publish local assistant files: .continue/ must remain ignored by Git.
+- If new public pages are added, review robots.txt and sitemap.xml.
+- Do not include private data or unverified information.
+
+## Scientific scope
+
+Research notes and concepts are presented as literature-informed, exploratory or educational work where applicable. They are not presented as validated clinical results, demonstrated treatments or completed experimental findings unless explicitly supported by evidence. Hypotheses and proposed methods require appropriate experimental validation.
+
+## Authorship and AI assistance
+
+Jhon defines the concepts, requirements, professional content, information structure and product decisions for the portfolio.
+
+Technical implementation, research support and editorial work may be assisted by AI tools. The repository does not present Jhon as a professional software developer.
+
+## License
+
+No explicit software or content license is included in this repository. No permission for reuse should be inferred from the absence of a license.
