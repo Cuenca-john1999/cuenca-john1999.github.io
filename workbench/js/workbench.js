@@ -59,7 +59,7 @@
                 show1: 'Show entry 1', show2: 'Show entry 2', show3: 'Show entry 3',
                 slide1: 'Entry 1 of 3', slide2: 'Entry 2 of 3', slide3: 'Entry 3 of 3'
             },
-            categories: { project: 'Project', research: 'Research note' },
+            categories: { project: 'Project', research: 'Research note', laboratoryPractice: 'Laboratory Practice' },
             statuses: { development: 'In development', functional: 'Functional', completed: 'Completed', concept: 'Concept' },
             common: { contribution: 'Contribution', evidence: 'Current evidence', open: 'Open entry' },
             cards: {
@@ -164,6 +164,7 @@
             footer: { copyright: '© 2026 Jhon M. Cuenca. All rights reserved.', notice: 'JMC · Workbench documents selected projects, scientific notes and applied learning.', scientificNotice: 'Scientific notes distinguish published evidence, interpretation, hypotheses and limitations.' },
             dialog: {
                 problem: 'Problem or motivation', contribution: 'Real contribution', result: 'Result or evidence',
+                context: 'Context', technicalWork: 'Technical work / My role', technicalEvidence: 'Evidence & technical detail',
                 next: 'Limitations and next steps', resources: 'Documents and sources', navigationLabel: 'Project page navigation',
                 previous: 'Previous', nextEntry: 'Next', openOtherPage: 'Open this page',
                 openPage2: 'Open page 2', backToPage1: 'Back to page 1',
@@ -230,7 +231,7 @@
                 show1: 'Mostrar entrada 1', show2: 'Mostrar entrada 2', show3: 'Mostrar entrada 3',
                 slide1: 'Entrada 1 de 3', slide2: 'Entrada 2 de 3', slide3: 'Entrada 3 de 3'
             },
-            categories: { project: 'Proyecto', research: 'Nota de investigación' },
+            categories: { project: 'Proyecto', research: 'Nota de investigación', laboratoryPractice: 'Prácticas de laboratorio' },
             statuses: { development: 'En desarrollo', functional: 'Funcional', completed: 'Completado', concept: 'Concepto' },
             common: { contribution: 'Contribución', evidence: 'Evidencia actual', open: 'Abrir entrada' },
             cards: {
@@ -335,6 +336,7 @@
             footer: { copyright: '© 2026 Jhon M. Cuenca. Todos los derechos reservados.', notice: 'JMC · Workbench documenta proyectos seleccionados, notas científicas y aprendizaje aplicado.', scientificNotice: 'Las notas científicas distinguen evidencia publicada, interpretación, hipótesis y limitaciones.' },
             dialog: {
                 problem: 'Problema o motivación', contribution: 'Contribución real', result: 'Resultado o evidencia',
+                context: 'Contexto', technicalWork: 'Trabajo técnico / Mi papel', technicalEvidence: 'Evidencia y detalle técnico',
                 next: 'Limitaciones y próximos pasos', resources: 'Documentos y fuentes', navigationLabel: 'Navegación entre páginas del proyecto',
                 previous: 'Anterior', nextEntry: 'Siguiente', openOtherPage: 'Abrir esta página',
                 openPage2: 'Abrir página 2', backToPage1: 'Volver a página 1',
@@ -401,7 +403,7 @@
                 show1: 'Eintrag 1 anzeigen', show2: 'Eintrag 2 anzeigen', show3: 'Eintrag 3 anzeigen',
                 slide1: 'Eintrag 1 von 3', slide2: 'Eintrag 2 von 3', slide3: 'Eintrag 3 von 3'
             },
-            categories: { project: 'Projekt', research: 'Forschungsnotiz' },
+            categories: { project: 'Projekt', research: 'Forschungsnotiz', laboratoryPractice: 'Laborpraktikum' },
             statuses: { development: 'In Entwicklung', functional: 'Funktionsfähig', completed: 'Abgeschlossen', concept: 'Konzept' },
             common: { contribution: 'Beitrag', evidence: 'Aktueller Nachweis', open: 'Eintrag öffnen' },
             cards: {
@@ -506,6 +508,7 @@
             footer: { copyright: '© 2026 Jhon M. Cuenca. Alle Rechte vorbehalten.', notice: 'JMC · Workbench dokumentiert ausgewählte Projekte, wissenschaftliche Notizen und angewandtes Lernen.', scientificNotice: 'Wissenschaftliche Notizen unterscheiden publizierte Evidenz, Interpretation, Hypothesen und Grenzen.' },
             dialog: {
                 problem: 'Problem oder Motivation', contribution: 'Tatsächlicher Beitrag', result: 'Ergebnis oder Nachweis',
+                context: 'Kontext', technicalWork: 'Technische Arbeit / Meine Rolle', technicalEvidence: 'Nachweise & technische Details',
                 next: 'Grenzen und nächste Schritte', resources: 'Dokumente und Quellen', navigationLabel: 'Navigation zwischen Projektseiten',
                 previous: 'Zurück', nextEntry: 'Weiter', openOtherPage: 'Diese Seite öffnen',
                 openPage2: 'Seite 2 öffnen', backToPage1: 'Zurück zu Seite 1',
@@ -629,21 +632,19 @@
                 ]
             },
             laprincesa: {
-                category: 'Technical & learning · Milestone', status: 'Completed', title: 'Clinical & Biomedical Laboratory Practice · La Princesa',
+                category: 'Laboratory Practice', status: 'Completed', title: 'Clinical & Biomedical Laboratory Practice · La Princesa',
                 summary: 'Three-month research-laboratory placement in Madrid integrating clinical sample workflows with molecular and immunology techniques.',
-                problem: 'Early laboratory training often fragments molecular procedures, immunology tasks and sample logistics across separate modules without full workflow continuity.',
-                contribution: 'Applied and documented day-to-day execution across cell-culture support, sample processing, molecular assays, immunological methods and protocol-aligned laboratory routines.',
-                result: 'Documented practical experience in cytokine-stimulated and adherent cell-culture workflows, Buffy Coat handling, CD4/CD14 isolation, human and murine sample processing, RNA extraction, PCR, electrophoresis, transgenic-mouse genotyping, ELISA, Western blot preparation, media preparation, immunohistochemistry and immunofluorescence.',
-                next: 'Continue reinforcing reproducibility, assay interpretation and quality-control rigor while transitioning from supervised execution to higher autonomous responsibility in research-laboratory contexts.',
+                context: '370-hour FCT placement in 2025 at Fundación para la Investigación Biomédica del Hospital Universitario de La Princesa in Madrid, within a research environment handling human and animal samples.',
+                technicalWork: 'Supported day-to-day cell-culture, sample-processing, molecular-biology and immunology workflows under laboratory protocols, together with scientific-database work, material and inventory management, and development of a bilingual scientific website for the research group. The supervised role strengthened reproducibility, assay interpretation and quality-control practice while building greater autonomy.',
+                technicalEvidence: 'Documented scope includes cytokine-stimulated and adherent cell cultures, including HaCaT; media preparation, passaging and freezing; Buffy Coat handling and CD4/CD14 isolation; human samples in psoriasis, dermatitis and hidradenitis suppurativa contexts; animal samples and murine lymphoid organs; RNA extraction, PCR, electrophoresis and transgenic-mouse genotyping; ELISA; Western blot preparation, transfer and blocking; immunohistochemistry; and immunofluorescence. An existing professional reference supports the placement, protocol work and laboratory-material responsibilities.',
                 disclosure: 'Scope note: this is documented laboratory placement experience, not an independent clinical claim or therapeutic study.'
             },
             celignis: {
-                category: 'Technical & learning · Milestone', status: 'Completed', title: 'Analytical & Biomass Laboratory Practice · Celignis',
+                category: 'Laboratory Practice', status: 'Completed', title: 'Analytical & Biomass Laboratory Practice · Celignis',
                 summary: 'Erasmus+ placement in Limerick focused on analytical biomass testing, GLP routines and technical documentation.',
-                problem: 'Analytical laboratory onboarding requires rapid adaptation to instrument-specific methods, traceability standards and quality-control workflows under production timing.',
-                contribution: 'Executed and supported analytical workflows under supervision, produced SOP-oriented documentation, and contributed to operational continuity including intern handover.',
-                result: 'Hands-on work included moisture, ash, volatile matter, CHNOS, ash melting, BMP/biogas, COD, ammonia and NIR/VISION workflows; operation of CHNOS elemental analyser, TGA Q500, CARBOLITE furnaces, BMP units and Biogas 5000; GLP and internal statistical quality controls; calibration, troubleshooting, maintenance, sample preparation and technical documentation.',
-                next: 'Build on this base with deeper method validation, uncertainty analysis and stronger cross-method interpretation for advanced analytical-laboratory roles.',
+                context: 'Erasmus+ placement from 03/2023 to 05/2023 at Celignis Biomass Analysis Laboratory in Limerick, Ireland, supporting analytical work for clients and in the context of SteamBioAfrica and BIO4Africa.',
+                technicalWork: 'Prepared samples and supported analytical workflows under GLP-based routines; operated, calibrated, troubleshot, maintained and monitored laboratory equipment; contributed to SOPs, technical documentation and traceability; progressively assumed responsibility for volatile-matter analysis; and trained and supervised replacement interns during handover.',
+                technicalEvidence: 'Documented scope includes moisture, ash, volatile matter, CHNOS elemental analysis, ash melting, BMP and biogas, COD, ammonia, NIR/VISION and vacuum filtration; operation of a CHNOS analyser, TGA Q500, CARBOLITE furnaces, BMP units and Biogas 5000; internal statistical quality controls; and Thermal Excel records, batches, labels and result traceability. An existing professional reference supports the placement and its operational responsibilities. This foundation supports continued development in method validation, uncertainty analysis and cross-method interpretation.',
                 disclosure: 'Scope note: this entry documents supervised analytical placement practice and validated routine participation.'
             }
         },
@@ -754,21 +755,19 @@
                 ]
             },
             laprincesa: {
-                category: 'Técnica y aprendizaje · Hito', status: 'Completado', title: 'Prácticas en Laboratorio Clínico y Biomédico · La Princesa',
+                category: 'Prácticas de laboratorio', status: 'Completado', title: 'Prácticas en Laboratorio Clínico y Biomédico · La Princesa',
                 summary: 'Prácticas de tres meses en laboratorio de investigación en Madrid, integrando trabajo con muestras clínicas y técnicas moleculares e inmunológicas.',
-                problem: 'La formación inicial de laboratorio suele fragmentar procedimientos moleculares, tareas de inmunología y logística de muestras sin continuidad completa de flujo.',
-                contribution: 'Ejecución y documentación aplicada de rutinas de cultivo celular, procesamiento de muestras, ensayos moleculares, técnicas inmunológicas y trabajo alineado con protocolos de laboratorio.',
-                result: 'Experiencia práctica documentada en cultivo celular estimulado por citocinas y de líneas adherentes, manejo de Buffy Coat, aislamiento CD4/CD14, procesamiento de muestras humanas y murinas, extracción de ARN, PCR, electroforesis, genotipado de ratones transgénicos, ELISA, preparación de Western blot, preparación de medios, inmunohistoquímica e inmunofluorescencia.',
-                next: 'Reforzar reproducibilidad, interpretación de ensayos y control de calidad para evolucionar de ejecución supervisada a mayor autonomía en contextos de investigación.',
+                context: 'Prácticas FCT de 370 horas en 2025 en la Fundación para la Investigación Biomédica del Hospital Universitario de La Princesa, Madrid, dentro de un entorno de investigación con muestras humanas y animales.',
+                technicalWork: 'Apoyo diario en flujos de cultivo celular, procesamiento de muestras, biología molecular e inmunología siguiendo protocolos de laboratorio, junto con consulta de bases de datos científicas, gestión de material e inventario y desarrollo de una web científica bilingüe para el grupo de investigación. El trabajo supervisado reforzó la reproducibilidad, la interpretación de ensayos y el control de calidad mientras aumentaba la autonomía.',
+                technicalEvidence: 'El alcance documentado incluye cultivos celulares estimulados por citocinas y líneas adherentes, incluidas HaCaT; preparación de medios, pases y congelación; manejo de Buffy Coat y aislamiento CD4/CD14; muestras humanas en contextos de psoriasis, dermatitis e hidradenitis supurativa; muestras animales y órganos linfoides murinos; extracción de ARN, PCR, electroforesis y genotipado de ratones transgénicos; ELISA; preparación de Western blot, transferencia y bloqueo; inmunohistoquímica e inmunofluorescencia. Existe una referencia profesional que respalda las prácticas, el trabajo con protocolos y las responsabilidades sobre material de laboratorio.',
                 disclosure: 'Nota de alcance: se documenta experiencia de prácticas de laboratorio, no una afirmación clínica independiente ni un estudio terapéutico.'
             },
             celignis: {
-                category: 'Técnica y aprendizaje · Hito', status: 'Completado', title: 'Prácticas en Laboratorio Analítico y de Biomasa · Celignis',
+                category: 'Prácticas de laboratorio', status: 'Completado', title: 'Prácticas en Laboratorio Analítico y de Biomasa · Celignis',
                 summary: 'Prácticas Erasmus+ en Limerick orientadas a ensayos analíticos de biomasa, rutinas GLP y documentación técnica.',
-                problem: 'La incorporación a laboratorio analítico exige adaptación rápida a métodos instrumentales, estándares de trazabilidad y flujos de control de calidad con ritmo operativo real.',
-                contribution: 'Ejecución y apoyo de flujos analíticos bajo supervisión, elaboración de documentación orientada a SOP y contribución a la continuidad operativa incluyendo traspaso a nuevos becarios.',
-                result: 'Trabajo práctico en humedad, cenizas, materia volátil, CHNOS, fusión de cenizas, BMP/biogás, DQO, amonio y flujos NIR/VISION; operación de analizador elemental CHNOS, TGA Q500, hornos CARBOLITE, unidades BMP y Biogas 5000; GLP y controles estadísticos internos de calidad; calibración, troubleshooting, mantenimiento, preparación de muestras y documentación técnica.',
-                next: 'Consolidar esta base con mayor validación de métodos, análisis de incertidumbre e interpretación cruzada de técnicas para roles analíticos de mayor nivel.',
+                context: 'Prácticas Erasmus+ de 03/2023 a 05/2023 en Celignis Biomass Analysis Laboratory, Limerick, Irlanda, apoyando trabajo analítico para clientes y en el contexto de SteamBioAfrica y BIO4Africa.',
+                technicalWork: 'Preparación de muestras y apoyo en flujos analíticos bajo rutinas basadas en GLP; operación, calibración, troubleshooting, mantenimiento y monitorización de equipos; contribución a SOPs, documentación técnica y trazabilidad; responsabilidad progresiva sobre el análisis de materia volátil; y formación y supervisión de los becarios que relevaron el puesto.',
+                technicalEvidence: 'El alcance documentado incluye humedad, cenizas, materia volátil, análisis elemental CHNOS, fusión de cenizas, BMP y biogás, DQO, amonio, NIR/VISION y filtración al vacío; operación de analizador CHNOS, TGA Q500, hornos CARBOLITE, unidades BMP y Biogas 5000; controles estadísticos internos de calidad; y registros en Thermal Excel, lotes, etiquetas y trazabilidad de resultados. Existe una referencia profesional que respalda las prácticas y sus responsabilidades operativas. Esta base permite seguir avanzando en validación de métodos, análisis de incertidumbre e interpretación cruzada de técnicas.',
                 disclosure: 'Nota de alcance: esta entrada documenta práctica analítica supervisada y participación en rutinas validadas.'
             }
         },
@@ -879,21 +878,19 @@
                 ]
             },
             laprincesa: {
-                category: 'Technik & Lernen · Meilenstein', status: 'Abgeschlossen', title: 'Praktikum im klinisch-biomedizinischen Labor · La Princesa',
+                category: 'Laborpraktikum', status: 'Abgeschlossen', title: 'Praktikum im klinisch-biomedizinischen Labor · La Princesa',
                 summary: 'Dreimonatiges Praktikum in einem Forschungslabor in Madrid mit Verbindung von klinischen Probenabläufen sowie molekularen und immunologischen Techniken.',
-                problem: 'Frühe Laborausbildung trennt molekulare Verfahren, immunologische Aufgaben und Probenlogistik häufig, statt sie in einem durchgängigen Workflow zu verbinden.',
-                contribution: 'Angewandte Durchführung und Dokumentation täglicher Routinen in Zellkultur, Probenverarbeitung, molekularen Assays, immunologischen Verfahren und protokollbasierten Laborabläufen.',
-                result: 'Dokumentierte Praxis in cytokine-stimulated und adhärenten Zellkultur-Workflows, Buffy-Coat-Handhabung, CD4/CD14-Isolierung, Verarbeitung humaner und muriner Proben, RNA-Extraktion, PCR, Elektrophorese, Genotypisierung transgener Mäuse, ELISA, Western-Blot-Vorbereitung, Medienvorbereitung, Immunhistochemie und Immunfluoreszenz.',
-                next: 'Weiterer Ausbau von Reproduzierbarkeit, Assay-Interpretation und Qualitätskontrolle, um von überwachter Ausführung zu höherer Eigenverantwortung im Forschungslabor zu gelangen.',
+                context: 'FCT-Praktikum mit 370 Stunden im Jahr 2025 bei der Fundación para la Investigación Biomédica del Hospital Universitario de La Princesa in Madrid, in einem Forschungsumfeld mit humanen und tierischen Proben.',
+                technicalWork: 'Mitarbeit bei täglichen Abläufen in Zellkultur, Probenverarbeitung, Molekularbiologie und Immunologie nach Laborprotokollen sowie Arbeit mit wissenschaftlichen Datenbanken, Material- und Bestandsverwaltung und Entwicklung einer zweisprachigen wissenschaftlichen Website für die Forschungsgruppe. Die angeleitete Tätigkeit stärkte Reproduzierbarkeit, Assay-Interpretation und Qualitätskontrolle bei wachsender Eigenständigkeit.',
+                technicalEvidence: 'Der dokumentierte Umfang umfasst mit Zytokinen stimulierte und adhärente Zellkulturen einschließlich HaCaT; Medienvorbereitung, Passagieren und Einfrieren; Buffy-Coat-Verarbeitung und CD4/CD14-Isolierung; humane Proben im Kontext von Psoriasis, Dermatitis und Hidradenitis suppurativa; tierische Proben und murine lymphatische Organe; RNA-Extraktion, PCR, Elektrophorese und Genotypisierung transgener Mäuse; ELISA; Western-Blot-Vorbereitung, Transfer und Blocking; Immunhistochemie und Immunfluoreszenz. Eine vorhandene berufliche Referenz bestätigt das Praktikum, die Protokollarbeit und die Verantwortung für Labormaterial.',
                 disclosure: 'Hinweis zum Umfang: dokumentierte Laborpraxis, kein eigenständiger klinischer Wirksamkeitsnachweis und keine therapeutische Studie.'
             },
             celignis: {
-                category: 'Technik & Lernen · Meilenstein', status: 'Abgeschlossen', title: 'Praktikum im analytischen Biomasse-Labor · Celignis',
+                category: 'Laborpraktikum', status: 'Abgeschlossen', title: 'Praktikum im analytischen Biomasse-Labor · Celignis',
                 summary: 'Erasmus+-Praktikum in Limerick mit Fokus auf analytische Biomasseprüfungen, GLP-Routinen und technische Dokumentation.',
-                problem: 'Der Einstieg in analytische Labore erfordert schnelle Anpassung an instrumentenspezifische Methoden, Rückverfolgbarkeit und Qualitätskontroll-Workflows unter operativem Zeitdruck.',
-                contribution: 'Durchführung und Unterstützung analytischer Workflows unter Anleitung, SOP-orientierte Dokumentation und Beitrag zur operativen Kontinuität einschließlich Einarbeitung nachfolgender Praktikantinnen und Praktikanten.',
-                result: 'Praktische Arbeit in Feuchte, Asche, flüchtige Bestandteile, CHNOS, Ascheschmelze, BMP/Biogas, CSB, Ammonium und NIR/VISION-Workflows; Bedienung von CHNOS-Elementaranalysator, TGA Q500, CARBOLITE-Öfen, BMP-Einheiten und Biogas 5000; GLP und interne statistische Qualitätskontrollen; Kalibrierung, Troubleshooting, Wartung, Probenvorbereitung und technische Dokumentation.',
-                next: 'Diese Grundlage mit vertiefter Methodenvalidierung, Unsicherheitsanalyse und stärkerer methodenübergreifender Interpretation für fortgeschrittene analytische Rollen ausbauen.',
+                context: 'Erasmus+-Praktikum von 03/2023 bis 05/2023 bei Celignis Biomass Analysis Laboratory in Limerick, Irland, mit Unterstützung analytischer Kundenarbeit sowie im Kontext von SteamBioAfrica und BIO4Africa.',
+                technicalWork: 'Probenvorbereitung und Unterstützung analytischer Abläufe nach GLP-orientierten Routinen; Bedienung, Kalibrierung, Fehleranalyse, Wartung und Überwachung von Geräten; Mitwirkung an SOPs, technischer Dokumentation und Rückverfolgbarkeit; schrittweise Verantwortung für die Analyse flüchtiger Bestandteile; sowie Einarbeitung und Betreuung der nachfolgenden Praktikantinnen und Praktikanten.',
+                technicalEvidence: 'Der dokumentierte Umfang umfasst Feuchte, Asche, flüchtige Bestandteile, CHNOS-Elementaranalyse, Ascheschmelze, BMP und Biogas, CSB, Ammonium, NIR/VISION und Vakuumfiltration; Bedienung von CHNOS-Analysator, TGA Q500, CARBOLITE-Öfen, BMP-Einheiten und Biogas 5000; interne statistische Qualitätskontrollen; sowie Thermal-Excel-Datensätze, Chargen, Etiketten und Ergebnisrückverfolgbarkeit. Eine vorhandene berufliche Referenz bestätigt das Praktikum und seine operativen Verantwortlichkeiten. Diese Grundlage unterstützt die weitere Entwicklung in Methodenvalidierung, Unsicherheitsanalyse und methodenübergreifender Interpretation.',
                 disclosure: 'Hinweis zum Umfang: dieser Eintrag dokumentiert überwachte analytische Praxis und Beteiligung an validierten Routinen.'
             }
         }
@@ -1372,6 +1369,19 @@
     function renderOverviewPage(container, entryId, data) {
         const details = Array.isArray(data.details) ? data.details : [];
         appendIntroduction(container, data);
+
+        if (entryId === 'laprincesa' || entryId === 'celignis') {
+            appendOverviewBand(container, [
+                { title: getTranslation('dialog.context'), body: data.context },
+                { title: getTranslation('dialog.technicalWork'), body: data.technicalWork },
+                { title: getTranslation('dialog.technicalEvidence'), body: data.technicalEvidence }
+            ]);
+
+            const body = createDialogElement('section', 'dialog-page-body');
+            appendDisclosure(body, data.disclosure);
+            container.append(body);
+            return;
+        }
 
         if (entryId === 'chitosan') {
             appendOverviewBand(container, [
