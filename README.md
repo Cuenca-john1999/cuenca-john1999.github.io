@@ -63,12 +63,6 @@ Open in a browser:
 
 Research notes and concepts are presented as literature-informed, exploratory or educational work where applicable. They are not presented as validated clinical results, demonstrated treatments or completed experimental findings unless explicitly supported by evidence. Hypotheses and proposed methods require appropriate experimental validation.
 
-## Authorship and AI assistance
-
-Jhon defines the concepts, requirements, professional content, information structure and product decisions for the portfolio.
-
-AI is used as a supporting tool for technical implementation, content organisation and editorial review of the portfolio. Jhon defines the objectives, requirements, content, product decisions, testing and final approval.
-
 ## License
 
 No explicit software or content license is included in this repository. No permission for reuse should be inferred from the absence of a license.
