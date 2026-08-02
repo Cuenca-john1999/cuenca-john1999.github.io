@@ -25,9 +25,14 @@
 
 const Language = (() => {
     const STORAGE_KEY = 'portfolio-language';
-    const TRANSLATION_VERSION = '20260802-layout-references-relocation';
+    const TRANSLATION_VERSION = '20260802-cv-language-docs-update';
     const DEFAULT_LANGUAGE = 'es';
     const AVAILABLE_LANGUAGES = ['en', 'de', 'es'];
+    const CV_BY_LANGUAGE = {
+        en: 'assets/documents/Jhon_M_Cuenca_CV_EN.pdf',
+        de: 'assets/documents/Jhon_M_Cuenca_CV_DE.pdf',
+        es: 'assets/documents/Jhon_M_Cuenca_CV_ES.pdf'
+    };
     const TRANSLATABLE_ATTRIBUTES = {
         i18nAriaLabel: 'aria-label',
         i18nTitle: 'title',
@@ -169,6 +174,17 @@ const Language = (() => {
     }
 
     /**
+     * Sincronizar enlaces de CV con el idioma activo
+     */
+    function updateCvLinks() {
+        const cvPath = CV_BY_LANGUAGE[currentLanguage] || CV_BY_LANGUAGE[DEFAULT_LANGUAGE];
+
+        document.querySelectorAll('[data-cv-link]').forEach((link) => {
+            link.setAttribute('href', cvPath);
+        });
+    }
+
+    /**
      * Actualizar estado visual y accesible de los controles de idioma
      */
     function updateLanguageControls() {
@@ -205,6 +221,7 @@ const Language = (() => {
             document.documentElement.lang = currentLanguage;
             await loadTranslations(currentLanguage);
             translatePage();
+            updateCvLinks();
             setupLanguageControls.call(this);
             updateLanguageControls();
         },
@@ -222,6 +239,7 @@ const Language = (() => {
             document.documentElement.lang = currentLanguage;
             await loadTranslations(currentLanguage);
             translatePage();
+            updateCvLinks();
             saveLanguagePreference(currentLanguage);
             updateLanguageControls();
         },

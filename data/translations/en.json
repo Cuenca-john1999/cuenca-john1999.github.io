@@ -96,10 +96,10 @@
     "education": {
       "kicker": "Education",
       "title": "Strong academic results with a clinical, analytical and biomedical foundation.",
-      "body": "I completed Spanish vocational training with distinction: Técnico Superior en Laboratorio Clínico y Biomédico and Técnico en Operaciones de Laboratorio, with final grades of 9.3/10 and 8.69/10.",
+      "body": "I completed Spanish vocational training with distinction: Técnico Superior en Laboratorio Clínico y Biomédico and Técnico en Operaciones de Laboratorio, with final grades of 9.25/10 and 8.69/10.",
       "pointClinical": "Técnico Superior en Laboratorio Clínico y Biomédico · CEAC FP Oficial · 2025",
       "pointOperations": "Técnico en Operaciones de Laboratorio · IES Virgen de la Paloma · 2023",
-      "pointAdditional": "FELASA A+B+C · Healthcare Management · Risk Prevention"
+      "pointAdditional": "Animal Experimentation - Functions A+B+C · Healthcare Management · Risk Prevention"
     },
     "skills": {
       "kicker": "Skills",
@@ -212,8 +212,9 @@
   },
   "educationCards": {
     "clinical": {
+      "grade": "9.25/10",
       "title": "Técnico Superior en Laboratorio Clínico y Biomédico",
-      "body": "Spanish qualification: Técnico Superior en Laboratorio Clínico y Biomédico (translated as Higher Technician in Clinical and Biomedical Laboratory), CEAC FP Oficial, 2023-2025. Previously accepted by a German university for study access/admission; this is academic context and not professional recognition in Germany. Final average grade of 9.3/10 and honours distinctions in General Laboratory Techniques, Immunodiagnostic Techniques and Hematological Analysis Techniques.",
+      "body": "Spanish qualification: Técnico Superior en Laboratorio Clínico y Biomédico (translated as Higher Technician in Clinical and Biomedical Laboratory), CEAC FP Oficial, 2023-2025. Previously accepted by a German university for study access/admission; this is academic context and not professional recognition in Germany. Official final grade: 9.25/10, with honours distinctions in General Laboratory Techniques, Immunodiagnostic Techniques and Hematological Analysis Techniques.",
       "finalProject": "<strong>Bacteriophage Therapy: Rediscovering an Innovative Therapy.</strong> Co-authored with Luis Gonzalo Legua Pérez and published with co-author permission.<br><br><strong>Original interdisciplinary hypothesis:</strong> exploring whether phage specificity and chitosan-based adsorption could be combined in future laboratory models to study microplastic-associated biofilms, without claiming clinical efficacy.",
       "contribution": "My contribution: literature review, scientific writing, project structure, conceptual development and defense preparation, including the future-oriented connection between bacteriophage therapy, chitosan and microplastic-related biomedical questions.",
       "exploreProject": "Explore project",
@@ -221,12 +222,14 @@
       "reference": "Tamara Díaz Jáuregui, biology teacher at CEAC FP Madrid, highlights technical skill, dedication, problem-solving, rapid learning, communication and responsibility."
     },
     "operations": {
+      "grade": "8.69/10",
       "title": "Técnico en Operaciones de Laboratorio",
       "body": "Spanish qualification: Técnico en Operaciones de Laboratorio (translated as Technician in Laboratory Operations), IES Virgen de la Paloma, 2021-2023. Strong grades in Applied Chemistry, Physicochemical Testing, Chemical Analysis Operations, Materials Testing and Technical English."
     },
     "additional": {
+      "badge": "Functions A+B+C",
       "title": "Certified Additional Training",
-      "body": "FELASA A+B+C animal experimentation training for basic functions A, B and C, including animal care, euthanasia and procedures according to ECC/566/2015. Additional certificates include Healthcare Centre Management and Basic Level Occupational Risk Prevention."
+      "body": "Animal Experimentation - Functions A+B+C (Order ECC/566/2015) · 70 h. Additional certificates include Healthcare Centre Management and Basic Level Occupational Risk Prevention."
     }
   },
   "europass": {
@@ -308,7 +311,7 @@
     "cv": {
       "kicker": "Core profile",
       "title": "Curriculum Vitae",
-      "body": "Professional summary, education, laboratory experience and contact information prepared for recruitment workflows.",
+      "body": "Public professional summary, education and laboratory experience prepared for recruitment workflows.",
       "cta": "Open CV"
     },
     "phage": {
@@ -345,7 +348,7 @@
     },
     "models": {
       "title": "Experimental Models",
-      "body": "FELASA A+B+C animal experimentation training covering animal care, euthanasia and procedures, with a responsible research mindset aligned with welfare and 3R principles."
+      "body": "Animal Experimentation - Functions A+B+C (Order ECC/566/2015) · 70 h, with a responsible research mindset aligned with welfare and 3R principles."
     },
     "organization": {
       "title": "Laboratory Organization",

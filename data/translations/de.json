@@ -96,10 +96,10 @@
     "education": {
       "kicker": "Ausbildung",
       "title": "Starke akademische Ergebnisse mit klinischer, analytischer und biomedizinischer Grundlage.",
-      "body": "Ich habe eine spanische Berufsausbildung mit Auszeichnung abgeschlossen: Técnico Superior en Laboratorio Clínico y Biomédico und Técnico en Operaciones de Laboratorio, mit Abschlussnoten von 9,3/10 und 8,69/10.",
+      "body": "Ich habe eine spanische Berufsausbildung mit Auszeichnung abgeschlossen: Técnico Superior en Laboratorio Clínico y Biomédico und Técnico en Operaciones de Laboratorio, mit Abschlussnoten von 9,25/10 und 8,69/10.",
       "pointClinical": "Técnico Superior en Laboratorio Clínico y Biomédico · CEAC FP Oficial · 2025",
       "pointOperations": "Técnico en Operaciones de Laboratorio · IES Virgen de la Paloma · 2023",
-      "pointAdditional": "FELASA A+B+C · Gesundheitsmanagement · Arbeitsschutz"
+      "pointAdditional": "Tierexperimentelle Funktionen A+B+C · Gesundheitsmanagement · Arbeitsschutz"
     },
     "skills": {
       "kicker": "Kompetenzen",
@@ -212,8 +212,9 @@
   },
   "educationCards": {
     "clinical": {
+      "grade": "9,25/10",
       "title": "Técnico Superior en Laboratorio Clínico y Biomédico",
-      "body": "Spanische Qualifikation: Técnico Superior en Laboratorio Clínico y Biomédico (englische Übersetzung: Higher Technician in Clinical and Biomedical Laboratory), CEAC FP Oficial, 2023-2025. Zuvor von einer deutschen Universität für Studienzugang oder Zulassung akzeptiert; dies ist akademischer Kontext und keine berufliche Anerkennung in Deutschland. Abschlussnote 9,3/10 und Auszeichnungen in Técnicas Generales de Laboratorio, Técnicas de Inmunodiagnóstico und Técnicas de Análisis Hematológico.",
+      "body": "Spanische Qualifikation: Técnico Superior en Laboratorio Clínico y Biomédico (englische Übersetzung: Higher Technician in Clinical and Biomedical Laboratory), CEAC FP Oficial, 2023-2025. Zuvor von einer deutschen Universität für Studienzugang oder Zulassung akzeptiert; dies ist akademischer Kontext und keine berufliche Anerkennung in Deutschland. Offizielle Abschlussnote: 9,25/10 und Auszeichnungen in Técnicas Generales de Laboratorio, Técnicas de Inmunodiagnóstico und Técnicas de Análisis Hematológico.",
       "finalProject": "<strong>Bacteriophage Therapy: Rediscovering an Innovative Therapy.</strong> Gemeinsam mit Luis Gonzalo Legua Pérez verfasst und mit Genehmigung des Co-Autors veröffentlicht.<br><br><strong>Originale interdisziplinäre Hypothese:</strong> Untersuchung, ob Phagenspezifität und chitosanbasierte Adsorption in zukünftigen Labormodellen zur Untersuchung mikroplastikassoziierter Biofilme kombiniert werden könnten, ohne klinische Wirksamkeit zu behaupten.",
       "contribution": "Mein Beitrag: Literaturrecherche, wissenschaftliches Schreiben, Projektstruktur, konzeptuelle Entwicklung und Vorbereitung der Verteidigung, einschließlich der zukunftsorientierten Verbindung zwischen Phagentherapie, Chitosan und mikroplastikbezogenen biomedizinischen Fragen.",
       "exploreProject": "Projekt ansehen",
@@ -221,12 +222,14 @@
       "reference": "Tamara Díaz Jáuregui, Biologielehrerin bei CEAC FP Madrid, hebt technische Fähigkeit, Einsatzbereitschaft, Problemlösung, schnelle Lernfähigkeit, Kommunikation und Verantwortungsbewusstsein hervor."
     },
     "operations": {
+      "grade": "8,69/10",
       "title": "Técnico en Operaciones de Laboratorio",
       "body": "Spanische Qualifikation: Técnico en Operaciones de Laboratorio (englische Übersetzung: Technician in Laboratory Operations), IES Virgen de la Paloma, 2021-2023. Starke Leistungen in angewandter Chemie, physikochemischen Prüfungen, chemischen Analyseoperationen, Materialprüfung und technischem Englisch."
     },
     "additional": {
+      "badge": "Funktionen A+B+C",
       "title": "Zertifizierte Zusatzqualifikationen",
-      "body": "FELASA A+B+C Training in Tierversuchskunde für die Grundfunktionen A, B und C, einschließlich Tierpflege, Euthanasie und Verfahren gemäß ECC/566/2015. Weitere Zertifikate umfassen Management im Gesundheitswesen und grundlegenden Arbeitsschutz."
+      "body": "Tierexperimentelle Funktionen A+B+C (Orden ECC/566/2015) · 70 Std. Weitere Zertifikate umfassen Management im Gesundheitswesen und grundlegenden Arbeitsschutz."
     }
   },
   "europass": {
@@ -308,7 +311,7 @@
     "cv": {
       "kicker": "Kernprofil",
       "title": "Lebenslauf",
-      "body": "Berufliches Profil, Ausbildung, Laborerfahrung und Kontaktdaten für Bewerbungsprozesse aufbereitet.",
+      "body": "Öffentliches berufliches Profil, Ausbildung und Laborerfahrung für Bewerbungsprozesse aufbereitet.",
       "cta": "CV öffnen"
     },
     "phage": {
@@ -345,7 +348,7 @@
     },
     "models": {
       "title": "Experimentelle Modelle",
-      "body": "FELASA A+B+C Training in Tierversuchskunde mit Tierpflege, Euthanasie und Verfahren, verbunden mit einer verantwortungsvollen Forschungshaltung im Einklang mit Tierwohl und den 3R-Prinzipien."
+      "body": "Tierexperimentelle Funktionen A+B+C (Orden ECC/566/2015) · 70 Std., verbunden mit einer verantwortungsvollen Forschungshaltung im Einklang mit Tierwohl und den 3R-Prinzipien."
     },
     "organization": {
       "title": "Labororganisation",

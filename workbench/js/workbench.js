@@ -516,6 +516,14 @@
                     {
                         title: 'Maintenance',
                         body: 'The portfolio is maintained as a static, multilingual platform, with periodic reviews of its content, accessibility and responsive design. Updates prioritise professional clarity, scientific accuracy and consistency between the main profile and Workbench.'
+                    },
+                    {
+                        title: 'Laboratory practice archive · La Princesa',
+                        body: 'Technical depth preserved in Workbench includes cytokine-stimulated and adherent cell-culture workflows, Buffy Coat handling, CD4/CD14 isolation, human and animal sample processing (including psoriasis, dermatitis and hidradenitis suppurativa contexts), murine lymphoid-organ processing, RNA extraction, PCR, electrophoresis, transgenic-mouse genotyping, ELISA, Western blot preparation, media preparation, immunohistochemistry, immunofluorescence, protocol work, scientific databases, laboratory material and inventory management, plus the bilingual scientific website developed for the research group.'
+                    },
+                    {
+                        title: 'Laboratory practice archive · Celignis',
+                        body: 'Technical depth preserved in Workbench includes moisture, ash, volatile matter, CHNOS, ash melting, BMP/biogas, COD, ammonia and NIR/VISION workflows; operation of CHNOS elemental analyser, TGA Q500, CARBOLITE furnaces, BMP units and Biogas 5000; GLP and internal statistical quality controls; calibration, troubleshooting, maintenance and monitoring, sample preparation, SOP support, technical documentation, progressive responsibility for the volatile-matter workflow, training and supervision of replacement interns, customer work, and project context including SteamBioAfrica and BIO4Africa (placement dates: 03/2023-05/2023).'
                     }
                 ],
                 resources: [
@@ -615,6 +623,14 @@
                     {
                         title: 'Mantenimiento',
                         body: 'El portafolio se mantiene como una plataforma estática y multilingüe, con revisiones periódicas del contenido, la accesibilidad y el diseño responsive. Las actualizaciones priorizan la claridad profesional, la veracidad científica y la coherencia entre el perfil principal y Workbench.'
+                    },
+                    {
+                        title: 'Archivo técnico de prácticas · La Princesa',
+                        body: 'La profundidad técnica preservada en Workbench incluye cultivo celular estimulado por citocinas y de líneas adherentes, manejo de Buffy Coat, aislamiento CD4/CD14, procesamiento de muestras humanas y animales (incluyendo contextos de psoriasis, dermatitis e hidradenitis supurativa), procesamiento de órganos linfoides murinos, extracción de ARN, PCR, electroforesis, genotipado de ratones transgénicos, ELISA, preparación de Western blot, preparación de medios, inmunohistoquímica, inmunofluorescencia, trabajo con protocolos, bases de datos científicas, gestión de material e inventario de laboratorio, y la web científica bilingüe desarrollada para el grupo de investigación.'
+                    },
+                    {
+                        title: 'Archivo técnico de prácticas · Celignis',
+                        body: 'La profundidad técnica preservada en Workbench incluye humedad, cenizas, materia volátil, CHNOS, fusión de cenizas, BMP/biogás, DQO, amonio y flujos NIR/VISION; operación de analizador elemental CHNOS, TGA Q500, hornos CARBOLITE, unidades BMP y Biogas 5000; GLP y controles estadísticos internos de calidad; calibración, troubleshooting, mantenimiento y monitorización, preparación de muestras, soporte a SOP y documentación técnica, responsabilidad progresiva sobre el flujo de materia volátil, formación y supervisión de becarios de relevo, trabajo para clientes y contexto de proyectos SteamBioAfrica y BIO4Africa (fechas de prácticas: 03/2023-05/2023).'
                     }
                 ],
                 resources: [
@@ -714,6 +730,14 @@
                     {
                         title: 'Pflege und Weiterentwicklung',
                         body: 'Das Portfolio wird als statische, mehrsprachige Plattform gepflegt. Inhalte, Barrierefreiheit und responsives Design werden regelmäßig überprüft. Aktualisierungen priorisieren berufliche Klarheit, wissenschaftliche Verlässlichkeit und die Kohärenz zwischen dem Hauptprofil und Workbench.'
+                    },
+                    {
+                        title: 'Technisches Praxisarchiv · La Princesa',
+                        body: 'Die in der Workbench erhaltene technische Tiefe umfasst cytokine-stimulated und adhärente Zellkultur-Workflows, Buffy-Coat-Handhabung, CD4/CD14-Isolierung, Verarbeitung humaner und tierischer Proben (einschließlich Kontexte zu Psoriasis, Dermatitis und Hidradenitis suppurativa), Verarbeitung muriner lymphoider Organe, RNA-Extraktion, PCR, Elektrophorese, Genotypisierung transgener Mäuse, ELISA, Western-Blot-Vorbereitung, Medienvorbereitung, Immunhistochemie, Immunfluoreszenz, Protokollarbeit, wissenschaftliche Datenbanken, Material- und Bestandsmanagement im Labor sowie die zweisprachige wissenschaftliche Website der Forschungsgruppe.'
+                    },
+                    {
+                        title: 'Technisches Praxisarchiv · Celignis',
+                        body: 'Die in der Workbench erhaltene technische Tiefe umfasst Feuchte, Asche, flüchtige Bestandteile, CHNOS, Ascheschmelze, BMP/Biogas, CSB, Ammonium und NIR/VISION-Workflows; Bedienung von CHNOS-Elementaranalysator, TGA Q500, CARBOLITE-Öfen, BMP-Einheiten und Biogas 5000; GLP und interne statistische Qualitätskontrollen; Kalibrierung, Troubleshooting, Wartung und Überwachung, Probenvorbereitung, SOP-Unterstützung und technische Dokumentation, schrittweise Verantwortung für den Workflow flüchtiger Bestandteile, Einarbeitung und Betreuung von nachfolgenden Praktikantinnen und Praktikanten, Kundenarbeit sowie Projektkontext mit SteamBioAfrica und BIO4Africa (Praktikumszeitraum: 03/2023-05/2023).'
                     }
                 ],
                 resources: [
