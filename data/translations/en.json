@@ -14,7 +14,7 @@
     "introduction": "Introduction",
     "profileKeywords": "Profile keywords",
     "recruiterSnapshot": "Recruiter snapshot",
-    "germanyReadinessFocus": "Germany readiness and opportunity focus",
+    "opportunityFocus": "Professional opportunity focus",
     "experienceHighlights": "Experience highlights",
     "personalRoleSummary": "Personal role summary",
     "referenceSummary": "Reference summary",
@@ -25,9 +25,9 @@
     "finalProjectDocuments": "Final project documents",
     "academicReferenceSummary": "Academic reference summary",
     "europassQualificationSupplements": "Europass qualification supplements",
-    "selectedLaboratoryTechniques": "Selected laboratory techniques",
-    "scientificIdentityMap": "Scientific identity map",
-    "scienceConnectsIdeasWithLife": "Science connects ideas with life",
+    "skillsByEvidence": "Laboratory skills grouped by evidence type",
+    "documentedPracticalSkills": "Techniques supported by documented practical laboratory experience",
+    "academicTechnicalKnowledge": "Areas supported by academic training and technical knowledge",
     "selectedProjectTypes": "Selected project types",
     "researchConceptPrinciples": "Research concept principles",
     "projectMaturityScale": "Project maturity scale",
@@ -73,9 +73,9 @@
       "kicker": "Profile",
       "title": "A laboratory profile shaped by precision, research and continuous learning.",
       "body": "I hold Spanish vocational qualifications as Técnico Superior en Laboratorio Clínico y Biomédico (Higher Technician in Clinical and Biomedical Laboratory) and Técnico en Operaciones de Laboratorio (Technician in Laboratory Operations). Based in Berlin, I apply this training to clinical diagnostics, molecular biology, immunology and analytical laboratory work under GLP standards.",
-      "pointLocation": "Berlin, Germany",
-      "pointLanguages": "English B2 · German A2 · Spanish native",
-      "pointGerman": "German language certification preparation"
+      "pointPractice": "Clinical & biomedical laboratory practice",
+      "pointBiomedical": "Molecular biology · Immunology · PCR · ELISA",
+      "pointAnalytical": "Analytical workflows · SOPs · GLP documentation"
     },
     "experience": {
       "kicker": "Experience",
@@ -90,7 +90,7 @@
       "title": "Responsibility and leadership in laboratory practice.",
       "body": "During my laboratory placements, I progressively assumed responsibilities beyond routine training tasks. In analytical and biomedical laboratory environments, I was trusted with specific workflows, documentation duties, student support and independent task management.",
       "pointWorkflow": "Trusted with defined laboratory workflows",
-      "pointDocumentation": "Contributed to SOPs and technical documentation",
+      "pointDocumentation": "Worked to SOPs · Created operational documentation",
       "pointTransfer": "Supported training and knowledge transfer"
     },
     "education": {
@@ -103,7 +103,7 @@
     },
     "skills": {
       "kicker": "Skills",
-      "title": "Scientific identity: connecting technical skills, curiosity and translational purpose."
+      "title": "Laboratory skills grouped by practical evidence and formal training."
     },
     "projects": {
       "kicker": "Selected Work",
@@ -153,15 +153,10 @@
     }
   },
   "readiness": {
-    "germany": {
-      "kicker": "Germany readiness",
-      "title": "Based in Berlin and preparing German language certification.",
-      "body": "Academic university acceptance for study access/admission is separate from professional recognition in Germany (Anerkennung). Professional recognition may be required for regulated clinical or hospital roles and depends on Bundesland, position, employer and competent authority."
-    },
     "looking": {
       "kicker": "What I am looking for",
-      "title": "Laboratory, clinical research and biomedical science environments.",
-      "body": "Especially research roles, university laboratories, institutes, private laboratories and non-regulated technical positions; regulated clinical-assistive hospital roles may require professional recognition as MTL/MTLA."
+      "title": "Laboratories where careful technical work supports research, diagnostics and analysis.",
+      "body": "Particularly research groups, university and institutional laboratories, private laboratories, and biomedical or analytical teams where I can contribute practical laboratory experience, reliable documentation and continuous learning."
     }
   },
   "snapshot": {
@@ -172,19 +167,19 @@
     },
     "roles": {
       "label": "Target roles",
-      "value": "Laboratory technician / research support roles · Molecular biology · Immunology · Analytical laboratory work"
+      "value": "Laboratory technician and research support · Biomedical and analytical laboratories · Non-regulated technical roles"
     },
     "languages": {
       "label": "Languages",
-      "value": "English B2 · German A2 · Spanish native"
+      "value": "English B2 · German A2, preparing for certification · Native Spanish"
     },
     "availability": {
       "label": "Availability",
-      "value": "Germany and internationally · Open to relocation within Germany"
+      "value": "Available in Germany and internationally · Open to relocation within Germany"
     },
     "recognition": {
-      "label": "German context",
-      "value": "Prior German university acceptance was academic only and does not equal professional Anerkennung; requirements depend on Bundesland, position, employer and competent authority."
+      "label": "Professional recognition",
+      "value": "Some regulated clinical or hospital roles may require professional recognition (Anerkennung). This depends on the role, federal state and competent authority."
     },
     "documents": {
       "label": "Documents",
@@ -206,10 +201,10 @@
       "institution": "Celignis Biomass Analysis Laboratory",
       "context": "Limerick, Ireland · Erasmus+ · 03/2023-05/2023",
       "fullTechnicalCta": "View full technical experience →",
-      "body": "Moisture, ash, volatile matter, CHNOS elemental analysis, COD, ammonia, NIR/VISION workflows, vacuum filtration and ash melting analysis; SOP and data-sheet drafting under GLP-based analytical work in Ireland.",
-      "role": "Analytical laboratory trainee with progressive responsibility for volatile matter analysis, technical documentation, SOP support and training or knowledge transfer for incoming students or staff.",
-      "documentation": "Prepared operational guides and data sheets for NIR scans, Thermal Excel workflows, sample batches, labels, reactor sample filtration and analytical result traceability.",
-      "reference": "Cristobal Fernandez Belmonte M.Sc., Lab Manager at Celignis Biomass Analysis Laboratory, highlights GLP standards, technical precision, equipment operation, troubleshooting, teamwork and reliability."
+      "body": "Moisture, ash, volatile matter, CHNOS elemental analysis, FOS/TAC, ICP, COD, ammonia, NIR/VISION, vacuum filtration and ash melting; GLP-based work to SOPs and creation of operational documentation in Ireland.",
+      "role": "Analytical laboratory trainee with progressive responsibility for volatile matter analysis, technical documentation, work to SOPs and training or knowledge transfer for incoming students or staff.",
+      "documentation": "Created operational guides, data sheets, work instructions and troubleshooting documentation covering analytical methods, NIR/VISION, analysis start-up, batches, sample registration, labelling, Thermal Excel and result traceability.",
+      "reference": "Cristobal Fernandez Belmonte M.Sc., Lab Manager at Celignis Biomass Analysis Laboratory, highlights GLP standards, technical precision, equipment operation and troubleshooting, statistical QC self-checks, deadline reliability, teamwork and intern handover training."
     },
     "teaching": {
       "title": "Teaching & Early Work",
@@ -241,7 +236,7 @@
     "additional": {
       "badge": "Functions A+B+C",
       "title": "Certified Additional Training",
-      "body": "Animal Experimentation - Functions A+B+C (Order ECC/566/2015) · 70 h. Additional certificates include Healthcare Centre Management and Basic Level Occupational Risk Prevention."
+      "body": "Animal Experimentation - Functions A+B+C (Order ECC/566/2015) · 70 h. Healthcare Centre Management · 100 h · 2025. Basic Level Occupational Risk Prevention · 2023."
     }
   },
   "europass": {
@@ -274,8 +269,24 @@
     },
     "note": "Europass supplements provide official information about the content, level and learning outcomes of Spanish qualifications to support international understanding. They do not have independent legal value and do not replace national professional recognition procedures that may be required for regulated positions or professions."
   },
-  "selectedTechniques": {
-    "title": "Selected techniques"
+  "skillsEvidence": {
+    "practical": {
+      "title": "Documented practical laboratory experience",
+      "description": "Used during the La Princesa and Celignis laboratory placements. Full context, scope and supporting evidence are documented in Experience and Workbench.",
+      "molecular": "PCR · RNA extraction · Electrophoresis",
+      "cellCulture": "Cell culture · HaCaT · Media preparation",
+      "immunology": "ELISA · Western blot · CD4/CD14 isolation",
+      "analytical": "CHNOS · FOS/TAC · ICP · COD · NIR/VISION",
+      "quality": "GLP routines · Work to SOPs · Operational documentation",
+      "organization": "Sample traceability · Inventory · Laboratory organization"
+    },
+    "academic": {
+      "title": "Academic training & technical knowledge",
+      "description": "Covered through formal vocational training, certified coursework or academic projects; not presented as placement-based practical experience.",
+      "microbiology": "Clinical microbiology",
+      "virology": "Virology · Bacteriophage literature review",
+      "animalModels": "Animal experimentation course · Functions A+B+C · 70 h · In-person practical training"
+    }
   },
   "responsibilityCards": {
     "princesa": {
@@ -286,7 +297,7 @@
     "celignis": {
       "kicker": "Celignis Biomass Analysis Laboratory",
       "title": "Analytical responsibility and knowledge transfer",
-      "body": "I progressively took responsibility for specific analytical workflows, including volatile matter analysis. I also supported knowledge transfer by helping train incoming students and staff, sharing technical information with different teams and contributing to SOPs, operational guides and laboratory documentation."
+      "body": "I progressively took responsibility for specific analytical workflows, including volatile matter analysis. I worked to laboratory SOPs, created operational guides, data sheets, work instructions and troubleshooting documentation, and supported knowledge transfer for incoming students and staff."
     }
   },
   "projectCards": {
@@ -314,8 +325,8 @@
     "chitosan": {
       "kicker": "Research note · Concept · AETEL 2025",
       "title": "Medical applications of chitosan: potential for microplastic capture and biomedical study",
-      "body": "Literature-informed conceptual proposal on modified chitosan and microplastics for future biomedical or analytical study. No experimental validation performed.",
-      "status": "Status: Concept · No experimental validation performed",
+      "body": "Literature-informed conceptual proposal developed and submitted internally to the centre for consideration in the context of AETEL 2025; the centre ultimately prioritised another submission, so it did not proceed to the event. No experimental validation performed.",
+      "status": "Status: Internal concept submission · No experimental validation",
       "cta": "Open Workbench entry"
     }
   },
@@ -338,70 +349,6 @@
       "title": "Workbench Dossiers",
       "body": "Projects, research notes, technical learning and milestones are structured in Workbench with explicit status, evidence and limitations.",
       "cta": "Open Workbench"
-    }
-  },
-  "skillsMap": {
-    "skillsTitle": "Skills",
-    "molecular": {
-      "title": "Molecular Biology",
-      "body": "PCR, RNA extraction, electrophoresis, sample preparation and molecular workflows applied to clinical and biomedical laboratory contexts."
-    },
-    "cellCulture": {
-      "title": "Cell Culture",
-      "body": "Handling, maintenance, passaging and freezing of cell cultures, including HaCaT protocol documentation and sterile technique."
-    },
-    "immunology": {
-      "title": "Immunological Techniques",
-      "body": "ELISA, Western Blot gel casting, transfer and blocking, CD4/CD14 purification and immunology-based sample analysis."
-    },
-    "analytical": {
-      "title": "Analytical Methods",
-      "body": "Moisture, ash, volatile matter, CHNOS elemental analysis, COD, ammonia, NIR/VISION, ash melting and vacuum filtration workflows."
-    },
-    "models": {
-      "title": "Experimental Models",
-      "body": "Animal Experimentation - Functions A+B+C (Order ECC/566/2015) · 70 h, with a responsible research mindset aligned with welfare and 3R principles."
-    },
-    "organization": {
-      "title": "Laboratory Organization",
-      "body": "Sample traceability, batch creation, labeling, inventory habits, Thermal Excel workflows, database updates and methodical independent responsibility."
-    },
-    "documentation": {
-      "title": "Technical Documentation",
-      "body": "SOP drafting, data-sheet design, troubleshooting guides and operational instructions for instruments, Excel workflows and laboratory sample handling."
-    }
-  },
-  "identityCore": {
-    "kicker": "Scientific Identity",
-    "title": "Science connects ideas with life.",
-    "idea": "Idea: curiosity, observation, question",
-    "knowledge": "Knowledge: study, experiment, understand",
-    "research": "Research: method, data, analysis",
-    "discovery": "Discovery: insight, innovation, progress",
-    "application": "Application: translation, impact, solutions",
-    "life": "Life: improving health, helping others, building the future"
-  },
-  "valuesMap": {
-    "title": "Scientific Values",
-    "curiosity": {
-      "title": "Curiosity",
-      "body": "Asking precise questions and approaching unknowns with observation, patience and initiative."
-    },
-    "learning": {
-      "title": "Lifelong Learning",
-      "body": "Continuous development across clinical laboratory science, biomedical research and language learning."
-    },
-    "impact": {
-      "title": "Translational Impact",
-      "body": "Connecting laboratory work with practical outcomes that can improve health and decision-making."
-    },
-    "teamwork": {
-      "title": "Teamwork",
-      "body": "Clear communication, adaptability and collaboration in multicultural laboratory environments."
-    },
-    "future": {
-      "title": "Future Discoveries",
-      "body": "A long-term commitment to research, discovery and scientific work that remains useful to society."
     }
   },
   "conceptCard": {
@@ -458,7 +405,7 @@
   "referenceCards": {
     "research": {
       "title": "Research Laboratory Reference",
-      "body": "Dr. Danay Cibrián Vera, Principal Investigator at the Immunology Service of Hospital Universitario de La Princesa, recommends Jhon after a three-month laboratory placement involving RNA extraction, PCR, electrophoresis, genotyping, biological sample processing, cell culture, staining techniques, protocol design and laboratory material management."
+      "body": "Dr. Danay Cibrián Vera, Principal Investigator at the Immunology Service of Hospital Universitario de La Princesa, recommends Jhon after a three-month laboratory placement involving RNA extraction, PCR, electrophoresis, genotyping, biological sample processing, cell culture, staining techniques, protocol design and laboratory material management. The official FCT tutor assessment rated his performance High in all eight evaluated criteria, including technical ability, initiative, teamwork and responsibility."
     },
     "academic": {
       "title": "Academic Reference",
@@ -466,7 +413,7 @@
     },
     "international": {
       "title": "International Laboratory Reference",
-      "body": "Cristobal Fernandez Belmonte M.Sc., Lab Manager at Celignis Biomass Analysis Laboratory in Limerick, Ireland, recommends Jhon after his internship supporting biomass analyses, instrument operation, GLP workflows, quality controls, sample preparation, teamwork and intern handover training."
+      "body": "Cristobal Fernandez Belmonte M.Sc., Lab Manager at Celignis Biomass Analysis Laboratory in Limerick, Ireland, recommends Jhon after his internship supporting biomass analyses, instrument operation, GLP workflows, statistical quality self-checks, sample preparation and reliable completion of work to deadlines. He also highlights knowledge transfer through training and supervision of replacement interns during handover."
     }
   },
   "contactForm": {

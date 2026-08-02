@@ -46,7 +46,7 @@
             status: {
                 label: 'Workbench status', focusLabel: 'Current focus',
                 focusValue: 'DeutschOS and portfolio development', aiLabel: 'AI disclosure',
-                aiValue: 'AI supports technical implementation, content organisation and editorial review, while Jhon M. Cuenca leads objectives, requirements, content, testing and final approval.'
+                aiValue: 'AI supports technical implementation, content organisation and editorial review, while I lead objectives, requirements, content, testing and final approval.'
             },
             areas: { projects: 'Projects', research: 'Research notes', learning: 'Technical & learning', milestones: 'Milestones' },
             featured: {
@@ -85,9 +85,9 @@
                 },
                 chitosan: {
                     title: 'Medical applications of chitosan: potential for microplastic capture and biomedical study',
-                    summary: 'AETEL 2025 literature-informed concept proposal on modified chitosan and microplastics for future biomedical or analytical study.',
+                    summary: 'Literature-informed conceptual proposal developed and submitted internally to the training centre for consideration in the context of AETEL 2025; the centre ultimately prioritised another submission.',
                     contribution: 'Concept development, testable hypotheses, scientific framing and explicit validation limits.',
-                    evidence: 'No experimental validation performed; the proposal remains conceptual and requires in vitro validation.',
+                    evidence: 'It did not advance to the event. No experimental validation was performed; the proposal remains conceptual and requires in vitro validation.',
                     tagHypothesis: 'Hypothesis', tagValidation: 'Requires validation'
                 },
                 laprincesa: {
@@ -117,7 +117,7 @@
                 deutschos: 'Local German-learning environment focused on usable progress, laboratory vocabulary and transparent correction.',
                 portfolio: 'Published multilingual portfolio for recruiters, laboratories and scientific collaborators.',
                 laprincesa: 'Three-month hospital research placement with applied immunology, molecular biology and sample-processing workflows.',
-                celignis: 'Erasmus+ laboratory placement in Ireland with analytical workflows, GLP routines and technical documentation.',
+                celignis: 'Erasmus+ laboratory placement in Ireland with analytical workflows, GLP routines, work to SOPs and creation of operational documentation.',
                 phage: 'Co-authored academic literature review on phage therapy, its applications, limitations and regulatory barriers.',
                 chitosan: 'Early-stage, literature-informed hypothesis proposed for future controlled laboratory validation.'
             },
@@ -141,7 +141,7 @@
                 referenceCards: {
                     research: {
                         title: 'Research Laboratory Reference',
-                        body: 'Dr. Danay Cibrián Vera, Principal Investigator at the Immunology Service of Hospital Universitario de La Princesa, recommends Jhon after a three-month laboratory placement involving RNA extraction, PCR, electrophoresis, genotyping, biological sample processing, cell culture, staining techniques, protocol design and laboratory material management.'
+                        body: 'Dr. Danay Cibrián Vera, Principal Investigator at the Immunology Service of Hospital Universitario de La Princesa, recommends Jhon after a three-month laboratory placement and rates his official performance as High in all eight assessed criteria, including technical ability, dedication, precision, problem-solving, learning, communication, teamwork and responsibility.'
                     },
                     academic: {
                         title: 'Academic Reference',
@@ -149,17 +149,19 @@
                     },
                     international: {
                         title: 'International Laboratory Reference',
-                        body: 'Cristobal Fernandez Belmonte M.Sc., Lab Manager at Celignis Biomass Analysis Laboratory in Limerick, Ireland, recommends Jhon after his internship supporting biomass analyses, instrument operation, GLP workflows, quality controls, sample preparation, teamwork and intern handover training.'
+                        body: 'Cristobal Fernandez Belmonte M.Sc., Lab Manager at Celignis Biomass Analysis Laboratory in Limerick, Ireland, recommends Jhon after his internship supporting biomass analyses, instrument operation, GLP workflows, statistical quality-control self-checks, sample preparation, deadline delivery, teamwork and structured handover training for replacement interns.'
                     }
                 }
             },
             principles: {
-                kicker: 'Documentation approach', title: 'Documenting the work, not just displaying the result.',
-                intro: 'An entry belongs here only when it demonstrates a real question, contribution, result or learning outcome.',
-                authorship: { title: 'Clear authorship', body: 'Decisions, contributions, reviews and tests are identified explicitly.' },
-                evidence: { title: 'Evidence before claims', body: 'Published evidence, interpretation, hypotheses and experimental results are kept separate.' },
-                limitations: { title: 'Visible limitations', body: 'Unresolved questions, missing validation and technical constraints remain part of the entry.' },
-                ai: { title: 'Transparent AI use', body: 'AI has been used as a supporting tool for technical implementation, content organisation and editorial review of the portfolio. Jhon M. Cuenca defines the objectives, requirements, content, product decisions, testing and final approval.' }
+                kicker: 'Working method', title: 'From a precise question to useful, traceable scientific work.',
+                intro: 'Questions, evidence, documentation, learning and responsible decisions form one practical workflow.',
+                questions: { title: 'Precise questions', body: 'Curiosity starts with observation, patience and initiative, then becomes a question that can guide study, experimental planning or technical problem-solving.' },
+                documentation: { title: 'Traceable work', body: 'Methods, data, decisions, contributions, reviews and tests are documented so the route to a result can be examined and learned from.' },
+                application: { title: 'From method to application', body: 'Study and experimental work move from method, data and analysis towards insight and practical outcomes that support health, decision-making and socially useful science.' },
+                integrity: { title: 'Scientific integrity', body: 'Published evidence, interpretation, hypotheses and results remain separate; open questions, missing validation and technical constraints stay visible. Animal-related work is approached with welfare and 3R principles.' },
+                learning: { title: 'Applied learning & collaboration', body: 'Continuous learning across clinical laboratory science, biomedical research and languages supports clear communication, adaptability and work in multicultural teams.' },
+                ai: { title: 'Transparent AI use', body: 'I define objectives, requirements and decisions, then review, test and approve the final result. AI can support implementation, research, organisation, writing and checking.' }
             },
             footer: { copyright: '© 2026 Jhon M. Cuenca. All rights reserved.', notice: 'JMC · Workbench documents selected projects, scientific notes and applied learning.', scientificNotice: 'Scientific notes distinguish published evidence, interpretation, hypotheses and limitations.' },
             dialog: {
@@ -218,7 +220,7 @@
             status: {
                 label: 'Estado del Workbench', focusLabel: 'Enfoque actual',
                 focusValue: 'Desarrollo de DeutschOS y del portafolio', aiLabel: 'Transparencia sobre IA',
-                aiValue: 'La IA apoya la implementación técnica, la organización de contenidos y la revisión editorial, mientras Jhon M. Cuenca define objetivos, requisitos, contenido, pruebas y aprobación final.'
+                aiValue: 'La IA apoya la implementación técnica, la organización de contenidos y la revisión editorial, mientras yo defino objetivos, requisitos, contenido, pruebas y aprobación final.'
             },
             areas: { projects: 'Proyectos', research: 'Notas de investigación', learning: 'Técnica y aprendizaje', milestones: 'Hitos' },
             featured: {
@@ -257,9 +259,9 @@
                 },
                 chitosan: {
                     title: 'Aplicaciones médicas del quitosano: potencial para la captura de microplásticos y su estudio biomédico',
-                    summary: 'Propuesta conceptual de AETEL 2025, informada por literatura, sobre quitosano modificado y microplásticos para futuros estudios biomédicos o analíticos.',
+                    summary: 'Propuesta conceptual informada por literatura, desarrollada y presentada internamente al centro para su consideración en el contexto de AETEL 2025; el centro finalmente priorizó otra propuesta.',
                     contribution: 'Desarrollo del concepto, hipótesis comprobables, encuadre científico y límites de validación explícitos.',
-                    evidence: 'No se ha realizado validación experimental; la propuesta sigue en fase conceptual y requiere validación in vitro.',
+                    evidence: 'No avanzó al evento. No se realizó validación experimental; la propuesta sigue en fase conceptual y requiere validación in vitro.',
                     tagHypothesis: 'Hipótesis', tagValidation: 'Requiere validación'
                 },
                 laprincesa: {
@@ -289,7 +291,7 @@
                 deutschos: 'Entorno local de aprendizaje de alemán centrado en progreso útil, vocabulario de laboratorio y corrección transparente.',
                 portfolio: 'Portafolio multilingüe publicado para reclutadores, laboratorios y colaboradores científicos.',
                 laprincesa: 'Prácticas hospitalarias de tres meses con aplicación de flujos de inmunología, biología molecular y procesamiento de muestras.',
-                celignis: 'Prácticas Erasmus+ en Irlanda con flujos analíticos, rutinas GLP y documentación técnica.',
+                celignis: 'Prácticas Erasmus+ en Irlanda con flujos analíticos, rutinas GLP, trabajo conforme a SOP y creación de documentación operativa.',
                 phage: 'Revisión académica realizada en coautoría sobre la fagoterapia, sus aplicaciones, limitaciones y barreras regulatorias.',
                 chitosan: 'Hipótesis preliminar basada en literatura y propuesta para una futura validación controlada en laboratorio.'
             },
@@ -313,7 +315,7 @@
                 referenceCards: {
                     research: {
                         title: 'Referencia de laboratorio de investigación',
-                        body: 'La Dra. Danay Cibrián Vera, investigadora principal en el Servicio de Inmunología del Hospital Universitario de La Princesa, recomienda a Jhon tras unas prácticas de tres meses en laboratorio que incluyeron extracción de ARN, PCR, electroforesis, genotipado, procesamiento de muestras biológicas, cultivo celular, técnicas de tinción, diseño de protocolos y gestión de material de laboratorio.'
+                        body: 'La Dra. Danay Cibrián Vera, investigadora principal en el Servicio de Inmunología del Hospital Universitario de La Princesa, recomienda a Jhon tras unas prácticas de tres meses y valora oficialmente como Alto su desempeño en los ocho criterios evaluados, entre ellos capacidad técnica, dedicación, precisión, resolución de problemas, aprendizaje, comunicación, trabajo en equipo y responsabilidad.'
                     },
                     academic: {
                         title: 'Referencia académica',
@@ -321,17 +323,19 @@
                     },
                     international: {
                         title: 'Referencia internacional de laboratorio',
-                        body: 'Cristobal Fernandez Belmonte M.Sc., Lab Manager en Celignis Biomass Analysis Laboratory, en Limerick, Irlanda, recomienda a Jhon tras sus prácticas apoyando análisis de biomasa, manejo instrumental, flujos de trabajo GLP, controles de calidad, preparación de muestras, trabajo en equipo y formación de nuevos estudiantes en prácticas.'
+                        body: 'Cristobal Fernandez Belmonte M.Sc., Lab Manager en Celignis Biomass Analysis Laboratory, Limerick, recomienda a Jhon tras sus prácticas apoyando análisis de biomasa, manejo instrumental, flujos GLP, autocontroles estadísticos de calidad, preparación de muestras, cumplimiento de plazos, trabajo en equipo y formación estructurada de las personas que relevaron el puesto.'
                     }
                 }
             },
             principles: {
-                kicker: 'Cómo se documenta', title: 'Documentar el trabajo, no solo mostrar el resultado.',
-                intro: 'Una entrada solo pertenece aquí cuando demuestra una pregunta, contribución, resultado o aprendizaje real.',
-                authorship: { title: 'Autoría clara', body: 'Las decisiones, aportaciones, revisiones y pruebas se identifican de forma explícita.' },
-                evidence: { title: 'Evidencia antes que afirmaciones', body: 'La evidencia publicada, la interpretación, las hipótesis y los resultados experimentales se mantienen separados.' },
-                limitations: { title: 'Limitaciones visibles', body: 'Las preguntas abiertas, la validación pendiente y las restricciones técnicas siguen formando parte de la entrada.' },
-                ai: { title: 'Uso transparente de IA', body: 'Transparencia sobre IA: se ha utilizado IA como herramienta de apoyo en la implementación técnica, la organización y la revisión editorial del portafolio. Jhon M. Cuenca define los objetivos, requisitos, contenido, decisiones de producto, pruebas y aprobación final.' }
+                kicker: 'Método de trabajo', title: 'De una pregunta precisa a un trabajo científico útil y trazable.',
+                intro: 'Preguntas, evidencia, documentación, aprendizaje y decisiones responsables forman un único flujo práctico.',
+                questions: { title: 'Preguntas precisas', body: 'La curiosidad parte de la observación, la paciencia y la iniciativa, y se convierte en una pregunta capaz de orientar el estudio, la planificación experimental o la resolución de un problema técnico.' },
+                documentation: { title: 'Trazabilidad del trabajo', body: 'Los métodos, datos, decisiones, aportaciones, revisiones y pruebas se documentan para que el camino hasta un resultado pueda examinarse y generar aprendizaje.' },
+                application: { title: 'Del método a la aplicación', body: 'El estudio y el trabajo experimental avanzan desde el método, los datos y el análisis hacia el conocimiento y resultados prácticos que apoyen la salud, la toma de decisiones y una ciencia útil para la sociedad.' },
+                integrity: { title: 'Integridad científica', body: 'La evidencia publicada, la interpretación, las hipótesis y los resultados se mantienen separados; las preguntas abiertas, la validación pendiente y las restricciones técnicas permanecen visibles. El trabajo relacionado con animales se aborda según los principios de bienestar y las 3R.' },
+                learning: { title: 'Aprendizaje aplicado y colaboración', body: 'El aprendizaje continuo en laboratorio clínico, investigación biomédica e idiomas favorece la comunicación clara, la adaptabilidad y el trabajo en equipos multiculturales.' },
+                ai: { title: 'Uso transparente de IA', body: 'Yo defino objetivos, requisitos y decisiones; después reviso, pruebo y apruebo el resultado final. La IA puede apoyar la implementación, la investigación, la organización, la redacción y la comprobación.' }
             },
             footer: { copyright: '© 2026 Jhon M. Cuenca. Todos los derechos reservados.', notice: 'JMC · Workbench documenta proyectos seleccionados, notas científicas y aprendizaje aplicado.', scientificNotice: 'Las notas científicas distinguen evidencia publicada, interpretación, hipótesis y limitaciones.' },
             dialog: {
@@ -390,7 +394,7 @@
             status: {
                 label: 'Workbench-Status', focusLabel: 'Aktueller Schwerpunkt',
                 focusValue: 'Entwicklung von DeutschOS und Portfolio', aiLabel: 'KI-Transparenz',
-                aiValue: 'KI unterstützt technische Umsetzung, Inhaltsorganisation und redaktionelle Überarbeitung, während Jhon M. Cuenca Ziele, Anforderungen, Inhalte, Tests und die abschließende Freigabe verantwortet.'
+                aiValue: 'KI unterstützt technische Umsetzung, Inhaltsorganisation und redaktionelle Überarbeitung, während ich Ziele, Anforderungen, Inhalte, Tests und die abschließende Freigabe verantworte.'
             },
             areas: { projects: 'Projekte', research: 'Forschungsnotizen', learning: 'Technik & Lernen', milestones: 'Meilensteine' },
             featured: {
@@ -429,9 +433,9 @@
                 },
                 chitosan: {
                     title: 'Medizinische Anwendungen von Chitosan: Potenzial zur Mikroplastikbindung und biomedizinischen Untersuchung',
-                    summary: 'Literaturgestützter Konzeptvorschlag für AETEL 2025 zu modifiziertem Chitosan und Mikroplastik für zukünftige biomedizinische oder analytische Studien.',
+                    summary: 'Literaturgestützter Konzeptvorschlag, der intern beim Ausbildungszentrum zur Prüfung im Kontext AETEL 2025 eingereicht wurde; das Zentrum priorisierte schließlich einen anderen Beitrag.',
                     contribution: 'Konzeptentwicklung, prüfbare Hypothesen, wissenschaftliche Einordnung und explizite Validierungsgrenzen.',
-                    evidence: 'Es liegt keine experimentelle Validierung vor; der Vorschlag bleibt konzeptionell und erfordert eine In-vitro-Validierung.',
+                    evidence: 'Der Vorschlag gelangte nicht zur Veranstaltung. Es erfolgte keine experimentelle Validierung; er bleibt konzeptionell und erfordert In-vitro-Validierung.',
                     tagHypothesis: 'Hypothese', tagValidation: 'Validierung erforderlich'
                 },
                 laprincesa: {
@@ -461,7 +465,7 @@
                 deutschos: 'Lokale Deutsch-Lernumgebung mit Fokus auf nutzbaren Fortschritt, Laborwortschatz und transparente Korrektur.',
                 portfolio: 'Veröffentlichtes mehrsprachiges Portfolio für Recruiter, Labore und wissenschaftliche Kontakte.',
                 laprincesa: 'Dreimonatiges Praktikum im Krankenhausforschungskontext mit angewandten Workflows in Immunologie, Molekularbiologie und Probenverarbeitung.',
-                celignis: 'Erasmus+-Laborpraktikum in Irland mit analytischen Workflows, GLP-Routinen und technischer Dokumentation.',
+                celignis: 'Erasmus+-Laborpraktikum in Irland mit analytischen Abläufen, GLP-Routinen, Arbeit nach SOPs und Erstellung operativer Dokumentation.',
                 phage: 'Gemeinsam verfasste akademische Literaturübersicht zu Phagentherapie, Anwendungen, Grenzen und regulatorischen Hürden.',
                 chitosan: 'Frühe, literaturbasierte Hypothese für eine spätere kontrollierte Validierung im Labor.'
             },
@@ -485,7 +489,7 @@
                 referenceCards: {
                     research: {
                         title: 'Referenz aus dem Forschungslabor',
-                        body: 'Dr. Danay Cibrián Vera, Principal Investigator am Immunologiedienst des Hospital Universitario de La Princesa, empfiehlt Jhon nach einem dreimonatigen Laborpraktikum mit RNA-Extraktion, PCR, Elektrophorese, Genotypisierung, Verarbeitung biologischer Proben, Zellkultur, Färbetechniken, Protokolldesign und Verwaltung von Labormaterial.'
+                        body: 'Dr. Danay Cibrián Vera, Principal Investigator am Immunologiedienst des Hospital Universitario de La Princesa, empfiehlt Jhon nach einem dreimonatigen Laborpraktikum und bewertet seine Leistung in allen acht offiziellen Kriterien als Hoch, darunter technische Fähigkeiten, Einsatz, Präzision, Problemlösung, Lernen, Kommunikation, Teamarbeit und Verantwortung.'
                     },
                     academic: {
                         title: 'Akademische Referenz',
@@ -493,17 +497,19 @@
                     },
                     international: {
                         title: 'Internationale Laborreferenz',
-                        body: 'Cristobal Fernandez Belmonte M.Sc., Lab Manager bei Celignis Biomass Analysis Laboratory in Limerick, Irland, empfiehlt Jhon nach seinem Praktikum mit Unterstützung bei Biomasseanalysen, Gerätebedienung, GLP-Workflows, Qualitätskontrollen, Probenvorbereitung, Teamarbeit und Einarbeitung neuer Praktikantinnen und Praktikanten.'
+                        body: 'Cristobal Fernandez Belmonte M.Sc., Lab Manager bei Celignis Biomass Analysis Laboratory in Limerick, empfiehlt Jhon nach seinem Praktikum mit Biomasseanalysen, Gerätebedienung, GLP-Workflows, statistischen Qualitäts-Selbstkontrollen, Probenvorbereitung, termingerechter Arbeit, Teamarbeit und strukturierter Übergabeschulung für nachfolgende Praktikantinnen und Praktikanten.'
                     }
                 }
             },
             principles: {
-                kicker: 'Dokumentationsprinzip', title: 'Die Arbeit dokumentieren, nicht nur das Ergebnis zeigen.',
-                intro: 'Ein Eintrag gehört nur hierher, wenn er eine echte Frage, einen Beitrag, ein Ergebnis oder einen Lernerfolg zeigt.',
-                authorship: { title: 'Klare Urheberschaft', body: 'Entscheidungen, Beiträge, Prüfungen und Tests werden ausdrücklich gekennzeichnet.' },
-                evidence: { title: 'Evidenz vor Behauptungen', body: 'Publizierte Evidenz, Interpretation, Hypothesen und experimentelle Ergebnisse werden getrennt dargestellt.' },
-                limitations: { title: 'Sichtbare Grenzen', body: 'Offene Fragen, fehlende Validierung und technische Einschränkungen bleiben Teil des Eintrags.' },
-                ai: { title: 'Transparenter KI-Einsatz', body: 'Transparenz zum KI-Einsatz: KI wurde als unterstützendes Werkzeug für die technische Umsetzung, die Organisation der Inhalte und die redaktionelle Überarbeitung des Portfolios eingesetzt. Jhon M. Cuenca definiert Ziele, Anforderungen, Inhalte, Produktentscheidungen, Tests und die abschließende Freigabe.' }
+                kicker: 'Arbeitsweise', title: 'Von einer präzisen Frage zu nützlicher, nachvollziehbarer wissenschaftlicher Arbeit.',
+                intro: 'Fragen, Evidenz, Dokumentation, Lernen und verantwortungsvolle Entscheidungen bilden einen zusammenhängenden praktischen Arbeitsablauf.',
+                questions: { title: 'Präzise Fragen', body: 'Neugier beginnt mit Beobachtung, Geduld und Eigeninitiative und wird zu einer Frage, die Untersuchung, Versuchsplanung oder die Lösung eines technischen Problems leiten kann.' },
+                documentation: { title: 'Nachvollziehbare Arbeit', body: 'Methoden, Daten, Entscheidungen, Beiträge, Prüfungen und Tests werden dokumentiert, damit der Weg zum Ergebnis nachvollzogen werden kann und daraus Lernen entsteht.' },
+                application: { title: 'Von der Methode zur Anwendung', body: 'Studium und experimentelle Arbeit führen über Methode, Daten und Analyse zu Erkenntnissen und praktischen Ergebnissen, die Gesundheit, Entscheidungsfindung und gesellschaftlich nützliche Wissenschaft unterstützen.' },
+                integrity: { title: 'Wissenschaftliche Integrität', body: 'Publizierte Evidenz, Interpretation, Hypothesen und Ergebnisse bleiben getrennt; offene Fragen, fehlende Validierung und technische Einschränkungen werden sichtbar gemacht. Bei tierbezogenen Arbeiten gelten Tierwohl und die 3R-Prinzipien.' },
+                learning: { title: 'Angewandtes Lernen & Zusammenarbeit', body: 'Kontinuierliches Lernen in klinischer Labordiagnostik, biomedizinischer Forschung und Sprachen unterstützt klare Kommunikation, Anpassungsfähigkeit und die Arbeit in multikulturellen Teams.' },
+                ai: { title: 'Transparente KI-Unterstützung', body: 'Ziele, Anforderungen und Entscheidungen definiere ich selbst; anschließend überprüfe und teste ich das Ergebnis und gebe es abschließend frei. KI kann Umsetzung, Recherche, Organisation, Formulierung und Prüfung unterstützen.' }
             },
             footer: { copyright: '© 2026 Jhon M. Cuenca. Alle Rechte vorbehalten.', notice: 'JMC · Workbench dokumentiert ausgewählte Projekte, wissenschaftliche Notizen und angewandtes Lernen.', scientificNotice: 'Wissenschaftliche Notizen unterscheiden publizierte Evidenz, Interpretation, Hypothesen und Grenzen.' },
             dialog: {
@@ -533,7 +539,7 @@
                 contribution: 'Definition of learning goals, functional requirements, content hierarchy, correction model, memory-confirmation workflow and product decisions. Programming is AI-assisted.',
                 result: 'A working local prototype exists and is being developed in broad functional blocks. It currently serves as evidence of product thinking and applied learning design, not as a finished public product.',
                 next: 'The system still requires continued testing, content validation, usability review and a clearer public demonstration before it should be described as complete.',
-                disclosure: 'AI use: support for technical implementation and editorial review. Concept, requirements, content, testing and final decisions by Jhon M. Cuenca.'
+                disclosure: 'AI use: support for technical implementation and editorial review. I define the concept, requirements, content, testing and final decisions.'
             },
             portfolio: {
                 category: 'Project · Milestone', status: 'Functional', title: 'Scientific Portfolio',
@@ -542,11 +548,11 @@
                 contribution: 'Responsibility for professional content, publication decisions, functional requirements, wording and scientific-claim review, site testing, and product and visual decisions.',
                 result: 'The site is published through GitHub Pages with English, German and Spanish support and accessible professional sections.',
                 next: 'Next steps are to refine the separation between the professional profile and Workbench, improve content maintenance, and continue accessibility and responsive-layout validation.',
-                disclosure: 'AI use: support for technical implementation and editorial review. Concept, requirements, content, testing and final decisions by Jhon M. Cuenca.',
+                disclosure: 'AI use: support for technical implementation and editorial review. I define the concept, requirements, content, testing and final decisions.',
                 details: [
                     {
                         title: 'Purpose',
-                        body: 'Present Jhon M. Cuenca’s professional profile, experience and public professional documentation; maintain Workbench as a separate space for projects, notes and applied learning; and communicate scientific content by clearly separating evidence, interpretation and hypotheses.'
+                        body: 'Present my professional profile, experience and public professional documentation; maintain Workbench as a separate space for projects, notes and applied learning; and communicate scientific content by clearly separating evidence, interpretation and hypotheses.'
                     },
                     {
                         title: 'Architecture',
@@ -558,11 +564,11 @@
                     },
                     {
                         title: 'Laboratory practice archive · La Princesa',
-                        body: 'Technical depth preserved in Workbench includes cytokine-stimulated and adherent cell-culture workflows, Buffy Coat handling, CD4/CD14 isolation, human and animal sample processing (including psoriasis, dermatitis and hidradenitis suppurativa contexts), murine lymphoid-organ processing, RNA extraction, PCR, electrophoresis, transgenic-mouse genotyping, ELISA, Western blot preparation, media preparation, immunohistochemistry, immunofluorescence, protocol work, scientific databases, laboratory material and inventory management, plus the bilingual scientific website developed for the research group.'
+                        body: 'Technical depth preserved in Workbench includes cytokine-stimulated and adherent cell-culture workflows, sterile technique, Buffy Coat handling, CD4/CD14 isolation, human and animal sample processing (including psoriasis, dermatitis and hidradenitis suppurativa contexts), murine lymphoid-organ processing, RNA extraction, PCR, electrophoresis, transgenic-mouse genotyping, ELISA, Western blot gel casting, transfer and blocking, media preparation, immunohistochemistry, immunofluorescence, protocol work, scientific databases, laboratory material and inventory management, plus the bilingual scientific website developed for the research group.'
                     },
                     {
                         title: 'Laboratory practice archive · Celignis',
-                        body: 'Technical depth preserved in Workbench includes moisture, ash, volatile matter, CHNOS, ash melting, BMP/biogas, COD, ammonia and NIR/VISION workflows; operation of CHNOS elemental analyser, TGA Q500, CARBOLITE furnaces, BMP units and Biogas 5000; GLP and internal statistical quality controls; calibration, troubleshooting, maintenance and monitoring, sample preparation, SOP support, technical documentation, progressive responsibility for the volatile-matter workflow, training and supervision of replacement interns, customer work, and project context including SteamBioAfrica and BIO4Africa (placement dates: 03/2023-05/2023).'
+                        body: 'Technical depth preserved in Workbench includes moisture, ash, volatile matter, CHNOS, ash melting, BMP/biogas, COD, ammonia and NIR/VISION workflows; operation of CHNOS elemental analyser, TGA Q500, CARBOLITE furnaces, BMP units and Biogas 5000; GLP and internal statistical quality controls; calibration, troubleshooting, maintenance and monitoring, sample preparation, database updates, work according to SOPs, technical documentation, progressive responsibility for the volatile-matter workflow, training and supervision of replacement interns, customer work, and project context including SteamBioAfrica and BIO4Africa (placement dates: 03/2023-05/2023).'
                     }
                 ],
                 resources: [
@@ -585,6 +591,10 @@
                     {
                         title: 'Original interdisciplinary hypothesis',
                         body: 'As an individual contribution within the collaborative final project, the work proposes a future research concept combining bacteriophage specificity with chitosan-based adsorption. Phages would not act directly on plastic polymers. Sequencing could identify microorganisms associated with microplastic biofilms and support the selection or design of specific phages, while controlled laboratory studies would assess whether biofilm destabilization improves microplastic interaction, capture or later analytical evaluation. This early-stage hypothesis requires in vitro validation, toxicity assessment, reproducible analytical controls and clinical caution.'
+                    },
+                    {
+                        title: 'Review methodology',
+                        body: 'Structured academic literature review: 75 articles were assessed and 51 selected using explicit inclusion and selection criteria. Searches covered Spanish, English, Portuguese and Russian sources, including PubMed/NIH, ASM, JIDC, Google Scholar and university repositories. The work followed seven phases spanning search, screening, analysis, drafting and final scientific writing.'
                     }
                 ],
                 resources: [
@@ -594,12 +604,12 @@
             },
             chitosan: {
                 category: 'Research note · Concept · AETEL 2025', status: 'Concept', title: 'Medical applications of chitosan: potential for microplastic capture and biomedical study',
-                summary: 'Literature-informed proposal presented in the AETEL 2025 context. It explores whether modified chitosan, a biocompatible biopolymer derived from chitin, could be studied as a platform for interacting with microplastics in future biomedical or analytical models.',
+                summary: 'Literature-informed conceptual proposal developed and submitted internally to the training centre for consideration in the context of AETEL 2025. The centre ultimately prioritised another submission, so this proposal did not advance to the event.',
                 problem: 'Microplastics are an emerging health concern, but human exposure, accumulation and clinical impact still require careful experimental confirmation.',
                 contribution: 'Original concept development, hypothesis framing, proposed methodology and scientific communication. The contribution includes the adsorption, biofilm-guided design, degradation-support and biomedical feasibility hypotheses, with scope and limitations stated explicitly.',
                 result: 'Current maturity is conceptual only. Proposed methods include biofilm sequencing, MiSeq-based microbial profiling, chitosan modification, FTIR characterization, adsorption assays and biocompatibility testing. No experimental validation was performed.',
                 next: 'The proposal requires in vitro validation, toxicity assessment, robust controls, reproducible analytical methods, independent scientific review and cautious interpretation before any biomedical or clinical interpretation. It does not claim demonstrated therapeutic efficacy.',
-                disclosure: 'Scientific limitation and integrity notice: literature-informed concept in AETEL 2025 context; no experimental validation performed; in vitro validation is required before any biomedical interpretation.',
+                disclosure: 'Scientific integrity note: literature-informed conceptual proposal with no original experimental validation. In vitro validation, toxicity assessment, robust controls and reproducible analytical methods are required before any biomedical or clinical interpretation.',
                 details: [
                     {
                         title: 'Central idea',
@@ -634,13 +644,13 @@
             laprincesa: {
                 category: 'Laboratory Practice', status: 'Completed', title: 'Clinical & Biomedical Laboratory Practice · La Princesa',
                 summary: 'Three-month research-laboratory placement in Madrid integrating clinical sample workflows with molecular and immunology techniques.',
-                context: '370-hour FCT placement in 2025 at Fundación para la Investigación Biomédica del Hospital Universitario de La Princesa in Madrid, within a research environment handling human and animal samples.',
+                context: '370-hour FCT placement in 2025 at Fundación para la Investigación Biomédica del Hospital Universitario de La Princesa in Madrid, within the Immunology Service and Nutrition & Inflammation Laboratory. The group studies cellular and molecular mechanisms in inflammatory and autoimmune diseases using human and animal samples.',
                 technicalWork: 'Supported day-to-day cell-culture, sample-processing, molecular-biology and immunology workflows under laboratory protocols, together with scientific-database work, material and inventory management, and development of a bilingual scientific website for the research group. The supervised role strengthened reproducibility, assay interpretation and quality-control practice while building greater autonomy.',
-                technicalEvidence: 'Documented scope includes cytokine-stimulated and adherent cell cultures, including HaCaT; media preparation, passaging and freezing; Buffy Coat handling and CD4/CD14 isolation; human samples in psoriasis, dermatitis and hidradenitis suppurativa contexts; animal samples and murine lymphoid organs; RNA extraction, PCR, electrophoresis and transgenic-mouse genotyping; ELISA; Western blot preparation, transfer and blocking; immunohistochemistry; and immunofluorescence. An existing professional reference supports the placement, protocol work and laboratory-material responsibilities.',
+                technicalEvidence: 'Documented scope includes serum, peripheral blood, immune cells, cell lines and primary rat cells; cytokine-stimulated and adherent cell cultures, including HaCaT; sterile technique, media preparation, passaging and freezing; Buffy Coat handling and CD4/CD14 isolation; human samples in psoriasis, dermatitis and hidradenitis suppurativa contexts; animal samples and murine lymphoid organs; RNA extraction, PCR, electrophoresis and transgenic-mouse genotyping; ELISA; Western blot gel casting, transfer and blocking; immunohistochemistry; and immunofluorescence. An existing professional reference supports the placement, protocol work and laboratory-material responsibilities.',
                 technicalEvidenceLead: 'Documented scope includes',
                 technicalEvidenceGroups: [
-                    { title: 'Cell culture & samples', body: 'cytokine-stimulated and adherent cell cultures, including HaCaT; media preparation, passaging and freezing; Buffy Coat handling and CD4/CD14 isolation; human samples in psoriasis, dermatitis and hidradenitis suppurativa contexts; animal samples and murine lymphoid organs' },
-                    { title: 'Molecular biology', body: 'RNA extraction, PCR, electrophoresis and transgenic-mouse genotyping; Western blot preparation, transfer and blocking' },
+                    { title: 'Cell culture & samples', body: 'serum, peripheral blood, immune cells, cell lines and primary rat cells; cytokine-stimulated and adherent cell cultures, including HaCaT; sterile technique, media preparation, passaging and freezing; Buffy Coat handling and CD4/CD14 isolation; human samples in psoriasis, dermatitis and hidradenitis suppurativa contexts; animal samples and murine lymphoid organs' },
+                    { title: 'Molecular biology', body: 'RNA extraction, PCR, electrophoresis and transgenic-mouse genotyping; Western blot gel casting, transfer and blocking' },
                     { title: 'Immunology', body: 'ELISA; immunohistochemistry; and immunofluorescence' },
                     { title: 'Documentation & professional evidence', body: 'An existing professional reference supports the placement, protocol work and laboratory-material responsibilities.' }
                 ],
@@ -650,13 +660,14 @@
                 category: 'Laboratory Practice', status: 'Completed', title: 'Analytical & Biomass Laboratory Practice · Celignis',
                 summary: 'Erasmus+ placement in Limerick focused on analytical biomass testing, GLP routines and technical documentation.',
                 context: 'Erasmus+ placement from 03/2023 to 05/2023 at Celignis Biomass Analysis Laboratory in Limerick, Ireland, supporting analytical work for clients and in the context of SteamBioAfrica and BIO4Africa.',
-                technicalWork: 'Prepared samples and supported analytical workflows under GLP-based routines; operated, calibrated, troubleshot, maintained and monitored laboratory equipment; contributed to SOPs, technical documentation and traceability; progressively assumed responsibility for volatile-matter analysis; and trained and supervised replacement interns during handover.',
-                technicalEvidence: 'Documented scope includes moisture, ash, volatile matter, CHNOS elemental analysis, ash melting, BMP and biogas, COD, ammonia, NIR/VISION and vacuum filtration; operation of a CHNOS analyser, TGA Q500, CARBOLITE furnaces, BMP units and Biogas 5000; internal statistical quality controls; and Thermal Excel records, batches, labels and result traceability. An existing professional reference supports the placement and its operational responsibilities. This foundation supports continued development in method validation, uncertainty analysis and cross-method interpretation.',
+                technicalWork: 'Sample preparation and performance of analytical workflows under GLP-based routines and according to established SOPs; equipment operation, calibration, troubleshooting, maintenance and monitoring; creation of operational guides, data sheets, work instructions and troubleshooting documentation; progressive responsibility for volatile-matter analysis; and training and supervision of replacement interns during handover.',
+                technicalEvidence: 'Documented practical scope includes moisture, ash, volatile matter, fixed carbon, thermogravimetric analysis (TGA), CHNOS elemental analysis, ash melting, BMP and biogas, FOS/TAC, ICP, COD, ammonia, NIR/VISION and vacuum filtration; operation of a CHNOS analyser, TGA Q500, CARBOLITE furnaces, BMP units and Biogas 5000; internal statistical quality controls; and Thermal Excel records, database updates, batches, labels and result traceability. Operational documentation covers analytical methods, analysis startup, batches, samples/NIR, labelling, data sheets and Thermal Excel troubleshooting. An existing professional reference supports the placement and its operational responsibilities. This foundation supports continued development in method validation, uncertainty analysis and cross-method interpretation.',
                 technicalEvidenceLead: 'Documented scope includes',
                 technicalEvidenceGroups: [
-                    { title: 'Analysis', body: 'moisture, ash, volatile matter, CHNOS elemental analysis, ash melting, BMP and biogas, COD, ammonia, NIR/VISION and vacuum filtration' },
+                    { title: 'Analysis', body: 'moisture, ash, volatile matter, fixed carbon, thermogravimetric analysis (TGA), CHNOS elemental analysis, ash melting, BMP and biogas, FOS/TAC, ICP, COD, ammonia, NIR/VISION and vacuum filtration' },
                     { title: 'Instrumentation', body: 'operation of a CHNOS analyser, TGA Q500, CARBOLITE furnaces, BMP units and Biogas 5000' },
-                    { title: 'Quality & documentation', body: 'internal statistical quality controls; and Thermal Excel records, batches, labels and result traceability' },
+                    { title: 'Quality & traceability', body: 'work according to established SOPs, internal statistical quality-control self-checks, Thermal Excel records, database updates, batches, labels and result traceability' },
+                    { title: 'Operational documentation created', body: 'operational guides, data sheets, work instructions and troubleshooting documentation covering analytical methods, analysis startup, batches, samples and NIR, labelling, Thermal Excel and traceability' },
                     { title: 'Responsibility & professional evidence', body: 'An existing professional reference supports the placement and its operational responsibilities. This foundation supports continued development in method validation, uncertainty analysis and cross-method interpretation.' }
                 ],
                 disclosure: 'Scope note: this entry documents supervised analytical placement practice and validated routine participation.'
@@ -670,7 +681,7 @@
                 contribution: 'Definición de los objetivos de aprendizaje, los requisitos funcionales, la jerarquía de contenidos, el modelo de corrección, la confirmación de memoria y las decisiones de producto. La programación está asistida por IA.',
                 result: 'Existe un prototipo local funcional que se desarrolla en bloques funcionales amplios. Demuestra pensamiento de producto y diseño de aprendizaje aplicado, pero todavía no es un producto público terminado.',
                 next: 'Todavía requiere pruebas continuas, validación de contenidos, revisión de usabilidad y una demostración pública más clara antes de describirse como completado.',
-                disclosure: 'Uso de IA: apoyo en implementación técnica y revisión editorial. Conceptualización, requisitos, contenido, pruebas y decisiones finales a cargo de Jhon M. Cuenca.'
+                disclosure: 'Uso de IA: apoyo en implementación técnica y revisión editorial. Yo defino la conceptualización, los requisitos, el contenido, las pruebas y las decisiones finales.'
             },
             portfolio: {
                 category: 'Proyecto · Hito', status: 'Funcional', title: 'Portafolio científico',
@@ -679,11 +690,11 @@
                 contribution: 'Responsabilidad sobre el contenido profesional, las decisiones de publicación, los requisitos funcionales, la revisión del lenguaje y de las afirmaciones científicas, las pruebas de la web y las decisiones de producto y diseño.',
                 result: 'La web está publicada mediante GitHub Pages, tiene soporte en inglés, alemán y español y presenta secciones profesionales accesibles.',
                 next: 'Los próximos pasos son perfeccionar la separación entre el perfil profesional y Workbench, mejorar el mantenimiento del contenido y continuar las validaciones de accesibilidad y diseño responsive.',
-                disclosure: 'Uso de IA: apoyo en implementación técnica y revisión editorial. Conceptualización, requisitos, contenido, pruebas y decisiones finales a cargo de Jhon M. Cuenca.',
+                disclosure: 'Uso de IA: apoyo en implementación técnica y revisión editorial. Yo defino la conceptualización, los requisitos, el contenido, las pruebas y las decisiones finales.',
                 details: [
                     {
                         title: 'Finalidad',
-                        body: 'Presentar el perfil profesional, la experiencia y la documentación profesional pública de Jhon M. Cuenca; mantener Workbench como un espacio separado para proyectos, notas y aprendizaje aplicado; y comunicar el contenido científico separando con claridad evidencia, interpretación e hipótesis.'
+                        body: 'Presentar mi perfil profesional, experiencia y documentación profesional pública; mantener Workbench como un espacio separado para proyectos, notas y aprendizaje aplicado; y comunicar el contenido científico separando con claridad evidencia, interpretación e hipótesis.'
                     },
                     {
                         title: 'Arquitectura',
@@ -695,11 +706,11 @@
                     },
                     {
                         title: 'Archivo técnico de prácticas · La Princesa',
-                        body: 'La profundidad técnica preservada en Workbench incluye cultivo celular estimulado por citocinas y de líneas adherentes, manejo de Buffy Coat, aislamiento CD4/CD14, procesamiento de muestras humanas y animales (incluyendo contextos de psoriasis, dermatitis e hidradenitis supurativa), procesamiento de órganos linfoides murinos, extracción de ARN, PCR, electroforesis, genotipado de ratones transgénicos, ELISA, preparación de Western blot, preparación de medios, inmunohistoquímica, inmunofluorescencia, trabajo con protocolos, bases de datos científicas, gestión de material e inventario de laboratorio, y la web científica bilingüe desarrollada para el grupo de investigación.'
+                        body: 'La profundidad técnica preservada en Workbench incluye cultivo celular estimulado por citocinas y de líneas adherentes, técnica estéril, manejo de Buffy Coat, aislamiento CD4/CD14, procesamiento de muestras humanas y animales (incluyendo contextos de psoriasis, dermatitis e hidradenitis supurativa), procesamiento de órganos linfoides murinos, extracción de ARN, PCR, electroforesis, genotipado de ratones transgénicos, ELISA, preparación de geles de Western blot, transferencia y bloqueo, preparación de medios, inmunohistoquímica, inmunofluorescencia, trabajo con protocolos, bases de datos científicas, gestión de material e inventario de laboratorio, y la web científica bilingüe desarrollada para el grupo de investigación.'
                     },
                     {
                         title: 'Archivo técnico de prácticas · Celignis',
-                        body: 'La profundidad técnica preservada en Workbench incluye humedad, cenizas, materia volátil, CHNOS, fusión de cenizas, BMP/biogás, DQO, amonio y flujos NIR/VISION; operación de analizador elemental CHNOS, TGA Q500, hornos CARBOLITE, unidades BMP y Biogas 5000; GLP y controles estadísticos internos de calidad; calibración, troubleshooting, mantenimiento y monitorización, preparación de muestras, soporte a SOP y documentación técnica, responsabilidad progresiva sobre el flujo de materia volátil, formación y supervisión de becarios de relevo, trabajo para clientes y contexto de proyectos SteamBioAfrica y BIO4Africa (fechas de prácticas: 03/2023-05/2023).'
+                        body: 'La profundidad técnica preservada en Workbench incluye humedad, cenizas, materia volátil, CHNOS, fusión de cenizas, BMP/biogás, DQO, amonio y flujos NIR/VISION; operación de analizador elemental CHNOS, TGA Q500, hornos CARBOLITE, unidades BMP y Biogas 5000; GLP y controles estadísticos internos de calidad; calibración, troubleshooting, mantenimiento y monitorización, preparación de muestras, actualización de bases de datos, trabajo conforme a SOP y documentación técnica, responsabilidad progresiva sobre el flujo de materia volátil, formación y supervisión de becarios de relevo, trabajo para clientes y contexto de proyectos SteamBioAfrica y BIO4Africa (fechas de prácticas: 03/2023-05/2023).'
                     }
                 ],
                 resources: [
@@ -722,6 +733,10 @@
                     {
                         title: 'Hipótesis interdisciplinar original',
                         body: 'Como contribución individual dentro del trabajo final colaborativo, se propone un futuro concepto de investigación que combina la especificidad de los bacteriófagos con la adsorción basada en quitosano. Los fagos no actuarían directamente sobre los polímeros plásticos. La secuenciación podría identificar microorganismos asociados a biopelículas sobre microplásticos y apoyar la selección o el diseño de fagos específicos, mientras que estudios controlados de laboratorio evaluarían si la desestabilización de biopelículas mejora la interacción, captura o evaluación analítica posterior de microplásticos. Esta hipótesis inicial requiere validación in vitro, evaluación de toxicidad, controles analíticos reproducibles y cautela clínica.'
+                    },
+                    {
+                        title: 'Metodología de revisión',
+                        body: 'Revisión bibliográfica académica estructurada: se evaluaron 75 artículos y se seleccionaron 51 mediante criterios explícitos de inclusión y selección. La búsqueda abarcó fuentes en español, inglés, portugués y ruso, entre ellas PubMed/NIH, ASM, JIDC, Google Académico y repositorios universitarios. El trabajo siguió siete fases, desde la búsqueda y el cribado hasta el análisis, la redacción y la escritura científica final.'
                     }
                 ],
                 resources: [
@@ -731,12 +746,12 @@
             },
             chitosan: {
                 category: 'Nota de investigación · Concepto · AETEL 2025', status: 'Concepto', title: 'Aplicaciones médicas del quitosano: potencial para la captura de microplásticos y su estudio biomédico',
-                summary: 'Propuesta informada por literatura, presentada en el contexto AETEL 2025. Hipótesis de investigación en fase inicial que explora si el quitosano modificado, un biopolímero biocompatible derivado de la quitina, podría estudiarse como plataforma para interactuar con microplásticos en futuros modelos biomédicos o analíticos.',
+                summary: 'Propuesta conceptual informada por literatura, desarrollada y presentada internamente al centro para su consideración en el contexto de AETEL 2025. El centro finalmente priorizó otra propuesta, por lo que esta no avanzó al evento.',
                 problem: 'Los microplásticos son una preocupación emergente para la salud, pero la exposición humana, su posible acumulación y su impacto clínico todavía requieren confirmación experimental cuidadosa.',
                 contribution: 'Desarrollo original del concepto, formulación de hipótesis, metodología propuesta y comunicación científica. La contribución incluye las hipótesis de adsorción, diseño guiado por biopelículas, apoyo a la degradación y viabilidad biomédica, con alcance y limitaciones explícitos.',
                 result: 'La madurez actual es exclusivamente conceptual. Los métodos propuestos incluyen secuenciación de biopelículas, perfilado microbiano mediante MiSeq, modificación de quitosano, caracterización por FTIR, ensayos de adsorción y pruebas de biocompatibilidad. No se ha realizado validación experimental.',
                 next: 'La propuesta requiere validación in vitro, evaluación de toxicidad, controles robustos, métodos analíticos reproducibles, revisión científica independiente e interpretación prudente antes de cualquier interpretación biomédica o clínica. No afirma eficacia terapéutica demostrada.',
-                disclosure: 'Nota de integridad científica: concepto informado por literatura en contexto AETEL 2025; no se realizó validación experimental; se requiere validación in vitro antes de cualquier interpretación biomédica.',
+                disclosure: 'Nota de integridad científica: propuesta conceptual informada por literatura y sin validación experimental propia. Requiere validación in vitro, evaluación de toxicidad, controles robustos y métodos analíticos reproducibles antes de cualquier interpretación biomédica o clínica.',
                 details: [
                     {
                         title: 'Idea central',
@@ -771,13 +786,13 @@
             laprincesa: {
                 category: 'Prácticas de laboratorio', status: 'Completado', title: 'Prácticas en Laboratorio Clínico y Biomédico · La Princesa',
                 summary: 'Prácticas de tres meses en laboratorio de investigación en Madrid, integrando trabajo con muestras clínicas y técnicas moleculares e inmunológicas.',
-                context: 'Prácticas FCT de 370 horas en 2025 en la Fundación para la Investigación Biomédica del Hospital Universitario de La Princesa, Madrid, dentro de un entorno de investigación con muestras humanas y animales.',
+                context: 'Prácticas FCT de 370 horas en 2025 en la Fundación para la Investigación Biomédica del Hospital Universitario de La Princesa, Madrid, dentro del Servicio de Inmunología y el Laboratorio de Nutrición e Inflamación. El grupo estudia mecanismos celulares y moleculares de enfermedades inflamatorias y autoinmunes con muestras humanas y animales.',
                 technicalWork: 'Apoyo diario en flujos de cultivo celular, procesamiento de muestras, biología molecular e inmunología siguiendo protocolos de laboratorio, junto con consulta de bases de datos científicas, gestión de material e inventario y desarrollo de una web científica bilingüe para el grupo de investigación. El trabajo supervisado reforzó la reproducibilidad, la interpretación de ensayos y el control de calidad mientras aumentaba la autonomía.',
-                technicalEvidence: 'El alcance documentado incluye cultivos celulares estimulados por citocinas y líneas adherentes, incluidas HaCaT; preparación de medios, pases y congelación; manejo de Buffy Coat y aislamiento CD4/CD14; muestras humanas en contextos de psoriasis, dermatitis e hidradenitis supurativa; muestras animales y órganos linfoides murinos; extracción de ARN, PCR, electroforesis y genotipado de ratones transgénicos; ELISA; preparación de Western blot, transferencia y bloqueo; inmunohistoquímica e inmunofluorescencia. Existe una referencia profesional que respalda las prácticas, el trabajo con protocolos y las responsabilidades sobre material de laboratorio.',
+                technicalEvidence: 'El alcance documentado incluye suero, sangre periférica, células inmunitarias, líneas celulares y células primarias de rata; cultivos celulares estimulados por citocinas y líneas adherentes, incluidas HaCaT; técnica estéril, preparación de medios, pases y congelación; manejo de Buffy Coat y aislamiento CD4/CD14; muestras humanas en contextos de psoriasis, dermatitis e hidradenitis supurativa; muestras animales y órganos linfoides murinos; extracción de ARN, PCR, electroforesis y genotipado de ratones transgénicos; ELISA; preparación de geles de Western blot, transferencia y bloqueo; inmunohistoquímica e inmunofluorescencia. Existe una referencia profesional que respalda las prácticas, el trabajo con protocolos y las responsabilidades sobre material de laboratorio.',
                 technicalEvidenceLead: 'El alcance documentado incluye',
                 technicalEvidenceGroups: [
-                    { title: 'Cultivo celular y muestras', body: 'cultivos celulares estimulados por citocinas y líneas adherentes, incluidas HaCaT; preparación de medios, pases y congelación; manejo de Buffy Coat y aislamiento CD4/CD14; muestras humanas en contextos de psoriasis, dermatitis e hidradenitis supurativa; muestras animales y órganos linfoides murinos' },
-                    { title: 'Biología molecular', body: 'extracción de ARN, PCR, electroforesis y genotipado de ratones transgénicos; preparación de Western blot, transferencia y bloqueo' },
+                    { title: 'Cultivo celular y muestras', body: 'suero, sangre periférica, células inmunitarias, líneas celulares y células primarias de rata; cultivos estimulados por citocinas y líneas adherentes, incluidas HaCaT; técnica estéril, preparación de medios, pases y congelación; manejo de Buffy Coat y aislamiento CD4/CD14; muestras humanas en contextos de psoriasis, dermatitis e hidradenitis supurativa; muestras animales y órganos linfoides murinos' },
+                    { title: 'Biología molecular', body: 'extracción de ARN, PCR, electroforesis y genotipado de ratones transgénicos; preparación de geles de Western blot, transferencia y bloqueo' },
                     { title: 'Inmunología', body: 'ELISA; inmunohistoquímica e inmunofluorescencia' },
                     { title: 'Documentación y evidencia profesional', body: 'Existe una referencia profesional que respalda las prácticas, el trabajo con protocolos y las responsabilidades sobre material de laboratorio.' }
                 ],
@@ -787,13 +802,14 @@
                 category: 'Prácticas de laboratorio', status: 'Completado', title: 'Prácticas en Laboratorio Analítico y de Biomasa · Celignis',
                 summary: 'Prácticas Erasmus+ en Limerick orientadas a ensayos analíticos de biomasa, rutinas GLP y documentación técnica.',
                 context: 'Prácticas Erasmus+ de 03/2023 a 05/2023 en Celignis Biomass Analysis Laboratory, Limerick, Irlanda, apoyando trabajo analítico para clientes y en el contexto de SteamBioAfrica y BIO4Africa.',
-                technicalWork: 'Preparación de muestras y apoyo en flujos analíticos bajo rutinas basadas en GLP; operación, calibración, troubleshooting, mantenimiento y monitorización de equipos; contribución a SOPs, documentación técnica y trazabilidad; responsabilidad progresiva sobre el análisis de materia volátil; y formación y supervisión de los becarios que relevaron el puesto.',
-                technicalEvidence: 'El alcance documentado incluye humedad, cenizas, materia volátil, análisis elemental CHNOS, fusión de cenizas, BMP y biogás, DQO, amonio, NIR/VISION y filtración al vacío; operación de analizador CHNOS, TGA Q500, hornos CARBOLITE, unidades BMP y Biogas 5000; controles estadísticos internos de calidad; y registros en Thermal Excel, lotes, etiquetas y trazabilidad de resultados. Existe una referencia profesional que respalda las prácticas y sus responsabilidades operativas. Esta base permite seguir avanzando en validación de métodos, análisis de incertidumbre e interpretación cruzada de técnicas.',
+                technicalWork: 'Preparación de muestras y realización de flujos analíticos bajo rutinas GLP y conforme a SOP establecidos; operación, calibración, resolución de incidencias, mantenimiento y monitorización de equipos; creación de guías operativas, hojas de datos, instrucciones de trabajo y documentación de troubleshooting; responsabilidad progresiva sobre el análisis de materia volátil; y formación y supervisión de las personas que relevaron el puesto.',
+                technicalEvidence: 'El alcance práctico documentado incluye humedad, cenizas, materia volátil, carbono fijo, análisis termogravimétrico (TGA), análisis elemental CHNOS, fusión de cenizas, BMP y biogás, FOS/TAC, ICP, DQO, amonio, NIR/VISION y filtración al vacío; operación de analizador CHNOS, TGA Q500, hornos CARBOLITE, unidades BMP y Biogas 5000; controles estadísticos internos de calidad; y registros en Thermal Excel, actualización de bases de datos, lotes, etiquetas y trazabilidad de resultados. La documentación operativa abarca métodos analíticos, inicio de análisis, batches, muestras/NIR, etiquetado, hojas de datos y troubleshooting de Thermal Excel. Existe una referencia profesional que respalda las prácticas y sus responsabilidades operativas. Esta base permite seguir avanzando en validación de métodos, análisis de incertidumbre e interpretación cruzada de técnicas.',
                 technicalEvidenceLead: 'El alcance documentado incluye',
                 technicalEvidenceGroups: [
-                    { title: 'Análisis', body: 'humedad, cenizas, materia volátil, análisis elemental CHNOS, fusión de cenizas, BMP y biogás, DQO, amonio, NIR/VISION y filtración al vacío' },
+                    { title: 'Análisis', body: 'humedad, cenizas, materia volátil, carbono fijo, análisis termogravimétrico (TGA), análisis elemental CHNOS, fusión de cenizas, BMP y biogás, FOS/TAC, ICP, DQO, amonio, NIR/VISION y filtración al vacío' },
                     { title: 'Instrumentación', body: 'operación de analizador CHNOS, TGA Q500, hornos CARBOLITE, unidades BMP y Biogas 5000' },
-                    { title: 'Calidad y documentación', body: 'controles estadísticos internos de calidad; y registros en Thermal Excel, lotes, etiquetas y trazabilidad de resultados' },
+                    { title: 'Calidad y trazabilidad', body: 'trabajo conforme a SOP establecidos, autocontroles estadísticos de calidad, registros en Thermal Excel, actualización de bases de datos, lotes, etiquetas y trazabilidad de resultados' },
+                    { title: 'Documentación operativa creada', body: 'guías operativas, hojas de datos, instrucciones de trabajo y documentación de troubleshooting sobre métodos analíticos, inicio de análisis, batches, muestras y NIR, etiquetado, Thermal Excel y trazabilidad' },
                     { title: 'Responsabilidad y evidencia profesional', body: 'Existe una referencia profesional que respalda las prácticas y sus responsabilidades operativas. Esta base permite seguir avanzando en validación de métodos, análisis de incertidumbre e interpretación cruzada de técnicas.' }
                 ],
                 disclosure: 'Nota de alcance: esta entrada documenta práctica analítica supervisada y participación en rutinas validadas.'
@@ -807,7 +823,7 @@
                 contribution: 'Festlegung von Lernzielen, funktionalen Anforderungen, Inhaltshierarchie, Korrekturmodell, bestätigter Speicherung und Produktentscheidungen. Die Programmierung ist KI-unterstützt.',
                 result: 'Ein funktionsfähiger lokaler Prototyp wird in größeren funktionalen Blöcken weiterentwickelt. Er zeigt Produktdenken und angewandtes Lerndesign, ist aber noch kein fertiges öffentliches Produkt.',
                 next: 'Weitere Tests, Inhaltsvalidierung, Usability-Prüfung und eine klarere öffentliche Demonstration sind erforderlich, bevor das Projekt als abgeschlossen gelten kann.',
-                disclosure: 'KI-Einsatz: Unterstützung bei technischer Umsetzung und redaktioneller Überarbeitung. Konzept, Anforderungen, Inhalte, Tests und abschließende Entscheidungen durch Jhon M. Cuenca.'
+                disclosure: 'KI-Einsatz: Unterstützung bei technischer Umsetzung und redaktioneller Überarbeitung. Konzept, Anforderungen, Inhalte, Tests und abschließende Entscheidungen definiere ich selbst.'
             },
             portfolio: {
                 category: 'Projekt · Meilenstein', status: 'Funktionsfähig', title: 'Wissenschaftliches Portfolio',
@@ -816,11 +832,11 @@
                 contribution: 'Verantwortung für berufliche Inhalte, Veröffentlichungsentscheidungen, funktionale Anforderungen, die Prüfung von Formulierungen und wissenschaftlichen Aussagen, Website-Tests sowie Produkt- und Designentscheidungen.',
                 result: 'Die Website ist über GitHub Pages veröffentlicht, unterstützt Englisch, Deutsch und Spanisch und bietet zugängliche professionelle Bereiche.',
                 next: 'Die nächsten Schritte sind die weitere Ausarbeitung der Trennung zwischen Berufsprofil und Workbench, eine bessere Inhaltspflege sowie fortlaufende Prüfungen der Barrierefreiheit und des responsiven Layouts.',
-                disclosure: 'KI-Einsatz: Unterstützung bei technischer Umsetzung und redaktioneller Überarbeitung. Konzept, Anforderungen, Inhalte, Tests und abschließende Entscheidungen durch Jhon M. Cuenca.',
+                disclosure: 'KI-Einsatz: Unterstützung bei technischer Umsetzung und redaktioneller Überarbeitung. Konzept, Anforderungen, Inhalte, Tests und abschließende Entscheidungen definiere ich selbst.',
                 details: [
                     {
                         title: 'Zweck',
-                        body: 'Das Berufsprofil, die Erfahrung und die öffentlichen beruflichen Unterlagen von Jhon M. Cuenca darstellen; die Workbench als getrennten Raum für Projekte, Notizen und angewandtes Lernen führen; und wissenschaftliche Inhalte durch eine klare Trennung von Evidenz, Interpretation und Hypothesen kommunizieren.'
+                        body: 'Mein Berufsprofil, meine Erfahrung und meine öffentlichen beruflichen Unterlagen darstellen; die Workbench als getrennten Raum für Projekte, Notizen und angewandtes Lernen führen; und wissenschaftliche Inhalte durch eine klare Trennung von Evidenz, Interpretation und Hypothesen kommunizieren.'
                     },
                     {
                         title: 'Architektur',
@@ -832,11 +848,11 @@
                     },
                     {
                         title: 'Technisches Praxisarchiv · La Princesa',
-                        body: 'Die in der Workbench erhaltene technische Tiefe umfasst cytokine-stimulated und adhärente Zellkultur-Workflows, Buffy-Coat-Handhabung, CD4/CD14-Isolierung, Verarbeitung humaner und tierischer Proben (einschließlich Kontexte zu Psoriasis, Dermatitis und Hidradenitis suppurativa), Verarbeitung muriner lymphoider Organe, RNA-Extraktion, PCR, Elektrophorese, Genotypisierung transgener Mäuse, ELISA, Western-Blot-Vorbereitung, Medienvorbereitung, Immunhistochemie, Immunfluoreszenz, Protokollarbeit, wissenschaftliche Datenbanken, Material- und Bestandsmanagement im Labor sowie die zweisprachige wissenschaftliche Website der Forschungsgruppe.'
+                        body: 'Die in der Workbench erhaltene technische Tiefe umfasst zytokinstimulierte und adhärente Zellkultur-Workflows, steriles Arbeiten, Buffy-Coat-Handhabung, CD4/CD14-Isolierung, Verarbeitung humaner und tierischer Proben (einschließlich Kontexte zu Psoriasis, Dermatitis und Hidradenitis suppurativa), Verarbeitung muriner lymphoider Organe, RNA-Extraktion, PCR, Elektrophorese, Genotypisierung transgener Mäuse, ELISA, Western-Blot-Gelherstellung, Transfer und Blocking, Medienvorbereitung, Immunhistochemie, Immunfluoreszenz, Protokollarbeit, wissenschaftliche Datenbanken, Material- und Bestandsmanagement im Labor sowie die zweisprachige wissenschaftliche Website der Forschungsgruppe.'
                     },
                     {
                         title: 'Technisches Praxisarchiv · Celignis',
-                        body: 'Die in der Workbench erhaltene technische Tiefe umfasst Feuchte, Asche, flüchtige Bestandteile, CHNOS, Ascheschmelze, BMP/Biogas, CSB, Ammonium und NIR/VISION-Workflows; Bedienung von CHNOS-Elementaranalysator, TGA Q500, CARBOLITE-Öfen, BMP-Einheiten und Biogas 5000; GLP und interne statistische Qualitätskontrollen; Kalibrierung, Troubleshooting, Wartung und Überwachung, Probenvorbereitung, SOP-Unterstützung und technische Dokumentation, schrittweise Verantwortung für den Workflow flüchtiger Bestandteile, Einarbeitung und Betreuung von nachfolgenden Praktikantinnen und Praktikanten, Kundenarbeit sowie Projektkontext mit SteamBioAfrica und BIO4Africa (Praktikumszeitraum: 03/2023-05/2023).'
+                        body: 'Die in der Workbench erhaltene technische Tiefe umfasst Feuchte, Asche, flüchtige Bestandteile, CHNOS, Ascheschmelze, BMP/Biogas, CSB, Ammonium und NIR/VISION-Workflows; Bedienung von CHNOS-Elementaranalysator, TGA Q500, CARBOLITE-Öfen, BMP-Einheiten und Biogas 5000; GLP und interne statistische Qualitätskontrollen; Kalibrierung, Troubleshooting, Wartung und Überwachung, Probenvorbereitung, Datenbankaktualisierungen, Arbeit nach SOPs und technische Dokumentation, schrittweise Verantwortung für den Workflow flüchtiger Bestandteile, Einarbeitung und Betreuung von nachfolgenden Praktikantinnen und Praktikanten, Kundenarbeit sowie Projektkontext mit SteamBioAfrica und BIO4Africa (Praktikumszeitraum: 03/2023-05/2023).'
                     }
                 ],
                 resources: [
@@ -859,6 +875,10 @@
                     {
                         title: 'Ursprüngliche interdisziplinäre Hypothese',
                         body: 'Als individueller Beitrag innerhalb der gemeinsamen Abschlussarbeit wird ein zukünftiges Forschungskonzept vorgeschlagen, das die Spezifität von Bakteriophagen mit chitosanbasierter Adsorption verbindet. Phagen würden nicht direkt auf Kunststoffpolymere wirken. Sequenzierung könnte Mikroorganismen identifizieren, die mit Mikroplastik-Biofilmen verbunden sind, und die Auswahl oder Entwicklung spezifischer Phagen unterstützen. Kontrollierte Laborstudien würden prüfen, ob eine Destabilisierung der Biofilme die Interaktion, Aufnahme oder spätere analytische Bewertung von Mikroplastik verbessert. Diese frühe Hypothese erfordert In-vitro-Validierung, Toxizitätsbewertung, reproduzierbare analytische Kontrollen und klinische Vorsicht.'
+                    },
+                    {
+                        title: 'Methodik der Literaturübersicht',
+                        body: 'Strukturierte akademische Literaturübersicht: 75 Artikel wurden bewertet und 51 anhand ausdrücklich festgelegter Einbeziehungs- und Auswahlkriterien ausgewählt. Die Recherche umfasste spanische, englische, portugiesische und russische Quellen, darunter PubMed/NIH, ASM, JIDC, Google Scholar und Hochschulrepositorien. Die Arbeit folgte sieben Phasen von Recherche und Screening über Analyse und Entwurf bis zur wissenschaftlichen Endredaktion.'
                     }
                 ],
                 resources: [
@@ -868,12 +888,12 @@
             },
             chitosan: {
                 category: 'Forschungsnotiz · Konzept · AETEL 2025', status: 'Konzept', title: 'Medizinische Anwendungen von Chitosan: Potenzial zur Mikroplastikbindung und biomedizinischen Untersuchung',
-                summary: 'Literaturgestützter Vorschlag im Kontext AETEL 2025. Eine frühe Forschungshypothese, die untersucht, ob modifiziertes Chitosan, ein biokompatibles Biopolymer aus Chitin, als Plattform für die Interaktion mit Mikroplastik in zukünftigen biomedizinischen oder analytischen Modellen untersucht werden könnte.',
+                summary: 'Literaturgestützter Konzeptvorschlag, der entwickelt und intern beim Ausbildungszentrum zur Prüfung im Kontext AETEL 2025 eingereicht wurde. Das Zentrum priorisierte schließlich einen anderen Beitrag; dieser Vorschlag gelangte daher nicht zur Veranstaltung.',
                 problem: 'Mikroplastik ist ein aufkommendes Gesundheitsthema, aber menschliche Exposition, mögliche Akkumulation und klinische Auswirkungen erfordern weiterhin sorgfältige experimentelle Bestätigung.',
                 contribution: 'Originale Konzeptentwicklung, Hypothesenformulierung, vorgeschlagene Methodik und wissenschaftliche Kommunikation. Der Beitrag umfasst die Adsorptionshypothese, die biofilm-geleitete Designhypothese, die Hypothese zur Unterstützung des Abbaus und die Hypothese zur biomedizinischen Machbarkeit mit ausdrücklich benanntem Umfang und Grenzen.',
                 result: 'Der aktuelle Reifegrad ist rein konzeptionell. Zu den vorgeschlagenen Methoden gehören Biofilm-Sequenzierung, MiSeq-basierte mikrobielle Profilierung, Chitosanmodifikation, FTIR-Charakterisierung, Adsorptionsassays und Biokompatibilitätstests. Es wurde keine experimentelle Validierung durchgeführt.',
                 next: 'Der Vorschlag erfordert In-vitro-Validierung, Toxizitätsbewertung, robuste Kontrollen, reproduzierbare analytische Methoden, unabhängige wissenschaftliche Prüfung und vorsichtige Interpretation vor jeder biomedizinischen oder klinischen Deutung. Er beansprucht keine nachgewiesene therapeutische Wirksamkeit.',
-                disclosure: 'Hinweis zur wissenschaftlichen Integrität: literaturgestütztes Konzept im Kontext AETEL 2025; keine experimentelle Validierung durchgeführt; vor biomedizinischer Interpretation ist eine In-vitro-Validierung erforderlich.',
+                disclosure: 'Hinweis zur wissenschaftlichen Integrität: literaturgestützter Konzeptvorschlag ohne eigene experimentelle Validierung. Vor jeder biomedizinischen oder klinischen Interpretation sind In-vitro-Validierung, Toxizitätsbewertung, robuste Kontrollen und reproduzierbare analytische Methoden erforderlich.',
                 details: [
                     {
                         title: 'Zentrale Idee',
@@ -908,13 +928,13 @@
             laprincesa: {
                 category: 'Laborpraktikum', status: 'Abgeschlossen', title: 'Praktikum im klinisch-biomedizinischen Labor · La Princesa',
                 summary: 'Dreimonatiges Praktikum in einem Forschungslabor in Madrid mit Verbindung von klinischen Probenabläufen sowie molekularen und immunologischen Techniken.',
-                context: 'FCT-Praktikum mit 370 Stunden im Jahr 2025 bei der Fundación para la Investigación Biomédica del Hospital Universitario de La Princesa in Madrid, in einem Forschungsumfeld mit humanen und tierischen Proben.',
+                context: 'FCT-Praktikum mit 370 Stunden im Jahr 2025 bei der Fundación para la Investigación Biomédica del Hospital Universitario de La Princesa in Madrid, im Immunologiedienst und im Labor für Ernährung und Entzündung. Die Gruppe untersucht zelluläre und molekulare Mechanismen entzündlicher und autoimmuner Erkrankungen anhand humaner und tierischer Proben.',
                 technicalWork: 'Mitarbeit bei täglichen Abläufen in Zellkultur, Probenverarbeitung, Molekularbiologie und Immunologie nach Laborprotokollen sowie Arbeit mit wissenschaftlichen Datenbanken, Material- und Bestandsverwaltung und Entwicklung einer zweisprachigen wissenschaftlichen Website für die Forschungsgruppe. Die angeleitete Tätigkeit stärkte Reproduzierbarkeit, Assay-Interpretation und Qualitätskontrolle bei wachsender Eigenständigkeit.',
-                technicalEvidence: 'Der dokumentierte Umfang umfasst mit Zytokinen stimulierte und adhärente Zellkulturen einschließlich HaCaT; Medienvorbereitung, Passagieren und Einfrieren; Buffy-Coat-Verarbeitung und CD4/CD14-Isolierung; humane Proben im Kontext von Psoriasis, Dermatitis und Hidradenitis suppurativa; tierische Proben und murine lymphatische Organe; RNA-Extraktion, PCR, Elektrophorese und Genotypisierung transgener Mäuse; ELISA; Western-Blot-Vorbereitung, Transfer und Blocking; Immunhistochemie und Immunfluoreszenz. Eine vorhandene berufliche Referenz bestätigt das Praktikum, die Protokollarbeit und die Verantwortung für Labormaterial.',
+                technicalEvidence: 'Der dokumentierte Umfang umfasst Serum, peripheres Blut, Immunzellen, Zelllinien und primäre Rattenzellen; mit Zytokinen stimulierte und adhärente Zellkulturen einschließlich HaCaT; steriles Arbeiten, Medienvorbereitung, Passagieren und Einfrieren; Buffy-Coat-Verarbeitung und CD4/CD14-Isolierung; humane Proben im Kontext von Psoriasis, Dermatitis und Hidradenitis suppurativa; tierische Proben und murine lymphatische Organe; RNA-Extraktion, PCR, Elektrophorese und Genotypisierung transgener Mäuse; ELISA; Western-Blot-Gelherstellung, Transfer und Blocking; Immunhistochemie und Immunfluoreszenz. Eine vorhandene berufliche Referenz bestätigt das Praktikum, die Protokollarbeit und die Verantwortung für Labormaterial.',
                 technicalEvidenceLead: 'Der dokumentierte Umfang umfasst',
                 technicalEvidenceGroups: [
-                    { title: 'Zellkultur & Proben', body: 'mit Zytokinen stimulierte und adhärente Zellkulturen einschließlich HaCaT; Medienvorbereitung, Passagieren und Einfrieren; Buffy-Coat-Verarbeitung und CD4/CD14-Isolierung; humane Proben im Kontext von Psoriasis, Dermatitis und Hidradenitis suppurativa; tierische Proben und murine lymphatische Organe' },
-                    { title: 'Molekularbiologie', body: 'RNA-Extraktion, PCR, Elektrophorese und Genotypisierung transgener Mäuse; Western-Blot-Vorbereitung, Transfer und Blocking' },
+                    { title: 'Zellkultur & Proben', body: 'Serum, peripheres Blut, Immunzellen, Zelllinien und primäre Rattenzellen; mit Zytokinen stimulierte und adhärente Zellkulturen einschließlich HaCaT; steriles Arbeiten, Medienvorbereitung, Passagieren und Einfrieren; Buffy-Coat-Verarbeitung und CD4/CD14-Isolierung; humane Proben im Kontext von Psoriasis, Dermatitis und Hidradenitis suppurativa; tierische Proben und murine lymphatische Organe' },
+                    { title: 'Molekularbiologie', body: 'RNA-Extraktion, PCR, Elektrophorese und Genotypisierung transgener Mäuse; Western-Blot-Gelherstellung, Transfer und Blocking' },
                     { title: 'Immunologie', body: 'ELISA; Immunhistochemie und Immunfluoreszenz' },
                     { title: 'Dokumentation & beruflicher Nachweis', body: 'Eine vorhandene berufliche Referenz bestätigt das Praktikum, die Protokollarbeit und die Verantwortung für Labormaterial.' }
                 ],
@@ -924,13 +944,14 @@
                 category: 'Laborpraktikum', status: 'Abgeschlossen', title: 'Praktikum im analytischen Biomasse-Labor · Celignis',
                 summary: 'Erasmus+-Praktikum in Limerick mit Fokus auf analytische Biomasseprüfungen, GLP-Routinen und technische Dokumentation.',
                 context: 'Erasmus+-Praktikum von 03/2023 bis 05/2023 bei Celignis Biomass Analysis Laboratory in Limerick, Irland, mit Unterstützung analytischer Kundenarbeit sowie im Kontext von SteamBioAfrica und BIO4Africa.',
-                technicalWork: 'Probenvorbereitung und Unterstützung analytischer Abläufe nach GLP-orientierten Routinen; Bedienung, Kalibrierung, Fehleranalyse, Wartung und Überwachung von Geräten; Mitwirkung an SOPs, technischer Dokumentation und Rückverfolgbarkeit; schrittweise Verantwortung für die Analyse flüchtiger Bestandteile; sowie Einarbeitung und Betreuung der nachfolgenden Praktikantinnen und Praktikanten.',
-                technicalEvidence: 'Der dokumentierte Umfang umfasst Feuchte, Asche, flüchtige Bestandteile, CHNOS-Elementaranalyse, Ascheschmelze, BMP und Biogas, CSB, Ammonium, NIR/VISION und Vakuumfiltration; Bedienung von CHNOS-Analysator, TGA Q500, CARBOLITE-Öfen, BMP-Einheiten und Biogas 5000; interne statistische Qualitätskontrollen; sowie Thermal-Excel-Datensätze, Chargen, Etiketten und Ergebnisrückverfolgbarkeit. Eine vorhandene berufliche Referenz bestätigt das Praktikum und seine operativen Verantwortlichkeiten. Diese Grundlage unterstützt die weitere Entwicklung in Methodenvalidierung, Unsicherheitsanalyse und methodenübergreifender Interpretation.',
+                technicalWork: 'Probenvorbereitung und Durchführung analytischer Abläufe nach GLP-orientierten Routinen und festgelegten SOPs; Bedienung, Kalibrierung, Fehleranalyse, Wartung und Überwachung von Geräten; Erstellung operativer Leitfäden, Datenblätter, Arbeitsanweisungen und Troubleshooting-Dokumentation; schrittweise Verantwortung für die Analyse flüchtiger Bestandteile; sowie Einarbeitung und Betreuung nachfolgender Praktikantinnen und Praktikanten.',
+                technicalEvidence: 'Der dokumentierte praktische Umfang umfasst Feuchte, Asche, flüchtige Bestandteile, Fixkohlenstoff, thermogravimetrische Analyse (TGA), CHNOS-Elementaranalyse, Ascheschmelze, BMP und Biogas, FOS/TAC, ICP, CSB, Ammonium, NIR/VISION und Vakuumfiltration; Bedienung von CHNOS-Analysator, TGA Q500, CARBOLITE-Öfen, BMP-Einheiten und Biogas 5000; interne statistische Qualitätskontrollen; sowie Thermal-Excel-Datensätze, Datenbankaktualisierungen, Chargen, Etiketten und Ergebnisrückverfolgbarkeit. Die operative Dokumentation umfasst Analysemethoden, Analysestart, Chargen, Proben/NIR, Etikettierung, Datenblätter und Thermal-Excel-Troubleshooting. Eine vorhandene berufliche Referenz bestätigt das Praktikum und seine operativen Verantwortlichkeiten. Diese Grundlage unterstützt die weitere Entwicklung in Methodenvalidierung, Unsicherheitsanalyse und methodenübergreifender Interpretation.',
                 technicalEvidenceLead: 'Der dokumentierte Umfang umfasst',
                 technicalEvidenceGroups: [
-                    { title: 'Analysen', body: 'Feuchte, Asche, flüchtige Bestandteile, CHNOS-Elementaranalyse, Ascheschmelze, BMP und Biogas, CSB, Ammonium, NIR/VISION und Vakuumfiltration' },
+                    { title: 'Analysen', body: 'Feuchte, Asche, flüchtige Bestandteile, Fixkohlenstoff, thermogravimetrische Analyse (TGA), CHNOS-Elementaranalyse, Ascheschmelze, BMP und Biogas, FOS/TAC, ICP, CSB, Ammonium, NIR/VISION und Vakuumfiltration' },
                     { title: 'Instrumentierung', body: 'Bedienung von CHNOS-Analysator, TGA Q500, CARBOLITE-Öfen, BMP-Einheiten und Biogas 5000' },
-                    { title: 'Qualität & Dokumentation', body: 'interne statistische Qualitätskontrollen; sowie Thermal-Excel-Datensätze, Chargen, Etiketten und Ergebnisrückverfolgbarkeit' },
+                    { title: 'Qualität & Rückverfolgbarkeit', body: 'Arbeit nach festgelegten SOPs, statistische Qualitäts-Selbstkontrollen, Thermal-Excel-Datensätze, Datenbankaktualisierungen, Chargen, Etiketten und Ergebnisrückverfolgbarkeit' },
+                    { title: 'Erstellte operative Dokumentation', body: 'operative Leitfäden, Datenblätter, Arbeitsanweisungen und Troubleshooting-Dokumentation zu Analysemethoden, Analysestart, Chargen, Proben und NIR, Etikettierung, Thermal Excel und Rückverfolgbarkeit' },
                     { title: 'Verantwortung & beruflicher Nachweis', body: 'Eine vorhandene berufliche Referenz bestätigt das Praktikum und seine operativen Verantwortlichkeiten. Diese Grundlage unterstützt die weitere Entwicklung in Methodenvalidierung, Unsicherheitsanalyse und methodenübergreifender Interpretation.' }
                 ],
                 disclosure: 'Hinweis zum Umfang: dieser Eintrag dokumentiert überwachte analytische Praxis und Beteiligung an validierten Routinen.'
@@ -1320,15 +1341,21 @@
         const header = createDialogElement('header', 'dialog-introduction');
         const meta = createDialogElement('div', 'dialog-meta');
         const category = createDialogElement('span', '', data.category);
-        const status = createDialogElement('span', '', data.status);
         const title = createDialogElement('h2', '', data.title);
         const summary = createDialogElement('p', 'dialog-lead', data.summary);
+        const categorySegments = data.category
+            .split('·')
+            .map((segment) => segment.trim().toLocaleLowerCase(currentLanguage));
+        const normalizedStatus = data.status.trim().toLocaleLowerCase(currentLanguage);
 
         title.id = 'dialog-title';
         title.dataset.dialogTitle = '';
         title.tabIndex = -1;
         setLongTitleClass(title, data.title);
-        meta.append(category, status);
+        meta.append(category);
+        if (!categorySegments.includes(normalizedStatus)) {
+            meta.append(createDialogElement('span', '', data.status));
+        }
         header.append(meta, title, summary);
         container.append(header);
     }
@@ -1505,15 +1532,15 @@
     }
 
     function renderPhageDetails(container, data, pageTitle) {
+        container.classList.add('dialog-content--phage-details');
         appendPageHeader(container, data, pageTitle, data.summary);
         const body = createDialogElement('section', 'dialog-page-body');
-        const grid = createDialogElement('div', 'dialog-editorial-grid');
+        const grid = createDialogElement('div', 'dialog-editorial-grid dialog-editorial-grid--phage');
         const details = data.details || [];
 
-        grid.append(
-            createEditorialBlock(details[0].title, details[0].body),
-            createEditorialBlock(details[1].title, details[1].body)
-        );
+        [details[0], details[2], details[1]].filter(Boolean).forEach((detail) => {
+            grid.append(createEditorialBlock(detail.title, detail.body));
+        });
         body.append(grid);
         appendResources(body, data.resources);
         appendDisclosure(body, data.disclosure);

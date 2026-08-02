@@ -561,11 +561,13 @@ button { color: inherit; }
 .empty-state { padding: 2rem 0; color: var(--color-text-muted); }
 
 .principles-section { border-top: 1px solid rgba(174, 183, 194, 0.12); }
-.principle-grid { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid rgba(174, 183, 194, 0.14); border-radius: var(--radius-lg); overflow: hidden; }
-.principle-grid article { min-height: 18rem; padding: clamp(1.3rem, 3vw, 2rem); background: rgba(17, 20, 24, 0.58); }
+.principle-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid rgba(174, 183, 194, 0.14); border-radius: var(--radius-lg); overflow: hidden; }
+.principle-grid article { padding: clamp(1.3rem, 3vw, 2rem); background: rgba(17, 20, 24, 0.58); }
 .principle-grid article + article { border-left: 1px solid rgba(174, 183, 194, 0.14); }
+.principle-grid article:nth-child(3n + 1) { border-left: 0; }
+.principle-grid article:nth-child(n + 4) { border-top: 1px solid rgba(174, 183, 194, 0.14); }
 .principle-grid span { color: var(--color-accent); font: 700 0.7rem/1 var(--font-mono); }
-.principle-grid h3 { margin-top: 4rem; font-size: 1.25rem; }
+.principle-grid h3 { margin-top: clamp(2.5rem, 5vw, 4rem); font-size: 1.25rem; }
 .principle-grid p { margin-top: 0.7rem; color: var(--color-text-muted); font-size: 0.92rem; }
 
 .workbench-footer {
@@ -977,6 +979,31 @@ button { color: inherit; }
 .dialog-editorial-grid--asymmetric .dialog-editorial-block:nth-child(3) {
     border-top: 1px solid rgba(174, 183, 194, 0.13);
 }
+.dialog-content--phage-details > .dialog-page-body:first-child {
+    padding-bottom: clamp(0.85rem, 1.6vw, 1.3rem);
+}
+.dialog-content--phage-details > .dialog-page-body + .dialog-page-body {
+    padding-top: 0;
+}
+.dialog-editorial-grid--phage {
+    grid-template-columns: minmax(15rem, 0.78fr) minmax(0, 1.22fr);
+    margin-top: clamp(0.65rem, 1.4vw, 1.1rem);
+}
+.dialog-editorial-grid--phage .dialog-editorial-block:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+.dialog-editorial-grid--phage .dialog-editorial-block:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+    border-top: 1px solid rgba(174, 183, 194, 0.13);
+    border-left: 0;
+}
+.dialog-editorial-grid--phage .dialog-editorial-block:nth-child(3) {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    border-left: 1px solid rgba(174, 183, 194, 0.13);
+}
 .dialog-editorial-block--wide {
     grid-column: 1 / -1;
 }
@@ -1084,8 +1111,9 @@ button { color: inherit; }
     .workbench-status { max-width: 38rem; }
     .project-card--featured { grid-template-columns: minmax(14rem, 0.62fr) minmax(0, 1.38fr); }
     .principle-grid { grid-template-columns: repeat(2, 1fr); }
-    .principle-grid article:nth-child(3) { border-left: 0; border-top: 1px solid rgba(174, 183, 194, 0.14); }
-    .principle-grid article:nth-child(4) { border-top: 1px solid rgba(174, 183, 194, 0.14); }
+    .principle-grid article:nth-child(n) { border-left: 1px solid rgba(174, 183, 194, 0.14); border-top: 0; }
+    .principle-grid article:nth-child(2n + 1) { border-left: 0; }
+    .principle-grid article:nth-child(n + 3) { border-top: 1px solid rgba(174, 183, 194, 0.14); }
     .dialog-overview-band { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .dialog-overview-band section:nth-child(3) {
         border-left: 0;
@@ -1159,6 +1187,11 @@ button { color: inherit; }
     .dialog-practice-columns,
     .dialog-editorial-grid,
     .dialog-hypothesis-grid { grid-template-columns: 1fr; }
+    .dialog-editorial-grid--phage .dialog-editorial-block:nth-child(n) {
+        grid-column: 1;
+        grid-row: auto;
+        border-left: 0;
+    }
     .dialog-practice-evidence {
         border-top: 1px solid rgba(174, 183, 194, 0.13);
         border-left: 0;
@@ -1203,7 +1236,8 @@ button { color: inherit; }
     .entry-main p { display: none; }
     .entry-summary-grid { grid-template-columns: 1fr; }
     .principle-grid { grid-template-columns: 1fr; }
-    .principle-grid article + article { border-left: 0; border-top: 1px solid rgba(174, 183, 194, 0.14); }
+    .principle-grid article:nth-child(n) { border-left: 0; border-top: 0; }
+    .principle-grid article:nth-child(n + 2) { border-top: 1px solid rgba(174, 183, 194, 0.14); }
     .principle-grid article { min-height: auto; }
     .principle-grid h3 { margin-top: 2.5rem; }
 }

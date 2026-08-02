@@ -665,6 +665,26 @@ main,
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.readiness-strip--single {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.readiness-strip--single article {
+    display: grid;
+    grid-template-columns: minmax(12rem, 0.7fr) minmax(16rem, 1fr);
+    gap: var(--spacing-lg) clamp(2rem, 6vw, 5rem);
+    align-items: start;
+}
+
+.readiness-strip.readiness-strip--single span {
+    grid-column: 1 / -1;
+    margin-block-end: 0;
+}
+
+.readiness-strip.readiness-strip--single p {
+    margin-block-start: 0;
+}
+
 .readiness-strip article {
     min-width: 0;
     padding: clamp(1.25rem, 2.4vw, 2rem);
@@ -701,11 +721,42 @@ main,
     padding: clamp(1.25rem, 2.4vw, 2rem);
 }
 
+.skills-evidence {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(15rem, 0.75fr);
+    padding: 0;
+    overflow: hidden;
+}
+
+.skills-evidence__group {
+    min-width: 0;
+    padding: clamp(1.25rem, 2.4vw, 2rem);
+}
+
+.skills-evidence__group + .skills-evidence__group {
+    border-inline-start: 1px solid rgba(174, 183, 194, 0.14);
+}
+
+.skills-evidence h3 {
+    max-width: 34rem;
+    margin: 0;
+    color: var(--color-text);
+    font: 650 clamp(1.05rem, 1.5vw, 1.35rem)/1.25 var(--font-family-sans);
+    text-wrap: pretty;
+}
+
+.skills-evidence .skills-evidence__group p {
+    max-width: 46rem;
+    margin-block-start: var(--spacing-md);
+    color: var(--color-text-muted);
+    font: 400 0.92rem/1.65 var(--font-family-sans);
+}
+
 .technique-strip ul {
     display: flex;
     flex-wrap: wrap;
     gap: var(--spacing-sm);
-    margin: 0;
+    margin: var(--spacing-lg) 0 0;
     padding: 0;
     list-style: none;
 }
@@ -721,6 +772,14 @@ main,
     font: 650 0.72rem/1 var(--font-family-sans);
     letter-spacing: 0.07em;
     text-transform: uppercase;
+}
+
+.skills-evidence li {
+    max-width: 100%;
+    padding-block: 0.55rem;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+    text-align: left;
 }
 
 .focus-grid {
@@ -1852,6 +1911,15 @@ body.is-document-explorer-open {
         grid-template-columns: 1fr;
     }
 
+    .skills-evidence {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-evidence__group + .skills-evidence__group {
+        border-block-start: 1px solid rgba(174, 183, 194, 0.14);
+        border-inline-start: 0;
+    }
+
     .document-explorer__shell {
         width: 100%;
         height: 100%;
@@ -1987,6 +2055,15 @@ body.is-document-explorer-open {
 
     .readiness-strip {
         grid-template-columns: 1fr;
+    }
+
+    .readiness-strip--single article {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .readiness-strip--single p {
+        margin-block-start: 0;
     }
 
     .snapshot-card dl {
