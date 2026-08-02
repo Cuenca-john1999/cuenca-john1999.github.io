@@ -38,7 +38,7 @@
     "copyrightAndAuthorshipNotice": "Hinweis zu Urheberrecht und Urheberschaft"
   },
   "commonLabels": {
-    "practiceDetails": "Praxisdetails",
+    "practiceDetails": "Details zur Erfahrung",
     "academicDetails": "Ausbildungsdetails",
     "trainingDetails": "Weiterbildungsdetails",
     "reference": "Referenz",
@@ -194,12 +194,18 @@
   "experienceCards": {
     "immunology": {
       "title": "Immunologie und Molekularbiologie",
+      "institution": "Fundación para la Investigación Biomédica del Hospital Universitario de La Princesa",
+      "context": "Madrid, Spanien · FCT-Praktikum · 370 Std.",
+      "fullTechnicalCta": "Technische Erfahrung vollständig ansehen →",
       "body": "Zellkultur, Umgang mit HaCaT-Zellen, Medienvorbereitung, Passagieren und Einfrieren, CD4/CD14-Aufreinigung, RNA-Extraktion, PCR, ELISA, Western-Blot-Gelvorbereitung, Transfer und Blocking sowie Verarbeitung humaner und muriner Proben.",
       "role": "Praktikant im biomedizinischen Labor mit wachsender Verantwortung in Zellkulturabläufen, molekularbiologischer Unterstützung, immunologischen Techniken und Verfahren mit Tierproben.",
       "reference": "Dr. Danay Cibrián Vera, Principal Investigator am Hospital Universitario de La Princesa, hebt Verantwortung, Laborengagement, Teamarbeit und aktive Mitwirkung an molekularbiologischen, immunologischen und probenbezogenen Techniken hervor."
     },
     "biomass": {
       "title": "Biomasseanalytik",
+      "institution": "Celignis Biomass Analysis Laboratory",
+      "context": "Limerick, Irland · Erasmus+ · 03/2023-05/2023",
+      "fullTechnicalCta": "Technische Erfahrung vollständig ansehen →",
       "body": "Feuchte, Asche, flüchtige Bestandteile, CHNOS-Elementaranalyse, CSB, Ammonium, NIR/VISION-Workflows, Vakuumfiltration und Ascheschmelzanalyse; SOP- und Datenblatt-Erstellung im Rahmen GLP-basierter analytischer Laborarbeit in Irland.",
       "role": "Praktikant im analytischen Labor mit wachsender Verantwortung für die Analyse flüchtiger Bestandteile, technische Dokumentation, SOP-Unterstützung sowie Training oder Wissenstransfer für neue Studierende oder Mitarbeitende.",
       "documentation": "Erstellung von Arbeitsanleitungen und Datenblättern für NIR-Scans, Thermal-Excel-Workflows, Probenchargen, Etiketten, Filtration von Reaktorproben und Rückverfolgbarkeit analytischer Ergebnisse.",
@@ -214,6 +220,9 @@
     "clinical": {
       "grade": "9,25/10",
       "title": "Técnico Superior en Laboratorio Clínico y Biomédico",
+      "center": "CEAC FP Oficial · Madrid, Spanien",
+      "period": "2023-2025 · 9,25/10",
+      "practiceCta": "Praktikum: Hospital Universitario de La Princesa →",
       "body": "Spanische Qualifikation: Técnico Superior en Laboratorio Clínico y Biomédico (englische Übersetzung: Higher Technician in Clinical and Biomedical Laboratory), CEAC FP Oficial, 2023-2025. Zuvor von einer deutschen Universität für Studienzugang oder Zulassung akzeptiert; dies ist akademischer Kontext und keine berufliche Anerkennung in Deutschland. Offizielle Abschlussnote: 9,25/10 und Auszeichnungen in Técnicas Generales de Laboratorio, Técnicas de Inmunodiagnóstico und Técnicas de Análisis Hematológico.",
       "finalProject": "<strong>Bacteriophage Therapy: Rediscovering an Innovative Therapy.</strong> Gemeinsam mit Luis Gonzalo Legua Pérez verfasst und mit Genehmigung des Co-Autors veröffentlicht.<br><br><strong>Originale interdisziplinäre Hypothese:</strong> Untersuchung, ob Phagenspezifität und chitosanbasierte Adsorption in zukünftigen Labormodellen zur Untersuchung mikroplastikassoziierter Biofilme kombiniert werden könnten, ohne klinische Wirksamkeit zu behaupten.",
       "contribution": "Mein Beitrag: Literaturrecherche, wissenschaftliches Schreiben, Projektstruktur, konzeptuelle Entwicklung und Vorbereitung der Verteidigung, einschließlich der zukunftsorientierten Verbindung zwischen Phagentherapie, Chitosan und mikroplastikbezogenen biomedizinischen Fragen.",
@@ -224,6 +233,9 @@
     "operations": {
       "grade": "8,69/10",
       "title": "Técnico en Operaciones de Laboratorio",
+      "center": "IES Virgen de la Paloma · Madrid, Spanien",
+      "period": "2021-2023 · 8,69/10",
+      "practiceCta": "Erasmus+ / Praktikum: Celignis Biomass Analysis Laboratory · Limerick, Irland →",
       "body": "Spanische Qualifikation: Técnico en Operaciones de Laboratorio (englische Übersetzung: Technician in Laboratory Operations), IES Virgen de la Paloma, 2021-2023. Starke Leistungen in angewandter Chemie, physikochemischen Prüfungen, chemischen Analyseoperationen, Materialprüfung und technischem Englisch."
     },
     "additional": {

@@ -38,7 +38,7 @@
     "copyrightAndAuthorshipNotice": "Aviso de derechos de autor y autoría"
   },
   "commonLabels": {
-    "practiceDetails": "Detalles de las prácticas",
+    "practiceDetails": "Detalles de la experiencia",
     "academicDetails": "Detalles académicos",
     "trainingDetails": "Detalles de la formación",
     "reference": "Referencia",
@@ -194,12 +194,18 @@
   "experienceCards": {
     "immunology": {
       "title": "Inmunología y Biología Molecular",
+      "institution": "Fundación para la Investigación Biomédica del Hospital Universitario de La Princesa",
+      "context": "Madrid, España · FCT · 370 h",
+      "fullTechnicalCta": "Ver experiencia técnica completa →",
       "body": "Cultivo celular, manejo de células HaCaT, preparación de medios, pases y congelación celular, purificación de CD4/CD14, extracción de ARN, PCR, ELISA, preparación de geles de Western blot, transferencia y bloqueo, además de procesamiento de muestras humanas y murinas.",
       "role": "Estudiante en prácticas de laboratorio biomédico con responsabilidad progresiva en flujos de cultivo celular, apoyo en biología molecular, técnicas de inmunología y procedimientos con muestras animales.",
       "reference": "La Dra. Danay Cibrián Vera, investigadora principal en el Hospital Universitario de La Princesa, destaca la responsabilidad, el compromiso en el laboratorio, el trabajo en equipo y la participación activa en técnicas moleculares, inmunológicas y de procesamiento de muestras."
     },
     "biomass": {
       "title": "Análisis de Biomasa",
+      "institution": "Celignis Biomass Analysis Laboratory",
+      "context": "Limerick, Irlanda · Erasmus+ · 03/2023-05/2023",
+      "fullTechnicalCta": "Ver experiencia técnica completa →",
       "body": "Determinación de humedad, cenizas, materia volátil, análisis elemental CHNOS, DQO, amonio, flujos de trabajo NIR/VISION, filtración al vacío y análisis de fusión de cenizas; redacción de SOP y hojas de datos en un entorno analítico basado en buenas prácticas de laboratorio en Irlanda.",
       "role": "Estudiante en prácticas de laboratorio analítico con responsabilidad progresiva en análisis de materia volátil, documentación técnica, apoyo en SOPs y formación o transferencia de conocimiento para estudiantes o personal entrante.",
       "documentation": "Elaboración de guías operativas y hojas de datos para escaneos NIR, flujos de trabajo en Thermal Excel, lotes de muestras, etiquetas, filtración de muestras de reactores y trazabilidad de resultados analíticos.",
@@ -214,6 +220,9 @@
     "clinical": {
       "grade": "9,25/10",
       "title": "Laboratorio Clínico y Biomédico",
+      "center": "CEAC FP Oficial · Madrid, España",
+      "period": "2023-2025 · 9,25/10",
+      "practiceCta": "Prácticas: Hospital Universitario de La Princesa →",
       "body": "Titulación española: Técnico Superior en Laboratorio Clínico y Biomédico, CEAC FP Oficial, 2023-2025. Aceptada previamente por una universidad alemana para acceso o admisión a estudios; esto es contexto académico y no reconocimiento profesional en Alemania. Nota final oficial: 9,25/10 y matrículas de honor en Técnicas Generales de Laboratorio, Técnicas de Inmunodiagnóstico y Técnicas de Análisis Hematológico.",
       "finalProject": "<strong>Bacteriofagoterapia | Redescubriendo una terapia innovadora.</strong> Trabajo en coautoría con Luis Gonzalo Legua Pérez y publicado con su autorización.",
       "contribution": "Mi contribución: revisión bibliográfica, redacción científica, estructura del proyecto, desarrollo conceptual y preparación de la defensa, incluyendo la conexión futura entre fagoterapia, quitosano y preguntas biomédicas relacionadas con microplásticos.",
@@ -224,6 +233,9 @@
     "operations": {
       "grade": "8,69/10",
       "title": "Operaciones de Laboratorio",
+      "center": "IES Virgen de la Paloma · Madrid, España",
+      "period": "2021-2023 · 8,69/10",
+      "practiceCta": "Erasmus+ / prácticas: Celignis Biomass Analysis Laboratory · Limerick, Irlanda →",
       "body": "Titulación española: Técnico en Operaciones de Laboratorio, IES Virgen de la Paloma, 2021-2023. Resultados destacados en Química Aplicada, Ensayos Fisicoquímicos, Operaciones de Análisis Químico, Ensayos de Materiales e Inglés Técnico."
     },
     "additional": {

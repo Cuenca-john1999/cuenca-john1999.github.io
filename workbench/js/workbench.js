@@ -20,6 +20,8 @@
                 filterEntries: 'Filter entries',
                 openDeutschosEntry: 'Open DeutschOS entry',
                 openPortfolioEntry: 'Open portfolio entry',
+                openLaprincesaEntry: 'Open La Princesa entry',
+                openCelignisEntry: 'Open Celignis entry',
                 openPhageEntry: 'Open bacteriophage therapy entry',
                 openChitosanEntry: 'Open chitosan and microplastics entry',
                 currentDevelopmentAreas: 'Current development areas',
@@ -87,6 +89,12 @@
                     contribution: 'Concept development, testable hypotheses, scientific framing and explicit validation limits.',
                     evidence: 'No experimental validation performed; the proposal remains conceptual and requires in vitro validation.',
                     tagHypothesis: 'Hypothesis', tagValidation: 'Requires validation'
+                },
+                laprincesa: {
+                    title: 'Clinical & Biomedical Laboratory Practice · La Princesa'
+                },
+                celignis: {
+                    title: 'Analytical & Biomass Laboratory Practice · Celignis'
                 }
             },
             entries: { kicker: 'Workbench index', title: 'Projects, research notes and maturity levels in one editorial map.' },
@@ -98,6 +106,8 @@
                 learningBody: 'Applied learning entries with functional output and verifiable iteration.',
                 learningItem1: 'DeutschOS · Local prototype in development',
                 learningItem2: 'Scientific Portfolio · Published multilingual delivery',
+                learningItem3: 'La Princesa · Clinical and biomedical laboratory placement',
+                learningItem4: 'Celignis · Analytical and biomass laboratory placement',
                 milestones: 'Milestones',
                 milestonesBody: 'Documented progress points with direct evidence.',
                 milestonesItem1: 'Portfolio publication on GitHub Pages',
@@ -106,6 +116,8 @@
             entriesData: {
                 deutschos: 'Local German-learning environment focused on usable progress, laboratory vocabulary and transparent correction.',
                 portfolio: 'Published multilingual portfolio for recruiters, laboratories and scientific collaborators.',
+                laprincesa: 'Three-month hospital research placement with applied immunology, molecular biology and sample-processing workflows.',
+                celignis: 'Erasmus+ laboratory placement in Ireland with analytical workflows, GLP routines and technical documentation.',
                 phage: 'Co-authored academic literature review on phage therapy, its applications, limitations and regulatory barriers.',
                 chitosan: 'Early-stage, literature-informed hypothesis proposed for future controlled laboratory validation.'
             },
@@ -179,6 +191,8 @@
                 filterEntries: 'Filtrar entradas',
                 openDeutschosEntry: 'Abrir entrada de DeutschOS',
                 openPortfolioEntry: 'Abrir entrada del portafolio',
+                openLaprincesaEntry: 'Abrir entrada de La Princesa',
+                openCelignisEntry: 'Abrir entrada de Celignis',
                 openPhageEntry: 'Abrir entrada sobre bacteriofagoterapia',
                 openChitosanEntry: 'Abrir entrada sobre quitosano y microplásticos',
                 currentDevelopmentAreas: 'Áreas de desarrollo actuales',
@@ -246,6 +260,12 @@
                     contribution: 'Desarrollo del concepto, hipótesis comprobables, encuadre científico y límites de validación explícitos.',
                     evidence: 'No se ha realizado validación experimental; la propuesta sigue en fase conceptual y requiere validación in vitro.',
                     tagHypothesis: 'Hipótesis', tagValidation: 'Requiere validación'
+                },
+                laprincesa: {
+                    title: 'Prácticas en Laboratorio Clínico y Biomédico · La Princesa'
+                },
+                celignis: {
+                    title: 'Prácticas en Laboratorio Analítico y de Biomasa · Celignis'
                 }
             },
             entries: { kicker: 'Índice del Workbench', title: 'Proyectos, notas de investigación y nivel de madurez en un único mapa editorial.' },
@@ -257,6 +277,8 @@
                 learningBody: 'Entradas de aprendizaje aplicado con resultado funcional e iteración verificable.',
                 learningItem1: 'DeutschOS · Prototipo local en desarrollo',
                 learningItem2: 'Portafolio científico · Entrega multilingüe publicada',
+                learningItem3: 'La Princesa · Prácticas en laboratorio clínico y biomédico',
+                learningItem4: 'Celignis · Prácticas en laboratorio analítico y de biomasa',
                 milestones: 'Hitos',
                 milestonesBody: 'Avances documentados con evidencia directa.',
                 milestonesItem1: 'Publicación del portafolio en GitHub Pages',
@@ -265,6 +287,8 @@
             entriesData: {
                 deutschos: 'Entorno local de aprendizaje de alemán centrado en progreso útil, vocabulario de laboratorio y corrección transparente.',
                 portfolio: 'Portafolio multilingüe publicado para reclutadores, laboratorios y colaboradores científicos.',
+                laprincesa: 'Prácticas hospitalarias de tres meses con aplicación de flujos de inmunología, biología molecular y procesamiento de muestras.',
+                celignis: 'Prácticas Erasmus+ en Irlanda con flujos analíticos, rutinas GLP y documentación técnica.',
                 phage: 'Revisión académica realizada en coautoría sobre la fagoterapia, sus aplicaciones, limitaciones y barreras regulatorias.',
                 chitosan: 'Hipótesis preliminar basada en literatura y propuesta para una futura validación controlada en laboratorio.'
             },
@@ -338,6 +362,8 @@
                 filterEntries: 'Einträge filtern',
                 openDeutschosEntry: 'DeutschOS-Eintrag öffnen',
                 openPortfolioEntry: 'Portfolio-Eintrag öffnen',
+                openLaprincesaEntry: 'La-Princesa-Eintrag öffnen',
+                openCelignisEntry: 'Celignis-Eintrag öffnen',
                 openPhageEntry: 'Eintrag zur Bakteriophagentherapie öffnen',
                 openChitosanEntry: 'Eintrag zu Chitosan und Mikroplastik öffnen',
                 currentDevelopmentAreas: 'Aktuelle Entwicklungsschwerpunkte',
@@ -405,6 +431,12 @@
                     contribution: 'Konzeptentwicklung, prüfbare Hypothesen, wissenschaftliche Einordnung und explizite Validierungsgrenzen.',
                     evidence: 'Es liegt keine experimentelle Validierung vor; der Vorschlag bleibt konzeptionell und erfordert eine In-vitro-Validierung.',
                     tagHypothesis: 'Hypothese', tagValidation: 'Validierung erforderlich'
+                },
+                laprincesa: {
+                    title: 'Praktikum im klinisch-biomedizinischen Labor · La Princesa'
+                },
+                celignis: {
+                    title: 'Praktikum im analytischen Biomasse-Labor · Celignis'
                 }
             },
             entries: { kicker: 'Workbench-Index', title: 'Projekte, Forschungsnotizen und Reifegrad in einer klaren redaktionellen Struktur.' },
@@ -416,6 +448,8 @@
                 learningBody: 'Angewandte Lernbeiträge mit funktionalem Ergebnis und nachvollziehbarer Iteration.',
                 learningItem1: 'DeutschOS · Lokaler Prototyp in Entwicklung',
                 learningItem2: 'Wissenschaftliches Portfolio · Veröffentlichte mehrsprachige Umsetzung',
+                learningItem3: 'La Princesa · Praktikum im klinisch-biomedizinischen Labor',
+                learningItem4: 'Celignis · Praktikum im analytischen Biomasse-Labor',
                 milestones: 'Meilensteine',
                 milestonesBody: 'Dokumentierte Fortschritte mit direkter Evidenz.',
                 milestonesItem1: 'Portfolio-Veröffentlichung auf GitHub Pages',
@@ -424,6 +458,8 @@
             entriesData: {
                 deutschos: 'Lokale Deutsch-Lernumgebung mit Fokus auf nutzbaren Fortschritt, Laborwortschatz und transparente Korrektur.',
                 portfolio: 'Veröffentlichtes mehrsprachiges Portfolio für Recruiter, Labore und wissenschaftliche Kontakte.',
+                laprincesa: 'Dreimonatiges Praktikum im Krankenhausforschungskontext mit angewandten Workflows in Immunologie, Molekularbiologie und Probenverarbeitung.',
+                celignis: 'Erasmus+-Laborpraktikum in Irland mit analytischen Workflows, GLP-Routinen und technischer Dokumentation.',
                 phage: 'Gemeinsam verfasste akademische Literaturübersicht zu Phagentherapie, Anwendungen, Grenzen und regulatorischen Hürden.',
                 chitosan: 'Frühe, literaturbasierte Hypothese für eine spätere kontrollierte Validierung im Labor.'
             },
@@ -591,6 +627,24 @@
                         body: 'Conceptual proposal only. It would need in vitro validation, toxicity assessment, controls and reproducible analytical methods before any clinical interpretation.'
                     }
                 ]
+            },
+            laprincesa: {
+                category: 'Technical & learning · Milestone', status: 'Completed', title: 'Clinical & Biomedical Laboratory Practice · La Princesa',
+                summary: 'Three-month research-laboratory placement in Madrid integrating clinical sample workflows with molecular and immunology techniques.',
+                problem: 'Early laboratory training often fragments molecular procedures, immunology tasks and sample logistics across separate modules without full workflow continuity.',
+                contribution: 'Applied and documented day-to-day execution across cell-culture support, sample processing, molecular assays, immunological methods and protocol-aligned laboratory routines.',
+                result: 'Documented practical experience in cytokine-stimulated and adherent cell-culture workflows, Buffy Coat handling, CD4/CD14 isolation, human and murine sample processing, RNA extraction, PCR, electrophoresis, transgenic-mouse genotyping, ELISA, Western blot preparation, media preparation, immunohistochemistry and immunofluorescence.',
+                next: 'Continue reinforcing reproducibility, assay interpretation and quality-control rigor while transitioning from supervised execution to higher autonomous responsibility in research-laboratory contexts.',
+                disclosure: 'Scope note: this is documented laboratory placement experience, not an independent clinical claim or therapeutic study.'
+            },
+            celignis: {
+                category: 'Technical & learning · Milestone', status: 'Completed', title: 'Analytical & Biomass Laboratory Practice · Celignis',
+                summary: 'Erasmus+ placement in Limerick focused on analytical biomass testing, GLP routines and technical documentation.',
+                problem: 'Analytical laboratory onboarding requires rapid adaptation to instrument-specific methods, traceability standards and quality-control workflows under production timing.',
+                contribution: 'Executed and supported analytical workflows under supervision, produced SOP-oriented documentation, and contributed to operational continuity including intern handover.',
+                result: 'Hands-on work included moisture, ash, volatile matter, CHNOS, ash melting, BMP/biogas, COD, ammonia and NIR/VISION workflows; operation of CHNOS elemental analyser, TGA Q500, CARBOLITE furnaces, BMP units and Biogas 5000; GLP and internal statistical quality controls; calibration, troubleshooting, maintenance, sample preparation and technical documentation.',
+                next: 'Build on this base with deeper method validation, uncertainty analysis and stronger cross-method interpretation for advanced analytical-laboratory roles.',
+                disclosure: 'Scope note: this entry documents supervised analytical placement practice and validated routine participation.'
             }
         },
         es: {
@@ -698,6 +752,24 @@
                         body: 'Propuesta conceptual. Requeriría validación in vitro, evaluación de toxicidad, controles y métodos analíticos reproducibles antes de cualquier interpretación clínica.'
                     }
                 ]
+            },
+            laprincesa: {
+                category: 'Técnica y aprendizaje · Hito', status: 'Completado', title: 'Prácticas en Laboratorio Clínico y Biomédico · La Princesa',
+                summary: 'Prácticas de tres meses en laboratorio de investigación en Madrid, integrando trabajo con muestras clínicas y técnicas moleculares e inmunológicas.',
+                problem: 'La formación inicial de laboratorio suele fragmentar procedimientos moleculares, tareas de inmunología y logística de muestras sin continuidad completa de flujo.',
+                contribution: 'Ejecución y documentación aplicada de rutinas de cultivo celular, procesamiento de muestras, ensayos moleculares, técnicas inmunológicas y trabajo alineado con protocolos de laboratorio.',
+                result: 'Experiencia práctica documentada en cultivo celular estimulado por citocinas y de líneas adherentes, manejo de Buffy Coat, aislamiento CD4/CD14, procesamiento de muestras humanas y murinas, extracción de ARN, PCR, electroforesis, genotipado de ratones transgénicos, ELISA, preparación de Western blot, preparación de medios, inmunohistoquímica e inmunofluorescencia.',
+                next: 'Reforzar reproducibilidad, interpretación de ensayos y control de calidad para evolucionar de ejecución supervisada a mayor autonomía en contextos de investigación.',
+                disclosure: 'Nota de alcance: se documenta experiencia de prácticas de laboratorio, no una afirmación clínica independiente ni un estudio terapéutico.'
+            },
+            celignis: {
+                category: 'Técnica y aprendizaje · Hito', status: 'Completado', title: 'Prácticas en Laboratorio Analítico y de Biomasa · Celignis',
+                summary: 'Prácticas Erasmus+ en Limerick orientadas a ensayos analíticos de biomasa, rutinas GLP y documentación técnica.',
+                problem: 'La incorporación a laboratorio analítico exige adaptación rápida a métodos instrumentales, estándares de trazabilidad y flujos de control de calidad con ritmo operativo real.',
+                contribution: 'Ejecución y apoyo de flujos analíticos bajo supervisión, elaboración de documentación orientada a SOP y contribución a la continuidad operativa incluyendo traspaso a nuevos becarios.',
+                result: 'Trabajo práctico en humedad, cenizas, materia volátil, CHNOS, fusión de cenizas, BMP/biogás, DQO, amonio y flujos NIR/VISION; operación de analizador elemental CHNOS, TGA Q500, hornos CARBOLITE, unidades BMP y Biogas 5000; GLP y controles estadísticos internos de calidad; calibración, troubleshooting, mantenimiento, preparación de muestras y documentación técnica.',
+                next: 'Consolidar esta base con mayor validación de métodos, análisis de incertidumbre e interpretación cruzada de técnicas para roles analíticos de mayor nivel.',
+                disclosure: 'Nota de alcance: esta entrada documenta práctica analítica supervisada y participación en rutinas validadas.'
             }
         },
         de: {
@@ -805,6 +877,24 @@
                         body: 'Nur ein konzeptioneller Vorschlag. Vor jeder klinischen Interpretation wären In-vitro-Validierung, Toxizitätsbewertung, Kontrollen und reproduzierbare analytische Methoden erforderlich.'
                     }
                 ]
+            },
+            laprincesa: {
+                category: 'Technik & Lernen · Meilenstein', status: 'Abgeschlossen', title: 'Praktikum im klinisch-biomedizinischen Labor · La Princesa',
+                summary: 'Dreimonatiges Praktikum in einem Forschungslabor in Madrid mit Verbindung von klinischen Probenabläufen sowie molekularen und immunologischen Techniken.',
+                problem: 'Frühe Laborausbildung trennt molekulare Verfahren, immunologische Aufgaben und Probenlogistik häufig, statt sie in einem durchgängigen Workflow zu verbinden.',
+                contribution: 'Angewandte Durchführung und Dokumentation täglicher Routinen in Zellkultur, Probenverarbeitung, molekularen Assays, immunologischen Verfahren und protokollbasierten Laborabläufen.',
+                result: 'Dokumentierte Praxis in cytokine-stimulated und adhärenten Zellkultur-Workflows, Buffy-Coat-Handhabung, CD4/CD14-Isolierung, Verarbeitung humaner und muriner Proben, RNA-Extraktion, PCR, Elektrophorese, Genotypisierung transgener Mäuse, ELISA, Western-Blot-Vorbereitung, Medienvorbereitung, Immunhistochemie und Immunfluoreszenz.',
+                next: 'Weiterer Ausbau von Reproduzierbarkeit, Assay-Interpretation und Qualitätskontrolle, um von überwachter Ausführung zu höherer Eigenverantwortung im Forschungslabor zu gelangen.',
+                disclosure: 'Hinweis zum Umfang: dokumentierte Laborpraxis, kein eigenständiger klinischer Wirksamkeitsnachweis und keine therapeutische Studie.'
+            },
+            celignis: {
+                category: 'Technik & Lernen · Meilenstein', status: 'Abgeschlossen', title: 'Praktikum im analytischen Biomasse-Labor · Celignis',
+                summary: 'Erasmus+-Praktikum in Limerick mit Fokus auf analytische Biomasseprüfungen, GLP-Routinen und technische Dokumentation.',
+                problem: 'Der Einstieg in analytische Labore erfordert schnelle Anpassung an instrumentenspezifische Methoden, Rückverfolgbarkeit und Qualitätskontroll-Workflows unter operativem Zeitdruck.',
+                contribution: 'Durchführung und Unterstützung analytischer Workflows unter Anleitung, SOP-orientierte Dokumentation und Beitrag zur operativen Kontinuität einschließlich Einarbeitung nachfolgender Praktikantinnen und Praktikanten.',
+                result: 'Praktische Arbeit in Feuchte, Asche, flüchtige Bestandteile, CHNOS, Ascheschmelze, BMP/Biogas, CSB, Ammonium und NIR/VISION-Workflows; Bedienung von CHNOS-Elementaranalysator, TGA Q500, CARBOLITE-Öfen, BMP-Einheiten und Biogas 5000; GLP und interne statistische Qualitätskontrollen; Kalibrierung, Troubleshooting, Wartung, Probenvorbereitung und technische Dokumentation.',
+                next: 'Diese Grundlage mit vertiefter Methodenvalidierung, Unsicherheitsanalyse und stärkerer methodenübergreifender Interpretation für fortgeschrittene analytische Rollen ausbauen.',
+                disclosure: 'Hinweis zum Umfang: dieser Eintrag dokumentiert überwachte analytische Praxis und Beteiligung an validierten Routinen.'
             }
         }
     };
@@ -1144,7 +1234,9 @@
         deutschos: 1,
         portfolio: 2,
         phage: 2,
-        chitosan: 2
+        chitosan: 2,
+        laprincesa: 1,
+        celignis: 1
     };
     const dialogTechnicalTags = {
         en: ['Chitosan', 'Microplastics', 'Biofilms', 'MiSeq', 'FTIR', 'Adsorption assays', 'Biocompatibility'],
@@ -1568,10 +1660,14 @@
     const hashToEntry = {
         '#entry-deutschos': 'deutschos',
         '#entry-portfolio': 'portfolio',
+        '#entry-laprincesa': 'laprincesa',
+        '#entry-celignis': 'celignis',
         '#entry-phage': 'phage',
         '#entry-chitosan': 'chitosan',
         '#deutschos': 'deutschos',
         '#portfolio': 'portfolio',
+        '#laprincesa': 'laprincesa',
+        '#celignis': 'celignis',
         '#phage': 'phage',
         '#chitosan': 'chitosan'
     };
