@@ -637,6 +637,13 @@
                 context: '370-hour FCT placement in 2025 at Fundación para la Investigación Biomédica del Hospital Universitario de La Princesa in Madrid, within a research environment handling human and animal samples.',
                 technicalWork: 'Supported day-to-day cell-culture, sample-processing, molecular-biology and immunology workflows under laboratory protocols, together with scientific-database work, material and inventory management, and development of a bilingual scientific website for the research group. The supervised role strengthened reproducibility, assay interpretation and quality-control practice while building greater autonomy.',
                 technicalEvidence: 'Documented scope includes cytokine-stimulated and adherent cell cultures, including HaCaT; media preparation, passaging and freezing; Buffy Coat handling and CD4/CD14 isolation; human samples in psoriasis, dermatitis and hidradenitis suppurativa contexts; animal samples and murine lymphoid organs; RNA extraction, PCR, electrophoresis and transgenic-mouse genotyping; ELISA; Western blot preparation, transfer and blocking; immunohistochemistry; and immunofluorescence. An existing professional reference supports the placement, protocol work and laboratory-material responsibilities.',
+                technicalEvidenceLead: 'Documented scope includes',
+                technicalEvidenceGroups: [
+                    { title: 'Cell culture & samples', body: 'cytokine-stimulated and adherent cell cultures, including HaCaT; media preparation, passaging and freezing; Buffy Coat handling and CD4/CD14 isolation; human samples in psoriasis, dermatitis and hidradenitis suppurativa contexts; animal samples and murine lymphoid organs' },
+                    { title: 'Molecular biology', body: 'RNA extraction, PCR, electrophoresis and transgenic-mouse genotyping; Western blot preparation, transfer and blocking' },
+                    { title: 'Immunology', body: 'ELISA; immunohistochemistry; and immunofluorescence' },
+                    { title: 'Documentation & professional evidence', body: 'An existing professional reference supports the placement, protocol work and laboratory-material responsibilities.' }
+                ],
                 disclosure: 'Scope note: this is documented laboratory placement experience, not an independent clinical claim or therapeutic study.'
             },
             celignis: {
@@ -645,6 +652,13 @@
                 context: 'Erasmus+ placement from 03/2023 to 05/2023 at Celignis Biomass Analysis Laboratory in Limerick, Ireland, supporting analytical work for clients and in the context of SteamBioAfrica and BIO4Africa.',
                 technicalWork: 'Prepared samples and supported analytical workflows under GLP-based routines; operated, calibrated, troubleshot, maintained and monitored laboratory equipment; contributed to SOPs, technical documentation and traceability; progressively assumed responsibility for volatile-matter analysis; and trained and supervised replacement interns during handover.',
                 technicalEvidence: 'Documented scope includes moisture, ash, volatile matter, CHNOS elemental analysis, ash melting, BMP and biogas, COD, ammonia, NIR/VISION and vacuum filtration; operation of a CHNOS analyser, TGA Q500, CARBOLITE furnaces, BMP units and Biogas 5000; internal statistical quality controls; and Thermal Excel records, batches, labels and result traceability. An existing professional reference supports the placement and its operational responsibilities. This foundation supports continued development in method validation, uncertainty analysis and cross-method interpretation.',
+                technicalEvidenceLead: 'Documented scope includes',
+                technicalEvidenceGroups: [
+                    { title: 'Analysis', body: 'moisture, ash, volatile matter, CHNOS elemental analysis, ash melting, BMP and biogas, COD, ammonia, NIR/VISION and vacuum filtration' },
+                    { title: 'Instrumentation', body: 'operation of a CHNOS analyser, TGA Q500, CARBOLITE furnaces, BMP units and Biogas 5000' },
+                    { title: 'Quality & documentation', body: 'internal statistical quality controls; and Thermal Excel records, batches, labels and result traceability' },
+                    { title: 'Responsibility & professional evidence', body: 'An existing professional reference supports the placement and its operational responsibilities. This foundation supports continued development in method validation, uncertainty analysis and cross-method interpretation.' }
+                ],
                 disclosure: 'Scope note: this entry documents supervised analytical placement practice and validated routine participation.'
             }
         },
@@ -760,6 +774,13 @@
                 context: 'Prácticas FCT de 370 horas en 2025 en la Fundación para la Investigación Biomédica del Hospital Universitario de La Princesa, Madrid, dentro de un entorno de investigación con muestras humanas y animales.',
                 technicalWork: 'Apoyo diario en flujos de cultivo celular, procesamiento de muestras, biología molecular e inmunología siguiendo protocolos de laboratorio, junto con consulta de bases de datos científicas, gestión de material e inventario y desarrollo de una web científica bilingüe para el grupo de investigación. El trabajo supervisado reforzó la reproducibilidad, la interpretación de ensayos y el control de calidad mientras aumentaba la autonomía.',
                 technicalEvidence: 'El alcance documentado incluye cultivos celulares estimulados por citocinas y líneas adherentes, incluidas HaCaT; preparación de medios, pases y congelación; manejo de Buffy Coat y aislamiento CD4/CD14; muestras humanas en contextos de psoriasis, dermatitis e hidradenitis supurativa; muestras animales y órganos linfoides murinos; extracción de ARN, PCR, electroforesis y genotipado de ratones transgénicos; ELISA; preparación de Western blot, transferencia y bloqueo; inmunohistoquímica e inmunofluorescencia. Existe una referencia profesional que respalda las prácticas, el trabajo con protocolos y las responsabilidades sobre material de laboratorio.',
+                technicalEvidenceLead: 'El alcance documentado incluye',
+                technicalEvidenceGroups: [
+                    { title: 'Cultivo celular y muestras', body: 'cultivos celulares estimulados por citocinas y líneas adherentes, incluidas HaCaT; preparación de medios, pases y congelación; manejo de Buffy Coat y aislamiento CD4/CD14; muestras humanas en contextos de psoriasis, dermatitis e hidradenitis supurativa; muestras animales y órganos linfoides murinos' },
+                    { title: 'Biología molecular', body: 'extracción de ARN, PCR, electroforesis y genotipado de ratones transgénicos; preparación de Western blot, transferencia y bloqueo' },
+                    { title: 'Inmunología', body: 'ELISA; inmunohistoquímica e inmunofluorescencia' },
+                    { title: 'Documentación y evidencia profesional', body: 'Existe una referencia profesional que respalda las prácticas, el trabajo con protocolos y las responsabilidades sobre material de laboratorio.' }
+                ],
                 disclosure: 'Nota de alcance: se documenta experiencia de prácticas de laboratorio, no una afirmación clínica independiente ni un estudio terapéutico.'
             },
             celignis: {
@@ -768,6 +789,13 @@
                 context: 'Prácticas Erasmus+ de 03/2023 a 05/2023 en Celignis Biomass Analysis Laboratory, Limerick, Irlanda, apoyando trabajo analítico para clientes y en el contexto de SteamBioAfrica y BIO4Africa.',
                 technicalWork: 'Preparación de muestras y apoyo en flujos analíticos bajo rutinas basadas en GLP; operación, calibración, troubleshooting, mantenimiento y monitorización de equipos; contribución a SOPs, documentación técnica y trazabilidad; responsabilidad progresiva sobre el análisis de materia volátil; y formación y supervisión de los becarios que relevaron el puesto.',
                 technicalEvidence: 'El alcance documentado incluye humedad, cenizas, materia volátil, análisis elemental CHNOS, fusión de cenizas, BMP y biogás, DQO, amonio, NIR/VISION y filtración al vacío; operación de analizador CHNOS, TGA Q500, hornos CARBOLITE, unidades BMP y Biogas 5000; controles estadísticos internos de calidad; y registros en Thermal Excel, lotes, etiquetas y trazabilidad de resultados. Existe una referencia profesional que respalda las prácticas y sus responsabilidades operativas. Esta base permite seguir avanzando en validación de métodos, análisis de incertidumbre e interpretación cruzada de técnicas.',
+                technicalEvidenceLead: 'El alcance documentado incluye',
+                technicalEvidenceGroups: [
+                    { title: 'Análisis', body: 'humedad, cenizas, materia volátil, análisis elemental CHNOS, fusión de cenizas, BMP y biogás, DQO, amonio, NIR/VISION y filtración al vacío' },
+                    { title: 'Instrumentación', body: 'operación de analizador CHNOS, TGA Q500, hornos CARBOLITE, unidades BMP y Biogas 5000' },
+                    { title: 'Calidad y documentación', body: 'controles estadísticos internos de calidad; y registros en Thermal Excel, lotes, etiquetas y trazabilidad de resultados' },
+                    { title: 'Responsabilidad y evidencia profesional', body: 'Existe una referencia profesional que respalda las prácticas y sus responsabilidades operativas. Esta base permite seguir avanzando en validación de métodos, análisis de incertidumbre e interpretación cruzada de técnicas.' }
+                ],
                 disclosure: 'Nota de alcance: esta entrada documenta práctica analítica supervisada y participación en rutinas validadas.'
             }
         },
@@ -883,6 +911,13 @@
                 context: 'FCT-Praktikum mit 370 Stunden im Jahr 2025 bei der Fundación para la Investigación Biomédica del Hospital Universitario de La Princesa in Madrid, in einem Forschungsumfeld mit humanen und tierischen Proben.',
                 technicalWork: 'Mitarbeit bei täglichen Abläufen in Zellkultur, Probenverarbeitung, Molekularbiologie und Immunologie nach Laborprotokollen sowie Arbeit mit wissenschaftlichen Datenbanken, Material- und Bestandsverwaltung und Entwicklung einer zweisprachigen wissenschaftlichen Website für die Forschungsgruppe. Die angeleitete Tätigkeit stärkte Reproduzierbarkeit, Assay-Interpretation und Qualitätskontrolle bei wachsender Eigenständigkeit.',
                 technicalEvidence: 'Der dokumentierte Umfang umfasst mit Zytokinen stimulierte und adhärente Zellkulturen einschließlich HaCaT; Medienvorbereitung, Passagieren und Einfrieren; Buffy-Coat-Verarbeitung und CD4/CD14-Isolierung; humane Proben im Kontext von Psoriasis, Dermatitis und Hidradenitis suppurativa; tierische Proben und murine lymphatische Organe; RNA-Extraktion, PCR, Elektrophorese und Genotypisierung transgener Mäuse; ELISA; Western-Blot-Vorbereitung, Transfer und Blocking; Immunhistochemie und Immunfluoreszenz. Eine vorhandene berufliche Referenz bestätigt das Praktikum, die Protokollarbeit und die Verantwortung für Labormaterial.',
+                technicalEvidenceLead: 'Der dokumentierte Umfang umfasst',
+                technicalEvidenceGroups: [
+                    { title: 'Zellkultur & Proben', body: 'mit Zytokinen stimulierte und adhärente Zellkulturen einschließlich HaCaT; Medienvorbereitung, Passagieren und Einfrieren; Buffy-Coat-Verarbeitung und CD4/CD14-Isolierung; humane Proben im Kontext von Psoriasis, Dermatitis und Hidradenitis suppurativa; tierische Proben und murine lymphatische Organe' },
+                    { title: 'Molekularbiologie', body: 'RNA-Extraktion, PCR, Elektrophorese und Genotypisierung transgener Mäuse; Western-Blot-Vorbereitung, Transfer und Blocking' },
+                    { title: 'Immunologie', body: 'ELISA; Immunhistochemie und Immunfluoreszenz' },
+                    { title: 'Dokumentation & beruflicher Nachweis', body: 'Eine vorhandene berufliche Referenz bestätigt das Praktikum, die Protokollarbeit und die Verantwortung für Labormaterial.' }
+                ],
                 disclosure: 'Hinweis zum Umfang: dokumentierte Laborpraxis, kein eigenständiger klinischer Wirksamkeitsnachweis und keine therapeutische Studie.'
             },
             celignis: {
@@ -891,6 +926,13 @@
                 context: 'Erasmus+-Praktikum von 03/2023 bis 05/2023 bei Celignis Biomass Analysis Laboratory in Limerick, Irland, mit Unterstützung analytischer Kundenarbeit sowie im Kontext von SteamBioAfrica und BIO4Africa.',
                 technicalWork: 'Probenvorbereitung und Unterstützung analytischer Abläufe nach GLP-orientierten Routinen; Bedienung, Kalibrierung, Fehleranalyse, Wartung und Überwachung von Geräten; Mitwirkung an SOPs, technischer Dokumentation und Rückverfolgbarkeit; schrittweise Verantwortung für die Analyse flüchtiger Bestandteile; sowie Einarbeitung und Betreuung der nachfolgenden Praktikantinnen und Praktikanten.',
                 technicalEvidence: 'Der dokumentierte Umfang umfasst Feuchte, Asche, flüchtige Bestandteile, CHNOS-Elementaranalyse, Ascheschmelze, BMP und Biogas, CSB, Ammonium, NIR/VISION und Vakuumfiltration; Bedienung von CHNOS-Analysator, TGA Q500, CARBOLITE-Öfen, BMP-Einheiten und Biogas 5000; interne statistische Qualitätskontrollen; sowie Thermal-Excel-Datensätze, Chargen, Etiketten und Ergebnisrückverfolgbarkeit. Eine vorhandene berufliche Referenz bestätigt das Praktikum und seine operativen Verantwortlichkeiten. Diese Grundlage unterstützt die weitere Entwicklung in Methodenvalidierung, Unsicherheitsanalyse und methodenübergreifender Interpretation.',
+                technicalEvidenceLead: 'Der dokumentierte Umfang umfasst',
+                technicalEvidenceGroups: [
+                    { title: 'Analysen', body: 'Feuchte, Asche, flüchtige Bestandteile, CHNOS-Elementaranalyse, Ascheschmelze, BMP und Biogas, CSB, Ammonium, NIR/VISION und Vakuumfiltration' },
+                    { title: 'Instrumentierung', body: 'Bedienung von CHNOS-Analysator, TGA Q500, CARBOLITE-Öfen, BMP-Einheiten und Biogas 5000' },
+                    { title: 'Qualität & Dokumentation', body: 'interne statistische Qualitätskontrollen; sowie Thermal-Excel-Datensätze, Chargen, Etiketten und Ergebnisrückverfolgbarkeit' },
+                    { title: 'Verantwortung & beruflicher Nachweis', body: 'Eine vorhandene berufliche Referenz bestätigt das Praktikum und seine operativen Verantwortlichkeiten. Diese Grundlage unterstützt die weitere Entwicklung in Methodenvalidierung, Unsicherheitsanalyse und methodenübergreifender Interpretation.' }
+                ],
                 disclosure: 'Hinweis zum Umfang: dieser Eintrag dokumentiert überwachte analytische Praxis und Beteiligung an validierten Routinen.'
             }
         }
@@ -1335,6 +1377,38 @@
         container.append(band);
     }
 
+    function appendPracticeOverview(container, data) {
+        const layout = createDialogElement('div', 'dialog-practice-layout');
+        const context = createEditorialBlock(getTranslation('dialog.context'), data.context, 'dialog-practice-context');
+        const columns = createDialogElement('div', 'dialog-practice-columns');
+        const technicalWork = createEditorialBlock(
+            getTranslation('dialog.technicalWork'),
+            data.technicalWork,
+            'dialog-practice-work'
+        );
+        const evidence = createDialogElement('section', 'dialog-practice-evidence');
+        const evidenceGroups = createDialogElement('div', 'dialog-practice-evidence-groups');
+
+        evidence.append(createDialogElement('h3', '', getTranslation('dialog.technicalEvidence')));
+        if (data.technicalEvidenceLead) {
+            evidence.append(createDialogElement('p', 'dialog-practice-evidence-lead', data.technicalEvidenceLead));
+        }
+
+        (data.technicalEvidenceGroups || []).forEach((group) => {
+            const section = createDialogElement('section', 'dialog-practice-evidence-group');
+            section.append(
+                createDialogElement('h4', '', group.title),
+                createDialogElement('p', '', group.body)
+            );
+            evidenceGroups.append(section);
+        });
+
+        evidence.append(evidenceGroups);
+        columns.append(technicalWork, evidence);
+        layout.append(context, columns);
+        container.append(layout);
+    }
+
     function appendDisclosure(container, disclosure) {
         if (!disclosure) {
             return;
@@ -1371,11 +1445,7 @@
         appendIntroduction(container, data);
 
         if (entryId === 'laprincesa' || entryId === 'celignis') {
-            appendOverviewBand(container, [
-                { title: getTranslation('dialog.context'), body: data.context },
-                { title: getTranslation('dialog.technicalWork'), body: data.technicalWork },
-                { title: getTranslation('dialog.technicalEvidence'), body: data.technicalEvidence }
-            ]);
+            appendPracticeOverview(container, data);
 
             const body = createDialogElement('section', 'dialog-page-body');
             appendDisclosure(body, data.disclosure);

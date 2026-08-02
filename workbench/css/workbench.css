@@ -890,6 +890,70 @@ button { color: inherit; }
     line-height: 1.72;
 }
 .dialog-overview-band p { max-width: 35ch; }
+.dialog-practice-layout {
+    border-bottom: 1px solid rgba(174, 183, 194, 0.13);
+    background: rgba(174, 183, 194, 0.045);
+}
+.dialog-editorial-block.dialog-practice-context,
+.dialog-editorial-block.dialog-practice-work,
+.dialog-practice-evidence {
+    min-width: 0;
+    padding: clamp(1.55rem, 2.6vw, 2.4rem);
+}
+.dialog-practice-context {
+    border-bottom: 1px solid rgba(174, 183, 194, 0.13);
+}
+.dialog-practice-context p { max-width: 78ch; }
+.dialog-practice-columns {
+    display: grid;
+    grid-template-columns: minmax(0, 0.42fr) minmax(0, 0.58fr);
+}
+.dialog-practice-evidence {
+    border-left: 1px solid rgba(174, 183, 194, 0.13);
+}
+.dialog-practice-context h3,
+.dialog-practice-work h3,
+.dialog-practice-evidence > h3 {
+    color: var(--color-accent);
+    font: 700 0.69rem/1.35 var(--font-mono);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+.dialog-practice-context > p,
+.dialog-practice-work > p,
+.dialog-practice-evidence p {
+    margin-top: 0.9rem;
+    overflow-wrap: anywhere;
+    color: var(--color-text-muted);
+    line-height: 1.76;
+}
+.dialog-practice-work > p { max-width: 48ch; }
+.dialog-practice-evidence .dialog-practice-evidence-lead {
+    max-width: 66ch;
+    margin-top: 0.85rem;
+}
+.dialog-practice-evidence-groups {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.3rem clamp(1.35rem, 2.2vw, 2rem);
+    margin-top: 1.25rem;
+}
+.dialog-practice-evidence-group {
+    min-width: 0;
+    padding-top: 0.85rem;
+    border-top: 1px solid rgba(174, 183, 194, 0.13);
+}
+.dialog-practice-evidence-group h4 {
+    color: var(--color-text);
+    font: 700 0.76rem/1.45 var(--font-sans);
+    letter-spacing: 0.025em;
+}
+.dialog-practice-evidence-group p {
+    max-width: 38ch;
+    margin-top: 0.5rem;
+    font-size: 0.94rem;
+    line-height: 1.72;
+}
 .dialog-editorial-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1033,6 +1097,8 @@ button { color: inherit; }
 }
 
 @media (max-width: 900px) {
+    .dialog-practice-columns { grid-template-columns: minmax(0, 0.44fr) minmax(0, 0.56fr); }
+    .dialog-practice-evidence-groups { grid-template-columns: 1fr; }
     .dialog-editorial-grid--asymmetric { grid-template-columns: 1fr; }
     .dialog-editorial-grid--asymmetric .dialog-editorial-block:first-child { grid-row: auto; }
     .dialog-editorial-grid--asymmetric .dialog-editorial-block + .dialog-editorial-block {
@@ -1090,8 +1156,16 @@ button { color: inherit; }
     }
     .dialog-lead { font-size: 1rem; }
     .dialog-overview-band,
+    .dialog-practice-columns,
     .dialog-editorial-grid,
     .dialog-hypothesis-grid { grid-template-columns: 1fr; }
+    .dialog-practice-evidence {
+        border-top: 1px solid rgba(174, 183, 194, 0.13);
+        border-left: 0;
+    }
+    .dialog-practice-context,
+    .dialog-practice-work,
+    .dialog-practice-evidence { padding: 1.5rem 1.25rem; }
     .dialog-overview-band section + section,
     .dialog-editorial-block + .dialog-editorial-block,
     .dialog-hypothesis:nth-child(even),
