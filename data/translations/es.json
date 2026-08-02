@@ -53,6 +53,7 @@
     "education": "Formación",
     "skills": "Habilidades",
     "projects": "Proyectos",
+    "documents": "Documentos",
     "concepts": "Conceptos",
     "references": "Referencias",
     "contact": "Contacto",
@@ -105,12 +106,13 @@
       "title": "Identidad científica: conectar habilidades técnicas, curiosidad y propósito traslacional."
     },
     "projects": {
-      "kicker": "Proyectos seleccionados",
-      "title": "Proyectos académicos y de investigación con contribución personal clara.",
-      "body": "Una vista rápida del trabajo detrás del portfolio: un proyecto académico de revisión bibliográfica y un concepto original en fase inicial, ambos presentados con cautela científica.",
-      "pointAcademic": "Trabajo académico final · 61 páginas",
-      "pointConcept": "Concepto original · formulación de hipótesis",
-      "pointCommunication": "Redacción y comunicación científica"
+      "kicker": "Selección de trabajos",
+      "title": "Una muestra compacta de trabajo con enlaces directos a fichas completas en Workbench.",
+      "body": "Esta sección es intencionalmente breve para reclutadores. El contexto completo de proyectos, evidencia, limitaciones y próximos pasos está documentado en Workbench.",
+      "pointScope": "Tres trabajos representativos",
+      "pointHonesty": "Madurez y estado comunicados con cautela científica",
+      "pointWorkbench": "Desarrollo detallado documentado en Workbench",
+      "exploreAll": "Explorar todos los proyectos y notas de investigación"
     },
     "concepts": {
       "kicker": "Conceptos de investigación",
@@ -121,6 +123,14 @@
       "pointValidation": "Diseñado para una futura validación experimental"
     },
     "references": {
+      "kicker": "Documentos",
+      "title": "Documentos profesionales y referencias para procesos de selección.",
+      "body": "Aquí se muestran los documentos clave, mientras que los dosieres completos de proyectos e investigación permanecen organizados en Workbench.",
+      "pointCv": "CV y registros de cualificaciones",
+      "pointAcademic": "Documentación de trabajo académico",
+      "pointWorkbench": "Evidencia ampliada en Workbench"
+    },
+    "referencesProfessional": {
       "kicker": "Referencias",
       "title": "Referencias profesionales y académicas que respaldan la experiencia de laboratorio presentada aquí.",
       "body": "Las referencias de formación académica, prácticas de investigación y experiencia internacional en laboratorio pueden facilitarse según la oportunidad y el proceso de selección.",
@@ -265,17 +275,54 @@
     }
   },
   "projectCards": {
+    "deutschos": {
+      "kicker": "Proyecto · Técnica y aprendizaje",
+      "title": "DeutschOS",
+      "body": "Entorno local de aprendizaje de alemán centrado en contextos de laboratorio, práctica estructurada y revisión transparente del progreso.",
+      "status": "Estado: En desarrollo",
+      "cta": "Abrir ficha en Workbench"
+    },
+    "portfolio": {
+      "kicker": "Proyecto · Hito",
+      "title": "Portafolio científico",
+      "body": "Portafolio profesional multilingüe para reclutadores, laboratorios y colaboradores científicos, publicado en GitHub Pages.",
+      "status": "Estado: Funcional",
+      "cta": "Abrir ficha en Workbench"
+    },
     "phage": {
-      "kicker": "Trabajo académico final · Revisión bibliográfica",
+      "kicker": "Nota de investigación · Hito",
       "title": "Bacteriofagoterapia",
-      "body": "Mi contribución: revisión bibliográfica, redacción científica, estructura del proyecto, desarrollo conceptual y preparación de la defensa.",
-      "cta": "Explorar proyecto"
+      "body": "Revisión académica en coautoría con alcance, evidencia y limitaciones documentadas.",
+      "status": "Estado: Completado (revisión académica de literatura)",
+      "cta": "Abrir ficha en Workbench"
     },
     "chitosan": {
-      "kicker": "Concepto de investigación inicial · AETEL 2025",
-      "title": "Quitosano y microplásticos",
-      "body": "Mi contribución: desarrollo original del concepto, formulación de hipótesis, metodología propuesta y comunicación científica. El concepto se presenta como hipótesis inicial, no como evidencia experimental o clínica validada.",
-      "cta": "Explorar concepto"
+      "kicker": "Nota de investigación · Concepto · AETEL 2025",
+      "title": "Aplicaciones médicas del quitosano: potencial para la captura de microplásticos y su estudio biomédico",
+      "body": "Propuesta conceptual informada por literatura sobre quitosano modificado y microplásticos para futuros estudios biomédicos o analíticos. No se ha realizado validación experimental.",
+      "status": "Estado: Concepto · Sin validación experimental",
+      "cta": "Abrir ficha en Workbench"
+    }
+  },
+  "referencesCards": {
+    "cv": {
+      "kicker": "Perfil central",
+      "title": "Curriculum Vitae",
+      "body": "Resumen profesional, formación, experiencia de laboratorio y contacto preparados para procesos de selección.",
+      "cta": "Abrir CV"
+    },
+    "phage": {
+      "kicker": "Dosier académico",
+      "title": "Documentación de Bacteriofagoterapia",
+      "body": "El proyecto final y la defensa están disponibles, con coautoría y alcance comunicados de forma transparente.",
+      "projectCta": "Abrir trabajo final",
+      "defenseCta": "Abrir diapositivas de defensa"
+    },
+    "workbench": {
+      "kicker": "Evidencia completa",
+      "title": "Dosieres de Workbench",
+      "body": "Proyectos, notas de investigación, aprendizaje técnico e hitos están organizados en Workbench con estado, evidencia y limitaciones explícitas.",
+      "cta": "Abrir Workbench"
     }
   },
   "skillsMap": {
@@ -390,7 +437,7 @@
     },
     "defense": {
       "heading": "Bacteriophage Therapy: Defense Slides",
-      "label": "Defensa · 17 diapositivas"
+      "label": "Presentación de defensa · 17 diapositivas"
     }
   },
   "referenceCards": {

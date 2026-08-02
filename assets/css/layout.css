@@ -735,11 +735,15 @@ main,
 .insight-grid,
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1px;
     margin-block-start: clamp(2rem, 5vw, 4rem);
     border-block: 1px solid rgba(174, 183, 194, 0.14);
     background-color: rgba(174, 183, 194, 0.14);
+}
+
+.insight-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .insight-grid article,
@@ -777,6 +781,51 @@ main,
 
 .project-grid .document-link {
     margin-block-start: var(--spacing-xl);
+}
+
+.project-status {
+    margin-block-start: var(--spacing-md);
+    color: var(--color-accent-secondary);
+    font: 700 0.72rem/1.4 var(--font-family-sans);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.projects-workbench-cta {
+    margin-block-start: var(--spacing-xl);
+}
+
+.references-professional-block {
+    margin-block-start: clamp(2.5rem, 6vw, 4.5rem);
+    padding-block-start: clamp(2rem, 4vw, 3rem);
+    border-block-start: 1px solid rgba(174, 183, 194, 0.16);
+}
+
+.references-professional-block h3 {
+    margin: 0;
+    color: var(--color-text);
+    font: 650 clamp(1.35rem, 2.4vw, 2rem)/1.18 var(--font-family-sans);
+    letter-spacing: -0.01em;
+}
+
+.references-professional-block .focus-grid {
+    margin-block-start: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+.references-professional-block .focus-item {
+    min-height: auto;
+}
+
+.references-professional-block .focus-index {
+    margin-block-end: 1.2rem;
+}
+
+.references-professional-block .practice-details {
+    margin-block-start: 0;
+}
+
+.references-professional-block .practice-details summary {
+    margin-block-end: 0.8rem;
 }
 
 .focus-item {

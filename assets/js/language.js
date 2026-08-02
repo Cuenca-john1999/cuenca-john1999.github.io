@@ -17,7 +17,7 @@
  * - Language.translate(key) - Obtener traducción
  * 
  * Uso en HTML:
- * <h1 data-i18n="home.title">Título por defecto</h1>
+ * <h1 data-i18n="hero.title">Título por defecto</h1>
  * 
  * Al cambiar idioma, se actualiza automáticamente el contenido.
  * 
@@ -25,7 +25,7 @@
 
 const Language = (() => {
     const STORAGE_KEY = 'portfolio-language';
-    const TRANSLATION_VERSION = '20260711-europass-felasa';
+    const TRANSLATION_VERSION = '20260802-layout-references-relocation';
     const DEFAULT_LANGUAGE = 'es';
     const AVAILABLE_LANGUAGES = ['en', 'de', 'es'];
     const TRANSLATABLE_ATTRIBUTES = {

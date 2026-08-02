@@ -53,6 +53,7 @@
     "education": "Ausbildung",
     "skills": "Kompetenzen",
     "projects": "Projekte",
+    "documents": "Dokumente",
     "concepts": "Konzepte",
     "references": "Referenzen",
     "contact": "Kontakt",
@@ -105,12 +106,13 @@
       "title": "Wissenschaftliche Identität: technische Fähigkeiten, Neugier und translationaler Zweck."
     },
     "projects": {
-      "kicker": "Ausgewählte Projekte",
-      "title": "Akademische und forschungsorientierte Projekte mit klarer persönlicher Mitwirkung.",
-      "body": "Ein schneller Überblick über die Projektarbeit im Portfolio: ein akademisches Literaturreview-Projekt und ein originales Frühphasen-Konzept, beide mit wissenschaftlicher Vorsicht dargestellt.",
-      "pointAcademic": "Abschlussprojekt · 61 Seiten",
-      "pointConcept": "Originales Konzept · Hypothesenformulierung",
-      "pointCommunication": "Wissenschaftliches Schreiben und Kommunikation"
+      "kicker": "Ausgewählte Arbeiten",
+      "title": "Eine kompakte Arbeitsauswahl mit direkten Links zu vollständigen Workbench-Einträgen.",
+      "body": "Dieser Bereich bleibt für Recruiter bewusst kurz. Voller Projektkontext, Evidenz, Grenzen und nächste Schritte sind in der Workbench dokumentiert.",
+      "pointScope": "Drei repräsentative Arbeiten",
+      "pointHonesty": "Reifegrad und Status werden wissenschaftlich vorsichtig kommuniziert",
+      "pointWorkbench": "Detaillierte Entwicklung wird in der Workbench dokumentiert",
+      "exploreAll": "Alle Projekte und Forschungsnotizen ansehen"
     },
     "concepts": {
       "kicker": "Forschungskonzepte",
@@ -121,6 +123,14 @@
       "pointValidation": "Für zukünftige experimentelle Validierung gedacht"
     },
     "references": {
+      "kicker": "Dokumente",
+      "title": "Professionelle Dokumente und Referenzen für Bewerbungsprozesse.",
+      "body": "Zentrale Unterlagen sind hier verfügbar, während vollständige Projekt- und Forschungsdossiers in der Workbench strukturiert bleiben.",
+      "pointCv": "Lebenslauf und Qualifikationsunterlagen",
+      "pointAcademic": "Dokumentation akademischer Arbeiten",
+      "pointWorkbench": "Erweiterte Nachweise in der Workbench"
+    },
+    "referencesProfessional": {
       "kicker": "Referenzen",
       "title": "Professionelle und akademische Referenzen können die hier dargestellte Laborerfahrung unterstützen.",
       "body": "Referenzen aus Ausbildung, Forschungspraxis und internationaler Laborerfahrung können je nach Stelle und Auswahlverfahren bereitgestellt werden.",
@@ -265,17 +275,54 @@
     }
   },
   "projectCards": {
+    "deutschos": {
+      "kicker": "Projekt · Technik & Lernen",
+      "title": "DeutschOS",
+      "body": "Lokale Deutsch-Lernumgebung mit Fokus auf Laborkontexte, strukturierte Praxis und transparente Fortschrittskontrolle.",
+      "status": "Status: In Entwicklung",
+      "cta": "Workbench-Eintrag öffnen"
+    },
+    "portfolio": {
+      "kicker": "Projekt · Meilenstein",
+      "title": "Wissenschaftliches Portfolio",
+      "body": "Mehrsprachiges professionelles Portfolio für Recruiter, Labore und wissenschaftliche Zusammenarbeit, veröffentlicht über GitHub Pages.",
+      "status": "Status: Funktionsfähig",
+      "cta": "Workbench-Eintrag öffnen"
+    },
     "phage": {
-      "kicker": "Abschlussprojekt · Literaturreview",
+      "kicker": "Forschungsnotiz · Meilenstein",
       "title": "Phagentherapie",
-      "body": "Mein Beitrag: Literaturrecherche, wissenschaftliches Schreiben, Projektstruktur, konzeptuelle Entwicklung und Vorbereitung der Verteidigung.",
-      "cta": "Projekt ansehen"
+      "body": "Gemeinsam verfasste akademische Literaturübersicht mit dokumentiertem Umfang, Evidenz und Grenzen.",
+      "status": "Status: Abgeschlossen (akademische Literaturübersicht)",
+      "cta": "Workbench-Eintrag öffnen"
     },
     "chitosan": {
-      "kicker": "Frühphasen-Forschungskonzept · AETEL 2025",
-      "title": "Chitosan und Mikroplastik",
-      "body": "Mein Beitrag: originale Konzeptentwicklung, Hypothesenformulierung, vorgeschlagene Methodik und wissenschaftliche Kommunikation. Das Konzept wird als Frühphasen-Hypothese dargestellt, nicht als validierte experimentelle oder klinische Evidenz.",
-      "cta": "Konzept ansehen"
+      "kicker": "Forschungsnotiz · Konzept · AETEL 2025",
+      "title": "Medizinische Anwendungen von Chitosan: Potenzial zur Mikroplastikbindung und biomedizinischen Untersuchung",
+      "body": "Literaturgestützter Konzeptvorschlag zu modifiziertem Chitosan und Mikroplastik für zukünftige biomedizinische oder analytische Untersuchungen. Es liegt keine experimentelle Validierung vor.",
+      "status": "Status: Konzept · Keine experimentelle Validierung",
+      "cta": "Workbench-Eintrag öffnen"
+    }
+  },
+  "referencesCards": {
+    "cv": {
+      "kicker": "Kernprofil",
+      "title": "Lebenslauf",
+      "body": "Berufliches Profil, Ausbildung, Laborerfahrung und Kontaktdaten für Bewerbungsprozesse aufbereitet.",
+      "cta": "CV öffnen"
+    },
+    "phage": {
+      "kicker": "Akademisches Dossier",
+      "title": "Dokumentation zur Phagentherapie",
+      "body": "Abschlussprojekt und Verteidigungsunterlagen sind verfügbar; Co-Autorenschaft und Umfang werden transparent kommuniziert.",
+      "projectCta": "Abschlussprojekt öffnen",
+      "defenseCta": "Verteidigungsfolien öffnen"
+    },
+    "workbench": {
+      "kicker": "Vollständige Nachweise",
+      "title": "Workbench-Dossiers",
+      "body": "Projekte, Forschungsnotizen, technisches Lernen und Meilensteine sind in der Workbench mit klarem Status, Evidenz und Grenzen strukturiert.",
+      "cta": "Workbench öffnen"
     }
   },
   "skillsMap": {
@@ -390,7 +437,7 @@
     },
     "defense": {
       "heading": "Bacteriophage Therapy: Defense Slides",
-      "label": "Verteidigung · 17 Folien"
+      "label": "Präsentation zur Verteidigung · 17 Folien"
     }
   },
   "referenceCards": {

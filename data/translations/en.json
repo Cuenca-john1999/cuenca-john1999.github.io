@@ -53,6 +53,7 @@
     "education": "Education",
     "skills": "Skills",
     "projects": "Projects",
+    "documents": "Documents",
     "concepts": "Concepts",
     "references": "References",
     "contact": "Contact",
@@ -105,12 +106,13 @@
       "title": "Scientific identity: connecting technical skills, curiosity and translational purpose."
     },
     "projects": {
-      "kicker": "Selected Projects",
-      "title": "Academic and research-oriented projects with clear personal contribution.",
-      "body": "A quick view of the project work behind the portfolio: one academic literature-review project and one original early-stage concept, both framed with scientific caution.",
-      "pointAcademic": "Final academic project · 61 pages",
-      "pointConcept": "Original concept · hypothesis framing",
-      "pointCommunication": "Scientific writing and communication"
+      "kicker": "Selected Work",
+      "title": "A compact sample of work with direct links to full Workbench entries.",
+      "body": "This section is intentionally brief for recruiters. Full project context, evidence, limitations and next steps are documented in Workbench.",
+      "pointScope": "Three representative works",
+      "pointHonesty": "Maturity and status communicated with scientific caution",
+      "pointWorkbench": "Detailed development tracked in Workbench",
+      "exploreAll": "Explore all projects and research notes"
     },
     "concepts": {
       "kicker": "Research Concepts",
@@ -121,6 +123,14 @@
       "pointValidation": "Designed for future experimental validation"
     },
     "references": {
+      "kicker": "Documents",
+      "title": "Professional documents and references for recruitment processes.",
+      "body": "Core documents are available here, while full project and research dossiers remain organized inside Workbench.",
+      "pointCv": "CV and qualification records",
+      "pointAcademic": "Academic project documentation",
+      "pointWorkbench": "Extended work evidence in Workbench"
+    },
+    "referencesProfessional": {
       "kicker": "References",
       "title": "Professional and academic references can support the laboratory experience shown here.",
       "body": "References from academic training, research practice and international laboratory experience can be provided according to the opportunity and recruitment process.",
@@ -265,17 +275,54 @@
     }
   },
   "projectCards": {
+    "deutschos": {
+      "kicker": "Project · Technical & learning",
+      "title": "DeutschOS",
+      "body": "Local German-learning environment focused on laboratory contexts, structured practice and transparent progress review.",
+      "status": "Status: In development",
+      "cta": "Open Workbench entry"
+    },
+    "portfolio": {
+      "kicker": "Project · Milestone",
+      "title": "Scientific Portfolio",
+      "body": "Multilingual professional portfolio for recruiters, laboratories and scientific collaborators, published on GitHub Pages.",
+      "status": "Status: Functional",
+      "cta": "Open Workbench entry"
+    },
     "phage": {
-      "kicker": "Final academic project · Literature review",
+      "kicker": "Research note · Milestone",
       "title": "Bacteriophage Therapy",
-      "body": "My contribution: literature review, scientific writing, project structure, conceptual development and defense preparation.",
-      "cta": "Explore project"
+      "body": "Co-authored academic literature review with documented scope, evidence and limitations.",
+      "status": "Status: Completed (academic literature review)",
+      "cta": "Open Workbench entry"
     },
     "chitosan": {
-      "kicker": "Early-stage research concept · AETEL 2025",
-      "title": "Chitosan and Microplastics",
-      "body": "My contribution: original concept development, hypothesis framing, proposed methodology and scientific communication. The concept is presented as an early-stage hypothesis, not as validated experimental or clinical evidence.",
-      "cta": "Explore concept"
+      "kicker": "Research note · Concept · AETEL 2025",
+      "title": "Medical applications of chitosan: potential for microplastic capture and biomedical study",
+      "body": "Literature-informed conceptual proposal on modified chitosan and microplastics for future biomedical or analytical study. No experimental validation performed.",
+      "status": "Status: Concept · No experimental validation performed",
+      "cta": "Open Workbench entry"
+    }
+  },
+  "referencesCards": {
+    "cv": {
+      "kicker": "Core profile",
+      "title": "Curriculum Vitae",
+      "body": "Professional summary, education, laboratory experience and contact information prepared for recruitment workflows.",
+      "cta": "Open CV"
+    },
+    "phage": {
+      "kicker": "Academic dossier",
+      "title": "Bacteriophage Therapy Documentation",
+      "body": "Final project and defense files are available, with co-authorship and scope communicated transparently.",
+      "projectCta": "Open final project",
+      "defenseCta": "Open defense slides"
+    },
+    "workbench": {
+      "kicker": "Full evidence",
+      "title": "Workbench Dossiers",
+      "body": "Projects, research notes, technical learning and milestones are structured in Workbench with explicit status, evidence and limitations.",
+      "cta": "Open Workbench"
     }
   },
   "skillsMap": {
@@ -390,7 +437,7 @@
     },
     "defense": {
       "heading": "Bacteriophage Therapy: Defense Slides",
-      "label": "Defense slides · 17 pages"
+      "label": "Defense presentation · 17 slides"
     }
   },
   "referenceCards": {

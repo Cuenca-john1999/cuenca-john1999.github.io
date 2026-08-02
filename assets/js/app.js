@@ -56,6 +56,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initializeOptionalModules();
 
+    // Keep professional references collapsed on every load/reload.
+    document.querySelectorAll('#references-professional details[open]').forEach((detailsElement) => {
+        detailsElement.open = false;
+        detailsElement.removeAttribute('open');
+    });
+
     const isFocusableCandidateVisible = (element) => {
         if (!element || element.hidden || element.getAttribute('aria-hidden') === 'true') {
             return false;

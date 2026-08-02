@@ -67,7 +67,7 @@ Research notes and concepts are presented as literature-informed, exploratory or
 
 Jhon defines the concepts, requirements, professional content, information structure and product decisions for the portfolio.
 
-Technical implementation, research support and editorial work may be assisted by AI tools. The repository does not present Jhon as a professional software developer.
+AI is used as a supporting tool for technical implementation, content organisation and editorial review of the portfolio. Jhon defines the objectives, requirements, content, product decisions, testing and final approval.
 
 ## License
 
