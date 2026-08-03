@@ -29,11 +29,7 @@
     "documentedPracticalSkills": "Técnicas respaldadas por experiencia práctica de laboratorio documentada",
     "academicTechnicalKnowledge": "Áreas respaldadas por formación y conocimiento técnico",
     "selectedProjectTypes": "Tipos de proyecto seleccionados",
-    "researchConceptPrinciples": "Principios del concepto de investigación",
-    "projectMaturityScale": "Escala de madurez del proyecto",
-    "conceptMethodsAndKeywords": "Métodos y palabras clave del concepto",
     "referenceAreas": "Áreas de referencia",
-    "currentDevelopmentAreas": "Áreas de desarrollo actuales",
     "contactForm": "Formulario de contacto",
     "copyrightAndAuthorshipNotice": "Aviso de derechos de autor y autoría"
   },
@@ -54,7 +50,6 @@
     "skills": "Habilidades",
     "projects": "Proyectos",
     "documents": "Documentos",
-    "concepts": "Conceptos",
     "references": "Referencias",
     "contact": "Contacto",
     "workbench": "Workbench"
@@ -114,14 +109,6 @@
       "pointWorkbench": "Desarrollo detallado documentado en Workbench",
       "exploreAll": "Explorar todos los proyectos y notas de investigación"
     },
-    "concepts": {
-      "kicker": "Conceptos de investigación",
-      "title": "Ideas científicas en fase inicial moldeadas por pensamiento de laboratorio y curiosidad traslacional.",
-      "body": "Estos conceptos no se presentan como tratamientos validados ni como resultados clínicos. Muestran cómo conecto preguntas biomédicas, métodos de laboratorio e hipótesis de investigación responsables.",
-      "pointHypothesis": "Hipótesis en fase inicial · no validada clínicamente",
-      "pointMethods": "Biomateriales · microbiología · métodos analíticos",
-      "pointValidation": "Diseñado para una futura validación experimental"
-    },
     "references": {
       "kicker": "Documentos",
       "title": "Documentos profesionales y referencias para procesos de selección.",
@@ -137,14 +124,6 @@
       "pointClinical": "Formación en laboratorio clínico y biomédico",
       "pointResearch": "Prácticas en fundación de investigación · Madrid",
       "pointErasmus": "Prácticas Erasmus+ en laboratorio analítico · Irlanda"
-    },
-    "development": {
-      "kicker": "Desarrollo actual",
-      "title": "Desarrollo profesional continuo mientras preparo oportunidades de laboratorio.",
-      "body": "Junto con la búsqueda de oportunidades relacionadas con laboratorio, apoyo a investigación clínica y ciencia biomédica, continúo con la preparación de certificación de alemán, el desarrollo del portfolio científico y la revisión de literatura relacionada con mis áreas de interés.",
-      "pointGerman": "Preparación de certificación de alemán",
-      "pointPortfolio": "Desarrollo del portfolio científico",
-      "pointLiterature": "Revisión de literatura biomédica: fagoterapia, biomateriales y microplásticos"
     },
     "contact": {
       "kicker": "Contacto",
@@ -308,13 +287,6 @@
       "status": "Estado: En desarrollo",
       "cta": "Abrir ficha en Workbench"
     },
-    "portfolio": {
-      "kicker": "Proyecto · Hito",
-      "title": "Portafolio científico",
-      "body": "Portafolio profesional multilingüe para reclutadores, laboratorios y colaboradores científicos, publicado en GitHub Pages.",
-      "status": "Estado: Funcional",
-      "cta": "Abrir ficha en Workbench"
-    },
     "phage": {
       "kicker": "Nota de investigación · Hito",
       "title": "Bacteriofagoterapia",
@@ -350,47 +322,6 @@
       "body": "Proyectos, notas de investigación, aprendizaje técnico e hitos están organizados en Workbench con estado, evidencia y limitaciones explícitas.",
       "cta": "Abrir Workbench"
     }
-  },
-  "conceptCard": {
-    "status": "Conceptual · No validado experimentalmente · AETEL 2025",
-    "title": "Aplicaciones médicas del quitosano: potencial para la captura de microplásticos y su estudio biomédico.",
-    "body": "Hipótesis de investigación en fase inicial que explora si el quitosano modificado, un biopolímero biocompatible derivado de la quitina, podría estudiarse como plataforma para interactuar con microplásticos en futuros modelos biomédicos o analíticos.",
-    "maturityScale": {
-      "concept": "Hipótesis conceptual",
-      "literature": "Propuesta informada por literatura",
-      "validation": "Requiere validación in vitro"
-    },
-    "context": {
-      "title": "Contexto científico",
-      "body": "Los microplásticos son una preocupación emergente para la salud, pero la exposición humana, su posible acumulación y su impacto clínico todavía requieren confirmación experimental cuidadosa."
-    },
-    "idea": {
-      "title": "Idea central",
-      "body": "Explorar materiales basados en quitosano como candidatos para la adsorción, retención o estudio controlado de microplásticos en laboratorio, sin atribuirles eficacia terapéutica."
-    },
-    "methods": {
-      "title": "Métodos propuestos",
-      "body": "Secuenciación de biopelículas, perfilado microbiano mediante MiSeq, modificación de quitosano, caracterización por FTIR, ensayos de adsorción y pruebas de biocompatibilidad."
-    },
-    "maturity": {
-      "title": "Madurez del proyecto",
-      "body": "Propuesta conceptual. Requeriría validación in vitro, evaluación de toxicidad, controles y métodos analíticos reproducibles antes de cualquier interpretación clínica."
-    },
-    "hypotheses": {
-      "kicker": "Hipótesis de trabajo",
-      "title": "Resultados esperados reformulados como hipótesis iniciales y comprobables.",
-      "adsorption": "<strong>Hipótesis de adsorción.</strong> El quitosano modificado podría mostrar afinidad medible por determinadas superficies de microplásticos bajo condiciones controladas in vitro, permitiendo su retención y posterior evaluación analítica.",
-      "biofilm": "<strong>Hipótesis de diseño guiado por biopelículas.</strong> Los microorganismos asociados a biopelículas sobre microplásticos podrían aportar información biológica útil para seleccionar o diseñar materiales basados en quitosano con mayor especificidad.",
-      "degradation": "<strong>Hipótesis de apoyo a la degradación.</strong> Si los complejos quitosano-microplástico pueden caracterizarse de forma reproducible, podrían explorarse estrategias enzimáticas o bioquímicas como futuros modelos de degradación de microplásticos, sin asumir eficacia clínica.",
-      "feasibility": "<strong>Hipótesis de viabilidad biomédica.</strong> Solo si se demuestran especificidad, estabilidad y biocompatibilidad in vitro, este concepto podría avanzar hacia futuros modelos de captura, retención o estudio biomédico."
-    }
-  },
-  "conceptTags": {
-    "chitosan": "Quitosano",
-    "microplastics": "Microplásticos",
-    "biofilms": "Biopelículas",
-    "adsorption": "Ensayos de adsorción",
-    "biocompatibility": "Biocompatibilidad"
   },
   "documents": {
     "finalProject": {

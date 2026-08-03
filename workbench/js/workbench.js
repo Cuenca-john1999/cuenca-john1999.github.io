@@ -129,28 +129,6 @@
                     pointGerman: 'German language certification preparation',
                     pointPortfolio: 'Scientific portfolio development',
                     pointLiterature: 'Biomedical literature review: phage therapy, biomaterials and microplastics'
-                },
-                references: {
-                    kicker: 'References',
-                    title: 'Professional and academic references can support the laboratory experience shown here.',
-                    body: 'References from academic training, research practice and international laboratory experience can be provided according to the opportunity and recruitment process.',
-                    pointClinical: 'Clinical and biomedical laboratory training',
-                    pointResearch: 'Research foundation practice · Madrid',
-                    pointErasmus: 'Erasmus+ analytical laboratory practice · Ireland'
-                },
-                referenceCards: {
-                    research: {
-                        title: 'Research Laboratory Reference',
-                        body: 'Dr. Danay Cibrián Vera, Principal Investigator at the Immunology Service of Hospital Universitario de La Princesa, recommends Jhon after a three-month laboratory placement and rates his official performance as High in all eight assessed criteria, including technical ability, dedication, precision, problem-solving, learning, communication, teamwork and responsibility.'
-                    },
-                    academic: {
-                        title: 'Academic Reference',
-                        body: 'Tamara Díaz Jáuregui, biology teacher at CEAC FP Madrid, recommends Jhon for his technical ability, dedication, precision, problem-solving, fast learning, communication and strong sense of responsibility.'
-                    },
-                    international: {
-                        title: 'International Laboratory Reference',
-                        body: 'Cristobal Fernandez Belmonte M.Sc., Lab Manager at Celignis Biomass Analysis Laboratory in Limerick, Ireland, recommends Jhon after his internship supporting biomass analyses, instrument operation, GLP workflows, statistical quality-control self-checks, sample preparation, deadline delivery, teamwork and structured handover training for replacement interns.'
-                    }
                 }
             },
             principles: {
@@ -303,28 +281,6 @@
                     pointGerman: 'Preparación de certificación de alemán',
                     pointPortfolio: 'Desarrollo del portfolio científico',
                     pointLiterature: 'Revisión de literatura biomédica: fagoterapia, biomateriales y microplásticos'
-                },
-                references: {
-                    kicker: 'Referencias',
-                    title: 'Referencias profesionales y académicas que respaldan la experiencia de laboratorio presentada aquí.',
-                    body: 'Las referencias de formación académica, prácticas de investigación y experiencia internacional en laboratorio pueden facilitarse según la oportunidad y el proceso de selección.',
-                    pointClinical: 'Formación en laboratorio clínico y biomédico',
-                    pointResearch: 'Prácticas en fundación de investigación · Madrid',
-                    pointErasmus: 'Prácticas Erasmus+ en laboratorio analítico · Irlanda'
-                },
-                referenceCards: {
-                    research: {
-                        title: 'Referencia de laboratorio de investigación',
-                        body: 'La Dra. Danay Cibrián Vera, investigadora principal en el Servicio de Inmunología del Hospital Universitario de La Princesa, recomienda a Jhon tras unas prácticas de tres meses y valora oficialmente como Alto su desempeño en los ocho criterios evaluados, entre ellos capacidad técnica, dedicación, precisión, resolución de problemas, aprendizaje, comunicación, trabajo en equipo y responsabilidad.'
-                    },
-                    academic: {
-                        title: 'Referencia académica',
-                        body: 'Tamara Díaz Jáuregui, profesora de biología en CEAC FP Madrid, recomienda a Jhon por su capacidad técnica, dedicación, precisión, resolución de problemas, rapidez de aprendizaje, comunicación y fuerte sentido de la responsabilidad.'
-                    },
-                    international: {
-                        title: 'Referencia internacional de laboratorio',
-                        body: 'Cristobal Fernandez Belmonte M.Sc., Lab Manager en Celignis Biomass Analysis Laboratory, Limerick, recomienda a Jhon tras sus prácticas apoyando análisis de biomasa, manejo instrumental, flujos GLP, autocontroles estadísticos de calidad, preparación de muestras, cumplimiento de plazos, trabajo en equipo y formación estructurada de las personas que relevaron el puesto.'
-                    }
                 }
             },
             principles: {
@@ -477,28 +433,6 @@
                     pointGerman: 'Vorbereitung auf Deutschzertifizierung',
                     pointPortfolio: 'Entwicklung des wissenschaftlichen Portfolios',
                     pointLiterature: 'Biomedizinische Literaturrecherche: Phagentherapie, Biomaterialien und Mikroplastik'
-                },
-                references: {
-                    kicker: 'Referenzen',
-                    title: 'Professionelle und akademische Referenzen können die hier dargestellte Laborerfahrung unterstützen.',
-                    body: 'Referenzen aus Ausbildung, Forschungspraxis und internationaler Laborerfahrung können je nach Stelle und Auswahlverfahren bereitgestellt werden.',
-                    pointClinical: 'Ausbildung im klinisch-biomedizinischen Laborbereich',
-                    pointResearch: 'Forschungspraxis · Madrid',
-                    pointErasmus: 'Erasmus+ Praktikum im analytischen Labor · Irland'
-                },
-                referenceCards: {
-                    research: {
-                        title: 'Referenz aus dem Forschungslabor',
-                        body: 'Dr. Danay Cibrián Vera, Principal Investigator am Immunologiedienst des Hospital Universitario de La Princesa, empfiehlt Jhon nach einem dreimonatigen Laborpraktikum und bewertet seine Leistung in allen acht offiziellen Kriterien als Hoch, darunter technische Fähigkeiten, Einsatz, Präzision, Problemlösung, Lernen, Kommunikation, Teamarbeit und Verantwortung.'
-                    },
-                    academic: {
-                        title: 'Akademische Referenz',
-                        body: 'Tamara Díaz Jáuregui, Biologielehrerin bei CEAC FP Madrid, empfiehlt Jhon aufgrund seiner technischen Fähigkeiten, Einsatzbereitschaft, Präzision, Problemlösung, schnellen Lernfähigkeit, Kommunikation und seines ausgeprägten Verantwortungsbewusstseins.'
-                    },
-                    international: {
-                        title: 'Internationale Laborreferenz',
-                        body: 'Cristobal Fernandez Belmonte M.Sc., Lab Manager bei Celignis Biomass Analysis Laboratory in Limerick, empfiehlt Jhon nach seinem Praktikum mit Biomasseanalysen, Gerätebedienung, GLP-Workflows, statistischen Qualitäts-Selbstkontrollen, Probenvorbereitung, termingerechter Arbeit, Teamarbeit und strukturierter Übergabeschulung für nachfolgende Praktikantinnen und Praktikanten.'
-                    }
                 }
             },
             principles: {

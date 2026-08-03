@@ -29,11 +29,7 @@
     "documentedPracticalSkills": "Techniken mit dokumentierter praktischer Laborerfahrung",
     "academicTechnicalKnowledge": "Bereiche aus Ausbildung und fachlichen Kenntnissen",
     "selectedProjectTypes": "Ausgewählte Projektkategorien",
-    "researchConceptPrinciples": "Grundsätze des Forschungskonzepts",
-    "projectMaturityScale": "Reifegradskala des Projekts",
-    "conceptMethodsAndKeywords": "Methoden und Schlagwörter des Konzepts",
     "referenceAreas": "Referenzbereiche",
-    "currentDevelopmentAreas": "Aktuelle Entwicklungsschwerpunkte",
     "contactForm": "Kontaktformular",
     "copyrightAndAuthorshipNotice": "Hinweis zu Urheberrecht und Urheberschaft"
   },
@@ -54,7 +50,6 @@
     "skills": "Kompetenzen",
     "projects": "Projekte",
     "documents": "Dokumente",
-    "concepts": "Konzepte",
     "references": "Referenzen",
     "contact": "Kontakt",
     "workbench": "Workbench"
@@ -114,14 +109,6 @@
       "pointWorkbench": "Detaillierte Entwicklung wird in der Workbench dokumentiert",
       "exploreAll": "Alle Projekte und Forschungsnotizen ansehen"
     },
-    "concepts": {
-      "kicker": "Forschungskonzepte",
-      "title": "Wissenschaftliche Ideen in einer frühen Phase, geprägt durch Labordenken und translationale Neugier.",
-      "body": "Diese Konzepte werden nicht als validierte Behandlungen oder klinische Ergebnisse dargestellt. Sie zeigen, wie ich biomedizinische Fragen, Labormethoden und verantwortungsvolle Forschungshypothesen verbinde.",
-      "pointHypothesis": "Frühphasen-Hypothese · nicht klinisch validiert",
-      "pointMethods": "Biomaterialien · Mikrobiologie · analytische Methoden",
-      "pointValidation": "Für zukünftige experimentelle Validierung gedacht"
-    },
     "references": {
       "kicker": "Dokumente",
       "title": "Professionelle Dokumente und Referenzen für Bewerbungsprozesse.",
@@ -137,14 +124,6 @@
       "pointClinical": "Ausbildung im klinisch-biomedizinischen Laborbereich",
       "pointResearch": "Forschungspraxis · Madrid",
       "pointErasmus": "Erasmus+ Praktikum im analytischen Labor · Irland"
-    },
-    "development": {
-      "kicker": "Aktuelle Entwicklung",
-      "title": "Kontinuierliche berufliche Entwicklung während der Vorbereitung auf Laborchancen.",
-      "body": "Parallel zu Bewerbungen für laborbezogene Positionen, Unterstützung in klinischer Forschung und biomedizinische Wissenschaft bereite ich mich weiter auf eine Deutschzertifizierung vor, entwickle mein wissenschaftliches Portfolio und vertiefe Literaturrecherche in meinen Interessengebieten.",
-      "pointGerman": "Vorbereitung auf Deutschzertifizierung",
-      "pointPortfolio": "Entwicklung des wissenschaftlichen Portfolios",
-      "pointLiterature": "Biomedizinische Literaturrecherche: Phagentherapie, Biomaterialien und Mikroplastik"
     },
     "contact": {
       "kicker": "Kontakt",
@@ -308,13 +287,6 @@
       "status": "Status: In Entwicklung",
       "cta": "Workbench-Eintrag öffnen"
     },
-    "portfolio": {
-      "kicker": "Projekt · Meilenstein",
-      "title": "Wissenschaftliches Portfolio",
-      "body": "Mehrsprachiges professionelles Portfolio für Recruiter, Labore und wissenschaftliche Zusammenarbeit, veröffentlicht über GitHub Pages.",
-      "status": "Status: Funktionsfähig",
-      "cta": "Workbench-Eintrag öffnen"
-    },
     "phage": {
       "kicker": "Forschungsnotiz · Meilenstein",
       "title": "Phagentherapie",
@@ -350,47 +322,6 @@
       "body": "Projekte, Forschungsnotizen, technisches Lernen und Meilensteine sind in der Workbench mit klarem Status, Evidenz und Grenzen strukturiert.",
       "cta": "Workbench öffnen"
     }
-  },
-  "conceptCard": {
-    "status": "Konzeptuell · Nicht experimentell validiert · AETEL 2025",
-    "title": "Medizinische Anwendungen von Chitosan: Potenzial für Mikroplastikbindung und biomedizinische Untersuchung.",
-    "body": "Eine frühe Forschungshypothese, die untersucht, ob modifiziertes Chitosan, ein biokompatibles Biopolymer aus Chitin, als Plattform für die Interaktion mit Mikroplastik in zukünftigen biomedizinischen oder analytischen Modellen untersucht werden könnte.",
-    "maturityScale": {
-      "concept": "Konzeptuelle Hypothese",
-      "literature": "Literaturinformierter Vorschlag",
-      "validation": "Erfordert In-vitro-Validierung"
-    },
-    "context": {
-      "title": "Wissenschaftlicher Kontext",
-      "body": "Mikroplastik ist ein aufkommendes Gesundheitsthema, aber menschliche Exposition, mögliche Akkumulation und klinische Auswirkungen erfordern weiterhin sorgfältige experimentelle Bestätigung."
-    },
-    "idea": {
-      "title": "Zentrale Idee",
-      "body": "Chitosanbasierte Materialien als Kandidaten für Adsorption, Retention oder kontrollierte Laboruntersuchung von Mikroplastik erforschen, ohne therapeutische Wirksamkeit zu behaupten."
-    },
-    "methods": {
-      "title": "Vorgeschlagene Methoden",
-      "body": "Biofilm-Sequenzierung, MiSeq-basierte mikrobielle Profilierung, Chitosanmodifikation, FTIR-Charakterisierung, Adsorptionsassays und Biokompatibilitätstests."
-    },
-    "maturity": {
-      "title": "Projektstand",
-      "body": "Nur ein konzeptueller Vorschlag. Vor jeder klinischen Interpretation wären In-vitro-Validierung, Toxizitätsbewertung, Kontrollen und reproduzierbare analytische Methoden erforderlich."
-    },
-    "hypotheses": {
-      "kicker": "Arbeitshypothesen",
-      "title": "Erwartete Ergebnisse als überprüfbare Frühphasen-Hypothesen formuliert.",
-      "adsorption": "<strong>Adsorptionshypothese.</strong> Modifiziertes Chitosan könnte unter kontrollierten In-vitro-Bedingungen eine messbare Affinität zu ausgewählten Mikroplastikoberflächen zeigen und so Retention und spätere analytische Bewertung unterstützen.",
-      "biofilm": "<strong>Biofilm-geleitete Designhypothese.</strong> Mikroorganismen in mikroplastikassoziierten Biofilmen könnten nützliche biologische Informationen für die Auswahl oder Gestaltung spezifischerer chitosanbasierter Materialien liefern.",
-      "degradation": "<strong>Hypothese zur Unterstützung des Abbaus.</strong> Wenn Chitosan-Mikroplastik-Komplexe reproduzierbar charakterisiert werden können, könnten enzymatische oder biochemische Strategien als zukünftige Modelle für Mikroplastikabbau untersucht werden, ohne klinische Wirksamkeit anzunehmen.",
-      "feasibility": "<strong>Hypothese zur biomedizinischen Machbarkeit.</strong> Nur wenn Spezifität, Stabilität und Biokompatibilität in vitro gezeigt werden, könnte dieses Konzept in Richtung zukünftiger biomedizinischer Erfassungs-, Retentions- oder Untersuchungsmodelle weiterentwickelt werden."
-    }
-  },
-  "conceptTags": {
-    "chitosan": "Chitosan",
-    "microplastics": "Mikroplastik",
-    "biofilms": "Biofilme",
-    "adsorption": "Adsorptionsassays",
-    "biocompatibility": "Biokompatibilität"
   },
   "documents": {
     "finalProject": {

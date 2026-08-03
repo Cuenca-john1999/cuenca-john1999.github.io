@@ -29,11 +29,7 @@
     "documentedPracticalSkills": "Techniques supported by documented practical laboratory experience",
     "academicTechnicalKnowledge": "Areas supported by academic training and technical knowledge",
     "selectedProjectTypes": "Selected project types",
-    "researchConceptPrinciples": "Research concept principles",
-    "projectMaturityScale": "Project maturity scale",
-    "conceptMethodsAndKeywords": "Concept methods and keywords",
     "referenceAreas": "Reference areas",
-    "currentDevelopmentAreas": "Current development areas",
     "contactForm": "Contact form",
     "copyrightAndAuthorshipNotice": "Copyright and authorship notice"
   },
@@ -54,7 +50,6 @@
     "skills": "Skills",
     "projects": "Projects",
     "documents": "Documents",
-    "concepts": "Concepts",
     "references": "References",
     "contact": "Contact",
     "workbench": "Workbench"
@@ -114,14 +109,6 @@
       "pointWorkbench": "Detailed development tracked in Workbench",
       "exploreAll": "Explore all projects and research notes"
     },
-    "concepts": {
-      "kicker": "Research Concepts",
-      "title": "Early-stage scientific ideas shaped by laboratory thinking and translational curiosity.",
-      "body": "These concepts are not presented as validated treatments or clinical results. They show how I connect biomedical questions, laboratory methods and responsible research hypotheses.",
-      "pointHypothesis": "Early-stage hypothesis · not clinically validated",
-      "pointMethods": "Biomaterials · microbiology · analytical methods",
-      "pointValidation": "Designed for future experimental validation"
-    },
     "references": {
       "kicker": "Documents",
       "title": "Professional documents and references for recruitment processes.",
@@ -137,14 +124,6 @@
       "pointClinical": "Clinical and biomedical laboratory training",
       "pointResearch": "Research foundation practice · Madrid",
       "pointErasmus": "Erasmus+ analytical laboratory practice · Ireland"
-    },
-    "development": {
-      "kicker": "Current Development",
-      "title": "Continuing professional development while preparing for laboratory opportunities.",
-      "body": "Alongside applications for laboratory-related, clinical research support and biomedical science roles, I am continuing German language certification preparation, scientific portfolio development and literature review in areas connected to my research interests.",
-      "pointGerman": "German language certification preparation",
-      "pointPortfolio": "Scientific portfolio development",
-      "pointLiterature": "Biomedical literature review: phage therapy, biomaterials and microplastics"
     },
     "contact": {
       "kicker": "Contact",
@@ -308,13 +287,6 @@
       "status": "Status: In development",
       "cta": "Open Workbench entry"
     },
-    "portfolio": {
-      "kicker": "Project · Milestone",
-      "title": "Scientific Portfolio",
-      "body": "Multilingual professional portfolio for recruiters, laboratories and scientific collaborators, published on GitHub Pages.",
-      "status": "Status: Functional",
-      "cta": "Open Workbench entry"
-    },
     "phage": {
       "kicker": "Research note · Milestone",
       "title": "Bacteriophage Therapy",
@@ -350,47 +322,6 @@
       "body": "Projects, research notes, technical learning and milestones are structured in Workbench with explicit status, evidence and limitations.",
       "cta": "Open Workbench"
     }
-  },
-  "conceptCard": {
-    "status": "Conceptual · Not experimentally validated · AETEL 2025",
-    "title": "Chitosan Applications in Medicine: potential for microplastic capture and biomedical study.",
-    "body": "An early research hypothesis exploring whether modified chitosan, a biocompatible biopolymer derived from chitin, could be studied as a platform for interacting with microplastics in future biomedical or analytical models.",
-    "maturityScale": {
-      "concept": "Conceptual hypothesis",
-      "literature": "Literature-informed proposal",
-      "validation": "Requires in vitro validation"
-    },
-    "context": {
-      "title": "Scientific context",
-      "body": "Microplastics are an emerging health concern, but human exposure, accumulation and clinical impact still require careful experimental confirmation."
-    },
-    "idea": {
-      "title": "Central idea",
-      "body": "Explore chitosan-based materials as candidates for microplastic adsorption, retention or controlled laboratory study, without claiming therapeutic efficacy."
-    },
-    "methods": {
-      "title": "Proposed methods",
-      "body": "Biofilm sequencing, MiSeq-based microbial profiling, chitosan modification, FTIR characterization, adsorption assays and biocompatibility testing."
-    },
-    "maturity": {
-      "title": "Project maturity",
-      "body": "Conceptual proposal only. It would need in vitro validation, toxicity assessment, controls and reproducible analytical methods before any clinical interpretation."
-    },
-    "hypotheses": {
-      "kicker": "Working hypotheses",
-      "title": "Expected outcomes reframed as testable early-stage hypotheses.",
-      "adsorption": "<strong>Adsorption hypothesis.</strong> Modified chitosan may show measurable affinity for selected microplastic surfaces under controlled in vitro conditions, supporting retention and later analytical evaluation.",
-      "biofilm": "<strong>Biofilm-guided design hypothesis.</strong> Microorganisms associated with microplastic biofilms may provide useful biological information for selecting or designing more specific chitosan-based materials.",
-      "degradation": "<strong>Degradation-support hypothesis.</strong> If chitosan-microplastic complexes can be characterized reproducibly, enzymatic or biochemical strategies could be explored as future models for microplastic breakdown without assuming clinical efficacy.",
-      "feasibility": "<strong>Biomedical feasibility hypothesis.</strong> Only if specificity, stability and biocompatibility are demonstrated in vitro could this concept move toward future biomedical capture, retention or study models."
-    }
-  },
-  "conceptTags": {
-    "chitosan": "Chitosan",
-    "microplastics": "Microplastics",
-    "biofilms": "Biofilms",
-    "adsorption": "Adsorption assays",
-    "biocompatibility": "Biocompatibility"
   },
   "documents": {
     "finalProject": {
