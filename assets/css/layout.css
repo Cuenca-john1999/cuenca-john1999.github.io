@@ -373,7 +373,7 @@ main,
 
 .opening-action--primary {
     border-color: var(--color-accent);
-    background: var(--color-accent);
+    background: var(--color-accent-surface);
     color: #FFFFFF;
 }
 
