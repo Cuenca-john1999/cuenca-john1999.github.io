@@ -82,11 +82,11 @@
     },
     "responsibility": {
       "kicker": "Verantwortung",
-      "title": "Verantwortung und Führung in der Laborpraxis.",
-      "body": "Während meiner Laborpraktika übernahm ich schrittweise Aufgaben über reine Ausbildungsroutinen hinaus. In analytischen und biomedizinischen Laborumgebungen wurden mir definierte Arbeitsabläufe, Dokumentationsaufgaben, Unterstützung von Studierenden und eigenständiges Aufgabenmanagement anvertraut.",
+      "title": "Verantwortung, Eigeninitiative und wachsende Selbstständigkeit in der Laborpraxis.",
+      "body": "Während meiner Laborpraktika übernahm ich schrittweise Verantwortung über reine Ausbildungsroutinen hinaus. In analytischen und biomedizinischen Laborumgebungen wurden mir definierte Arbeitsabläufe, Dokumentationsaufgaben, Unterstützung bei Übergaben und zunehmend selbstständiges Aufgabenmanagement anvertraut.",
       "pointWorkflow": "Verantwortung für definierte Laborabläufe",
       "pointDocumentation": "Arbeit nach SOPs · Erstellung operativer Dokumentation",
-      "pointTransfer": "Unterstützung von Training und Wissenstransfer"
+      "pointTransfer": "Unterstützung bei Übergabe, Einarbeitung und Wissenstransfer"
     },
     "education": {
       "kicker": "Ausbildung",
@@ -128,14 +128,14 @@
     "contact": {
       "kicker": "Kontakt",
       "title": "Offen für laborbezogene Positionen, klinische Forschungsunterstützung und biomedizinische Wissenschaft.",
-      "body": "Verfügbar für laborbezogene Positionen, Unterstützung in klinischer Forschung und biomedizinische Wissenschaft in Deutschland und international."
+      "body": "Verfügbar für laborbezogene Positionen, Unterstützung in klinischer Forschung und biomedizinische Wissenschaft in Deutschland und international. Meine beruflichen Interessen umfassen Molekularbiologie, Immunologie, translationale Forschung, Wissenschaftskommunikation und internationale Zusammenarbeit im Laborumfeld."
     }
   },
   "readiness": {
     "looking": {
       "kicker": "Gesuchte Bereiche",
-      "title": "Labore, in denen sorgfältige technische Arbeit Forschung, Diagnostik und Analytik unterstützt.",
-      "body": "Besonders Forschungsgruppen, Universitäts- und Institutslabore, private Labore sowie biomedizinische oder analytische Teams, in denen ich praktische Laborerfahrung, zuverlässige Dokumentation und kontinuierliches Lernen einbringen kann."
+      "title": "Positionen in Labortechnik, technischer Assistenz und Forschungsunterstützung.",
+      "body": "Besonders in molekularbiologischen, immunologischen und analytischen Laboren in Forschungsgruppen, Hochschulen, Instituten oder privaten Teams, in denen sorgfältige Praxis, verlässliche Dokumentation und kontinuierliches Lernen Forschung, Diagnostik und Analytik unterstützen."
     }
   },
   "snapshot": {
@@ -146,7 +146,7 @@
     },
     "roles": {
       "label": "Zielrollen",
-      "value": "Labortechnik und Forschungsunterstützung · biomedizinische und analytische Labore · nicht reglementierte technische Positionen"
+      "value": "Labortechnische Positionen · Technische Assistenz · Forschungsunterstützung · biomedizinische und analytische Labore · nicht reglementierte technische Positionen"
     },
     "languages": {
       "label": "Sprachen",
@@ -158,7 +158,7 @@
     },
     "recognition": {
       "label": "Berufliche Anerkennung",
-      "value": "Bestimmte reglementierte klinische oder Krankenhauspositionen können eine Anerkennung erfordern. Entscheidend sind Position, Bundesland und zuständige Behörde."
+      "value": "Für reglementierte klinische oder Krankenhausstellen kann je nach Position, Bundesland und zuständiger Behörde eine Anerkennung erforderlich sein. Eine frühere Zulassung durch eine deutsche Hochschule betraf ausschließlich den Studienzugang und ist keine berufliche Anerkennung."
     },
     "documents": {
       "label": "Dokumente",
@@ -170,8 +170,9 @@
       "title": "Immunologie und Molekularbiologie",
       "institution": "Fundación para la Investigación Biomédica del Hospital Universitario de La Princesa",
       "context": "Madrid, Spanien · FCT-Praktikum · 370 Std.",
+      "summary": "PCR · RNA-Extraktion · Elektrophorese · ELISA · Western-Blot-Vorbereitung · HaCaT-Zellkultur · CD4/CD14-Isolierung",
       "fullTechnicalCta": "Technische Erfahrung vollständig ansehen →",
-      "body": "Zellkultur, Umgang mit HaCaT-Zellen, Medienvorbereitung, Passagieren und Einfrieren, CD4/CD14-Aufreinigung, RNA-Extraktion, PCR, ELISA, Western-Blot-Gelvorbereitung, Transfer und Blocking sowie Verarbeitung humaner und muriner Proben.",
+      "body": "Zellkultur und HaCaT-Handling; Medienvorbereitung, Passagieren und Einfrieren; CD4/CD14-Isolierung; RNA-Extraktion, PCR und Elektrophorese; ELISA; Western-Blot-Gelherstellung, Transfer und Blocking; Verarbeitung humaner und muriner Proben; Protokollarbeit sowie Organisation von Labormaterial und Bestand.",
       "role": "Praktikant im biomedizinischen Labor mit wachsender Verantwortung in Zellkulturabläufen, molekularbiologischer Unterstützung, immunologischen Techniken und Verfahren mit Tierproben.",
       "reference": "Dr. Danay Cibrián Vera, Principal Investigator am Hospital Universitario de La Princesa, hebt Verantwortung, Laborengagement, Teamarbeit und aktive Mitwirkung an molekularbiologischen, immunologischen und probenbezogenen Techniken hervor."
     },
@@ -179,10 +180,11 @@
       "title": "Biomasseanalytik",
       "institution": "Celignis Biomass Analysis Laboratory",
       "context": "Limerick, Irland · Erasmus+ · 03/2023-05/2023",
+      "summary": "CHNOS · CSB · NIR/VISION · GLP-/SOP-Workflows · operative Dokumentation · Fehleranalyse",
       "fullTechnicalCta": "Technische Erfahrung vollständig ansehen →",
       "body": "Feuchte, Asche, flüchtige Bestandteile, CHNOS-Elementaranalyse, FOS/TAC, ICP, CSB, Ammonium, NIR/VISION, Vakuumfiltration und Ascheschmelze; GLP-orientierte Arbeit nach SOPs sowie Erstellung operativer Dokumentation in Irland.",
       "role": "Praktikant im analytischen Labor mit wachsender Verantwortung für die Analyse flüchtiger Bestandteile, technische Dokumentation, Arbeit nach SOPs sowie Einarbeitung und Wissenstransfer für neue Studierende oder Mitarbeitende.",
-      "documentation": "Erstellung operativer Leitfäden, Datenblätter, Arbeitsanweisungen und Fehlerbehebungsdokumentation zu Analyseverfahren, NIR/VISION, Analysestarts, Chargen, Probenregistrierung, Kennzeichnung, Thermal Excel und Ergebnisrückverfolgbarkeit.",
+      "documentation": "Erstellung operativer Leitfäden, Datenblätter, Arbeitsanweisungen und Fehlerbehebungsdokumentation zu Analyseverfahren, NIR/VISION, Analysestarts, Datenbankaktualisierungen, Chargen, Probenregistrierung, Kennzeichnung, Thermal Excel und Ergebnisrückverfolgbarkeit.",
       "reference": "Cristobal Fernandez Belmonte M.Sc., Lab Manager bei Celignis Biomass Analysis Laboratory, hebt GLP-Standards, technische Präzision, Gerätebedienung und Fehleranalyse, Selbstkontrolle durch statistische QC, Termintreue, Teamarbeit und Einarbeitung beim Praktikumsübergang hervor."
     },
     "teaching": {
@@ -197,7 +199,7 @@
       "center": "CEAC FP Oficial · Madrid, Spanien",
       "period": "2023–2025",
       "practiceCta": "Praktikum: Hospital Universitario de La Princesa →",
-      "body": "Spanische Qualifikation: Técnico Superior en Laboratorio Clínico y Biomédico (englische Übersetzung: Higher Technician in Clinical and Biomedical Laboratory), CEAC FP Oficial, 2023-2025. Zuvor von einer deutschen Universität für Studienzugang oder Zulassung akzeptiert; dies ist akademischer Kontext und keine berufliche Anerkennung in Deutschland. Offizielle Abschlussnote: 9,25/10 und Auszeichnungen in Técnicas Generales de Laboratorio, Técnicas de Inmunodiagnóstico und Técnicas de Análisis Hematológico.",
+      "body": "Spanische Qualifikation: Técnico Superior en Laboratorio Clínico y Biomédico (englische Übersetzung: Higher Technician in Clinical and Biomedical Laboratory), CEAC FP Oficial, 2023-2025. Offizielle Abschlussnote: 9,25/10 und Auszeichnungen in Técnicas Generales de Laboratorio, Técnicas de Inmunodiagnóstico und Técnicas de Análisis Hematológico.",
       "finalProject": "<strong>Bacteriophage Therapy: Rediscovering an Innovative Therapy.</strong> Gemeinsam mit Luis Gonzalo Legua Pérez verfasst und mit Genehmigung des Co-Autors veröffentlicht.<br><br><strong>Originale interdisziplinäre Hypothese:</strong> Untersuchung, ob Phagenspezifität und chitosanbasierte Adsorption in zukünftigen Labormodellen zur Untersuchung mikroplastikassoziierter Biofilme kombiniert werden könnten, ohne klinische Wirksamkeit zu behaupten.",
       "contribution": "Mein Beitrag: Literaturrecherche, wissenschaftliches Schreiben, Projektstruktur, konzeptuelle Entwicklung und Vorbereitung der Verteidigung, einschließlich der zukunftsorientierten Verbindung zwischen Phagentherapie, Chitosan und mikroplastikbezogenen biomedizinischen Fragen.",
       "exploreProject": "Projekt ansehen",
@@ -254,7 +256,7 @@
       "description": "Im Rahmen der Laborpraktika bei La Princesa und Celignis angewendet. Kontext, Umfang und Nachweise sind unter Erfahrung und in der Workbench dokumentiert.",
       "molecular": "PCR · RNA-Extraktion · Elektrophorese",
       "cellCulture": "Zellkultur · HaCaT · Medienvorbereitung",
-      "immunology": "ELISA · Western Blot · CD4/CD14-Isolierung",
+      "immunology": "ELISA · Western-Blot-Gelherstellung, Transfer und Blocking · CD4/CD14-Isolierung",
       "analytical": "CHNOS · FOS/TAC · ICP · CSB · NIR/VISION",
       "quality": "GLP-Routinen · Arbeit nach SOPs · operative Dokumentation",
       "organization": "Probenrückverfolgbarkeit · Inventar · Labororganisation"
@@ -367,13 +369,23 @@
     "closeAriaLabel": "Dokumenten-Explorer schließen",
     "openNewTab": "In neuem Tab öffnen",
     "translationWindow": "Übersetzungsfenster",
-    "englishAbstract": "Englische Zusammenfassung",
+    "englishAbstract": "Deutsche Zusammenfassung",
     "pdfReader": "PDF-Reader",
     "frameTitle": "PDF-Reader für Bacteriophage Therapy",
     "originalInterdisciplinaryHypothesis": "Ursprüngliche interdisziplinäre Hypothese",
     "originalHypothesisFigureAlt": "Konzeptionelles Diagramm der ursprünglichen Hypothese, das Bakteriophagen, Chitosan, bakterielle Biofilme und die Destabilisierung von Mikroplastik-Bakterien-Komplexen kombiniert.",
+    "hypothesisLabel": "Ursprüngliche interdisziplinäre Hypothese",
+    "hypothesisCaption": "Vereinfachtes Modell: Phagen würden auf Bakterien in Biofilmen zielen, während chitosanbasierte Materialien auf Wechselwirkung mit oder Bindung von Mikroplastik untersucht würden.",
+    "hypothesisContribution": "Als individueller Beitrag von Jhon Michael Cuenca Jaramillo innerhalb dieser gemeinsam verfassten Abschlussarbeit wird ein zukünftiges Forschungskonzept vorgeschlagen, das die Spezifität von Bakteriophagen mit chitosanbasierter Adsorption verbindet. Die Hypothese geht nicht davon aus, dass Phagen direkt auf Kunststoffpolymere wirken, sondern untersucht ein indirektes Modell mit Mikrobiota, mikroplastikassoziierten Biofilmen und funktionellen Biomaterialien.",
+    "hypothesisModel": "In diesem Modell könnten Sequenzierungsmethoden Mikroorganismen mit Affinität zu Mikroplastikoberflächen identifizieren und die Auswahl oder Entwicklung hochspezifischer Phagen unterstützen. In Verbindung mit Chitosan könnten diese Phagen unter kontrollierten Laborbedingungen untersucht werden, um zu prüfen, ob eine Destabilisierung der Biofilme die Wechselwirkung, Bindung oder spätere analytische Bewertung von Mikroplastik verbessert.",
+    "hypothesisLimits": "Dieses Konzept wird als originale Forschungshypothese in einem frühen Stadium dargestellt. Vor jeder biomedizinischen Interpretation wären In-vitro-Validierung, Toxizitätsbewertung, reproduzierbare analytische Kontrollen und klinische Vorsicht erforderlich.",
+    "abstractIntro": "Antimikrobielle Resistenzen haben das wissenschaftliche Interesse an der Phagentherapie erneuert, insbesondere bei Infektionen, für die konventionelle Behandlungen nur begrenzt wirksam sind.",
+    "abstractReview": "Diese gemeinsam verfasste akademische Abschlussarbeit ist eine strukturierte Literaturübersicht: 75 Artikel wurden bewertet und 51 anhand ausdrücklicher Kriterien aus spanischen, englischen, portugiesischen und russischen Quellen ausgewählt. Eigene experimentelle oder klinische Ergebnisse werden nicht präsentiert.",
+    "abstractScope": "Die Übersicht erläutert Bakteriophagen, ihre Replikationszyklen, mögliche Anwendungen, Grenzen, Verabreichungswege und regulatorische Hürden für eine breitere klinische Nutzung.",
+    "abstractInterpretation": "Die zitierte Literatur beschreibt vielversprechende Anwendungen und wichtige Einschränkungen. Aussagen zu Spezifität, Auswirkungen auf die Mikrobiota oder Immunmodulation beziehen sich auf ausgewertete Evidenz und stellen keine klinische Validierung durch die Autoren dar.",
+    "abstractConclusion": "Die Arbeit schlägt außerdem ein zukunftsorientiertes Konzept vor, das Bakteriophagen, Chitosan und mikroplastikassoziierte Biofilme verbindet. Dieser Beitrag bleibt konzeptionell und erfordert eine separate experimentelle Validierung.",
     "keywords": "Schlüsselwörter: Phagentherapie, multiresistente Bakterien, Phagenbehandlung, Antibiotika, alternative Therapie, Staphylococcus aureus, Pseudomonas aeruginosa.",
-    "spanishOriginal": "Spanisches Original"
+    "spanishOriginal": "Spanische Originalfassung"
   },
   "footer": {
     "copyright": "&copy; 2026 Jhon M. Cuenca. Alle Rechte vorbehalten.",

@@ -82,11 +82,11 @@
     },
     "responsibility": {
       "kicker": "Responsibility",
-      "title": "Responsibility and leadership in laboratory practice.",
-      "body": "During my laboratory placements, I progressively assumed responsibilities beyond routine training tasks. In analytical and biomedical laboratory environments, I was trusted with specific workflows, documentation duties, student support and independent task management.",
+      "title": "Responsibility, initiative and increasing autonomy in laboratory practice.",
+      "body": "During my laboratory placements, I progressively assumed responsibility beyond routine training tasks. In analytical and biomedical environments, I was trusted with defined workflows, documentation duties, handover support and increasingly independent task management.",
       "pointWorkflow": "Trusted with defined laboratory workflows",
       "pointDocumentation": "Worked to SOPs · Created operational documentation",
-      "pointTransfer": "Supported training and knowledge transfer"
+      "pointTransfer": "Supported handover, training and knowledge transfer"
     },
     "education": {
       "kicker": "Education",
@@ -128,14 +128,14 @@
     "contact": {
       "kicker": "Contact",
       "title": "Open to laboratory, clinical research and biomedical science opportunities.",
-      "body": "Available for laboratory-related, clinical research support and biomedical science opportunities in Germany and internationally."
+      "body": "Available for laboratory-related, clinical research support and biomedical science opportunities in Germany and internationally. My professional interests include molecular biology, immunology, translational research, scientific communication and international collaboration in laboratory environments."
     }
   },
   "readiness": {
     "looking": {
       "kicker": "What I am looking for",
-      "title": "Laboratories where careful technical work supports research, diagnostics and analysis.",
-      "body": "Particularly research groups, university and institutional laboratories, private laboratories, and biomedical or analytical teams where I can contribute practical laboratory experience, reliable documentation and continuous learning."
+      "title": "Laboratory Technician, Technical Assistant and Research Support opportunities.",
+      "body": "Especially in molecular biology, immunology and analytical laboratories—within research groups, universities, institutes or private teams—where careful practical work, reliable documentation and continuous learning support research, diagnostics and analysis."
     }
   },
   "snapshot": {
@@ -146,7 +146,7 @@
     },
     "roles": {
       "label": "Target roles",
-      "value": "Laboratory technician and research support · Biomedical and analytical laboratories · Non-regulated technical roles"
+      "value": "Laboratory Technician · Technical Assistant · Research Support · Biomedical and analytical laboratories · Non-regulated technical roles"
     },
     "languages": {
       "label": "Languages",
@@ -158,7 +158,7 @@
     },
     "recognition": {
       "label": "Professional recognition",
-      "value": "Some regulated clinical or hospital roles may require professional recognition (Anerkennung). This depends on the role, federal state and competent authority."
+      "value": "Regulated clinical or hospital roles may require Anerkennung, depending on the role, federal state and competent authority. Previous German university acceptance concerned academic admission only—not professional recognition."
     },
     "documents": {
       "label": "Documents",
@@ -170,8 +170,9 @@
       "title": "Immunology & Molecular Biology",
       "institution": "Fundación para la Investigación Biomédica del Hospital Universitario de La Princesa",
       "context": "Madrid, Spain · FCT Internship · 370 h",
+      "summary": "PCR · RNA extraction · Electrophoresis · ELISA · Western blot preparation · HaCaT cell culture · CD4/CD14 isolation",
       "fullTechnicalCta": "View full technical experience →",
-      "body": "Cell culture, HaCaT handling, medium preparation, passaging and freezing workflows, CD4/CD14 purification, RNA extraction, PCR, ELISA, Western Blot gel preparation, transfer and blocking, plus human/murine sample processing.",
+      "body": "Cell culture and HaCaT handling; medium preparation, passaging and freezing; CD4/CD14 isolation; RNA extraction, PCR and electrophoresis; ELISA; Western blot gel preparation, transfer and blocking; human and murine sample processing; protocol work; and laboratory material and inventory organisation.",
       "role": "Biomedical laboratory trainee with progressive responsibility in cell culture workflows, molecular biology support, immunology techniques and animal-sample extraction procedures.",
       "reference": "Dr. Danay Cibrián Vera, Principal Investigator at Hospital Universitario de La Princesa, highlights responsibility, laboratory commitment, teamwork and active participation in molecular, immunology and sample-processing techniques."
     },
@@ -179,10 +180,11 @@
       "title": "Biomass Analysis",
       "institution": "Celignis Biomass Analysis Laboratory",
       "context": "Limerick, Ireland · Erasmus+ · 03/2023-05/2023",
+      "summary": "CHNOS · COD · NIR/VISION · GLP/SOP workflows · Operational documentation · Troubleshooting",
       "fullTechnicalCta": "View full technical experience →",
       "body": "Moisture, ash, volatile matter, CHNOS elemental analysis, FOS/TAC, ICP, COD, ammonia, NIR/VISION, vacuum filtration and ash melting; GLP-based work to SOPs and creation of operational documentation in Ireland.",
       "role": "Analytical laboratory trainee with progressive responsibility for volatile matter analysis, technical documentation, work to SOPs and training or knowledge transfer for incoming students or staff.",
-      "documentation": "Created operational guides, data sheets, work instructions and troubleshooting documentation covering analytical methods, NIR/VISION, analysis start-up, batches, sample registration, labelling, Thermal Excel and result traceability.",
+      "documentation": "Created operational guides, data sheets, work instructions and troubleshooting documentation covering analytical methods, NIR/VISION, analysis start-up, database updates, batches, sample registration, labelling, Thermal Excel and result traceability.",
       "reference": "Cristobal Fernandez Belmonte M.Sc., Lab Manager at Celignis Biomass Analysis Laboratory, highlights GLP standards, technical precision, equipment operation and troubleshooting, statistical QC self-checks, deadline reliability, teamwork and intern handover training."
     },
     "teaching": {
@@ -197,7 +199,7 @@
       "center": "CEAC FP Oficial · Madrid, Spain",
       "period": "2023–2025",
       "practiceCta": "Placement: Hospital Universitario de La Princesa →",
-      "body": "Spanish qualification: Técnico Superior en Laboratorio Clínico y Biomédico (translated as Higher Technician in Clinical and Biomedical Laboratory), CEAC FP Oficial, 2023-2025. Previously accepted by a German university for study access/admission; this is academic context and not professional recognition in Germany. Official final grade: 9.25/10, with honours distinctions in General Laboratory Techniques, Immunodiagnostic Techniques and Hematological Analysis Techniques.",
+      "body": "Spanish qualification: Técnico Superior en Laboratorio Clínico y Biomédico (translated as Higher Technician in Clinical and Biomedical Laboratory), CEAC FP Oficial, 2023-2025. Official final grade: 9.25/10, with honours distinctions in General Laboratory Techniques, Immunodiagnostic Techniques and Hematological Analysis Techniques.",
       "finalProject": "<strong>Bacteriophage Therapy: Rediscovering an Innovative Therapy.</strong> Co-authored with Luis Gonzalo Legua Pérez and published with co-author permission.<br><br><strong>Original interdisciplinary hypothesis:</strong> exploring whether phage specificity and chitosan-based adsorption could be combined in future laboratory models to study microplastic-associated biofilms, without claiming clinical efficacy.",
       "contribution": "My contribution: literature review, scientific writing, project structure, conceptual development and defense preparation, including the future-oriented connection between bacteriophage therapy, chitosan and microplastic-related biomedical questions.",
       "exploreProject": "Explore project",
@@ -254,7 +256,7 @@
       "description": "Used during the La Princesa and Celignis laboratory placements. Full context, scope and supporting evidence are documented in Experience and Workbench.",
       "molecular": "PCR · RNA extraction · Electrophoresis",
       "cellCulture": "Cell culture · HaCaT · Media preparation",
-      "immunology": "ELISA · Western blot · CD4/CD14 isolation",
+      "immunology": "ELISA · Western blot gel preparation, transfer & blocking · CD4/CD14 isolation",
       "analytical": "CHNOS · FOS/TAC · ICP · COD · NIR/VISION",
       "quality": "GLP routines · Work to SOPs · Operational documentation",
       "organization": "Sample traceability · Inventory · Laboratory organization"
@@ -367,13 +369,23 @@
     "closeAriaLabel": "Close document explorer",
     "openNewTab": "Open in new tab",
     "translationWindow": "Translation window",
-    "englishAbstract": "English abstract",
+    "englishAbstract": "English summary",
     "pdfReader": "PDF reader",
     "frameTitle": "Bacteriophage Therapy PDF reader",
     "originalInterdisciplinaryHypothesis": "Original interdisciplinary hypothesis",
     "originalHypothesisFigureAlt": "Conceptual diagram of the original hypothesis combining bacteriophages, chitosan, bacterial biofilms and microplastic-bacteria complex destabilization.",
+    "hypothesisLabel": "Original interdisciplinary hypothesis",
+    "hypothesisCaption": "Simplified model: phages would target bacteria associated with biofilms, while chitosan-based materials would be studied for microplastic interaction or capture.",
+    "hypothesisContribution": "As an individual contribution by Jhon Michael Cuenca Jaramillo within this collaborative final project, the work proposes a future research concept combining bacteriophage specificity with chitosan-based adsorption. The hypothesis does not suggest that phages act directly on plastic polymers; instead, it explores an indirect intervention model involving microbiota, microplastic-associated biofilms and functional biomaterials.",
+    "hypothesisModel": "In this model, sequencing methods could help identify microorganisms with affinity for microplastic surfaces, supporting the selection or design of highly specific phages. Combined with chitosan, these phages could be studied in controlled laboratory conditions to assess whether biofilm destabilization improves microplastic interaction, capture or later analytical evaluation.",
+    "hypothesisLimits": "This concept is presented as an original, early-stage research hypothesis. It would require in vitro validation, toxicity assessment, reproducible analytical controls and clinical caution before any biomedical interpretation.",
+    "abstractIntro": "Antimicrobial resistance has renewed scientific interest in bacteriophage therapy, particularly for infections in which conventional treatments are limited.",
+    "abstractReview": "This co-authored final academic project is a structured literature review: 75 articles were assessed and 51 selected using explicit criteria across Spanish, English, Portuguese and Russian sources. It does not present original experimental or clinical results.",
+    "abstractScope": "The review explains bacteriophages, their replication cycles, potential applications, limitations, administration routes and the regulatory barriers affecting wider clinical use.",
+    "abstractInterpretation": "The cited literature describes promising applications and important constraints. Any discussion of specificity, microbiota effects or immune modulation reflects reviewed evidence and does not constitute clinical validation by the authors.",
+    "abstractConclusion": "The project also proposes a future-oriented concept connecting bacteriophages, chitosan and microplastic-associated biofilms. This contribution remains conceptual and requires separate experimental validation.",
     "keywords": "Keywords: bacteriophage therapy, multidrug-resistant bacteria, phage treatment, antibiotics, alternative therapy, Staphylococcus aureus, Pseudomonas aeruginosa.",
-    "spanishOriginal": "Spanish original"
+    "spanishOriginal": "Original Spanish wording"
   },
   "footer": {
     "copyright": "&copy; 2026 Jhon M. Cuenca. All rights reserved.",

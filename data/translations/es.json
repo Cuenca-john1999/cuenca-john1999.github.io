@@ -82,11 +82,11 @@
     },
     "responsibility": {
       "kicker": "Responsabilidad",
-      "title": "Responsabilidad y liderazgo en prácticas de laboratorio.",
-      "body": "Durante mis prácticas de laboratorio, asumí progresivamente responsabilidades más allá de tareas rutinarias de formación. En entornos analíticos y biomédicos, se me confiaron flujos de trabajo concretos, documentación, apoyo a estudiantes y gestión autónoma de tareas.",
+      "title": "Responsabilidad, iniciativa y autonomía progresiva en la práctica de laboratorio.",
+      "body": "Durante mis prácticas de laboratorio, asumí progresivamente responsabilidades más allá de las tareas rutinarias de formación. En entornos analíticos y biomédicos, se me confiaron flujos definidos, documentación, apoyo durante relevos y una gestión de tareas cada vez más autónoma.",
       "pointWorkflow": "Responsabilidad en flujos de trabajo definidos",
       "pointDocumentation": "Trabajo conforme a SOP · Creación de documentación operativa",
-      "pointTransfer": "Apoyo en formación y transferencia de conocimiento"
+      "pointTransfer": "Apoyo en relevo, formación y transferencia de conocimiento"
     },
     "education": {
       "kicker": "Formación",
@@ -128,14 +128,14 @@
     "contact": {
       "kicker": "Contacto",
       "title": "Abierto a oportunidades en laboratorio, investigación clínica y ciencia biomédica.",
-      "body": "Disponible para oportunidades relacionadas con laboratorio, apoyo a investigación clínica y ciencia biomédica en Alemania y a nivel internacional."
+      "body": "Disponible para oportunidades relacionadas con laboratorio, apoyo a investigación clínica y ciencia biomédica en Alemania y a nivel internacional. Mis intereses profesionales incluyen la biología molecular, la inmunología, la investigación traslacional, la comunicación científica y la colaboración internacional en entornos de laboratorio."
     }
   },
   "readiness": {
     "looking": {
       "kicker": "Qué estoy buscando",
-      "title": "Laboratorios donde el trabajo técnico riguroso impulse la investigación, el diagnóstico y el análisis.",
-      "body": "Especialmente grupos de investigación, laboratorios universitarios y de institutos, laboratorios privados y equipos biomédicos o analíticos donde pueda aportar experiencia práctica, documentación fiable y aprendizaje continuo."
+      "title": "Oportunidades como técnico de laboratorio, asistente técnico y apoyo a investigación.",
+      "body": "Especialmente en laboratorios de biología molecular, inmunología y análisis—dentro de grupos de investigación, universidades, institutos o equipos privados—donde la práctica rigurosa, la documentación fiable y el aprendizaje continuo apoyen la investigación, el diagnóstico y el análisis."
     }
   },
   "snapshot": {
@@ -146,7 +146,7 @@
     },
     "roles": {
       "label": "Roles objetivo",
-      "value": "Técnico de laboratorio y apoyo a investigación · laboratorios biomédicos y analíticos · puestos técnicos no regulados"
+      "value": "Técnico de laboratorio · Asistente técnico · Apoyo a investigación · laboratorios biomédicos y analíticos · puestos técnicos no regulados"
     },
     "languages": {
       "label": "Idiomas",
@@ -158,7 +158,7 @@
     },
     "recognition": {
       "label": "Reconocimiento profesional",
-      "value": "Determinados puestos clínicos u hospitalarios regulados pueden requerir Anerkennung. Depende del puesto, el Bundesland y la autoridad competente."
+      "value": "Los puestos clínicos u hospitalarios regulados pueden requerir Anerkennung según el puesto, el Bundesland y la autoridad competente. La aceptación previa por una universidad alemana se refería únicamente al acceso académico y no constituye reconocimiento profesional."
     },
     "documents": {
       "label": "Documentos",
@@ -170,8 +170,9 @@
       "title": "Inmunología y Biología Molecular",
       "institution": "Fundación para la Investigación Biomédica del Hospital Universitario de La Princesa",
       "context": "Madrid, España · FCT · 370 h",
+      "summary": "PCR · extracción de ARN · electroforesis · ELISA · preparación de Western blot · cultivo HaCaT · aislamiento CD4/CD14",
       "fullTechnicalCta": "Ver experiencia técnica completa →",
-      "body": "Cultivo celular, manejo de células HaCaT, preparación de medios, pases y congelación celular, purificación de CD4/CD14, extracción de ARN, PCR, ELISA, preparación de geles de Western blot, transferencia y bloqueo, además de procesamiento de muestras humanas y murinas.",
+      "body": "Cultivo celular y manejo de HaCaT; preparación de medios, pases y congelación; aislamiento CD4/CD14; extracción de ARN, PCR y electroforesis; ELISA; preparación de geles de Western blot, transferencia y bloqueo; procesamiento de muestras humanas y murinas; trabajo con protocolos; y organización de material e inventario de laboratorio.",
       "role": "Estudiante en prácticas de laboratorio biomédico con responsabilidad progresiva en flujos de cultivo celular, apoyo en biología molecular, técnicas de inmunología y procedimientos con muestras animales.",
       "reference": "La Dra. Danay Cibrián Vera, investigadora principal en el Hospital Universitario de La Princesa, destaca la responsabilidad, el compromiso en el laboratorio, el trabajo en equipo y la participación activa en técnicas moleculares, inmunológicas y de procesamiento de muestras."
     },
@@ -179,10 +180,11 @@
       "title": "Análisis de Biomasa",
       "institution": "Celignis Biomass Analysis Laboratory",
       "context": "Limerick, Irlanda · Erasmus+ · 03/2023-05/2023",
+      "summary": "CHNOS · DQO · NIR/VISION · flujos GLP/SOP · documentación operativa · troubleshooting",
       "fullTechnicalCta": "Ver experiencia técnica completa →",
       "body": "Determinación de humedad, cenizas, materia volátil, análisis elemental CHNOS, FOS/TAC, ICP, DQO, amonio, NIR/VISION, filtración al vacío y fusión de cenizas; trabajo conforme a SOP bajo GLP y creación de documentación operativa en Irlanda.",
       "role": "Estudiante en prácticas de laboratorio analítico con responsabilidad progresiva en análisis de materia volátil, documentación técnica, trabajo conforme a SOP y formación o transferencia de conocimiento para estudiantes o personal entrante.",
-      "documentation": "Creación de guías operativas, hojas de datos, instrucciones de trabajo y documentación de troubleshooting para métodos analíticos, NIR/VISION, inicio de análisis, batches, registro de muestras, etiquetado, Thermal Excel y trazabilidad de resultados.",
+      "documentation": "Creación de guías operativas, hojas de datos, instrucciones de trabajo y documentación de troubleshooting para métodos analíticos, NIR/VISION, inicio de análisis, actualización de bases de datos, batches, registro de muestras, etiquetado, Thermal Excel y trazabilidad de resultados.",
       "reference": "Cristobal Fernandez Belmonte M.Sc., Lab Manager en Celignis Biomass Analysis Laboratory, destaca el trabajo bajo GLP, la precisión técnica, el manejo de equipos y troubleshooting, el autocontrol mediante QC estadístico, el cumplimiento de plazos, el trabajo en equipo y la formación durante el relevo de prácticas."
     },
     "teaching": {
@@ -197,7 +199,7 @@
       "center": "CEAC FP Oficial · Madrid, España",
       "period": "2023–2025",
       "practiceCta": "Prácticas: Hospital Universitario de La Princesa →",
-      "body": "Titulación española: Técnico Superior en Laboratorio Clínico y Biomédico, CEAC FP Oficial, 2023-2025. Aceptada previamente por una universidad alemana para acceso o admisión a estudios; esto es contexto académico y no reconocimiento profesional en Alemania. Nota final oficial: 9,25/10 y matrículas de honor en Técnicas Generales de Laboratorio, Técnicas de Inmunodiagnóstico y Técnicas de Análisis Hematológico.",
+      "body": "Titulación española: Técnico Superior en Laboratorio Clínico y Biomédico, CEAC FP Oficial, 2023-2025. Nota final oficial: 9,25/10 y matrículas de honor en Técnicas Generales de Laboratorio, Técnicas de Inmunodiagnóstico y Técnicas de Análisis Hematológico.",
       "finalProject": "<strong>Bacteriofagoterapia | Redescubriendo una terapia innovadora.</strong> Trabajo en coautoría con Luis Gonzalo Legua Pérez y publicado con su autorización.",
       "contribution": "Mi contribución: revisión bibliográfica, redacción científica, estructura del proyecto, desarrollo conceptual y preparación de la defensa, incluyendo la conexión futura entre fagoterapia, quitosano y preguntas biomédicas relacionadas con microplásticos.",
       "exploreProject": "Explorar trabajo",
@@ -254,7 +256,7 @@
       "description": "Aplicadas durante las prácticas de laboratorio en La Princesa y Celignis. El contexto, alcance y evidencias se documentan en Experiencia y Workbench.",
       "molecular": "PCR · extracción de ARN · electroforesis",
       "cellCulture": "Cultivo celular · HaCaT · preparación de medios",
-      "immunology": "ELISA · Western blot · aislamiento CD4/CD14",
+      "immunology": "ELISA · preparación de geles de Western blot, transferencia y bloqueo · aislamiento CD4/CD14",
       "analytical": "CHNOS · FOS/TAC · ICP · DQO · NIR/VISION",
       "quality": "Rutinas GLP · trabajo conforme a SOP · documentación operativa",
       "organization": "Trazabilidad de muestras · inventario · organización de laboratorio"
@@ -367,13 +369,23 @@
     "closeAriaLabel": "Cerrar el explorador de documentos",
     "openNewTab": "Abrir en nueva pestaña",
     "translationWindow": "Ventana de traducción",
-    "englishAbstract": "Resumen en inglés",
+    "englishAbstract": "Resumen en español",
     "pdfReader": "Lector PDF",
     "frameTitle": "Lector PDF de Bacteriophage Therapy",
     "originalInterdisciplinaryHypothesis": "Hipótesis interdisciplinaria original",
     "originalHypothesisFigureAlt": "Diagrama conceptual de la hipótesis original que combina bacteriófagos, quitosano, biopelículas bacterianas y la desestabilización de complejos microplástico-bacteria.",
+    "hypothesisLabel": "Hipótesis interdisciplinaria original",
+    "hypothesisCaption": "Modelo simplificado: los fagos actuarían sobre bacterias asociadas a biopelículas, mientras los materiales basados en quitosano se estudiarían para la interacción o captura de microplásticos.",
+    "hypothesisContribution": "Como contribución individual de Jhon Michael Cuenca Jaramillo dentro de este trabajo final colaborativo, se propone un futuro concepto de investigación que combina la especificidad de los bacteriófagos con la adsorción basada en quitosano. La hipótesis no plantea que los fagos actúen directamente sobre los polímeros plásticos, sino que explora un modelo de intervención indirecta con microbiota, biopelículas asociadas a microplásticos y biomateriales funcionales.",
+    "hypothesisModel": "En este modelo, los métodos de secuenciación podrían identificar microorganismos con afinidad por superficies de microplásticos y apoyar la selección o el diseño de fagos muy específicos. En combinación con quitosano, estos fagos podrían estudiarse bajo condiciones controladas de laboratorio para evaluar si la desestabilización de biopelículas mejora la interacción, captura o evaluación analítica posterior de los microplásticos.",
+    "hypothesisLimits": "El concepto se presenta como una hipótesis de investigación original y en fase inicial. Requeriría validación in vitro, evaluación de toxicidad, controles analíticos reproducibles y cautela clínica antes de cualquier interpretación biomédica.",
+    "abstractIntro": "La resistencia a los antimicrobianos ha renovado el interés científico por la bacteriofagoterapia, especialmente en infecciones donde los tratamientos convencionales presentan limitaciones.",
+    "abstractReview": "Este trabajo académico final realizado en coautoría es una revisión bibliográfica estructurada: se evaluaron 75 artículos y se seleccionaron 51 mediante criterios explícitos en fuentes en español, inglés, portugués y ruso. No presenta resultados experimentales ni clínicos propios.",
+    "abstractScope": "La revisión explica los bacteriófagos, sus ciclos de replicación, posibles aplicaciones, limitaciones, vías de administración y barreras regulatorias para un uso clínico más amplio.",
+    "abstractInterpretation": "La literatura citada describe aplicaciones prometedoras y limitaciones importantes. Cualquier mención a especificidad, efectos sobre la microbiota o modulación inmunitaria procede de la evidencia revisada y no constituye validación clínica por parte de los autores.",
+    "abstractConclusion": "El proyecto también propone un concepto futuro que conecta bacteriófagos, quitosano y biopelículas asociadas a microplásticos. Esta contribución sigue siendo conceptual y requiere validación experimental independiente.",
     "keywords": "Palabras clave: bacteriofagoterapia, bacterias multirresistentes, tratamiento con fagos, antibióticos, terapia alternativa, Staphylococcus aureus, Pseudomonas aeruginosa.",
-    "spanishOriginal": "Original en español"
+    "spanishOriginal": "Redacción original en español"
   },
   "footer": {
     "copyright": "&copy; 2026 Jhon M. Cuenca. Todos los derechos reservados.",

@@ -207,7 +207,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!hasAccessKey) {
             submitButton.disabled = true;
-            status.textContent = Language.translate('contactForm.ready');
+            status.textContent = Language.translate(
+                'contactForm.ready',
+                'Contact form ready. Add the Web3Forms access key to activate it.'
+            );
             return;
         }
 
@@ -215,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
             event.preventDefault();
 
             submitButton.disabled = true;
-            status.textContent = Language.translate('contactForm.sending');
+            status.textContent = Language.translate('contactForm.sending', 'Sending message...');
 
             try {
                 const response = await window.fetch(form.action, {
@@ -232,10 +235,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 form.reset();
-                status.textContent = Language.translate('contactForm.success');
+                status.textContent = Language.translate(
+                    'contactForm.success',
+                    'Message sent. Thank you for getting in touch.'
+                );
             } catch (error) {
                 console.warn('[CONTACT] No se pudo enviar el formulario', error);
-                status.textContent = Language.translate('contactForm.error');
+                status.textContent = Language.translate(
+                    'contactForm.error',
+                    'The message could not be sent. Please try again in a few minutes.'
+                );
             } finally {
                 submitButton.disabled = false;
             }
@@ -265,10 +274,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const documentUrl = trigger.href;
         const documentHeading = trigger.dataset.documentHeadingKey && typeof Language !== 'undefined'
-            ? Language.translate(trigger.dataset.documentHeadingKey)
+            ? Language.translate(
+                trigger.dataset.documentHeadingKey,
+                trigger.dataset.documentHeading || 'Bacteriophage Therapy: Rediscovering an Innovative Therapy'
+            )
             : trigger.dataset.documentHeading || 'Bacteriophage Therapy: Rediscovering an Innovative Therapy';
         const documentLabel = trigger.dataset.documentLabelKey && typeof Language !== 'undefined'
-            ? Language.translate(trigger.dataset.documentLabelKey)
+            ? Language.translate(trigger.dataset.documentLabelKey, trigger.dataset.documentLabel || trigger.textContent.trim())
             : trigger.dataset.documentLabel || trigger.textContent.trim();
 
         lastFocusedElement = trigger;

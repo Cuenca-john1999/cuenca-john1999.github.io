@@ -918,6 +918,15 @@ main,
     text-wrap: pretty;
 }
 
+.focus-item .focus-item__summary {
+    width: 100%;
+    margin-block-start: var(--spacing-md);
+    padding-block-start: var(--spacing-md);
+    border-block-start: 1px solid rgba(79, 140, 255, 0.18);
+    color: var(--color-text);
+    font: 650 0.82rem/1.55 var(--font-family-sans);
+}
+
 .focus-item__actions {
     display: flex;
     flex: 1;

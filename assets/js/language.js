@@ -81,7 +81,7 @@ const Language = (() => {
             console.log(`[LANGUAGE] Traducciones cargadas: ${language}`);
         } catch (error) {
             console.warn(`[LANGUAGE] No se pudieron cargar traducciones para: ${language}`, error);
-            translations[language] = {};
+            return null;
         }
 
         return translations[language];
@@ -104,8 +104,8 @@ const Language = (() => {
         const supportedDocumentLanguage = isSupportedLanguage(documentLanguage) ? documentLanguage : null;
         const hasTranslatableContent = Boolean(document.querySelector('[data-i18n], [data-i18n-html], [data-i18n-aria-label], [data-i18n-title], [data-i18n-alt]'));
 
-        if (hasTranslatableContent && savedLanguage) {
-            return savedLanguage;
+        if (hasTranslatableContent) {
+            return savedLanguage || getBrowserLanguage();
         }
 
         return supportedDocumentLanguage || savedLanguage || getBrowserLanguage();
@@ -129,12 +129,14 @@ const Language = (() => {
         const textKey = element.dataset.i18n || element.dataset.i18nHtml;
 
         if (textKey) {
-            const value = translateKey(textKey);
+            const value = getTranslationValue(textKey);
 
-            if (element.dataset.i18nHtml) {
-                element.innerHTML = value;
-            } else {
-                element.textContent = value;
+            if (value !== null) {
+                if (element.dataset.i18nHtml) {
+                    element.innerHTML = value;
+                } else {
+                    element.textContent = value;
+                }
             }
         }
 
@@ -145,14 +147,18 @@ const Language = (() => {
                 return;
             }
 
-            element.setAttribute(attributeName, translateKey(attributeKey));
+            const attributeValue = getTranslationValue(attributeKey);
+
+            if (attributeValue !== null) {
+                element.setAttribute(attributeName, attributeValue);
+            }
         });
     }
 
     /**
-     * Obtener traduccion por ruta, por ejemplo common.theme
+     * Obtener una traducción disponible por ruta, por ejemplo common.theme
      */
-    function translateKey(key) {
+    function getTranslationValue(key) {
         const dictionary = translations[currentLanguage] || {};
         const value = key.split('.').reduce((result, pathPart) => {
             if (result && typeof result === 'object') {
@@ -162,7 +168,14 @@ const Language = (() => {
             return undefined;
         }, dictionary);
 
-        return typeof value === 'string' ? value : key;
+        return typeof value === 'string' ? value : null;
+    }
+
+    /**
+     * Obtener traducción con un fallback explícito para contenido dinámico
+     */
+    function translateKey(key, fallback = '') {
+        return getTranslationValue(key) ?? fallback;
     }
     
     /**
@@ -217,10 +230,19 @@ const Language = (() => {
          */
         async init() {
             console.log('[LANGUAGE] Módulo inicializado');
-            currentLanguage = getInitialLanguage();
-            document.documentElement.lang = currentLanguage;
-            await loadTranslations(currentLanguage);
-            translatePage();
+            const initialLanguage = getInitialLanguage();
+            const initialTranslations = await loadTranslations(initialLanguage);
+
+            if (initialTranslations) {
+                currentLanguage = initialLanguage;
+                document.documentElement.lang = currentLanguage;
+                translatePage();
+            } else {
+                const fallbackLanguage = document.documentElement.lang.slice(0, 2).toLowerCase();
+                currentLanguage = isSupportedLanguage(fallbackLanguage) ? fallbackLanguage : DEFAULT_LANGUAGE;
+                document.documentElement.lang = currentLanguage;
+            }
+
             updateCvLinks();
             setupLanguageControls.call(this);
             updateLanguageControls();
@@ -235,9 +257,15 @@ const Language = (() => {
                 return;
             }
 
+            const languageTranslations = await loadTranslations(language);
+
+            if (!languageTranslations) {
+                updateLanguageControls();
+                return;
+            }
+
             currentLanguage = language;
             document.documentElement.lang = currentLanguage;
-            await loadTranslations(currentLanguage);
             translatePage();
             updateCvLinks();
             saveLanguagePreference(currentLanguage);
@@ -254,8 +282,8 @@ const Language = (() => {
         /**
          * Obtener traducción
          */
-        translate(key) {
-            return translateKey(key);
+        translate(key, fallback = '') {
+            return translateKey(key, fallback);
         },
         
         /**
