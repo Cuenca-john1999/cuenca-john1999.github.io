@@ -91,7 +91,7 @@
     "education": {
       "kicker": "Education",
       "title": "Strong academic results with a clinical, analytical and biomedical foundation.",
-      "body": "I completed Spanish vocational training with distinction: Técnico Superior en Laboratorio Clínico y Biomédico and Técnico en Operaciones de Laboratorio, with final grades of 9.25/10 and 8.69/10.",
+      "body": "I completed two Spanish vocational qualifications—Técnico Superior en Laboratorio Clínico y Biomédico and Técnico en Operaciones de Laboratorio—with final grades of 9.25/10 and 8.69/10.",
       "pointClinical": "Técnico Superior en Laboratorio Clínico y Biomédico · CEAC FP Oficial · 2025",
       "pointOperations": "Técnico en Operaciones de Laboratorio · IES Virgen de la Paloma · 2023",
       "pointAdditional": "Animal Experimentation - Functions A+B+C · Healthcare Management · Risk Prevention"
@@ -217,7 +217,7 @@
     "additional": {
       "badge": "Functions A+B+C",
       "title": "Certified Additional Training",
-      "body": "Animal Experimentation - Functions A+B+C (Order ECC/566/2015) · 70 h with in-person practical training. A: care of animals; B: euthanasia of animals; C: performance of procedures. The formal programme covers animal welfare and the 3Rs, recognition of pain, suffering and distress, humane killing methods, minimally invasive procedures, anaesthesia for minor procedures, advanced anaesthesia for surgical or prolonged procedures, and principles of surgery. During the supervised practical component, I personally performed animal handling, administration of drugs/substances by injection, anaesthesia, surgical procedures for sample/tissue collection, collection/extraction of animal samples and euthanasia. Healthcare Centre Management · 100 h · 2025. Basic Level Occupational Risk Prevention · 2023."
+      "body": "Animal Experimentation - Functions A+B+C (Order ECC/566/2015) · 70 h with in-person practical training. A: care of animals; B: euthanasia of animals; C: performance of procedures. The formal programme covers animal welfare and the 3Rs, recognition of pain, suffering and distress, humane killing methods, minimally invasive procedures, anaesthesia for minor procedures, advanced anaesthesia for surgical or prolonged procedures, and principles of surgery. During the supervised practical component, I personally performed animal handling, injections, anaesthesia, surgical procedures for sample/tissue collection and collection/extraction of animal samples. I also participated in supervised procedures that included euthanasia; this is not presented as independent practice. Healthcare Centre Management · 100 h · 2025. Basic Level Occupational Risk Prevention · 2023."
     }
   },
   "europass": {
@@ -357,6 +357,7 @@
     "email": "Email",
     "message": "Message",
     "submit": "Send message",
+    "privacy": "This form uses Web3Forms to transmit your name, email and message for professional contact. Please send only information needed for your enquiry.",
     "ready": "Contact form ready. Add the Web3Forms access key to activate it.",
     "sending": "Sending message...",
     "success": "Message sent. Thank you for getting in touch.",
