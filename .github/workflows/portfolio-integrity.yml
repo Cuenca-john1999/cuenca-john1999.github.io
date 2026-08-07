@@ -1,0 +1,22 @@
+name: Portfolio integrity
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify content and translations
+        run: python3 tools/verify_portfolio_integrity.py
+      - name: Verify JavaScript syntax
+        run: |
+          node --check assets/js/language.js
+          node --check assets/js/app.js
+          node --check workbench/js/workbench.js

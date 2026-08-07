@@ -91,7 +91,7 @@
     "education": {
       "kicker": "Formación",
       "title": "Resultados académicos sólidos con base clínica, analítica y biomédica.",
-      "body": "Completé formación profesional española con distinción: Técnico Superior en Laboratorio Clínico y Biomédico y Técnico en Operaciones de Laboratorio, con notas finales de 9,25/10 y 8,69/10.",
+      "body": "Completé dos titulaciones españolas de Formación Profesional—Técnico Superior en Laboratorio Clínico y Biomédico y Técnico en Operaciones de Laboratorio—con notas finales de 9,25/10 y 8,69/10.",
       "pointClinical": "Técnico Superior en Laboratorio Clínico y Biomédico · CEAC FP Oficial · 2025",
       "pointOperations": "Técnico en Operaciones de Laboratorio · IES Virgen de la Paloma · 2023",
       "pointAdditional": "Funciones A+B+C en Experimentación Animal · Gestión Sanitaria · Prevención de Riesgos"
@@ -217,7 +217,7 @@
     "additional": {
       "badge": "Funciones A+B+C",
       "title": "Formación adicional certificada",
-      "body": "Funciones A+B+C en Experimentación Animal (Orden ECC/566/2015) · 70 h con prácticas presenciales. A: cuidado de animales; B: eutanasia; C: realización de procedimientos. El programa formal incluye bienestar animal y 3R, reconocimiento del dolor, sufrimiento y angustia, métodos humanitarios de sacrificio, procedimientos mínimamente invasivos, anestesia para procedimientos menores, anestesia avanzada para procedimientos quirúrgicos o prolongados y principios de cirugía. Durante la parte práctica supervisada realicé personalmente manejo de animales, administración de fármacos/sustancias mediante inyección, anestesia, procedimientos quirúrgicos para la obtención de muestras/tejidos, obtención/extracción de muestras animales y eutanasia. Gestión de Centros Sanitarios · 100 h · 2025. Prevención de Riesgos Laborales de nivel básico · 2023."
+      "body": "Funciones A+B+C en Experimentación Animal (Orden ECC/566/2015) · 70 h con prácticas presenciales. A: cuidado de animales; B: eutanasia; C: realización de procedimientos. El programa formal incluye bienestar animal y 3R, reconocimiento del dolor, sufrimiento y angustia, métodos humanitarios de sacrificio, procedimientos mínimamente invasivos, anestesia para procedimientos menores, anestesia avanzada para procedimientos quirúrgicos o prolongados y principios de cirugía. Durante la parte práctica supervisada realicé personalmente manejo de animales, inyecciones, anestesia, procedimientos quirúrgicos para la obtención de muestras/tejidos y obtención/extracción de muestras animales. También participé en procedimientos supervisados que incluían eutanasia; no se presenta como una realización independiente. Gestión de Centros Sanitarios · 100 h · 2025. Prevención de Riesgos Laborales de nivel básico · 2023."
     }
   },
   "europass": {
@@ -357,6 +357,7 @@
     "email": "Email",
     "message": "Mensaje",
     "submit": "Enviar mensaje",
+    "privacy": "Este formulario utiliza Web3Forms para transmitir tu nombre, correo electrónico y mensaje con fines de contacto profesional. Envía solo la información necesaria para tu consulta.",
     "ready": "Formulario preparado. Falta activar la clave de Web3Forms.",
     "sending": "Enviando mensaje...",
     "success": "Mensaje enviado. Gracias por ponerte en contacto.",

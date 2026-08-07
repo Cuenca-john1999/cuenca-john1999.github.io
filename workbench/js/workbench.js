@@ -2,6 +2,7 @@
     'use strict';
 
     const STORAGE_KEY = 'portfolio-language';
+    const URL_LANGUAGE_PARAM = 'lang';
     const DEFAULT_LANGUAGE = 'en';
     const LANGUAGES = ['en', 'de', 'es'];
 
@@ -123,7 +124,7 @@
                 chitosan: 'Early-stage, literature-informed hypothesis proposed for future controlled laboratory validation.'
             },
             professionalContext: {
-                animalTraining: { kicker: 'Animal Experimentation · Functions A+B+C', body: 'Certified 70-hour course under Order ECC/566/2015 with in-person practical training. The formal programme covers animal care, euthanasia and performance of procedures, together with welfare/3Rs, recognition of pain and distress, humane killing methods, minimally invasive procedures, anaesthesia and principles of surgery.', pointFunctions: 'Functions: A · care of animals; B · euthanasia of animals; C · performance of procedures', pointProgramme: 'Programme: welfare & 3Rs · pain/suffering/distress recognition · humane killing · minimally invasive procedures · minor and advanced anaesthesia · principles of surgery', pointHandsOn: 'Personally performed during supervised practical training: animal handling, administration of drugs/substances by injection, anaesthesia and surgical procedures for sample/tissue collection', pointSamples: 'Personally performed: collection/extraction of animal samples and euthanasia', scope: 'Scope note: supervised training and practical experience; no claim of independent veterinary or surgical practice.' },
+                animalTraining: { kicker: 'Animal Experimentation · Functions A+B+C', body: 'Certified 70-hour course under Order ECC/566/2015 with in-person practical training. The formal programme covers animal care, euthanasia and performance of procedures, together with welfare/3Rs, recognition of pain and distress, humane killing methods, minimally invasive procedures, anaesthesia and principles of surgery.', pointFunctions: 'Functions: A · care of animals; B · euthanasia of animals; C · performance of procedures', pointProgramme: 'Programme: welfare & 3Rs · pain/suffering/distress recognition · humane killing · minimally invasive procedures · minor and advanced anaesthesia · principles of surgery', pointHandsOn: 'Personally performed during supervised practical training: animal handling, injections, anaesthesia and surgical procedures for sample/tissue collection', pointSamples: 'Personally performed: collection/extraction of animal samples. Also participated in supervised procedures that included euthanasia; not presented as independent practice.', scope: 'Scope note: supervised training and practical experience; no claim of independent veterinary or surgical practice.' },
                 development: {
                     kicker: 'Current Development',
                     title: 'Continuing professional development while preparing for laboratory opportunities.',
@@ -277,7 +278,7 @@
                 chitosan: 'Hipótesis preliminar basada en literatura y propuesta para una futura validación controlada en laboratorio.'
             },
             professionalContext: {
-                animalTraining: { kicker: 'Experimentación Animal · Funciones A+B+C', body: 'Curso certificado de 70 horas conforme a la Orden ECC/566/2015 con prácticas presenciales. El programa formal cubre cuidado de animales, eutanasia y realización de procedimientos, junto con bienestar/3R, reconocimiento del dolor y la angustia, métodos humanitarios de sacrificio, procedimientos mínimamente invasivos, anestesia y principios de cirugía.', pointFunctions: 'Funciones: A · cuidado de animales; B · eutanasia; C · realización de procedimientos', pointProgramme: 'Programa: bienestar y 3R · reconocimiento de dolor/sufrimiento/angustia · sacrificio humanitario · procedimientos mínimamente invasivos · anestesia básica y avanzada · principios de cirugía', pointHandsOn: 'Realizado personalmente durante prácticas supervisadas: manejo de animales, administración de fármacos/sustancias mediante inyección, anestesia y procedimientos quirúrgicos para obtención de muestras/tejidos', pointSamples: 'Realizado personalmente: obtención/extracción de muestras animales y eutanasia', scope: 'Nota de alcance: formación y experiencia práctica supervisada; no se afirma ejercicio veterinario o quirúrgico independiente.' },
+                animalTraining: { kicker: 'Experimentación Animal · Funciones A+B+C', body: 'Curso certificado de 70 horas conforme a la Orden ECC/566/2015 con prácticas presenciales. El programa formal cubre cuidado de animales, eutanasia y realización de procedimientos, junto con bienestar/3R, reconocimiento del dolor y la angustia, métodos humanitarios de sacrificio, procedimientos mínimamente invasivos, anestesia y principios de cirugía.', pointFunctions: 'Funciones: A · cuidado de animales; B · eutanasia; C · realización de procedimientos', pointProgramme: 'Programa: bienestar y 3R · reconocimiento de dolor/sufrimiento/angustia · sacrificio humanitario · procedimientos mínimamente invasivos · anestesia básica y avanzada · principios de cirugía', pointHandsOn: 'Realizado personalmente durante prácticas supervisadas: manejo de animales, inyecciones, anestesia y procedimientos quirúrgicos para obtención de muestras/tejidos', pointSamples: 'Realizado personalmente: obtención/extracción de muestras animales. También participé en procedimientos supervisados que incluían eutanasia; no se presenta como una realización independiente.', scope: 'Nota de alcance: formación y experiencia práctica supervisada; no se afirma ejercicio veterinario o quirúrgico independiente.' },
                 development: {
                     kicker: 'Desarrollo actual',
                     title: 'Desarrollo profesional continuo mientras preparo oportunidades de laboratorio.',
@@ -431,7 +432,7 @@
                 chitosan: 'Frühe, literaturbasierte Hypothese für eine spätere kontrollierte Validierung im Labor.'
             },
             professionalContext: {
-                animalTraining: { kicker: 'Versuchstierkunde · Funktionen A+B+C', body: 'Zertifizierter 70-Stunden-Kurs gemäß Erlass ECC/566/2015 mit Präsenzpraxis. Das formale Programm umfasst Tierpflege, Tötung/Euthanasie und Durchführung von Verfahren sowie Tierwohl/3R, Erkennen von Schmerz und Angst, tierschutzgerechte Tötungsmethoden, minimalinvasive Verfahren, Anästhesie und chirurgische Grundlagen.', pointFunctions: 'Funktionen: A · Tierpflege; B · Tötung/Euthanasie; C · Durchführung von Verfahren', pointProgramme: 'Programm: Tierwohl & 3R · Erkennen von Schmerz/Leiden/Angst · tierschutzgerechte Tötung · minimalinvasive Verfahren · einfache und fortgeschrittene Anästhesie · chirurgische Grundlagen', pointHandsOn: 'Persönlich im beaufsichtigten Praxisteil durchgeführt: Tierhandling, Verabreichung von Arzneimitteln/Substanzen per Injektion, Anästhesie und chirurgische Verfahren zur Proben-/Gewebegewinnung', pointSamples: 'Persönlich durchgeführt: Gewinnung/Entnahme tierischer Proben und Euthanasie', scope: 'Hinweis zum Umfang: beaufsichtigte Ausbildung und Praxiserfahrung; keine eigenständige tierärztliche oder chirurgische Tätigkeit.' },
+                animalTraining: { kicker: 'Versuchstierkunde · Funktionen A+B+C', body: 'Zertifizierter 70-Stunden-Kurs gemäß Erlass ECC/566/2015 mit Präsenzpraxis. Das formale Programm umfasst Tierpflege, Tötung/Euthanasie und Durchführung von Verfahren sowie Tierwohl/3R, Erkennen von Schmerz und Angst, tierschutzgerechte Tötungsmethoden, minimalinvasive Verfahren, Anästhesie und chirurgische Grundlagen.', pointFunctions: 'Funktionen: A · Tierpflege; B · Tötung/Euthanasie; C · Durchführung von Verfahren', pointProgramme: 'Programm: Tierwohl & 3R · Erkennen von Schmerz/Leiden/Angst · tierschutzgerechte Tötung · minimalinvasive Verfahren · einfache und fortgeschrittene Anästhesie · chirurgische Grundlagen', pointHandsOn: 'Persönlich im beaufsichtigten Praxisteil durchgeführt: Tierhandling, Injektionen, Anästhesie und chirurgische Verfahren zur Proben-/Gewebegewinnung', pointSamples: 'Persönlich durchgeführt: Gewinnung/Entnahme tierischer Proben. Außerdem Beteiligung an beaufsichtigten Verfahren mit Euthanasie; nicht als eigenständige Durchführung dargestellt.', scope: 'Hinweis zum Umfang: beaufsichtigte Ausbildung und Praxiserfahrung; keine eigenständige tierärztliche oder chirurgische Tätigkeit.' },
                 development: {
                     kicker: 'Aktuelle Entwicklung',
                     title: 'Kontinuierliche berufliche Entwicklung während der Vorbereitung auf Laborchancen.',
@@ -906,7 +907,20 @@
     let updateCarouselTranslations = null;
     let syncCarouselRotation = null;
 
+    function getUrlLanguage() {
+        try {
+            const language = new URL(window.location.href).searchParams.get(URL_LANGUAGE_PARAM)?.slice(0, 2).toLowerCase();
+            return LANGUAGES.includes(language) ? language : null;
+        } catch (error) {
+            console.warn('[WORKBENCH] Could not read URL language', error);
+            return null;
+        }
+    }
+
     function getInitialLanguage() {
+        const urlLanguage = getUrlLanguage();
+        if (urlLanguage) return urlLanguage;
+
         try {
             const saved = window.localStorage.getItem(STORAGE_KEY);
             if (LANGUAGES.includes(saved)) return saved;
@@ -914,8 +928,29 @@
             console.warn('[WORKBENCH] localStorage unavailable', error);
         }
 
+        const browserLanguage = (window.navigator.language || '').slice(0, 2).toLowerCase();
+        if (LANGUAGES.includes(browserLanguage)) return browserLanguage;
+
         const documentLanguage = document.documentElement.lang.slice(0, 2).toLowerCase();
         return LANGUAGES.includes(documentLanguage) ? documentLanguage : DEFAULT_LANGUAGE;
+    }
+
+    function syncLanguageInUrl(language) {
+        try {
+            const url = new URL(window.location.href);
+            url.searchParams.set(URL_LANGUAGE_PARAM, language);
+            window.history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`);
+        } catch (error) {
+            console.warn('[WORKBENCH] Could not synchronize URL language', error);
+        }
+    }
+
+    function updateProfileLinks() {
+        document.querySelectorAll('.profile-return, .hero-actions a[href^="../"]').forEach((link) => {
+            const target = new URL('../', window.location.href);
+            target.searchParams.set(URL_LANGUAGE_PARAM, currentLanguage);
+            link.setAttribute('href', `../?${target.searchParams.toString()}`);
+        });
     }
 
     function getTranslation(key) {
@@ -944,6 +979,8 @@
             button.setAttribute('aria-pressed', String(button.dataset.languageSet === currentLanguage));
         });
 
+        updateProfileLinks();
+        syncLanguageInUrl(currentLanguage);
         updateCarouselTranslations?.();
     }
 
@@ -1400,7 +1437,9 @@
 
         resources.forEach((resource) => {
             const link = createDialogElement('a', 'dialog-resource', resource.label);
-            link.href = resource.href;
+            link.href = resource.href === '../'
+                ? `../?${URL_LANGUAGE_PARAM}=${encodeURIComponent(currentLanguage)}`
+                : resource.href;
             link.target = '_blank';
             link.rel = 'noopener';
             links.append(link);

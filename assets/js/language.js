@@ -8,6 +8,7 @@
  * - Cambio de idioma sin recargar la página
  * - Guarda preferencia en localStorage
  * - Detecta idioma del navegador
+ * - Permite compartir el idioma mediante ?lang=en|de|es
  * - Traduce elementos del DOM usando data-i18n y atributos accesibles
  * 
  * Interfaz pública:
@@ -25,8 +26,9 @@
 
 const Language = (() => {
     const STORAGE_KEY = 'portfolio-language';
-    const TRANSLATION_VERSION = '20260807-location-mobility';
-    const DEFAULT_LANGUAGE = 'es';
+    const URL_LANGUAGE_PARAM = 'lang';
+    const TRANSLATION_VERSION = '20260807-audit-integrity';
+    const DEFAULT_LANGUAGE = 'en';
     const AVAILABLE_LANGUAGES = ['en', 'de', 'es'];
     const CV_BY_LANGUAGE = {
         en: 'assets/documents/Jhon_M_Cuenca_CV_EN.pdf',
@@ -47,6 +49,20 @@ const Language = (() => {
      */
     function isSupportedLanguage(language) {
         return AVAILABLE_LANGUAGES.includes(language);
+    }
+
+    /**
+     * Leer idioma explícito de la URL para enlaces compartibles
+     */
+    function getUrlLanguage() {
+        try {
+            const urlLanguage = new URL(window.location.href).searchParams.get(URL_LANGUAGE_PARAM);
+            const normalizedLanguage = urlLanguage?.slice(0, 2).toLowerCase();
+            return isSupportedLanguage(normalizedLanguage) ? normalizedLanguage : null;
+        } catch (error) {
+            console.warn('[LANGUAGE] No se pudo leer el idioma de la URL', error);
+            return null;
+        }
     }
 
     /**
@@ -96,19 +112,20 @@ const Language = (() => {
     }
 
     /**
-     * Obtener idioma inicial
+     * Obtener idioma inicial. La URL explícita tiene prioridad sobre preferencias locales.
      */
     function getInitialLanguage() {
+        const urlLanguage = getUrlLanguage();
         const savedLanguage = getSavedLanguage();
         const documentLanguage = document.documentElement.lang.slice(0, 2).toLowerCase();
         const supportedDocumentLanguage = isSupportedLanguage(documentLanguage) ? documentLanguage : null;
         const hasTranslatableContent = Boolean(document.querySelector('[data-i18n], [data-i18n-html], [data-i18n-aria-label], [data-i18n-title], [data-i18n-alt]'));
 
         if (hasTranslatableContent) {
-            return savedLanguage || getBrowserLanguage();
+            return urlLanguage || savedLanguage || getBrowserLanguage();
         }
 
-        return supportedDocumentLanguage || savedLanguage || getBrowserLanguage();
+        return urlLanguage || supportedDocumentLanguage || savedLanguage || getBrowserLanguage();
     }
 
     /**
@@ -119,6 +136,19 @@ const Language = (() => {
             window.localStorage.setItem(STORAGE_KEY, language);
         } catch (error) {
             console.warn('[LANGUAGE] No se pudo guardar localStorage', error);
+        }
+    }
+
+    /**
+     * Mantener el idioma activo en la URL sin recargar ni perder el hash.
+     */
+    function syncLanguageInUrl(language) {
+        try {
+            const url = new URL(window.location.href);
+            url.searchParams.set(URL_LANGUAGE_PARAM, language);
+            window.history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`);
+        } catch (error) {
+            console.warn('[LANGUAGE] No se pudo sincronizar el idioma en la URL', error);
         }
     }
     
@@ -198,6 +228,21 @@ const Language = (() => {
     }
 
     /**
+     * Propagar el idioma a todos los enlaces hacia Workbench, incluidos deep links.
+     */
+    function updateWorkbenchLinks() {
+        document.querySelectorAll('a[href^="workbench/"]').forEach((link) => {
+            try {
+                const target = new URL(link.getAttribute('href'), window.location.href);
+                target.searchParams.set(URL_LANGUAGE_PARAM, currentLanguage);
+                link.setAttribute('href', `${target.pathname.replace(/^\//, '')}${target.search}${target.hash}`);
+            } catch (error) {
+                console.warn('[LANGUAGE] No se pudo actualizar un enlace de Workbench', error);
+            }
+        });
+    }
+
+    /**
      * Actualizar estado visual y accesible de los controles de idioma
      */
     function updateLanguageControls() {
@@ -244,6 +289,8 @@ const Language = (() => {
             }
 
             updateCvLinks();
+            updateWorkbenchLinks();
+            syncLanguageInUrl(currentLanguage);
             setupLanguageControls.call(this);
             updateLanguageControls();
         },
@@ -268,7 +315,9 @@ const Language = (() => {
             document.documentElement.lang = currentLanguage;
             translatePage();
             updateCvLinks();
+            updateWorkbenchLinks();
             saveLanguagePreference(currentLanguage);
+            syncLanguageInUrl(currentLanguage);
             updateLanguageControls();
         },
         
