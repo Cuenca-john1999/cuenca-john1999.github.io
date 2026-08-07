@@ -1,0 +1,207 @@
+name: One-off browser audit
+
+on:
+  push:
+    branches:
+      - audit/improvements-2026-08-07
+    paths:
+      - '.github/workflows/visual-audit-oneoff.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  browser-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare browser audit
+        run: |
+          python3 -m pip install --quiet selenium
+          which google-chrome || which chromium || which chromium-browser
+          which chromedriver
+
+      - name: Run local site and browser checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p audit-artifacts
+          python3 -m http.server 4173 --bind 127.0.0.1 > /tmp/portfolio-http.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" 2>/dev/null || true' EXIT
+          sleep 1
+
+          cat > /tmp/browser_audit.py <<'PY'
+          from __future__ import annotations
+
+          import json
+          import time
+          from pathlib import Path
+          from urllib.parse import parse_qs, urlparse
+
+          from selenium import webdriver
+          from selenium.common.exceptions import TimeoutException
+          from selenium.webdriver.chrome.options import Options
+          from selenium.webdriver.common.by import By
+          from selenium.webdriver.common.keys import Keys
+          from selenium.webdriver.support import expected_conditions as EC
+          from selenium.webdriver.support.ui import WebDriverWait
+
+          BASE = 'http://127.0.0.1:4173'
+          OUT = Path('audit-artifacts')
+          OUT.mkdir(exist_ok=True)
+
+          failures: list[str] = []
+          observations: list[str] = []
+
+          def require(condition: bool, message: str) -> None:
+              if not condition:
+                  failures.append(message)
+
+          def wait_ready(driver, timeout=10):
+              WebDriverWait(driver, timeout).until(
+                  lambda d: d.execute_script('return document.readyState') == 'complete'
+              )
+              time.sleep(0.35)
+
+          def no_horizontal_overflow(driver, label: str) -> None:
+              data = driver.execute_script('''
+                  return {
+                    innerWidth: window.innerWidth,
+                    docWidth: document.documentElement.scrollWidth,
+                    bodyWidth: document.body.scrollWidth
+                  };
+              ''')
+              require(data['docWidth'] <= data['innerWidth'] + 2, f'{label}: document horizontal overflow {data}')
+              require(data['bodyWidth'] <= data['innerWidth'] + 2, f'{label}: body horizontal overflow {data}')
+              observations.append(f"{label}: widths {data}")
+
+          def severe_console_errors(driver, label: str) -> None:
+              errors = []
+              for item in driver.get_log('browser'):
+                  if item.get('level') == 'SEVERE':
+                      message = item.get('message', '')
+                      if 'favicon.ico' in message:
+                          continue
+                      errors.append(message)
+              require(not errors, f'{label}: console errors: {errors[:8]}')
+
+          def screenshot(driver, name: str) -> None:
+              driver.save_screenshot(str(OUT / name))
+
+          options = Options()
+          options.add_argument('--headless=new')
+          options.add_argument('--no-sandbox')
+          options.add_argument('--disable-dev-shm-usage')
+          options.add_argument('--force-device-scale-factor=1')
+          options.set_capability('goog:loggingPrefs', {'browser': 'ALL'})
+
+          driver = webdriver.Chrome(options=options)
+          try:
+              # Desktop profile: explicit language, switching, propagation and layout.
+              driver.set_window_size(1440, 900)
+              driver.get(f'{BASE}/?lang=en')
+              wait_ready(driver)
+              require(driver.find_element(By.TAG_NAME, 'html').get_attribute('lang') == 'en', 'Main desktop: ?lang=en did not select English')
+              no_horizontal_overflow(driver, 'Main desktop EN')
+              screenshot(driver, 'main-desktop-en.png')
+
+              de_button = driver.find_element(By.CSS_SELECTOR, '[data-language-set="de"]')
+              de_button.click()
+              time.sleep(0.25)
+              require(driver.find_element(By.TAG_NAME, 'html').get_attribute('lang') == 'de', 'Main desktop: DE switch did not update html lang')
+              require(parse_qs(urlparse(driver.current_url).query).get('lang') == ['de'], 'Main desktop: DE switch did not synchronize URL')
+              workbench_links = driver.find_elements(By.CSS_SELECTOR, 'a[href^="workbench/"]')
+              require(bool(workbench_links), 'Main desktop: no Workbench links found')
+              for link in workbench_links[:12]:
+                  href = link.get_attribute('href') or ''
+                  require('lang=de' in href, f'Main desktop: Workbench link lost active language: {href}')
+              laprincesa = driver.find_element(By.CSS_SELECTOR, 'a[href*="entry-laprincesa"]')
+              href = laprincesa.get_attribute('href')
+              require('lang=de' in href and '#entry-laprincesa' in href, f'Main desktop: deep link propagation broken: {href}')
+              no_horizontal_overflow(driver, 'Main desktop DE')
+              screenshot(driver, 'main-desktop-de.png')
+              severe_console_errors(driver, 'Main desktop')
+
+              # Workbench desktop: direct deep link + language + dialog + Escape.
+              driver.get(f'{BASE}/workbench/?lang=de#entry-laprincesa')
+              wait_ready(driver)
+              require(driver.find_element(By.TAG_NAME, 'html').get_attribute('lang') == 'de', 'Workbench desktop: ?lang=de did not select German')
+              dialog = driver.find_element(By.CSS_SELECTOR, '[data-entry-dialog]')
+              WebDriverWait(driver, 8).until(lambda d: dialog.get_attribute('open') is not None)
+              require(dialog.get_attribute('open') is not None, 'Workbench desktop: deep link did not open entry dialog')
+              require(driver.current_url.endswith('#entry-laprincesa'), f'Workbench desktop: deep link hash changed unexpectedly: {driver.current_url}')
+              profile_href = driver.find_element(By.CSS_SELECTOR, '.profile-return').get_attribute('href')
+              require('lang=de' in profile_href, f'Workbench desktop: profile return lost language: {profile_href}')
+              no_horizontal_overflow(driver, 'Workbench desktop dialog')
+              screenshot(driver, 'workbench-desktop-laprincesa-de.png')
+              driver.find_element(By.TAG_NAME, 'body').send_keys(Keys.ESCAPE)
+              time.sleep(0.25)
+              require(dialog.get_attribute('open') is None, 'Workbench desktop: Escape did not close dialog')
+              severe_console_errors(driver, 'Workbench desktop')
+
+              # Mobile main at required 390px width.
+              driver.set_window_size(390, 800)
+              driver.get(f'{BASE}/?lang=es')
+              wait_ready(driver)
+              require(driver.find_element(By.TAG_NAME, 'html').get_attribute('lang') == 'es', 'Main mobile: ?lang=es did not select Spanish')
+              no_horizontal_overflow(driver, 'Main mobile 390')
+              screenshot(driver, 'main-mobile-390-es.png')
+              severe_console_errors(driver, 'Main mobile')
+
+              # Mobile Workbench: direct deep link, dialog navigation, close control.
+              driver.get(f'{BASE}/workbench/?lang=en#entry-deutschos')
+              wait_ready(driver)
+              dialog = driver.find_element(By.CSS_SELECTOR, '[data-entry-dialog]')
+              WebDriverWait(driver, 8).until(lambda d: dialog.get_attribute('open') is not None)
+              no_horizontal_overflow(driver, 'Workbench mobile 390 dialog')
+              next_button = driver.find_element(By.CSS_SELECTOR, '[data-dialog-next-entry]')
+              require(next_button.is_displayed(), 'Workbench mobile: next-page control is not displayed')
+              close_button = driver.find_element(By.CSS_SELECTOR, '[data-dialog-close]')
+              require(close_button.is_displayed(), 'Workbench mobile: close control is not displayed')
+              screenshot(driver, 'workbench-mobile-390-deutschos-en.png')
+              close_button.click()
+              time.sleep(0.25)
+              require(dialog.get_attribute('open') is None, 'Workbench mobile: close button did not close dialog')
+              severe_console_errors(driver, 'Workbench mobile')
+
+              # Reduced motion should be respected without breaking content/navigation.
+              driver.execute_cdp_cmd('Emulation.setEmulatedMedia', {
+                  'features': [{'name': 'prefers-reduced-motion', 'value': 'reduce'}]
+              })
+              driver.get(f'{BASE}/workbench/?lang=en')
+              wait_ready(driver)
+              reduced = driver.execute_script("return matchMedia('(prefers-reduced-motion: reduce)').matches")
+              require(reduced is True, 'Reduced motion emulation was not active')
+              require(driver.find_element(By.ID, 'featured').is_displayed(), 'Reduced motion: featured content became unavailable')
+              no_horizontal_overflow(driver, 'Workbench mobile reduced motion')
+              screenshot(driver, 'workbench-mobile-390-reduced-motion.png')
+              severe_console_errors(driver, 'Reduced motion')
+
+          except TimeoutException as exc:
+              failures.append(f'Browser wait timed out: {exc}')
+          finally:
+              driver.quit()
+
+          report = {
+              'failures': failures,
+              'observations': observations,
+              'screenshots': sorted(p.name for p in OUT.glob('*.png')),
+          }
+          (OUT / 'browser-audit.json').write_text(json.dumps(report, indent=2), encoding='utf-8')
+          print(json.dumps(report, indent=2))
+          if failures:
+              raise SystemExit(1)
+          PY
+
+          python3 /tmp/browser_audit.py
+
+      - name: Upload browser audit screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-browser-audit
+          path: audit-artifacts/
+          if-no-files-found: error
+          retention-days: 7
