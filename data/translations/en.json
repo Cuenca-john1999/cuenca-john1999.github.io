@@ -41,7 +41,12 @@
     "documentation": "Documentation",
     "finalProject": "Final project",
     "myRole": "My role",
-    "readMore": "Read more"
+    "readMore": "Read more",
+    "academicRecognition": "Academic recognition",
+    "selectedResults": "Selected official results",
+    "appliedAcademicEvidence": "Applied academic evidence",
+    "placementContext": "FCT / Erasmus+ context",
+    "credentialDetails": "Credential details"
   },
   "nav": {
     "profile": "Profile",
@@ -94,7 +99,7 @@
       "body": "I completed two Spanish vocational qualifications—Técnico Superior en Laboratorio Clínico y Biomédico and Técnico en Operaciones de Laboratorio—with final grades of 9.25/10 and 8.69/10.",
       "pointClinical": "Técnico Superior en Laboratorio Clínico y Biomédico · CEAC FP Oficial · 2025",
       "pointOperations": "Técnico en Operaciones de Laboratorio · IES Virgen de la Paloma · 2023",
-      "pointAdditional": "Animal Experimentation - Functions A+B+C · Healthcare Management · Risk Prevention"
+      "pointAdditional": "Certifications: Animal Experimentation A+B+C · Healthcare Centre Management · Basic Risk Prevention"
     },
     "skills": {
       "kicker": "Skills",
@@ -212,12 +217,39 @@
       "center": "IES Virgen de la Paloma · Madrid, Spain",
       "period": "2021–2023",
       "practiceCta": "Erasmus+ / placement: Celignis Biomass Analysis Laboratory · Limerick, Ireland →",
-      "body": "Spanish qualification: Técnico en Operaciones de Laboratorio (translated as Technician in Laboratory Operations), IES Virgen de la Paloma, 2021-2023. Strong grades in Applied Chemistry, Physicochemical Testing, Chemical Analysis Operations, Materials Testing and Technical English."
+      "body": "Spanish qualification: Técnico en Operaciones de Laboratorio (Technician in Laboratory Operations), IES Virgen de la Paloma, 2021–2023. Official final grade: 8.69/10. The official academic record covers laboratory safety and organization, applied chemistry, physicochemical testing, sampling and unit operations, chemical analysis, microbiology and biochemistry, materials testing, auxiliary laboratory services and technical English.",
+      "recognition": "Diploma for excellent academic performance in the second year of the Técnico en Operaciones de Laboratorio programme.",
+      "results10": "Laboratory Auxiliary Services · Technical English",
+      "results9": "Applied Chemistry · Physicochemical Testing · Safety and Organization in the Laboratory · Chemical Analysis Operations · Materials Testing",
+      "evidenceIntro": "Archived coursework supplied for this portfolio documents practical academic work through laboratory reports, SOP/PNT-style documents, calculations and project materials. This is presented as training evidence, not professional placement experience.",
+      "evidenceDocumentation": "Laboratory documentation & equipment: pH-meter and drying-oven PNTs, micropipette documentation, thermometer calibration, inventory and maintenance records, mass/volume measurement and sampling reports.",
+      "evidenceAnalytical": "Analytical chemistry & physicochemical work: solution preparation, HCl/NaOH titrations, acidity, reaction yield, conductimetry, potentiometry, turbidity, nitrates, proteins and physicochemical measurement.",
+      "evidenceMicrobiology": "Microbiology & materials: microscope use, culture-media preparation, membrane-filtration water analysis, antibiogram, plastics/material identification and corrosion-related work.",
+      "placement": "FCT / Erasmus+ placement at Celignis Biomass Analysis Laboratory, Limerick, Ireland, from 20 March to 31 May 2023. The placement work and responsibilities are documented separately in Experience and Workbench."
     },
     "additional": {
-      "badge": "Functions A+B+C",
-      "title": "Certified Additional Training",
-      "body": "Animal Experimentation - Functions A+B+C (Order ECC/566/2015) · 70 h with in-person practical training. A: care of animals; B: euthanasia of animals; C: performance of procedures. The formal programme covers animal welfare and the 3Rs, recognition of pain, suffering and distress, humane killing methods, minimally invasive procedures, anaesthesia for minor procedures, advanced anaesthesia for surgical or prolonged procedures, and principles of surgery. During the supervised practical component, I personally performed animal handling, injections, anaesthesia, surgical procedures for sample/tissue collection and collection/extraction of animal samples. I also participated in supervised procedures that included euthanasia; this is not presented as independent practice. Healthcare Centre Management · 100 h · 2025. Basic Level Occupational Risk Prevention · 2023."
+      "badge": "3 documented credentials",
+      "title": "Certifications & Additional Training",
+      "body": "Animal Experimentation - Functions A+B+C (Order ECC/566/2015) · 70 h with in-person practical training. A: care of animals; B: euthanasia of animals; C: performance of procedures. The formal programme covers animal welfare and the 3Rs, recognition of pain, suffering and distress, humane killing methods, minimally invasive procedures, anaesthesia for minor procedures, advanced anaesthesia for surgical or prolonged procedures, and principles of surgery. During the supervised practical component, I personally performed animal handling, injections, anaesthesia, surgical procedures for sample/tissue collection and collection/extraction of animal samples. I also participated in supervised procedures that included euthanasia; this is not presented as independent practice. Healthcare Centre Management · 100 h · 2025. Basic Level Occupational Risk Prevention · 2023.",
+      "animal": {
+        "meta": "Order ECC/566/2015 · 70 h · in-person practical training",
+        "title": "Animal Experimentation · Functions A+B+C",
+        "scope": "Formal certification scope: A · care of animals; B · euthanasia of animals; C · performance of procedures.",
+        "programWelfare": "Animal welfare & 3Rs · recognition of pain, suffering and distress · humane killing methods",
+        "programProcedures": "Minimally invasive procedures · anaesthesia for minor procedures · advanced anaesthesia for surgical or prolonged procedures",
+        "programSurgery": "Principles of surgery",
+        "practice": "During the supervised practical component, I personally performed animal handling, injections, anaesthesia, surgical procedures for sample/tissue collection and collection/extraction of animal samples. I also participated in supervised procedures that included euthanasia; this is not presented as independent practice."
+      },
+      "healthcare": {
+        "meta": "100 h · 2025",
+        "title": "Healthcare Centre Management",
+        "body": "Additional certified training in Healthcare Centre Management."
+      },
+      "risk": {
+        "meta": "2023",
+        "title": "Basic Level Occupational Risk Prevention",
+        "body": "Certificate linked to the Formación y Orientación Laboral module of the Laboratory Operations qualification. It states that the training covers responsibilities equivalent to basic-level occupational risk prevention activities under Royal Decree 39/1997."
+      }
     }
   },
   "europass": {

@@ -41,7 +41,12 @@
     "documentation": "Dokumentation",
     "finalProject": "Abschlussprojekt",
     "myRole": "Meine Rolle",
-    "readMore": "Mehr lesen"
+    "readMore": "Mehr lesen",
+    "academicRecognition": "Akademische Auszeichnung",
+    "selectedResults": "Ausgewählte offizielle Leistungen",
+    "appliedAcademicEvidence": "Anwendungsbezogene Ausbildungsnachweise",
+    "placementContext": "FCT- / Erasmus+-Kontext",
+    "credentialDetails": "Details zu den Nachweisen"
   },
   "nav": {
     "profile": "Profil",
@@ -94,7 +99,7 @@
       "body": "Ich habe zwei spanische Berufsqualifikationen abgeschlossen—Técnico Superior en Laboratorio Clínico y Biomédico und Técnico en Operaciones de Laboratorio—mit Abschlussnoten von 9,25/10 und 8,69/10.",
       "pointClinical": "Técnico Superior en Laboratorio Clínico y Biomédico · CEAC FP Oficial · 2025",
       "pointOperations": "Técnico en Operaciones de Laboratorio · IES Virgen de la Paloma · 2023",
-      "pointAdditional": "Tierexperimentelle Funktionen A+B+C · Gesundheitsmanagement · Arbeitsschutz"
+      "pointAdditional": "Zertifikate: Versuchstierkunde A+B+C · Management von Gesundheitseinrichtungen · Grundkenntnisse Arbeitsschutz"
     },
     "skills": {
       "kicker": "Kompetenzen",
@@ -212,12 +217,39 @@
       "center": "IES Virgen de la Paloma · Madrid, Spanien",
       "period": "2021–2023",
       "practiceCta": "Erasmus+ / Praktikum: Celignis Biomass Analysis Laboratory · Limerick, Irland →",
-      "body": "Spanische Qualifikation: Técnico en Operaciones de Laboratorio (englische Übersetzung: Technician in Laboratory Operations), IES Virgen de la Paloma, 2021-2023. Starke Leistungen in angewandter Chemie, physikochemischen Prüfungen, chemischen Analyseoperationen, Materialprüfung und technischem Englisch."
+      "body": "Spanische Qualifikation: Técnico en Operaciones de Laboratorio (englische Übersetzung: Technician in Laboratory Operations), IES Virgen de la Paloma, 2021–2023. Offizielle Abschlussnote: 8,69/10. Der offizielle Leistungsnachweis umfasst Laborsicherheit und -organisation, angewandte Chemie, physikochemische Prüfungen, Probenahme und verfahrenstechnische Grundoperationen, chemische Analytik, Mikrobiologie und Biochemie, Materialprüfung, Laborhilfsdienste und technisches Englisch.",
+      "recognition": "Diplom für hervorragende Leistungen im zweiten Ausbildungsjahr des Bildungsgangs Técnico en Operaciones de Laboratorio.",
+      "results10": "Laborhilfsdienste · Technisches Englisch",
+      "results9": "Angewandte Chemie · Physikochemische Prüfungen · Sicherheit und Organisation im Labor · Chemische Analysen · Materialprüfung",
+      "evidenceIntro": "Die für dieses Portfolio bereitgestellten Ausbildungsunterlagen dokumentieren praktische Ausbildungsarbeit anhand von Laborberichten, PNT-/SOP-ähnlichen Dokumenten, Berechnungen und Projektmaterialien. Sie werden als Ausbildungsnachweise und nicht als Berufserfahrung aus externen Praktika dargestellt.",
+      "evidenceDocumentation": "Labordokumentation & Geräte: PNTs für pH-Meter und Trockenschrank, Mikropipetten-Dokumentation, Thermometerkalibrierung, Inventar- und Wartungsunterlagen sowie Berichte zu Massen-/Volumenmessung und Probenahme.",
+      "evidenceAnalytical": "Analytische Chemie & physikochemische Arbeit: Herstellung von Lösungen, HCl-/NaOH-Titrationen, Säurebestimmung, Reaktionsausbeute, Konduktometrie, Potentiometrie, Trübung, Nitrat- und Proteinbestimmungen sowie physikochemische Messungen.",
+      "evidenceMicrobiology": "Mikrobiologie & Materialien: Mikroskopie, Herstellung von Kulturmedien, Wasseranalyse mittels Membranfiltration, Antibiogramm, Kunststoff-/Materialidentifikation und Arbeiten zum Thema Korrosion.",
+      "placement": "FCT- / Erasmus+-Praktikum bei Celignis Biomass Analysis Laboratory in Limerick, Irland, vom 20. März bis 31. Mai 2023. Tätigkeiten und Verantwortlichkeiten des Praktikums sind separat unter Erfahrung und in der Workbench dokumentiert."
     },
     "additional": {
-      "badge": "Funktionen A+B+C",
-      "title": "Zertifizierte Zusatzqualifikationen",
-      "body": "Versuchstierkunde - Funktionen A+B+C (Erlass ECC/566/2015) · 70 Std. mit Präsenzpraxis. A: Pflege der Tiere; B: Tötung/Euthanasie der Tiere; C: Durchführung von Verfahren. Das formale Programm umfasst Tierwohl und 3R, das Erkennen von Schmerz, Leiden und Angst, tierschutzgerechte Tötungsmethoden, minimalinvasive Verfahren, Anästhesie bei kleineren Eingriffen, fortgeschrittene Anästhesie bei chirurgischen oder länger dauernden Verfahren sowie Grundlagen der Chirurgie. Im beaufsichtigten Praxisteil führte ich persönlich Tierhandling, Injektionen, Anästhesie, chirurgische Verfahren zur Proben-/Gewebegewinnung sowie die Gewinnung/Entnahme tierischer Proben durch. Ich war außerdem an beaufsichtigten Verfahren beteiligt, die eine Euthanasie einschlossen; dies wird nicht als eigenständige Durchführung dargestellt. Management von Gesundheitseinrichtungen · 100 Std. · 2025. Grundausbildung im Arbeitsschutz · 2023."
+      "badge": "3 dokumentierte Nachweise",
+      "title": "Zertifikate & Zusatzqualifikationen",
+      "body": "Versuchstierkunde - Funktionen A+B+C (Erlass ECC/566/2015) · 70 Std. mit Präsenzpraxis. A: Pflege der Tiere; B: Tötung/Euthanasie der Tiere; C: Durchführung von Verfahren. Das formale Programm umfasst Tierwohl und 3R, das Erkennen von Schmerz, Leiden und Angst, tierschutzgerechte Tötungsmethoden, minimalinvasive Verfahren, Anästhesie bei kleineren Eingriffen, fortgeschrittene Anästhesie bei chirurgischen oder länger dauernden Verfahren sowie Grundlagen der Chirurgie. Im beaufsichtigten Praxisteil führte ich persönlich Tierhandling, Injektionen, Anästhesie, chirurgische Verfahren zur Proben-/Gewebegewinnung sowie die Gewinnung/Entnahme tierischer Proben durch. Ich war außerdem an beaufsichtigten Verfahren beteiligt, die eine Euthanasie einschlossen; dies wird nicht als eigenständige Durchführung dargestellt. Management von Gesundheitseinrichtungen · 100 Std. · 2025. Grundausbildung im Arbeitsschutz · 2023.",
+      "animal": {
+        "meta": "Erlass ECC/566/2015 · 70 Std. · Präsenzpraxis",
+        "title": "Versuchstierkunde · Funktionen A+B+C",
+        "scope": "Formaler Zertifizierungsumfang: A · Pflege der Tiere; B · Tötung/Euthanasie der Tiere; C · Durchführung von Verfahren.",
+        "programWelfare": "Tierwohl & 3R · Erkennen von Schmerz, Leiden und Angst · tierschutzgerechte Tötungsmethoden",
+        "programProcedures": "Minimalinvasive Verfahren · Anästhesie bei kleineren Eingriffen · fortgeschrittene Anästhesie bei chirurgischen oder länger dauernden Verfahren",
+        "programSurgery": "Grundlagen der Chirurgie",
+        "practice": "Im beaufsichtigten Praxisteil führte ich persönlich Tierhandling, Injektionen, Anästhesie, chirurgische Verfahren zur Proben-/Gewebegewinnung sowie die Gewinnung/Entnahme tierischer Proben durch. Ich war außerdem an beaufsichtigten Verfahren beteiligt, die eine Euthanasie einschlossen; dies wird nicht als eigenständige Durchführung dargestellt."
+      },
+      "healthcare": {
+        "meta": "100 Std. · 2025",
+        "title": "Management von Gesundheitseinrichtungen",
+        "body": "Zusätzliche zertifizierte Weiterbildung im Management von Gesundheitseinrichtungen."
+      },
+      "risk": {
+        "meta": "2023",
+        "title": "Grundausbildung im Arbeitsschutz",
+        "body": "Zertifikat in Verbindung mit dem Modul Formación y Orientación Laboral der Qualifikation Operaciones de Laboratorio. Laut Zertifikat vermittelt die Ausbildung Kompetenzen für Verantwortlichkeiten, die den Tätigkeiten der Grundstufe der Arbeitsschutzprävention nach dem Königlichen Dekret 39/1997 entsprechen."
+      }
     }
   },
   "europass": {

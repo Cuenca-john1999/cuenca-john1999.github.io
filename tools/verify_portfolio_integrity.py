@@ -147,6 +147,23 @@ def check_required_content() -> None:
     if "currentLanguae" in workbench_js:
         fail("Workbench contains the misspelled currentLanguage identifier that breaks multi-page resource rendering")
 
+    education_markers = (
+        'data-education-evidence="operations"',
+        'Official final grade: 8.69/10',
+        'Diploma for excellent academic performance in the second year',
+        'Laboratory Auxiliary Services · Technical English',
+        'Applied academic evidence',
+        'data-education-evidence="credentials"',
+        'Animal Experimentation · Functions A+B+C',
+        'Healthcare Centre Management',
+        'Basic Level Occupational Risk Prevention',
+    )
+    for marker in education_markers:
+        if marker not in index:
+            fail(f"education evolution marker missing from index.html: {marker}")
+    if index.count('class="credential-card"') != 3:
+        fail("education credentials must remain split into exactly three visible credential cards")
+
 
 
 class LinkCollector(HTMLParser):
