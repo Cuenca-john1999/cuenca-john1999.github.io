@@ -27,7 +27,7 @@
 const Language = (() => {
     const STORAGE_KEY = 'portfolio-language';
     const URL_LANGUAGE_PARAM = 'lang';
-    const TRANSLATION_VERSION = '20260807-professionalization-audit';
+    const TRANSLATION_VERSION = '20260807-education-visual';
     const DEFAULT_LANGUAGE = 'en';
     const AVAILABLE_LANGUAGES = ['en', 'de', 'es'];
     const CV_BY_LANGUAGE = {

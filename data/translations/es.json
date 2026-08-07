@@ -41,7 +41,12 @@
     "documentation": "Documentación",
     "finalProject": "Trabajo final",
     "myRole": "Mi papel",
-    "readMore": "Leer más"
+    "readMore": "Leer más",
+    "academicRecognition": "Reconocimiento académico",
+    "selectedResults": "Resultados oficiales destacados",
+    "appliedAcademicEvidence": "Evidencia académica aplicada",
+    "placementContext": "Contexto FCT / Erasmus+",
+    "credentialDetails": "Detalles de las credenciales"
   },
   "nav": {
     "profile": "Perfil",
@@ -94,7 +99,7 @@
       "body": "Completé dos titulaciones españolas de Formación Profesional—Técnico Superior en Laboratorio Clínico y Biomédico y Técnico en Operaciones de Laboratorio—con notas finales de 9,25/10 y 8,69/10.",
       "pointClinical": "Técnico Superior en Laboratorio Clínico y Biomédico · CEAC FP Oficial · 2025",
       "pointOperations": "Técnico en Operaciones de Laboratorio · IES Virgen de la Paloma · 2023",
-      "pointAdditional": "Funciones A+B+C en Experimentación Animal · Gestión Sanitaria · Prevención de Riesgos"
+      "pointAdditional": "Certificaciones: Experimentación Animal A+B+C · Gestión de Centros Sanitarios · PRL básico"
     },
     "skills": {
       "kicker": "Habilidades",
@@ -212,12 +217,39 @@
       "center": "IES Virgen de la Paloma · Madrid, España",
       "period": "2021–2023",
       "practiceCta": "Erasmus+ / prácticas: Celignis Biomass Analysis Laboratory · Limerick, Irlanda →",
-      "body": "Titulación española: Técnico en Operaciones de Laboratorio, IES Virgen de la Paloma, 2021-2023. Resultados destacados en Química Aplicada, Ensayos Fisicoquímicos, Operaciones de Análisis Químico, Ensayos de Materiales e Inglés Técnico."
+      "body": "Titulación española: Técnico en Operaciones de Laboratorio, IES Virgen de la Paloma, 2021–2023. Nota final oficial: 8,69/10. El expediente académico oficial incluye seguridad y organización en el laboratorio, química aplicada, pruebas fisicoquímicas, muestreo y operaciones unitarias, análisis químico, microbiología y bioquímica, ensayos de materiales, servicios auxiliares de laboratorio e inglés técnico.",
+      "recognition": "Diploma por excelente aprovechamiento en el segundo curso del ciclo de Técnico en Operaciones de Laboratorio.",
+      "results10": "Servicios Auxiliares en el Laboratorio · Inglés Técnico",
+      "results9": "Química Aplicada · Pruebas Fisicoquímicas · Seguridad y Organización en el Laboratorio · Operaciones de Análisis Químico · Ensayos de Materiales",
+      "evidenceIntro": "Los materiales académicos aportados para este portafolio documentan trabajo práctico formativo mediante informes de laboratorio, documentos tipo PNT/SOP, cálculos y materiales de proyectos. Se presenta como evidencia de formación, no como experiencia profesional de las prácticas externas.",
+      "evidenceDocumentation": "Documentación y equipos de laboratorio: PNT de pH-metro y estufa de secado, documentación de micropipeta, calibrado de termómetro, registros de inventario y mantenimiento, informes de medida de masas/volúmenes y muestreo.",
+      "evidenceAnalytical": "Química analítica y trabajo fisicoquímico: preparación de disoluciones, valoraciones de HCl/NaOH, acidez, rendimiento de reacción, conductimetría, potenciometría, turbidez, nitratos, proteínas y mediciones fisicoquímicas.",
+      "evidenceMicrobiology": "Microbiología y materiales: uso del microscopio, preparación de medios de cultivo, análisis de agua por filtración de membrana, antibiograma, identificación de plásticos/materiales y trabajos relacionados con corrosión.",
+      "placement": "FCT / Erasmus+ en Celignis Biomass Analysis Laboratory, Limerick, Irlanda, del 20 de marzo al 31 de mayo de 2023. El trabajo y las responsabilidades de la estancia se documentan por separado en Experiencia y Workbench."
     },
     "additional": {
-      "badge": "Funciones A+B+C",
-      "title": "Formación adicional certificada",
-      "body": "Funciones A+B+C en Experimentación Animal (Orden ECC/566/2015) · 70 h con prácticas presenciales. A: cuidado de animales; B: eutanasia; C: realización de procedimientos. El programa formal incluye bienestar animal y 3R, reconocimiento del dolor, sufrimiento y angustia, métodos humanitarios de sacrificio, procedimientos mínimamente invasivos, anestesia para procedimientos menores, anestesia avanzada para procedimientos quirúrgicos o prolongados y principios de cirugía. Durante la parte práctica supervisada realicé personalmente manejo de animales, inyecciones, anestesia, procedimientos quirúrgicos para la obtención de muestras/tejidos y obtención/extracción de muestras animales. También participé en procedimientos supervisados que incluían eutanasia; no se presenta como una realización independiente. Gestión de Centros Sanitarios · 100 h · 2025. Prevención de Riesgos Laborales de nivel básico · 2023."
+      "badge": "3 credenciales documentadas",
+      "title": "Certificaciones y formación complementaria",
+      "body": "Funciones A+B+C en Experimentación Animal (Orden ECC/566/2015) · 70 h con prácticas presenciales. A: cuidado de animales; B: eutanasia; C: realización de procedimientos. El programa formal incluye bienestar animal y 3R, reconocimiento del dolor, sufrimiento y angustia, métodos humanitarios de sacrificio, procedimientos mínimamente invasivos, anestesia para procedimientos menores, anestesia avanzada para procedimientos quirúrgicos o prolongados y principios de cirugía. Durante la parte práctica supervisada realicé personalmente manejo de animales, inyecciones, anestesia, procedimientos quirúrgicos para la obtención de muestras/tejidos y obtención/extracción de muestras animales. También participé en procedimientos supervisados que incluían eutanasia; no se presenta como una realización independiente. Gestión de Centros Sanitarios · 100 h · 2025. Prevención de Riesgos Laborales de nivel básico · 2023.",
+      "animal": {
+        "meta": "Orden ECC/566/2015 · 70 h · prácticas presenciales",
+        "title": "Experimentación Animal · Funciones A+B+C",
+        "scope": "Alcance formal de la certificación: A · cuidado de animales; B · eutanasia de animales; C · realización de procedimientos.",
+        "programWelfare": "Bienestar animal y 3R · reconocimiento del dolor, sufrimiento y angustia · métodos humanitarios de sacrificio",
+        "programProcedures": "Procedimientos mínimamente invasivos · anestesia para procedimientos menores · anestesia avanzada para procedimientos quirúrgicos o prolongados",
+        "programSurgery": "Principios de cirugía",
+        "practice": "Durante la parte práctica supervisada realicé personalmente manejo de animales, inyecciones, anestesia, procedimientos quirúrgicos para la obtención de muestras/tejidos y obtención/extracción de muestras animales. También participé en procedimientos supervisados que incluían eutanasia; no se presenta como una realización independiente."
+      },
+      "healthcare": {
+        "meta": "100 h · 2025",
+        "title": "Gestión de Centros Sanitarios",
+        "body": "Formación adicional certificada en Gestión de Centros Sanitarios."
+      },
+      "risk": {
+        "meta": "2023",
+        "title": "Prevención de Riesgos Laborales de nivel básico",
+        "body": "Certificado vinculado al módulo de Formación y Orientación Laboral de la titulación de Operaciones de Laboratorio. La certificación indica que la formación capacita para responsabilidades equivalentes a las actividades de nivel básico en prevención de riesgos laborales establecidas en el Real Decreto 39/1997."
+      }
     }
   },
   "europass": {

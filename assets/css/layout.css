@@ -1028,6 +1028,121 @@ main,
     font-weight: 650;
 }
 
+.academic-result-list,
+.academic-evidence-list,
+.credential-scope-list {
+    margin: var(--spacing-md) 0 0;
+}
+
+.academic-result-list {
+    display: grid;
+    gap: 0.7rem;
+    padding: 0;
+    list-style: none;
+}
+
+.academic-result-list li {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.8rem;
+    align-items: start;
+    padding: 0.8rem 0.9rem;
+    border: 1px solid rgba(79, 140, 255, 0.14);
+    border-radius: var(--radius-sm);
+    background: rgba(79, 140, 255, 0.05);
+    color: var(--color-text-muted);
+    font: 500 0.9rem/1.55 var(--font-family-sans);
+}
+
+.academic-result-list strong {
+    color: var(--color-accent);
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+.academic-evidence-list {
+    display: grid;
+    gap: 0.7rem;
+    padding-inline-start: 1.2rem;
+    color: var(--color-text-muted);
+    font: 500 0.9rem/1.6 var(--font-family-sans);
+}
+
+.academic-evidence-list li::marker {
+    color: var(--color-accent);
+}
+
+.practice-details--credentials[open] {
+    width: 100%;
+}
+
+.credential-list {
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+    margin-block-start: var(--spacing-lg);
+}
+
+.credential-card {
+    width: 100%;
+    padding: clamp(1rem, 2vw, 1.35rem);
+    border: 1px solid rgba(174, 183, 194, 0.14);
+    border-radius: var(--radius-sm);
+    background: rgba(11, 13, 16, 0.32);
+}
+
+.credential-card__meta {
+    margin: 0 0 0.6rem !important;
+    color: var(--color-accent) !important;
+    font: 700 0.7rem/1.35 var(--font-family-sans) !important;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.credential-card h4 {
+    margin: 0;
+    color: var(--color-text);
+    font: 650 clamp(1rem, 1.5vw, 1.16rem)/1.35 var(--font-family-sans);
+}
+
+.credential-card > p:not(.credential-card__meta) {
+    margin-block-start: 0.8rem;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    line-height: 1.62;
+}
+
+.credential-scope-list {
+    display: grid;
+    gap: 0.6rem;
+    padding: 0;
+    list-style: none;
+}
+
+.credential-scope-list li {
+    padding: 0.7rem 0.8rem;
+    border-inline-start: 2px solid rgba(79, 140, 255, 0.5);
+    background: rgba(79, 140, 255, 0.045);
+    color: var(--color-text-muted);
+    font: 500 0.86rem/1.55 var(--font-family-sans);
+}
+
+.credential-card__note {
+    padding-block-start: 0.85rem;
+    border-block-start: 1px solid rgba(174, 183, 194, 0.12);
+}
+
+@media (max-width: 560px) {
+    .academic-result-list li {
+        grid-template-columns: 1fr;
+        gap: 0.25rem;
+    }
+
+    .credential-card {
+        padding: 1rem;
+    }
+}
+
 .document-actions {
     display: flex;
     flex-wrap: wrap;
