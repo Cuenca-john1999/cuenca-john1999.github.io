@@ -141,6 +141,8 @@ def check_required_content() -> None:
         fail("main portfolio shareable language routing is missing")
     if "URL_LANGUAGE_PARAM = 'lang'" not in workbench_js:
         fail("Workbench shareable language routing is missing")
+    if "currentLanguae" in workbench_js:
+        fail("Workbench contains the misspelled currentLanguage identifier that breaks multi-page resource rendering")
 
 
 def main() -> None:
