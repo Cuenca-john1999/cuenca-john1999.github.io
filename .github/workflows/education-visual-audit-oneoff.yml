@@ -19,7 +19,7 @@ jobs:
           fetch-depth: 0
 
       - name: Apply conservative education update
-        run: python tools/apply_education_visual_audit.py
+        run: python tools/apply_education_visual_audit_v2.py
 
       - name: Verify portfolio integrity
         run: python tools/verify_portfolio_integrity.py
