@@ -361,7 +361,8 @@
     "ready": "Formulario preparado. Falta activar la clave de Web3Forms.",
     "sending": "Enviando mensaje...",
     "success": "Mensaje enviado. Gracias por ponerte en contacto.",
-    "error": "No se pudo enviar el mensaje. Inténtalo de nuevo en unos minutos."
+    "error": "No se pudo enviar el mensaje. Inténtalo de nuevo en unos minutos.",
+    "privacyCta": "Leer información de privacidad"
   },
   "documentExplorer": {
     "kicker": "Explorador de documentos",
@@ -391,6 +392,35 @@
   "footer": {
     "copyright": "&copy; 2026 Jhon M. Cuenca. Todos los derechos reservados.",
     "authorship": "El contenido del portfolio, los conceptos de investigación originales y los diagramas son autoría de Jhon M. Cuenca salvo que se indique lo contrario. Los trabajos académicos en coautoría se acreditan donde corresponde.",
-    "scientificNotice": "Las hipótesis científicas se presentan con fines educativos y de portfolio profesional; no representan tratamientos clínicos validados."
+    "scientificNotice": "Las hipótesis científicas se presentan con fines educativos y de portfolio profesional; no representan tratamientos clínicos validados.",
+    "privacy": "Privacidad"
+  },
+  "privacyPage": {
+    "kicker": "Privacidad",
+    "title": "Información de privacidad para el contacto profesional.",
+    "intro": "Esta página explica el flujo actual de datos cuando se utiliza el formulario de contacto del portafolio.",
+    "back": "Volver al perfil profesional",
+    "controllerTitle": "Responsable",
+    "controllerBody": "Jhon M. Cuenca es responsable de los datos personales enviados mediante el formulario de contacto de este portafolio. El contacto está disponible a través del formulario profesional del propio portafolio.",
+    "dataTitle": "Datos recogidos",
+    "dataBody": "El formulario solicita nombre, dirección de correo electrónico y mensaje. Envía únicamente la información necesaria para tu consulta profesional.",
+    "purposeTitle": "Finalidad y base jurídica",
+    "purposeBody": "La información se utiliza para recibir y responder consultas profesionales, oportunidades de laboratorio, contactos relacionados con investigación o propuestas de colaboración. Según el contexto, el tratamiento puede ser necesario para realizar actuaciones solicitadas antes de un posible contrato y/o basarse en el interés legítimo de responder correspondencia profesional.",
+    "providerTitle": "Proveedor del formulario y tratamiento internacional",
+    "providerBody": "El formulario de contacto se transmite mediante Web3Forms. Web3Forms indica en su documentación pública que sus servidores están ubicados en Estados Unidos (US-East). El tratamiento y la conservación por parte del proveedor se rigen por la información vigente de Web3Forms.",
+    "retentionTitle": "Conservación",
+    "retentionBody": "El portafolio estático no mantiene una base de datos separada de los envíos. El mensaje entregado puede permanecer en el servicio de correo receptor según su configuración y políticas; la conservación por parte del proveedor del formulario se rige por la información vigente de Web3Forms.",
+    "rightsTitle": "Tus derechos",
+    "rightsBody": "Cuando sea aplicable el RGPD, pueden existir derechos de acceso, rectificación, supresión, limitación, oposición y el derecho a presentar una reclamación ante una autoridad de protección de datos competente.",
+    "trackingTitle": "Analítica y perfilado",
+    "trackingBody": "Este portafolio no utiliza rastreadores publicitarios, perfilado de comportamiento ni servicios de analítica.",
+    "updated": "Última actualización: 7 de agosto de 2026"
+  },
+  "notFoundPage": {
+    "kicker": "404",
+    "title": "Página no encontrada.",
+    "body": "La dirección puede estar desactualizada o incompleta. El perfil profesional y el Workbench siguen disponibles.",
+    "profile": "Perfil profesional",
+    "workbench": "Workbench"
   }
 }

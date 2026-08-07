@@ -361,7 +361,8 @@
     "ready": "Kontaktformular bereit. Web3Forms-Zugangsschlüssel hinzufügen, um es zu aktivieren.",
     "sending": "Nachricht wird gesendet...",
     "success": "Nachricht gesendet. Vielen Dank für die Kontaktaufnahme.",
-    "error": "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es in einigen Minuten erneut."
+    "error": "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es in einigen Minuten erneut.",
+    "privacyCta": "Datenschutzhinweise lesen"
   },
   "documentExplorer": {
     "kicker": "Dokumentenansicht",
@@ -391,6 +392,35 @@
   "footer": {
     "copyright": "&copy; 2026 Jhon M. Cuenca. Alle Rechte vorbehalten.",
     "authorship": "Portfolio-Inhalte, originale Forschungskonzepte und Diagramme sind, sofern nicht anders angegeben, von Jhon M. Cuenca verfasst. Gemeinsam verfasste akademische Arbeiten werden entsprechend gekennzeichnet.",
-    "scientificNotice": "Wissenschaftliche Hypothesen werden nur zu Bildungszwecken und als professionelles Portfolio dargestellt; sie stellen keine validierten klinischen Behandlungen dar."
+    "scientificNotice": "Wissenschaftliche Hypothesen werden nur zu Bildungszwecken und als professionelles Portfolio dargestellt; sie stellen keine validierten klinischen Behandlungen dar.",
+    "privacy": "Datenschutz"
+  },
+  "privacyPage": {
+    "kicker": "Datenschutz",
+    "title": "Datenschutzhinweise für die berufliche Kontaktaufnahme.",
+    "intro": "Diese Seite beschreibt den aktuellen Datenfluss bei Nutzung des Kontaktformulars im Portfolio.",
+    "back": "Zurück zum beruflichen Profil",
+    "controllerTitle": "Verantwortlicher",
+    "controllerBody": "Jhon M. Cuenca ist für die personenbezogenen Daten verantwortlich, die über das Kontaktformular dieses Portfolios übermittelt werden. Eine Kontaktaufnahme ist über das berufliche Kontaktformular im Portfolio möglich.",
+    "dataTitle": "Erhobene Daten",
+    "dataBody": "Das Formular fragt Name, E-Mail-Adresse und Nachricht ab. Bitte übermitteln Sie nur Informationen, die für Ihre berufliche Anfrage erforderlich sind.",
+    "purposeTitle": "Zweck und Rechtsgrundlage",
+    "purposeBody": "Die Angaben werden verwendet, um berufliche Anfragen, Laborstellen, forschungsbezogene Kontakte oder Kooperationsanfragen zu empfangen und zu beantworten. Je nach Kontext kann die Verarbeitung für vorvertragliche Schritte auf Ihre Anfrage hin und/oder aufgrund des berechtigten Interesses an der Beantwortung beruflicher Korrespondenz erfolgen.",
+    "providerTitle": "Formulardienst und internationale Verarbeitung",
+    "providerBody": "Das Kontaktformular wird über Web3Forms übermittelt. Web3Forms gibt in seiner öffentlichen Dokumentation an, dass sich die Server in den Vereinigten Staaten (US-East) befinden. Verarbeitung und Speicherung auf Seiten des Anbieters richten sich nach den jeweils aktuellen Informationen von Web3Forms.",
+    "retentionTitle": "Speicherung",
+    "retentionBody": "Das statische Portfolio selbst führt keine separate Datenbank der Formulareinsendungen. Die zugestellte Nachricht kann entsprechend den Einstellungen und Richtlinien des empfangenden E-Mail-Dienstes gespeichert bleiben; eine Speicherung durch den Formulardienst richtet sich nach den aktuellen Informationen von Web3Forms.",
+    "rightsTitle": "Ihre Rechte",
+    "rightsBody": "Soweit die DSGVO anwendbar ist, können insbesondere Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch sowie das Recht auf Beschwerde bei einer zuständigen Datenschutzaufsichtsbehörde bestehen.",
+    "trackingTitle": "Analyse und Profiling",
+    "trackingBody": "Dieses Portfolio verwendet keine Werbetracker, kein verhaltensbezogenes Profiling und keine Analysedienste.",
+    "updated": "Zuletzt aktualisiert: 7. August 2026"
+  },
+  "notFoundPage": {
+    "kicker": "404",
+    "title": "Seite nicht gefunden.",
+    "body": "Die Adresse ist möglicherweise veraltet oder unvollständig. Das berufliche Profil und der Workbench sind weiterhin verfügbar.",
+    "profile": "Berufliches Profil",
+    "workbench": "Workbench"
   }
 }
