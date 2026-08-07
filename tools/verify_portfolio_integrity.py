@@ -9,10 +9,13 @@ from __future__ import annotations
 
 import json
 import re
+from html.parser import HTMLParser
 from pathlib import Path
+from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 LANGUAGES = ("en", "de", "es")
+HTML_PAGES = ("index.html", "workbench/index.html", "privacy.html", "404.html")
 
 
 def fail(message: str) -> None:
@@ -145,12 +148,106 @@ def check_required_content() -> None:
         fail("Workbench contains the misspelled currentLanguage identifier that breaks multi-page resource rendering")
 
 
+
+class LinkCollector(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__()
+        self.refs: list[tuple[str, str]] = []
+        self.ids: set[str] = set()
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        values = dict(attrs)
+        if values.get("id"):
+            self.ids.add(values["id"])
+        for attr in ("href", "src"):
+            value = values.get(attr)
+            if value:
+                self.refs.append((attr, value))
+
+
+def resolve_local_reference(page: Path, value: str) -> Path | None:
+    if value.startswith(("http://", "https://", "mailto:", "tel:", "data:", "javascript:")):
+        return None
+    parsed = urlsplit(value)
+    if not parsed.path:
+        return None
+    target = (page.parent / parsed.path).resolve()
+    try:
+        target.relative_to(ROOT.resolve())
+    except ValueError:
+        fail(f"local reference escapes repository root: {page.relative_to(ROOT)} -> {value}")
+    if parsed.path.endswith("/"):
+        target = target / "index.html"
+    return target
+
+
+def check_local_links_and_fragments() -> None:
+    for relative in HTML_PAGES:
+        page = ROOT / relative
+        parser = LinkCollector()
+        parser.feed(page.read_text(encoding="utf-8"))
+        for attr, value in parser.refs:
+            parsed = urlsplit(value)
+            target = resolve_local_reference(page, value)
+            if target is not None and not target.exists():
+                fail(f"missing local {attr} target: {relative} -> {value}")
+            if parsed.fragment and not parsed.path and parsed.fragment not in parser.ids:
+                fail(f"missing local fragment target: {relative} -> #{parsed.fragment}")
+            if parsed.fragment and parsed.path and target is not None and target.suffix.lower() == ".html":
+                target_parser = LinkCollector()
+                target_parser.feed(target.read_text(encoding="utf-8"))
+                if parsed.fragment not in target_parser.ids:
+                    fail(f"missing cross-page fragment target: {relative} -> {value}")
+
+
+def check_auxiliary_i18n_keys(translations: dict[str, dict]) -> None:
+    for relative in ("privacy.html", "404.html"):
+        html = (ROOT / relative).read_text(encoding="utf-8")
+        referenced = set(re.findall(r'data-i18n(?:-aria-label)?="([^"]+)"', html))
+        for language, dictionary in translations.items():
+            missing = sorted(referenced - flatten_keys(dictionary))
+            if missing:
+                fail(f"{relative} references missing {language} i18n keys: {missing}")
+
+
+def check_structured_data_and_privacy() -> None:
+    index = (ROOT / "index.html").read_text(encoding="utf-8")
+    blocks = re.findall(r'<script type="application/ld\+json">\s*(.*?)\s*</script>', index, flags=re.S)
+    if len(blocks) != 1:
+        fail(f"expected exactly one JSON-LD block in index.html, found {len(blocks)}")
+    data = json.loads(blocks[0])
+    if data.get("@type") != "ProfilePage":
+        fail("index.html JSON-LD is not a ProfilePage")
+    person = data.get("mainEntity", {})
+    if person.get("@type") != "Person" or person.get("name") != "Jhon M. Cuenca":
+        fail("ProfilePage mainEntity does not identify Jhon M. Cuenca as Person")
+    privacy = (ROOT / "privacy.html").read_text(encoding="utf-8")
+    for marker in ("Web3Forms", "United States (US-East)", "privacyPage.rightsBody"):
+        if marker not in privacy:
+            fail(f"privacy information marker missing: {marker}")
+    if "https://cuenca-john1999.github.io/privacy.html" not in (ROOT / "sitemap.xml").read_text(encoding="utf-8"):
+        fail("privacy.html is missing from sitemap.xml")
+
+
+def check_public_privacy_guards() -> None:
+    text = "\n".join((ROOT / relative).read_text(encoding="utf-8") for relative in HTML_PAGES)
+    for marker in ("/Volumes/", "/Users/", "djxmaicolx", ".continue/", "BEGIN OPENSSH PRIVATE KEY"):
+        if marker in text:
+            fail(f"private/local marker found in public HTML: {marker}")
+
+
 def main() -> None:
     translations = load_translations()
     check_translation_parity(translations)
     check_index_i18n_keys(translations)
+    check_auxiliary_i18n_keys(translations)
     check_duplicate_ids(ROOT / "index.html")
     check_duplicate_ids(ROOT / "workbench" / "index.html")
+    check_duplicate_ids(ROOT / "privacy.html")
+    check_duplicate_ids(ROOT / "404.html")
+    check_local_links_and_fragments()
+    check_structured_data_and_privacy()
+    check_public_privacy_guards()
     check_required_content()
     print("Portfolio integrity checks passed.")
 

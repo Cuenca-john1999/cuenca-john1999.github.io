@@ -361,7 +361,8 @@
     "ready": "Contact form ready. Add the Web3Forms access key to activate it.",
     "sending": "Sending message...",
     "success": "Message sent. Thank you for getting in touch.",
-    "error": "The message could not be sent. Please try again in a few minutes."
+    "error": "The message could not be sent. Please try again in a few minutes.",
+    "privacyCta": "Read privacy information"
   },
   "documentExplorer": {
     "kicker": "Document explorer",
@@ -391,6 +392,35 @@
   "footer": {
     "copyright": "&copy; 2026 Jhon M. Cuenca. All rights reserved.",
     "authorship": "Portfolio content, original research concepts and diagrams are authored by Jhon M. Cuenca unless otherwise stated. Co-authored academic work is credited where shown.",
-    "scientificNotice": "Scientific hypotheses are presented for educational and professional portfolio purposes only; they do not represent validated clinical treatments."
+    "scientificNotice": "Scientific hypotheses are presented for educational and professional portfolio purposes only; they do not represent validated clinical treatments.",
+    "privacy": "Privacy"
+  },
+  "privacyPage": {
+    "kicker": "Privacy",
+    "title": "Privacy information for professional contact.",
+    "intro": "This page explains the current data flow when the portfolio contact form is used.",
+    "back": "Back to professional profile",
+    "controllerTitle": "Controller",
+    "controllerBody": "Jhon M. Cuenca is responsible for the personal data submitted through this portfolio contact form. Contact is available through the professional contact form on the portfolio.",
+    "dataTitle": "Data collected",
+    "dataBody": "The form asks for your name, email address and message. Please send only information needed for your professional enquiry.",
+    "purposeTitle": "Purpose and legal basis",
+    "purposeBody": "The information is used to receive and respond to professional enquiries, laboratory opportunities, research-related contact or collaboration requests. Depending on the context, processing may be necessary for steps requested before a potential contract and/or for the legitimate interest of responding to professional correspondence.",
+    "providerTitle": "Form provider and international processing",
+    "providerBody": "The contact form is transmitted through Web3Forms. Web3Forms states in its public documentation that its servers are located in the United States (US-East). Provider-side processing and retention are governed by Web3Forms current service information.",
+    "retentionTitle": "Retention",
+    "retentionBody": "The static portfolio itself does not maintain a separate submissions database. The delivered message may remain in the receiving email service according to its settings and policies, while provider-side storage is governed by Web3Forms current service information.",
+    "rightsTitle": "Your rights",
+    "rightsBody": "Where the GDPR applies, you may have rights including access, rectification, erasure, restriction, objection and the right to lodge a complaint with a competent data protection supervisory authority.",
+    "trackingTitle": "Analytics and profiling",
+    "trackingBody": "This portfolio does not use advertising trackers, behavioural profiling or analytics services.",
+    "updated": "Last updated: 7 August 2026"
+  },
+  "notFoundPage": {
+    "kicker": "404",
+    "title": "Page not found.",
+    "body": "The address may be outdated or incomplete. The professional profile and Workbench are still available.",
+    "profile": "Professional profile",
+    "workbench": "Workbench"
   }
 }

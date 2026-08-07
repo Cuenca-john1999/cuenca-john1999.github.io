@@ -20,3 +20,4 @@ jobs:
           node --check assets/js/language.js
           node --check assets/js/app.js
           node --check workbench/js/workbench.js
+          node --check assets/js/auxiliary-pages.js

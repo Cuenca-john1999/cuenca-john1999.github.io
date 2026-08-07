@@ -25,6 +25,34 @@
     <meta name="twitter:description" content="Professional portfolio by Jhon M. Cuenca focused on clinical and biomedical laboratory work, molecular biology, immunology, analytical laboratory practice and documentation.">
     <meta name="twitter:image" content="https://cuenca-john1999.github.io/assets/images/og-image.png">
     <meta name="twitter:image:alt" content="Jhon M. Cuenca scientific portfolio banner with a blue DNA helix, laboratory disciplines and a microscope.">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "@id": "https://cuenca-john1999.github.io/#profile-page",
+      "url": "https://cuenca-john1999.github.io/",
+      "mainEntity": {
+        "@type": "Person",
+        "@id": "https://cuenca-john1999.github.io/#person",
+        "name": "Jhon M. Cuenca",
+        "url": "https://cuenca-john1999.github.io/",
+        "description": "Clinical and biomedical laboratory profile with practical experience in molecular biology, immunology, analytical laboratory work and scientific documentation.",
+        "knowsAbout": [
+          "Clinical and biomedical laboratory science",
+          "Molecular biology",
+          "Immunology",
+          "PCR",
+          "ELISA",
+          "Western blot",
+          "Cell culture",
+          "Analytical laboratory work",
+          "Good Laboratory Practice",
+          "SOP documentation"
+        ]
+      }
+    }
+    </script>
     <link rel="icon" href="assets/icons/main-favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/main-favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/main-favicon-16.png">
@@ -595,7 +623,10 @@
                                 <textarea name="message" rows="4" required></textarea>
                             </label>
                             <button class="contact-submit" type="submit" data-i18n="contactForm.submit">Send message</button>
-                            <p class="contact-status contact-form__note" data-i18n="contactForm.privacy">This form uses Web3Forms to transmit your name, email and message for professional contact. Please send only information needed for your enquiry.</p>
+                            <p class="contact-status contact-form__note">
+                                <span data-i18n="contactForm.privacy">This form uses Web3Forms to transmit your name, email and message for professional contact. Please send only information needed for your enquiry.</span>
+                                <a class="document-link" href="privacy.html" data-i18n="contactForm.privacyCta">Read privacy information</a>
+                            </p>
                             <p class="contact-status" data-contact-status role="status" aria-live="polite"></p>
                         </form>
                     </aside>
@@ -606,6 +637,7 @@
                 <p data-i18n-html="footer.copyright">&copy; 2026 Jhon M. Cuenca. All rights reserved.</p>
                 <p data-i18n="footer.authorship">Portfolio content, original research concepts and diagrams are authored by Jhon M. Cuenca unless otherwise stated. Co-authored academic work is credited where shown.</p>
                 <p data-i18n="footer.scientificNotice">Scientific hypotheses are presented for educational and professional portfolio purposes only; they do not represent validated clinical treatments.</p>
+                <p><a class="document-link" href="privacy.html" data-i18n="footer.privacy">Privacy</a></p>
             </footer>
         </main>
 
@@ -664,7 +696,7 @@
     <!-- JavaScript - Orden de carga importante -->
     <!-- 1. Módulos core (theme, language) -->
     <script src="assets/js/theme.js"></script>
-    <script src="assets/js/language.js?v=20260807-audit-integrity"></script>
+    <script src="assets/js/language.js?v=20260807-professionalization-audit"></script>
     
     <!-- 2. Inicializador principal (debe cargarse al final) -->
     <script src="assets/js/app.js?v=20260802-final-audit-references"></script>
