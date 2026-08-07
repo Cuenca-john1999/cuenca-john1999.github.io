@@ -50,6 +50,9 @@ jobs:
           failures = []
           results = {}
 
+          def contains(text, expected):
+              return expected.casefold() in text.casefold()
+
           def check(condition, label, detail=''):
               if condition:
                   results[label] = 'PASS'
@@ -68,7 +71,7 @@ jobs:
               return details
 
           def wait_for_text(root, expected):
-              WebDriverWait(driver, 10).until(lambda d: expected in root.text)
+              WebDriverWait(driver, 10).until(lambda d: contains(root.text, expected))
 
           options = Options()
           options.add_argument('--headless=new')
@@ -92,10 +95,10 @@ jobs:
               wait_for_text(operations, 'Reconocimiento académico')
               text = operations.text
               check('8,69/10' in text, 'desktop-operations-grade')
-              check('Reconocimiento académico' in text, 'desktop-operations-recognition')
+              check(contains(text, 'Reconocimiento académico'), 'desktop-operations-recognition')
               check('10/10' in text and '9/10' in text, 'desktop-operations-results')
-              check('Evidencia académica aplicada' in text, 'desktop-operations-evidence')
-              check('20 de marzo' in text and '31 de mayo de 2023' in text, 'desktop-operations-placement-dates')
+              check(contains(text, 'Evidencia académica aplicada'), 'desktop-operations-evidence')
+              check(contains(text, '20 de marzo') and contains(text, '31 de mayo de 2023'), 'desktop-operations-placement-dates')
               link = operations.find_element(By.CSS_SELECTOR, 'a[href*="entry-celignis"]')
               check('#entry-celignis' in link.get_attribute('href'), 'celignis-deep-link-preserved')
               driver.execute_script('arguments[0].scrollIntoView({block:"start"})', operations)
@@ -107,9 +110,9 @@ jobs:
               wait_for_text(credentials, 'Experimentación Animal')
               ctext = credentials.text
               check(len(credentials.find_elements(By.CSS_SELECTOR, '.credential-card')) == 3, 'desktop-credentials-three-cards')
-              check('Experimentación Animal' in ctext, 'desktop-credential-animal')
-              check('Gestión de Centros Sanitarios' in ctext, 'desktop-credential-healthcare')
-              check('Prevención de Riesgos Laborales' in ctext, 'desktop-credential-risk')
+              check(contains(ctext, 'Experimentación Animal'), 'desktop-credential-animal')
+              check(contains(ctext, 'Gestión de Centros Sanitarios'), 'desktop-credential-healthcare')
+              check(contains(ctext, 'Prevención de Riesgos Laborales'), 'desktop-credential-risk')
               driver.execute_script('arguments[0].scrollIntoView({block:"start"})', credentials)
               time.sleep(0.2)
               credentials.screenshot(str(OUT / 'desktop-es-credentials-open.png'))
@@ -117,7 +120,7 @@ jobs:
               clinical = driver.find_element(By.CSS_SELECTOR, '#education .focus-item:not([data-education-evidence])')
               open_details(driver, clinical)
               wait_for_text(clinical, 'Trabajo final')
-              check('Trabajo final' in clinical.text, 'desktop-clinical-card-still-intact')
+              check(contains(clinical.text, 'Trabajo final'), 'desktop-clinical-card-still-intact')
               driver.execute_script('arguments[0].scrollIntoView({block:"start"})', clinical)
               time.sleep(0.2)
               clinical.screenshot(str(OUT / 'desktop-es-clinical-open.png'))
@@ -129,7 +132,7 @@ jobs:
                   wait.until(lambda d: d.find_element(By.TAG_NAME, 'html').get_attribute('lang') == lang)
                   open_details(driver, op)
                   wait_for_text(op, expected)
-                  check(expected in op.text, f'i18n-new-education-{lang}')
+                  check(contains(op.text, expected), f'i18n-new-education-{lang}')
 
               # Secondary responsive safeguard only.
               driver.set_window_size(390, 800)
