@@ -108,6 +108,7 @@
                 learningItem2: 'Scientific Portfolio · Published multilingual delivery',
                 learningItem3: 'La Princesa · Clinical and biomedical laboratory placement',
                 learningItem4: 'Celignis · Analytical and biomass laboratory placement',
+                learningItem5: 'Animal Experimentation A+B+C · 70 h · in-person practical training',
                 milestones: 'Milestones',
                 milestonesBody: 'Documented progress points with direct evidence.',
                 milestonesItem1: 'Portfolio publication on GitHub Pages',
@@ -122,6 +123,7 @@
                 chitosan: 'Early-stage, literature-informed hypothesis proposed for future controlled laboratory validation.'
             },
             professionalContext: {
+                animalTraining: { kicker: 'Animal Experimentation · Functions A+B+C', body: 'Certified 70-hour course under Order ECC/566/2015 with in-person practical training. The formal programme covers animal care, euthanasia and performance of procedures, together with welfare/3Rs, recognition of pain and distress, humane killing methods, minimally invasive procedures, anaesthesia and principles of surgery.', pointFunctions: 'Functions: A · care of animals; B · euthanasia of animals; C · performance of procedures', pointProgramme: 'Programme: welfare & 3Rs · pain/suffering/distress recognition · humane killing · minimally invasive procedures · minor and advanced anaesthesia · principles of surgery', pointHandsOn: 'Personally performed during supervised practical training: animal handling, administration of drugs/substances by injection, anaesthesia and surgical procedures for sample/tissue collection', pointSamples: 'Personally performed: collection/extraction of animal samples and euthanasia', scope: 'Scope note: supervised training and practical experience; no claim of independent veterinary or surgical practice.' },
                 development: {
                     kicker: 'Current Development',
                     title: 'Continuing professional development while preparing for laboratory opportunities.',
@@ -260,6 +262,7 @@
                 learningItem2: 'Portafolio científico · Entrega multilingüe publicada',
                 learningItem3: 'La Princesa · Prácticas en laboratorio clínico y biomédico',
                 learningItem4: 'Celignis · Prácticas en laboratorio analítico y de biomasa',
+                learningItem5: 'Experimentación Animal A+B+C · 70 h · prácticas presenciales',
                 milestones: 'Hitos',
                 milestonesBody: 'Avances documentados con evidencia directa.',
                 milestonesItem1: 'Publicación del portafolio en GitHub Pages',
@@ -274,6 +277,7 @@
                 chitosan: 'Hipótesis preliminar basada en literatura y propuesta para una futura validación controlada en laboratorio.'
             },
             professionalContext: {
+                animalTraining: { kicker: 'Experimentación Animal · Funciones A+B+C', body: 'Curso certificado de 70 horas conforme a la Orden ECC/566/2015 con prácticas presenciales. El programa formal cubre cuidado de animales, eutanasia y realización de procedimientos, junto con bienestar/3R, reconocimiento del dolor y la angustia, métodos humanitarios de sacrificio, procedimientos mínimamente invasivos, anestesia y principios de cirugía.', pointFunctions: 'Funciones: A · cuidado de animales; B · eutanasia; C · realización de procedimientos', pointProgramme: 'Programa: bienestar y 3R · reconocimiento de dolor/sufrimiento/angustia · sacrificio humanitario · procedimientos mínimamente invasivos · anestesia básica y avanzada · principios de cirugía', pointHandsOn: 'Realizado personalmente durante prácticas supervisadas: manejo de animales, administración de fármacos/sustancias mediante inyección, anestesia y procedimientos quirúrgicos para obtención de muestras/tejidos', pointSamples: 'Realizado personalmente: obtención/extracción de muestras animales y eutanasia', scope: 'Nota de alcance: formación y experiencia práctica supervisada; no se afirma ejercicio veterinario o quirúrgico independiente.' },
                 development: {
                     kicker: 'Desarrollo actual',
                     title: 'Desarrollo profesional continuo mientras preparo oportunidades de laboratorio.',
@@ -412,6 +416,7 @@
                 learningItem2: 'Wissenschaftliches Portfolio · Veröffentlichte mehrsprachige Umsetzung',
                 learningItem3: 'La Princesa · Praktikum im klinisch-biomedizinischen Labor',
                 learningItem4: 'Celignis · Praktikum im analytischen Biomasse-Labor',
+                learningItem5: 'Versuchstierkunde A+B+C · 70 Std. · Präsenzpraxis',
                 milestones: 'Meilensteine',
                 milestonesBody: 'Dokumentierte Fortschritte mit direkter Evidenz.',
                 milestonesItem1: 'Portfolio-Veröffentlichung auf GitHub Pages',
@@ -426,6 +431,7 @@
                 chitosan: 'Frühe, literaturbasierte Hypothese für eine spätere kontrollierte Validierung im Labor.'
             },
             professionalContext: {
+                animalTraining: { kicker: 'Versuchstierkunde · Funktionen A+B+C', body: 'Zertifizierter 70-Stunden-Kurs gemäß Erlass ECC/566/2015 mit Präsenzpraxis. Das formale Programm umfasst Tierpflege, Tötung/Euthanasie und Durchführung von Verfahren sowie Tierwohl/3R, Erkennen von Schmerz und Angst, tierschutzgerechte Tötungsmethoden, minimalinvasive Verfahren, Anästhesie und chirurgische Grundlagen.', pointFunctions: 'Funktionen: A · Tierpflege; B · Tötung/Euthanasie; C · Durchführung von Verfahren', pointProgramme: 'Programm: Tierwohl & 3R · Erkennen von Schmerz/Leiden/Angst · tierschutzgerechte Tötung · minimalinvasive Verfahren · einfache und fortgeschrittene Anästhesie · chirurgische Grundlagen', pointHandsOn: 'Persönlich im beaufsichtigten Praxisteil durchgeführt: Tierhandling, Verabreichung von Arzneimitteln/Substanzen per Injektion, Anästhesie und chirurgische Verfahren zur Proben-/Gewebegewinnung', pointSamples: 'Persönlich durchgeführt: Gewinnung/Entnahme tierischer Proben und Euthanasie', scope: 'Hinweis zum Umfang: beaufsichtigte Ausbildung und Praxiserfahrung; keine eigenständige tierärztliche oder chirurgische Tätigkeit.' },
                 development: {
                     kicker: 'Aktuelle Entwicklung',
                     title: 'Kontinuierliche berufliche Entwicklung während der Vorbereitung auf Laborchancen.',
@@ -579,16 +585,17 @@
                 category: 'Laboratory Practice', status: 'Completed', title: 'Clinical & Biomedical Laboratory Practice · La Princesa',
                 summary: 'Three-month research-laboratory placement in Madrid integrating clinical sample workflows with molecular and immunology techniques.',
                 context: '370-hour FCT placement in 2025 at Fundación para la Investigación Biomédica del Hospital Universitario de La Princesa in Madrid, within the Immunology Service and Nutrition & Inflammation Laboratory. The group studies cellular and molecular mechanisms in inflammatory and autoimmune diseases using human and animal samples.',
-                technicalWork: 'Supported day-to-day cell-culture, sample-processing, molecular-biology and immunology workflows under laboratory protocols, together with scientific-database work, material and inventory management, and development of a bilingual scientific website for the research group. The supervised role strengthened reproducibility, assay interpretation and quality-control practice while building greater autonomy.',
+                technicalWork: 'Supported day-to-day cell-culture, sample-processing, molecular-biology and immunology workflows under laboratory protocols, together with scientific-database work, material and inventory management, and development of a bilingual scientific website for the research group. The supervised role strengthened reproducibility, assay interpretation and quality-control practice while building greater autonomy. During supervised animal-sample procedures, I personally performed murine sample collection/extraction and subsequent sample handling.',
                 technicalEvidence: 'Documented scope includes serum, peripheral blood, immune cells, cell lines and primary rat cells; cytokine-stimulated and adherent cell cultures, including HaCaT; sterile technique, media preparation, passaging and freezing; Buffy Coat handling and CD4/CD14 isolation; human samples in psoriasis, dermatitis and hidradenitis suppurativa contexts; animal samples and murine lymphoid organs; RNA extraction, PCR, electrophoresis and transgenic-mouse genotyping; ELISA; Western blot gel casting, transfer and blocking; immunohistochemistry; and immunofluorescence. An existing professional reference supports the placement, protocol work and laboratory-material responsibilities.',
                 technicalEvidenceLead: 'Documented scope includes',
                 technicalEvidenceGroups: [
                     { title: 'Cell culture & samples', body: 'serum, peripheral blood, immune cells, cell lines and primary rat cells; cytokine-stimulated and adherent cell cultures, including HaCaT; sterile technique, media preparation, passaging and freezing; Buffy Coat handling and CD4/CD14 isolation; human samples in psoriasis, dermatitis and hidradenitis suppurativa contexts; animal samples and murine lymphoid organs' },
+                    { title: 'Animal-sample collection', body: 'personally performed, under supervision and established protocols, collection/extraction of murine samples and subsequent handling of animal-derived material' },
                     { title: 'Molecular biology', body: 'RNA extraction, PCR, electrophoresis and transgenic-mouse genotyping; Western blot gel casting, transfer and blocking' },
                     { title: 'Immunology', body: 'ELISA; immunohistochemistry; and immunofluorescence' },
                     { title: 'Documentation & professional evidence', body: 'An existing professional reference supports the placement, protocol work and laboratory-material responsibilities.' }
                 ],
-                disclosure: 'Scope note: this is documented laboratory placement experience, not an independent clinical claim or therapeutic study.'
+                disclosure: 'Scope note: this entry combines documentary evidence with personally confirmed supervised hands-on work; it does not claim independent clinical, veterinary or surgical practice.'
             },
             celignis: {
                 category: 'Laboratory Practice', status: 'Completed', title: 'Analytical & Biomass Laboratory Practice · Celignis',
@@ -721,16 +728,17 @@
                 category: 'Prácticas de laboratorio', status: 'Completado', title: 'Prácticas en Laboratorio Clínico y Biomédico · La Princesa',
                 summary: 'Prácticas de tres meses en laboratorio de investigación en Madrid, integrando trabajo con muestras clínicas y técnicas moleculares e inmunológicas.',
                 context: 'Prácticas FCT de 370 horas en 2025 en la Fundación para la Investigación Biomédica del Hospital Universitario de La Princesa, Madrid, dentro del Servicio de Inmunología y el Laboratorio de Nutrición e Inflamación. El grupo estudia mecanismos celulares y moleculares de enfermedades inflamatorias y autoinmunes con muestras humanas y animales.',
-                technicalWork: 'Apoyo diario en flujos de cultivo celular, procesamiento de muestras, biología molecular e inmunología siguiendo protocolos de laboratorio, junto con consulta de bases de datos científicas, gestión de material e inventario y desarrollo de una web científica bilingüe para el grupo de investigación. El trabajo supervisado reforzó la reproducibilidad, la interpretación de ensayos y el control de calidad mientras aumentaba la autonomía.',
+                technicalWork: 'Apoyo diario en flujos de cultivo celular, procesamiento de muestras, biología molecular e inmunología siguiendo protocolos de laboratorio, junto con consulta de bases de datos científicas, gestión de material e inventario y desarrollo de una web científica bilingüe para el grupo de investigación. El trabajo supervisado reforzó la reproducibilidad, la interpretación de ensayos y el control de calidad mientras aumentaba la autonomía. Durante procedimientos supervisados con muestras animales, realicé personalmente la obtención/extracción de muestras murinas y su posterior manejo.',
                 technicalEvidence: 'El alcance documentado incluye suero, sangre periférica, células inmunitarias, líneas celulares y células primarias de rata; cultivos celulares estimulados por citocinas y líneas adherentes, incluidas HaCaT; técnica estéril, preparación de medios, pases y congelación; manejo de Buffy Coat y aislamiento CD4/CD14; muestras humanas en contextos de psoriasis, dermatitis e hidradenitis supurativa; muestras animales y órganos linfoides murinos; extracción de ARN, PCR, electroforesis y genotipado de ratones transgénicos; ELISA; preparación de geles de Western blot, transferencia y bloqueo; inmunohistoquímica e inmunofluorescencia. Existe una referencia profesional que respalda las prácticas, el trabajo con protocolos y las responsabilidades sobre material de laboratorio.',
                 technicalEvidenceLead: 'El alcance documentado incluye',
                 technicalEvidenceGroups: [
                     { title: 'Cultivo celular y muestras', body: 'suero, sangre periférica, células inmunitarias, líneas celulares y células primarias de rata; cultivos estimulados por citocinas y líneas adherentes, incluidas HaCaT; técnica estéril, preparación de medios, pases y congelación; manejo de Buffy Coat y aislamiento CD4/CD14; muestras humanas en contextos de psoriasis, dermatitis e hidradenitis supurativa; muestras animales y órganos linfoides murinos' },
+                    { title: 'Obtención de muestras animales', body: 'obtención/extracción de muestras murinas realizada personalmente, bajo supervisión y protocolos establecidos, y posterior manejo del material de origen animal' },
                     { title: 'Biología molecular', body: 'extracción de ARN, PCR, electroforesis y genotipado de ratones transgénicos; preparación de geles de Western blot, transferencia y bloqueo' },
                     { title: 'Inmunología', body: 'ELISA; inmunohistoquímica e inmunofluorescencia' },
                     { title: 'Documentación y evidencia profesional', body: 'Existe una referencia profesional que respalda las prácticas, el trabajo con protocolos y las responsabilidades sobre material de laboratorio.' }
                 ],
-                disclosure: 'Nota de alcance: se documenta experiencia de prácticas de laboratorio, no una afirmación clínica independiente ni un estudio terapéutico.'
+                disclosure: 'Nota de alcance: esta entrada combina evidencia documental con experiencia práctica supervisada confirmada personalmente; no se afirma ejercicio clínico, veterinario o quirúrgico independiente.'
             },
             celignis: {
                 category: 'Prácticas de laboratorio', status: 'Completado', title: 'Prácticas en Laboratorio Analítico y de Biomasa · Celignis',
@@ -863,16 +871,17 @@
                 category: 'Laborpraktikum', status: 'Abgeschlossen', title: 'Praktikum im klinisch-biomedizinischen Labor · La Princesa',
                 summary: 'Dreimonatiges Praktikum in einem Forschungslabor in Madrid mit Verbindung von klinischen Probenabläufen sowie molekularen und immunologischen Techniken.',
                 context: 'FCT-Praktikum mit 370 Stunden im Jahr 2025 bei der Fundación para la Investigación Biomédica del Hospital Universitario de La Princesa in Madrid, im Immunologiedienst und im Labor für Ernährung und Entzündung. Die Gruppe untersucht zelluläre und molekulare Mechanismen entzündlicher und autoimmuner Erkrankungen anhand humaner und tierischer Proben.',
-                technicalWork: 'Mitarbeit bei täglichen Abläufen in Zellkultur, Probenverarbeitung, Molekularbiologie und Immunologie nach Laborprotokollen sowie Arbeit mit wissenschaftlichen Datenbanken, Material- und Bestandsverwaltung und Entwicklung einer zweisprachigen wissenschaftlichen Website für die Forschungsgruppe. Die angeleitete Tätigkeit stärkte Reproduzierbarkeit, Assay-Interpretation und Qualitätskontrolle bei wachsender Eigenständigkeit.',
+                technicalWork: 'Mitarbeit bei täglichen Abläufen in Zellkultur, Probenverarbeitung, Molekularbiologie und Immunologie nach Laborprotokollen sowie Arbeit mit wissenschaftlichen Datenbanken, Material- und Bestandsverwaltung und Entwicklung einer zweisprachigen wissenschaftlichen Website für die Forschungsgruppe. Die angeleitete Tätigkeit stärkte Reproduzierbarkeit, Assay-Interpretation und Qualitätskontrolle bei wachsender Eigenständigkeit. Bei beaufsichtigten Verfahren mit Tierproben führte ich die Gewinnung/Entnahme muriner Proben persönlich durch und übernahm anschließend deren Handhabung.',
                 technicalEvidence: 'Der dokumentierte Umfang umfasst Serum, peripheres Blut, Immunzellen, Zelllinien und primäre Rattenzellen; mit Zytokinen stimulierte und adhärente Zellkulturen einschließlich HaCaT; steriles Arbeiten, Medienvorbereitung, Passagieren und Einfrieren; Buffy-Coat-Verarbeitung und CD4/CD14-Isolierung; humane Proben im Kontext von Psoriasis, Dermatitis und Hidradenitis suppurativa; tierische Proben und murine lymphatische Organe; RNA-Extraktion, PCR, Elektrophorese und Genotypisierung transgener Mäuse; ELISA; Western-Blot-Gelherstellung, Transfer und Blocking; Immunhistochemie und Immunfluoreszenz. Eine vorhandene berufliche Referenz bestätigt das Praktikum, die Protokollarbeit und die Verantwortung für Labormaterial.',
                 technicalEvidenceLead: 'Der dokumentierte Umfang umfasst',
                 technicalEvidenceGroups: [
                     { title: 'Zellkultur & Proben', body: 'Serum, peripheres Blut, Immunzellen, Zelllinien und primäre Rattenzellen; mit Zytokinen stimulierte und adhärente Zellkulturen einschließlich HaCaT; steriles Arbeiten, Medienvorbereitung, Passagieren und Einfrieren; Buffy-Coat-Verarbeitung und CD4/CD14-Isolierung; humane Proben im Kontext von Psoriasis, Dermatitis und Hidradenitis suppurativa; tierische Proben und murine lymphatische Organe' },
+                    { title: 'Entnahme tierischer Proben', body: 'persönlich unter Aufsicht und nach festgelegten Protokollen durchgeführte Gewinnung/Entnahme muriner Proben sowie anschließende Handhabung tierischen Materials' },
                     { title: 'Molekularbiologie', body: 'RNA-Extraktion, PCR, Elektrophorese und Genotypisierung transgener Mäuse; Western-Blot-Gelherstellung, Transfer und Blocking' },
                     { title: 'Immunologie', body: 'ELISA; Immunhistochemie und Immunfluoreszenz' },
                     { title: 'Dokumentation & beruflicher Nachweis', body: 'Eine vorhandene berufliche Referenz bestätigt das Praktikum, die Protokollarbeit und die Verantwortung für Labormaterial.' }
                 ],
-                disclosure: 'Hinweis zum Umfang: dokumentierte Laborpraxis, kein eigenständiger klinischer Wirksamkeitsnachweis und keine therapeutische Studie.'
+                disclosure: 'Hinweis zum Umfang: Dieser Eintrag kombiniert dokumentarische Nachweise mit persönlich bestätigter beaufsichtigter Praxis; es wird keine eigenständige klinische, tierärztliche oder chirurgische Tätigkeit beansprucht.'
             },
             celignis: {
                 category: 'Laborpraktikum', status: 'Abgeschlossen', title: 'Praktikum im analytischen Biomasse-Labor · Celignis',
