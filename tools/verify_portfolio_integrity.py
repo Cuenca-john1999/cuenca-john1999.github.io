@@ -7,6 +7,7 @@ It checks structural/i18n integrity and a small set of high-risk content guards.
 
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 from html.parser import HTMLParser
@@ -253,6 +254,47 @@ def check_public_privacy_guards() -> None:
             fail(f"private/local marker found in public HTML: {marker}")
 
 
+
+def check_cache_busting() -> None:
+    """Require every local CSS/JS reference in public HTML to use its content hash.
+
+    The first 12 hexadecimal characters of SHA-256 are used as the ``?v=`` token.
+    Any CSS/JS content change therefore makes CI fail until the HTML reference is
+    refreshed, preventing stale browser caches after publication.
+    """
+    asset_pattern = re.compile(
+        r'(?:href|src)="([^"?#]+\.(?:css|js))(?:\?v=([^"#]+))?"'
+    )
+    checked = 0
+
+    for relative in HTML_PAGES:
+        page = ROOT / relative
+        html = page.read_text(encoding="utf-8")
+        for asset_url, version in asset_pattern.findall(html):
+            parsed = urlsplit(asset_url)
+            if parsed.scheme or asset_url.startswith(("//", "/")):
+                continue
+
+            target = (page.parent / parsed.path).resolve()
+            try:
+                target.relative_to(ROOT.resolve())
+            except ValueError:
+                fail(f"cache-busted asset escapes repository root: {relative} -> {asset_url}")
+
+            if not target.is_file():
+                fail(f"cache-busted local asset is missing: {relative} -> {asset_url}")
+
+            expected = hashlib.sha256(target.read_bytes()).hexdigest()[:12]
+            if version != expected:
+                fail(
+                    f"stale or missing cache version: {relative} -> {asset_url} "
+                    f"has v={version or '<missing>'}, expected v={expected}"
+                )
+            checked += 1
+
+    if checked == 0:
+        fail("no local CSS/JS cache-busting references were checked")
+
 def main() -> None:
     translations = load_translations()
     check_translation_parity(translations)
@@ -265,6 +307,7 @@ def main() -> None:
     check_local_links_and_fragments()
     check_structured_data_and_privacy()
     check_public_privacy_guards()
+    check_cache_busting()
     check_required_content()
     print("Portfolio integrity checks passed.")
 
