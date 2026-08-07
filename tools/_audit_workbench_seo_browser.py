@@ -47,19 +47,23 @@ try:
         milestone = wait.until(lambda d: d.find_element(By.ID, "milestones"))
         links = milestone.find_elements(By.CSS_SELECTOR, "ul a")
         href_fragments = [(a.get_attribute("href") or "").split("#")[-1] for a in links]
+        milestone_text = driver.execute_script("return arguments[0].textContent || '';", milestone)
         check(f"{lang} has five milestones", len(links) == 5, str(len(links)))
         check(
             f"{lang} milestone targets",
             href_fragments == ["entry-portfolio", "entry-deutschos", "entry-laprincesa", "entry-phage", "entry-celignis"],
             str(href_fragments),
         )
-        check(f"{lang} milestones include 2023/2025/2026", all(year in milestone.text for year in ("2023", "2025", "2026")), milestone.text)
+        check(
+            f"{lang} milestones include 2023/2025/2026",
+            all(year in milestone_text for year in ("2023", "2025", "2026")),
+            milestone_text,
+        )
         if lang == "en":
-            driver.execute_script("arguments[0].scrollIntoView({block:'center'});", milestone)
-            time.sleep(0.3)
+            driver.execute_script("arguments[0].scrollIntoView({block:'start'}); window.scrollBy(0,-100);", milestone)
+            time.sleep(1.0)
             driver.save_screenshot(str(OUT / "desktop-milestones-en.png"))
 
-        # La Princesa deep link and evidence structure.
         driver.get(f"{BASE}workbench/?lang={lang}#entry-laprincesa")
         wait.until(lambda d: d.find_element(By.TAG_NAME, "html").get_attribute("lang") == lang)
         wait.until(lambda d: d.find_element(By.CSS_SELECTOR, "[data-entry-dialog]").get_property("open"))
@@ -74,7 +78,6 @@ try:
         driver.find_element(By.TAG_NAME, "body").send_keys(Keys.ESCAPE)
         wait.until(lambda d: not d.find_element(By.CSS_SELECTOR, "[data-entry-dialog]").get_property("open"))
 
-        # Celignis deep link and evidence structure.
         driver.get(f"{BASE}workbench/?lang={lang}#entry-celignis")
         wait.until(lambda d: d.find_element(By.TAG_NAME, "html").get_attribute("lang") == lang)
         wait.until(lambda d: d.find_element(By.CSS_SELECTOR, "[data-entry-dialog]").get_property("open"))
@@ -88,17 +91,15 @@ try:
         driver.find_element(By.TAG_NAME, "body").send_keys(Keys.ESCAPE)
         wait.until(lambda d: not d.find_element(By.CSS_SELECTOR, "[data-entry-dialog]").get_property("open"))
 
-    # Selected Work remains exactly the three established featured entries.
     driver.set_window_size(1440, 1000)
     driver.get(f"{BASE}workbench/?lang=en#featured")
     wait.until(lambda d: d.find_element(By.TAG_NAME, "html").get_attribute("lang") == "en")
     slides = driver.find_elements(By.CSS_SELECTOR, "[data-carousel-slide]")
-    featured_text = "\n".join(slide.text for slide in slides)
+    featured_text = "\n".join(driver.execute_script("return arguments[0].textContent || '';", slide) for slide in slides)
     check("Selected Work remains three featured entries", len(slides) == 3, str(len(slides)))
     for marker in ("DeutschOS", "AETEL 2025", "Bacteriophage Therapy"):
         check(f"Selected Work preserves {marker}", marker.lower() in featured_text.lower(), featured_text[:1800])
 
-    # Responsive safety is secondary but must not regress.
     driver.set_window_size(390, 800)
     driver.get(f"{BASE}workbench/?lang=en#milestones")
     wait.until(lambda d: d.find_element(By.TAG_NAME, "html").get_attribute("lang") == "en")
