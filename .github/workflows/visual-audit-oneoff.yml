@@ -45,7 +45,6 @@ jobs:
           from selenium.webdriver.chrome.options import Options
           from selenium.webdriver.common.by import By
           from selenium.webdriver.common.keys import Keys
-          from selenium.webdriver.support import expected_conditions as EC
           from selenium.webdriver.support.ui import WebDriverWait
 
           BASE = 'http://127.0.0.1:4173'
@@ -150,21 +149,47 @@ jobs:
               screenshot(driver, 'main-mobile-390-es.png')
               severe_console_errors(driver, 'Main mobile')
 
-              # Mobile Workbench: direct deep link, dialog navigation, close control.
+              # Mobile single-page Workbench entry: navigation should be hidden, close should work.
               driver.get(f'{BASE}/workbench/?lang=en#entry-deutschos')
               wait_ready(driver)
               dialog = driver.find_element(By.CSS_SELECTOR, '[data-entry-dialog]')
               WebDriverWait(driver, 8).until(lambda d: dialog.get_attribute('open') is not None)
-              no_horizontal_overflow(driver, 'Workbench mobile 390 dialog')
-              next_button = driver.find_element(By.CSS_SELECTOR, '[data-dialog-next-entry]')
-              require(next_button.is_displayed(), 'Workbench mobile: next-page control is not displayed')
+              no_horizontal_overflow(driver, 'Workbench mobile 390 single-page dialog')
+              navigation = driver.find_element(By.CSS_SELECTOR, '[data-dialog-navigation]')
+              require(not navigation.is_displayed(), 'Workbench mobile: single-page DeutschOS unexpectedly shows pagination')
               close_button = driver.find_element(By.CSS_SELECTOR, '[data-dialog-close]')
               require(close_button.is_displayed(), 'Workbench mobile: close control is not displayed')
               screenshot(driver, 'workbench-mobile-390-deutschos-en.png')
               close_button.click()
               time.sleep(0.25)
-              require(dialog.get_attribute('open') is None, 'Workbench mobile: close button did not close dialog')
-              severe_console_errors(driver, 'Workbench mobile')
+              require(dialog.get_attribute('open') is None, 'Workbench mobile: close button did not close single-page dialog')
+              severe_console_errors(driver, 'Workbench mobile single-page')
+
+              # Mobile multi-page Workbench entry: pagination should be visible and change page.
+              driver.get(f'{BASE}/workbench/?lang=en#entry-portfolio')
+              wait_ready(driver)
+              dialog = driver.find_element(By.CSS_SELECTOR, '[data-entry-dialog]')
+              WebDriverWait(driver, 8).until(lambda d: dialog.get_attribute('open') is not None)
+              navigation = driver.find_element(By.CSS_SELECTOR, '[data-dialog-navigation]')
+              next_button = driver.find_element(By.CSS_SELECTOR, '[data-dialog-next-entry]')
+              previous_button = driver.find_element(By.CSS_SELECTOR, '[data-dialog-previous]')
+              position = driver.find_element(By.CSS_SELECTOR, '[data-dialog-position]')
+              require(navigation.is_displayed(), 'Workbench mobile: multi-page portfolio pagination is hidden')
+              require(next_button.is_displayed() and next_button.is_enabled(), 'Workbench mobile: next-page control unavailable on page 1 of multi-page entry')
+              require(not previous_button.is_enabled(), 'Workbench mobile: previous-page control should be disabled on page 1')
+              before = position.text
+              next_button.click()
+              time.sleep(0.3)
+              after = position.text
+              require(before != after, f'Workbench mobile: page position did not change after Next ({before!r} -> {after!r})')
+              require(previous_button.is_enabled(), 'Workbench mobile: previous-page control did not enable on page 2')
+              require(not next_button.is_enabled(), 'Workbench mobile: next-page control should be disabled on last page')
+              no_horizontal_overflow(driver, 'Workbench mobile 390 multi-page dialog')
+              screenshot(driver, 'workbench-mobile-390-portfolio-page2-en.png')
+              previous_button.click()
+              time.sleep(0.3)
+              require(position.text == before, f'Workbench mobile: Previous did not return to page 1 ({position.text!r} vs {before!r})')
+              severe_console_errors(driver, 'Workbench mobile multi-page')
 
               # Reduced motion should be respected without breaking content/navigation.
               driver.execute_cdp_cmd('Emulation.setEmulatedMedia', {
