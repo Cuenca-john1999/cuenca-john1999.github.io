@@ -27,13 +27,18 @@
 const Language = (() => {
     const STORAGE_KEY = 'portfolio-language';
     const URL_LANGUAGE_PARAM = 'lang';
-    const TRANSLATION_VERSION = '20260807-education-visual';
+    const TRANSLATION_VERSION = '20260808-phage-language-docs';
     const DEFAULT_LANGUAGE = 'en';
     const AVAILABLE_LANGUAGES = ['en', 'de', 'es'];
     const CV_BY_LANGUAGE = {
         en: 'assets/documents/Jhon_M_Cuenca_CV_EN.pdf',
         de: 'assets/documents/Jhon_M_Cuenca_CV_DE.pdf',
         es: 'assets/documents/Jhon_M_Cuenca_CV_ES.pdf'
+    };
+    const FINAL_PROJECT_BY_LANGUAGE = {
+        en: 'assets/documents/bacteriophage-therapy-final-project_EN.pdf',
+        de: 'assets/documents/bacteriophage-therapy-final-project_DE.pdf',
+        es: 'assets/documents/bacteriophage-therapy-final-project_ES.pdf'
     };
     const TRANSLATABLE_ATTRIBUTES = {
         i18nAriaLabel: 'aria-label',
@@ -228,6 +233,17 @@ const Language = (() => {
     }
 
     /**
+     * Sincronizar el trabajo final con el idioma activo. El original académico es ES.
+     */
+    function updateFinalProjectLinks() {
+        const projectPath = FINAL_PROJECT_BY_LANGUAGE[currentLanguage] || FINAL_PROJECT_BY_LANGUAGE[DEFAULT_LANGUAGE];
+
+        document.querySelectorAll('[data-final-project-link]').forEach((link) => {
+            link.setAttribute('href', projectPath);
+        });
+    }
+
+    /**
      * Propagar el idioma a todos los enlaces hacia Workbench, incluidos deep links.
      */
     function updateWorkbenchLinks() {
@@ -289,6 +305,7 @@ const Language = (() => {
             }
 
             updateCvLinks();
+            updateFinalProjectLinks();
             updateWorkbenchLinks();
             syncLanguageInUrl(currentLanguage);
             setupLanguageControls.call(this);
@@ -315,6 +332,7 @@ const Language = (() => {
             document.documentElement.lang = currentLanguage;
             translatePage();
             updateCvLinks();
+            updateFinalProjectLinks();
             updateWorkbenchLinks();
             saveLanguagePreference(currentLanguage);
             syncLanguageInUrl(currentLanguage);

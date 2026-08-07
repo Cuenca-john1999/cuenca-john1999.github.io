@@ -148,6 +148,44 @@ def check_required_content() -> None:
     if "currentLanguae" in workbench_js:
         fail("Workbench contains the misspelled currentLanguage identifier that breaks multi-page resource rendering")
 
+    final_project_paths = {
+        "en": "assets/documents/bacteriophage-therapy-final-project_EN.pdf",
+        "de": "assets/documents/bacteriophage-therapy-final-project_DE.pdf",
+        "es": "assets/documents/bacteriophage-therapy-final-project_ES.pdf",
+    }
+    for language, relative_path in final_project_paths.items():
+        if not (ROOT / relative_path).is_file():
+            fail(f"language-specific bacteriophage PDF is missing for {language}: {relative_path}")
+        if relative_path not in language_js:
+            fail(f"main language routing is missing the {language} bacteriophage PDF: {relative_path}")
+
+    if index.count('data-final-project-link') != 2:
+        fail("main portfolio must expose exactly two language-aware final-project links")
+
+    workbench_language_resources = (
+        "../assets/documents/bacteriophage-therapy-final-project_EN.pdf",
+        "../assets/documents/bacteriophage-therapy-final-project_DE.pdf",
+        "../assets/documents/bacteriophage-therapy-final-project_ES.pdf",
+    )
+    for resource_path in workbench_language_resources:
+        if resource_path not in workbench_js:
+            fail(f"Workbench language-specific bacteriophage resource is missing: {resource_path}")
+
+    old_generic_link = "bacteriophage-therapy-final-project.pdf"
+    if f'href="assets/documents/{old_generic_link}"' in index:
+        fail("main portfolio still links the generic bacteriophage PDF instead of a language-specific version")
+    if f"../assets/documents/{old_generic_link}" in workbench_js:
+        fail("Workbench still links the generic bacteriophage PDF instead of language-specific versions")
+
+    language_notice_markers = (
+        "The original academic work is the Spanish version.",
+        "Das akademische Original ist die spanische Fassung.",
+        "la versión enlazada en español es el trabajo académico original.",
+    )
+    for phrase in language_notice_markers:
+        if phrase not in published_text:
+            fail(f"bacteriophage document-language notice is missing: {phrase}")
+
     education_markers = (
         'data-education-evidence="operations"',
         'Official final grade: 8.69/10',
