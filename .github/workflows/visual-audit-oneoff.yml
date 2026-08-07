@@ -8,13 +8,34 @@ on:
       - '.github/workflows/visual-audit-oneoff.yml'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   browser-audit:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: audit/improvements-2026-08-07
+          fetch-depth: 0
+
+      - name: Apply exact Workbench pagination fix
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          path = Path('workbench/js/workbench.js')
+          text = path.read_text(encoding='utf-8')
+          old = 'encodeURIComponent(currentLanguae)'
+          new = 'encodeURIComponent(currentLanguage)'
+          count = text.count(old)
+          if count != 1:
+              raise SystemExit(f'Expected exactly one Workbench language typo, found {count}')
+          path.write_text(text.replace(old, new, 1), encoding='utf-8')
+          PY
+          node --check workbench/js/workbench.js
+          git diff --check
 
       - name: Prepare browser audit
         run: |
@@ -98,7 +119,6 @@ jobs:
 
           driver = webdriver.Chrome(options=options)
           try:
-              # Desktop profile: explicit language, switching, propagation and layout.
               driver.set_window_size(1440, 900)
               driver.get(f'{BASE}/?lang=en')
               wait_ready(driver)
@@ -123,13 +143,11 @@ jobs:
               screenshot(driver, 'main-desktop-de.png')
               severe_console_errors(driver, 'Main desktop')
 
-              # Workbench desktop: direct deep link + language + dialog + Escape.
               driver.get(f'{BASE}/workbench/?lang=de#entry-laprincesa')
               wait_ready(driver)
               require(driver.find_element(By.TAG_NAME, 'html').get_attribute('lang') == 'de', 'Workbench desktop: ?lang=de did not select German')
               dialog = driver.find_element(By.CSS_SELECTOR, '[data-entry-dialog]')
               WebDriverWait(driver, 8).until(lambda d: dialog.get_attribute('open') is not None)
-              require(dialog.get_attribute('open') is not None, 'Workbench desktop: deep link did not open entry dialog')
               require(driver.current_url.endswith('#entry-laprincesa'), f'Workbench desktop: deep link hash changed unexpectedly: {driver.current_url}')
               profile_href = driver.find_element(By.CSS_SELECTOR, '.profile-return').get_attribute('href')
               require('lang=de' in profile_href, f'Workbench desktop: profile return lost language: {profile_href}')
@@ -140,7 +158,6 @@ jobs:
               require(dialog.get_attribute('open') is None, 'Workbench desktop: Escape did not close dialog')
               severe_console_errors(driver, 'Workbench desktop')
 
-              # Mobile main at required 390px width.
               driver.set_window_size(390, 800)
               driver.get(f'{BASE}/?lang=es')
               wait_ready(driver)
@@ -149,7 +166,6 @@ jobs:
               screenshot(driver, 'main-mobile-390-es.png')
               severe_console_errors(driver, 'Main mobile')
 
-              # Mobile single-page Workbench entry: navigation should be hidden, close should work.
               driver.get(f'{BASE}/workbench/?lang=en#entry-deutschos')
               wait_ready(driver)
               dialog = driver.find_element(By.CSS_SELECTOR, '[data-entry-dialog]')
@@ -165,7 +181,6 @@ jobs:
               require(dialog.get_attribute('open') is None, 'Workbench mobile: close button did not close single-page dialog')
               severe_console_errors(driver, 'Workbench mobile single-page')
 
-              # Mobile multi-page Workbench entry: pagination should be visible and change page.
               driver.get(f'{BASE}/workbench/?lang=en#entry-portfolio')
               wait_ready(driver)
               dialog = driver.find_element(By.CSS_SELECTOR, '[data-entry-dialog]')
@@ -175,13 +190,13 @@ jobs:
               previous_button = driver.find_element(By.CSS_SELECTOR, '[data-dialog-previous]')
               position = driver.find_element(By.CSS_SELECTOR, '[data-dialog-position]')
               require(navigation.is_displayed(), 'Workbench mobile: multi-page portfolio pagination is hidden')
-              require(next_button.is_displayed() and next_button.is_enabled(), 'Workbench mobile: next-page control unavailable on page 1 of multi-page entry')
+              require(next_button.is_displayed() and next_button.is_enabled(), 'Workbench mobile: next-page control unavailable on page 1')
               require(not previous_button.is_enabled(), 'Workbench mobile: previous-page control should be disabled on page 1')
               before = position.text
               next_button.click()
               time.sleep(0.3)
               after = position.text
-              require(before != after, f'Workbench mobile: page position did not change after Next ({before!r} -> {after!r})')
+              require(before != after and after == '2 / 2', f'Workbench mobile: Next did not reach page 2 ({before!r} -> {after!r})')
               require(previous_button.is_enabled(), 'Workbench mobile: previous-page control did not enable on page 2')
               require(not next_button.is_enabled(), 'Workbench mobile: next-page control should be disabled on last page')
               no_horizontal_overflow(driver, 'Workbench mobile 390 multi-page dialog')
@@ -191,14 +206,12 @@ jobs:
               require(position.text == before, f'Workbench mobile: Previous did not return to page 1 ({position.text!r} vs {before!r})')
               severe_console_errors(driver, 'Workbench mobile multi-page')
 
-              # Reduced motion should be respected without breaking content/navigation.
               driver.execute_cdp_cmd('Emulation.setEmulatedMedia', {
                   'features': [{'name': 'prefers-reduced-motion', 'value': 'reduce'}]
               })
               driver.get(f'{BASE}/workbench/?lang=en')
               wait_ready(driver)
-              reduced = driver.execute_script("return matchMedia('(prefers-reduced-motion: reduce)').matches")
-              require(reduced is True, 'Reduced motion emulation was not active')
+              require(driver.execute_script("return matchMedia('(prefers-reduced-motion: reduce)').matches") is True, 'Reduced motion emulation was not active')
               require(driver.find_element(By.ID, 'featured').is_displayed(), 'Reduced motion: featured content became unavailable')
               no_horizontal_overflow(driver, 'Workbench mobile reduced motion')
               screenshot(driver, 'workbench-mobile-390-reduced-motion.png')
@@ -230,3 +243,15 @@ jobs:
           path: audit-artifacts/
           if-no-files-found: error
           retention-days: 7
+
+      - name: Commit verified fix and remove one-off workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm .github/workflows/visual-audit-oneoff.yml
+          git add workbench/js/workbench.js
+          git diff --cached --check
+          git commit -m 'fix: restore Workbench multi-page navigation'
+          git push origin HEAD:audit/improvements-2026-08-07
