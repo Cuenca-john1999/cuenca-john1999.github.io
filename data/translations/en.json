@@ -57,7 +57,7 @@
   "hero": {
     "title": "Clinical &amp; Biomedical<br>Laboratory Profile",
     "philosophy": "Committed to a lifetime of learning, discovery and helping others.",
-    "availability": "Available for laboratory-related, clinical research support and biomedical science opportunities in Germany and internationally.",
+    "availability": "Available in the Bonn–Cologne region, Berlin and Madrid, with relocation open throughout Germany and internationally.",
     "cvCta": "Download CV",
     "contactCta": "Contact",
     "projectsCta": "Explore projects",
@@ -67,7 +67,7 @@
     "profile": {
       "kicker": "Profile",
       "title": "A laboratory profile shaped by precision, research and continuous learning.",
-      "body": "I hold Spanish vocational qualifications as Técnico Superior en Laboratorio Clínico y Biomédico (Higher Technician in Clinical and Biomedical Laboratory) and Técnico en Operaciones de Laboratorio (Technician in Laboratory Operations). Based in Berlin, I apply this training to clinical diagnostics, molecular biology, immunology and analytical laboratory work under GLP standards.",
+      "body": "I hold Spanish vocational qualifications as Técnico Superior en Laboratorio Clínico y Biomédico (Higher Technician in Clinical and Biomedical Laboratory) and Técnico en Operaciones de Laboratorio (Technician in Laboratory Operations). I am currently based in the Bonn–Cologne region, with additional geographic availability in Berlin and Madrid, and I apply this training to clinical diagnostics, molecular biology, immunology and analytical laboratory work under GLP standards.",
       "pointPractice": "Clinical & biomedical laboratory practice",
       "pointBiomedical": "Molecular biology · Immunology · PCR · ELISA",
       "pointAnalytical": "Analytical workflows · SOPs · GLP documentation"
@@ -128,7 +128,7 @@
     "contact": {
       "kicker": "Contact",
       "title": "Open to laboratory, clinical research and biomedical science opportunities.",
-      "body": "Available for laboratory-related, clinical research support and biomedical science opportunities in Germany and internationally. My professional interests include molecular biology, immunology, translational research, scientific communication and international collaboration in laboratory environments."
+      "body": "Available in the Bonn–Cologne region, Berlin and Madrid, and open to relocation throughout Germany and internationally. My professional interests include molecular biology, immunology, translational research, scientific communication and international collaboration in laboratory environments."
     }
   },
   "readiness": {
@@ -141,8 +141,8 @@
   "snapshot": {
     "kicker": "Recruiter Snapshot · 20-second profile",
     "location": {
-      "label": "Location",
-      "value": "Berlin, Germany"
+      "label": "Current location",
+      "value": "Bonn–Cologne region, Germany"
     },
     "roles": {
       "label": "Target roles",
@@ -153,8 +153,8 @@
       "value": "English B2 · German A2, preparing for certification · Native Spanish"
     },
     "availability": {
-      "label": "Availability",
-      "value": "Available in Germany and internationally · Open to relocation within Germany"
+      "label": "Availability & mobility",
+      "value": "Bonn–Cologne region · Berlin · Madrid · Open to relocation throughout Germany and internationally"
     },
     "recognition": {
       "label": "Professional recognition",

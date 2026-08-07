@@ -25,7 +25,7 @@
 
 const Language = (() => {
     const STORAGE_KEY = 'portfolio-language';
-    const TRANSLATION_VERSION = '20260802-approved-enrichment';
+    const TRANSLATION_VERSION = '20260807-location-mobility';
     const DEFAULT_LANGUAGE = 'es';
     const AVAILABLE_LANGUAGES = ['en', 'de', 'es'];
     const CV_BY_LANGUAGE = {

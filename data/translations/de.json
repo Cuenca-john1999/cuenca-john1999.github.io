@@ -57,7 +57,7 @@
   "hero": {
     "title": "Klinisch-biomedizinisches<br>Laborprofil",
     "philosophy": "Engagiert für lebenslanges Lernen, Entdeckung und Hilfe für andere.",
-    "availability": "Verfügbar für laborbezogene Positionen, Unterstützung in klinischer Forschung und biomedizinische Wissenschaft in Deutschland und international.",
+    "availability": "Verfügbar im Raum Bonn/Köln, in Berlin und Madrid; deutschlandweit und international umzugsbereit.",
     "cvCta": "CV herunterladen",
     "contactCta": "Kontakt",
     "projectsCta": "Projekte ansehen",
@@ -67,7 +67,7 @@
     "profile": {
       "kicker": "Profil",
       "title": "Ein Laborprofil geprägt von Präzision, Forschung und kontinuierlichem Lernen.",
-      "body": "Ich verfüge über spanische berufliche Qualifikationen: Técnico Superior en Laboratorio Clínico y Biomédico (englische Übersetzung: Higher Technician in Clinical and Biomedical Laboratory) und Técnico en Operaciones de Laboratorio (englische Übersetzung: Technician in Laboratory Operations). In Berlin wende ich diese Ausbildung in klinischer Diagnostik, Molekularbiologie, Immunologie und analytischer Laborarbeit nach GLP-Standards an.",
+      "body": "Ich verfüge über spanische berufliche Qualifikationen: Técnico Superior en Laboratorio Clínico y Biomédico (englische Übersetzung: Higher Technician in Clinical and Biomedical Laboratory) und Técnico en Operaciones de Laboratorio (englische Übersetzung: Technician in Laboratory Operations). Aktuell bin ich im Raum Bonn/Köln verfügbar; weitere Standortmöglichkeiten bestehen in Berlin und Madrid. Ich wende diese Ausbildung in klinischer Diagnostik, Molekularbiologie, Immunologie und analytischer Laborarbeit nach GLP-Standards an.",
       "pointPractice": "Klinisch-biomedizinische Laborpraxis",
       "pointBiomedical": "Molekularbiologie · Immunologie · PCR · ELISA",
       "pointAnalytical": "Analytische Abläufe · SOPs · GLP-Dokumentation"
@@ -128,7 +128,7 @@
     "contact": {
       "kicker": "Kontakt",
       "title": "Offen für laborbezogene Positionen, klinische Forschungsunterstützung und biomedizinische Wissenschaft.",
-      "body": "Verfügbar für laborbezogene Positionen, Unterstützung in klinischer Forschung und biomedizinische Wissenschaft in Deutschland und international. Meine beruflichen Interessen umfassen Molekularbiologie, Immunologie, translationale Forschung, Wissenschaftskommunikation und internationale Zusammenarbeit im Laborumfeld."
+      "body": "Verfügbar im Raum Bonn/Köln, in Berlin und Madrid sowie deutschlandweit und international umzugsbereit. Meine beruflichen Interessen umfassen Molekularbiologie, Immunologie, translationale Forschung, Wissenschaftskommunikation und internationale Zusammenarbeit im Laborumfeld."
     }
   },
   "readiness": {
@@ -141,8 +141,8 @@
   "snapshot": {
     "kicker": "Kurzprofil für Recruiter · in 20 Sekunden",
     "location": {
-      "label": "Standort",
-      "value": "Berlin, Deutschland"
+      "label": "Aktueller Standort",
+      "value": "Raum Bonn/Köln, Deutschland"
     },
     "roles": {
       "label": "Zielrollen",
@@ -153,8 +153,8 @@
       "value": "Englisch B2 · Deutsch A2, Zertifizierung in Vorbereitung · Spanisch als Muttersprache"
     },
     "availability": {
-      "label": "Verfügbarkeit",
-      "value": "In Deutschland und international verfügbar · umzugsbereit innerhalb Deutschlands"
+      "label": "Verfügbarkeit & Mobilität",
+      "value": "Raum Bonn/Köln · Berlin · Madrid · deutschlandweit und international umzugsbereit"
     },
     "recognition": {
       "label": "Berufliche Anerkennung",
