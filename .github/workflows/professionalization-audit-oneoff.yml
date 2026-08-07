@@ -28,16 +28,12 @@ jobs:
           node --check workbench/js/workbench.js
           git diff --check
 
-      - name: Commit audited changes and remove temporary audit files
+      - name: Commit audited website changes
         run: |
-          rm .github/workflows/professionalization-audit-oneoff.yml
-          rm .github/scripts/professionalization_patch.py
+          git checkout HEAD -- .github/workflows/portfolio-integrity.yml
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add \
-            .github/workflows/portfolio-integrity.yml \
-            .github/workflows/professionalization-audit-oneoff.yml \
-            .github/scripts/professionalization_patch.py \
             404.html \
             privacy.html \
             assets/css/legal.css \
