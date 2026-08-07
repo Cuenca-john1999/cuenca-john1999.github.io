@@ -91,7 +91,7 @@
     "education": {
       "kicker": "Ausbildung",
       "title": "Starke akademische Ergebnisse mit klinischer, analytischer und biomedizinischer Grundlage.",
-      "body": "Ich habe eine spanische Berufsausbildung mit Auszeichnung abgeschlossen: Técnico Superior en Laboratorio Clínico y Biomédico und Técnico en Operaciones de Laboratorio, mit Abschlussnoten von 9,25/10 und 8,69/10.",
+      "body": "Ich habe zwei spanische Berufsqualifikationen abgeschlossen—Técnico Superior en Laboratorio Clínico y Biomédico und Técnico en Operaciones de Laboratorio—mit Abschlussnoten von 9,25/10 und 8,69/10.",
       "pointClinical": "Técnico Superior en Laboratorio Clínico y Biomédico · CEAC FP Oficial · 2025",
       "pointOperations": "Técnico en Operaciones de Laboratorio · IES Virgen de la Paloma · 2023",
       "pointAdditional": "Tierexperimentelle Funktionen A+B+C · Gesundheitsmanagement · Arbeitsschutz"
@@ -217,7 +217,7 @@
     "additional": {
       "badge": "Funktionen A+B+C",
       "title": "Zertifizierte Zusatzqualifikationen",
-      "body": "Versuchstierkunde - Funktionen A+B+C (Erlass ECC/566/2015) · 70 Std. mit Präsenzpraxis. A: Pflege der Tiere; B: Tötung/Euthanasie der Tiere; C: Durchführung von Verfahren. Das formale Programm umfasst Tierwohl und 3R, das Erkennen von Schmerz, Leiden und Angst, tierschutzgerechte Tötungsmethoden, minimalinvasive Verfahren, Anästhesie bei kleineren Eingriffen, fortgeschrittene Anästhesie bei chirurgischen oder länger dauernden Verfahren sowie Grundlagen der Chirurgie. Im beaufsichtigten Praxisteil führte ich persönlich Tierhandling, die Verabreichung von Arzneimitteln/Substanzen per Injektion, Anästhesie, chirurgische Verfahren zur Proben-/Gewebegewinnung, die Gewinnung/Entnahme tierischer Proben und Euthanasie durch. Management von Gesundheitseinrichtungen · 100 Std. · 2025. Grundausbildung im Arbeitsschutz · 2023."
+      "body": "Versuchstierkunde - Funktionen A+B+C (Erlass ECC/566/2015) · 70 Std. mit Präsenzpraxis. A: Pflege der Tiere; B: Tötung/Euthanasie der Tiere; C: Durchführung von Verfahren. Das formale Programm umfasst Tierwohl und 3R, das Erkennen von Schmerz, Leiden und Angst, tierschutzgerechte Tötungsmethoden, minimalinvasive Verfahren, Anästhesie bei kleineren Eingriffen, fortgeschrittene Anästhesie bei chirurgischen oder länger dauernden Verfahren sowie Grundlagen der Chirurgie. Im beaufsichtigten Praxisteil führte ich persönlich Tierhandling, Injektionen, Anästhesie, chirurgische Verfahren zur Proben-/Gewebegewinnung sowie die Gewinnung/Entnahme tierischer Proben durch. Ich war außerdem an beaufsichtigten Verfahren beteiligt, die eine Euthanasie einschlossen; dies wird nicht als eigenständige Durchführung dargestellt. Management von Gesundheitseinrichtungen · 100 Std. · 2025. Grundausbildung im Arbeitsschutz · 2023."
     }
   },
   "europass": {
@@ -357,6 +357,7 @@
     "email": "E-Mail",
     "message": "Nachricht",
     "submit": "Nachricht senden",
+    "privacy": "Dieses Formular nutzt Web3Forms, um Name, E-Mail-Adresse und Nachricht für berufliche Kontaktanfragen zu übermitteln. Bitte nur die für die Anfrage erforderlichen Informationen senden.",
     "ready": "Kontaktformular bereit. Web3Forms-Zugangsschlüssel hinzufügen, um es zu aktivieren.",
     "sending": "Nachricht wird gesendet...",
     "success": "Nachricht gesendet. Vielen Dank für die Kontaktaufnahme.",
