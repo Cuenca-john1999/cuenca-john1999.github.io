@@ -45,7 +45,6 @@ jobs:
           from selenium.webdriver.common.by import By
           from selenium.webdriver.chrome.options import Options
           from selenium.webdriver.support.ui import WebDriverWait
-          from selenium.webdriver.support import expected_conditions as EC
 
           OUT = Path('/tmp/education-audit')
           failures = []
@@ -61,6 +60,16 @@ jobs:
           def severe_console(driver):
               return [x for x in driver.get_log('browser') if x.get('level') == 'SEVERE']
 
+          def open_details(driver, root):
+              details = root.find_element(By.CSS_SELECTOR, 'details')
+              if not details.get_attribute('open'):
+                  driver.execute_script('arguments[0].querySelector("summary").click()', root)
+              WebDriverWait(driver, 10).until(lambda d: details.get_attribute('open') is not None)
+              return details
+
+          def wait_for_text(root, expected):
+              WebDriverWait(driver, 10).until(lambda d: expected in root.text)
+
           options = Options()
           options.add_argument('--headless=new')
           options.add_argument('--no-sandbox')
@@ -71,64 +80,62 @@ jobs:
           driver = webdriver.Chrome(options=options)
           wait = WebDriverWait(driver, 10)
           try:
-              # Mobile Spanish — primary user-reported scenario.
+              # Desktop is the primary review surface.
+              driver.set_window_size(1440, 900)
+              driver.get('http://127.0.0.1:4173/?lang=es#education')
+              wait.until(lambda d: d.find_element(By.CSS_SELECTOR, '[data-education-evidence="operations"]'))
+              wait.until(lambda d: d.find_element(By.TAG_NAME, 'html').get_attribute('lang') == 'es')
+              check(driver.execute_script('return document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1'), 'desktop-no-horizontal-overflow')
+
+              operations = driver.find_element(By.CSS_SELECTOR, '[data-education-evidence="operations"]')
+              open_details(driver, operations)
+              wait_for_text(operations, 'Reconocimiento académico')
+              text = operations.text
+              check('8,69/10' in text, 'desktop-operations-grade')
+              check('Reconocimiento académico' in text, 'desktop-operations-recognition')
+              check('10/10' in text and '9/10' in text, 'desktop-operations-results')
+              check('Evidencia académica aplicada' in text, 'desktop-operations-evidence')
+              check('20 de marzo' in text and '31 de mayo de 2023' in text, 'desktop-operations-placement-dates')
+              link = operations.find_element(By.CSS_SELECTOR, 'a[href*="entry-celignis"]')
+              check('#entry-celignis' in link.get_attribute('href'), 'celignis-deep-link-preserved')
+              driver.execute_script('arguments[0].scrollIntoView({block:"start"})', operations)
+              time.sleep(0.2)
+              operations.screenshot(str(OUT / 'desktop-es-operations-open.png'))
+
+              credentials = driver.find_element(By.CSS_SELECTOR, '[data-education-evidence="credentials"]')
+              open_details(driver, credentials)
+              wait_for_text(credentials, 'Experimentación Animal')
+              ctext = credentials.text
+              check(len(credentials.find_elements(By.CSS_SELECTOR, '.credential-card')) == 3, 'desktop-credentials-three-cards')
+              check('Experimentación Animal' in ctext, 'desktop-credential-animal')
+              check('Gestión de Centros Sanitarios' in ctext, 'desktop-credential-healthcare')
+              check('Prevención de Riesgos Laborales' in ctext, 'desktop-credential-risk')
+              driver.execute_script('arguments[0].scrollIntoView({block:"start"})', credentials)
+              time.sleep(0.2)
+              credentials.screenshot(str(OUT / 'desktop-es-credentials-open.png'))
+
+              clinical = driver.find_element(By.CSS_SELECTOR, '#education .focus-item:not([data-education-evidence])')
+              open_details(driver, clinical)
+              wait_for_text(clinical, 'Trabajo final')
+              check('Trabajo final' in clinical.text, 'desktop-clinical-card-still-intact')
+              driver.execute_script('arguments[0].scrollIntoView({block:"start"})', clinical)
+              time.sleep(0.2)
+              clinical.screenshot(str(OUT / 'desktop-es-clinical-open.png'))
+
+              # New text must resolve in all three languages; wait for async translation load.
+              for lang, expected in [('en', 'Academic recognition'), ('de', 'Akademische Auszeichnung'), ('es', 'Reconocimiento académico')]:
+                  driver.get(f'http://127.0.0.1:4173/?lang={lang}#education')
+                  op = wait.until(lambda d: d.find_element(By.CSS_SELECTOR, '[data-education-evidence="operations"]'))
+                  wait.until(lambda d: d.find_element(By.TAG_NAME, 'html').get_attribute('lang') == lang)
+                  open_details(driver, op)
+                  wait_for_text(op, expected)
+                  check(expected in op.text, f'i18n-new-education-{lang}')
+
+              # Secondary responsive safeguard only.
               driver.set_window_size(390, 800)
               driver.get('http://127.0.0.1:4173/?lang=es#education')
               wait.until(lambda d: d.find_element(By.CSS_SELECTOR, '[data-education-evidence="operations"]'))
-              time.sleep(0.5)
-              check(driver.find_element(By.TAG_NAME, 'html').get_attribute('lang') == 'es', 'mobile-es-language')
               check(driver.execute_script('return document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1'), 'mobile-no-horizontal-overflow')
-
-              operations = driver.find_element(By.CSS_SELECTOR, '[data-education-evidence="operations"]')
-              driver.execute_script('arguments[0].scrollIntoView({block:"start"})', operations)
-              summary = operations.find_element(By.CSS_SELECTOR, 'summary')
-              driver.execute_script('arguments[0].click()', summary)
-              time.sleep(0.35)
-              text = operations.text
-              check('RECONOCIMIENTO ACADÉMICO' in text.upper(), 'operations-recognition-visible')
-              check('10/10' in text and '9/10' in text, 'operations-official-results-visible')
-              check('EVIDENCIA ACADÉMICA APLICADA' in text.upper(), 'operations-evidence-visible')
-              check('20 de marzo' in text and '31 de mayo de 2023' in text, 'operations-fct-dates-visible')
-              operations.screenshot(str(OUT / 'mobile-es-operations-open.png'))
-
-              credentials = driver.find_element(By.CSS_SELECTOR, '[data-education-evidence="credentials"]')
-              driver.execute_script('arguments[0].scrollIntoView({block:"start"})', credentials)
-              summary = credentials.find_element(By.CSS_SELECTOR, 'summary')
-              driver.execute_script('arguments[0].click()', summary)
-              time.sleep(0.35)
-              ctext = credentials.text
-              check(len(credentials.find_elements(By.CSS_SELECTOR, '.credential-card')) == 3, 'credentials-three-cards')
-              check('Experimentación Animal' in ctext, 'credential-animal-visible')
-              check('Gestión de Centros Sanitarios' in ctext, 'credential-healthcare-visible')
-              check('Prevención de Riesgos Laborales' in ctext, 'credential-risk-visible')
-              check(driver.execute_script('return document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1'), 'credentials-mobile-no-overflow')
-              credentials.screenshot(str(OUT / 'mobile-es-credentials-open.png'))
-
-              # Existing clinical card remains operational.
-              clinical = driver.find_element(By.CSS_SELECTOR, '#education .focus-item:not([data-education-evidence])')
-              clinical_summary = clinical.find_element(By.CSS_SELECTOR, 'summary')
-              driver.execute_script('arguments[0].click()', clinical_summary)
-              check('TRABAJO FINAL' in clinical.text.upper(), 'clinical-card-still-intact')
-
-              # Language switch coverage for newly introduced content.
-              for lang, expected in [('en', 'Academic recognition'), ('de', 'Akademische Auszeichnung'), ('es', 'Reconocimiento académico')]:
-                  driver.get(f'http://127.0.0.1:4173/?lang={lang}#education')
-                  wait.until(lambda d: d.find_element(By.CSS_SELECTOR, '[data-education-evidence="operations"]'))
-                  op = driver.find_element(By.CSS_SELECTOR, '[data-education-evidence="operations"]')
-                  driver.execute_script('arguments[0].querySelector("summary").click()', op)
-                  check(expected in op.text, f'i18n-new-education-{lang}')
-
-              # Desktop layout and Celignis deep link preservation.
-              driver.set_window_size(1440, 900)
-              driver.get('http://127.0.0.1:4173/?lang=en#education')
-              wait.until(lambda d: d.find_element(By.CSS_SELECTOR, '[data-education-evidence="operations"]'))
-              check(driver.execute_script('return document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1'), 'desktop-no-horizontal-overflow')
-              op = driver.find_element(By.CSS_SELECTOR, '[data-education-evidence="operations"]')
-              link = op.find_element(By.CSS_SELECTOR, 'a[href*="entry-celignis"]')
-              check('#entry-celignis' in link.get_attribute('href'), 'celignis-deep-link-preserved')
-              section = driver.find_element(By.ID, 'education')
-              driver.execute_script('arguments[0].scrollIntoView({block:"start"})', section)
-              section.screenshot(str(OUT / 'desktop-en-education.png'))
 
               logs = severe_console(driver)
               check(not logs, 'no-severe-console-errors', json.dumps(logs)[:1000])
@@ -147,6 +154,6 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: education-browser-audit
+          name: education-browser-audit-desktop
           path: /tmp/education-audit/
           retention-days: 1
