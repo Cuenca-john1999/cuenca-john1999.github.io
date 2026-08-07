@@ -1,0 +1,20 @@
+name: Cleanup previous portfolio cycle one-off
+
+on:
+  push:
+    branches:
+      - audit/workbench-seo-protection-2026-08-08
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete previous-cycle branches
+        run: |
+          set -euo pipefail
+          git push origin --delete \
+            audit/phage-language-docs-current-2026-08-08 \
+            backup/pre-phage-language-docs-2026-08-08-569db99
