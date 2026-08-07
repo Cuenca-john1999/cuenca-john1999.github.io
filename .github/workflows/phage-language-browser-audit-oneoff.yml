@@ -64,6 +64,7 @@ jobs:
           wait = WebDriverWait(driver, 12)
 
           try:
+              # Main portfolio: verify all three languages before entering Workbench.
               for lang, (suffix, notice, label_fragment) in expected.items():
                   driver.get(f'{base}?lang={lang}')
                   wait.until(lambda d: d.find_element(By.TAG_NAME, 'html').get_attribute('lang') == lang)
@@ -83,6 +84,8 @@ jobs:
                   check(f'main {lang} explorer fallback', fallback_href.endswith(suffix), fallback_href)
                   check(f'main {lang} explorer label', label_fragment.lower() in explorer_label.lower(), explorer_label)
 
+              # Workbench: the resources are on page 2 of the phage entry.
+              for lang, (suffix, notice, label_fragment) in expected.items():
                   driver.get(f'{base}workbench/?lang={lang}')
                   wait.until(lambda d: d.find_element(By.TAG_NAME, 'html').get_attribute('lang') == lang)
                   buttons = wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, '[data-entry-open="phage"]'))
@@ -90,6 +93,12 @@ jobs:
                   visible = [button for button in buttons if button.is_displayed()]
                   target = visible[-1] if visible else buttons[-1]
                   driver.execute_script("arguments[0].scrollIntoView({block:'center'}); arguments[0].click();", target)
+                  wait.until(lambda d: d.find_element(By.CSS_SELECTOR, '[data-entry-dialog]').get_property('open'))
+
+                  page_one_text = driver.execute_script("return document.querySelector('[data-dialog-page-content]').textContent || '';")
+                  check(f'Workbench {lang} notice', notice.lower() in page_one_text.lower(), page_one_text[:1200])
+
+                  driver.execute_script("document.querySelector('[data-dialog-next-entry]').click();")
                   wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, '.dialog-resource'))
                   resources = driver.find_elements(By.CSS_SELECTOR, '.dialog-resource')
                   project_resources = [r for r in resources if 'bacteriophage-therapy-final-project_' in (r.get_attribute('href') or '')]
@@ -98,8 +107,6 @@ jobs:
                       href = project_resources[0].get_attribute('href') or ''
                       check(f'Workbench {lang} project href', href.endswith(suffix), href)
                       check(f'Workbench {lang} resource label', label_fragment.lower() in project_resources[0].text.lower(), project_resources[0].text)
-                  dialog_text = driver.execute_script("return document.querySelector('[data-dialog-page-content]').textContent || '';")
-                  check(f'Workbench {lang} notice', notice.lower() in dialog_text.lower(), dialog_text[:1000])
 
               severe = [entry for entry in driver.get_log('browser') if entry.get('level') == 'SEVERE']
               check('browser console has no SEVERE errors', not severe, json.dumps(severe, ensure_ascii=False))
