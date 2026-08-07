@@ -595,7 +595,7 @@
                     { title: 'Immunology', body: 'ELISA; immunohistochemistry; and immunofluorescence' },
                     { title: 'Documentation & professional evidence', body: 'An existing professional reference supports the placement, protocol work and laboratory-material responsibilities.' }
                 ],
-                disclosure: 'Scope note: this entry combines documentary evidence with personally confirmed supervised hands-on work; it does not claim independent clinical, veterinary or surgical practice.'
+                disclosure: 'Scope note: this entry combines documentary evidence with personally confirmed supervised hands-on work. This is documented laboratory placement experience, not an independent clinical claim or therapeutic study, and it does not claim independent clinical, veterinary or surgical practice.'
             },
             celignis: {
                 category: 'Laboratory Practice', status: 'Completed', title: 'Analytical & Biomass Laboratory Practice · Celignis',
@@ -738,7 +738,7 @@
                     { title: 'Inmunología', body: 'ELISA; inmunohistoquímica e inmunofluorescencia' },
                     { title: 'Documentación y evidencia profesional', body: 'Existe una referencia profesional que respalda las prácticas, el trabajo con protocolos y las responsabilidades sobre material de laboratorio.' }
                 ],
-                disclosure: 'Nota de alcance: esta entrada combina evidencia documental con experiencia práctica supervisada confirmada personalmente; no se afirma ejercicio clínico, veterinario o quirúrgico independiente.'
+                disclosure: 'Nota de alcance: esta entrada combina evidencia documental con experiencia práctica supervisada confirmada personalmente. Se documenta experiencia de prácticas de laboratorio, no una afirmación clínica independiente ni un estudio terapéutico, y no se afirma ejercicio clínico, veterinario o quirúrgico independiente.'
             },
             celignis: {
                 category: 'Prácticas de laboratorio', status: 'Completado', title: 'Prácticas en Laboratorio Analítico y de Biomasa · Celignis',
@@ -881,7 +881,7 @@
                     { title: 'Immunologie', body: 'ELISA; Immunhistochemie und Immunfluoreszenz' },
                     { title: 'Dokumentation & beruflicher Nachweis', body: 'Eine vorhandene berufliche Referenz bestätigt das Praktikum, die Protokollarbeit und die Verantwortung für Labormaterial.' }
                 ],
-                disclosure: 'Hinweis zum Umfang: Dieser Eintrag kombiniert dokumentarische Nachweise mit persönlich bestätigter beaufsichtigter Praxis; es wird keine eigenständige klinische, tierärztliche oder chirurgische Tätigkeit beansprucht.'
+                disclosure: 'Hinweis zum Umfang: Dieser Eintrag kombiniert dokumentarische Nachweise mit persönlich bestätigter beaufsichtigter Praxis. Es handelt sich um dokumentierte Laborpraxis, nicht um einen eigenständigen klinischen Wirksamkeitsnachweis oder eine therapeutische Studie; ebenso wird keine eigenständige klinische, tierärztliche oder chirurgische Tätigkeit beansprucht.'
             },
             celignis: {
                 category: 'Laborpraktikum', status: 'Abgeschlossen', title: 'Praktikum im analytischen Biomasse-Labor · Celignis',
