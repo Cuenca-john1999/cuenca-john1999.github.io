@@ -946,6 +946,13 @@ main,
     margin-block-start: 0;
 }
 
+/* Education cards carry expandable evidence. Keep their controls close to
+   the card heading instead of using the generic bottom-aligned card action. */
+.education-section .focus-item__actions {
+    flex: none;
+    justify-content: flex-start;
+}
+
 .references-section > .focus-grid .focus-item__actions > .practice-details[open] {
     display: flex;
     flex: 1;
