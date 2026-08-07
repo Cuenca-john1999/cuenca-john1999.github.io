@@ -12,6 +12,8 @@ jobs:
   cleanup:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Delete previous-cycle branches
         run: |
           set -euo pipefail
