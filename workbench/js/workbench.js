@@ -521,7 +521,7 @@
                 summary: 'A co-authored final academic project reviewing bacteriophage therapy and framing future research questions.',
                 problem: 'Antimicrobial resistance has renewed interest in bacteriophages, but clinical use still involves scientific, manufacturing and regulatory limitations.',
                 contribution: 'Participation in the literature review, scientific writing, project structure, conceptual development and defence preparation, including the future-oriented connection between bacteriophage therapy, chitosan and microplastic-related biomedical questions. Co-authorship is explicitly credited.',
-                result: 'A completed 61-page academic project and defense material. It is a literature review, not an experimental or clinical study.',
+                result: 'A completed 61-page academic project and defense material. It is a literature review, not an experimental or clinical study. The linked English PDF is an unofficial translation/adaptation and is not a certified or sworn translation; the original academic work is the Spanish version.',
                 next: 'Any original future-oriented concepts derived from the review require separate experimental validation and should not be presented as demonstrated treatments.',
                 disclosure: 'Authorship note: this project was co-authored with Luis Gonzalo Legua Pérez and is presented with co-author permission.',
                 details: [
@@ -539,7 +539,7 @@
                     }
                 ],
                 resources: [
-                    { label: 'Final project · 61 pages', href: '../assets/documents/bacteriophage-therapy-final-project.pdf' },
+                    { label: 'Final project · Unofficial English translation', href: '../assets/documents/bacteriophage-therapy-final-project_EN.pdf' },
                     { label: 'Defense presentation · 17 slides', href: '../assets/documents/bacteriophage-therapy-defense.pdf' }
                 ]
             },
@@ -664,7 +664,7 @@
                 summary: 'Proyecto académico final realizado en coautoría que revisa la fagoterapia y plantea futuras preguntas de investigación.',
                 problem: 'La resistencia antimicrobiana ha renovado el interés por los bacteriófagos, aunque su uso clínico todavía presenta limitaciones científicas, de fabricación y regulatorias.',
                 contribution: 'Participación en la revisión bibliográfica, la redacción científica, la estructura del proyecto, el desarrollo conceptual y la preparación de la defensa, incluida la conexión futura entre fagoterapia, quitosano y preguntas biomédicas relacionadas con microplásticos. La coautoría se acredita de forma explícita.',
-                result: 'Proyecto académico completado de 61 páginas y material de defensa. Es una revisión bibliográfica, no un estudio experimental ni clínico.',
+                result: 'Proyecto académico completado de 61 páginas y material de defensa. Es una revisión bibliográfica, no un estudio experimental ni clínico. La versión enlazada en español es el trabajo académico original.',
                 next: 'Cualquier concepto original derivado de la revisión requiere validación experimental independiente y no debe presentarse como tratamiento demostrado.',
                 disclosure: 'Nota de autoría: este proyecto fue realizado en coautoría con Luis Gonzalo Legua Pérez y se publica con permiso del coautor.',
                 details: [
@@ -682,7 +682,7 @@
                     }
                 ],
                 resources: [
-                    { label: 'Trabajo final · 61 páginas', href: '../assets/documents/bacteriophage-therapy-final-project.pdf' },
+                    { label: 'Trabajo final original · Español', href: '../assets/documents/bacteriophage-therapy-final-project_ES.pdf' },
                     { label: 'Presentación de defensa · 17 diapositivas', href: '../assets/documents/bacteriophage-therapy-defense.pdf' }
                 ]
             },
@@ -807,7 +807,7 @@
                 summary: 'Eine gemeinsam verfasste Abschlussarbeit mit Literaturübersicht zur Phagentherapie und zukünftigen Forschungsfragen.',
                 problem: 'Antimikrobielle Resistenz hat das Interesse an Bakteriophagen erneuert, doch die klinische Anwendung unterliegt weiterhin wissenschaftlichen, herstellungsbezogenen und regulatorischen Grenzen.',
                 contribution: 'Mitwirkung an Literaturrecherche, wissenschaftlichem Schreiben, Projektstruktur, konzeptioneller Entwicklung und Vorbereitung der Verteidigung, einschließlich der zukunftsorientierten Verbindung zwischen Phagentherapie, Chitosan und biomedizinischen Fragen zu Mikroplastik. Die gemeinsame Urheberschaft wird klar ausgewiesen.',
-                result: 'Eine abgeschlossene 61-seitige akademische Arbeit mit Verteidigungsmaterial. Es handelt sich um eine Literaturübersicht, nicht um eine experimentelle oder klinische Studie.',
+                result: 'Eine abgeschlossene 61-seitige akademische Arbeit mit Verteidigungsmaterial. Es handelt sich um eine Literaturübersicht, nicht um eine experimentelle oder klinische Studie. Die verlinkte deutsche PDF-Fassung ist eine inoffizielle Übersetzung/Adaption und keine beglaubigte oder beeidigte Übersetzung; das akademische Original ist die spanische Fassung.',
                 next: 'Aus der Übersicht abgeleitete neue Konzepte benötigen eine separate experimentelle Validierung und dürfen nicht als nachgewiesene Behandlung dargestellt werden.',
                 disclosure: 'Urheberschaft: Dieses Projekt wurde gemeinsam mit Luis Gonzalo Legua Pérez verfasst und mit Zustimmung des Mitautors veröffentlicht.',
                 details: [
@@ -825,7 +825,7 @@
                     }
                 ],
                 resources: [
-                    { label: 'Abschlussarbeit · 61 Seiten', href: '../assets/documents/bacteriophage-therapy-final-project.pdf' },
+                    { label: 'Abschlussarbeit · Inoffizielle deutsche Übersetzung', href: '../assets/documents/bacteriophage-therapy-final-project_DE.pdf' },
                     { label: 'Präsentation zur Verteidigung · 17 Folien', href: '../assets/documents/bacteriophage-therapy-defense.pdf' }
                 ]
             },
