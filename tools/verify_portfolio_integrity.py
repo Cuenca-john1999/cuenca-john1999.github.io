@@ -118,15 +118,11 @@ def check_required_content() -> None:
         "administración de fármacos/sustancias mediante inyección",
         "Verabreichung von Arzneimitteln/Substanzen per Injektion",
     )
-    published_text = "\n".join(
-        [
-            index,
-            workbench,
-            workbench_js,
-            *(ROOT / "data" / "translations" / f"{language}.json").read_text(encoding="utf-8")
-            for language in LANGUAGES
-        ]
-    )
+    translation_texts = [
+        (ROOT / "data" / "translations" / f"{language}.json").read_text(encoding="utf-8")
+        for language in LANGUAGES
+    ]
+    published_text = "\n".join([index, workbench, workbench_js, *translation_texts])
     for phrase in forbidden:
         if phrase in published_text:
             fail(f"animal-experience overclaim wording found: {phrase}")
