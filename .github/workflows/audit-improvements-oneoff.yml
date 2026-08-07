@@ -1,0 +1,223 @@
+name: One-off audited Workbench integrity improvements
+
+on:
+  push:
+    branches:
+      - audit/improvements-2026-08-07
+    paths:
+      - '.github/workflows/audit-improvements-oneoff.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch-and-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: audit/improvements-2026-08-07
+          fetch-depth: 0
+
+      - name: Apply exact audited replacements
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+
+          def replace_once(text, old, new, label):
+              count = text.count(old)
+              if count != 1:
+                  raise RuntimeError(f"{label}: expected exactly 1 occurrence, found {count}: {old[:120]!r}")
+              return text.replace(old, new, 1)
+
+          # Workbench static HTML fallbacks.
+          p = Path('workbench/index.html')
+          text = p.read_text(encoding='utf-8')
+          replacements = [
+              (
+                  'Technical or editorial support disclosed; scientific judgement remains mine',
+                  'AI supports technical implementation, content organisation and editorial review, while I lead objectives, requirements, content, testing and final approval.'
+              ),
+              (
+                  'Personally performed during supervised practical training: animal handling, administration of drugs/substances by injection, anaesthesia and surgical procedures for sample/tissue collection',
+                  'Personally performed during supervised practical training: animal handling, injections, anaesthesia and surgical procedures for sample/tissue collection'
+              ),
+              (
+                  'Personally performed: collection/extraction of animal samples and euthanasia',
+                  'Personally performed: collection/extraction of animal samples. Also participated in supervised procedures that included euthanasia; not presented as independent practice.'
+              ),
+              (
+                  'js/workbench.js?v=20260802-post-enrichment-polish',
+                  'js/workbench.js?v=20260807-audit-integrity'
+              ),
+          ]
+          for old, new in replacements:
+              text = replace_once(text, old, new, 'workbench/index.html')
+          p.write_text(text, encoding='utf-8')
+
+          # Workbench JS translations and language routing.
+          p = Path('workbench/js/workbench.js')
+          text = p.read_text(encoding='utf-8')
+
+          animal_replacements = [
+              (
+                  "pointHandsOn: 'Personally performed during supervised practical training: animal handling, administration of drugs/substances by injection, anaesthesia and surgical procedures for sample/tissue collection', pointSamples: 'Personally performed: collection/extraction of animal samples and euthanasia'",
+                  "pointHandsOn: 'Personally performed during supervised practical training: animal handling, injections, anaesthesia and surgical procedures for sample/tissue collection', pointSamples: 'Personally performed: collection/extraction of animal samples. Also participated in supervised procedures that included euthanasia; not presented as independent practice.'"
+              ),
+              (
+                  "pointHandsOn: 'Realizado personalmente durante prácticas supervisadas: manejo de animales, administración de fármacos/sustancias mediante inyección, anestesia y procedimientos quirúrgicos para obtención de muestras/tejidos', pointSamples: 'Realizado personalmente: obtención/extracción de muestras animales y eutanasia'",
+                  "pointHandsOn: 'Realizado personalmente durante prácticas supervisadas: manejo de animales, inyecciones, anestesia y procedimientos quirúrgicos para obtención de muestras/tejidos', pointSamples: 'Realizado personalmente: obtención/extracción de muestras animales. También participé en procedimientos supervisados que incluían eutanasia; no se presenta como una realización independiente.'"
+              ),
+              (
+                  "pointHandsOn: 'Persönlich im beaufsichtigten Praxisteil durchgeführt: Tierhandling, Verabreichung von Arzneimitteln/Substanzen per Injektion, Anästhesie und chirurgische Verfahren zur Proben-/Gewebegewinnung', pointSamples: 'Persönlich durchgeführt: Gewinnung/Entnahme tierischer Proben und Euthanasie'",
+                  "pointHandsOn: 'Persönlich im beaufsichtigten Praxisteil durchgeführt: Tierhandling, Injektionen, Anästhesie und chirurgische Verfahren zur Proben-/Gewebegewinnung', pointSamples: 'Persönlich durchgeführt: Gewinnung/Entnahme tierischer Proben. Außerdem Beteiligung an beaufsichtigten Verfahren mit Euthanasie; nicht als eigenständige Durchführung dargestellt.'"
+              ),
+          ]
+          for old, new in animal_replacements:
+              text = replace_once(text, old, new, 'workbench/js/workbench.js animal scope')
+
+          text = replace_once(
+              text,
+              "    const STORAGE_KEY = 'portfolio-language';\n    const DEFAULT_LANGUAGE = 'en';",
+              "    const STORAGE_KEY = 'portfolio-language';\n    const URL_LANGUAGE_PARAM = 'lang';\n    const DEFAULT_LANGUAGE = 'en';",
+              'workbench/js/workbench.js URL constant'
+          )
+
+          old_initial = """    function getInitialLanguage() {
+        try {
+            const saved = window.localStorage.getItem(STORAGE_KEY);
+            if (LANGUAGES.includes(saved)) return saved;
+        } catch (error) {
+            console.warn('[WORKBENCH] localStorage unavailable', error);
+        }
+
+        const documentLanguage = document.documentElement.lang.slice(0, 2).toLowerCase();
+        return LANGUAGES.includes(documentLanguage) ? documentLanguage : DEFAULT_LANGUAGE;
+    }
+"""
+          new_initial = """    function getUrlLanguage() {
+        try {
+            const language = new URL(window.location.href).searchParams.get(URL_LANGUAGE_PARAM)?.slice(0, 2).toLowerCase();
+            return LANGUAGES.includes(language) ? language : null;
+        } catch (error) {
+            console.warn('[WORKBENCH] Could not read URL language', error);
+            return null;
+        }
+    }
+
+    function getInitialLanguage() {
+        const urlLanguage = getUrlLanguage();
+        if (urlLanguage) return urlLanguage;
+
+        try {
+            const saved = window.localStorage.getItem(STORAGE_KEY);
+            if (LANGUAGES.includes(saved)) return saved;
+        } catch (error) {
+            console.warn('[WORKBENCH] localStorage unavailable', error);
+        }
+
+        const browserLanguage = (window.navigator.language || '').slice(0, 2).toLowerCase();
+        if (LANGUAGES.includes(browserLanguage)) return browserLanguage;
+
+        const documentLanguage = document.documentElement.lang.slice(0, 2).toLowerCase();
+        return LANGUAGES.includes(documentLanguage) ? documentLanguage : DEFAULT_LANGUAGE;
+    }
+
+    function syncLanguageInUrl(language) {
+        try {
+            const url = new URL(window.location.href);
+            url.searchParams.set(URL_LANGUAGE_PARAM, language);
+            window.history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`);
+        } catch (error) {
+            console.warn('[WORKBENCH] Could not synchronize URL language', error);
+        }
+    }
+
+    function updateProfileLinks() {
+        document.querySelectorAll('.profile-return, .hero-actions a[href^="../"]').forEach((link) => {
+            const target = new URL('../', window.location.href);
+            target.searchParams.set(URL_LANGUAGE_PARAM, currentLanguage);
+            link.setAttribute('href', `../?${target.searchParams.toString()}`);
+        });
+    }
+"""
+          text = replace_once(text, old_initial, new_initial, 'workbench/js/workbench.js initial language')
+
+          old_translate_tail = """        document.querySelectorAll('[data-language-set]').forEach((button) => {
+            button.setAttribute('aria-pressed', String(button.dataset.languageSet === currentLanguage));
+        });
+
+        updateCarouselTranslations?.();
+    }
+"""
+          new_translate_tail = """        document.querySelectorAll('[data-language-set]').forEach((button) => {
+            button.setAttribute('aria-pressed', String(button.dataset.languageSet === currentLanguage));
+        });
+
+        updateProfileLinks();
+        syncLanguageInUrl(currentLanguage);
+        updateCarouselTranslations?.();
+    }
+"""
+          text = replace_once(text, old_translate_tail, new_translate_tail, 'workbench/js/workbench.js translate routing')
+
+          old_resource_href = """            link.href = resource.href;
+            link.target = '_blank';
+"""
+          new_resource_href = """            link.href = resource.href === '../'
+                ? `../?${URL_LANGUAGE_PARAM}=${encodeURIComponent(currentLanguage)}`
+                : resource.href;
+            link.target = '_blank';
+"""
+          text = replace_once(text, old_resource_href, new_resource_href, 'workbench/js/workbench.js profile resource language')
+
+          p.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Verify syntax and integrity
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m json.tool data/translations/en.json >/dev/null
+          python3 -m json.tool data/translations/de.json >/dev/null
+          python3 -m json.tool data/translations/es.json >/dev/null
+          node --check assets/js/language.js
+          node --check assets/js/app.js
+          node --check workbench/js/workbench.js
+          git diff --check
+
+          ! git grep -n -E 'administration of drugs/substances|administración de fármacos/sustancias|Verabreichung von Arzneimitteln/Substanzen' -- ':!*.pdf'
+
+          grep -Fq 'DeutschOS' index.html
+          grep -Fq 'AETEL 2025' index.html
+          grep -Fq 'Bacteriophage Therapy' index.html
+          grep -Fq 'id="entry-deutschos"' workbench/index.html
+          grep -Fq 'id="entry-chitosan"' workbench/index.html
+          grep -Fq 'id="entry-phage"' workbench/index.html
+          grep -Fq 'id="entry-laprincesa"' workbench/index.html
+          grep -Fq 'id="entry-celignis"' workbench/index.html
+
+          python3 - <<'PY'
+          import re
+          from pathlib import Path
+          for name in ('index.html', 'workbench/index.html'):
+              text = Path(name).read_text(encoding='utf-8')
+              ids = re.findall(r'\bid="([^"]+)"', text)
+              duplicates = sorted({item for item in ids if ids.count(item) > 1})
+              if duplicates:
+                  raise SystemExit(f'{name}: duplicate ids: {duplicates}')
+          PY
+
+      - name: Commit audited Workbench changes and remove one-off workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm .github/workflows/audit-improvements-oneoff.yml
+          git add workbench/index.html workbench/js/workbench.js
+          git diff --cached --check
+          git commit -m 'fix: align Workbench integrity and language routing'
+          git push origin HEAD:audit/improvements-2026-08-07
