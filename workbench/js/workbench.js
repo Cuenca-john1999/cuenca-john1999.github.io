@@ -1438,7 +1438,7 @@
         resources.forEach((resource) => {
             const link = createDialogElement('a', 'dialog-resource', resource.label);
             link.href = resource.href === '../'
-                ? `../?${URL_LANGUAGE_PARAM}=${encodeURIComponent(currentLanguae)}`
+                ? `../?${URL_LANGUAGE_PARAM}=${encodeURIComponent(currentLanguage)}`
                 : resource.href;
             link.target = '_blank';
             link.rel = 'noopener';
