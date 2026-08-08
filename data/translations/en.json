@@ -27,7 +27,7 @@
     "europassQualificationSupplements": "Europass qualification supplements",
     "skillsByEvidence": "Laboratory skills grouped by evidence type",
     "documentedPracticalSkills": "Techniques supported by documented practical laboratory experience",
-    "academicTechnicalKnowledge": "Areas supported by academic training and technical knowledge",
+    "academicTechnicalKnowledge": "Areas supported by formal training and technical knowledge",
     "selectedProjectTypes": "Selected project types",
     "referenceAreas": "Reference areas",
     "contactForm": "Contact form",
@@ -35,7 +35,7 @@
   },
   "commonLabels": {
     "practiceDetails": "Experience details",
-    "academicDetails": "Academic details",
+    "academicDetails": "Qualification details",
     "trainingDetails": "Training details",
     "reference": "Reference",
     "documentation": "Documentation",
@@ -44,7 +44,7 @@
     "readMore": "Read more",
     "academicRecognition": "Academic recognition",
     "selectedResults": "Selected official results",
-    "appliedAcademicEvidence": "Applied academic evidence",
+    "appliedAcademicEvidence": "Applied training evidence",
     "placementContext": "FCT / Erasmus+ context",
     "credentialDetails": "Credential details"
   },
@@ -95,7 +95,7 @@
     },
     "education": {
       "kicker": "Education",
-      "title": "Strong academic results with a clinical, analytical and biomedical foundation.",
+      "title": "Two laboratory vocational qualifications with strong results and a clinical, analytical and biomedical foundation.",
       "body": "I completed two Spanish vocational qualifications—Técnico Superior en Laboratorio Clínico y Biomédico and Técnico en Operaciones de Laboratorio—with final grades of 9.25/10 and 8.69/10.",
       "pointClinical": "Técnico Superior en Laboratorio Clínico y Biomédico · CEAC FP Oficial · 2025",
       "pointOperations": "Técnico en Operaciones de Laboratorio · IES Virgen de la Paloma · 2023",

@@ -35,7 +35,7 @@
   },
   "commonLabels": {
     "practiceDetails": "Detalles de la experiencia",
-    "academicDetails": "Detalles académicos",
+    "academicDetails": "Detalles de la titulación",
     "trainingDetails": "Detalles de la formación",
     "reference": "Referencia",
     "documentation": "Documentación",
@@ -44,7 +44,7 @@
     "readMore": "Leer más",
     "academicRecognition": "Reconocimiento académico",
     "selectedResults": "Resultados oficiales destacados",
-    "appliedAcademicEvidence": "Evidencia académica aplicada",
+    "appliedAcademicEvidence": "Evidencia práctica de formación",
     "placementContext": "Contexto FCT / Erasmus+",
     "credentialDetails": "Detalles de las credenciales"
   },
@@ -95,7 +95,7 @@
     },
     "education": {
       "kicker": "Formación",
-      "title": "Resultados académicos sólidos con base clínica, analítica y biomédica.",
+      "title": "Dos titulaciones de laboratorio con resultados sólidos y una base clínica, analítica y biomédica.",
       "body": "Completé dos titulaciones españolas de Formación Profesional—Técnico Superior en Laboratorio Clínico y Biomédico y Técnico en Operaciones de Laboratorio—con notas finales de 9,25/10 y 8,69/10.",
       "pointClinical": "Técnico Superior en Laboratorio Clínico y Biomédico · CEAC FP Oficial · 2025",
       "pointOperations": "Técnico en Operaciones de Laboratorio · IES Virgen de la Paloma · 2023",
