@@ -1,0 +1,39 @@
+name: Apply La Princesa preservation patch
+
+on:
+  push:
+    branches:
+      - audit-3p/ronda-4b-restore-laprincesa-nuance
+    paths:
+      - tools/restore_laprincesa_visibility.py
+      - .github/workflows/apply-laprincesa-preservation.yml
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: audit-3p/ronda-4b-restore-laprincesa-nuance
+          fetch-depth: 0
+      - name: Apply preservation patch
+        run: python3 tools/restore_laprincesa_visibility.py
+      - name: Verify portfolio integrity
+        run: |
+          python3 tools/verify_portfolio_integrity.py
+          python3 tools/verify_workbench_evidence.py
+          node --check workbench/js/workbench.js
+      - name: Commit patched files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add workbench/js/workbench.js workbench/index.html tools/verify_workbench_evidence.py
+          if git diff --cached --quiet; then
+            echo "No patch changes to commit."
+          else
+            git commit -m "fix: restore La Princesa role progression in Workbench"
+            git push origin HEAD:audit-3p/ronda-4b-restore-laprincesa-nuance
+          fi
