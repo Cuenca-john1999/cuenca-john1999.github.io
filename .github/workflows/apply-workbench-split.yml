@@ -1,0 +1,51 @@
+name: Apply Workbench data split
+
+on:
+  push:
+    branches:
+      - audit-3p/ronda-8-mantenimiento
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: audit-3p/ronda-8-mantenimiento
+      - name: Split static data from UI logic
+        run: python3 tools/split_workbench_data.py
+      - name: Verify architecture and preservation
+        run: |
+          python3 tools/verify_portfolio_integrity.py
+          python3 tools/verify_workbench_evidence.py
+          python3 tools/verify_workbench_split.py
+          python3 tools/generate_localized_pages.py --check
+      - name: Verify JavaScript and diffs
+        run: |
+          node --check workbench/js/workbench-data.js
+          node --check workbench/js/workbench.js
+          git diff --check
+      - name: Commit refactor result
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            workbench/js/workbench-data.js \
+            workbench/js/workbench.js \
+            workbench/index.html \
+            de/workbench/index.html \
+            es/workbench/index.html \
+            tools/verify_portfolio_integrity.py \
+            tools/verify_workbench_evidence.py \
+            tools/verify_workbench_split.py
+          git diff --cached --check
+          if git diff --cached --quiet; then
+            echo 'No Workbench refactor changes to commit.'
+            exit 0
+          fi
+          git commit -m 'refactor: separate Workbench static data from UI logic'
+          git push origin HEAD:audit-3p/ronda-8-mantenimiento
