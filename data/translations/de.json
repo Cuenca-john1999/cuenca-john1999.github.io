@@ -435,18 +435,18 @@
     "controllerTitle": "Verantwortlicher",
     "controllerBody": "Jhon M. Cuenca ist für die personenbezogenen Daten verantwortlich, die über das Kontaktformular dieses Portfolios übermittelt werden. Eine Kontaktaufnahme ist über das berufliche Kontaktformular im Portfolio möglich.",
     "dataTitle": "Erhobene Daten",
-    "dataBody": "Das Formular fragt Name, E-Mail-Adresse und Nachricht ab. Bitte übermitteln Sie nur Informationen, die für Ihre berufliche Anfrage erforderlich sind.",
+    "dataBody": "Das Formular fragt Name, E-Mail-Adresse und Nachricht ab. Web3Forms weist darauf hin, dass bei der Verarbeitung von Formulareinsendungen auch technische Metadaten wie IP-Adresse, Zeitstempel und Referrer verarbeitet werden können. Bitte übermitteln Sie nur Informationen, die für Ihre berufliche Anfrage erforderlich sind.",
     "purposeTitle": "Zweck und Rechtsgrundlage",
-    "purposeBody": "Die Angaben werden verwendet, um berufliche Anfragen, Laborstellen, forschungsbezogene Kontakte oder Kooperationsanfragen zu empfangen und zu beantworten. Je nach Kontext kann die Verarbeitung für vorvertragliche Schritte auf Ihre Anfrage hin und/oder aufgrund des berechtigten Interesses an der Beantwortung beruflicher Korrespondenz erfolgen.",
+    "purposeBody": "Die Angaben werden verwendet, um berufliche Anfragen, Laborstellen, forschungsbezogene Kontakte oder Kooperationsanfragen zu empfangen und zu beantworten. Je nach Kontext kann die Verarbeitung für auf Ihre Anfrage hin erforderliche vorvertragliche Maßnahmen gemäß Art. 6 Abs. 1 lit. b DSGVO notwendig sein oder sich auf das berechtigte Interesse gemäß Art. 6 Abs. 1 lit. f DSGVO stützen, relevante berufliche Korrespondenz zu empfangen und zu beantworten.",
     "providerTitle": "Formulardienst und internationale Verarbeitung",
-    "providerBody": "Das Kontaktformular wird über Web3Forms übermittelt. Web3Forms gibt in seiner öffentlichen Dokumentation an, dass sich die Server in den Vereinigten Staaten (US-East) befinden. Verarbeitung und Speicherung auf Seiten des Anbieters richten sich nach den jeweils aktuellen Informationen von Web3Forms.",
+    "providerBody": "Das Kontaktformular wird über Web3Forms übermittelt, einen von Web3Creative betriebenen Dienst, der bei Formulareinsendungen als Auftragsverarbeiter tätig ist. Web3Forms gibt an, von Indien aus zu operieren, unter anderem Infrastruktur von AWS, Cloudflare und Hetzner zu nutzen und Daten in mehreren Regionen verarbeiten zu können. Für Übermittlungen aus dem EWR, dem Vereinigten Königreich oder der Schweiz, für die ein Übermittlungsmechanismus erforderlich ist, bindet der aktuelle Auftragsverarbeitungsvertrag Standardvertragsklauseln ein. Dort sind außerdem Spam-Schutz-Unterauftragsverarbeiter wie CleanTalk und Akismet aufgeführt, die IP-Adresse und E-Mail-Adresse der absendenden Person erhalten können.",
     "retentionTitle": "Speicherung",
-    "retentionBody": "Das statische Portfolio selbst führt keine separate Datenbank der Formulareinsendungen. Die zugestellte Nachricht kann entsprechend den Einstellungen und Richtlinien des empfangenden E-Mail-Dienstes gespeichert bleiben; eine Speicherung durch den Formulardienst richtet sich nach den aktuellen Informationen von Web3Forms.",
+    "retentionBody": "Das statische Portfolio selbst führt keine separate Datenbank der Formulareinsendungen. Web3Forms gibt an, dass Einsendungsdaten einer physischen Speicherdauer von bis zu drei Jahren unterliegen; die Sichtbarkeit im Dashboard kann vom Tarif abhängen und Daten können früher gelöscht werden. Die zugestellte Nachricht kann außerdem entsprechend den Einstellungen und Richtlinien des empfangenden E-Mail-Dienstes gespeichert bleiben.",
     "rightsTitle": "Ihre Rechte",
     "rightsBody": "Soweit die DSGVO anwendbar ist, können insbesondere Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch sowie das Recht auf Beschwerde bei einer zuständigen Datenschutzaufsichtsbehörde bestehen.",
     "trackingTitle": "Analyse und Profiling",
     "trackingBody": "Dieses Portfolio verwendet keine Werbetracker, kein verhaltensbezogenes Profiling und keine Analysedienste.",
-    "updated": "Zuletzt aktualisiert: 7. August 2026"
+    "updated": "Zuletzt aktualisiert: 8. August 2026"
   },
   "notFoundPage": {
     "kicker": "404",
