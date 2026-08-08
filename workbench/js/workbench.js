@@ -5,6 +5,9 @@
     const URL_LANGUAGE_PARAM = 'lang';
     const DEFAULT_LANGUAGE = 'en';
     const LANGUAGES = ['en', 'de', 'es'];
+    const LOCALIZED_LANGUAGE = document.documentElement.dataset.localizedLanguage?.slice(0, 2).toLowerCase() || null;
+    const SITE_ROOT = document.documentElement.dataset.siteRoot || '../';
+    const LANGUAGE_ROUTE = document.documentElement.dataset.languageRoute || '';
 
     const translations = {
         en: {
@@ -904,6 +907,30 @@
     let updateCarouselTranslations = null;
     let syncCarouselRotation = null;
 
+    function getSiteRootUrl() {
+        return new URL(SITE_ROOT, window.location.href);
+    }
+
+    function getProfileUrl(language) {
+        const root = getSiteRootUrl();
+        return language === DEFAULT_LANGUAGE ? root : new URL(`${language}/`, root);
+    }
+
+    function getWorkbenchUrl(language) {
+        const root = getSiteRootUrl();
+        return language === DEFAULT_LANGUAGE
+            ? new URL('workbench/', root)
+            : new URL(`${language}/workbench/`, root);
+    }
+
+    function resolveWorkbenchResource(href) {
+        if (href === '../') return getProfileUrl(currentLanguage).href;
+        if (href.startsWith('../assets/')) {
+            return new URL(`${SITE_ROOT}assets/${href.slice('../assets/'.length)}`, window.location.href).href;
+        }
+        return href;
+    }
+
     function getUrlLanguage() {
         try {
             const language = new URL(window.location.href).searchParams.get(URL_LANGUAGE_PARAM)?.slice(0, 2).toLowerCase();
@@ -915,6 +942,8 @@
     }
 
     function getInitialLanguage() {
+        if (LANGUAGES.includes(LOCALIZED_LANGUAGE)) return LOCALIZED_LANGUAGE;
+
         const urlLanguage = getUrlLanguage();
         if (urlLanguage) return urlLanguage;
 
@@ -933,6 +962,8 @@
     }
 
     function syncLanguageInUrl(language) {
+        if (LANGUAGES.includes(LOCALIZED_LANGUAGE)) return;
+
         try {
             const url = new URL(window.location.href);
             url.searchParams.set(URL_LANGUAGE_PARAM, language);
@@ -944,9 +975,8 @@
 
     function updateProfileLinks() {
         document.querySelectorAll('.profile-return, .hero-actions a[href^="../"]').forEach((link) => {
-            const target = new URL('../', window.location.href);
-            target.searchParams.set(URL_LANGUAGE_PARAM, currentLanguage);
-            link.setAttribute('href', `../?${target.searchParams.toString()}`);
+            const target = getProfileUrl(currentLanguage);
+            link.setAttribute('href', target.pathname);
         });
     }
 
@@ -983,8 +1013,19 @@
 
     function setLanguage(language) {
         if (!LANGUAGES.includes(language)) return;
-        currentLanguage = language;
         try { window.localStorage.setItem(STORAGE_KEY, language); } catch (error) { console.warn('[WORKBENCH] Could not save language', error); }
+
+        if (LANGUAGE_ROUTE === 'workbench') {
+            const target = getWorkbenchUrl(language);
+            target.hash = window.location.hash;
+            const current = new URL(window.location.href);
+            if (target.pathname !== current.pathname || current.search) {
+                window.location.assign(`${target.pathname}${target.hash}`);
+                return;
+            }
+        }
+
+        currentLanguage = language;
         translatePage();
         if (dialog.open && dialog.dataset.entryId) {
             populateDialog(dialog.dataset.entryId, {
@@ -1434,9 +1475,7 @@
 
         resources.forEach((resource) => {
             const link = createDialogElement('a', 'dialog-resource', resource.label);
-            link.href = resource.href === '../'
-                ? `../?${URL_LANGUAGE_PARAM}=${encodeURIComponent(currentLanguage)}`
-                : resource.href;
+            link.href = resolveWorkbenchResource(resource.href);
             link.target = '_blank';
             link.rel = 'noopener';
             links.append(link);
