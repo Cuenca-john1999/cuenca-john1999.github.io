@@ -21,22 +21,23 @@ INTERNATIONAL_PHONE_RE = re.compile(r"(?<!\w)\+\d[\d\s().-]{7,}\d(?!\w)")
 SPANISH_ID_RE = re.compile(r"\b(?:\d{8}[A-Z]|[XYZ]\d{7}[A-Z])\b", re.I)
 LOCAL_PATH_MARKERS = ("/Volumes/", "/Users/", ".continue/")
 PRIVATE_KEY_MARKERS = ("BEGIN OPENSSH PRIVATE KEY", "BEGIN RSA PRIVATE KEY", "BEGIN PRIVATE KEY")
-DEDICATION_MARKERS = (
-    "A mi madre,",
-    "To my mother,",
-    "Meiner Mutter,",
-)
+DEDICATION_MARKERS = ("A mi madre,", "To my mother,", "Meiner Mutter,")
+
+findings: list[tuple[str, str]] = []
 
 
-def fail(filename: str, category: str) -> None:
-    raise SystemExit(f"[pdf-privacy] {filename}: {category}")
+def report(filename: str, category: str) -> None:
+    item = (filename, category)
+    if item not in findings:
+        findings.append(item)
 
 
 def extract_pdf(path: Path) -> tuple[str, str]:
     try:
         reader = PdfReader(str(path))
     except Exception as exc:  # pragma: no cover - CI diagnostic
-        raise SystemExit(f"[pdf-privacy] {path.name}: unreadable PDF ({type(exc).__name__})") from exc
+        report(path.name, f"unreadable PDF ({type(exc).__name__})")
+        return "", ""
 
     text = "\n".join((page.extract_text() or "") for page in reader.pages)
     metadata = reader.metadata or {}
@@ -45,28 +46,26 @@ def extract_pdf(path: Path) -> tuple[str, str]:
 
 
 def check_common(path: Path, combined: str) -> None:
-    for marker in LOCAL_PATH_MARKERS:
-        if marker in combined:
-            fail(path.name, "local filesystem path exposed")
-    for marker in PRIVATE_KEY_MARKERS:
-        if marker in combined:
-            fail(path.name, "private-key material exposed")
+    if any(marker in combined for marker in LOCAL_PATH_MARKERS):
+        report(path.name, "local filesystem path exposed")
+    if any(marker in combined for marker in PRIVATE_KEY_MARKERS):
+        report(path.name, "private-key material exposed")
     if SPANISH_ID_RE.search(combined):
-        fail(path.name, "Spanish identity-document pattern exposed")
+        report(path.name, "Spanish identity-document pattern exposed")
 
 
 def check_cv(path: Path, combined: str) -> None:
     if EMAIL_RE.search(combined):
-        fail(path.name, "personal email address present in public CV")
+        report(path.name, "personal email address present in public CV")
     if INTERNATIONAL_PHONE_RE.search(combined):
-        fail(path.name, "international phone number present in public CV")
+        report(path.name, "international phone number present in public CV")
 
 
 def check_academic_project(path: Path, text: str) -> None:
-    if "bacteriophage-therapy-final-project" not in path.name:
-        return
-    if any(marker in text for marker in DEDICATION_MARKERS):
-        fail(path.name, "personal dedication content present in public academic project")
+    if "bacteriophage-therapy-final-project" in path.name and any(
+        marker in text for marker in DEDICATION_MARKERS
+    ):
+        report(path.name, "personal dedication content present in public academic project")
 
 
 def check_known_compatibility_aliases(hashes: dict[str, str]) -> None:
@@ -76,9 +75,7 @@ def check_known_compatibility_aliases(hashes: dict[str, str]) -> None:
     )
     for generic, spanish in aliases:
         if generic in hashes and spanish in hashes and hashes[generic] != hashes[spanish]:
-            raise SystemExit(
-                f"[pdf-privacy] {generic}: compatibility alias no longer matches its Spanish source"
-            )
+            report(generic, "compatibility alias no longer matches its Spanish source")
 
 
 def main() -> None:
@@ -97,6 +94,12 @@ def main() -> None:
         check_academic_project(path, text)
 
     check_known_compatibility_aliases(hashes)
+
+    if findings:
+        for filename, category in sorted(findings):
+            print(f"[pdf-privacy] {filename}: {category}")
+        raise SystemExit(f"[pdf-privacy] FAIL: {len(findings)} privacy finding(s) across {len(pdfs)} public PDFs")
+
     print(f"[pdf-privacy] OK: checked {len(pdfs)} public PDFs")
 
 
