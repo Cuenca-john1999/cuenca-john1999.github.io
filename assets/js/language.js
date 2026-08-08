@@ -30,6 +30,9 @@ const Language = (() => {
     const TRANSLATION_VERSION = '20260808-editorial-professional-language';
     const DEFAULT_LANGUAGE = 'en';
     const AVAILABLE_LANGUAGES = ['en', 'de', 'es'];
+    const LOCALIZED_LANGUAGE = document.documentElement.dataset.localizedLanguage?.slice(0, 2).toLowerCase() || null;
+    const SITE_ROOT = document.documentElement.dataset.siteRoot || '';
+    const LANGUAGE_ROUTE = document.documentElement.dataset.languageRoute || '';
     const CV_BY_LANGUAGE = {
         en: 'assets/documents/Jhon_M_Cuenca_CV_EN.pdf',
         de: 'assets/documents/Jhon_M_Cuenca_CV_DE.pdf',
@@ -53,6 +56,26 @@ const Language = (() => {
     
     let currentLanguage = DEFAULT_LANGUAGE;
     let translations = {};
+
+    function getSiteRootUrl() {
+        return new URL(SITE_ROOT || './', window.location.href);
+    }
+
+    function resolveSitePath(path) {
+        return `${SITE_ROOT}${path}`;
+    }
+
+    function getProfileUrl(language) {
+        const root = getSiteRootUrl();
+        return language === DEFAULT_LANGUAGE ? root : new URL(`${language}/`, root);
+    }
+
+    function getWorkbenchUrl(language) {
+        const root = getSiteRootUrl();
+        return language === DEFAULT_LANGUAGE
+            ? new URL('workbench/', root)
+            : new URL(`${language}/workbench/`, root);
+    }
 
     /**
      * Comprobar que el idioma existe
@@ -97,7 +120,7 @@ const Language = (() => {
         }
 
         try {
-            const response = await fetch(`data/translations/${language}.json?v=${TRANSLATION_VERSION}`);
+            const response = await fetch(resolveSitePath(`data/translations/${language}.json?v=${TRANSLATION_VERSION}`));
 
             if (!response.ok) {
                 throw new Error(`HTTP ${response.status}`);
@@ -125,6 +148,10 @@ const Language = (() => {
      * Obtener idioma inicial. La URL explícita tiene prioridad sobre preferencias locales.
      */
     function getInitialLanguage() {
+        if (isSupportedLanguage(LOCALIZED_LANGUAGE)) {
+            return LOCALIZED_LANGUAGE;
+        }
+
         const urlLanguage = getUrlLanguage();
         const savedLanguage = getSavedLanguage();
         const documentLanguage = document.documentElement.lang.slice(0, 2).toLowerCase();
@@ -153,6 +180,8 @@ const Language = (() => {
      * Mantener el idioma activo en la URL sin recargar ni perder el hash.
      */
     function syncLanguageInUrl(language) {
+        if (isSupportedLanguage(LOCALIZED_LANGUAGE)) return;
+
         try {
             const url = new URL(window.location.href);
             url.searchParams.set(URL_LANGUAGE_PARAM, language);
@@ -233,7 +262,7 @@ const Language = (() => {
         const cvPath = CV_BY_LANGUAGE[currentLanguage] || CV_BY_LANGUAGE[DEFAULT_LANGUAGE];
 
         document.querySelectorAll('[data-cv-link]').forEach((link) => {
-            link.setAttribute('href', cvPath);
+            link.setAttribute('href', resolveSitePath(cvPath));
         });
     }
 
@@ -244,7 +273,7 @@ const Language = (() => {
         const projectPath = FINAL_PROJECT_BY_LANGUAGE[currentLanguage] || FINAL_PROJECT_BY_LANGUAGE[DEFAULT_LANGUAGE];
 
         document.querySelectorAll('[data-final-project-link]').forEach((link) => {
-            link.setAttribute('href', projectPath);
+            link.setAttribute('href', resolveSitePath(projectPath));
         });
     }
 
@@ -255,7 +284,7 @@ const Language = (() => {
         const defensePath = DEFENSE_BY_LANGUAGE[currentLanguage] || DEFENSE_BY_LANGUAGE[DEFAULT_LANGUAGE];
 
         document.querySelectorAll('[data-defense-link]').forEach((link) => {
-            link.setAttribute('href', defensePath);
+            link.setAttribute('href', resolveSitePath(defensePath));
         });
     }
 
@@ -265,9 +294,10 @@ const Language = (() => {
     function updateWorkbenchLinks() {
         document.querySelectorAll('a[href^="workbench/"]').forEach((link) => {
             try {
-                const target = new URL(link.getAttribute('href'), window.location.href);
-                target.searchParams.set(URL_LANGUAGE_PARAM, currentLanguage);
-                link.setAttribute('href', `${target.pathname.replace(/^\//, '')}${target.search}${target.hash}`);
+                const currentTarget = new URL(link.getAttribute('href'), window.location.href);
+                const target = getWorkbenchUrl(currentLanguage);
+                target.hash = currentTarget.hash;
+                link.setAttribute('href', `${target.pathname}${target.hash}`);
             } catch (error) {
                 console.warn('[LANGUAGE] No se pudo actualizar un enlace de Workbench', error);
             }
@@ -294,7 +324,19 @@ const Language = (() => {
                     return;
                 }
 
-                this.set(control.dataset.languageSet);
+                const language = control.dataset.languageSet;
+                if (LANGUAGE_ROUTE === 'profile') {
+                    saveLanguagePreference(language);
+                    const target = getProfileUrl(language);
+                    target.hash = window.location.hash;
+                    const current = new URL(window.location.href);
+                    if (target.pathname !== current.pathname || current.search) {
+                        window.location.assign(`${target.pathname}${target.hash}`);
+                        return;
+                    }
+                }
+
+                this.set(language);
             });
         });
 

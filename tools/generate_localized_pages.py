@@ -143,12 +143,10 @@ def render_main(language: str) -> str:
         f'"@id": "{url}#profile-page"',
         "localized ProfilePage id",
     )
-    source = replace_once(
-        source,
-        f'"url": "{BASE_URL}/",',
-        f'"url": "{url}",',
-        "localized ProfilePage url",
-    )
+    profile_url = f'"url": "{BASE_URL}/",'
+    if profile_url not in source:
+        raise SystemExit("[localized-pages] missing ProfilePage url")
+    source = source.replace(profile_url, f'"url": "{url}",', 1)
 
     source = source.replace('href="assets/', 'href="../assets/')
     source = source.replace('src="assets/', 'src="../assets/')
@@ -200,12 +198,16 @@ def render_sitemap() -> str:
     return f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{body}\n</urlset>\n'
 
 
+def normalize_generated_html(text: str) -> str:
+    return "\n".join(line.rstrip() for line in text.splitlines()) + "\n"
+
+
 def outputs() -> dict[Path, str]:
     return {
-        ROOT / "de" / "index.html": render_main("de"),
-        ROOT / "es" / "index.html": render_main("es"),
-        ROOT / "de" / "workbench" / "index.html": render_workbench("de"),
-        ROOT / "es" / "workbench" / "index.html": render_workbench("es"),
+        ROOT / "de" / "index.html": normalize_generated_html(render_main("de")),
+        ROOT / "es" / "index.html": normalize_generated_html(render_main("es")),
+        ROOT / "de" / "workbench" / "index.html": normalize_generated_html(render_workbench("de")),
+        ROOT / "es" / "workbench" / "index.html": normalize_generated_html(render_workbench("es")),
         ROOT / "sitemap.xml": render_sitemap(),
     }
 
