@@ -95,6 +95,8 @@ def check_required_content() -> None:
     index = (ROOT / "index.html").read_text(encoding="utf-8")
     workbench = (ROOT / "workbench" / "index.html").read_text(encoding="utf-8")
     workbench_js = (ROOT / "workbench" / "js" / "workbench.js").read_text(encoding="utf-8")
+    workbench_data = (ROOT / "workbench" / "js" / "workbench-data.js").read_text(encoding="utf-8")
+    workbench_source = f"{workbench_js}\n{workbench_data}"
     language_js = (ROOT / "assets" / "js" / "language.js").read_text(encoding="utf-8")
 
     for required in ("DeutschOS", "AETEL 2025", "Bacteriophage Therapy"):
@@ -126,7 +128,7 @@ def check_required_content() -> None:
         (ROOT / "data" / "translations" / f"{language}.json").read_text(encoding="utf-8")
         for language in LANGUAGES
     ]
-    published_text = "\n".join([index, workbench, workbench_js, *translation_texts])
+    published_text = "\n".join([index, workbench, workbench_source, *translation_texts])
     for phrase in forbidden:
         if phrase in published_text:
             fail(f"animal-experience overclaim wording found: {phrase}")
@@ -143,9 +145,9 @@ def check_required_content() -> None:
         fail("main portfolio fallback language is not English")
     if "URL_LANGUAGE_PARAM = 'lang'" not in language_js:
         fail("main portfolio shareable language routing is missing")
-    if "URL_LANGUAGE_PARAM = 'lang'" not in workbench_js:
+    if "URL_LANGUAGE_PARAM = 'lang'" not in workbench_source:
         fail("Workbench shareable language routing is missing")
-    if "currentLanguae" in workbench_js:
+    if "currentLanguae" in workbench_source:
         fail("Workbench contains the misspelled currentLanguage identifier that breaks multi-page resource rendering")
 
     final_project_paths = {
@@ -168,13 +170,13 @@ def check_required_content() -> None:
         "../assets/documents/bacteriophage-therapy-final-project_ES.pdf",
     )
     for resource_path in workbench_language_resources:
-        if resource_path not in workbench_js:
+        if resource_path not in workbench_source:
             fail(f"Workbench language-specific bacteriophage resource is missing: {resource_path}")
 
     old_generic_link = "bacteriophage-therapy-final-project.pdf"
     if f'href="assets/documents/{old_generic_link}"' in index:
         fail("main portfolio still links the generic bacteriophage PDF instead of a language-specific version")
-    if f"../assets/documents/{old_generic_link}" in workbench_js:
+    if f"../assets/documents/{old_generic_link}" in workbench_source:
         fail("Workbench still links the generic bacteriophage PDF instead of language-specific versions")
 
     defense_paths = {
@@ -197,13 +199,13 @@ def check_required_content() -> None:
         "../assets/documents/bacteriophage-therapy-defense_ES.pdf",
     )
     for resource_path in workbench_defense_resources:
-        if resource_path not in workbench_js:
+        if resource_path not in workbench_source:
             fail(f"Workbench language-specific bacteriophage defense resource is missing: {resource_path}")
 
     old_generic_defense = "bacteriophage-therapy-defense.pdf"
     if f'href="assets/documents/{old_generic_defense}"' in index:
         fail("main portfolio still links the generic defense PDF instead of a language-specific version")
-    if f"../assets/documents/{old_generic_defense}" in workbench_js:
+    if f"../assets/documents/{old_generic_defense}" in workbench_source:
         fail("Workbench still links the generic defense PDF instead of language-specific versions")
 
     defense_notice_markers = (
@@ -251,7 +253,7 @@ def check_required_content() -> None:
         'Documentary basis & confidentiality',
     )
     for marker in workbench_milestone_markers:
-        if marker not in workbench + workbench_js:
+        if marker not in workbench + workbench_source:
             fail(f"Workbench evidence/milestone marker missing: {marker}")
 
 
