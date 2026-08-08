@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const appRoot = document.querySelector('#app');
     const skipLink = document.querySelector('.skip-link');
     const contactForms = Array.from(document.querySelectorAll('[data-contact-form]'));
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     let lastScrollY = window.scrollY;
     let scrollDirectionStartY = window.scrollY;
     let scrollDirection = 'up';
@@ -334,11 +335,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    reveals.forEach((element, index) => {
-        window.setTimeout(() => {
-            element.classList.add('is-visible');
-        }, 260 + (index * 220));
-    });
+    if (reduceMotion.matches) {
+        reveals.forEach((element) => element.classList.add('is-visible'));
+    } else {
+        reveals.forEach((element, index) => {
+            window.setTimeout(() => {
+                element.classList.add('is-visible');
+            }, 260 + (index * 220));
+        });
+    }
 
     const setActiveSection = (sectionId) => {
         if (!sectionId) {
