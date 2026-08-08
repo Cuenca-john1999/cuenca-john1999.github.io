@@ -1,0 +1,43 @@
+name: Apply editorial polish
+
+on:
+  push:
+    branches:
+      - audit-3p/ronda-6-editorial
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: audit-3p/ronda-6-editorial
+      - name: Apply exact editorial replacements
+        run: python3 tools/apply_editorial_polish.py
+      - name: Verify generated files
+        run: |
+          python3 -m json.tool data/translations/en.json >/dev/null
+          python3 -m json.tool data/translations/de.json >/dev/null
+          python3 -m json.tool data/translations/es.json >/dev/null
+          node --check assets/js/language.js
+          git diff --check
+      - name: Commit exact result
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            data/translations/en.json \
+            data/translations/de.json \
+            data/translations/es.json \
+            assets/js/language.js \
+            index.html
+          if git diff --cached --quiet; then
+            echo 'No editorial changes to commit.'
+            exit 0
+          fi
+          git commit -m 'edit: polish multilingual professional wording'
+          git push origin HEAD:audit-3p/ronda-6-editorial
