@@ -435,18 +435,18 @@
     "controllerTitle": "Responsable",
     "controllerBody": "Jhon M. Cuenca es responsable de los datos personales enviados mediante el formulario de contacto de este portafolio. El contacto está disponible a través del formulario profesional del propio portafolio.",
     "dataTitle": "Datos recogidos",
-    "dataBody": "El formulario solicita nombre, dirección de correo electrónico y mensaje. Envía únicamente la información necesaria para tu consulta profesional.",
+    "dataBody": "El formulario solicita nombre, dirección de correo electrónico y mensaje. Web3Forms indica que el tratamiento de los envíos también puede incluir metadatos técnicos como dirección IP, marca temporal e información del referente. Envía únicamente la información necesaria para tu consulta profesional.",
     "purposeTitle": "Finalidad y base jurídica",
-    "purposeBody": "La información se utiliza para recibir y responder consultas profesionales, oportunidades de laboratorio, contactos relacionados con investigación o propuestas de colaboración. Según el contexto, el tratamiento puede ser necesario para realizar actuaciones solicitadas antes de un posible contrato y/o basarse en el interés legítimo de responder correspondencia profesional.",
+    "purposeBody": "La información se utiliza para recibir y responder consultas profesionales, oportunidades de laboratorio, contactos relacionados con investigación o propuestas de colaboración. Según el contexto, el tratamiento puede ser necesario para aplicar medidas precontractuales solicitadas antes de un posible contrato laboral u otro contrato conforme al artículo 6.1.b del RGPD, o puede basarse en el interés legítimo del artículo 6.1.f del RGPD en recibir y responder correspondencia profesional pertinente.",
     "providerTitle": "Proveedor del formulario y tratamiento internacional",
-    "providerBody": "El formulario de contacto se transmite mediante Web3Forms. Web3Forms indica en su documentación pública que sus servidores están ubicados en Estados Unidos (US-East). El tratamiento y la conservación por parte del proveedor se rigen por la información vigente de Web3Forms.",
+    "providerBody": "El formulario de contacto se transmite mediante Web3Forms, operado por Web3Creative, que actúa como encargado del tratamiento de los envíos. Web3Forms indica que opera desde India, utiliza infraestructura que incluye AWS, Cloudflare y Hetzner y puede tratar datos en varias regiones. Para transferencias desde el EEE, Reino Unido o Suiza que requieran un mecanismo de transferencia, su acuerdo de tratamiento incorpora Cláusulas Contractuales Tipo. Su DPA actual también enumera subencargados para la prevención de spam, entre ellos CleanTalk y Akismet, que pueden recibir la dirección IP y el correo electrónico de quien envía el formulario.",
     "retentionTitle": "Conservación",
-    "retentionBody": "El portafolio estático no mantiene una base de datos separada de los envíos. El mensaje entregado puede permanecer en el servicio de correo receptor según su configuración y políticas; la conservación por parte del proveedor del formulario se rige por la información vigente de Web3Forms.",
+    "retentionBody": "El portafolio estático no mantiene una base de datos separada de los envíos. Web3Forms indica que los datos de los formularios están sujetos a un tiempo de vida físico de hasta tres años; la visibilidad en el panel puede depender del plan y los datos pueden eliminarse antes. El mensaje entregado también puede permanecer en el servicio de correo receptor según su configuración y políticas.",
     "rightsTitle": "Tus derechos",
     "rightsBody": "Cuando sea aplicable el RGPD, pueden existir derechos de acceso, rectificación, supresión, limitación, oposición y el derecho a presentar una reclamación ante una autoridad de protección de datos competente.",
     "trackingTitle": "Analítica y perfilado",
     "trackingBody": "Este portafolio no utiliza rastreadores publicitarios, perfilado de comportamiento ni servicios de analítica.",
-    "updated": "Última actualización: 7 de agosto de 2026"
+    "updated": "Última actualización: 8 de agosto de 2026"
   },
   "notFoundPage": {
     "kicker": "404",

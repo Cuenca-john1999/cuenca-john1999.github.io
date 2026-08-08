@@ -317,7 +317,7 @@ def check_auxiliary_i18n_keys(translations: dict[str, dict]) -> None:
                 fail(f"{relative} references missing {language} i18n keys: {missing}")
 
 
-def check_structured_data_and_privacy() -> None:
+def check_structured_data_and_privacy(translations: dict[str, dict]) -> None:
     index = (ROOT / "index.html").read_text(encoding="utf-8")
     blocks = re.findall(r'<script type="application/ld\+json">\s*(.*?)\s*</script>', index, flags=re.S)
     if len(blocks) != 1:
@@ -328,10 +328,47 @@ def check_structured_data_and_privacy() -> None:
     person = data.get("mainEntity", {})
     if person.get("@type") != "Person" or person.get("name") != "Jhon M. Cuenca":
         fail("ProfilePage mainEntity does not identify Jhon M. Cuenca as Person")
+
     privacy = (ROOT / "privacy.html").read_text(encoding="utf-8")
-    for marker in ("Web3Forms", "United States (US-East)", "privacyPage.rightsBody"):
+    for marker in (
+        "Web3Forms",
+        "https://web3forms.com/privacy",
+        "https://web3forms.com/dpa",
+        "privacyPage.rightsBody",
+    ):
         if marker not in privacy:
             fail(f"privacy information marker missing: {marker}")
+
+    required_privacy_keys = (
+        "controllerBody",
+        "dataBody",
+        "purposeBody",
+        "providerBody",
+        "retentionBody",
+        "rightsBody",
+        "trackingBody",
+        "updated",
+    )
+    privacy_texts = [privacy]
+    for language in LANGUAGES:
+        privacy_page = translations[language].get("privacyPage")
+        if not isinstance(privacy_page, dict):
+            fail(f"privacyPage translation block missing for {language}")
+        missing = [key for key in required_privacy_keys if not privacy_page.get(key)]
+        if missing:
+            fail(f"privacyPage translation content missing for {language}: {missing}")
+        privacy_texts.extend(str(privacy_page[key]) for key in required_privacy_keys)
+
+    combined_privacy_text = "\n".join(privacy_texts)
+    stale_provider_markers = (
+        "United States (US-East)",
+        "Vereinigten Staaten (US-East)",
+        "Estados Unidos (US-East)",
+    )
+    for marker in stale_provider_markers:
+        if marker in combined_privacy_text:
+            fail(f"stale Web3Forms provider wording found in privacy information: {marker}")
+
     if "https://cuenca-john1999.github.io/privacy.html" not in (ROOT / "sitemap.xml").read_text(encoding="utf-8"):
         fail("privacy.html is missing from sitemap.xml")
 
@@ -433,7 +470,7 @@ def main() -> None:
     check_duplicate_ids(ROOT / "privacy.html")
     check_duplicate_ids(ROOT / "404.html")
     check_local_links_and_fragments()
-    check_structured_data_and_privacy()
+    check_structured_data_and_privacy(translations)
     check_search_discovery()
     check_public_privacy_guards()
     check_cache_busting()

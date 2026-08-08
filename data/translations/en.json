@@ -435,18 +435,18 @@
     "controllerTitle": "Controller",
     "controllerBody": "Jhon M. Cuenca is responsible for the personal data submitted through this portfolio contact form. Contact is available through the professional contact form on the portfolio.",
     "dataTitle": "Data collected",
-    "dataBody": "The form asks for your name, email address and message. Please send only information needed for your professional enquiry.",
+    "dataBody": "The form asks for your name, email address and message. Web3Forms states that submission processing may also include technical metadata such as IP address, timestamp and referrer information. Please send only information needed for your professional enquiry.",
     "purposeTitle": "Purpose and legal basis",
-    "purposeBody": "The information is used to receive and respond to professional enquiries, laboratory opportunities, research-related contact or collaboration requests. Depending on the context, processing may be necessary for steps requested before a potential contract and/or for the legitimate interest of responding to professional correspondence.",
+    "purposeBody": "The information is used to receive and respond to professional enquiries, laboratory opportunities, research-related contact or collaboration requests. Depending on the context, processing may be necessary for steps requested before a potential employment or other contract under Article 6(1)(b) GDPR, or may rely on the legitimate interest under Article 6(1)(f) GDPR in receiving and responding to relevant professional correspondence.",
     "providerTitle": "Form provider and international processing",
-    "providerBody": "The contact form is transmitted through Web3Forms. Web3Forms states in its public documentation that its servers are located in the United States (US-East). Provider-side processing and retention are governed by Web3Forms current service information.",
+    "providerBody": "The contact form is transmitted through Web3Forms, operated by Web3Creative, which acts as processor for form submissions. Web3Forms states that it operates from India, uses infrastructure including AWS, Cloudflare and Hetzner, and may process data in multiple regions. For transfers from the EEA, United Kingdom or Switzerland that require a transfer mechanism, its DPA incorporates Standard Contractual Clauses. Its current DPA also lists spam-prevention sub-processors including CleanTalk and Akismet, which may receive the submitter IP address and email address.",
     "retentionTitle": "Retention",
-    "retentionBody": "The static portfolio itself does not maintain a separate submissions database. The delivered message may remain in the receiving email service according to its settings and policies, while provider-side storage is governed by Web3Forms current service information.",
+    "retentionBody": "The static portfolio itself does not maintain a separate submissions database. Web3Forms states that form-submission data is subject to a physical time-to-live of up to three years, while dashboard visibility can depend on the plan and data may be deleted earlier. The delivered message may also remain in the receiving email service according to its settings and policies.",
     "rightsTitle": "Your rights",
     "rightsBody": "Where the GDPR applies, you may have rights including access, rectification, erasure, restriction, objection and the right to lodge a complaint with a competent data protection supervisory authority.",
     "trackingTitle": "Analytics and profiling",
     "trackingBody": "This portfolio does not use advertising trackers, behavioural profiling or analytics services.",
-    "updated": "Last updated: 7 August 2026"
+    "updated": "Last updated: 8 August 2026"
   },
   "notFoundPage": {
     "kicker": "404",
