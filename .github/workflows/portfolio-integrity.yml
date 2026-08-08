@@ -15,6 +15,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Verify content and translations
         run: python3 tools/verify_portfolio_integrity.py
+      - name: Verify Workbench evidence provenance
+        run: python3 tools/verify_workbench_evidence.py
       - name: Verify Google Search Console file
         run: |
           set -euo pipefail
