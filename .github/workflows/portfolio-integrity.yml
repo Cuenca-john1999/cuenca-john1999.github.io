@@ -17,6 +17,8 @@ jobs:
         run: python3 tools/verify_portfolio_integrity.py
       - name: Verify Workbench evidence provenance
         run: python3 tools/verify_workbench_evidence.py
+      - name: Verify localized SEO pages
+        run: python3 tools/generate_localized_pages.py --check
       - name: Install PDF privacy checker
         run: python3 -m pip install 'pypdf==6.15.0'
       - name: Verify public PDF privacy
