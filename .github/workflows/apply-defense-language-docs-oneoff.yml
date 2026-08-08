@@ -1,0 +1,47 @@
+name: Apply defense language docs one-off
+
+on:
+  push:
+    branches:
+      - audit/defense-language-docs-2026-08-08
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: audit/defense-language-docs-2026-08-08
+          fetch-depth: 0
+      - name: Apply guarded defense-document evolution
+        run: python3 tools/apply_defense_language_docs_once.py
+      - name: Verify portfolio integrity
+        run: python3 tools/verify_portfolio_integrity.py
+      - name: Verify JavaScript syntax
+        run: |
+          node --check assets/js/language.js
+          node --check workbench/js/workbench.js
+      - name: Verify clean diff syntax
+        run: git diff --check
+      - name: Commit audited production changes
+        run: |
+          rm tools/apply_defense_language_docs_once.py
+          git config user.name "Jhon Cuenca"
+          git config user.email "72253286+Cuenca-john1999@users.noreply.github.com"
+          git add \
+            index.html \
+            privacy.html \
+            404.html \
+            assets/js/language.js \
+            data/translations/en.json \
+            data/translations/de.json \
+            data/translations/es.json \
+            workbench/index.html \
+            workbench/js/workbench.js \
+            tools/verify_portfolio_integrity.py
+          git diff --cached --check
+          git commit -m "feat: localize bacteriophage defense documents"
+          git push origin audit/defense-language-docs-2026-08-08
