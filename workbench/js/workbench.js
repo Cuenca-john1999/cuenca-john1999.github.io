@@ -549,7 +549,7 @@
                 ],
                 resources: [
                     { label: 'Final project · Unofficial English translation', href: '../assets/documents/bacteriophage-therapy-final-project_EN.pdf' },
-                    { label: 'Defense presentation · 17 slides', href: '../assets/documents/bacteriophage-therapy-defense.pdf' }
+                    { label: 'Defense presentation · Unofficial English translation · 17 slides · Original: Spanish', href: '../assets/documents/bacteriophage-therapy-defense_EN.pdf' }
                 ]
             },
             chitosan: {
@@ -694,7 +694,7 @@
                 ],
                 resources: [
                     { label: 'Trabajo final original · Español', href: '../assets/documents/bacteriophage-therapy-final-project_ES.pdf' },
-                    { label: 'Presentación de defensa · 17 diapositivas', href: '../assets/documents/bacteriophage-therapy-defense.pdf' }
+                    { label: 'Presentación de defensa original · Español · 17 diapositivas', href: '../assets/documents/bacteriophage-therapy-defense_ES.pdf' }
                 ]
             },
             chitosan: {
@@ -839,7 +839,7 @@
                 ],
                 resources: [
                     { label: 'Abschlussarbeit · Inoffizielle deutsche Übersetzung', href: '../assets/documents/bacteriophage-therapy-final-project_DE.pdf' },
-                    { label: 'Präsentation zur Verteidigung · 17 Folien', href: '../assets/documents/bacteriophage-therapy-defense.pdf' }
+                    { label: 'Verteidigungspräsentation · Inoffizielle deutsche Übersetzung · 17 Folien · Original: Spanisch', href: '../assets/documents/bacteriophage-therapy-defense_DE.pdf' }
                 ]
             },
             chitosan: {
