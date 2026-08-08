@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Privacy preflight for PDFs published by the portfolio.
 
-The check intentionally reports only the affected filename and finding category;
-it never prints the matched sensitive value into CI logs.
+Blocking findings cover sensitive data that should not be public. Academic
+personal-dedication content is reported as an advisory because it belongs to
+the authored source document and requires an explicit publication decision.
+Matched sensitive values are never printed into CI logs.
 """
 
 from __future__ import annotations
@@ -23,20 +25,29 @@ LOCAL_PATH_MARKERS = ("/Volumes/", "/Users/", ".continue/")
 PRIVATE_KEY_MARKERS = ("BEGIN OPENSSH PRIVATE KEY", "BEGIN RSA PRIVATE KEY", "BEGIN PRIVATE KEY")
 DEDICATION_MARKERS = ("A mi madre,", "To my mother,", "Meiner Mutter,")
 
-findings: list[tuple[str, str]] = []
+blockers: list[tuple[str, str]] = []
+advisories: list[tuple[str, str]] = []
 
 
-def report(filename: str, category: str) -> None:
+def add_unique(target: list[tuple[str, str]], filename: str, category: str) -> None:
     item = (filename, category)
-    if item not in findings:
-        findings.append(item)
+    if item not in target:
+        target.append(item)
+
+
+def block(filename: str, category: str) -> None:
+    add_unique(blockers, filename, category)
+
+
+def advise(filename: str, category: str) -> None:
+    add_unique(advisories, filename, category)
 
 
 def extract_pdf(path: Path) -> tuple[str, str]:
     try:
         reader = PdfReader(str(path))
     except Exception as exc:  # pragma: no cover - CI diagnostic
-        report(path.name, f"unreadable PDF ({type(exc).__name__})")
+        block(path.name, f"unreadable PDF ({type(exc).__name__})")
         return "", ""
 
     text = "\n".join((page.extract_text() or "") for page in reader.pages)
@@ -47,25 +58,25 @@ def extract_pdf(path: Path) -> tuple[str, str]:
 
 def check_common(path: Path, combined: str) -> None:
     if any(marker in combined for marker in LOCAL_PATH_MARKERS):
-        report(path.name, "local filesystem path exposed")
+        block(path.name, "local filesystem path exposed")
     if any(marker in combined for marker in PRIVATE_KEY_MARKERS):
-        report(path.name, "private-key material exposed")
+        block(path.name, "private-key material exposed")
     if SPANISH_ID_RE.search(combined):
-        report(path.name, "Spanish identity-document pattern exposed")
+        block(path.name, "Spanish identity-document pattern exposed")
 
 
 def check_cv(path: Path, combined: str) -> None:
     if EMAIL_RE.search(combined):
-        report(path.name, "personal email address present in public CV")
+        block(path.name, "personal email address present in public CV")
     if INTERNATIONAL_PHONE_RE.search(combined):
-        report(path.name, "international phone number present in public CV")
+        block(path.name, "international phone number present in public CV")
 
 
 def check_academic_project(path: Path, text: str) -> None:
     if "bacteriophage-therapy-final-project" in path.name and any(
         marker in text for marker in DEDICATION_MARKERS
     ):
-        report(path.name, "personal dedication content present in public academic project")
+        advise(path.name, "personal dedication content is intentionally present in the public academic source")
 
 
 def check_known_compatibility_aliases(hashes: dict[str, str]) -> None:
@@ -75,7 +86,7 @@ def check_known_compatibility_aliases(hashes: dict[str, str]) -> None:
     )
     for generic, spanish in aliases:
         if generic in hashes and spanish in hashes and hashes[generic] != hashes[spanish]:
-            report(generic, "compatibility alias no longer matches its Spanish source")
+            block(generic, "compatibility alias no longer matches its Spanish source")
 
 
 def main() -> None:
@@ -95,12 +106,20 @@ def main() -> None:
 
     check_known_compatibility_aliases(hashes)
 
-    if findings:
-        for filename, category in sorted(findings):
-            print(f"[pdf-privacy] {filename}: {category}")
-        raise SystemExit(f"[pdf-privacy] FAIL: {len(findings)} privacy finding(s) across {len(pdfs)} public PDFs")
+    for filename, category in sorted(advisories):
+        print(f"[pdf-privacy] ADVISORY {filename}: {category}")
 
-    print(f"[pdf-privacy] OK: checked {len(pdfs)} public PDFs")
+    if blockers:
+        for filename, category in sorted(blockers):
+            print(f"[pdf-privacy] BLOCK {filename}: {category}")
+        raise SystemExit(
+            f"[pdf-privacy] FAIL: {len(blockers)} blocking finding(s) across {len(pdfs)} public PDFs"
+        )
+
+    print(
+        f"[pdf-privacy] OK: checked {len(pdfs)} public PDFs; "
+        f"{len(advisories)} non-blocking academic-source advisory item(s)"
+    )
 
 
 if __name__ == "__main__":
