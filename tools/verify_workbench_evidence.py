@@ -33,6 +33,16 @@ def main() -> None:
     )
     require_all(text, provenance_markers, "evidence-provenance marker")
 
+    visible_role_markers = (
+        "specific responsibility within the cell-culture workflow",
+        "was frequently called on to support supervised animal-sample procedures and molecular or immunology workflows",
+        "responsabilidad concreta dentro del flujo de cultivo celular",
+        "se recurría a mí con frecuencia para apoyar procedimientos supervisados con muestras animales y flujos de biología molecular o inmunología",
+        "konkreten Verantwortung im Zellkultur-Workflow",
+        "regelmäßig zur Unterstützung bei beaufsichtigten Verfahren mit Tierproben sowie bei molekularbiologischen und immunologischen Abläufen hinzugezogen",
+    )
+    require_all(text, visible_role_markers, "La Princesa visible role-progression marker")
+
     english_scope_markers = (
         "serum, peripheral blood, immune cells, cell lines and primary rat cells",
         "cytokine-stimulated and adherent cell cultures, including HaCaT",
