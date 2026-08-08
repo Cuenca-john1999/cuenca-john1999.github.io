@@ -26,6 +26,98 @@
 /* Cards */
 /* TODO: Contenedor, variantes */
 
+/*
+ * Desktop card alignment
+ *
+ * Experience and Education use parallel cards whose expandable content should
+ * not drag neighbouring controls to the bottom of the shared grid row.
+ * Keep action controls top-aligned as a baseline and, where subgrid is
+ * available, share internal rows so equivalent controls line up across cards.
+ */
+@media (min-width: 981px) {
+    .experience-section .focus-item__actions,
+    .education-section .focus-item__actions {
+        flex: none;
+        justify-content: flex-start;
+        align-self: start;
+    }
+
+    @supports (grid-template-rows: subgrid) {
+        .experience-section .focus-grid,
+        .education-section .focus-grid {
+            row-gap: 0;
+            column-gap: 1px;
+            align-items: stretch;
+        }
+
+        .experience-section .focus-grid {
+            grid-template-rows: repeat(6, auto);
+        }
+
+        .experience-section .focus-grid > .focus-item {
+            display: grid;
+            grid-template-rows: subgrid;
+            grid-row: span 6;
+            align-items: start;
+        }
+
+        .experience-section .focus-item > .focus-index {
+            grid-row: 1;
+        }
+
+        .experience-section .focus-item > h3 {
+            grid-row: 2;
+        }
+
+        .experience-section .focus-item > p:nth-of-type(1) {
+            grid-row: 3;
+        }
+
+        .experience-section .focus-item > p:nth-of-type(2) {
+            grid-row: 4;
+        }
+
+        .experience-section .focus-item > p:nth-of-type(3) {
+            grid-row: 5;
+        }
+
+        .experience-section .focus-item > .focus-item__actions {
+            grid-row: 6;
+        }
+
+        .education-section .focus-grid {
+            grid-template-rows: repeat(5, auto);
+        }
+
+        .education-section .focus-grid > .focus-item {
+            display: grid;
+            grid-template-rows: subgrid;
+            grid-row: span 5;
+            align-items: start;
+        }
+
+        .education-section .focus-item > .focus-index {
+            grid-row: 1;
+        }
+
+        .education-section .focus-item > h3 {
+            grid-row: 2;
+        }
+
+        .education-section .focus-item > p:nth-of-type(1) {
+            grid-row: 3;
+        }
+
+        .education-section .focus-item > p:nth-of-type(2) {
+            grid-row: 4;
+        }
+
+        .education-section .focus-item > .focus-item__actions {
+            grid-row: 5;
+        }
+    }
+}
+
 /* Formularios */
 /* TODO: Inputs, labels, validación */
 
