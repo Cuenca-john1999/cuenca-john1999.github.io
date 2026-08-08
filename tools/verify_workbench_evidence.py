@@ -5,6 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 WORKBENCH_JS = ROOT / "workbench" / "js" / "workbench.js"
+WORKBENCH_DATA = ROOT / "workbench" / "js" / "workbench-data.js"
 
 
 def fail(message: str) -> None:
@@ -18,7 +19,10 @@ def require_all(text: str, markers: tuple[str, ...], label: str) -> None:
 
 
 def main() -> None:
-    text = WORKBENCH_JS.read_text(encoding="utf-8")
+    text = "\n".join((
+        WORKBENCH_JS.read_text(encoding="utf-8"),
+        WORKBENCH_DATA.read_text(encoding="utf-8"),
+    ))
 
     provenance_markers = (
         "Evidence provenance & technical detail",
