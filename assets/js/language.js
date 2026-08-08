@@ -27,7 +27,7 @@
 const Language = (() => {
     const STORAGE_KEY = 'portfolio-language';
     const URL_LANGUAGE_PARAM = 'lang';
-    const TRANSLATION_VERSION = '20260808-phage-language-docs';
+    const TRANSLATION_VERSION = '20260808-phage-defense-language-docs';
     const DEFAULT_LANGUAGE = 'en';
     const AVAILABLE_LANGUAGES = ['en', 'de', 'es'];
     const CV_BY_LANGUAGE = {
@@ -39,6 +39,11 @@ const Language = (() => {
         en: 'assets/documents/bacteriophage-therapy-final-project_EN.pdf',
         de: 'assets/documents/bacteriophage-therapy-final-project_DE.pdf',
         es: 'assets/documents/bacteriophage-therapy-final-project_ES.pdf'
+    };
+    const DEFENSE_BY_LANGUAGE = {
+        en: 'assets/documents/bacteriophage-therapy-defense_EN.pdf',
+        de: 'assets/documents/bacteriophage-therapy-defense_DE.pdf',
+        es: 'assets/documents/bacteriophage-therapy-defense_ES.pdf'
     };
     const TRANSLATABLE_ATTRIBUTES = {
         i18nAriaLabel: 'aria-label',
@@ -244,6 +249,17 @@ const Language = (() => {
     }
 
     /**
+     * Sincronizar la presentación de defensa con el idioma activo. El original académico es ES.
+     */
+    function updateDefenseLinks() {
+        const defensePath = DEFENSE_BY_LANGUAGE[currentLanguage] || DEFENSE_BY_LANGUAGE[DEFAULT_LANGUAGE];
+
+        document.querySelectorAll('[data-defense-link]').forEach((link) => {
+            link.setAttribute('href', defensePath);
+        });
+    }
+
+    /**
      * Propagar el idioma a todos los enlaces hacia Workbench, incluidos deep links.
      */
     function updateWorkbenchLinks() {
@@ -306,6 +322,7 @@ const Language = (() => {
 
             updateCvLinks();
             updateFinalProjectLinks();
+            updateDefenseLinks();
             updateWorkbenchLinks();
             syncLanguageInUrl(currentLanguage);
             setupLanguageControls.call(this);
@@ -333,6 +350,7 @@ const Language = (() => {
             translatePage();
             updateCvLinks();
             updateFinalProjectLinks();
+            updateDefenseLinks();
             updateWorkbenchLinks();
             saveLanguagePreference(currentLanguage);
             syncLanguageInUrl(currentLanguage);

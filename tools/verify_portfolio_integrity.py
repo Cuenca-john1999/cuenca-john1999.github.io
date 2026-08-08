@@ -177,6 +177,44 @@ def check_required_content() -> None:
     if f"../assets/documents/{old_generic_link}" in workbench_js:
         fail("Workbench still links the generic bacteriophage PDF instead of language-specific versions")
 
+    defense_paths = {
+        "en": "assets/documents/bacteriophage-therapy-defense_EN.pdf",
+        "de": "assets/documents/bacteriophage-therapy-defense_DE.pdf",
+        "es": "assets/documents/bacteriophage-therapy-defense_ES.pdf",
+    }
+    for language, relative_path in defense_paths.items():
+        if not (ROOT / relative_path).is_file():
+            fail(f"language-specific bacteriophage defense PDF is missing for {language}: {relative_path}")
+        if relative_path not in language_js:
+            fail(f"main language routing is missing the {language} bacteriophage defense PDF: {relative_path}")
+
+    if index.count('data-defense-link') != 2:
+        fail("main portfolio must expose exactly two language-aware defense links")
+
+    workbench_defense_resources = (
+        "../assets/documents/bacteriophage-therapy-defense_EN.pdf",
+        "../assets/documents/bacteriophage-therapy-defense_DE.pdf",
+        "../assets/documents/bacteriophage-therapy-defense_ES.pdf",
+    )
+    for resource_path in workbench_defense_resources:
+        if resource_path not in workbench_js:
+            fail(f"Workbench language-specific bacteriophage defense resource is missing: {resource_path}")
+
+    old_generic_defense = "bacteriophage-therapy-defense.pdf"
+    if f'href="assets/documents/{old_generic_defense}"' in index:
+        fail("main portfolio still links the generic defense PDF instead of a language-specific version")
+    if f"../assets/documents/{old_generic_defense}" in workbench_js:
+        fail("Workbench still links the generic defense PDF instead of language-specific versions")
+
+    defense_notice_markers = (
+        "Defense presentation · Unofficial English translation · 17 slides · Original: Spanish",
+        "Verteidigungspräsentation · Inoffizielle deutsche Übersetzung · 17 Folien · Original: Spanisch",
+        "Presentación de defensa original · Español · 17 diapositivas",
+    )
+    for phrase in defense_notice_markers:
+        if phrase not in published_text:
+            fail(f"bacteriophage defense-language notice is missing: {phrase}")
+
     language_notice_markers = (
         "The original academic work is the Spanish version.",
         "Das akademische Original ist die spanische Fassung.",
