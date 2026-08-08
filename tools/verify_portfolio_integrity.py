@@ -203,6 +203,19 @@ def check_required_content() -> None:
     if index.count('class="credential-card"') != 3:
         fail("education credentials must remain split into exactly three visible credential cards")
 
+    workbench_milestone_markers = (
+        'groups.milestonesItem3',
+        'groups.milestonesItem4',
+        'groups.milestonesItem5',
+        '#entry-laprincesa',
+        '#entry-celignis',
+        'Documentary basis & privacy',
+        'Documentary basis & confidentiality',
+    )
+    for marker in workbench_milestone_markers:
+        if marker not in workbench + workbench_js:
+            fail(f"Workbench evidence/milestone marker missing: {marker}")
+
 
 
 class LinkCollector(HTMLParser):
@@ -285,6 +298,45 @@ def check_structured_data_and_privacy() -> None:
         fail("privacy.html is missing from sitemap.xml")
 
 
+
+def check_search_discovery() -> None:
+    """Guard the crawl/indexing surface used by Search Console and search engines."""
+    robots = (ROOT / "robots.txt").read_text(encoding="utf-8")
+    if "User-agent: *" not in robots or "Allow: /" not in robots:
+        fail("robots.txt does not allow public crawling")
+    sitemap_url = "https://cuenca-john1999.github.io/sitemap.xml"
+    if f"Sitemap: {sitemap_url}" not in robots:
+        fail("robots.txt does not advertise the canonical sitemap URL")
+
+    sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
+    required_urls = (
+        "https://cuenca-john1999.github.io/",
+        "https://cuenca-john1999.github.io/workbench/",
+        "https://cuenca-john1999.github.io/privacy.html",
+    )
+    for url in required_urls:
+        if f"<loc>{url}</loc>" not in sitemap:
+            fail(f"canonical URL missing from sitemap.xml: {url}")
+    if "404.html" in sitemap:
+        fail("404.html must not be included in sitemap.xml")
+
+    canonicals = {
+        "index.html": "https://cuenca-john1999.github.io/",
+        "workbench/index.html": "https://cuenca-john1999.github.io/workbench/",
+        "privacy.html": "https://cuenca-john1999.github.io/privacy.html",
+    }
+    for relative, expected in canonicals.items():
+        html = (ROOT / relative).read_text(encoding="utf-8")
+        if f'<link rel="canonical" href="{expected}">' not in html:
+            fail(f"canonical URL mismatch in {relative}: expected {expected}")
+        robots_match = re.search(r'<meta name="robots" content="([^"]+)">', html)
+        if not robots_match or "index" not in robots_match.group(1) or "follow" not in robots_match.group(1):
+            fail(f"index/follow robots directive missing from {relative}")
+
+    not_found = (ROOT / "404.html").read_text(encoding="utf-8")
+    if 'content="noindex,follow"' not in not_found:
+        fail("404.html must remain noindex,follow")
+
 def check_public_privacy_guards() -> None:
     text = "\n".join((ROOT / relative).read_text(encoding="utf-8") for relative in HTML_PAGES)
     for marker in ("/Volumes/", "/Users/", "djxmaicolx", ".continue/", "BEGIN OPENSSH PRIVATE KEY"):
@@ -344,6 +396,7 @@ def main() -> None:
     check_duplicate_ids(ROOT / "404.html")
     check_local_links_and_fragments()
     check_structured_data_and_privacy()
+    check_search_discovery()
     check_public_privacy_guards()
     check_cache_busting()
     check_required_content()

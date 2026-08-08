@@ -112,8 +112,11 @@
                 learningItem5: 'Animal Experimentation A+B+C · 70 h · in-person practical training',
                 milestones: 'Milestones',
                 milestonesBody: 'Documented progress points with direct evidence.',
-                milestonesItem1: 'Portfolio publication on GitHub Pages',
-                milestonesItem2: 'Completed academic bacteriophage literature review'
+                milestonesItem1: '2026 · Portfolio publication on GitHub Pages with automated integrity checks',
+                milestonesItem2: '2026 · Functional DeutschOS local prototype under active development',
+                milestonesItem3: '2025 · 370-hour FCT placement at Hospital Universitario de La Princesa',
+                milestonesItem4: '2025 · Completed co-authored bacteriophage final project · 10/10',
+                milestonesItem5: '2023 · Erasmus+ analytical biomass placement at Celignis'
             },
             entriesData: {
                 deutschos: 'Local German-learning environment focused on usable progress, laboratory vocabulary and transparent correction.',
@@ -266,8 +269,11 @@
                 learningItem5: 'Experimentación Animal A+B+C · 70 h · prácticas presenciales',
                 milestones: 'Hitos',
                 milestonesBody: 'Avances documentados con evidencia directa.',
-                milestonesItem1: 'Publicación del portafolio en GitHub Pages',
-                milestonesItem2: 'Revisión académica completada sobre bacteriofagoterapia'
+                milestonesItem1: '2026 · Publicación del portafolio en GitHub Pages con controles automáticos de integridad',
+                milestonesItem2: '2026 · Prototipo local funcional de DeutschOS en desarrollo activo',
+                milestonesItem3: '2025 · Prácticas FCT de 370 horas en el Hospital Universitario de La Princesa',
+                milestonesItem4: '2025 · Proyecto final de bacteriofagoterapia en coautoría completado · 10/10',
+                milestonesItem5: '2023 · Prácticas Erasmus+ de análisis de biomasa en Celignis'
             },
             entriesData: {
                 deutschos: 'Entorno local de aprendizaje de alemán centrado en progreso útil, vocabulario de laboratorio y corrección transparente.',
@@ -420,8 +426,11 @@
                 learningItem5: 'Versuchstierkunde A+B+C · 70 Std. · Präsenzpraxis',
                 milestones: 'Meilensteine',
                 milestonesBody: 'Dokumentierte Fortschritte mit direkter Evidenz.',
-                milestonesItem1: 'Portfolio-Veröffentlichung auf GitHub Pages',
-                milestonesItem2: 'Abgeschlossene akademische Literaturübersicht zur Phagentherapie'
+                milestonesItem1: '2026 · Portfolio auf GitHub Pages veröffentlicht, mit automatischen Integritätsprüfungen',
+                milestonesItem2: '2026 · Funktionsfähiger lokaler DeutschOS-Prototyp in aktiver Entwicklung',
+                milestonesItem3: '2025 · 370-stündiges FCT-Praktikum am Hospital Universitario de La Princesa',
+                milestonesItem4: '2025 · Gemeinsam verfasstes Abschlussprojekt zur Phagentherapie abgeschlossen · 10/10',
+                milestonesItem5: '2023 · Erasmus+-Praktikum in der Biomasseanalytik bei Celignis'
             },
             entriesData: {
                 deutschos: 'Lokale Deutsch-Lernumgebung mit Fokus auf nutzbaren Fortschritt, Laborwortschatz und transparente Korrektur.',
@@ -594,7 +603,8 @@
                     { title: 'Animal-sample collection', body: 'personally performed, under supervision and established protocols, collection/extraction of murine samples and subsequent handling of animal-derived material' },
                     { title: 'Molecular biology', body: 'RNA extraction, PCR, electrophoresis and transgenic-mouse genotyping; Western blot gel casting, transfer and blocking' },
                     { title: 'Immunology', body: 'ELISA; immunohistochemistry; and immunofluorescence' },
-                    { title: 'Documentation & professional evidence', body: 'An existing professional reference supports the placement, protocol work and laboratory-material responsibilities.' }
+                    { title: 'Protocols, documentation & digital communication', body: 'work with laboratory protocols and scientific databases; material and inventory management; development of a bilingual scientific website for the research group' },
+                    { title: 'Documentary basis & privacy', body: 'The documented 370-hour FCT placement and an existing professional reference support the placement scope, protocol work and laboratory-material responsibilities. Supporting records remain private when publication would expose personal, third-party or confidential laboratory information.' }
                 ],
                 disclosure: 'Scope note: this entry combines documentary evidence with personally confirmed supervised hands-on work. This is documented laboratory placement experience, not an independent clinical claim or therapeutic study, and it does not claim independent clinical, veterinary or surgical practice.'
             },
@@ -610,7 +620,8 @@
                     { title: 'Instrumentation', body: 'operation of a CHNOS analyser, TGA Q500, CARBOLITE furnaces, BMP units and Biogas 5000' },
                     { title: 'Quality & traceability', body: 'work according to established SOPs, internal statistical quality-control self-checks, Thermal Excel records, database updates, batches, labels and result traceability' },
                     { title: 'Operational documentation created', body: 'operational guides, data sheets, work instructions and troubleshooting documentation covering analytical methods, analysis startup, batches, samples and NIR, labelling, Thermal Excel and traceability' },
-                    { title: 'Responsibility & professional evidence', body: 'An existing professional reference supports the placement and its operational responsibilities. This foundation supports continued development in method validation, uncertainty analysis and cross-method interpretation.' }
+                    { title: 'Responsibility & handover', body: 'progressive responsibility for the volatile-matter workflow, including handover training and supervision of replacement interns. This foundation supports continued development in method validation, uncertainty analysis and cross-method interpretation.' },
+                    { title: 'Documentary basis & confidentiality', body: 'The documented Erasmus+ placement and an existing professional reference support the practical scope and operational responsibilities. Internal or client-related operational material is not republished; only a public-safe summary is shown.' }
                 ],
                 disclosure: 'Scope note: this entry documents supervised analytical placement practice and validated routine participation.'
             }
@@ -737,7 +748,8 @@
                     { title: 'Obtención de muestras animales', body: 'obtención/extracción de muestras murinas realizada personalmente, bajo supervisión y protocolos establecidos, y posterior manejo del material de origen animal' },
                     { title: 'Biología molecular', body: 'extracción de ARN, PCR, electroforesis y genotipado de ratones transgénicos; preparación de geles de Western blot, transferencia y bloqueo' },
                     { title: 'Inmunología', body: 'ELISA; inmunohistoquímica e inmunofluorescencia' },
-                    { title: 'Documentación y evidencia profesional', body: 'Existe una referencia profesional que respalda las prácticas, el trabajo con protocolos y las responsabilidades sobre material de laboratorio.' }
+                    { title: 'Protocolos, documentación y comunicación digital', body: 'trabajo con protocolos de laboratorio y bases de datos científicas; gestión de material e inventario; desarrollo de una web científica bilingüe para el grupo de investigación' },
+                    { title: 'Base documental y privacidad', body: 'Las prácticas FCT documentadas de 370 horas y una referencia profesional existente respaldan el alcance de las prácticas, el trabajo con protocolos y las responsabilidades sobre material de laboratorio. La documentación de apoyo se mantiene privada cuando su publicación expondría información personal, de terceros o confidencial del laboratorio.' }
                 ],
                 disclosure: 'Nota de alcance: esta entrada combina evidencia documental con experiencia práctica supervisada confirmada personalmente. Se documenta experiencia de prácticas de laboratorio, no una afirmación clínica independiente ni un estudio terapéutico, y no se afirma ejercicio clínico, veterinario o quirúrgico independiente.'
             },
@@ -753,7 +765,8 @@
                     { title: 'Instrumentación', body: 'operación de analizador CHNOS, TGA Q500, hornos CARBOLITE, unidades BMP y Biogas 5000' },
                     { title: 'Calidad y trazabilidad', body: 'trabajo conforme a SOP establecidos, autocontroles estadísticos de calidad, registros en Thermal Excel, actualización de bases de datos, lotes, etiquetas y trazabilidad de resultados' },
                     { title: 'Documentación operativa creada', body: 'guías operativas, hojas de datos, instrucciones de trabajo y documentación de troubleshooting sobre métodos analíticos, inicio de análisis, batches, muestras y NIR, etiquetado, Thermal Excel y trazabilidad' },
-                    { title: 'Responsabilidad y evidencia profesional', body: 'Existe una referencia profesional que respalda las prácticas y sus responsabilidades operativas. Esta base permite seguir avanzando en validación de métodos, análisis de incertidumbre e interpretación cruzada de técnicas.' }
+                    { title: 'Responsabilidad y transferencia', body: 'responsabilidad progresiva sobre el flujo de materia volátil, incluida la formación de relevo y supervisión de las personas en prácticas que continuaron el puesto. Esta base permite seguir avanzando en validación de métodos, análisis de incertidumbre e interpretación cruzada de técnicas.' },
+                    { title: 'Base documental y confidencialidad', body: 'Las prácticas Erasmus+ documentadas y una referencia profesional existente respaldan el alcance práctico y las responsabilidades operativas. El material operativo interno o relacionado con clientes no se republica; solo se muestra un resumen seguro para publicación.' }
                 ],
                 disclosure: 'Nota de alcance: esta entrada documenta práctica analítica supervisada y participación en rutinas validadas.'
             }
@@ -880,7 +893,8 @@
                     { title: 'Entnahme tierischer Proben', body: 'persönlich unter Aufsicht und nach festgelegten Protokollen durchgeführte Gewinnung/Entnahme muriner Proben sowie anschließende Handhabung tierischen Materials' },
                     { title: 'Molekularbiologie', body: 'RNA-Extraktion, PCR, Elektrophorese und Genotypisierung transgener Mäuse; Western-Blot-Gelherstellung, Transfer und Blocking' },
                     { title: 'Immunologie', body: 'ELISA; Immunhistochemie und Immunfluoreszenz' },
-                    { title: 'Dokumentation & beruflicher Nachweis', body: 'Eine vorhandene berufliche Referenz bestätigt das Praktikum, die Protokollarbeit und die Verantwortung für Labormaterial.' }
+                    { title: 'Protokolle, Dokumentation & digitale Kommunikation', body: 'Arbeit mit Laborprotokollen und wissenschaftlichen Datenbanken; Material- und Bestandsverwaltung; Entwicklung einer zweisprachigen wissenschaftlichen Website für die Forschungsgruppe' },
+                    { title: 'Dokumentarische Grundlage & Datenschutz', body: 'Das dokumentierte 370-stündige FCT-Praktikum und eine vorhandene berufliche Referenz stützen den Umfang des Praktikums, die Protokollarbeit und die Verantwortung für Labormaterial. Unterstützende Unterlagen bleiben privat, wenn eine Veröffentlichung personenbezogene, fremde oder vertrauliche Laborinformationen offenlegen würde.' }
                 ],
                 disclosure: 'Hinweis zum Umfang: Dieser Eintrag kombiniert dokumentarische Nachweise mit persönlich bestätigter beaufsichtigter Praxis. Es handelt sich um dokumentierte Laborpraxis, nicht um einen eigenständigen klinischen Wirksamkeitsnachweis oder eine therapeutische Studie; ebenso wird keine eigenständige klinische, tierärztliche oder chirurgische Tätigkeit beansprucht.'
             },
@@ -896,7 +910,8 @@
                     { title: 'Instrumentierung', body: 'Bedienung von CHNOS-Analysator, TGA Q500, CARBOLITE-Öfen, BMP-Einheiten und Biogas 5000' },
                     { title: 'Qualität & Rückverfolgbarkeit', body: 'Arbeit nach festgelegten SOPs, statistische Qualitäts-Selbstkontrollen, Thermal-Excel-Datensätze, Datenbankaktualisierungen, Chargen, Etiketten und Ergebnisrückverfolgbarkeit' },
                     { title: 'Erstellte operative Dokumentation', body: 'operative Leitfäden, Datenblätter, Arbeitsanweisungen und Troubleshooting-Dokumentation zu Analysemethoden, Analysestart, Chargen, Proben und NIR, Etikettierung, Thermal Excel und Rückverfolgbarkeit' },
-                    { title: 'Verantwortung & beruflicher Nachweis', body: 'Eine vorhandene berufliche Referenz bestätigt das Praktikum und seine operativen Verantwortlichkeiten. Diese Grundlage unterstützt die weitere Entwicklung in Methodenvalidierung, Unsicherheitsanalyse und methodenübergreifender Interpretation.' }
+                    { title: 'Verantwortung & Übergabe', body: 'schrittweise Verantwortung für den Workflow der Bestimmung flüchtiger Bestandteile, einschließlich Einarbeitung und Betreuung der nachfolgenden Praktikantinnen und Praktikanten. Diese Grundlage unterstützt die weitere Entwicklung in Methodenvalidierung, Unsicherheitsanalyse und methodenübergreifender Interpretation.' },
+                    { title: 'Dokumentarische Grundlage & Vertraulichkeit', body: 'Das dokumentierte Erasmus+-Praktikum und eine vorhandene berufliche Referenz stützen den praktischen Umfang und die operativen Verantwortlichkeiten. Internes oder kundenbezogenes Arbeitsmaterial wird nicht erneut veröffentlicht; gezeigt wird nur eine veröffentlichungssichere Zusammenfassung.' }
                 ],
                 disclosure: 'Hinweis zum Umfang: dieser Eintrag dokumentiert überwachte analytische Praxis und Beteiligung an validierten Routinen.'
             }
