@@ -414,6 +414,61 @@ def check_search_discovery() -> None:
     if 'content="noindex,follow"' not in not_found:
         fail("404.html must remain noindex,follow")
 
+
+def check_localized_static_fallbacks() -> None:
+    expectations = {
+        "de/index.html": (
+            "Klinisch-biomedizinisches<br>Laborprofil",
+            "Ein Laborprofil geprägt von",
+            "Jhon_M_Cuenca_CV_DE.pdf",
+            "bacteriophage-therapy-final-project_DE.pdf",
+            "Profil im klinisch-biomedizinischen Labor mit praktischer Erfahrung",
+            'data-language-set="de" aria-pressed="true"',
+        ),
+        "es/index.html": (
+            "Técnico Superior en<br>Laboratorio Clínico y Biomédico",
+            "Un perfil de laboratorio definido por la precisión",
+            "Jhon_M_Cuenca_CV_ES.pdf",
+            "bacteriophage-therapy-final-project_ES.pdf",
+            "Perfil de laboratorio clínico y biomédico con experiencia práctica",
+            'data-language-set="es" aria-pressed="true"',
+        ),
+        "de/workbench/index.html": (
+            "Ein lebendiger Raum zum<br><span>Entwickeln, Prüfen und Lernen.</span>",
+            "Projekte",
+            'data-language-set="de" aria-pressed="true"',
+        ),
+        "es/workbench/index.html": (
+            "Un espacio vivo para<br><span>construir, probar y aprender.</span>",
+            "Proyectos",
+            'data-language-set="es" aria-pressed="true"',
+        ),
+    }
+    forbidden_fallbacks = {
+        "de/index.html": ("Clinical &amp; Biomedical<br>Laboratory Profile", "independent laboratory responsibility"),
+        "es/index.html": ("Clinical &amp; Biomedical<br>Laboratory Profile", "independent laboratory responsibility"),
+        "de/workbench/index.html": ("A living space for<br><span>building, testing and learning.</span>",),
+        "es/workbench/index.html": ("A living space for<br><span>building, testing and learning.</span>",),
+    }
+    for relative, markers in expectations.items():
+        content = (ROOT / relative).read_text(encoding="utf-8")
+        for marker in markers:
+            if marker not in content:
+                fail(f"localized static fallback marker missing in {relative}: {marker}")
+        for marker in forbidden_fallbacks[relative]:
+            if marker in content:
+                fail(f"English fallback leaked into localized static page {relative}: {marker}")
+
+    translations = load_translations()
+    for language, data in translations.items():
+        if "responsibilityHighlights" in data.get("accessibility", {}):
+            fail(f"obsolete Responsibility accessibility key remains for {language}")
+        if "responsibility" in data.get("sections", {}):
+            fail(f"obsolete Responsibility section remains for {language}")
+        if "responsibilityCards" in data:
+            fail(f"obsolete Responsibility cards remain for {language}")
+
+
 def check_public_privacy_guards() -> None:
     text = "\n".join((ROOT / relative).read_text(encoding="utf-8") for relative in HTML_PAGES)
     for marker in ("/Volumes/", "/Users/", "djxmaicolx", ".continue/", "BEGIN OPENSSH PRIVATE KEY"):
@@ -474,6 +529,7 @@ def main() -> None:
     check_local_links_and_fragments()
     check_structured_data_and_privacy(translations)
     check_search_discovery()
+    check_localized_static_fallbacks()
     check_public_privacy_guards()
     check_cache_busting()
     check_required_content()

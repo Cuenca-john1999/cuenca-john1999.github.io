@@ -19,7 +19,6 @@
     "personalRoleSummary": "Zusammenfassung meiner Rolle",
     "referenceSummary": "Referenzübersicht",
     "technicalDocumentationSummary": "Übersicht zur technischen Dokumentation",
-    "responsibilityHighlights": "Schwerpunkte der übernommenen Verantwortung",
     "educationHighlights": "Schwerpunkte der Ausbildung",
     "finalProjectOverview": "Überblick zum Abschlussprojekt",
     "finalProjectDocuments": "Dokumente zum Abschlussprojekt",
@@ -80,18 +79,10 @@
     "experience": {
       "kicker": "Erfahrung",
       "title": "Von translationaler Immunologie bis zu analytischer und industrieller Laborarbeit.",
-      "body": "Meine praktische Erfahrung umfasst Immunologie- und Molekularbiologieforschung in Madrid sowie Biomasseanalytik in Irland, mit klinischen Proben, analytischen Protokollen und eigenverantwortlicher Laborarbeit.",
+      "body": "Meine praktische Erfahrung umfasst Immunologie- und Molekularbiologieforschung in Madrid sowie Biomasseanalytik in Irland, mit klinischen Proben, analytischen Protokollen und schrittweise wachsender Verantwortung im Labor.",
       "pointResearch": "Forschungsstiftung des Hospital Universitario La Princesa · 2025",
       "pointBiomass": "Celignis Biomass Analysis Laboratory · Erasmus+ 2023",
       "pointTeaching": "Dozent für STEM und Bildungsrobotik · 2020-2021"
-    },
-    "responsibility": {
-      "kicker": "Verantwortung",
-      "title": "Verantwortung, Eigeninitiative und wachsende Selbstständigkeit in der Laborpraxis.",
-      "body": "Während meiner Laborpraktika übernahm ich schrittweise Verantwortung über reine Ausbildungsroutinen hinaus. In analytischen und biomedizinischen Laborumgebungen wurden mir definierte Arbeitsabläufe, Dokumentationsaufgaben, Unterstützung bei Übergaben und zunehmend selbstständiges Aufgabenmanagement anvertraut.",
-      "pointWorkflow": "Verantwortung für definierte Laborabläufe",
-      "pointDocumentation": "Arbeit nach SOPs · Erstellung operativer Dokumentation",
-      "pointTransfer": "Unterstützung bei Übergabe, Einarbeitung und Wissenstransfer"
     },
     "education": {
       "kicker": "Ausbildung",
@@ -299,18 +290,6 @@
       "microbiology": "Klinische Mikrobiologie",
       "virology": "Virologie · Literaturarbeit zur Bakteriophagentherapie",
       "animalModels": "Kurs Versuchstierkunde · Funktionen A+B+C · 70 Std. · Präsenzpraxis · Tierpflege, Tötung/Euthanasie und Durchführung von Verfahren · Anästhesie und chirurgische Grundlagen"
-    }
-  },
-  "responsibilityCards": {
-    "princesa": {
-      "kicker": "Hospital Universitario de La Princesa",
-      "title": "Zellkultur und biomedizinische Arbeitsabläufe",
-      "body": "Meine Rolle entwickelte sich von der Praktikumsteilnahme zu konkreter Verantwortung im Zellkulturworkflow. Mir wurden Zellhandling, Pflege und zugehörige Laborroutinen anvertraut, und ich wurde regelmäßig zur Unterstützung bei Verfahren mit Tierproben sowie molekularbiologischen oder immunologischen Workflows hinzugezogen. Bei beaufsichtigten Verfahren mit Tierproben führte ich die Gewinnung/Entnahme muriner Proben persönlich durch und übernahm anschließend deren Handhabung."
-    },
-    "celignis": {
-      "kicker": "Celignis Biomass Analysis Laboratory",
-      "title": "Analytische Verantwortung und Wissenstransfer",
-      "body": "Ich übernahm schrittweise Verantwortung für konkrete analytische Workflows, einschließlich der Analyse flüchtiger Bestandteile. Ich arbeitete nach den SOPs des Labors, erstellte operative Leitfäden, Datenblätter, Arbeitsanweisungen und Fehlerbehebungsdokumentation und unterstützte den Wissenstransfer für neue Studierende und Mitarbeitende."
     }
   },
   "projectCards": {

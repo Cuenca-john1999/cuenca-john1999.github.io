@@ -27,7 +27,7 @@
 const Language = (() => {
     const STORAGE_KEY = 'portfolio-language';
     const URL_LANGUAGE_PARAM = 'lang';
-    const TRANSLATION_VERSION = '20260808-editorial-professional-language';
+    const TRANSLATION_VERSION = '20260809-audit-3p-followups';
     const DEFAULT_LANGUAGE = 'en';
     const AVAILABLE_LANGUAGES = ['en', 'de', 'es'];
     const LOCALIZED_LANGUAGE = document.documentElement.dataset.localizedLanguage?.slice(0, 2).toLowerCase() || null;
