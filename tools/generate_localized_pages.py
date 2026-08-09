@@ -11,11 +11,31 @@ of truth for professional and scientific content.
 from __future__ import annotations
 
 import argparse
+import html
+import json
 import re
+import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://cuenca-john1999.github.io"
+
+PERSON_META = {
+    "de": {
+        "description": "Profil im klinisch-biomedizinischen Labor mit praktischer Erfahrung in Molekularbiologie, Immunologie, analytischer Laborarbeit und wissenschaftlicher Dokumentation.",
+        "knowsAbout": [
+            "Klinische und biomedizinische Laborwissenschaft", "Molekularbiologie", "Immunologie", "PCR", "ELISA",
+            "Western Blot", "Zellkultur", "Analytische Laborarbeit", "Gute Laborpraxis (GLP)", "SOP-Dokumentation",
+        ],
+    },
+    "es": {
+        "description": "Perfil de laboratorio clínico y biomédico con experiencia práctica en biología molecular, inmunología, trabajo analítico de laboratorio y documentación científica.",
+        "knowsAbout": [
+            "Laboratorio clínico y biomédico", "Biología molecular", "Inmunología", "PCR", "ELISA",
+            "Western blot", "Cultivo celular", "Trabajo analítico de laboratorio", "Buenas Prácticas de Laboratorio (GLP)", "Documentación SOP",
+        ],
+    },
+}
 
 MAIN_META = {
     "de": {
@@ -113,6 +133,116 @@ def replace_og_locales(text: str, primary: str) -> str:
     return updated
 
 
+
+def flatten_strings(value: object, prefix: str = "") -> dict[str, str]:
+    result: dict[str, str] = {}
+    if isinstance(value, dict):
+        for key, child in value.items():
+            path = f"{prefix}.{key}" if prefix else key
+            result.update(flatten_strings(child, path))
+    elif isinstance(value, str) and prefix:
+        result[prefix] = value
+    return result
+
+
+def load_main_translation(language: str) -> dict:
+    path = ROOT / "data" / "translations" / f"{language}.json"
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def load_workbench_translation(language: str) -> dict:
+    data_file = ROOT / "workbench" / "js" / "workbench-data.js"
+    node_source = r"""
+global.window = {};
+require(process.argv[1]);
+const language = process.argv[2];
+if (!window.WorkbenchData || !window.WorkbenchData.translations[language]) process.exit(2);
+process.stdout.write(JSON.stringify(window.WorkbenchData.translations[language]));
+"""
+    completed = subprocess.run(
+        ["node", "-e", node_source, str(data_file), language],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    return json.loads(completed.stdout)
+
+
+def localize_markup(text: str, dictionary: dict) -> str:
+    values = flatten_strings(dictionary)
+
+    element_pattern = re.compile(
+        r'(?P<open><(?P<tag>[A-Za-z][\w:-]*)(?P<attrs>[^>]*\sdata-i18n(?:-html)?="(?P<key>[^"]+)"[^>]*)>)'
+        r'(?P<body>.*?)'
+        r'(?P<close></(?P=tag)>)',
+        re.S,
+    )
+
+    def replace_element(match: re.Match[str]) -> str:
+        key = match.group("key")
+        if key not in values:
+            raise SystemExit(f"[localized-pages] missing static translation key: {key}")
+        value = values[key]
+        rendered = value if 'data-i18n-html=' in match.group("attrs") else html.escape(value, quote=False)
+        return f'{match.group("open")}{rendered}{match.group("close")}'
+
+    text = element_pattern.sub(replace_element, text)
+
+    attribute_map = {
+        "data-i18n-aria-label": "aria-label",
+        "data-i18n-aria-roledescription": "aria-roledescription",
+        "data-i18n-title": "title",
+        "data-i18n-alt": "alt",
+    }
+    for marker, target in attribute_map.items():
+        opening_pattern = re.compile(
+            rf'<(?P<tag>[A-Za-z][\w:-]*)(?P<attrs>[^>]*\s{re.escape(marker)}="(?P<key>[^"]+)"[^>]*)>'
+        )
+
+        def replace_attribute(match: re.Match[str], marker: str = marker, target: str = target) -> str:
+            key = match.group("key")
+            if key not in values:
+                raise SystemExit(f"[localized-pages] missing static attribute translation key: {key}")
+            translated = html.escape(values[key], quote=True)
+            opening = match.group(0)
+            target_pattern = re.compile(rf'{re.escape(target)}="[^"]*"')
+            if target_pattern.search(opening):
+                return target_pattern.sub(f'{target}="{translated}"', opening, count=1)
+            return opening[:-1] + f' {target}="{translated}">'
+
+        text = opening_pattern.sub(replace_attribute, text)
+
+    return text
+
+
+def localize_language_controls(text: str, language: str) -> str:
+    for candidate in ("en", "de", "es"):
+        pattern = re.compile(
+            rf'(<button type="button" data-language-set="{candidate}" aria-pressed=")(?:true|false)(">{candidate.upper()}</button>)'
+        )
+        text, count = pattern.subn(
+            rf'\g<1>{str(candidate == language).lower()}\g<2>', text, count=1
+        )
+        if count != 1:
+            raise SystemExit(f"[localized-pages] missing language control: {candidate}")
+    return text
+
+
+def localize_profile_json_ld(text: str, language: str) -> str:
+    pattern = re.compile(r'(<script type="application/ld\+json">\s*)(.*?)(\s*</script>)', re.S)
+    match = pattern.search(text)
+    if not match:
+        raise SystemExit("[localized-pages] missing ProfilePage JSON-LD")
+    data = json.loads(match.group(2))
+    person = data.get("mainEntity")
+    if not isinstance(person, dict):
+        raise SystemExit("[localized-pages] missing ProfilePage mainEntity")
+    person["description"] = PERSON_META[language]["description"]
+    person["knowsAbout"] = PERSON_META[language]["knowsAbout"]
+    rendered = json.dumps(data, ensure_ascii=False, indent=6)
+    return text[:match.start()] + f'{match.group(1)}{rendered}{match.group(3)}' + text[match.end():]
+
+
 def render_main(language: str) -> str:
     source = (ROOT / "index.html").read_text(encoding="utf-8")
     meta = MAIN_META[language]
@@ -151,6 +281,12 @@ def render_main(language: str) -> str:
     source = source.replace('href="assets/', 'href="../assets/')
     source = source.replace('src="assets/', 'src="../assets/')
     source = source.replace('href="privacy.html"', f'href="../privacy.html?lang={language}"')
+    source = source.replace('../assets/documents/Jhon_M_Cuenca_CV_EN.pdf', f'../assets/documents/Jhon_M_Cuenca_CV_{language.upper()}.pdf')
+    source = source.replace('../assets/documents/bacteriophage-therapy-final-project_EN.pdf', f'../assets/documents/bacteriophage-therapy-final-project_{language.upper()}.pdf')
+    source = source.replace('../assets/documents/bacteriophage-therapy-defense_EN.pdf', f'../assets/documents/bacteriophage-therapy-defense_{language.upper()}.pdf')
+    source = localize_markup(source, load_main_translation(language))
+    source = localize_language_controls(source, language)
+    source = localize_profile_json_ld(source, language)
     return source
 
 
@@ -181,6 +317,8 @@ def render_workbench(language: str) -> str:
     source = source.replace('src="../assets/', 'src="../../assets/')
     source = source.replace('href="css/', 'href="../../workbench/css/')
     source = source.replace('src="js/', 'src="../../workbench/js/')
+    source = localize_markup(source, load_workbench_translation(language))
+    source = localize_language_controls(source, language)
     return source
 
 

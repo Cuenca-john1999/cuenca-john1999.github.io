@@ -19,7 +19,6 @@
     "personalRoleSummary": "Resumen del papel desempeñado",
     "referenceSummary": "Resumen de referencia",
     "technicalDocumentationSummary": "Resumen de documentación técnica",
-    "responsibilityHighlights": "Aspectos destacados de la responsabilidad",
     "educationHighlights": "Aspectos destacados de la formación",
     "finalProjectOverview": "Resumen del trabajo final",
     "finalProjectDocuments": "Documentos del trabajo final",
@@ -80,18 +79,10 @@
     "experience": {
       "kicker": "Experiencia",
       "title": "De la inmunología traslacional al trabajo analítico e industrial de laboratorio.",
-      "body": "Mi experiencia práctica incluye investigación en inmunología y biología molecular en Madrid y análisis de biomasa en Irlanda, combinando muestras clínicas, protocolos analíticos y responsabilidad autónoma en el laboratorio.",
+      "body": "Mi experiencia práctica incluye investigación en inmunología y biología molecular en Madrid y análisis de biomasa en Irlanda, combinando muestras clínicas, protocolos analíticos y una responsabilidad progresivamente mayor en el laboratorio.",
       "pointResearch": "Fundación de investigación del Hospital Universitario La Princesa · 2025",
       "pointBiomass": "Celignis Biomass Analysis Laboratory · Erasmus+ 2023",
       "pointTeaching": "Instructor STEM y robótica educativa · 2020-2021"
-    },
-    "responsibility": {
-      "kicker": "Responsabilidad",
-      "title": "Responsabilidad, iniciativa y autonomía progresiva en la práctica de laboratorio.",
-      "body": "Durante mis prácticas de laboratorio, asumí progresivamente responsabilidades más allá de las tareas rutinarias de formación. En entornos analíticos y biomédicos, se me confiaron flujos definidos, documentación, apoyo durante relevos y una gestión de tareas cada vez más autónoma.",
-      "pointWorkflow": "Responsabilidad en flujos de trabajo definidos",
-      "pointDocumentation": "Trabajo conforme a SOP · Creación de documentación operativa",
-      "pointTransfer": "Apoyo en relevo, formación y transferencia de conocimiento"
     },
     "education": {
       "kicker": "Formación",
@@ -299,18 +290,6 @@
       "microbiology": "Microbiología clínica",
       "virology": "Virología · revisión bibliográfica sobre bacteriofagoterapia",
       "animalModels": "Curso de Experimentación Animal · Funciones A+B+C · 70 h · prácticas presenciales · cuidado, eutanasia y realización de procedimientos · anestesia y principios quirúrgicos"
-    }
-  },
-  "responsibilityCards": {
-    "princesa": {
-      "kicker": "Hospital Universitario de La Princesa",
-      "title": "Cultivo celular y flujos biomédicos",
-      "body": "Mi papel evolucionó desde la participación como estudiante en prácticas hasta una responsabilidad concreta dentro del flujo de cultivo celular. Se me confió el manejo, mantenimiento y rutinas relacionadas con células, y se me llamaba con frecuencia para apoyar procedimientos con muestras animales y flujos de biología molecular o inmunología. Durante procedimientos supervisados con muestras animales, realicé personalmente la obtención/extracción de muestras murinas y su posterior manejo."
-    },
-    "celignis": {
-      "kicker": "Celignis Biomass Analysis Laboratory",
-      "title": "Responsabilidad analítica y transferencia de conocimiento",
-      "body": "Asumí progresivamente responsabilidad en flujos analíticos concretos, incluido el análisis de materia volátil. Trabajé conforme a los SOP del laboratorio, creé guías operativas, hojas de datos, instrucciones de trabajo y documentación de troubleshooting, y apoyé la transferencia de conocimiento para estudiantes y personal entrante."
     }
   },
   "projectCards": {
