@@ -1,68 +1,55 @@
-# Jhon M. Cuenca Portfolio
+# Jhon M. Cuenca — Professional Portfolio
 
-Static website for the professional portfolio of Jhon M. Cuenca, focused on clinical and biomedical laboratory work.
+**Clinical & Biomedical Laboratory · Molecular Biology · Immunology · Applied Scientific Work**
 
-Public site:
+[![Jhon M. Cuenca — Scientific Portfolio](assets/images/og-image.png)](https://cuenca-john1999.github.io/)
 
-- Professional profile: https://cuenca-john1999.github.io/
-- Workbench: https://cuenca-john1999.github.io/workbench/
+**English · [Deutsch](README.de.md) · [Español](README.es.md)**
 
-## Purpose
+## About the portfolio
 
-- Present the professional profile, experience and public professional documentation of Jhon M. Cuenca.
-- Maintain Workbench as a separate space for projects, notes and applied learning.
-- Communicate scientific content by clearly separating evidence, interpretation and hypotheses.
+This repository contains my professional portfolio as a laboratory technician focused on clinical and biomedical laboratory work. It brings together professional background, selected scientific and technical work, and a Workbench where I document projects, research notes, applied learning, milestones and working methods.
 
-## Repository structure
+### Professional portfolio
 
-Current repository paths:
+Experience, education, skills, selected work, public documents, professional references and contact.
 
-- /index.html
-- /workbench/
-- /assets/css/
-- /assets/js/
-- /assets/images/
-- /assets/documents/
-- /assets/svg/
-- /data/translations/
-- /robots.txt
-- /sitemap.xml
+**[Open the professional portfolio →](https://cuenca-john1999.github.io/)**
 
-## Architecture
+### Workbench
 
-- Static website with no backend.
-- HTML, CSS and vanilla JavaScript.
-- Main portfolio translations are loaded from JSON files in /data/translations/ (EN/DE/ES).
-- Workbench translations are maintained internally in workbench/js/workbench.js (EN/DE/ES).
-- Static structure compatible with GitHub Pages.
-- The published site is available through the public URLs listed above.
+A documented space for projects, research notes, Technical & Learning, milestones and method. Entries explicitly distinguish published evidence, interpretation, hypotheses, proposed methods, results, limitations and next steps.
 
-## Local preview
+**[Open Workbench →](https://cuenca-john1999.github.io/workbench/)**
 
-From the project root:
+## Selected work
 
-```bash
-python3 -m http.server 8000
-```
+### [DeutschOS](https://cuenca-john1999.github.io/workbench/#entry-deutschos)
 
-Open in a browser:
+A local German-learning system built around structured practice, laboratory contexts, documented learning content and AI-assisted technical implementation. The local prototype is under active development.
 
-- http://localhost:8000/
-- http://localhost:8000/workbench/
+### [AETEL 2025 — Chitosan and Microplastics](https://cuenca-john1999.github.io/workbench/#entry-chitosan)
 
-## Maintenance
+A literature-informed conceptual proposal on potential medical applications of chitosan and its possible study for microplastic capture. No original experimental validation was performed; the concept requires appropriate in vitro validation.
 
-- Keep relative paths compatible with GitHub Pages.
-- When visible content is added or updated, update EN/DE/ES where applicable.
-- Check basic accessibility, mobile layout and browser console output before publishing.
-- Do not publish local assistant files: .continue/ must remain ignored by Git.
-- If new public pages are added, review robots.txt and sitemap.xml.
-- Do not include private data or unverified information.
+### [Bacteriophage Therapy](https://cuenca-john1999.github.io/workbench/#entry-phage)
 
-## Scientific scope
+A co-authored academic literature review covering bacteriophage therapy, clinical applications, limitations and regulatory barriers. It is a literature-based academic project, not an original experimental or clinical study.
 
-Research notes and concepts are presented as literature-informed, exploratory or educational work where applicable. They are not presented as validated clinical results, demonstrated treatments or completed experimental findings unless explicitly supported by evidence. Hypotheses and proposed methods require appropriate experimental validation.
+## Scientific integrity
 
-## License
+Scientific content is presented according to its actual level of evidence. Published literature, interpretation, hypotheses, proposed methods, experimental results and limitations are not presented as equivalent.
+
+## Development & authorship
+
+Jhon defines and approves objectives, requirements, content, product decisions, testing and the final result. AI tools such as ChatGPT, Codex and Copilot may support technical implementation, organisation, research assistance and editorial review.
+
+## Built with
+
+`HTML` · `CSS` · `Vanilla JavaScript` · `GitHub Pages` · `EN / DE / ES`
+
+Technical architecture, local preview workflow and maintenance notes are documented in **[DEVELOPMENT.md](DEVELOPMENT.md)**.
+
+## License note
 
 No explicit software or content license is included in this repository. No permission for reuse should be inferred from the absence of a license.
