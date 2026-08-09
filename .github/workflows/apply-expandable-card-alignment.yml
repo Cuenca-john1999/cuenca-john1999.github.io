@@ -25,7 +25,7 @@ jobs:
           path = Path('index.html')
           text = path.read_text(encoding='utf-8')
           old = 'assets/css/components.css?v=27a2a07ec148'
-          new = 'assets/css/components.css?v=5ae64686c468'
+          new = 'assets/css/components.css?v=6c6ace68524c'
           if text.count(old) != 1:
               raise SystemExit(f'expected one old components token; found {text.count(old)}')
           path.write_text(text.replace(old, new, 1), encoding='utf-8')
