@@ -1,0 +1,84 @@
+name: Temporary LLC preservation audit
+
+on:
+  push:
+    branches:
+      - update/llc-portfolio-migration
+    paths:
+      - .github/workflows/temp-llc-preservation-audit.yml
+
+permissions:
+  contents: write
+
+jobs:
+  preserve:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: update/llc-portfolio-migration
+          fetch-depth: 0
+
+      - name: Restore preserved maturity detail and verify
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('workbench/js/workbench-data.js')
+          text = p.read_text(encoding='utf-8')
+          changes = [
+              (
+                  "Continue testing, content validation and usability review; preserve the German experience while separating language-independent functionality from German-specific behavior; maintain public/private educational-data boundaries; and validate the architecture with a second language before presenting LLC as a mature multilingual system.",
+                  "Continue testing, content validation, usability review and a clearer public demonstration; preserve the German experience while separating language-independent functionality from German-specific behavior; maintain public/private educational-data boundaries; and validate the architecture with a second language before presenting LLC as a mature multilingual system."
+              ),
+              (
+                  "Continuar las pruebas, la validación de contenidos y la revisión de usabilidad; preservar la experiencia alemana mientras se separa la funcionalidad independiente del idioma del comportamiento específico del alemán; mantener los límites entre los datos educativos privados y el código público; y validar la arquitectura con un segundo idioma antes de presentar LLC como un sistema multilingüe maduro.",
+                  "Continuar las pruebas, la validación de contenidos, la revisión de usabilidad y una demostración pública más clara; preservar la experiencia alemana mientras se separa la funcionalidad independiente del idioma del comportamiento específico del alemán; mantener los límites entre los datos educativos privados y el código público; y validar la arquitectura con un segundo idioma antes de presentar LLC como un sistema multilingüe maduro."
+              ),
+              (
+                  "Tests, Inhaltsvalidierung und Usability-Prüfung fortsetzen; die bestehende deutsche Erfahrung bewahren und gleichzeitig sprachunabhängige Funktionen von deutschspezifischem Verhalten trennen; die Grenzen zwischen privaten Lerndaten und öffentlichem Code beibehalten; und die Architektur mit einer zweiten Sprache validieren, bevor LLC als ausgereiftes mehrsprachiges System präsentiert wird.",
+                  "Tests, Inhaltsvalidierung, Usability-Prüfung und eine klarere öffentliche Demonstration fortsetzen; die bestehende deutsche Erfahrung bewahren und gleichzeitig sprachunabhängige Funktionen von deutschspezifischem Verhalten trennen; die Grenzen zwischen privaten Lerndaten und öffentlichem Code beibehalten; und die Architektur mit einer zweiten Sprache validieren, bevor LLC als ausgereiftes mehrsprachiges System präsentiert wird."
+              ),
+          ]
+          for old, new in changes:
+              count = text.count(old)
+              if count != 1:
+                  raise SystemExit(f'expected one preserved maturity sentence, found {count}: {old[:80]}')
+              text = text.replace(old, new)
+          p.write_text(text, encoding='utf-8')
+          PY
+
+          python3 - <<'PY'
+          import hashlib
+          import re
+          from pathlib import Path
+          asset = Path('workbench/js/workbench-data.js')
+          token = hashlib.sha256(asset.read_bytes()).hexdigest()[:12]
+          page = Path('workbench/index.html')
+          text = page.read_text(encoding='utf-8')
+          updated, count = re.subn(r'(js/workbench-data\.js\?v=)[0-9a-f]{12}', rf'\g<1>{token}', text)
+          if count != 1:
+              raise SystemExit(f'expected one Workbench data cache token, found {count}')
+          page.write_text(updated, encoding='utf-8')
+          PY
+
+          python3 tools/generate_localized_pages.py
+          git diff --check
+          git diff --name-status
+          git diff --stat
+          python3 tools/verify_portfolio_integrity.py
+          python3 tools/verify_workbench_evidence.py
+          python3 tools/verify_workbench_split.py
+          python3 tools/generate_localized_pages.py --check
+          node --check workbench/js/workbench-data.js
+          node --check workbench/js/workbench.js
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add workbench/js/workbench-data.js workbench/index.html de/workbench/index.html es/workbench/index.html
+          git diff --cached --check
+          git diff --cached --name-status
+          git diff --cached --stat
+          git commit -m 'docs: preserve LLC maturity context'
+          git push origin HEAD:update/llc-portfolio-migration
