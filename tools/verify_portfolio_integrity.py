@@ -99,6 +99,8 @@ def check_required_content() -> None:
     workbench_source = f"{workbench_js}\n{workbench_data}"
     language_js = (ROOT / "assets" / "js" / "language.js").read_text(encoding="utf-8")
 
+    translations = load_translations()
+
     for required in ("DeutschOS", "AETEL 2025", "Bacteriophage Therapy"):
         if required not in index:
             fail(f"Selected Work marker missing from index.html: {required}")
