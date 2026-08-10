@@ -1,0 +1,94 @@
+name: Temporary remove FCT hours
+
+on:
+  push:
+    branches:
+      - fix/remove-fct-hours
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/remove-fct-hours
+          fetch-depth: 0
+
+      - name: Remove FCT hour counts only
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          paths = [
+              Path('index.html'),
+              Path('de/index.html'),
+              Path('es/index.html'),
+              Path('workbench/index.html'),
+              Path('de/workbench/index.html'),
+              Path('es/workbench/index.html'),
+              Path('data/translations/en.json'),
+              Path('data/translations/de.json'),
+              Path('data/translations/es.json'),
+          ]
+
+          replacements = {
+              ' · 370 h': '',
+              ' · 370 Std.': '',
+              ' · 370 hours': '',
+          }
+
+          total = 0
+          for path in paths:
+              text = path.read_text(encoding='utf-8')
+              before = text
+              count = 0
+              for old, new in replacements.items():
+                  n = text.count(old)
+                  count += n
+                  text = text.replace(old, new)
+              if text != before:
+                  path.write_text(text, encoding='utf-8')
+              total += count
+              print(f'{path}: {count} replacement(s)')
+
+          if total == 0:
+              raise SystemExit('No FCT hour strings were found; refusing empty change.')
+
+          leftovers = []
+          for path in paths:
+              text = path.read_text(encoding='utf-8')
+              if '370 h' in text or '370 Std.' in text or '370 hours' in text:
+                  leftovers.append(str(path))
+          if leftovers:
+              raise SystemExit('FCT hour strings remain in: ' + ', '.join(leftovers))
+          PY
+
+      - name: Remove temporary workflow from final diff
+        run: rm .github/workflows/temp-remove-fct-hours.yml
+
+      - name: Validate diff
+        run: |
+          git diff --check
+          python3 tools/verify_portfolio_integrity.py
+
+      - name: Commit targeted portfolio update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            index.html \
+            de/index.html \
+            es/index.html \
+            workbench/index.html \
+            de/workbench/index.html \
+            es/workbench/index.html \
+            data/translations/en.json \
+            data/translations/de.json \
+            data/translations/es.json \
+            .github/workflows/temp-remove-fct-hours.yml
+          git diff --cached --check
+          git commit -m "fix: remove FCT placement hour count"
+          git push origin HEAD:fix/remove-fct-hours
