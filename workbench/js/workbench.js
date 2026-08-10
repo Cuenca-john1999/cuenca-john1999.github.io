@@ -420,7 +420,7 @@
     }
 
     const dialogPageCounts = {
-        deutschos: 1,
+        deutschos: 2,
         portfolio: 2,
         phage: 2,
         chitosan: 2,
@@ -458,7 +458,7 @@
 
     function getDialogPageTitles(entryId) {
         const titleKeys = {
-            deutschos: ['dialog.overview'],
+            deutschos: ['dialog.overview', 'dialog.llcDetails'],
             portfolio: ['dialog.overview', 'dialog.portfolioDetails'],
             phage: ['dialog.overview', 'dialog.academicContext'],
             chitosan: ['dialog.proposal', 'dialog.hypotheses']
@@ -718,7 +718,7 @@
             return;
         }
 
-        if (entryId === 'portfolio') renderPortfolioDetails(dialogPageContent, data, pageTitles[pageIndex]);
+        if (entryId === 'deutschos' || entryId === 'portfolio') renderPortfolioDetails(dialogPageContent, data, pageTitles[pageIndex]);
         if (entryId === 'phage') renderPhageDetails(dialogPageContent, data, pageTitles[pageIndex]);
         if (entryId === 'chitosan') renderChitosanHypotheses(dialogPageContent, data, pageTitles[pageIndex]);
     }

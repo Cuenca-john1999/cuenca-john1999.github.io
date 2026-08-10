@@ -295,9 +295,9 @@
   "projectCards": {
     "deutschos": {
       "kicker": "Project · Technical & learning",
-      "title": "DeutschOS",
-      "body": "Local German-learning environment focused on laboratory contexts, structured practice and transparent progress review.",
-      "status": "Status: In development",
+      "title": "LLC — Laboratory Language Companion",
+      "body": "Open-source, local-first desktop language-learning project for laboratory and life-science professionals. It originated as DeutschOS; German remains the reference implementation while the architecture evolves toward a reusable multilingual system.",
+      "status": "Status: Early development / pre-release",
       "cta": "Open Workbench entry"
     },
     "phage": {

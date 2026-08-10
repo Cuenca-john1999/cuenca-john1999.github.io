@@ -295,9 +295,9 @@
   "projectCards": {
     "deutschos": {
       "kicker": "Proyecto · Técnica y aprendizaje",
-      "title": "DeutschOS",
-      "body": "Entorno local de aprendizaje de alemán centrado en contextos de laboratorio, práctica estructurada y revisión transparente del progreso.",
-      "status": "Estado: En desarrollo",
+      "title": "LLC — Laboratory Language Companion",
+      "body": "Proyecto de escritorio local-first y de código abierto para aprender idiomas, orientado a profesionales y estudiantes de laboratorio y ciencias de la vida. Nació como DeutschOS; el alemán sigue siendo la implementación de referencia mientras la arquitectura evoluciona hacia un sistema multilingüe reutilizable.",
+      "status": "Estado: Desarrollo temprano / pre-release",
       "cta": "Abrir ficha en Workbench"
     },
     "phage": {
