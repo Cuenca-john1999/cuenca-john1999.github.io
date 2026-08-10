@@ -1,0 +1,300 @@
+name: Temporary LLC portfolio migration
+
+on:
+  push:
+    branches:
+      - update/llc-portfolio-migration
+    paths:
+      - .github/workflows/temp-llc-portfolio-migration.yml
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: update/llc-portfolio-migration
+          fetch-depth: 0
+
+      - name: Apply LLC identity and content migration
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+
+          ROOT = Path('.')
+
+          def replace(path, old, new, expected=1):
+              p = ROOT / path
+              text = p.read_text(encoding='utf-8')
+              count = text.count(old)
+              if count != expected:
+                  raise SystemExit(f'{path}: expected {expected} occurrence(s), found {count}: {old[:100]!r}')
+              p.write_text(text.replace(old, new), encoding='utf-8')
+
+          def replace_entry(language, new_block):
+              p = ROOT / 'workbench/js/workbench-data.js'
+              text = p.read_text(encoding='utf-8')
+              entry_root = text.index('    const entryData = {')
+              marker = f'        {language}: {{\n            deutschos: {{'
+              lang_start = text.index(marker, entry_root)
+              start = lang_start + len(f'        {language}: {{\n            ')
+              end_marker = '\n            portfolio: {'
+              end = text.index(end_marker, start)
+              old_block = text[start:end]
+              if not old_block.startswith('deutschos: {'):
+                  raise SystemExit(f'Unexpected {language} entry block start')
+              text = text[:start] + new_block.rstrip() + ',' + text[end:]
+              p.write_text(text, encoding='utf-8')
+
+          # Main portfolio · English fallback
+          replace(
+              'index.html',
+              '<h3 data-i18n="projectCards.deutschos.title">DeutschOS</h3>',
+              '<h3 data-i18n="projectCards.deutschos.title">LLC — Laboratory Language Companion</h3>'
+          )
+          replace(
+              'index.html',
+              '<p data-i18n="projectCards.deutschos.body">Local German-learning environment focused on laboratory contexts, structured practice and transparent progress review.</p>',
+              '<p data-i18n="projectCards.deutschos.body">Open-source, local-first desktop language-learning project for laboratory and life-science professionals. It originated as DeutschOS; German remains the reference implementation while the architecture evolves toward a reusable multilingual system.</p>'
+          )
+          replace(
+              'index.html',
+              '<p class="project-status" data-i18n="projectCards.deutschos.status">Status: In development</p>',
+              '<p class="project-status" data-i18n="projectCards.deutschos.status">Status: Early development / pre-release</p>'
+          )
+          replace('index.html', 'assets/js/language.js?v=dbba64a5bc67', 'assets/js/language.js?v=7b8f5d4c2e10')
+
+          # Main portfolio translations
+          main_updates = {
+              'data/translations/en.json': [
+                  ('"title": "DeutschOS"', '"title": "LLC — Laboratory Language Companion"'),
+                  ('"body": "Local German-learning environment focused on laboratory contexts, structured practice and transparent progress review."', '"body": "Open-source, local-first desktop language-learning project for laboratory and life-science professionals. It originated as DeutschOS; German remains the reference implementation while the architecture evolves toward a reusable multilingual system."'),
+                  ('"status": "Status: In development"', '"status": "Status: Early development / pre-release"'),
+              ],
+              'data/translations/es.json': [
+                  ('"title": "DeutschOS"', '"title": "LLC — Laboratory Language Companion"'),
+                  ('"body": "Entorno local de aprendizaje de alemán centrado en contextos de laboratorio, práctica estructurada y revisión transparente del progreso."', '"body": "Proyecto de escritorio local-first y de código abierto para aprender idiomas, orientado a profesionales y estudiantes de laboratorio y ciencias de la vida. Nació como DeutschOS; el alemán sigue siendo la implementación de referencia mientras la arquitectura evoluciona hacia un sistema multilingüe reutilizable."'),
+                  ('"status": "Estado: En desarrollo"', '"status": "Estado: Desarrollo temprano / pre-release"'),
+              ],
+              'data/translations/de.json': [
+                  ('"title": "DeutschOS"', '"title": "LLC — Laboratory Language Companion"'),
+                  ('"body": "Lokale Deutsch-Lernumgebung mit Fokus auf Laborkontexte, strukturierte Praxis und transparente Fortschrittskontrolle."', '"body": "Lokales, quelloffenes Desktop-Projekt zum Sprachenlernen für Fachkräfte und Lernende in Labor- und Life-Science-Bereichen. Es entstand aus DeutschOS; Deutsch bleibt die Referenzimplementierung, während die Architektur zu einem wiederverwendbaren mehrsprachigen System weiterentwickelt wird."'),
+                  ('"status": "Status: In Entwicklung"', '"status": "Status: Frühe Entwicklung / Pre-Release"'),
+              ],
+          }
+          for path, changes in main_updates.items():
+              for old, new in changes:
+                  replace(path, old, new)
+
+          # Translation fetch cache version
+          replace(
+              'assets/js/language.js',
+              "const TRANSLATION_VERSION = '20260809-audit-3p-followups';",
+              "const TRANSLATION_VERSION = '20260810-llc-portfolio-migration';"
+          )
+
+          # Workbench · English static fallback and cache tokens
+          replace('workbench/index.html', '<dd data-i18n="status.focusValue">DeutschOS and portfolio development</dd>', '<dd data-i18n="status.focusValue">LLC and portfolio development</dd>')
+          replace('workbench/index.html', '<span>DE</span><span>LAB</span><span>OS</span>', '<span>LLC</span><span>LAB</span><span>AI</span>')
+          replace('workbench/index.html', '<h3>DeutschOS</h3>', '<h3>LLC — Laboratory Language Companion</h3>', expected=2)
+          replace('workbench/index.html', 'A local German-learning system designed around general language, laboratory contexts, structured practice and verified memory.', 'An open-source, local-first desktop language-learning project for laboratory and life-science professionals. It originated as DeutschOS; German remains the reference implementation.')
+          replace('workbench/index.html', 'Concept, requirements, learning structure, content review, testing and product decisions.', 'Concept, requirements, learning structure, content review, testing and product decisions, including the transition from DeutschOS toward a reusable multilingual architecture.')
+          replace('workbench/index.html', 'Working local prototype under active development.', 'Functioning German-first local system undergoing transition into LLC; early development / pre-release.')
+          replace('workbench/index.html', '<span class="tag" data-i18n="cards.deutschos.tagLaboratory">Laboratory German</span>', '<span class="tag" data-i18n="cards.deutschos.tagLaboratory">Laboratory &amp; life sciences</span>')
+          replace('workbench/index.html', '<p data-i18n="entriesData.deutschos">Local German-learning environment focused on usable progress, laboratory vocabulary and transparent correction.</p>', '<p data-i18n="entriesData.deutschos">Open-source local-first language-learning project for laboratory and life-science professionals, with German as the reference implementation.</p>')
+          replace('workbench/index.html', 'aria-label="Open DeutschOS entry" data-i18n-aria-label="accessibility.openDeutschosEntry"', 'aria-label="Open LLC entry" data-i18n-aria-label="accessibility.openDeutschosEntry"')
+          replace('workbench/index.html', '>DeutschOS · Local prototype in development</a>', '>LLC · German-first local system evolving toward multilingual architecture</a>')
+          replace('workbench/index.html', '>2026 · Functional DeutschOS local prototype under active development</a>', '>2026 · Functional DeutschOS system began transition into LLC — Laboratory Language Companion</a>')
+          replace('workbench/index.html', 'js/workbench-data.js?v=d66e05c04ba7', 'js/workbench-data.js?v=9c1f7a4d2b63')
+          replace('workbench/index.html', 'js/workbench.js?v=62f82dfbec3c', 'js/workbench.js?v=3a7d8e5f1c92')
+
+          # Workbench translations · preserve internal keys/deep links, migrate public identity.
+          wb_updates = [
+              ("openDeutschosEntry: 'Open DeutschOS entry'", "openDeutschosEntry: 'Open LLC entry'"),
+              ("focusValue: 'DeutschOS and portfolio development'", "focusValue: 'LLC and portfolio development'"),
+              ("summary: 'A local German-learning system designed around general language, laboratory contexts, structured practice and verified memory.'", "summary: 'An open-source, local-first desktop language-learning project for laboratory and life-science professionals. It originated as DeutschOS; German remains the reference implementation.'"),
+              ("contribution: 'Concept, requirements, learning structure, content review, testing and product decisions.'", "contribution: 'Concept, requirements, learning structure, content review, testing and product decisions, including the transition from DeutschOS toward a reusable multilingual architecture.'"),
+              ("evidence: 'Working local prototype under active development.'", "evidence: 'Functioning German-first local system undergoing transition into LLC; early development / pre-release.'"),
+              ("tagLanguage: 'Language learning', tagLaboratory: 'Laboratory German'", "tagLanguage: 'Language learning', tagLaboratory: 'Laboratory & life sciences'"),
+              ("learningItem1: 'DeutschOS · Local prototype in development'", "learningItem1: 'LLC · German-first local system evolving toward multilingual architecture'"),
+              ("milestonesItem2: '2026 · Functional DeutschOS local prototype under active development'", "milestonesItem2: '2026 · Functional DeutschOS system began transition into LLC — Laboratory Language Companion'"),
+              ("deutschos: 'Local German-learning environment focused on usable progress, laboratory vocabulary and transparent correction.'", "deutschos: 'Open-source local-first language-learning project for laboratory and life-science professionals, with German as the reference implementation.'"),
+              ("portfolioDetails: 'Purpose, architecture and maintenance', academicContext", "portfolioDetails: 'Purpose, architecture and maintenance', llcDetails: 'Scope, architecture & transition', academicContext"),
+
+              ("openDeutschosEntry: 'Abrir entrada de DeutschOS'", "openDeutschosEntry: 'Abrir entrada de LLC'"),
+              ("focusValue: 'Desarrollo de DeutschOS y del portafolio'", "focusValue: 'Desarrollo de LLC y del portafolio'"),
+              ("summary: 'Un sistema local para aprender alemán diseñado en torno al idioma general, el contexto de laboratorio, la práctica estructurada y la memoria verificada.'", "summary: 'Proyecto de escritorio local-first y de código abierto para aprender idiomas, orientado a profesionales y estudiantes de laboratorio y ciencias de la vida. Nació como DeutschOS; el alemán sigue siendo la implementación de referencia.'"),
+              ("contribution: 'Concepto, requisitos, estructura de aprendizaje, revisión de contenido, pruebas y decisiones de producto.'", "contribution: 'Concepto, requisitos, estructura de aprendizaje, revisión de contenido, pruebas y decisiones de producto, incluida la transición de DeutschOS hacia una arquitectura multilingüe reutilizable.'"),
+              ("evidence: 'Prototipo local funcional actualmente en desarrollo.'", "evidence: 'Sistema local funcional centrado primero en alemán y en transición hacia LLC; desarrollo temprano / pre-release.'"),
+              ("tagLanguage: 'Aprendizaje de idiomas', tagLaboratory: 'Alemán de laboratorio'", "tagLanguage: 'Aprendizaje de idiomas', tagLaboratory: 'Laboratorio y ciencias de la vida'"),
+              ("learningItem1: 'DeutschOS · Prototipo local en desarrollo'", "learningItem1: 'LLC · Sistema local centrado primero en alemán y en evolución hacia una arquitectura multilingüe'"),
+              ("milestonesItem2: '2026 · Prototipo local funcional de DeutschOS en desarrollo activo'", "milestonesItem2: '2026 · El sistema funcional DeutschOS inició su transición a LLC — Laboratory Language Companion'"),
+              ("deutschos: 'Entorno local de aprendizaje de alemán centrado en progreso útil, vocabulario de laboratorio y corrección transparente.'", "deutschos: 'Proyecto local-first y de código abierto para aprender idiomas en contextos de laboratorio y ciencias de la vida, con el alemán como implementación de referencia.'"),
+              ("portfolioDetails: 'Finalidad, arquitectura y mantenimiento', academicContext", "portfolioDetails: 'Finalidad, arquitectura y mantenimiento', llcDetails: 'Alcance, arquitectura y transición', academicContext"),
+
+              ("openDeutschosEntry: 'DeutschOS-Eintrag öffnen'", "openDeutschosEntry: 'LLC-Eintrag öffnen'"),
+              ("focusValue: 'Entwicklung von DeutschOS und Portfolio'", "focusValue: 'Entwicklung von LLC und Portfolio'"),
+              ("summary: 'Ein lokales System zum Deutschlernen mit allgemeiner Sprache, Laborkontexten, strukturierter Übung und verifiziertem Gedächtnis.'", "summary: 'Lokales, quelloffenes Desktop-Projekt zum Sprachenlernen für Fachkräfte und Lernende in Labor- und Life-Science-Bereichen. Es entstand aus DeutschOS; Deutsch bleibt die Referenzimplementierung.'"),
+              ("contribution: 'Konzept, Anforderungen, Lernstruktur, Inhaltsprüfung, Tests und Produktentscheidungen.'", "contribution: 'Konzept, Anforderungen, Lernstruktur, Inhaltsprüfung, Tests und Produktentscheidungen, einschließlich des Übergangs von DeutschOS zu einer wiederverwendbaren mehrsprachigen Architektur.'"),
+              ("evidence: 'Funktionsfähiger lokaler Prototyp in aktiver Entwicklung.'", "evidence: 'Funktionsfähiges deutschbasiertes lokales System im Übergang zu LLC; frühe Entwicklung / Pre-Release.'"),
+              ("tagLanguage: 'Sprachenlernen', tagLaboratory: 'Labordeutsch'", "tagLanguage: 'Sprachenlernen', tagLaboratory: 'Labor & Biowissenschaften'"),
+              ("learningItem1: 'DeutschOS · Lokaler Prototyp in Entwicklung'", "learningItem1: 'LLC · Deutschbasierte lokale Referenzimplementierung im Übergang zu einer mehrsprachigen Architektur'"),
+              ("milestonesItem2: '2026 · Funktionsfähiger lokaler DeutschOS-Prototyp in aktiver Entwicklung'", "milestonesItem2: '2026 · Das funktionsfähige DeutschOS-System begann den Übergang zu LLC — Laboratory Language Companion'"),
+              ("deutschos: 'Lokale Deutsch-Lernumgebung mit Fokus auf nutzbaren Fortschritt, Laborwortschatz und transparente Korrektur.'", "deutschos: 'Lokales Open-Source-Sprachlernprojekt für Labor- und Life-Science-Kontexte mit Deutsch als Referenzimplementierung.'"),
+              ("portfolioDetails: 'Zweck, Architektur und Pflege', academicContext", "portfolioDetails: 'Zweck, Architektur und Pflege', llcDetails: 'Umfang, Architektur & Übergang', academicContext"),
+          ]
+          for old, new in wb_updates:
+              replace('workbench/js/workbench-data.js', old, new)
+
+          en_entry = """deutschos: {
+                category: 'Project · Technical & learning', status: 'Early development / pre-release', title: 'LLC — Laboratory Language Companion',
+                summary: 'An open-source, local-first desktop language-learning environment for laboratory and life-science professionals. It originated as DeutschOS, whose functioning German-first implementation turns language study into a structured, reviewable and professionally relevant system. German now serves as the reference implementation while the architecture is generalized for multiple languages and scientific domains.',
+                problem: 'Generic language-learning tools do not fully connect everyday language, laboratory vocabulary, scientific communication, motivation, structured educational sources and long-term review in one coherent workflow. DeutschOS addressed that need first for German; LLC extends the same problem toward reusable language and scientific-domain paths.',
+                contribution: 'Definition of learning goals, functional requirements, content hierarchy, correction model, memory-confirmation workflow and product decisions. The current transition also includes defining language-independent architecture and science/laboratory domain framing. Programming is AI-assisted.',
+                result: 'A functioning German-first local system exists and is being developed in broad functional blocks. The original DeutschOS codebase is being transitioned into LLC, an open-source project in early development / pre-release. It serves as evidence of product thinking and applied learning design, not as a finished multilingual product.',
+                next: 'Continue testing, content validation and usability review; preserve the German experience while separating language-independent functionality from German-specific behavior; maintain public/private educational-data boundaries; and validate the architecture with a second language before presenting LLC as a mature multilingual system.',
+                disclosure: 'AI use: support for technical implementation and editorial review. I define the concept, requirements, content, testing and final decisions.',
+                details: [
+                    {
+                        title: 'Origin & scope',
+                        body: 'LLC began as DeutschOS, a personal German-learning platform. German remains the first and most developed reference implementation. The broader project combines general language learning with professional and scientific communication for laboratory, biomedical and life-science environments, with a long-term structure intended to separate language from professional domain.'
+                    },
+                    {
+                        title: 'Local-first architecture',
+                        body: 'The current system uses FastAPI, Next.js, a Swift macOS controller, SQLite, LM Studio and local embedding models. The AI tutor runs locally. Its source-aware educational library includes infrastructure for document ingestion and versioning, page-level comparison, OCR-related workflows, structured extraction, review, processing runs, source coverage, auditing and educational-library queries. Private learning material remains outside the public repository.'
+                    },
+                    {
+                        title: 'Current transition & validation',
+                        body: 'The public-development phase focuses on safely publishing the existing codebase, preserving Git history, separating private educational material from public code, migrating the DeutschOS identity to LLC, defining language-independent architecture, preserving the German experience and preparing future scientific language paths. A later second-language implementation is intended to test whether the architecture is genuinely language-independent.'
+                    }
+                ],
+                resources: [
+                    { label: 'Public LLC repository', href: 'https://github.com/Cuenca-john1999/laboratory-language-companion' }
+                ]
+            }"""
+
+          es_entry = """deutschos: {
+                category: 'Proyecto · Técnica y aprendizaje', status: 'Desarrollo temprano / pre-release', title: 'LLC — Laboratory Language Companion',
+                summary: 'Entorno de escritorio local-first y de código abierto para el aprendizaje de idiomas orientado a profesionales y estudiantes de laboratorio y ciencias de la vida. Nació como DeutschOS, cuya implementación funcional centrada primero en alemán convierte el estudio del idioma en un sistema estructurado, revisable y profesionalmente relevante. El alemán sirve ahora como implementación de referencia mientras la arquitectura se generaliza para varios idiomas y dominios científicos.',
+                problem: 'Las herramientas genéricas de aprendizaje de idiomas no conectan del todo el lenguaje cotidiano, el vocabulario de laboratorio, la comunicación científica, la motivación, las fuentes educativas estructuradas y el repaso a largo plazo en un único flujo coherente. DeutschOS abordó primero esa necesidad para el alemán; LLC amplía el mismo problema hacia rutas reutilizables de idioma y dominio científico.',
+                contribution: 'Definición de objetivos de aprendizaje, requisitos funcionales, jerarquía de contenidos, modelo de corrección, flujo de confirmación de memoria y decisiones de producto. La transición actual también incluye definir una arquitectura independiente del idioma y el marco de dominios científicos y de laboratorio. La programación está asistida por IA.',
+                result: 'Existe un sistema local funcional centrado primero en alemán y desarrollado en bloques funcionales amplios. El código original de DeutschOS está en transición hacia LLC, un proyecto de código abierto en fase de desarrollo temprano / pre-release. Demuestra pensamiento de producto y diseño de aprendizaje aplicado, pero todavía no es un producto multilingüe terminado.',
+                next: 'Continuar las pruebas, la validación de contenidos y la revisión de usabilidad; preservar la experiencia alemana mientras se separa la funcionalidad independiente del idioma del comportamiento específico del alemán; mantener los límites entre los datos educativos privados y el código público; y validar la arquitectura con un segundo idioma antes de presentar LLC como un sistema multilingüe maduro.',
+                disclosure: 'Uso de IA: apoyo en implementación técnica y revisión editorial. Yo defino el concepto, los requisitos, el contenido, las pruebas y las decisiones finales.',
+                details: [
+                    {
+                        title: 'Origen y alcance',
+                        body: 'LLC comenzó como DeutschOS, una plataforma personal para aprender alemán. El alemán sigue siendo la primera implementación de referencia y la más desarrollada. El proyecto más amplio combina el aprendizaje general del idioma con la comunicación profesional y científica para entornos de laboratorio, biomédicos y de ciencias de la vida, con una estructura a largo plazo pensada para separar el idioma del dominio profesional.'
+                    },
+                    {
+                        title: 'Arquitectura local-first',
+                        body: 'El sistema actual utiliza FastAPI, Next.js, un controlador nativo de macOS en Swift, SQLite, LM Studio y modelos locales de embeddings. El tutor de IA se ejecuta localmente. Su biblioteca educativa orientada a fuentes incluye infraestructura para ingesta y versionado de documentos, comparación por página, flujos relacionados con OCR, extracción estructurada, revisión, runs de procesamiento, cobertura de fuentes, auditoría y consultas a la biblioteca educativa. El material privado de aprendizaje permanece fuera del repositorio público.'
+                    },
+                    {
+                        title: 'Transición y validación actuales',
+                        body: 'La fase de desarrollo público se centra en publicar de forma segura el código existente, preservar el historial Git, separar el material educativo privado del código público, migrar la identidad DeutschOS a LLC, definir una arquitectura independiente del idioma, conservar la experiencia alemana y preparar futuras rutas de idiomas científicos. Una futura implementación de un segundo idioma está destinada a comprobar si la arquitectura es realmente independiente del idioma.'
+                    }
+                ],
+                resources: [
+                    { label: 'Repositorio público de LLC', href: 'https://github.com/Cuenca-john1999/laboratory-language-companion' }
+                ]
+            }"""
+
+          de_entry = """deutschos: {
+                category: 'Projekt · Technik & Lernen', status: 'Frühe Entwicklung / Pre-Release', title: 'LLC — Laboratory Language Companion',
+                summary: 'Eine lokale, quelloffene Desktop-Lernumgebung für Sprachen, ausgerichtet auf Fachkräfte und Lernende in Labor- und Life-Science-Bereichen. Sie entstand aus DeutschOS, dessen funktionsfähige deutschbasierte Referenzimplementierung das Sprachenlernen in ein strukturiertes, überprüfbares und beruflich relevantes System überführt. Deutsch dient weiterhin als Referenzimplementierung, während die Architektur für mehrere Sprachen und wissenschaftliche Domänen verallgemeinert wird.',
+                problem: 'Allgemeine Sprachlernwerkzeuge verbinden Alltagssprache, Laborwortschatz, wissenschaftliche Kommunikation, Motivation, strukturierte Lernquellen und langfristige Wiederholung nicht vollständig in einem kohärenten Arbeitsablauf. DeutschOS adressierte diesen Bedarf zunächst für Deutsch; LLC erweitert denselben Ansatz in Richtung wiederverwendbarer Sprach- und Wissenschaftsdomänen.',
+                contribution: 'Festlegung von Lernzielen, funktionalen Anforderungen, Inhaltshierarchie, Korrekturmodell, bestätigtem Speicher-Workflow und Produktentscheidungen. Der aktuelle Übergang umfasst außerdem die Definition einer sprachunabhängigen Architektur und die Strukturierung wissenschaftlicher bzw. laborbezogener Domänen. Die Programmierung ist KI-unterstützt.',
+                result: 'Ein funktionsfähiges deutschbasiertes lokales System existiert und wird in größeren funktionalen Blöcken weiterentwickelt. Der ursprüngliche DeutschOS-Code wird in LLC überführt, ein quelloffenes Projekt in früher Entwicklung / Pre-Release. Es dient als Nachweis für Produktdenken und angewandtes Lerndesign, ist aber noch kein fertiges mehrsprachiges Produkt.',
+                next: 'Tests, Inhaltsvalidierung und Usability-Prüfung fortsetzen; die bestehende deutsche Erfahrung bewahren und gleichzeitig sprachunabhängige Funktionen von deutschlandspezifischem Verhalten trennen; die Grenzen zwischen privaten Lerndaten und öffentlichem Code beibehalten; und die Architektur mit einer zweiten Sprache validieren, bevor LLC als ausgereiftes mehrsprachiges System präsentiert wird.',
+                disclosure: 'KI-Einsatz: Unterstützung bei technischer Umsetzung und redaktioneller Überarbeitung. Konzept, Anforderungen, Inhalte, Tests und abschließende Entscheidungen definiere ich selbst.',
+                details: [
+                    {
+                        title: 'Ursprung und Umfang',
+                        body: 'LLC begann als DeutschOS, eine persönliche Plattform zum Deutschlernen. Deutsch bleibt die erste und am weitesten entwickelte Referenzimplementierung. Das breitere Projekt verbindet allgemeines Sprachenlernen mit beruflicher und wissenschaftlicher Kommunikation für Labor-, biomedizinische und Life-Science-Umgebungen; langfristig sollen Sprache und berufliche Domäne getrennt modelliert werden.'
+                    },
+                    {
+                        title: 'Local-first-Architektur',
+                        body: 'Das aktuelle System nutzt FastAPI, Next.js, einen nativen macOS-Controller in Swift, SQLite, LM Studio und lokale Embedding-Modelle. Der KI-Tutor läuft lokal. Die quellenorientierte Lernbibliothek umfasst Infrastruktur für Dokumentenimport und -versionierung, Seitenvergleich, OCR-bezogene Workflows, strukturierte Extraktion, Prüfung, Verarbeitungsläufe, Quellenabdeckung, Audits und Abfragen der Lernbibliothek. Private Lernmaterialien bleiben außerhalb des öffentlichen Repositories.'
+                    },
+                    {
+                        title: 'Aktueller Übergang und Validierung',
+                        body: 'Die öffentliche Entwicklungsphase konzentriert sich auf die sichere Veröffentlichung des bestehenden Codes, den Erhalt der Git-Historie, die Trennung privater Lernmaterialien vom öffentlichen Code, den Übergang der Produktidentität von DeutschOS zu LLC, eine sprachunabhängige Architektur, den Erhalt der deutschen Erfahrung und die Vorbereitung künftiger wissenschaftlicher Sprachpfade. Eine spätere zweite Sprachimplementierung soll prüfen, ob die Architektur tatsächlich sprachunabhängig ist.'
+                    }
+                ],
+                resources: [
+                    { label: 'Öffentliches LLC-Repository', href: 'https://github.com/Cuenca-john1999/laboratory-language-companion' }
+                ]
+            }"""
+
+          replace_entry('en', en_entry)
+          replace_entry('es', es_entry)
+          replace_entry('de', de_entry)
+
+          # Workbench UI: LLC gets a second internal project page; deep-link id remains deutschos.
+          replace('workbench/js/workbench.js', '        deutschos: 1,', '        deutschos: 2,')
+          replace('workbench/js/workbench.js', "            deutschos: ['dialog.overview'],", "            deutschos: ['dialog.overview', 'dialog.llcDetails'],")
+          replace('workbench/js/workbench.js', "        if (entryId === 'portfolio') renderPortfolioDetails(dialogPageContent, data, pageTitles[pageIndex]);", "        if (entryId === 'deutschos' || entryId === 'portfolio') renderPortfolioDetails(dialogPageContent, data, pageTitles[pageIndex]);")
+
+          # Integrity guards: current identity, historical continuity and repository evidence.
+          replace(
+              'tools/verify_portfolio_integrity.py',
+              '    for required in ("DeutschOS", "AETEL 2025", "Bacteriophage Therapy"):',
+              '    for required in ("LLC — Laboratory Language Companion", "AETEL 2025", "Bacteriophage Therapy"):'
+          )
+          replace(
+              'tools/verify_portfolio_integrity.py',
+              '    for entry_id in (\n',
+              '''    expected_llc_title = "LLC — Laboratory Language Companion"\n    for language, dictionary in translations.items():\n        actual_title = dictionary.get("projectCards", {}).get("deutschos", {}).get("title")\n        if actual_title != expected_llc_title:\n            fail(f"LLC current project title mismatch for {language}: {actual_title!r}")\n\n    history_markers = {\n        "en": "It originated as DeutschOS",\n        "de": "Es entstand aus DeutschOS",\n        "es": "Nació como DeutschOS",\n    }\n    for language, marker in history_markers.items():\n        source = (ROOT / "data" / "translations" / f"{language}.json").read_text(encoding="utf-8")\n        if marker not in source:\n            fail(f"DeutschOS historical-origin marker missing for {language}: {marker}")\n\n    if "https://github.com/Cuenca-john1999/laboratory-language-companion" not in workbench_data:\n        fail("LLC public repository link is missing from Workbench data")\n\n    legacy_current_markers = (\n        '<h3 data-i18n="projectCards.deutschos.title">DeutschOS</h3>',\n        '<h3>DeutschOS</h3>',\n        "title: 'DeutschOS'",\n    )\n    for marker in legacy_current_markers:\n        if marker in index or marker in workbench or marker in workbench_data:\n            fail(f"legacy DeutschOS current-identity marker remains: {marker}")\n\n    for entry_id in (\n'''
+          )
+
+          # Generate deterministic DE/ES static routes from the canonical EN + i18n sources.
+          PY
+
+          python3 tools/generate_localized_pages.py
+
+          git diff --check
+          git status --short
+          git diff --name-status
+          git diff --stat
+
+          python3 tools/verify_portfolio_integrity.py
+          python3 tools/verify_workbench_evidence.py
+          python3 tools/verify_workbench_split.py
+          python3 tools/generate_localized_pages.py --check
+          node --check assets/js/language.js
+          node --check workbench/js/workbench-data.js
+          node --check workbench/js/workbench.js
+
+      - name: Commit migrated portfolio
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            index.html \
+            data/translations/en.json \
+            data/translations/de.json \
+            data/translations/es.json \
+            assets/js/language.js \
+            workbench/index.html \
+            workbench/js/workbench-data.js \
+            workbench/js/workbench.js \
+            tools/verify_portfolio_integrity.py \
+            de/index.html \
+            es/index.html \
+            de/workbench/index.html \
+            es/workbench/index.html
+          git diff --cached --check
+          git diff --cached --name-status
+          git diff --cached --stat
+          git commit -m 'feat: migrate portfolio project identity to LLC'
+          git push origin HEAD:update/llc-portfolio-migration
+          git status --short
