@@ -19,16 +19,26 @@ jobs:
           ref: update/llc-portfolio-migration
           fetch-depth: 0
 
-      - name: Patch migration workflow
+      - name: Patch integrity guard scope
         shell: bash
         run: |
           set -euo pipefail
-          python3 -c 'from pathlib import Path; p=Path(".github/workflows/temp-llc-portfolio-migration.yml"); t=p.read_text(encoding="utf-8"); changes=[("7b8f5d4c2e10","ee2b3e1dc913"),("deutschlandspezifischem Verhalten","deutschspezifischem Verhalten"),("runs de procesamiento","ejecuciones de procesamiento"),("bestätigtem Speicher-Workflow","Workflow zur bestätigten Speicherung")]; [( (_ for _ in ()).throw(SystemExit(f"missing marker: {a}")) if a not in t else None) for a,b in changes]; [None for a,b in changes if not (globals().update(t=t.replace(a,b)))]; p.write_text(t,encoding="utf-8")'
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('tools/verify_portfolio_integrity.py')
+          text = p.read_text(encoding='utf-8')
+          old = '    language_js = (ROOT / "assets" / "js" / "language.js").read_text(encoding="utf-8")\n\n'
+          new = old + '    translations = load_translations()\n\n'
+          if text.count(old) != 1:
+              raise SystemExit(f'expected one integrity insertion point, found {text.count(old)}')
+          p.write_text(text.replace(old, new), encoding='utf-8')
+          PY
           git diff --check
           git diff --name-status
+          git diff --stat
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add .github/workflows/temp-llc-portfolio-migration.yml
+          git add tools/verify_portfolio_integrity.py
           git diff --cached --check
-          git commit -m 'chore: align LLC migration hashes and wording'
+          git commit -m 'chore: prepare LLC integrity guard scope'
           git push origin HEAD:update/llc-portfolio-migration
