@@ -24,9 +24,9 @@ A documented space for projects, research notes, Technical & Learning, milestone
 
 ## Selected work
 
-### [DeutschOS](https://cuenca-john1999.github.io/workbench/#entry-deutschos)
+### [LLC — Laboratory Language Companion](https://github.com/Cuenca-john1999/laboratory-language-companion)
 
-A local German-learning system built around structured practice, laboratory contexts, documented learning content and AI-assisted technical implementation. The local prototype is under active development.
+An open-source, local-first desktop language-learning project for laboratory and life-science professionals. LLC combines general language learning with professional and scientific communication, structured educational sources and a locally running AI tutor. It originated as **DeutschOS**; German remains the first and most developed reference implementation while the project evolves toward a reusable multilingual architecture. The project is currently in early development / pre-release.
 
 ### [AETEL 2025 — Chitosan and Microplastics](https://cuenca-john1999.github.io/workbench/#entry-chitosan)
 
