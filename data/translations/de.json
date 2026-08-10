@@ -295,9 +295,9 @@
   "projectCards": {
     "deutschos": {
       "kicker": "Projekt · Technik & Lernen",
-      "title": "DeutschOS",
-      "body": "Lokale Deutsch-Lernumgebung mit Fokus auf Laborkontexte, strukturierte Praxis und transparente Fortschrittskontrolle.",
-      "status": "Status: In Entwicklung",
+      "title": "LLC — Laboratory Language Companion",
+      "body": "Lokales, quelloffenes Desktop-Projekt zum Sprachenlernen für Fachkräfte und Lernende in Labor- und Life-Science-Bereichen. Es entstand aus DeutschOS; Deutsch bleibt die Referenzimplementierung, während die Architektur zu einem wiederverwendbaren mehrsprachigen System weiterentwickelt wird.",
+      "status": "Status: Frühe Entwicklung / Pre-Release",
       "cta": "Workbench-Eintrag öffnen"
     },
     "phage": {

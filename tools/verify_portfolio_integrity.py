@@ -101,9 +101,37 @@ def check_required_content() -> None:
 
     translations = load_translations()
 
-    for required in ("DeutschOS", "AETEL 2025", "Bacteriophage Therapy"):
+    for required in ("LLC — Laboratory Language Companion", "AETEL 2025", "Bacteriophage Therapy"):
         if required not in index:
             fail(f"Selected Work marker missing from index.html: {required}")
+
+    expected_llc_title = "LLC — Laboratory Language Companion"
+    for language, dictionary in translations.items():
+        actual_title = dictionary.get("projectCards", {}).get("deutschos", {}).get("title")
+        if actual_title != expected_llc_title:
+            fail(f"LLC current project title mismatch for {language}: {actual_title!r}")
+
+    history_markers = {
+        "en": "It originated as DeutschOS",
+        "de": "Es entstand aus DeutschOS",
+        "es": "Nació como DeutschOS",
+    }
+    for language, marker in history_markers.items():
+        source = (ROOT / "data" / "translations" / f"{language}.json").read_text(encoding="utf-8")
+        if marker not in source:
+            fail(f"DeutschOS historical-origin marker missing for {language}: {marker}")
+
+    if "https://github.com/Cuenca-john1999/laboratory-language-companion" not in workbench_data:
+        fail("LLC public repository link is missing from Workbench data")
+
+    legacy_current_markers = (
+        '<h3 data-i18n="projectCards.deutschos.title">DeutschOS</h3>',
+        '<h3>DeutschOS</h3>',
+        "title: 'DeutschOS'",
+    )
+    for marker in legacy_current_markers:
+        if marker in index or marker in workbench or marker in workbench_data:
+            fail(f"legacy DeutschOS current-identity marker remains: {marker}")
 
     for entry_id in (
         "entry-deutschos",
