@@ -24,9 +24,9 @@ Ein dokumentierter Arbeitsbereich für Projekte, Research Notes, Technical & Lea
 
 ## Ausgewählte Arbeiten
 
-### [DeutschOS](https://cuenca-john1999.github.io/de/workbench/#entry-deutschos)
+### [LLC — Laboratory Language Companion](https://github.com/Cuenca-john1999/laboratory-language-companion)
 
-Ein lokales System zum Deutschlernen mit strukturierter Übung, Laborkontexten, dokumentierten Lerninhalten und KI-gestützter technischer Umsetzung. Der lokale Prototyp befindet sich in aktiver Entwicklung.
+Ein lokales, quelloffenes Desktop-Projekt zum Sprachenlernen für Fachkräfte und Lernende in Labor- und Life-Science-Bereichen. LLC verbindet allgemeines Sprachenlernen mit beruflicher und wissenschaftlicher Kommunikation, strukturierten Lernquellen und einem lokal ausgeführten KI-Tutor. Das Projekt entstand aus **DeutschOS**; Deutsch bleibt die erste und am weitesten entwickelte Referenzimplementierung, während die Architektur schrittweise für ein wiederverwendbares mehrsprachiges System weiterentwickelt wird. Das Projekt befindet sich derzeit in einer frühen Entwicklungs- und Pre-Release-Phase.
 
 ### [AETEL 2025 — Chitosan und Mikroplastik](https://cuenca-john1999.github.io/de/workbench/#entry-chitosan)
 

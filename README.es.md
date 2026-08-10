@@ -24,9 +24,9 @@ Un espacio documentado para proyectos, notas de investigación, Technical & Lear
 
 ## Trabajos seleccionados
 
-### [DeutschOS](https://cuenca-john1999.github.io/es/workbench/#entry-deutschos)
+### [LLC — Laboratory Language Companion](https://github.com/Cuenca-john1999/laboratory-language-companion)
 
-Un sistema local para aprender alemán basado en práctica estructurada, contextos de laboratorio, contenido de aprendizaje documentado e implementación técnica asistida por IA. El prototipo local se encuentra en desarrollo activo.
+Un proyecto de escritorio local-first y de código abierto para el aprendizaje de idiomas orientado a profesionales y estudiantes de laboratorio y ciencias de la vida. LLC combina aprendizaje general del idioma con comunicación profesional y científica, fuentes educativas estructuradas y un tutor de IA que se ejecuta localmente. El proyecto nació como **DeutschOS**; el alemán sigue siendo la primera implementación de referencia y la más desarrollada mientras la arquitectura evoluciona hacia un sistema multilingüe reutilizable. Actualmente se encuentra en una fase temprana de desarrollo / pre-release.
 
 ### [AETEL 2025 — Quitosano y microplásticos](https://cuenca-john1999.github.io/es/workbench/#entry-chitosan)
 
