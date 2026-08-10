@@ -68,7 +68,6 @@ jobs:
               '<p class="project-status" data-i18n="projectCards.deutschos.status">Status: In development</p>',
               '<p class="project-status" data-i18n="projectCards.deutschos.status">Status: Early development / pre-release</p>'
           )
-          replace('index.html', 'assets/js/language.js?v=dbba64a5bc67', 'assets/js/language.js?v=7b8f5d4c2e10')
 
           # Main portfolio translations
           main_updates = {
@@ -92,14 +91,13 @@ jobs:
               for old, new in changes:
                   replace(path, old, new)
 
-          # Translation fetch cache version
           replace(
               'assets/js/language.js',
               "const TRANSLATION_VERSION = '20260809-audit-3p-followups';",
               "const TRANSLATION_VERSION = '20260810-llc-portfolio-migration';"
           )
 
-          # Workbench · English static fallback and cache tokens
+          # Workbench · English static fallback
           replace('workbench/index.html', '<dd data-i18n="status.focusValue">DeutschOS and portfolio development</dd>', '<dd data-i18n="status.focusValue">LLC and portfolio development</dd>')
           replace('workbench/index.html', '<span>DE</span><span>LAB</span><span>OS</span>', '<span>LLC</span><span>LAB</span><span>AI</span>')
           replace('workbench/index.html', '<h3>DeutschOS</h3>', '<h3>LLC — Laboratory Language Companion</h3>', expected=2)
@@ -111,10 +109,7 @@ jobs:
           replace('workbench/index.html', 'aria-label="Open DeutschOS entry" data-i18n-aria-label="accessibility.openDeutschosEntry"', 'aria-label="Open LLC entry" data-i18n-aria-label="accessibility.openDeutschosEntry"')
           replace('workbench/index.html', '>DeutschOS · Local prototype in development</a>', '>LLC · German-first local system evolving toward multilingual architecture</a>')
           replace('workbench/index.html', '>2026 · Functional DeutschOS local prototype under active development</a>', '>2026 · Functional DeutschOS system began transition into LLC — Laboratory Language Companion</a>')
-          replace('workbench/index.html', 'js/workbench-data.js?v=d66e05c04ba7', 'js/workbench-data.js?v=9c1f7a4d2b63')
-          replace('workbench/index.html', 'js/workbench.js?v=62f82dfbec3c', 'js/workbench.js?v=3a7d8e5f1c92')
 
-          # Workbench translations · preserve internal keys/deep links, migrate public identity.
           wb_updates = [
               ("openDeutschosEntry: 'Open DeutschOS entry'", "openDeutschosEntry: 'Open LLC entry'"),
               ("focusValue: 'DeutschOS and portfolio development'", "focusValue: 'LLC and portfolio development'"),
@@ -194,7 +189,7 @@ jobs:
                     },
                     {
                         title: 'Arquitectura local-first',
-                        body: 'El sistema actual utiliza FastAPI, Next.js, un controlador nativo de macOS en Swift, SQLite, LM Studio y modelos locales de embeddings. El tutor de IA se ejecuta localmente. Su biblioteca educativa orientada a fuentes incluye infraestructura para ingesta y versionado de documentos, comparación por página, flujos relacionados con OCR, extracción estructurada, revisión, runs de procesamiento, cobertura de fuentes, auditoría y consultas a la biblioteca educativa. El material privado de aprendizaje permanece fuera del repositorio público.'
+                        body: 'El sistema actual utiliza FastAPI, Next.js, un controlador nativo de macOS en Swift, SQLite, LM Studio y modelos locales de embeddings. El tutor de IA se ejecuta localmente. Su biblioteca educativa orientada a fuentes incluye infraestructura para ingesta y versionado de documentos, comparación por página, flujos relacionados con OCR, extracción estructurada, revisión, ejecuciones de procesamiento, cobertura de fuentes, auditoría y consultas a la biblioteca educativa. El material privado de aprendizaje permanece fuera del repositorio público.'
                     },
                     {
                         title: 'Transición y validación actuales',
@@ -210,9 +205,9 @@ jobs:
                 category: 'Projekt · Technik & Lernen', status: 'Frühe Entwicklung / Pre-Release', title: 'LLC — Laboratory Language Companion',
                 summary: 'Eine lokale, quelloffene Desktop-Lernumgebung für Sprachen, ausgerichtet auf Fachkräfte und Lernende in Labor- und Life-Science-Bereichen. Sie entstand aus DeutschOS, dessen funktionsfähige deutschbasierte Referenzimplementierung das Sprachenlernen in ein strukturiertes, überprüfbares und beruflich relevantes System überführt. Deutsch dient weiterhin als Referenzimplementierung, während die Architektur für mehrere Sprachen und wissenschaftliche Domänen verallgemeinert wird.',
                 problem: 'Allgemeine Sprachlernwerkzeuge verbinden Alltagssprache, Laborwortschatz, wissenschaftliche Kommunikation, Motivation, strukturierte Lernquellen und langfristige Wiederholung nicht vollständig in einem kohärenten Arbeitsablauf. DeutschOS adressierte diesen Bedarf zunächst für Deutsch; LLC erweitert denselben Ansatz in Richtung wiederverwendbarer Sprach- und Wissenschaftsdomänen.',
-                contribution: 'Festlegung von Lernzielen, funktionalen Anforderungen, Inhaltshierarchie, Korrekturmodell, bestätigtem Speicher-Workflow und Produktentscheidungen. Der aktuelle Übergang umfasst außerdem die Definition einer sprachunabhängigen Architektur und die Strukturierung wissenschaftlicher bzw. laborbezogener Domänen. Die Programmierung ist KI-unterstützt.',
+                contribution: 'Festlegung von Lernzielen, funktionalen Anforderungen, Inhaltshierarchie, Korrekturmodell, Workflow zur bestätigten Speicherung und Produktentscheidungen. Der aktuelle Übergang umfasst außerdem die Definition einer sprachunabhängigen Architektur und die Strukturierung wissenschaftlicher bzw. laborbezogener Domänen. Die Programmierung ist KI-unterstützt.',
                 result: 'Ein funktionsfähiges deutschbasiertes lokales System existiert und wird in größeren funktionalen Blöcken weiterentwickelt. Der ursprüngliche DeutschOS-Code wird in LLC überführt, ein quelloffenes Projekt in früher Entwicklung / Pre-Release. Es dient als Nachweis für Produktdenken und angewandtes Lerndesign, ist aber noch kein fertiges mehrsprachiges Produkt.',
-                next: 'Tests, Inhaltsvalidierung und Usability-Prüfung fortsetzen; die bestehende deutsche Erfahrung bewahren und gleichzeitig sprachunabhängige Funktionen von deutschlandspezifischem Verhalten trennen; die Grenzen zwischen privaten Lerndaten und öffentlichem Code beibehalten; und die Architektur mit einer zweiten Sprache validieren, bevor LLC als ausgereiftes mehrsprachiges System präsentiert wird.',
+                next: 'Tests, Inhaltsvalidierung und Usability-Prüfung fortsetzen; die bestehende deutsche Erfahrung bewahren und gleichzeitig sprachunabhängige Funktionen von deutschspezifischem Verhalten trennen; die Grenzen zwischen privaten Lerndaten und öffentlichem Code beibehalten; und die Architektur mit einer zweiten Sprache validieren, bevor LLC als ausgereiftes mehrsprachiges System präsentiert wird.',
                 disclosure: 'KI-Einsatz: Unterstützung bei technischer Umsetzung und redaktioneller Überarbeitung. Konzept, Anforderungen, Inhalte, Tests und abschließende Entscheidungen definiere ich selbst.',
                 details: [
                     {
@@ -237,7 +232,7 @@ jobs:
           replace_entry('es', es_entry)
           replace_entry('de', de_entry)
 
-          # Workbench UI: LLC gets a second internal project page; deep-link id remains deutschos.
+          # Workbench UI: same project/deep link, now with a second internal page.
           replace('workbench/js/workbench.js', '        deutschos: 1,', '        deutschos: 2,')
           replace('workbench/js/workbench.js', "            deutschos: ['dialog.overview'],", "            deutschos: ['dialog.overview', 'dialog.llcDetails'],")
           replace('workbench/js/workbench.js', "        if (entryId === 'portfolio') renderPortfolioDetails(dialogPageContent, data, pageTitles[pageIndex]);", "        if (entryId === 'deutschos' || entryId === 'portfolio') renderPortfolioDetails(dialogPageContent, data, pageTitles[pageIndex]);")
@@ -253,9 +248,31 @@ jobs:
               '    for entry_id in (\n',
               '''    expected_llc_title = "LLC — Laboratory Language Companion"\n    for language, dictionary in translations.items():\n        actual_title = dictionary.get("projectCards", {}).get("deutschos", {}).get("title")\n        if actual_title != expected_llc_title:\n            fail(f"LLC current project title mismatch for {language}: {actual_title!r}")\n\n    history_markers = {\n        "en": "It originated as DeutschOS",\n        "de": "Es entstand aus DeutschOS",\n        "es": "Nació como DeutschOS",\n    }\n    for language, marker in history_markers.items():\n        source = (ROOT / "data" / "translations" / f"{language}.json").read_text(encoding="utf-8")\n        if marker not in source:\n            fail(f"DeutschOS historical-origin marker missing for {language}: {marker}")\n\n    if "https://github.com/Cuenca-john1999/laboratory-language-companion" not in workbench_data:\n        fail("LLC public repository link is missing from Workbench data")\n\n    legacy_current_markers = (\n        '<h3 data-i18n="projectCards.deutschos.title">DeutschOS</h3>',\n        '<h3>DeutschOS</h3>',\n        "title: 'DeutschOS'",\n    )\n    for marker in legacy_current_markers:\n        if marker in index or marker in workbench or marker in workbench_data:\n            fail(f"legacy DeutschOS current-identity marker remains: {marker}")\n\n    for entry_id in (\n'''
           )
-
-          # Generate deterministic DE/ES static routes from the canonical EN + i18n sources.
           PY
+
+          # Compute cache tokens from the actual modified files before generating localized routes.
+          python3 - <<'PYHASH'
+          import hashlib
+          import re
+          from pathlib import Path
+
+          def digest(path):
+              return hashlib.sha256(Path(path).read_bytes()).hexdigest()[:12]
+
+          def sync(page_path, reference_path, file_path):
+              page = Path(page_path)
+              text = page.read_text(encoding='utf-8')
+              token = digest(file_path)
+              pattern = re.compile(rf'({re.escape(reference_path)}\?v=)[0-9a-f]{{12}}')
+              updated, count = pattern.subn(rf'\g<1>{token}', text)
+              if count != 1:
+                  raise SystemExit(f'{page_path}: expected one cache reference for {reference_path}, found {count}')
+              page.write_text(updated, encoding='utf-8')
+
+          sync('index.html', 'assets/js/language.js', 'assets/js/language.js')
+          sync('workbench/index.html', 'js/workbench-data.js', 'workbench/js/workbench-data.js')
+          sync('workbench/index.html', 'js/workbench.js', 'workbench/js/workbench.js')
+          PYHASH
 
           python3 tools/generate_localized_pages.py
 
