@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   integrate-orcid:
-    if: github.ref == 'refs/heads/feat/add-orcid-profile' && github.actor != 'github-actions[bot]'
+    if: (github.ref == 'refs/heads/feat/add-orcid-profile' || github.head_ref == 'feat/add-orcid-profile') && github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
