@@ -101,6 +101,19 @@ def check_required_content() -> None:
 
     translations = load_translations()
 
+    expected_orcid = "https://orcid.org/0009-0000-3098-8396"
+    for page_path in ("index.html", "de/index.html", "es/index.html"):
+        source = (ROOT / page_path).read_text(encoding="utf-8")
+        if f'href="{expected_orcid}"' not in source:
+            fail(f"ORCID visible link missing from {page_path}")
+        structured_match = re.search(r'<script type="application/ld\+json">\s*(.*?)\s*</script>', source, re.DOTALL)
+        if not structured_match:
+            fail(f"Profile JSON-LD missing from {page_path}")
+        structured_data = json.loads(structured_match.group(1))
+        same_as = structured_data.get("mainEntity", {}).get("sameAs", [])
+        if expected_orcid not in same_as:
+            fail(f"ORCID structured-data identity missing from {page_path}")
+
     for required in ("LLC — Laboratory Language Companion", "AETEL 2025", "Bacteriophage Therapy"):
         if required not in index:
             fail(f"Selected Work marker missing from index.html: {required}")
