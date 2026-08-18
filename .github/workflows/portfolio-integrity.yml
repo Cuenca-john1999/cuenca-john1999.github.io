@@ -6,80 +6,9 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  integrate-orcid:
-    if: (github.ref == 'refs/heads/feat/add-orcid-profile' || github.head_ref == 'feat/add-orcid-profile') && github.actor != 'github-actions[bot]'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v6
-        with:
-          ref: feat/add-orcid-profile
-          fetch-depth: 0
-
-      - name: Integrate ORCID profile identity
-        shell: bash
-        run: |
-          set -euo pipefail
-          python3 - <<'PY'
-          from pathlib import Path
-
-          ORCID = 'https://orcid.org/0009-0000-3098-8396'
-
-          def replace(path, old, new, expected=1):
-              p = Path(path)
-              text = p.read_text(encoding='utf-8')
-              count = text.count(old)
-              if count != expected:
-                  raise SystemExit(f'{path}: expected {expected} occurrence(s), found {count}: {old!r}')
-              p.write_text(text.replace(old, new), encoding='utf-8')
-
-          replace(
-              'index.html',
-              '        "url": "https://cuenca-john1999.github.io/",\n        "description": "Clinical and biomedical laboratory profile with practical experience in molecular biology, immunology, analytical laboratory work and scientific documentation.",',
-              '        "url": "https://cuenca-john1999.github.io/",\n        "sameAs": [\n          "' + ORCID + '"\n        ],\n        "description": "Clinical and biomedical laboratory profile with practical experience in molecular biology, immunology, analytical laboratory work and scientific documentation.",'
-          )
-
-          replace(
-              'index.html',
-              '                        <p data-i18n="contactForm.body">For laboratory roles, clinical research opportunities, biomedical projects or scientific collaborations.</p>\n                        <form class="contact-form"',
-              '                        <p data-i18n="contactForm.body">For laboratory roles, clinical research opportunities, biomedical projects or scientific collaborations.</p>\n                        <p><a class="document-link" href="' + ORCID + '" target="_blank" rel="me noopener noreferrer">ORCID iD · ' + ORCID + '</a></p>\n                        <form class="contact-form"'
-          )
-
-          replace(
-              'tools/verify_portfolio_integrity.py',
-              '    translations = load_translations()\n\n    for required in ("LLC — Laboratory Language Companion", "AETEL 2025", "Bacteriophage Therapy"):',
-              '    translations = load_translations()\n\n    expected_orcid = "' + ORCID + '"\n    for page_path in ("index.html", "de/index.html", "es/index.html"):\n        source = (ROOT / page_path).read_text(encoding="utf-8")\n        if f\'href="{expected_orcid}"\' not in source:\n            fail(f"ORCID visible link missing from {page_path}")\n        structured_match = re.search(r\'<script type="application/ld\\+json">\\s*(.*?)\\s*</script>\', source, re.DOTALL)\n        if not structured_match:\n            fail(f"Profile JSON-LD missing from {page_path}")\n        structured_data = json.loads(structured_match.group(1))\n        same_as = structured_data.get("mainEntity", {}).get("sameAs", [])\n        if expected_orcid not in same_as:\n            fail(f"ORCID structured-data identity missing from {page_path}")\n\n    for required in ("LLC — Laboratory Language Companion", "AETEL 2025", "Bacteriophage Therapy"):'
-          )
-          PY
-
-          python3 tools/generate_localized_pages.py
-
-          git diff --check
-          git status --short
-          git diff --name-status
-          git diff --stat
-
-          python3 tools/verify_portfolio_integrity.py
-          python3 tools/verify_workbench_evidence.py
-          python3 tools/verify_workbench_split.py
-          python3 tools/generate_localized_pages.py --check
-          python3 -m pip install 'pypdf==6.15.0'
-          python3 tools/verify_public_pdfs.py
-          node --check assets/js/language.js
-          node --check assets/js/app.js
-          node --check workbench/js/workbench-data.js
-          node --check workbench/js/workbench.js
-          node --check assets/js/auxiliary-pages.js
-
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add index.html de/index.html es/index.html tools/verify_portfolio_integrity.py
-          git diff --cached --check
-          git commit -m 'feat: add ORCID profile identity'
-          git push origin HEAD:feat/add-orcid-profile
-
   verify:
     runs-on: ubuntu-latest
     steps:
