@@ -118,6 +118,30 @@ def check_required_content() -> None:
         if required not in index:
             fail(f"Selected Work marker missing from index.html: {required}")
 
+    current_experience_markers = {
+        "en": ("Current au pair & comprehensive daily support", "Au Pair & Comprehensive Daily Support"),
+        "de": ("Aktuell: Au-pair & umfassende Alltagsunterstützung", "Au-pair & umfassende Alltagsunterstützung"),
+        "es": ("Actual: au pair y apoyo integral diario", "Au pair y apoyo integral diario"),
+    }
+    for language, markers in current_experience_markers.items():
+        translation_source = (ROOT / "data" / "translations" / f"{language}.json").read_text(encoding="utf-8")
+        page_path = {"en": "index.html", "de": "de/index.html", "es": "es/index.html"}[language]
+        page_source = (ROOT / page_path).read_text(encoding="utf-8")
+        for marker in markers:
+            if marker not in translation_source:
+                fail(f"current au-pair experience marker missing from {language} translations: {marker}")
+            if marker.replace("&", "&amp;") not in page_source and marker not in page_source:
+                fail(f"current au-pair experience marker missing from {page_path}: {marker}")
+
+    canonical_cv_paths = (
+        "assets/documents/Jhon_M_Cuenca_CV_EN.pdf",
+        "assets/documents/Jhon_M_Cuenca_CV_DE.pdf",
+        "assets/documents/Jhon_M_Cuenca_CV_ES.pdf",
+    )
+    for relative_path in canonical_cv_paths:
+        if not (ROOT / relative_path).is_file():
+            fail(f"canonical CV PDF is missing: {relative_path}")
+
     expected_llc_title = "LLC — Laboratory Language Companion"
     for language, dictionary in translations.items():
         actual_title = dictionary.get("projectCards", {}).get("deutschos", {}).get("title")

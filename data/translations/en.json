@@ -79,9 +79,10 @@
     "experience": {
       "kicker": "Experience",
       "title": "From translational immunology to analytical and industrial laboratory work.",
-      "body": "My practical experience includes immunology and molecular biology research in Madrid and biomass analysis in Ireland, combining clinical samples, analytical protocols and progressively greater laboratory responsibility.",
+      "body": "My practical experience includes immunology and molecular biology research in Madrid and biomass analysis in Ireland, combining clinical samples, analytical protocols and progressively greater laboratory responsibility. Alongside this laboratory background, I currently work as an au pair in Germany, providing comprehensive daily support to a person with a disability.",
       "pointResearch": "La Princesa University Hospital research foundation · 2025",
       "pointBiomass": "Celignis Biomass Analysis Laboratory · Erasmus+ 2023",
+      "pointCare": "Current au pair & comprehensive daily support · Germany · 2026-present",
       "pointTeaching": "STEM and educational robotics instructor · 2020-2021"
     },
     "education": {
@@ -182,6 +183,13 @@
       "role": "Analytical laboratory trainee with progressive responsibility for volatile matter analysis, technical documentation, work to SOPs and training or knowledge transfer for incoming students or staff.",
       "documentation": "Created operational guides, data sheets, work instructions and troubleshooting documentation covering analytical methods, NIR/VISION, analysis start-up, database updates, batches, sample registration, labelling, Thermal Excel and result traceability.",
       "reference": "Cristobal Fernandez Belmonte M.Sc., Lab Manager at Celignis Biomass Analysis Laboratory, highlights GLP standards, technical precision, equipment operation and troubleshooting, statistical QC self-checks, deadline reliability, teamwork and intern handover training."
+    },
+    "care": {
+      "title": "Au Pair & Comprehensive Daily Support",
+      "institution": "Private household",
+      "context": "Germany · 01/2026-Present",
+      "summary": "Activities of daily living · Meals · Mobility exercises · Accompaniment · Multi-day responsibility",
+      "body": "Comprehensive support with activities of daily living, including personal hygiene, toileting, grooming, dressing and preparation for the workday; meal preparation and mealtime support; mobility and physical exercises; accompaniment for walks, shopping, activities, events and travel; responsible handling of everyday expenses; and independent support over several consecutive days."
     },
     "teaching": {
       "title": "Teaching & Early Work",

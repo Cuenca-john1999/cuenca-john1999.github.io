@@ -61,7 +61,7 @@
   "hero": {
     "title": "Klinisch-biomedizinisches<br>Laborprofil",
     "philosophy": "Engagiert für kontinuierliches Lernen, neue Erkenntnisse und die Unterstützung anderer.",
-    "availability": "Verfügbar im Raum Bonn/Köln, in Berlin und Madrid; deutschlandweit und international umzugsbereit.",
+    "availability": "Verfügbar im Raum Bonn/Köln und in Berlin; deutschlandweit umzugsbereit.",
     "cvCta": "CV herunterladen",
     "contactCta": "Kontakt",
     "projectsCta": "Projekte ansehen",
@@ -71,7 +71,7 @@
     "profile": {
       "kicker": "Profil",
       "title": "Ein Laborprofil geprägt von Präzision, Forschung und kontinuierlichem Lernen.",
-      "body": "Ich verfüge über spanische berufliche Qualifikationen: Técnico Superior en Laboratorio Clínico y Biomédico (englische Übersetzung: Higher Technician in Clinical and Biomedical Laboratory) und Técnico en Operaciones de Laboratorio (englische Übersetzung: Technician in Laboratory Operations). Aktuell bin ich im Raum Bonn/Köln verfügbar; weitere Standortmöglichkeiten bestehen in Berlin und Madrid. Ich wende diese Ausbildung in klinischer Diagnostik, Molekularbiologie, Immunologie und analytischer Laborarbeit nach GLP-Standards an.",
+      "body": "Ich verfüge über spanische berufliche Qualifikationen: Técnico Superior en Laboratorio Clínico y Biomédico (englische Übersetzung: Higher Technician in Clinical and Biomedical Laboratory) und Técnico en Operaciones de Laboratorio (englische Übersetzung: Technician in Laboratory Operations). Aktuell bin ich im Raum Bonn/Köln verfügbar; eine weitere Standortmöglichkeit besteht in Berlin. Deutschlandweit bin ich umzugsbereit. Ich wende diese Ausbildung in klinischer Diagnostik, Molekularbiologie, Immunologie und analytischer Laborarbeit nach GLP-Standards an.",
       "pointPractice": "Klinisch-biomedizinische Laborpraxis",
       "pointBiomedical": "Molekularbiologie · Immunologie · PCR · ELISA",
       "pointAnalytical": "Analytische Abläufe · SOPs · GLP-Dokumentation"
@@ -79,9 +79,10 @@
     "experience": {
       "kicker": "Erfahrung",
       "title": "Von translationaler Immunologie bis zu analytischer und industrieller Laborarbeit.",
-      "body": "Meine praktische Erfahrung umfasst Immunologie- und Molekularbiologieforschung in Madrid sowie Biomasseanalytik in Irland, mit klinischen Proben, analytischen Protokollen und schrittweise wachsender Verantwortung im Labor.",
+      "body": "Meine praktische Erfahrung umfasst Immunologie- und Molekularbiologieforschung in Madrid sowie Biomasseanalytik in Irland, mit klinischen Proben, analytischen Protokollen und schrittweise wachsender Verantwortung im Labor. Neben diesem Laborhintergrund arbeite ich derzeit als Au-pair in Deutschland und unterstütze umfassend eine Person mit Behinderung im Alltag.",
       "pointResearch": "Forschungsstiftung des Hospital Universitario La Princesa · 2025",
       "pointBiomass": "Celignis Biomass Analysis Laboratory · Erasmus+ 2023",
+      "pointCare": "Aktuell: Au-pair & umfassende Alltagsunterstützung · Deutschland · seit 2026",
       "pointTeaching": "Dozent für STEM und Bildungsrobotik · 2020-2021"
     },
     "education": {
@@ -150,7 +151,7 @@
     },
     "availability": {
       "label": "Verfügbarkeit & Mobilität",
-      "value": "Raum Bonn/Köln · Berlin · Madrid · deutschlandweit und international umzugsbereit"
+      "value": "Raum Bonn/Köln · Berlin · deutschlandweit umzugsbereit"
     },
     "recognition": {
       "label": "Berufliche Anerkennung",
@@ -182,6 +183,13 @@
       "role": "Praktikant im analytischen Labor mit wachsender Verantwortung für die Analyse flüchtiger Bestandteile, technische Dokumentation, Arbeit nach SOPs sowie Einarbeitung und Wissenstransfer für neue Studierende oder Mitarbeitende.",
       "documentation": "Erstellung operativer Leitfäden, Datenblätter, Arbeitsanweisungen und Fehlerbehebungsdokumentation zu Analyseverfahren, NIR/VISION, Analysestarts, Datenbankaktualisierungen, Chargen, Probenregistrierung, Kennzeichnung, Thermal Excel und Ergebnisrückverfolgbarkeit.",
       "reference": "Cristobal Fernandez Belmonte M.Sc., Lab Manager bei Celignis Biomass Analysis Laboratory, hebt GLP-Standards, technische Präzision, Gerätebedienung und Fehleranalyse, Selbstkontrolle durch statistische QC, Termintreue, Teamarbeit und Einarbeitung beim Praktikumsübergang hervor."
+    },
+    "care": {
+      "title": "Au-pair & umfassende Alltagsunterstützung",
+      "institution": "Privathaushalt",
+      "context": "Deutschland · 01/2026-heute",
+      "summary": "Alltagsaktivitäten · Mahlzeiten · Mobilitätsübungen · Begleitung · mehrtägige Verantwortung",
+      "body": "Umfassende Unterstützung bei Aktivitäten des täglichen Lebens, einschließlich Körperpflege, Toilettengängen, Ankleiden und Vorbereitung auf den Arbeitstag; Zubereitung von Mahlzeiten und Unterstützung beim Essen; Mobilität und körperliche Übungen; Begleitung bei Spaziergängen, Einkäufen, Aktivitäten, Veranstaltungen und Reisen; verantwortlicher Umgang mit alltäglichen Ausgaben; sowie selbstständige Betreuung über mehrere aufeinanderfolgende Tage."
     },
     "teaching": {
       "title": "Lehre und frühe Berufserfahrung",

@@ -79,9 +79,10 @@
     "experience": {
       "kicker": "Experiencia",
       "title": "De la inmunología traslacional al trabajo analítico e industrial de laboratorio.",
-      "body": "Mi experiencia práctica incluye investigación en inmunología y biología molecular en Madrid y análisis de biomasa en Irlanda, combinando muestras clínicas, protocolos analíticos y una responsabilidad progresivamente mayor en el laboratorio.",
+      "body": "Mi experiencia práctica incluye investigación en inmunología y biología molecular en Madrid y análisis de biomasa en Irlanda, combinando muestras clínicas, protocolos analíticos y una responsabilidad progresivamente mayor en el laboratorio. Junto a esta trayectoria de laboratorio, actualmente trabajo como au pair en Alemania, proporcionando apoyo integral diario a una persona con discapacidad.",
       "pointResearch": "Fundación de investigación del Hospital Universitario La Princesa · 2025",
       "pointBiomass": "Celignis Biomass Analysis Laboratory · Erasmus+ 2023",
+      "pointCare": "Actual: au pair y apoyo integral diario · Alemania · 2026-actualidad",
       "pointTeaching": "Instructor STEM y robótica educativa · 2020-2021"
     },
     "education": {
@@ -182,6 +183,13 @@
       "role": "Estudiante en prácticas de laboratorio analítico con responsabilidad progresiva en análisis de materia volátil, documentación técnica, trabajo conforme a SOP y formación o transferencia de conocimiento para estudiantes o personal entrante.",
       "documentation": "Creación de guías operativas, hojas de datos, instrucciones de trabajo y documentación de troubleshooting para métodos analíticos, NIR/VISION, inicio de análisis, actualización de bases de datos, batches, registro de muestras, etiquetado, Thermal Excel y trazabilidad de resultados.",
       "reference": "Cristobal Fernandez Belmonte M.Sc., Lab Manager en Celignis Biomass Analysis Laboratory, destaca el trabajo bajo GLP, la precisión técnica, el manejo de equipos y troubleshooting, el autocontrol mediante QC estadístico, el cumplimiento de plazos, el trabajo en equipo y la formación durante el relevo de prácticas."
+    },
+    "care": {
+      "title": "Au pair y apoyo integral diario",
+      "institution": "Hogar particular",
+      "context": "Alemania · 01/2026-Actualidad",
+      "summary": "Actividades de la vida diaria · Comidas · Movilidad · Acompañamiento · Responsabilidad durante varios días",
+      "body": "Apoyo integral en las actividades de la vida diaria, incluyendo higiene personal, uso del baño, aseo, vestido y preparación para la jornada laboral; preparación de comidas y apoyo durante la alimentación; movilidad y ejercicios físicos; acompañamiento en paseos, compras, actividades, eventos y viajes; gestión responsable de gastos cotidianos; y atención autónoma durante varios días consecutivos."
     },
     "teaching": {
       "title": "Docencia y primeras experiencias laborales",
