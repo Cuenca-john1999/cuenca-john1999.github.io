@@ -563,7 +563,7 @@ def check_cache_busting() -> None:
 def check_spain_market() -> None:
     page = (ROOT / "es" / "index.html").read_text(encoding="utf-8")
     dictionary = load_translations()["es"]
-    for marker in ("Selector de país", "Madrid, España", "Movilidad en toda España", "FP de Grado Superior · Sanidad", "FP de Grado Medio · Química", "no una resolución administrativa individual de capacitación"):
+    for marker in ("Selector de país", "Madrid, España", "Movilidad en toda España", "FP de Grado Superior · Sanidad", "FP de Grado Medio · Química", "La capacitación individual requiere el procedimiento administrativo correspondiente"):
         if marker not in page:
             fail(f"Spain market marker missing: {marker}")
     for marker in ("Anerkennung", "Bonn–Colonia", "9,25/10", "8,69/10", 'class="academic-result-list"'):

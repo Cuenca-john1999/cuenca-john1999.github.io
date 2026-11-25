@@ -25,6 +25,18 @@ jobs:
         run: python3 -m pip install 'pypdf==6.15.0'
       - name: Verify public PDF privacy
         run: python3 tools/verify_public_pdfs.py
+      - name: Render market PDF dossiers
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y poppler-utils
+          mkdir -p test-output
+          for doc in assets/documents/{es,de,en}/*.pdf; do
+            lang="$(basename "$(dirname "$doc")")"
+            name="$(basename "$doc" .pdf)"
+            pdftoppm -r 110 -png "$doc" "test-output/pdf-$lang-$name"
+            pdftotext -bbox "$doc" "/tmp/pdf-$lang-$name.html"
+            python3 -c 'import sys,xml.etree.ElementTree as E; root=E.parse(sys.argv[1]).getroot(); ns="{http://www.w3.org/1999/xhtml}"; pages=list(root.iter(ns+"page")); assert pages; assert all(0<=float(w.attrib["xMin"])<=float(w.attrib["xMax"])<=float(p.attrib["width"])+0.5 and 0<=float(w.attrib["yMin"])<=float(w.attrib["yMax"])<=float(p.attrib["height"])+0.5 for p in pages for w in p.iter(ns+"word"))' "/tmp/pdf-$lang-$name.html"
+          done
       - name: Verify Google Search Console file
         run: |
           set -euo pipefail
