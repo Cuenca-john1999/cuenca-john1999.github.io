@@ -90,6 +90,7 @@
     <link rel="stylesheet" href="../assets/css/themes.css?v=1499b45a762d">
     <link rel="stylesheet" href="../assets/css/market-selector.css?v=49bdaeac068c">
     <link rel="stylesheet" href="../assets/css/spain-market.css?v=12a76b178193">
+    <link rel="stylesheet" href="../assets/css/portfolio-enhancements.css?v=ceaed2f5b8a8">
 </head>
 <body>
     <a class="skip-link" href="#main-content" data-i18n="accessibility.skipToContent">Saltar al contenido principal</a>
@@ -195,6 +196,32 @@
                 <div class="market-actions" aria-label="Accesos rápidos al perfil español"><a class="document-link" href="#areas-profesionales">Áreas profesionales</a><a class="document-link" href="#catalogo-tecnico">Catálogo técnico</a><a class="document-link" href="#instrumentacion">Instrumentación</a><a class="document-link" href="#dosieres">Dosieres PDF</a></div>
             </section>
 
+<!-- RECRUITMENT-HUB:BEGIN -->
+            <section class="sequence-section market-section" id="recruitment-hub" aria-labelledby="recruitment-title">
+                <div class="section-kicker">Centro de selección profesional</div>
+                <h2 id="recruitment-title">Centro de selección profesional</h2><p class="market-intro">Acceso rápido para procesos de selección. Solo documentos públicos; los originales y referencias se pueden solicitar cuando proceda.</p>
+                <div class="market-grid market-doc-grid">
+                    <article class="market-card"><h3>CV público</h3><a class="document-link" href="../assets/documents/Jhon_M_Cuenca_CV_ES.pdf">CV público</a></article>
+                    <article class="market-card"><h3>Titulaciones y Europass</h3><a class="document-link" href="#education">Titulaciones y Europass</a></article>
+                    <article class="market-card"><h3>Competencias técnicas</h3><a class="document-link" href="#catalogo-tecnico">Competencias técnicas</a></article>
+                    <article class="market-card"><h3>Dosieres técnicos</h3><a class="document-link" href="#dosieres">Dosieres técnicos</a></article>
+                    <article class="market-card"><h3>Contacto y referencias</h3><a class="document-link" href="#contact">Contacto y referencias</a></article>
+                </div>
+                <div class="market-panel" data-application-package data-loading="Preparando paquete…" data-error="No se pudo preparar el paquete. Descarga los PDF individualmente." data-none="Selecciona al menos un documento.">
+                    <h3>Paquete de candidatura</h3>
+                    <fieldset class="package-options"><legend>Seleccionar documentos públicos</legend>
+                        <label><input type="checkbox" value="../assets/documents/Jhon_M_Cuenca_CV_ES.pdf" checked> <a class="document-link" href="../assets/documents/Jhon_M_Cuenca_CV_ES.pdf" download>CV público</a></label>
+                        <label><input type="checkbox" value="../assets/documents/europass-clinical-biomedical-laboratory.pdf"> <a class="document-link" href="../assets/documents/europass-clinical-biomedical-laboratory.pdf" download>Europass: laboratorio clínico y biomédico</a></label>
+                        <label><input type="checkbox" value="../assets/documents/europass-laboratory-operations.pdf"> <a class="document-link" href="../assets/documents/europass-laboratory-operations.pdf" download>Europass: operaciones de laboratorio</a></label>
+                        <label><input type="checkbox" value="../assets/documents/es/perfil-investigacion.pdf"> <a class="document-link" href="../assets/documents/es/perfil-investigacion.pdf" download>Perfil de investigación</a></label>
+                        <label><input type="checkbox" value="../assets/documents/es/perfil-analitico.pdf"> <a class="document-link" href="../assets/documents/es/perfil-analitico.pdf" download>Perfil analítico</a></label>
+                        <label><input type="checkbox" value="../assets/documents/es/perfil-clinico.pdf"> <a class="document-link" href="../assets/documents/es/perfil-clinico.pdf" download>Perfil clínico</a></label>
+                        <label><input type="checkbox" value="../assets/documents/es/catalogo-competencias.pdf"> <a class="document-link" href="../assets/documents/es/catalogo-competencias.pdf" download>Catálogo de competencias</a></label>
+                    </fieldset>
+                    <button type="button" class="contact-submit" data-package-download hidden>Descargar PDF seleccionados (ZIP)</button><p class="market-note" data-package-status aria-live="polite"></p>
+                </div>
+            </section>
+<!-- RECRUITMENT-HUB:END -->
             <section class="sequence-section experience-section" id="experience" data-sequence-section aria-labelledby="experience-title">
                 <div class="section-kicker" data-i18n="sections.experience.kicker">Experiencia</div>
                 <div class="sequence-layout">
@@ -991,5 +1018,6 @@
     <!-- 2. Inicializador principal (debe cargarse al final) -->
     <script src="../assets/js/app.js?v=080393900b0c"></script>
     <script src="../assets/js/market-catalogue.js?v=bf699a2b1701" defer></script>
+    <script src="../assets/js/application-package.js?v=549bba70d29c" defer></script>
 </body>
 </html>

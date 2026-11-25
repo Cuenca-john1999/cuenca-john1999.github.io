@@ -271,12 +271,12 @@ def check_required_content() -> None:
 
     education_markers = (
         'data-education-evidence="operations"',
-        'Official final grade: 8.69/10',
+        'Official Spanish qualification: Técnico en Operaciones de Laboratorio',
         'Diploma for excellent academic performance in the second year',
-        'Laboratory Auxiliary Services · Technical English',
+        'laboratory support and technical English',
         'Applied academic evidence',
         'data-education-evidence="credentials"',
-        'Animal Experimentation · Functions A+B+C',
+        'Animal Experimentation course · Functions A+B+C',
         'Healthcare Centre Management',
         'Basic Level Occupational Risk Prevention',
     )
@@ -617,6 +617,8 @@ def check_shared_evidence() -> None:
         fail("shared evidence IDs are not unique and complete")
     for lang, path in (("en","index.html"),("es","es/index.html"),("de","de/index.html")):
         source = (ROOT / path).read_text(encoding="utf-8")
+        if 'id="recruitment-hub"' not in source or source.count("data-application-package") != 1:
+            fail(f"recruitment hub missing in {lang}")
         if set(re.findall(r'data-skill-key="([^"]+)"', source)) != keys:
             fail(f"catalogue differs from shared evidence for {lang}")
 

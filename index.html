@@ -90,6 +90,7 @@
     <link rel="stylesheet" href="assets/css/themes.css?v=1499b45a762d">
     <link rel="stylesheet" href="assets/css/market-selector.css?v=49bdaeac068c">
     <link rel="stylesheet" href="assets/css/spain-market.css?v=12a76b178193">
+    <link rel="stylesheet" href="assets/css/portfolio-enhancements.css?v=ceaed2f5b8a8">
 </head>
 <body>
     <a class="skip-link" href="#main-content" data-i18n="accessibility.skipToContent">Skip to main content</a>
@@ -196,6 +197,32 @@
 <!-- INTERNATIONAL-QUICK:END -->
             </section>
 
+<!-- RECRUITMENT-HUB:BEGIN -->
+            <section class="sequence-section market-section" id="recruitment-hub" aria-labelledby="recruitment-title">
+                <div class="section-kicker">Recruitment Hub</div>
+                <h2 id="recruitment-title">Recruitment Hub</h2><p class="market-intro">Quick access for recruitment. Public documents only; originals and references can be requested when relevant.</p>
+                <div class="market-grid market-doc-grid">
+                    <article class="market-card"><h3>Public CV</h3><a class="document-link" href="assets/documents/Jhon_M_Cuenca_CV_EN.pdf">Public CV</a></article>
+                    <article class="market-card"><h3>Qualifications and Europass</h3><a class="document-link" href="#education">Qualifications and Europass</a></article>
+                    <article class="market-card"><h3>Technical skills</h3><a class="document-link" href="#technical-catalogue">Technical skills</a></article>
+                    <article class="market-card"><h3>Technical dossiers</h3><a class="document-link" href="#dossiers">Technical dossiers</a></article>
+                    <article class="market-card"><h3>Contact and references</h3><a class="document-link" href="#contact">Contact and references</a></article>
+                </div>
+                <div class="market-panel" data-application-package data-loading="Preparing package…" data-error="Could not prepare the package. Download individual PDFs instead." data-none="Select at least one document.">
+                    <h3>Application package</h3>
+                    <fieldset class="package-options"><legend>Select public documents</legend>
+                        <label><input type="checkbox" value="assets/documents/Jhon_M_Cuenca_CV_EN.pdf" checked> <a class="document-link" href="assets/documents/Jhon_M_Cuenca_CV_EN.pdf" download>Public CV</a></label>
+                        <label><input type="checkbox" value="assets/documents/europass-clinical-biomedical-laboratory.pdf"> <a class="document-link" href="assets/documents/europass-clinical-biomedical-laboratory.pdf" download>Europass: clinical and biomedical laboratory</a></label>
+                        <label><input type="checkbox" value="assets/documents/europass-laboratory-operations.pdf"> <a class="document-link" href="assets/documents/europass-laboratory-operations.pdf" download>Europass: laboratory operations</a></label>
+                        <label><input type="checkbox" value="assets/documents/en/research-profile.pdf"> <a class="document-link" href="assets/documents/en/research-profile.pdf" download>Research profile</a></label>
+                        <label><input type="checkbox" value="assets/documents/en/analytical-profile.pdf"> <a class="document-link" href="assets/documents/en/analytical-profile.pdf" download>Analytical profile</a></label>
+                        <label><input type="checkbox" value="assets/documents/en/clinical-profile.pdf"> <a class="document-link" href="assets/documents/en/clinical-profile.pdf" download>Clinical profile</a></label>
+                        <label><input type="checkbox" value="assets/documents/en/skills-catalogue.pdf"> <a class="document-link" href="assets/documents/en/skills-catalogue.pdf" download>Skills catalogue</a></label>
+                    </fieldset>
+                    <button type="button" class="contact-submit" data-package-download hidden>Download selected PDFs (ZIP)</button><p class="market-note" data-package-status aria-live="polite"></p>
+                </div>
+            </section>
+<!-- RECRUITMENT-HUB:END -->
             <section class="sequence-section experience-section" id="experience" data-sequence-section aria-labelledby="experience-title">
                 <div class="section-kicker" data-i18n="sections.experience.kicker">Experience</div>
                 <div class="sequence-layout">
@@ -957,5 +984,6 @@
     <!-- 2. Inicializador principal (debe cargarse al final) -->
     <script src="assets/js/app.js?v=080393900b0c"></script>
     <script src="assets/js/market-catalogue.js?v=bf699a2b1701" defer></script>
+    <script src="assets/js/application-package.js?v=549bba70d29c" defer></script>
 </body>
 </html>

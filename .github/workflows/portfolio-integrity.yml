@@ -37,6 +37,7 @@ jobs:
           node --check assets/js/spain-market.js
           node --check assets/js/germany-market.js
           node --check assets/js/market-catalogue.js
+          node --check assets/js/application-package.js
           node --check assets/js/app.js
           node --check workbench/js/workbench-data.js
           node --check workbench/js/workbench.js
