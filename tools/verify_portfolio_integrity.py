@@ -16,7 +16,7 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 LANGUAGES = ("en", "de", "es")
-HTML_PAGES = ("index.html", "workbench/index.html", "privacy.html", "404.html")
+HTML_PAGES = ("index.html", "workbench/index.html", "privacy.html", "404.html", "es/index.html")
 
 
 def fail(message: str) -> None:

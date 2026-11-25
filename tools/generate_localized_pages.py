@@ -259,10 +259,11 @@ def localize_market_profile(text: str, language: str) -> str:
         partial = (ROOT / "data" / "market" / "spain-sections.html").read_text(encoding="utf-8")
         marker = '            <section class="sequence-section projects-section"'
         text = replace_once(text, marker, partial + marker, "Spain professional sections")
-        text = replace_once(text, "</head>", '    <link rel="stylesheet" href="../assets/css/spain-market.css">\n</head>', "Spain stylesheet")
-        text = replace_once(text, "</body>", '    <script src="../assets/js/spain-market.js" defer></script>\n</body>', "Spain script")
-        nav = '                <a href="#skills" data-i18n="nav.skills">Habilidades</a>'
-        text = replace_once(text, nav, nav + '\n                <a href="#catalogo-tecnico">Catálogo técnico</a>', "Spain catalog nav")
+        text = replace_once(text, "</head>", '    <link rel="stylesheet" href="../assets/css/spain-market.css?v=12a76b178193">\n</head>', "Spain stylesheet")
+        text = replace_once(text, "</body>", '    <script src="../assets/js/spain-market.js?v=d57881c1585b" defer></script>\n</body>', "Spain script")
+        shortcuts = '                <div class="market-actions" aria-label="Accesos rápidos al perfil español"><a class="document-link" href="#areas-profesionales">Áreas profesionales</a><a class="document-link" href="#catalogo-tecnico">Catálogo técnico</a><a class="document-link" href="#instrumentacion">Instrumentación</a><a class="document-link" href="#dosieres">Dosieres PDF</a></div>'
+        anchor = '            </section>\n\n            <section class="sequence-section experience-section"'
+        text = replace_once(text, anchor, shortcuts + '\n' + anchor, "Spain quick links")
         text = replace_once(text, '<input type="hidden" name="subject" value="New portfolio contact">', '<input type="hidden" name="subject" value="Contacto profesional · España">', "Spain contact subject")
         text = replace_once(text, '<h4>Higher Technician in Clinical and Biomedical Laboratory</h4>', '<h4>Técnico Superior en Laboratorio Clínico y Biomédico</h4>', "Spain Europass clinical title")
         text = replace_once(text, '<h4>Technician in Laboratory Operations</h4>', '<h4>Técnico en Operaciones de Laboratorio</h4>', "Spain Europass operations title")
