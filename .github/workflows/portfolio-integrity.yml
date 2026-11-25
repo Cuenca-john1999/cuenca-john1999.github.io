@@ -35,6 +35,7 @@ jobs:
         run: |
           node --check assets/js/language.js
           node --check assets/js/spain-market.js
+          node --check assets/js/germany-market.js
           node --check assets/js/app.js
           node --check workbench/js/workbench-data.js
           node --check workbench/js/workbench.js

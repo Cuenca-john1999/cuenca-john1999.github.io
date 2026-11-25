@@ -61,8 +61,8 @@
   "hero": {
     "title": "Klinisch-biomedizinisches<br>Laborprofil",
     "philosophy": "Engagiert für kontinuierliches Lernen, neue Erkenntnisse und die Unterstützung anderer.",
-    "availability": "Verfügbar im Raum Bonn/Köln, in Berlin und Madrid; deutschlandweit und international umzugsbereit.",
-    "cvCta": "CV herunterladen",
+    "availability": "Raum Bonn/Köln · weitere Standortmöglichkeit Berlin · deutschlandweit und international umzugsbereit.",
+    "cvCta": "Lebenslauf herunterladen — Deutschland",
     "contactCta": "Kontakt",
     "projectsCta": "Projekte ansehen",
     "scroll": "Scrollen"
@@ -71,10 +71,10 @@
     "profile": {
       "kicker": "Profil",
       "title": "Ein Laborprofil geprägt von Präzision, Forschung und kontinuierlichem Lernen.",
-      "body": "Ich verfüge über spanische berufliche Qualifikationen: Técnico Superior en Laboratorio Clínico y Biomédico (englische Übersetzung: Higher Technician in Clinical and Biomedical Laboratory) und Técnico en Operaciones de Laboratorio (englische Übersetzung: Technician in Laboratory Operations). Aktuell bin ich im Raum Bonn/Köln verfügbar; weitere Standortmöglichkeiten bestehen in Berlin und Madrid. Ich wende diese Ausbildung in klinischer Diagnostik, Molekularbiologie, Immunologie und analytischer Laborarbeit nach GLP-Standards an.",
-      "pointPractice": "Klinisch-biomedizinische Laborpraxis",
-      "pointBiomedical": "Molekularbiologie · Immunologie · PCR · ELISA",
-      "pointAnalytical": "Analytische Abläufe · SOPs · GLP-Dokumentation"
+      "body": "Ich verfüge über zwei offizielle spanische Berufsabschlüsse im klinisch-biomedizinischen Labor und im Laborbetrieb. Meine praktische Erfahrung stammt aus Laborpraktika in Immunologie und Molekularbiologie in Madrid sowie in der Biomasseanalytik in Irland. Ich verbinde eine Ausbildung in klinischer Diagnostik mit experimenteller Laborarbeit, analytischer Instrumentierung und GLP-/SOP-Dokumentation.",
+      "pointPractice": "Klinische Laboranalytik · Ausbildung in Hämatologie, klinischer Mikrobiologie, Immunodiagnostik und Biochemie",
+      "pointBiomedical": "Biomedizinische Forschung · Laborpraktikum in Immunologie, Molekularbiologie und Zellkultur",
+      "pointAnalytical": "Analytik und Industrie · Laborpraktikum in Biomasseanalytik, Instrumentierung und GLP/SOP"
     },
     "experience": {
       "kicker": "Erfahrung",
@@ -86,8 +86,8 @@
     },
     "education": {
       "kicker": "Ausbildung",
-      "title": "Zwei laborbezogene Berufsabschlüsse mit sehr guten Ergebnissen und klinischer, analytischer und biomedizinischer Ausrichtung.",
-      "body": "Ich habe zwei spanische Berufsqualifikationen abgeschlossen—Técnico Superior en Laboratorio Clínico y Biomédico und Técnico en Operaciones de Laboratorio—mit Abschlussnoten von 9,25/10 und 8,69/10.",
+      "title": "Zwei offizielle spanische Berufsabschlüsse: Gesundheitswesen und Chemie.",
+      "body": "Abgeschlossene spanische Berufsausbildung im klinisch-biomedizinischen Labor sowie im Laborbetrieb. Die deutschen Bezeichnungen sind beschreibende Übersetzungen und keine Gleichwertigkeitsfeststellung.",
       "pointClinical": "Técnico Superior en Laboratorio Clínico y Biomédico · CEAC FP Oficial · 2025",
       "pointOperations": "Técnico en Operaciones de Laboratorio · IES Virgen de la Paloma · 2023",
       "pointAdditional": "Zertifikate: Tierexperimentelle Funktionen A+B+C · Management von Gesundheitseinrichtungen · Grundkenntnisse im Arbeitsschutz"
@@ -123,26 +123,26 @@
     },
     "contact": {
       "kicker": "Kontakt",
-      "title": "Offen für Positionen im Labor, in der klinischen Forschungsunterstützung und im biomedizinischen Umfeld.",
-      "body": "Verfügbar im Raum Bonn/Köln, in Berlin und Madrid sowie deutschlandweit und international umzugsbereit. Meine beruflichen Interessen umfassen Molekularbiologie, Immunologie, translationale Forschung, Wissenschaftskommunikation und internationale Zusammenarbeit im Laborumfeld."
+      "title": "Offen für Laborpositionen und Forschungsunterstützung in Deutschland.",
+      "body": "Raum Bonn/Köln und Berlin, deutschlandweit und international umzugsbereit. Interesse an biomedizinischer Forschung, Analytik, Biotechnologie und klinischen Laborpositionen bei erfüllten beruflichen Voraussetzungen."
     }
   },
   "readiness": {
     "looking": {
       "kicker": "Gesuchte Bereiche",
-      "title": "Positionen in Labortechnik, technischer Assistenz und Forschungsunterstützung.",
-      "body": "Besonders in molekularbiologischen, immunologischen und analytischen Laboren in Forschungsgruppen, Hochschulen, Instituten oder privaten Teams, in denen sorgfältige praktische Arbeit, verlässliche Dokumentation und kontinuierliches Lernen Forschung, Diagnostik und Analytik unterstützen."
+      "title": "Technische Assistenz, Forschungslabore und analytische Laborpositionen in Deutschland.",
+      "body": "Besonders interessieren mich Universitäten, Universitätskliniken in der Forschungsunterstützung, Forschungsinstitute, Biotechnologie und analytische Labore. BTA-/CTA- oder Laborantenstellen sind Suchbegriffe und keine beanspruchten deutschen Berufsabschlüsse. Bei klinischen Stellen sind die rechtlichen Voraussetzungen und die geforderten Deutschkenntnisse zu beachten."
     }
   },
   "snapshot": {
     "kicker": "Kurzprofil für Recruiter · in 20 Sekunden",
     "location": {
-      "label": "Aktueller Standort",
+      "label": "Standort und regionale Verfügbarkeit",
       "value": "Raum Bonn/Köln, Deutschland"
     },
     "roles": {
       "label": "Zielrollen",
-      "value": "Labortechnische Positionen · Technische Assistenz · Forschungsunterstützung · biomedizinische und analytische Labore · nicht reglementierte technische Positionen"
+      "value": "Technische Assistenz in Forschung und Analytik · Laborfachkraft · Biologielabor / Chemielabor · BTA-/CTA-nahe Stellen bei akzeptierter vergleichbarer Qualifikation · MTL/MTLA nur bei erfüllten rechtlichen Voraussetzungen"
     },
     "languages": {
       "label": "Sprachen",
@@ -150,15 +150,15 @@
     },
     "availability": {
       "label": "Verfügbarkeit & Mobilität",
-      "value": "Raum Bonn/Köln · Berlin · Madrid · deutschlandweit und international umzugsbereit"
+      "value": "Raum Bonn/Köln · Berlin · deutschlandweit und international umzugsbereit"
     },
     "recognition": {
       "label": "Berufliche Anerkennung",
-      "value": "Für reglementierte klinische oder Krankenhausstellen kann je nach Position, Bundesland und zuständiger Behörde eine Anerkennung erforderlich sein. Eine frühere Zulassung durch eine deutsche Hochschule betraf ausschließlich den Studienzugang und ist keine berufliche Anerkennung."
+      "value": "Spanische Berufsabschlüsse; eine deutsche Anerkennung als MTL ist hier nicht nachgewiesen. MTL ist ein reglementierter Beruf; Berufsbezeichnung und vorbehaltene Tätigkeiten richten sich nach dem MTBG. Die frühere Hochschulzulassung betraf nur den Studienzugang. Für nicht reglementierte Stellen kommt es auf das konkrete Anforderungsprofil an."
     },
     "documents": {
       "label": "Dokumente",
-      "value": "CV · Referenzen verfügbar"
+      "value": "Lebenslauf für Deutschland · Europass-Supplements · Referenzen auf Anfrage"
     }
   },
   "experienceCards": {
@@ -190,12 +190,12 @@
   },
   "educationCards": {
     "clinical": {
-      "grade": "9,25/10",
+      "grade": "Spanischer Berufsabschluss · Gesundheitswesen",
       "title": "Técnico Superior en Laboratorio Clínico y Biomédico",
       "center": "CEAC FP Oficial · Madrid, Spanien",
       "period": "2023–2025",
       "practiceCta": "Praktikum: Hospital Universitario de La Princesa →",
-      "body": "Spanische Qualifikation: Técnico Superior en Laboratorio Clínico y Biomédico (englische Übersetzung: Higher Technician in Clinical and Biomedical Laboratory), CEAC FP Oficial, 2023-2025. Offizielle Abschlussnote: 9,25/10 und Auszeichnungen in Técnicas Generales de Laboratorio, Técnicas de Inmunodiagnóstico und Técnicas de Análisis Hematológico.",
+      "body": "Técnico Superior en Laboratorio Clínico y Biomédico, CEAC FP Oficial, 2023–2025. Beschreibende deutsche Übersetzung: höherer Berufsabschluss im klinischen und biomedizinischen Labor. Ausbildungsinhalte: biologische Proben, allgemeine Labortechniken, Molekularbiologie und Zytogenetik, Physiopathologie, Biochemie, Immunodiagnostik, klinische Mikrobiologie und Hämatologie.",
       "finalProject": "<strong>Bakteriophagentherapie | Wiederentdeckung einer innovativen Therapie.</strong> Gemeinsam mit Luis Gonzalo Legua Pérez verfasst und mit Zustimmung des Mitautors veröffentlicht.<br><br><strong>Dokumentsprache:</strong> Die verlinkte deutsche PDF-Fassung ist eine inoffizielle Übersetzung/Adaption und keine beglaubigte oder beeidigte Übersetzung. Das akademische Original ist die spanische Fassung.<br><br><strong>Ursprüngliche interdisziplinäre Hypothese:</strong> Untersuchung, ob sich Phagenspezifität und chitosanbasierte Adsorption in zukünftigen Labormodellen zur Erforschung mikroplastikassoziierter Biofilme kombinieren lassen, ohne klinische Wirksamkeit zu behaupten.",
       "contribution": "Mein Beitrag: Literaturrecherche, wissenschaftliches Schreiben, Projektstruktur, konzeptuelle Entwicklung und Vorbereitung der Verteidigung, einschließlich der zukunftsorientierten Verbindung zwischen Phagentherapie, Chitosan und mikroplastikbezogenen biomedizinischen Fragen.",
       "exploreProject": "Projekt ansehen",
@@ -203,12 +203,12 @@
       "reference": "Tamara Díaz Jáuregui, Biologielehrerin bei CEAC FP Madrid, hebt technische Fähigkeit, Einsatzbereitschaft, Problemlösung, schnelle Lernfähigkeit, Kommunikation und Verantwortungsbewusstsein hervor."
     },
     "operations": {
-      "grade": "8,69/10",
+      "grade": "Spanischer Berufsabschluss · Chemie",
       "title": "Técnico en Operaciones de Laboratorio",
       "center": "IES Virgen de la Paloma · Madrid, Spanien",
       "period": "2021–2023",
       "practiceCta": "Erasmus+ / Praktikum: Celignis Biomass Analysis Laboratory · Limerick, Irland →",
-      "body": "Spanische Qualifikation: Técnico en Operaciones de Laboratorio (englische Übersetzung: Technician in Laboratory Operations), IES Virgen de la Paloma, 2021–2023. Offizielle Abschlussnote: 8,69/10. Der offizielle Leistungsnachweis umfasst Laborsicherheit und -organisation, angewandte Chemie, physikochemische Prüfungen, Probenahme und verfahrenstechnische Grundoperationen, chemische Analytik, Mikrobiologie und Biochemie, Materialprüfung, Laborhilfsdienste und technisches Englisch.",
+      "body": "Técnico en Operaciones de Laboratorio, IES Virgen de la Paloma, 2021–2023. Beschreibende deutsche Übersetzung: Berufsabschluss im Laborbetrieb. Ausbildungsinhalte: angewandte Chemie, chemische Analytik, physikochemische Prüfungen, Probenahme, Mikrobiologie und Biochemie, Materialprüfung, Laborsicherheit und -organisation.",
       "recognition": "Diplom für hervorragende Leistungen im zweiten Ausbildungsjahr des Bildungsgangs Técnico en Operaciones de Laboratorio.",
       "results10": "Laborhilfsdienste · Technisches Englisch",
       "results9": "Angewandte Chemie · Physikochemische Prüfungen · Sicherheit und Organisation im Labor · Chemische Analysen · Materialprüfung",
@@ -221,11 +221,11 @@
     "additional": {
       "badge": "3 dokumentierte Nachweise",
       "title": "Zertifikate & Zusatzqualifikationen",
-      "body": "Versuchstierkunde - Funktionen A+B+C (Erlass ECC/566/2015) · 70 Std. mit Präsenzpraxis. A: Pflege der Tiere; B: Tötung/Euthanasie der Tiere; C: Durchführung von Verfahren. Das formale Programm umfasst Tierwohl und 3R, das Erkennen von Schmerz, Leiden und Angst, tierschutzgerechte Tötungsmethoden, minimalinvasive Verfahren, Anästhesie bei kleineren Eingriffen, fortgeschrittene Anästhesie bei chirurgischen oder länger dauernden Verfahren sowie Grundlagen der Chirurgie. Im beaufsichtigten Praxisteil führte ich persönlich Tierhandling, Injektionen, Anästhesie, chirurgische Verfahren zur Proben-/Gewebegewinnung sowie die Gewinnung/Entnahme tierischer Proben durch. Ich war außerdem an beaufsichtigten Verfahren beteiligt, die eine Euthanasie einschlossen; dies wird nicht als eigenständige Durchführung dargestellt. Management von Gesundheitseinrichtungen · 100 Std. · 2025. Grundausbildung im Arbeitsschutz · 2023.",
+      "body": "Versuchstierkunde - Funktionen A+B+C (Erlass ECC/566/2015) · Kurs mit beaufsichtigter Praxis. A: Pflege der Tiere; B: Tötung/Euthanasie der Tiere; C: Durchführung von Verfahren. Das formale Programm umfasst Tierwohl und 3R, das Erkennen von Schmerz, Leiden und Angst, tierschutzgerechte Tötungsmethoden, minimalinvasive Verfahren, Anästhesie bei kleineren Eingriffen, fortgeschrittene Anästhesie bei chirurgischen oder länger dauernden Verfahren sowie Grundlagen der Chirurgie. Im beaufsichtigten Praxisteil führte ich persönlich Tierhandling, Injektionen, Anästhesie, chirurgische Verfahren zur Proben-/Gewebegewinnung sowie die Gewinnung/Entnahme tierischer Proben durch. Ich war außerdem an beaufsichtigten Verfahren beteiligt, die eine Euthanasie einschlossen; dies wird nicht als eigenständige Durchführung dargestellt. Management von Gesundheitseinrichtungen · 100 Std. · 2025. Grundausbildung im Arbeitsschutz · 2023.",
       "animal": {
-        "meta": "Erlass ECC/566/2015 · 70 Std. · Präsenzpraxis",
-        "title": "Versuchstierkunde · Funktionen A+B+C",
-        "scope": "Formaler Zertifizierungsumfang: A · Pflege der Tiere; B · Tötung/Euthanasie der Tiere; C · Durchführung von Verfahren.",
+        "meta": "Dynamimed · spanischer Erlass ECC/566/2015 · Diplom 2024",
+        "title": "Kurs Versuchstierkunde · Funktionen A+B+C",
+        "scope": "Kurs zu den spanischen Funktionen A (Tierpflege), B (Tötung/Euthanasie) und C (Durchführung von Verfahren). Das Kursdiplom belegt den Abschluss des Kurses, nicht eine individuelle deutsche Sachkundeanerkennung oder selbstständige Durchführungserlaubnis.",
         "programWelfare": "Tierwohl & 3R · Erkennen von Schmerz, Leiden und Angst · tierschutzgerechte Tötungsmethoden",
         "programProcedures": "Minimalinvasive Verfahren · Anästhesie bei kleineren Eingriffen · fortgeschrittene Anästhesie bei chirurgischen oder länger dauernden Verfahren",
         "programSurgery": "Grundlagen der Chirurgie",
@@ -258,7 +258,7 @@
       "original": "Originaler spanischer Titel: Técnico Superior en Laboratorio Clínico y Biomédico",
       "type": "Offizielle spanische höhere berufliche Qualifikation",
       "duration": "2.000 Stunden · 120 ECTS",
-      "level": "EQF Level 5 · ISCED Level 5",
+      "level": "EQR (EQF) Stufe 5 · ISCED Stufe 5",
       "context": "Zugang zu Hochschulstudien",
       "cta": "Klinisch-biomedizinisches Supplement ansehen"
     },
@@ -267,7 +267,7 @@
       "original": "Originaler spanischer Titel: Técnico en Operaciones de Laboratorio",
       "type": "Offizielle spanische berufliche Qualifikation",
       "duration": "2.000 Stunden",
-      "level": "EQF Level 4 · ISCED Level 3",
+      "level": "EQR (EQF) Stufe 4 · ISCED Stufe 3",
       "context": "Offizielle Europass-Beschreibung der Qualifikation",
       "cta": "Labor-Operations-Supplement ansehen"
     },
@@ -289,7 +289,7 @@
       "description": "Durch Berufsausbildung, zertifizierte Zusatzqualifikationen oder akademische Projekte erworben; nicht als praktische Erfahrung aus den Laborpraktika dargestellt.",
       "microbiology": "Klinische Mikrobiologie",
       "virology": "Virologie · Literaturarbeit zur Bakteriophagentherapie",
-      "animalModels": "Kurs Versuchstierkunde · Funktionen A+B+C · 70 Std. · Präsenzpraxis · Tierpflege, Tötung/Euthanasie und Durchführung von Verfahren · Anästhesie und chirurgische Grundlagen"
+      "animalModels": "Kurs Versuchstierkunde · Funktionen A+B+C · beaufsichtigte Praxis · Tierpflege, Euthanasie, Verfahren, Anästhesie und chirurgische Grundlagen"
     }
   },
   "projectCards": {
@@ -319,7 +319,7 @@
     "cv": {
       "kicker": "Kernprofil",
       "title": "Lebenslauf",
-      "body": "Öffentliches berufliches Profil, Ausbildung und Laborerfahrung für Bewerbungsprozesse aufbereitet.",
+      "body": "Öffentliches berufliches Profil für Deutschland mit Ausbildung, Laborpraktika und technischen Kompetenzen.",
       "cta": "CV öffnen"
     },
     "phage": {
@@ -363,7 +363,7 @@
   "contactForm": {
     "kicker": "Beruflicher Kontakt",
     "title": "Kontakt aufnehmen.",
-    "body": "Für laborbezogene Positionen, Unterstützung in klinischer Forschung, biomedizinische Projekte oder wissenschaftliche Kooperationen.",
+    "body": "Für Stellen in Forschung, Analytik, Biotechnologie und Laboren in Deutschland sowie wissenschaftliche Kooperationen.",
     "name": "Name",
     "email": "E-Mail",
     "message": "Nachricht",
