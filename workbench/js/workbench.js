@@ -15,6 +15,18 @@
     }
 
     let currentLanguage = getInitialLanguage();
+    // Static library sections belong to their localized routes. Preserve explicit
+    // legacy query links without mixing languages on the international page.
+    if (LANGUAGE_ROUTE === 'workbench' && !LANGUAGES.includes(LOCALIZED_LANGUAGE)) {
+        const explicit = getUrlLanguage();
+        if (explicit && explicit !== DEFAULT_LANGUAGE) {
+            const target = getWorkbenchUrl(explicit);
+            target.hash = window.location.hash;
+            window.location.replace(target.href);
+            return;
+        }
+        currentLanguage = DEFAULT_LANGUAGE;
+    }
     let updateCarouselTranslations = null;
     let syncCarouselRotation = null;
 

@@ -42,3 +42,22 @@ jobs:
           node --check workbench/js/workbench-data.js
           node --check workbench/js/workbench.js
           node --check assets/js/auxiliary-pages.js
+
+      - name: Install browser test dependencies
+        run: |
+          npm install --no-save --no-package-lock playwright@1.58.2
+          npx playwright install --with-deps chromium webkit
+      - name: Browser smoke tests (desktop and mobile)
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/portfolio-server.log 2>&1 &
+          server=$!
+          trap 'kill "$server" || true' EXIT
+          for i in {1..20}; do curl -fsS http://127.0.0.1:8765/ >/dev/null && break; sleep 1; done
+          node tools/browser_smoke.mjs
+      - name: Upload visual checks
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-browser-checks
+          path: test-output/*.png
+          if-no-files-found: ignore

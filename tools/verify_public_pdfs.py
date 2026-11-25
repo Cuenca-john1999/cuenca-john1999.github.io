@@ -105,8 +105,8 @@ def main() -> None:
         check_academic_project(path, text)
         if path.parent.name in ("en", "es", "de"):
             check_cv(path, combined)
-            if re.search(r"\b(?:nota final|horas de prácticas|Abschlussnote|Praktikumsstunden)\b", text, re.I):
-                block(path.name, "excluded academic detail in Spain dossier")
+            if re.search(r"\b(?:nota final|horas de prácticas|Abschlussnote|Praktikumsstunden|final grade|placement hours)\b", text, re.I):
+                block(path.name, "excluded academic detail in public market dossier")
 
     check_known_compatibility_aliases(hashes)
 
