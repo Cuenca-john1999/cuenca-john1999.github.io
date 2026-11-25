@@ -221,15 +221,15 @@
     "additional": {
       "badge": "3 credenciales documentadas",
       "title": "Certificaciones y formación complementaria",
-      "body": "Funciones A+B+C en Experimentación Animal (Orden ECC/566/2015) · curso con prácticas presenciales. A: cuidado de animales; B: eutanasia; C: realización de procedimientos. El programa formal incluye bienestar animal y 3R, reconocimiento del dolor, sufrimiento y angustia, métodos humanitarios de sacrificio, procedimientos mínimamente invasivos, anestesia para procedimientos menores, anestesia avanzada para procedimientos quirúrgicos o prolongados y principios de cirugía. Durante la parte práctica supervisada realicé personalmente manejo de animales, inyecciones, anestesia, procedimientos quirúrgicos para la obtención de muestras/tejidos y obtención/extracción de muestras animales. También participé en procedimientos supervisados que incluían eutanasia; no se presenta como una realización independiente. Gestión de Centros Sanitarios · 100 h · 2025. Prevención de Riesgos Laborales de nivel básico · 2023.",
+      "body": "Funciones A+B+C en Experimentación Animal (Orden ECC/566/2015) · curso con prácticas presenciales. A: cuidado de animales; B: eutanasia; C: realización de procedimientos. El programa formal incluye bienestar animal y 3R, reconocimiento del dolor, sufrimiento y angustia, métodos humanitarios de sacrificio, procedimientos mínimamente invasivos, anestesia para procedimientos menores, anestesia avanzada para procedimientos quirúrgicos o prolongados y principios de cirugía. Durante la parte práctica supervisada realicé personalmente manejo de animales, inyecciones, anestesia, procedimientos quirúrgicos para la obtención de muestras/tejidos y obtención/extracción de muestras animales. También participé en procedimientos supervisados que incluían eutanasia. Gestión de Centros Sanitarios · 100 h · 2025. Prevención de Riesgos Laborales de nivel básico · 2023.",
       "animal": {
         "meta": "Dynamimed · Orden ECC/566/2015 · Diploma expedido en 2024",
         "title": "Curso de Experimentación Animal · Funciones A+B+C",
-        "scope": "Curso reconocido que abarca las funciones A (cuidado de animales), B (eutanasia) y C (realización de procedimientos). El diploma acredita la superación del curso, no una resolución administrativa individual de capacitación.",
+        "scope": "Curso reconocido que abarca las funciones A (cuidado de animales), B (eutanasia) y C (realización de procedimientos). El diploma acredita la superación del curso. La capacitación individual requiere el procedimiento administrativo correspondiente.",
         "programWelfare": "Bienestar animal y 3R · reconocimiento del dolor, sufrimiento y angustia · métodos humanitarios de sacrificio",
         "programProcedures": "Procedimientos mínimamente invasivos · anestesia para procedimientos menores · anestesia avanzada para procedimientos quirúrgicos o prolongados",
         "programSurgery": "Principios de cirugía",
-        "practice": "Durante la parte práctica supervisada realicé personalmente manejo de animales, inyecciones, anestesia, procedimientos quirúrgicos para la obtención de muestras/tejidos y obtención/extracción de muestras animales. También participé en procedimientos supervisados que incluían eutanasia; no se presenta como una realización independiente."
+        "practice": "Durante la parte práctica supervisada realicé personalmente manejo de animales, inyecciones, anestesia, procedimientos quirúrgicos para la obtención de muestras/tejidos y obtención/extracción de muestras animales. También participé en procedimientos supervisados que incluían eutanasia."
       },
       "healthcare": {
         "meta": "100 h · 2025",
@@ -286,7 +286,7 @@
     },
     "academic": {
       "title": "Formación y conocimiento técnico",
-      "description": "Adquiridos mediante formación profesional, cursos certificados o proyectos académicos; no se presentan como experiencia práctica de las estancias en laboratorio.",
+      "description": "Competencias adquiridas durante la formación profesional, cursos certificados y proyectos académicos.",
       "microbiology": "Microbiología clínica",
       "virology": "Virología · revisión bibliográfica sobre bacteriofagoterapia",
       "animalModels": "Curso de Experimentación Animal · Funciones A+B+C · prácticas supervisadas · cuidado, eutanasia, procedimientos, anestesia y principios quirúrgicos"
@@ -395,7 +395,7 @@
     "abstractIntro": "La resistencia a los antimicrobianos ha renovado el interés científico por la bacteriofagoterapia, especialmente en infecciones donde los tratamientos convencionales presentan limitaciones.",
     "abstractReview": "Este trabajo académico final realizado en coautoría es una revisión bibliográfica estructurada: se evaluaron 75 artículos y se seleccionaron 51 mediante criterios explícitos en fuentes en español, inglés, portugués y ruso. No presenta resultados experimentales ni clínicos propios.",
     "abstractScope": "La revisión explica los bacteriófagos, sus ciclos de replicación, posibles aplicaciones, limitaciones, vías de administración y barreras regulatorias para un uso clínico más amplio.",
-    "abstractInterpretation": "La literatura citada describe aplicaciones prometedoras y limitaciones importantes. Cualquier mención a especificidad, efectos sobre la microbiota o modulación inmunitaria procede de la evidencia revisada y no constituye validación clínica por parte de los autores.",
+    "abstractInterpretation": "La literatura revisada recoge aplicaciones prometedoras y limitaciones importantes, especialmente en relación con la especificidad, la microbiota y la modulación inmunitaria. El trabajo analiza estos resultados publicados desde una perspectiva bibliográfica.",
     "abstractConclusion": "El proyecto también propone un concepto futuro que conecta bacteriófagos, quitosano y biopelículas asociadas a microplásticos. Esta contribución sigue siendo conceptual y requiere validación experimental independiente.",
     "keywords": "Palabras clave: bacteriofagoterapia, bacterias multirresistentes, tratamiento con fagos, antibióticos, terapia alternativa, Staphylococcus aureus, Pseudomonas aeruginosa.",
     "spanishOriginal": "Redacción original en español"

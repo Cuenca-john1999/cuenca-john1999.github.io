@@ -178,7 +178,7 @@ def check_required_content() -> None:
 
     required_animal_scope = (
         "animal handling, injections, anaesthesia",
-        "included euthanasia; not presented as independent practice",
+        "supervised procedures involving euthanasia",
     )
     for phrase in required_animal_scope:
         if phrase not in published_text:

@@ -87,7 +87,7 @@
     "education": {
       "kicker": "Education",
       "title": "Two official Spanish vocational qualifications in healthcare and chemistry.",
-      "body": "Completed Spanish vocational qualifications: Técnico Superior en Laboratorio Clínico y Biomédico and Técnico en Operaciones de Laboratorio. English descriptions are translations, not professional equivalence decisions.",
+      "body": "Completed Spanish vocational qualifications: Técnico Superior en Laboratorio Clínico y Biomédico and Técnico en Operaciones de Laboratorio. The English descriptions explain the content of my Spanish qualifications.",
       "pointClinical": "Técnico Superior en Laboratorio Clínico y Biomédico · CEAC FP Oficial · 2025",
       "pointOperations": "Técnico en Operaciones de Laboratorio · IES Virgen de la Paloma · 2023",
       "pointAdditional": "Certifications: Animal Experimentation A+B+C · Healthcare Centre Management · Basic Risk Prevention"
@@ -154,7 +154,7 @@
     },
     "recognition": {
       "label": "Professional recognition",
-      "value": "Original Spanish vocational qualifications. Professional recognition, registration and language requirements depend on the country and role; no automatic equivalence or clinical authorisation is claimed."
+      "value": "I hold official Spanish vocational qualifications. Recognition, registration and language requirements vary by country and role."
     },
     "documents": {
       "label": "Documents",
@@ -212,7 +212,7 @@
       "recognition": "Diploma for excellent academic performance in the second year of the Técnico en Operaciones de Laboratorio programme.",
       "results10": "Laboratory Auxiliary Services · Technical English",
       "results9": "Applied Chemistry · Physicochemical Testing · Safety and Organization in the Laboratory · Chemical Analysis Operations · Materials Testing",
-      "evidenceIntro": "Archived coursework supplied for this portfolio documents practical academic work through laboratory reports, SOP/PNT-style documents, calculations and project materials. This is presented as training evidence, not professional placement experience.",
+      "evidenceIntro": "Archived coursework supplied for this portfolio documents practical academic work through laboratory reports, SOP/PNT-style documents, calculations and project materials. These materials illustrate the practical skills developed during my vocational training.",
       "evidenceDocumentation": "Laboratory documentation & equipment: pH-meter and drying-oven PNTs, micropipette documentation, thermometer calibration, inventory and maintenance records, mass/volume measurement and sampling reports.",
       "evidenceAnalytical": "Analytical chemistry & physicochemical work: solution preparation, HCl/NaOH titrations, acidity, reaction yield, conductimetry, potentiometry, turbidity, nitrates, proteins and physicochemical measurement.",
       "evidenceMicrobiology": "Microbiology & materials: microscope use, culture-media preparation, membrane-filtration water analysis, antibiogram, plastics/material identification and corrosion-related work.",
@@ -221,15 +221,15 @@
     "additional": {
       "badge": "3 documented credentials",
       "title": "Certifications & Additional Training",
-      "body": "Animal Experimentation - Functions A+B+C (Order ECC/566/2015) · supervised practical course. A: care of animals; B: euthanasia of animals; C: performance of procedures. The formal programme covers animal welfare and the 3Rs, recognition of pain, suffering and distress, humane killing methods, minimally invasive procedures, anaesthesia for minor procedures, advanced anaesthesia for surgical or prolonged procedures, and principles of surgery. During the supervised practical component, I personally performed animal handling, injections, anaesthesia, surgical procedures for sample/tissue collection and collection/extraction of animal samples. I also participated in supervised procedures that included euthanasia; this is not presented as independent practice. Healthcare Centre Management · 100 h · 2025. Basic Level Occupational Risk Prevention · 2023.",
+      "body": "Animal Experimentation - Functions A+B+C (Order ECC/566/2015) · supervised practical course. A: care of animals; B: euthanasia of animals; C: performance of procedures. The formal programme covers animal welfare and the 3Rs, recognition of pain, suffering and distress, humane killing methods, minimally invasive procedures, anaesthesia for minor procedures, advanced anaesthesia for surgical or prolonged procedures, and principles of surgery. During the supervised practical component, I personally performed animal handling, injections, anaesthesia, surgical procedures for sample/tissue collection and collection/extraction of animal samples. I also took part in supervised procedures involving euthanasia. Healthcare Centre Management · 100 h · 2025. Basic Level Occupational Risk Prevention · 2023.",
       "animal": {
         "meta": "Spanish Order ECC/566/2015 · Course diploma 2024",
         "title": "Animal Experimentation course · Functions A+B+C",
-        "scope": "Course covering the Spanish functions A (animal care), B (euthanasia) and C (procedures). The diploma records course completion; it is not proof of individual authorisation or recognition in another country.",
+        "scope": "Course covering the Spanish functions A (animal care), B (euthanasia) and C (procedures). The diploma records course completion. Individual authorisation and recognition are subject to the applicable national procedures.",
         "programWelfare": "Animal welfare & 3Rs · recognition of pain, suffering and distress · humane killing methods",
         "programProcedures": "Minimally invasive procedures · anaesthesia for minor procedures · advanced anaesthesia for surgical or prolonged procedures",
         "programSurgery": "Principles of surgery",
-        "practice": "During the supervised practical component, I personally performed animal handling, injections, anaesthesia, surgical procedures for sample/tissue collection and collection/extraction of animal samples. I also participated in supervised procedures that included euthanasia; this is not presented as independent practice."
+        "practice": "During the supervised practical component, I personally performed animal handling, injections, anaesthesia, surgical procedures for sample/tissue collection and collection/extraction of animal samples. I also took part in supervised procedures involving euthanasia."
       },
       "healthcare": {
         "meta": "100 h · 2025",
@@ -286,7 +286,7 @@
     },
     "academic": {
       "title": "Academic training & technical knowledge",
-      "description": "Covered through formal vocational training, certified coursework or academic projects; not presented as placement-based practical experience.",
+      "description": "Skills developed through vocational training, certified courses and academic projects.",
       "microbiology": "Clinical microbiology",
       "virology": "Virology · Bacteriophage literature review",
       "animalModels": "Animal Experimentation course · Functions A+B+C · supervised practical training · care, euthanasia, procedures, anaesthesia and surgical principles"
