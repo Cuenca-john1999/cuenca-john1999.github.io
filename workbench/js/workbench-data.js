@@ -629,7 +629,7 @@
                     { title: 'Responsibility & handover', body: 'progressive responsibility for the volatile-matter workflow, including handover training and supervision of replacement interns. This foundation supports continued development in method validation, uncertainty analysis and cross-method interpretation.' },
                     { title: 'Documentary basis & confidentiality', body: 'Internal or client-related operational material is not republished; only a public-safe summary is shown. Public wording distinguishes placement records and reference support from the wider practical scope confirmed for the portfolio.' }
                 ],
-                disclosure: 'Scope note: documented placement evidence, reference-supported responsibilities and confirmed supervised analytical practice are separated here. No client-confidential material is republished.'
+                disclosure: 'This summary brings together my documented placement activities, reference-supported responsibilities and supervised analytical work while respecting client confidentiality.'
             }
         },
         es: {
@@ -783,9 +783,9 @@
                     { title: 'Calidad y trazabilidad', body: 'trabajo conforme a SOP establecidos, autocontroles estadísticos de calidad, registros en Thermal Excel, actualización de bases de datos, lotes, etiquetas y trazabilidad de resultados' },
                     { title: 'Documentación operativa creada', body: 'guías operativas, hojas de datos, instrucciones de trabajo y documentación de troubleshooting sobre métodos analíticos, inicio de análisis, batches, muestras y NIR, etiquetado, Thermal Excel y trazabilidad' },
                     { title: 'Responsabilidad y transferencia', body: 'responsabilidad progresiva sobre el flujo de materia volátil, incluida la formación de relevo y supervisión de las personas en prácticas que continuaron el puesto. Esta base permite seguir avanzando en validación de métodos, análisis de incertidumbre e interpretación cruzada de técnicas.' },
-                    { title: 'Base documental y confidencialidad', body: 'El material operativo interno o relacionado con clientes no se republica; solo se muestra un resumen seguro para publicación. La redacción pública distingue los registros de las prácticas y el respaldo de la referencia del alcance práctico más amplio confirmado para el portafolio.' }
+                    { title: 'Base documental y confidencialidad', body: 'Este resumen describe mi experiencia de laboratorio respetando la confidencialidad de los procedimientos internos y de los clientes. Distingue las actividades documentadas, las responsabilidades respaldadas por referencias y otras tareas prácticas confirmadas.' }
                 ],
-                disclosure: 'Nota de alcance: aquí se separan la evidencia documental de las prácticas, las responsabilidades respaldadas por referencia y la práctica analítica supervisada confirmada. No se republica material confidencial de clientes.'
+                disclosure: 'Este resumen reúne mis actividades de prácticas documentadas, las responsabilidades respaldadas por referencias y el trabajo analítico supervisado, respetando la confidencialidad de los clientes.'
             }
         },
         de: {
@@ -852,7 +852,7 @@
                 details: [
                     {
                         title: 'Akademischer Umfang',
-                        body: 'Bacteriophage Therapy: Rediscovering an Innovative Therapy ist eine gemeinsam verfasste akademische Abschlussarbeit in Form einer Literaturübersicht. Die verfügbare Evidenz besteht aus der abgeschlossenen schriftlichen Arbeit und dem Verteidigungsmaterial; eigene experimentelle oder klinische Ergebnisse werden nicht beansprucht.'
+                        body: 'Bacteriophage Therapy: Rediscovering an Innovative Therapy ist eine gemeinsam verfasste akademische Abschlussarbeit in Form einer Literaturübersicht. Die schriftliche Arbeit und die Präsentation zur Verteidigung dokumentieren die Auswertung der wissenschaftlichen Literatur.'
                     },
                     {
                         title: 'Ursprüngliche interdisziplinäre Hypothese',
@@ -939,9 +939,9 @@
                     { title: 'Qualität & Rückverfolgbarkeit', body: 'Arbeit nach festgelegten SOPs, statistische Qualitäts-Selbstkontrollen, Thermal-Excel-Datensätze, Datenbankaktualisierungen, Chargen, Etiketten und Ergebnisrückverfolgbarkeit' },
                     { title: 'Erstellte operative Dokumentation', body: 'operative Leitfäden, Datenblätter, Arbeitsanweisungen und Troubleshooting-Dokumentation zu Analysemethoden, Analysestart, Chargen, Proben und NIR, Etikettierung, Thermal Excel und Rückverfolgbarkeit' },
                     { title: 'Verantwortung & Übergabe', body: 'schrittweise Verantwortung für den Workflow der Bestimmung flüchtiger Bestandteile, einschließlich Einarbeitung und Betreuung der nachfolgenden Praktikantinnen und Praktikanten. Diese Grundlage unterstützt die weitere Entwicklung in Methodenvalidierung, Unsicherheitsanalyse und methodenübergreifender Interpretation.' },
-                    { title: 'Dokumentarische Grundlage & Vertraulichkeit', body: 'Internes oder kundenbezogenes Arbeitsmaterial wird nicht erneut veröffentlicht; gezeigt wird nur eine veröffentlichungssichere Zusammenfassung. Die öffentliche Darstellung trennt Praktikumsnachweise und Referenzunterstützung vom weiter gefassten, für das Portfolio bestätigten praktischen Umfang.' }
+                    { title: 'Dokumentarische Grundlage & Vertraulichkeit', body: 'Diese Zusammenfassung beschreibt meine Laborpraxis unter Wahrung der Vertraulichkeit interner Abläufe und Kundendaten. Sie unterscheidet dokumentierte Tätigkeiten, durch Referenzen gestützte Verantwortlichkeiten und weitere bestätigte praktische Arbeiten.' }
                 ],
-                disclosure: 'Hinweis zum Umfang: dokumentierte Praktikumsnachweise, durch Referenz gestützte Verantwortlichkeiten und bestätigte beaufsichtigte analytische Praxis werden hier getrennt dargestellt. Vertrauliches Kundenmaterial wird nicht erneut veröffentlicht.'
+                disclosure: 'Diese Zusammenfassung verbindet dokumentierte Tätigkeiten, durch Referenzen gestützte Verantwortlichkeiten und analytische Praxis unter Aufsicht. Die Vertraulichkeit der Kundendaten bleibt gewahrt.'
             }
         }
     };
