@@ -105,10 +105,10 @@
                 <a href="#references-professional" data-i18n="nav.references">Referenzen</a>
                 <a href="#contact" data-i18n="nav.contact">Kontakt</a>
             </nav>
-            <div class="language-switcher" aria-label="Sprachauswahl" data-i18n-aria-label="accessibility.languageSelector">
-                <button type="button" data-language-set="en" aria-pressed="false">EN</button>
-                <button type="button" data-language-set="de" aria-pressed="true">DE</button>
-                <button type="button" data-language-set="es" aria-pressed="false">ES</button>
+            <div class="language-switcher" aria-label="Länderauswahl" data-market-selector style="flex-wrap:wrap;justify-content:center;max-width:min(54vw, 22rem)">
+                <button type="button" data-language-set="en" aria-pressed="false" title="International">International</button>
+                <button type="button" data-language-set="de" aria-pressed="true" title="Deutschland">Deutschland</button>
+                <button type="button" data-language-set="es" aria-pressed="false" title="Spanien">Spanien</button>
             </div>
         </header>
 
@@ -725,6 +725,18 @@
         </div>
     </div>
 
+    <script>
+        // Profile routes select a professional market, independently of stored Workbench language.
+        if (!document.documentElement.dataset.localizedLanguage) {
+            document.documentElement.dataset.localizedLanguage = 'en';
+            const legacyLanguage = new URL(window.location.href).searchParams.get('lang');
+            if (legacyLanguage === 'es' || legacyLanguage === 'de') {
+                const target = new URL(legacyLanguage + '/', window.location.href);
+                target.hash = window.location.hash;
+                window.location.replace(target.href);
+            }
+        }
+    </script>
     <!-- JavaScript - Orden de carga importante -->
     <!-- 1. Módulos core (theme, language) -->
     <script src="../assets/js/theme.js?v=541165f835ae"></script>

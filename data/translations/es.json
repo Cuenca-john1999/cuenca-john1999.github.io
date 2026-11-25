@@ -61,8 +61,8 @@
   "hero": {
     "title": "Técnico Superior en<br>Laboratorio Clínico y Biomédico",
     "philosophy": "Comprometido con una vida de aprendizaje, descubrimiento y ayuda a los demás.",
-    "availability": "Disponible en la zona Bonn–Colonia, Berlín y Madrid, con reubicación abierta en toda Alemania y a nivel internacional.",
-    "cvCta": "Descargar CV",
+    "availability": "Madrid como base de disponibilidad · Movilidad en toda España e internacional.",
+    "cvCta": "Descargar CV — España",
     "contactCta": "Contacto",
     "projectsCta": "Explorar proyectos",
     "scroll": "Desliza para descubrir"
@@ -71,10 +71,10 @@
     "profile": {
       "kicker": "Perfil",
       "title": "Un perfil de laboratorio definido por la precisión, la investigación y el aprendizaje continuo.",
-      "body": "Cuento con titulaciones españolas de Técnico Superior en Laboratorio Clínico y Biomédico y Técnico en Operaciones de Laboratorio. Actualmente estoy en la zona Bonn–Colonia, con disponibilidad adicional en Berlín y Madrid, y aplico esta formación al diagnóstico clínico, la biología molecular, la inmunología y el trabajo analítico de laboratorio bajo normas de buenas prácticas de laboratorio.",
-      "pointPractice": "Práctica en laboratorio clínico y biomédico",
-      "pointBiomedical": "Biología molecular · Inmunología · PCR · ELISA",
-      "pointAnalytical": "Flujos analíticos · SOP · Documentación bajo GLP"
+      "body": "Soy Técnico Superior en Laboratorio Clínico y Biomédico y Técnico en Operaciones de Laboratorio, con formación sanitaria y química y experiencia práctica en investigación biomédica y análisis de laboratorio en España e Irlanda. Mi trayectoria incluye prácticas en inmunología y biología molecular en La Princesa y análisis de biomasa, instrumentación y documentación técnica conforme a GLP en Celignis. Mi perfil combina formación en diagnóstico clínico con experiencia experimental y analítica.",
+      "pointPractice": "Laboratorio clínico y diagnóstico · Formación en hematología, microbiología clínica, inmunodiagnóstico, bioquímica y gestión de muestras",
+      "pointBiomedical": "Investigación biomédica · Prácticas en inmunología, biología molecular, cultivo celular y procesamiento de muestras",
+      "pointAnalytical": "Laboratorio analítico e industrial · Prácticas en análisis de biomasa, instrumentación, PNT (SOP), GLP y documentación técnica"
     },
     "experience": {
       "kicker": "Experiencia",
@@ -86,8 +86,8 @@
     },
     "education": {
       "kicker": "Formación",
-      "title": "Dos titulaciones de laboratorio con resultados sólidos y una base clínica, analítica y biomédica.",
-      "body": "Completé dos titulaciones españolas de Formación Profesional—Técnico Superior en Laboratorio Clínico y Biomédico y Técnico en Operaciones de Laboratorio—con notas finales de 9,25/10 y 8,69/10.",
+      "title": "Dos titulaciones oficiales de Formación Profesional: Sanidad y Química.",
+      "body": "Formación Profesional de Grado Superior en Laboratorio Clínico y Biomédico y de Grado Medio en Operaciones de Laboratorio, con una base clínica, biomédica y fisicoquímica.",
       "pointClinical": "Técnico Superior en Laboratorio Clínico y Biomédico · CEAC FP Oficial · 2025",
       "pointOperations": "Técnico en Operaciones de Laboratorio · IES Virgen de la Paloma · 2023",
       "pointAdditional": "Certificaciones: Experimentación Animal A+B+C · Gestión de Centros Sanitarios · PRL básico"
@@ -123,42 +123,42 @@
     },
     "contact": {
       "kicker": "Contacto",
-      "title": "Abierto a oportunidades en laboratorio, investigación clínica y ciencia biomédica.",
-      "body": "Disponible en la zona Bonn–Colonia, Berlín y Madrid, y abierto a reubicación en toda Alemania y a nivel internacional. Mis intereses profesionales incluyen la biología molecular, la inmunología, la investigación traslacional, la comunicación científica y la colaboración internacional en entornos de laboratorio."
+      "title": "Abierto a oportunidades de laboratorio en España.",
+      "body": "Madrid como base de disponibilidad, con movilidad en toda España e internacional. Interés en diagnóstico clínico, investigación biomédica, análisis químico e industrial y colaboración científica."
     }
   },
   "readiness": {
     "looking": {
       "kicker": "Qué estoy buscando",
-      "title": "Oportunidades como técnico de laboratorio, asistente técnico y apoyo a investigación.",
-      "body": "Especialmente en laboratorios de biología molecular, inmunología y análisis—dentro de grupos de investigación, universidades, institutos o equipos privados—donde la práctica rigurosa, la documentación fiable y el aprendizaje continuo apoyen la investigación, el diagnóstico y el análisis."
+      "title": "Oportunidades en laboratorio clínico, investigación biomédica y análisis químico e industrial.",
+      "body": "Me interesan los laboratorios hospitalarios y privados, grupos de investigación, universidades, institutos y laboratorios de análisis y control de calidad en España, donde pueda aplicar mi formación y experiencia práctica y seguir desarrollando mis competencias."
     }
   },
   "snapshot": {
     "kicker": "Resumen para reclutadores · perfil en 20 segundos",
     "location": {
-      "label": "Ubicación actual",
-      "value": "Zona Bonn–Colonia, Alemania"
+      "label": "Base de disponibilidad",
+      "value": "Madrid, España"
     },
     "roles": {
-      "label": "Roles objetivo",
-      "value": "Técnico de laboratorio · Asistente técnico · Apoyo a investigación · laboratorios biomédicos y analíticos · puestos técnicos no regulados"
+      "label": "Puestos de interés",
+      "value": "Técnico Superior en Laboratorio Clínico y Biomédico · Técnico Especialista en Laboratorio (TEL) · Técnico de apoyo a la investigación · Técnico de laboratorio químico, analítico, industrial o de control de calidad"
     },
     "languages": {
       "label": "Idiomas",
-      "value": "Inglés B2 · Alemán A2, preparando la certificación · Español nativo"
+      "value": "Español nativo · Inglés B2 · Alemán A2, preparando la certificación"
     },
     "availability": {
       "label": "Disponibilidad y movilidad",
-      "value": "Zona Bonn–Colonia · Berlín · Madrid · abierto a reubicación en toda Alemania y a nivel internacional"
+      "value": "Madrid · Movilidad en toda España e internacional"
     },
     "recognition": {
-      "label": "Reconocimiento profesional",
-      "value": "Los puestos clínicos u hospitalarios regulados pueden requerir Anerkennung según el puesto, el Bundesland y la autoridad competente. La aceptación previa por una universidad alemana se refería únicamente al acceso académico y no constituye reconocimiento profesional."
+      "label": "Titulaciones oficiales",
+      "value": "Técnico Superior en Laboratorio Clínico y Biomédico (FP de Grado Superior, Sanidad) · Técnico en Operaciones de Laboratorio (FP de Grado Medio, Química)."
     },
     "documents": {
       "label": "Documentos",
-      "value": "CV · Referencias disponibles"
+      "value": "CV para España · Referencias disponibles"
     }
   },
   "experienceCards": {
@@ -190,12 +190,12 @@
   },
   "educationCards": {
     "clinical": {
-      "grade": "9,25/10",
-      "title": "Laboratorio Clínico y Biomédico",
+      "grade": "FP de Grado Superior · Sanidad",
+      "title": "Técnico Superior en Laboratorio Clínico y Biomédico",
       "center": "CEAC FP Oficial · Madrid, España",
       "period": "2023–2025",
       "practiceCta": "Prácticas: Hospital Universitario de La Princesa →",
-      "body": "Titulación española: Técnico Superior en Laboratorio Clínico y Biomédico, CEAC FP Oficial, 2023-2025. Nota final oficial: 9,25/10 y matrículas de honor en Técnicas Generales de Laboratorio, Técnicas de Inmunodiagnóstico y Técnicas de Análisis Hematológico.",
+      "body": "Titulación oficial española: Técnico Superior en Laboratorio Clínico y Biomédico, CEAC FP Oficial, 2023–2025. Formación en gestión de muestras biológicas, técnicas generales de laboratorio, biología molecular y citogenética, fisiopatología, análisis bioquímico, inmunodiagnóstico, microbiología clínica y análisis hematológico.",
       "finalProject": "<strong>Bacteriofagoterapia | Redescubriendo una terapia innovadora.</strong> Trabajo en coautoría con Luis Gonzalo Legua Pérez y publicado con su autorización.<br><br><strong>Idioma del documento:</strong> la versión enlazada en español es el trabajo académico original.<br><br><strong>Hipótesis interdisciplinaria original:</strong> explorar si la especificidad de los fagos y la adsorción basada en quitosano podrían combinarse en futuros modelos de laboratorio para estudiar biofilms asociados a microplásticos, sin afirmar eficacia clínica.",
       "contribution": "Mi contribución: revisión bibliográfica, redacción científica, estructura del proyecto, desarrollo conceptual y preparación de la defensa, incluyendo la conexión futura entre fagoterapia, quitosano y preguntas biomédicas relacionadas con microplásticos.",
       "exploreProject": "Explorar trabajo",
@@ -203,12 +203,12 @@
       "reference": "Tamara Díaz Jáuregui, profesora de biología en CEAC FP Madrid, destaca la capacidad técnica, dedicación, precisión, resolución de problemas, rapidez de aprendizaje, comunicación y sentido de la responsabilidad."
     },
     "operations": {
-      "grade": "8,69/10",
-      "title": "Operaciones de Laboratorio",
+      "grade": "FP de Grado Medio · Química",
+      "title": "Técnico en Operaciones de Laboratorio",
       "center": "IES Virgen de la Paloma · Madrid, España",
       "period": "2021–2023",
       "practiceCta": "Erasmus+ / prácticas: Celignis Biomass Analysis Laboratory · Limerick, Irlanda →",
-      "body": "Titulación española: Técnico en Operaciones de Laboratorio, IES Virgen de la Paloma, 2021–2023. Nota final oficial: 8,69/10. El expediente académico oficial incluye seguridad y organización en el laboratorio, química aplicada, pruebas fisicoquímicas, muestreo y operaciones unitarias, análisis químico, microbiología y bioquímica, ensayos de materiales, servicios auxiliares de laboratorio e inglés técnico.",
+      "body": "Titulación oficial española: Técnico en Operaciones de Laboratorio, IES Virgen de la Paloma, 2021–2023. Formación en seguridad y organización del laboratorio, química aplicada, pruebas fisicoquímicas, muestreo y operaciones unitarias, análisis químico, microbiología y bioquímica, ensayos de materiales, servicios auxiliares e inglés técnico.",
       "recognition": "Diploma por excelente aprovechamiento en el segundo curso del ciclo de Técnico en Operaciones de Laboratorio.",
       "results10": "Servicios Auxiliares en el Laboratorio · Inglés Técnico",
       "results9": "Química Aplicada · Pruebas Fisicoquímicas · Seguridad y Organización en el Laboratorio · Operaciones de Análisis Químico · Ensayos de Materiales",
@@ -221,11 +221,11 @@
     "additional": {
       "badge": "3 credenciales documentadas",
       "title": "Certificaciones y formación complementaria",
-      "body": "Funciones A+B+C en Experimentación Animal (Orden ECC/566/2015) · 70 h con prácticas presenciales. A: cuidado de animales; B: eutanasia; C: realización de procedimientos. El programa formal incluye bienestar animal y 3R, reconocimiento del dolor, sufrimiento y angustia, métodos humanitarios de sacrificio, procedimientos mínimamente invasivos, anestesia para procedimientos menores, anestesia avanzada para procedimientos quirúrgicos o prolongados y principios de cirugía. Durante la parte práctica supervisada realicé personalmente manejo de animales, inyecciones, anestesia, procedimientos quirúrgicos para la obtención de muestras/tejidos y obtención/extracción de muestras animales. También participé en procedimientos supervisados que incluían eutanasia; no se presenta como una realización independiente. Gestión de Centros Sanitarios · 100 h · 2025. Prevención de Riesgos Laborales de nivel básico · 2023.",
+      "body": "Funciones A+B+C en Experimentación Animal (Orden ECC/566/2015) · curso con prácticas presenciales. A: cuidado de animales; B: eutanasia; C: realización de procedimientos. El programa formal incluye bienestar animal y 3R, reconocimiento del dolor, sufrimiento y angustia, métodos humanitarios de sacrificio, procedimientos mínimamente invasivos, anestesia para procedimientos menores, anestesia avanzada para procedimientos quirúrgicos o prolongados y principios de cirugía. Durante la parte práctica supervisada realicé personalmente manejo de animales, inyecciones, anestesia, procedimientos quirúrgicos para la obtención de muestras/tejidos y obtención/extracción de muestras animales. También participé en procedimientos supervisados que incluían eutanasia; no se presenta como una realización independiente. Gestión de Centros Sanitarios · 100 h · 2025. Prevención de Riesgos Laborales de nivel básico · 2023.",
       "animal": {
-        "meta": "Orden ECC/566/2015 · 70 h · prácticas presenciales",
-        "title": "Experimentación Animal · Funciones A+B+C",
-        "scope": "Alcance formal de la certificación: A · cuidado de animales; B · eutanasia de animales; C · realización de procedimientos.",
+        "meta": "Dynamimed · Orden ECC/566/2015 · Diploma expedido en 2024",
+        "title": "Curso de Experimentación Animal · Funciones A+B+C",
+        "scope": "Curso reconocido que abarca las funciones A (cuidado de animales), B (eutanasia) y C (realización de procedimientos). El diploma acredita la superación del curso, no una resolución administrativa individual de capacitación.",
         "programWelfare": "Bienestar animal y 3R · reconocimiento del dolor, sufrimiento y angustia · métodos humanitarios de sacrificio",
         "programProcedures": "Procedimientos mínimamente invasivos · anestesia para procedimientos menores · anestesia avanzada para procedimientos quirúrgicos o prolongados",
         "programSurgery": "Principios de cirugía",
@@ -289,7 +289,7 @@
       "description": "Adquiridos mediante formación profesional, cursos certificados o proyectos académicos; no se presentan como experiencia práctica de las estancias en laboratorio.",
       "microbiology": "Microbiología clínica",
       "virology": "Virología · revisión bibliográfica sobre bacteriofagoterapia",
-      "animalModels": "Curso de Experimentación Animal · Funciones A+B+C · 70 h · prácticas presenciales · cuidado, eutanasia y realización de procedimientos · anestesia y principios quirúrgicos"
+      "animalModels": "Curso de Experimentación Animal · Funciones A+B+C · prácticas supervisadas · cuidado, eutanasia, procedimientos, anestesia y principios quirúrgicos"
     }
   },
   "projectCards": {
@@ -319,7 +319,7 @@
     "cv": {
       "kicker": "Perfil central",
       "title": "Curriculum Vitae",
-      "body": "Resumen profesional público, formación y experiencia de laboratorio preparados para procesos de selección.",
+      "body": "Resumen profesional público adaptado al mercado español, con formación y experiencia de laboratorio.",
       "cta": "Abrir CV"
     },
     "phage": {
@@ -363,7 +363,7 @@
   "contactForm": {
     "kicker": "Contacto profesional",
     "title": "Ponte en contacto.",
-    "body": "Para puestos de laboratorio, oportunidades en investigación clínica, proyectos biomédicos o colaboraciones científicas.",
+    "body": "Para procesos de selección en laboratorios clínicos, de investigación o analíticos en España, así como colaboraciones científicas.",
     "name": "Nombre",
     "email": "Email",
     "message": "Mensaje",

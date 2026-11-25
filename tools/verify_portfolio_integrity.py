@@ -560,6 +560,22 @@ def check_cache_busting() -> None:
     if checked == 0:
         fail("no local CSS/JS cache-busting references were checked")
 
+def check_spain_market() -> None:
+    page = (ROOT / "es" / "index.html").read_text(encoding="utf-8")
+    dictionary = load_translations()["es"]
+    for marker in ("Selector de país", "Madrid, España", "Movilidad en toda España", "FP de Grado Superior · Sanidad", "FP de Grado Medio · Química", "no una resolución administrativa individual de capacitación"):
+        if marker not in page:
+            fail(f"Spain market marker missing: {marker}")
+    for marker in ("Anerkennung", "Bonn–Colonia", "9,25/10", "8,69/10", 'class="academic-result-list"'):
+        if marker in page:
+            fail(f"Spain market contains obsolete or excluded content: {marker}")
+    if dictionary["snapshot"]["location"]["value"] != "Madrid, España":
+        fail("Spain market runtime location differs from static content")
+    for relative in ("index.html", "de/index.html", "es/index.html"):
+        if "data-market-selector" not in (ROOT / relative).read_text(encoding="utf-8"):
+            fail(f"missing market selector: {relative}")
+
+
 def main() -> None:
     translations = load_translations()
     check_translation_parity(translations)
@@ -576,6 +592,7 @@ def main() -> None:
     check_public_privacy_guards()
     check_cache_busting()
     check_required_content()
+    check_spain_market()
     print("Portfolio integrity checks passed.")
 
 

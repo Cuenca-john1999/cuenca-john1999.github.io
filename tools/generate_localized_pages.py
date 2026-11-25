@@ -46,8 +46,8 @@ MAIN_META = {
         "image_alt": "Wissenschaftliches Portfolio von Jhon M. Cuenca mit blauer DNA-Helix, Laborbereichen und Mikroskop.",
     },
     "es": {
-        "title": "Jhon M. Cuenca | Laboratorio Clínico y Biomédico",
-        "description": "Portafolio profesional de Jhon M. Cuenca centrado en laboratorio clínico y biomédico, biología molecular, inmunología, trabajo analítico y documentación.",
+        "title": "Jhon M. Cuenca | Técnico de Laboratorio en España",
+        "description": "Portafolio profesional para España: Técnico Superior en Laboratorio Clínico y Biomédico y Técnico en Operaciones de Laboratorio, con experiencia práctica en investigación biomédica y análisis de laboratorio.",
         "locale": "es_ES",
         "site_name": "Jhon M. Cuenca | Portafolio de Laboratorio Clínico y Biomédico",
         "image_alt": "Portafolio científico de Jhon M. Cuenca con una hélice de ADN azul, áreas de laboratorio y un microscopio.",
@@ -228,6 +228,37 @@ def localize_language_controls(text: str, language: str) -> str:
     return text
 
 
+def localize_market_profile(text: str, language: str) -> str:
+    """Render the market selector and the Spain-specific presentation."""
+    labels = {
+        "en": ("Market selector", "International", "Germany", "Spain"),
+        "de": ("Länderauswahl", "International", "Deutschland", "Spanien"),
+        "es": ("Selector de país", "Internacional", "Alemania", "España"),
+    }
+    label, *names = labels[language]
+    buttons = "\n".join(
+        f'                <button type="button" data-language-set="{candidate}" aria-pressed="{str(candidate == language).lower()}" title="{name}">{name}</button>'
+        for candidate, name in zip(("en", "de", "es"), names)
+    )
+    selector = (
+        f'<div class="language-switcher" aria-label="{label}" data-market-selector style="flex-wrap:wrap;justify-content:center;max-width:min(54vw, 22rem)">\n'
+        f'{buttons}\n            </div>'
+    )
+    text, count = re.subn(r'<div class="language-switcher"[^>]*data-market-selector[^>]*>.*?</div>', lambda _: selector, text, count=1, flags=re.S)
+    if count != 1:
+        raise SystemExit("[localized-pages] missing market selector")
+    if language == "es":
+        text, count = re.subn(
+            r'^ {32}<div class="document-slot">\n {36}<span data-i18n="commonLabels.selectedResults">[^\n]*\n.*?^ {32}</div>\n\n',
+            "", text, count=1, flags=re.M | re.S,
+        )
+        if count != 1:
+            raise SystemExit("[localized-pages] missing academic results block")
+        name = '                        <p class="opening-name" data-reveal>Jhon M. Cuenca</p>\n'
+        text = replace_once(text, name, name + '                        <p class="opening-availability" data-reveal>Técnico en Operaciones de Laboratorio</p>\n', "Spain secondary qualification")
+    return text
+
+
 def localize_profile_json_ld(text: str, language: str) -> str:
     pattern = re.compile(r'(<script type="application/ld\+json">\s*)(.*?)(\s*</script>)', re.S)
     match = pattern.search(text)
@@ -285,7 +316,7 @@ def render_main(language: str) -> str:
     source = source.replace('../assets/documents/bacteriophage-therapy-final-project_EN.pdf', f'../assets/documents/bacteriophage-therapy-final-project_{language.upper()}.pdf')
     source = source.replace('../assets/documents/bacteriophage-therapy-defense_EN.pdf', f'../assets/documents/bacteriophage-therapy-defense_{language.upper()}.pdf')
     source = localize_markup(source, load_main_translation(language))
-    source = localize_language_controls(source, language)
+    source = localize_market_profile(source, language)
     source = localize_profile_json_ld(source, language)
     return source
 
