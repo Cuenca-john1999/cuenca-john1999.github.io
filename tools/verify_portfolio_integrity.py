@@ -16,7 +16,7 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 LANGUAGES = ("en", "de", "es")
-HTML_PAGES = ("index.html", "workbench/index.html", "privacy.html", "404.html", "es/index.html", "de/index.html")
+HTML_PAGES = ("index.html", "workbench/index.html", "privacy.html", "404.html", "es/index.html", "de/index.html", "es/workbench/index.html", "de/workbench/index.html")
 
 
 def fail(message: str) -> None:
@@ -622,6 +622,21 @@ def check_shared_evidence() -> None:
         if set(re.findall(r'data-skill-key="([^"]+)"', source)) != keys:
             fail(f"catalogue differs from shared evidence for {lang}")
 
+def check_scientific_library() -> None:
+    data = json.loads((ROOT / "data/market/scientific-library.json").read_text(encoding="utf-8"))
+    for lang, profile, wb in (("en","index.html","workbench/index.html"),("es","es/index.html","es/workbench/index.html"),("de","de/index.html","de/workbench/index.html")):
+        page = (ROOT / profile).read_text(encoding="utf-8")
+        library = (ROOT / wb).read_text(encoding="utf-8")
+        if 'id="scientific-library"' not in library:
+            fail(f"missing scientific library in {lang}")
+        for note in data["notes"]:
+            if f'id="note-{note["id"]}"' not in library:
+                fail(f"missing scientific note in {lang}: {note['id']}")
+        for marker in ("9.25/10","8.69/10","9,25/10","8,69/10","10/10"):
+            if marker in page or marker in library:
+                fail(f"excluded grades in {lang}")
+        check_duplicate_ids(ROOT / wb)
+
 def main() -> None:
     translations = load_translations()
     check_translation_parity(translations)
@@ -641,6 +656,7 @@ def main() -> None:
     check_spain_market()
     check_germany_market()
     check_shared_evidence()
+    check_scientific_library()
     print("Portfolio integrity checks passed.")
 
 

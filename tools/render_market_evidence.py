@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA = json.loads((ROOT / "data/market/common-evidence.json").read_text(encoding="utf-8"))
+LIB = json.loads((ROOT / "data/market/scientific-library.json").read_text(encoding="utf-8"))
 def render_rows(language):
     output = []
     for item in sorted(DATA["skills"], key=lambda x: x["locales"][language]["order"]):
@@ -11,9 +12,12 @@ def render_rows(language):
         cta = {"en":"View context","es":"Ver contexto","de":"Kontext ansehen"}[language]
         e = lambda s: html.escape(s, quote=False)
         a = html.escape
+        note = next((n for n in LIB["notes"] if n.get("skill") == item["id"]), None)
+        note_label = LIB["labels"][language]["note"]
+        extra = f' · <a class="document-link" href="workbench/#note-{note["id"]}">{note_label}</a>' if note else ""
         output.append(f'''                    <article class="market-skill" data-market-skill data-area="{a(v["area"])}" data-level="{a(v["level"])}" data-skill-key="{item["id"]}">
                         <div><h3>{e(v["name"])}</h3><p>{e(v["context"])}</p></div>
-                        <div><p class="market-evidence">{e(v["level"])}</p><p>{e(v["detail"])}</p><a class="document-link" href="{v["link"]}">{cta}</a></div>
+                        <div><p class="market-evidence">{e(v["level"])}</p><p>{e(v["detail"])}</p><a class="document-link" href="{v["link"]}">{cta}</a>{extra}</div>
                     </article>''')
     return "\n".join(output)
 def render_partial(language):
@@ -41,6 +45,8 @@ def hub(lang):
     root = ("" if lang == "en" else "../") + "assets/documents/"
     cv = root + f"Jhon_M_Cuenca_CV_{lang.upper()}.pdf"
     links = [cv,"#education","#"+t["skills"],"#"+t["docs"],"#contact"]
+    t["cards"].append(LIB["labels"][lang]["library"])
+    links.append("workbench/#scientific-library")
     files = [cv,root+"europass-clinical-biomedical-laboratory.pdf",root+"europass-laboratory-operations.pdf"]
     files += [root+lang+"/"+n+".pdf" for n in t["names"]]
     body = "\n".join(f'                    <article class="market-card"><h3>{e(title)}</h3><a class="document-link" href="{link}">{e(title)}</a></article>' for title,link in zip(t["cards"],links))
@@ -67,3 +73,37 @@ def hub(lang):
 
 def refresh_hub(source,lang):
     return replace_marked(source,"RECRUITMENT-HUB",marked("RECRUITMENT-HUB",hub(lang)))
+
+def e(value): return html.escape(value, quote=False)
+def a(value): return html.escape(value, quote=True)
+
+def note_html(n, lang):
+    t = LIB["labels"][lang]
+    title,body,scope = n[lang]
+    extra = f'<a class="document-link" href="#{n["evidence"]}">{e(t["context"])}</a>' if n.get("evidence") else ""
+    return f'                    <article class="market-card" id="note-{n["id"]}"><h4>{e(title)}</h4><p>{e(body)}</p><p class="market-note"><strong>{e(t["scope"])}:</strong> {e(scope)}</p><div class="market-actions"><a class="document-link" href="{a(n["url"])}" target="_blank" rel="noopener noreferrer">{e(t["ref"])}: {e(n["source"])}</a>{extra}</div></article>'
+
+def library(lang):
+    t = LIB["labels"][lang]
+    tech = "\n".join(note_html(n,lang) for n in LIB["notes"] if n["kind"]=="technical")
+    reading = "\n".join(note_html(n,lang) for n in LIB["notes"] if n["kind"]=="reading")
+    flows = []
+    for item in LIB["flows"]:
+        title,steps,limit = item[lang]
+        steps_html = "".join(f"<li>{e(s)}</li>" for s in steps)
+        flows.append(f'                    <article class="market-card"><h4>{e(title)}</h4><ol class="science-flow">{steps_html}</ol><p class="market-note">{e(limit)}</p></article>')
+    flow_html = "\n".join(flows)
+    return f'''            <section class="workbench-section market-section" id="scientific-library" aria-labelledby="scientific-library-title">
+                <div class="section-kicker">{e(t["library"])}</div><h2 id="scientific-library-title">{e(t["library"])}</h2><p class="market-intro">{e(t["intro"])}</p><p class="market-note">{e(t["date"])}</p>
+                <h3>{e(t["technical"])}</h3><div class="market-grid">
+{tech}
+                </div><h3>{e(t["reading"])}</h3><div class="market-grid">
+{reading}
+                </div><h3>{e(t["workflow"])}</h3><p class="market-intro">{e(t["flowintro"])}</p><div class="market-grid">
+{flow_html}
+                </div>
+            </section>
+'''
+
+def refresh_library(source, lang):
+    return replace_marked(source, "SCIENTIFIC-LIBRARY", marked("SCIENTIFIC-LIBRARY", library(lang)))

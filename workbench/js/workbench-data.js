@@ -31,7 +31,7 @@
                 research: 'Research notes',
                 learning: 'Technical & learning',
                 milestones: 'Milestones',
-                principles: 'Method'
+                principles: 'Method', library: 'Library'
             },
             hero: {
                 eyebrow: 'Independent projects · scientific notes · applied learning',
@@ -104,13 +104,13 @@
                 learningItem2: 'Scientific Portfolio · Published multilingual delivery',
                 learningItem3: 'La Princesa · Clinical and biomedical laboratory placement',
                 learningItem4: 'Celignis · Analytical and biomass laboratory placement',
-                learningItem5: 'Animal Experimentation A+B+C · 70 h · in-person practical training',
+                learningItem5: 'Animal Experimentation A+B+C · in-person practical training',
                 milestones: 'Milestones',
                 milestonesBody: 'Documented progress points with direct evidence.',
                 milestonesItem1: '2026 · Portfolio publication on GitHub Pages with automated integrity checks',
                 milestonesItem2: '2026 · Functional DeutschOS system began transition into LLC — Laboratory Language Companion',
                 milestonesItem3: '2025 · FCT placement at Hospital Universitario de La Princesa',
-                milestonesItem4: '2025 · Completed co-authored bacteriophage final project · 10/10',
+                milestonesItem4: '2025 · Completed co-authored bacteriophage final project',
                 milestonesItem5: '2023 · Erasmus+ analytical biomass placement at Celignis'
             },
             entriesData: {
@@ -122,7 +122,7 @@
                 chitosan: 'Early-stage, literature-informed hypothesis proposed for future controlled laboratory validation.'
             },
             professionalContext: {
-                animalTraining: { kicker: 'Animal Experimentation · Functions A+B+C', body: 'Certified 70-hour course under Order ECC/566/2015 with in-person practical training. The formal programme covers animal care, euthanasia and performance of procedures, together with welfare/3Rs, recognition of pain and distress, humane killing methods, minimally invasive procedures, anaesthesia and principles of surgery.', pointFunctions: 'Functions: A · care of animals; B · euthanasia of animals; C · performance of procedures', pointProgramme: 'Programme: welfare & 3Rs · pain/suffering/distress recognition · humane killing · minimally invasive procedures · minor and advanced anaesthesia · principles of surgery', pointHandsOn: 'Personally performed during supervised practical training: animal handling, injections, anaesthesia and surgical procedures for sample/tissue collection', pointSamples: 'Personally performed: collection/extraction of animal samples. Also participated in supervised procedures that included euthanasia; not presented as independent practice.', scope: 'Scope note: supervised training and practical experience; no claim of independent veterinary or surgical practice.' },
+                animalTraining: { kicker: 'Animal Experimentation · Functions A+B+C', body: 'Certified course under Order ECC/566/2015 with in-person practical training. The formal programme covers animal care, euthanasia and performance of procedures, together with welfare/3Rs, recognition of pain and distress, humane killing methods, minimally invasive procedures, anaesthesia and principles of surgery.', pointFunctions: 'Functions: A · care of animals; B · euthanasia of animals; C · performance of procedures', pointProgramme: 'Programme: welfare & 3Rs · pain/suffering/distress recognition · humane killing · minimally invasive procedures · minor and advanced anaesthesia · principles of surgery', pointHandsOn: 'Personally performed during supervised practical training: animal handling, injections, anaesthesia and surgical procedures for sample/tissue collection', pointSamples: 'Personally performed: collection/extraction of animal samples. Also participated in supervised procedures that included euthanasia; not presented as independent practice.', scope: 'Scope note: supervised training and practical experience; no claim of independent veterinary or surgical practice.' },
                 development: {
                     kicker: 'Current Development',
                     title: 'Continuing professional development while preparing for laboratory opportunities.',
@@ -188,7 +188,7 @@
                 research: 'Notas de investigación',
                 learning: 'Técnica y aprendizaje',
                 milestones: 'Hitos',
-                principles: 'Método'
+                principles: 'Método', library: 'Biblioteca'
             },
             hero: {
                 eyebrow: 'Proyectos independientes · notas científicas · aprendizaje aplicado',
@@ -261,13 +261,13 @@
                 learningItem2: 'Portafolio científico · Entrega multilingüe publicada',
                 learningItem3: 'La Princesa · Prácticas en laboratorio clínico y biomédico',
                 learningItem4: 'Celignis · Prácticas en laboratorio analítico y de biomasa',
-                learningItem5: 'Experimentación Animal A+B+C · 70 h · prácticas presenciales',
+                learningItem5: 'Experimentación Animal A+B+C · prácticas presenciales',
                 milestones: 'Hitos',
                 milestonesBody: 'Avances documentados con evidencia directa.',
                 milestonesItem1: '2026 · Publicación del portafolio en GitHub Pages con controles automáticos de integridad',
                 milestonesItem2: '2026 · El sistema funcional DeutschOS inició su transición a LLC — Laboratory Language Companion',
                 milestonesItem3: '2025 · Prácticas FCT en el Hospital Universitario de La Princesa',
-                milestonesItem4: '2025 · Proyecto final de bacteriofagoterapia en coautoría completado · 10/10',
+                milestonesItem4: '2025 · Proyecto final de bacteriofagoterapia en coautoría completado',
                 milestonesItem5: '2023 · Prácticas Erasmus+ de análisis de biomasa en Celignis'
             },
             entriesData: {
@@ -279,7 +279,7 @@
                 chitosan: 'Hipótesis preliminar basada en literatura y propuesta para una futura validación controlada en laboratorio.'
             },
             professionalContext: {
-                animalTraining: { kicker: 'Experimentación Animal · Funciones A+B+C', body: 'Curso certificado de 70 horas conforme a la Orden ECC/566/2015 con prácticas presenciales. El programa formal cubre cuidado de animales, eutanasia y realización de procedimientos, junto con bienestar/3R, reconocimiento del dolor y la angustia, métodos humanitarios de sacrificio, procedimientos mínimamente invasivos, anestesia y principios de cirugía.', pointFunctions: 'Funciones: A · cuidado de animales; B · eutanasia; C · realización de procedimientos', pointProgramme: 'Programa: bienestar y 3R · reconocimiento de dolor/sufrimiento/angustia · sacrificio humanitario · procedimientos mínimamente invasivos · anestesia básica y avanzada · principios de cirugía', pointHandsOn: 'Realizado personalmente durante prácticas supervisadas: manejo de animales, inyecciones, anestesia y procedimientos quirúrgicos para obtención de muestras/tejidos', pointSamples: 'Realizado personalmente: obtención/extracción de muestras animales. También participé en procedimientos supervisados que incluían eutanasia; no se presenta como una realización independiente.', scope: 'Nota de alcance: formación y experiencia práctica supervisada; no se afirma ejercicio veterinario o quirúrgico independiente.' },
+                animalTraining: { kicker: 'Experimentación Animal · Funciones A+B+C', body: 'Curso certificado conforme a la Orden ECC/566/2015 con prácticas presenciales. El programa formal cubre cuidado de animales, eutanasia y realización de procedimientos, junto con bienestar/3R, reconocimiento del dolor y la angustia, métodos humanitarios de sacrificio, procedimientos mínimamente invasivos, anestesia y principios de cirugía.', pointFunctions: 'Funciones: A · cuidado de animales; B · eutanasia; C · realización de procedimientos', pointProgramme: 'Programa: bienestar y 3R · reconocimiento de dolor/sufrimiento/angustia · sacrificio humanitario · procedimientos mínimamente invasivos · anestesia básica y avanzada · principios de cirugía', pointHandsOn: 'Realizado personalmente durante prácticas supervisadas: manejo de animales, inyecciones, anestesia y procedimientos quirúrgicos para obtención de muestras/tejidos', pointSamples: 'Realizado personalmente: obtención/extracción de muestras animales. También participé en procedimientos supervisados que incluían eutanasia; no se presenta como una realización independiente.', scope: 'Nota de alcance: formación y experiencia práctica supervisada; no se afirma ejercicio veterinario o quirúrgico independiente.' },
                 development: {
                     kicker: 'Desarrollo actual',
                     title: 'Desarrollo profesional continuo mientras preparo oportunidades de laboratorio.',
@@ -345,7 +345,7 @@
                 research: 'Forschungsnotizen',
                 learning: 'Technik & Lernen',
                 milestones: 'Meilensteine',
-                principles: 'Methode'
+                principles: 'Methode', library: 'Bibliothek'
             },
             hero: {
                 eyebrow: 'Eigene Projekte · wissenschaftliche Notizen · angewandtes Lernen',
@@ -418,13 +418,13 @@
                 learningItem2: 'Wissenschaftliches Portfolio · Veröffentlichte mehrsprachige Umsetzung',
                 learningItem3: 'La Princesa · Praktikum im klinisch-biomedizinischen Labor',
                 learningItem4: 'Celignis · Praktikum im analytischen Biomasse-Labor',
-                learningItem5: 'Versuchstierkunde A+B+C · 70 Std. · Präsenzpraxis',
+                learningItem5: 'Versuchstierkunde A+B+C · Präsenzpraxis',
                 milestones: 'Meilensteine',
                 milestonesBody: 'Dokumentierte Fortschritte mit direkter Evidenz.',
                 milestonesItem1: '2026 · Portfolio auf GitHub Pages veröffentlicht, mit automatischen Integritätsprüfungen',
                 milestonesItem2: '2026 · Das funktionsfähige DeutschOS-System begann den Übergang zu LLC — Laboratory Language Companion',
                 milestonesItem3: '2025 · FCT-Praktikum am Hospital Universitario de La Princesa',
-                milestonesItem4: '2025 · Gemeinsam verfasstes Abschlussprojekt zur Phagentherapie abgeschlossen · 10/10',
+                milestonesItem4: '2025 · Gemeinsam verfasstes Abschlussprojekt zur Phagentherapie abgeschlossen',
                 milestonesItem5: '2023 · Erasmus+-Praktikum in der Biomasseanalytik bei Celignis'
             },
             entriesData: {
@@ -436,7 +436,7 @@
                 chitosan: 'Frühe, literaturbasierte Hypothese für eine spätere kontrollierte Validierung im Labor.'
             },
             professionalContext: {
-                animalTraining: { kicker: 'Versuchstierkunde · Funktionen A+B+C', body: 'Zertifizierter 70-Stunden-Kurs gemäß Erlass ECC/566/2015 mit Präsenzpraxis. Das formale Programm umfasst Tierpflege, Tötung/Euthanasie und Durchführung von Verfahren sowie Tierwohl/3R, Erkennen von Schmerz und Angst, tierschutzgerechte Tötungsmethoden, minimalinvasive Verfahren, Anästhesie und chirurgische Grundlagen.', pointFunctions: 'Funktionen: A · Tierpflege; B · Tötung/Euthanasie; C · Durchführung von Verfahren', pointProgramme: 'Programm: Tierwohl & 3R · Erkennen von Schmerz/Leiden/Angst · tierschutzgerechte Tötung · minimalinvasive Verfahren · einfache und fortgeschrittene Anästhesie · chirurgische Grundlagen', pointHandsOn: 'Persönlich im beaufsichtigten Praxisteil durchgeführt: Tierhandling, Injektionen, Anästhesie und chirurgische Verfahren zur Proben-/Gewebegewinnung', pointSamples: 'Persönlich durchgeführt: Gewinnung/Entnahme tierischer Proben. Außerdem Beteiligung an beaufsichtigten Verfahren mit Euthanasie; nicht als eigenständige Durchführung dargestellt.', scope: 'Hinweis zum Umfang: beaufsichtigte Ausbildung und Praxiserfahrung; keine eigenständige tierärztliche oder chirurgische Tätigkeit.' },
+                animalTraining: { kicker: 'Versuchstierkunde · Funktionen A+B+C', body: 'Zertifizierter Kurs gemäß Erlass ECC/566/2015 mit Präsenzpraxis. Das formale Programm umfasst Tierpflege, Tötung/Euthanasie und Durchführung von Verfahren sowie Tierwohl/3R, Erkennen von Schmerz und Angst, tierschutzgerechte Tötungsmethoden, minimalinvasive Verfahren, Anästhesie und chirurgische Grundlagen.', pointFunctions: 'Funktionen: A · Tierpflege; B · Tötung/Euthanasie; C · Durchführung von Verfahren', pointProgramme: 'Programm: Tierwohl & 3R · Erkennen von Schmerz/Leiden/Angst · tierschutzgerechte Tötung · minimalinvasive Verfahren · einfache und fortgeschrittene Anästhesie · chirurgische Grundlagen', pointHandsOn: 'Persönlich im beaufsichtigten Praxisteil durchgeführt: Tierhandling, Injektionen, Anästhesie und chirurgische Verfahren zur Proben-/Gewebegewinnung', pointSamples: 'Persönlich durchgeführt: Gewinnung/Entnahme tierischer Proben. Außerdem Beteiligung an beaufsichtigten Verfahren mit Euthanasie; nicht als eigenständige Durchführung dargestellt.', scope: 'Hinweis zum Umfang: beaufsichtigte Ausbildung und Praxiserfahrung; keine eigenständige tierärztliche oder chirurgische Tätigkeit.' },
                 development: {
                     kicker: 'Aktuelle Entwicklung',
                     title: 'Kontinuierliche berufliche Entwicklung während der Vorbereitung auf Laborchancen.',

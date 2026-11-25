@@ -16,7 +16,7 @@ import json
 import re
 import subprocess
 from pathlib import Path
-from render_market_evidence import render_partial, replace_marked, marked, refresh_hub
+from render_market_evidence import render_partial, replace_marked, marked, refresh_hub, refresh_library
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://cuenca-john1999.github.io"
@@ -373,6 +373,7 @@ def render_workbench(language: str) -> str:
     source = source.replace('src="js/', 'src="../../workbench/js/')
     source = localize_markup(source, load_workbench_translation(language))
     source = localize_language_controls(source, language)
+    source = refresh_library(source, language)
     return source
 
 
@@ -397,6 +398,7 @@ def normalize_generated_html(text: str) -> str:
 def outputs() -> dict[Path, str]:
     return {
         ROOT / "index.html": normalize_generated_html(refresh_hub(replace_marked((ROOT / "index.html").read_text(encoding="utf-8"), "INTERNATIONAL-MARKET", marked("INTERNATIONAL-MARKET", render_partial("en"))), "en")),
+        ROOT / "workbench" / "index.html": normalize_generated_html(refresh_library((ROOT / "workbench" / "index.html").read_text(encoding="utf-8"), "en")),
         ROOT / "de" / "index.html": normalize_generated_html(render_main("de")),
         ROOT / "es" / "index.html": normalize_generated_html(render_main("es")),
         ROOT / "de" / "workbench" / "index.html": normalize_generated_html(render_workbench("de")),
