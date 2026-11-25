@@ -2,11 +2,27 @@
 .package-options { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr)); gap:.75rem; border:0; padding:.5rem 0; }
 .package-options label { display:flex; gap:.55rem; align-items:center; }
 .package-options input { accent-color:var(--color-accent); }
-.package-options legend { color:var(--color-text-muted); font:var(--font-small); }
+.package-options legend { color:var(--color-text-muted); font:var(--market-small); }
 [data-package-download] { justify-self:start; }
-.market-section .market-card h4 { font:var(--font-h3); margin:0; }
+
 #scientific-library > h3 { margin:2rem 0 1rem; }
 .science-flow { display:grid; gap:1.1rem; list-style:none!important; padding:0!important; margin:.5rem 0; }
 .science-flow li { position:relative; padding:.8rem; border:1px solid var(--color-border); border-radius:var(--radius-sm); text-align:center; color:var(--color-text); }
 .science-flow li:not(:last-child)::after { content:"↓"; position:absolute; left:50%; bottom:-1.2rem; transform:translateX(-50%); color:var(--color-accent); }
 #scientific-library .market-grid { margin-bottom:1.5rem; }
+
+/* Workbench uses its own typography and intersection-reveal system. */
+#scientific-library h2 { max-width:50rem; color:var(--color-text); font:730 clamp(2rem,4.3vw,4.25rem)/1.03 var(--market-font); letter-spacing:-.035em; }
+#scientific-library .market-note { margin-block:0 1.25rem; }
+#scientific-library .market-grid { gap:1rem; }
+#scientific-library .market-card .market-note { margin:0; }
+#scientific-library .market-card .document-link {
+    display:inline-flex; align-items:center; min-height:2.5rem; padding:.5rem .8rem;
+    border:1px solid var(--color-border); border-radius:999px;
+    color:var(--color-text); font:600 .75rem/1.4 var(--market-font);
+    text-decoration:none; transition:background-color var(--transition-normal),border-color var(--transition-normal);
+}
+#scientific-library .market-card .document-link:hover { border-color:var(--color-accent); background:rgba(79,140,255,.1); }
+.js #scientific-library [data-reveal] { opacity:.86; transform:translateY(.65rem); }
+.js #scientific-library [data-reveal].is-visible { opacity:1; transform:none; }
+@media(prefers-reduced-motion:reduce){.js #scientific-library [data-reveal]{opacity:1;transform:none}}

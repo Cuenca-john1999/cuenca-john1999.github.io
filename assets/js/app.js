@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const siteHeader = document.querySelector('.site-header');
     const reveals = Array.from(document.querySelectorAll('[data-reveal]'));
     const trackedSections = Array.from(document.querySelectorAll('[data-sequence-section]'));
+    const marketSections = trackedSections.filter(section => section.classList.contains('market-section'));
     const documentExplorer = document.querySelector('#document-explorer');
     const documentExplorerTitle = document.querySelector('#document-explorer-title');
     const documentExplorerFrame = document.querySelector('#document-explorer-frame');
@@ -366,10 +367,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const viewportAnchor = window.innerHeight * 0.48;
+        // Long catalogues must activate as soon as they enter the reading area,
+        // even when their total height exceeds the intersection ratio threshold.
+        for (const section of marketSections) {
+            const rect = section.getBoundingClientRect();
+            if (rect.bottom > window.innerHeight * 0.15 && rect.top < window.innerHeight * 0.85) {
+                section.classList.add('is-sequence-revealed');
+            }
+        }
         const closestSection = trackedSections
             .map((section) => {
                 const rect = section.getBoundingClientRect();
-                const sectionAnchor = rect.top + (rect.height * 0.32);
+                const sectionAnchor = section.classList.contains('market-section')
+                    ? Math.max(rect.top, Math.min(viewportAnchor, rect.bottom))
+                    : rect.top + (rect.height * 0.32);
 
                 return {
                     section,
@@ -454,7 +465,12 @@ document.addEventListener('DOMContentLoaded', () => {
         trackedSections.forEach((section) => section.classList.add('is-sequence-revealed'));
     }
 
+    if (reduceMotion.matches) {
+        marketSections.forEach(section => section.classList.add('is-sequence-revealed'));
+    }
     updateActiveSectionFromViewport();
+    // Enable the transitions only after the initial visible sections are ready.
+    marketSections.forEach(section => section.classList.add('market-motion-ready'));
     updateHeaderVisibility();
 
     console.log('[APP] Módulos inicializados');

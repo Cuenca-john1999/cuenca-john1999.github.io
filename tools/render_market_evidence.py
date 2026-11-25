@@ -55,9 +55,9 @@ def hub(lang):
         checked = " checked" if j == 0 else ""
         controls.append(f'                        <label><input type="checkbox" value="{link}"{checked}> <a class="document-link" href="{link}" download>{e(title)}</a></label>')
     controls_html = "\n".join(controls)
-    return f'''            <section class="sequence-section market-section" id="recruitment-hub" aria-labelledby="recruitment-title">
+    return f'''            <section class="sequence-section market-section" id="recruitment-hub" data-sequence-section aria-labelledby="recruitment-title">
                 <div class="section-kicker">{e(t["title"])}</div>
-                <h2 id="recruitment-title">{e(t["title"])}</h2><p class="market-intro">{e(t["intro"])}</p>
+                <h2 id="recruitment-title">{e(t["title"])}</h2><p class="market-intro" data-reveal>{e(t["intro"])}</p>
                 <div class="market-grid market-doc-grid">
 {body}
                 </div>
@@ -81,7 +81,7 @@ def note_html(n, lang):
     t = LIB["labels"][lang]
     title,body,scope = n[lang]
     extra = f'<a class="document-link" href="#{n["evidence"]}">{e(t["context"])}</a>' if n.get("evidence") else ""
-    return f'                    <article class="market-card" id="note-{n["id"]}"><h4>{e(title)}</h4><p>{e(body)}</p><p class="market-note"><strong>{e(t["scope"])}:</strong> {e(scope)}</p><div class="market-actions"><a class="document-link" href="{a(n["url"])}" target="_blank" rel="noopener noreferrer">{e(t["ref"])}: {e(n["source"])}</a>{extra}</div></article>'
+    return f'                    <article class="market-card" data-reveal id="note-{n["id"]}"><h4>{e(title)}</h4><p>{e(body)}</p><p class="market-note"><strong>{e(t["scope"])}:</strong> {e(scope)}</p><div class="market-actions"><a class="document-link" href="{a(n["url"])}" target="_blank" rel="noopener noreferrer">{e(t["ref"])}: {e(n["source"])}</a>{extra}</div></article>'
 
 def library(lang):
     t = LIB["labels"][lang]
@@ -91,10 +91,10 @@ def library(lang):
     for item in LIB["flows"]:
         title,steps,limit = item[lang]
         steps_html = "".join(f"<li>{e(s)}</li>" for s in steps)
-        flows.append(f'                    <article class="market-card"><h4>{e(title)}</h4><ol class="science-flow">{steps_html}</ol><p class="market-note">{e(limit)}</p></article>')
+        flows.append(f'                    <article class="market-card" data-reveal><h4>{e(title)}</h4><ol class="science-flow">{steps_html}</ol><p class="market-note">{e(limit)}</p></article>')
     flow_html = "\n".join(flows)
     return f'''            <section class="workbench-section market-section" id="scientific-library" aria-labelledby="scientific-library-title">
-                <div class="section-kicker">{e(t["library"])}</div><h2 id="scientific-library-title">{e(t["library"])}</h2><p class="market-intro">{e(t["intro"])}</p><p class="market-note">{e(t["date"])}</p>
+                <div class="section-kicker" data-reveal>{e(t["library"])}</div><h2 id="scientific-library-title" data-reveal>{e(t["library"])}</h2><p class="market-intro" data-reveal>{e(t["intro"])}</p><p class="market-note">{e(t["date"])}</p>
                 <h3>{e(t["technical"])}</h3><div class="market-grid">
 {tech}
                 </div><h3>{e(t["reading"])}</h3><div class="market-grid">

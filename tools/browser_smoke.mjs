@@ -21,8 +21,26 @@ for (const [engine,launcher] of Object.entries({chromium,webkit})) {
                 assert.ok(bounds && bounds.x>=-1 && bounds.x+bounds.width<=viewport.width+1,'Country selector must fit viewport');
                 await page.screenshot({path:`test-output/${engine}-${viewport.width}-${lang}-selector.png`});
                 await selector.locator('summary').click();
+                // Scroll directly to each new section; contrast and layout must
+                // be restored even for very tall sections and direct anchor visits.
+                const marketSections=page.locator('.sequence-section.market-section');
+                for(let i=0;i<await marketSections.count();i++){
+                    const section=marketSections.nth(i),heading=section.locator('h2').first();
+                    await heading.scrollIntoViewIfNeeded();
+                    await page.waitForFunction(id=>document.getElementById(id).classList.contains('is-sequence-revealed'),await section.getAttribute('id'));
+                    await page.waitForFunction(id=>{
+                        const s=document.getElementById(id),h=s.querySelector('h2'),p=s.querySelector('.market-intro'),g=s.querySelector('.market-grid,.market-filters');
+                        if(!h||!p||!g)return false;
+                        const css=n=>getComputedStyle(n),pr=p.getBoundingClientRect(),gr=g.getBoundingClientRect();
+                        return Number(css(s).opacity)>.99&&Number(css(h).opacity)>.99&&Number(css(p).opacity)>.99&&gr.top-pr.bottom>=12;
+                    },await section.getAttribute('id'));
+                    const id=await section.getAttribute('id');
+                    await page.screenshot({path:`test-output/${engine}-${viewport.width}-${lang}-${id}.png`});
+                }
                 const search=page.locator('[data-market-search]');
                 await search.waitFor({state:'visible'});
+                const controlHeights=await page.locator('[data-market-filters] input,[data-market-filters] select,[data-market-filters] button').evaluateAll(nodes=>nodes.map(n=>n.getBoundingClientRect().height));
+                assert.ok(Math.max(...controlHeights)-Math.min(...controlHeights)<2,'Filter controls must have a consistent height');
                 assert.equal(await page.locator('[data-market-skill]').count(),46);
                 await search.fill('PCR');
                 const count=await page.locator('[data-market-skill]:not([hidden])').count();
@@ -45,6 +63,8 @@ for (const [engine,launcher] of Object.entries({chromium,webkit})) {
                 assert.equal(await page.locator('#scientific-library .science-flow').count(),4);
                 assert.equal(await page.locator('html').getAttribute('lang'),lang);
                 await page.locator('#scientific-library-title').scrollIntoViewIfNeeded();
+                await page.waitForFunction(()=>document.getElementById('scientific-library-title').classList.contains('is-visible'));
+                assert.equal(await page.locator('#scientific-library article[data-reveal]').count(),14);
                 await page.screenshot({path:`test-output/${engine}-${viewport.width}-${lang}-library.png`});
             }
             // Verify real navigation through the country dropdown.

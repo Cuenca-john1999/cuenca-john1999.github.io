@@ -627,7 +627,12 @@ def check_scientific_library() -> None:
     for lang, profile, wb in (("en","index.html","workbench/index.html"),("es","es/index.html","es/workbench/index.html"),("de","de/index.html","de/workbench/index.html")):
         page = (ROOT / profile).read_text(encoding="utf-8")
         library = (ROOT / wb).read_text(encoding="utf-8")
-        if 'id="scientific-library"' not in library:
+        sections = re.findall(r'<section class="sequence-section market-section"[^>]*>', page)
+        if not sections or any("data-sequence-section" not in section for section in sections):
+            fail(f"untracked market sections in {lang}")
+        if 'id="scientific-library" data-reveal' in library:
+            fail(f"library must reveal individual blocks, not the entire long section in {lang}")
+        if 'id="scientific-library" ' not in library:
             fail(f"missing scientific library in {lang}")
         for note in data["notes"]:
             if f'id="note-{note["id"]}"' not in library:
