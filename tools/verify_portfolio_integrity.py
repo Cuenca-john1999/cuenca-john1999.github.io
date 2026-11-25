@@ -610,6 +610,16 @@ def check_germany_market() -> None:
             fail(f"market flag/icon count mismatch in {relative}")
 
 
+def check_shared_evidence() -> None:
+    data = json.loads((ROOT / "data/market/common-evidence.json").read_text(encoding="utf-8"))
+    keys = {item["id"] for item in data["skills"]}
+    if len(keys) != 46 or len(data["skills"]) != len(keys):
+        fail("shared evidence IDs are not unique and complete")
+    for lang in ("es", "de"):
+        source = (ROOT / lang / "index.html").read_text(encoding="utf-8")
+        if set(re.findall(r'data-skill-key="([^"]+)"', source)) != keys:
+            fail(f"catalogue differs from shared evidence for {lang}")
+
 def main() -> None:
     translations = load_translations()
     check_translation_parity(translations)
@@ -628,6 +638,7 @@ def main() -> None:
     check_required_content()
     check_spain_market()
     check_germany_market()
+    check_shared_evidence()
     print("Portfolio integrity checks passed.")
 
 

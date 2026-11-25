@@ -16,6 +16,7 @@ import json
 import re
 import subprocess
 from pathlib import Path
+from render_market_evidence import render_partial
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://cuenca-john1999.github.io"
@@ -260,7 +261,7 @@ def localize_market_profile(text: str, language: str) -> str:
             raise SystemExit("[localized-pages] missing academic results block")
         name = '                        <p class="opening-name" data-reveal>Jhon M. Cuenca</p>\n'
         text = replace_once(text, name, name + '                        <p class="opening-availability" data-reveal>Técnico en Operaciones de Laboratorio</p>\n', "Spain secondary qualification")
-        partial = (ROOT / "data" / "market" / "spain-sections.html").read_text(encoding="utf-8")
+        partial = render_partial("es")
         marker = '            <section class="sequence-section projects-section"'
         text = replace_once(text, marker, partial + marker, "Spain professional sections")
         text = replace_once(text, "</head>", '    <link rel="stylesheet" href="../assets/css/spain-market.css?v=12a76b178193">\n</head>', "Spain stylesheet")
@@ -280,7 +281,7 @@ def localize_market_profile(text: str, language: str) -> str:
             raise SystemExit("[localized-pages] missing German academic results block")
         name = '                        <p class="opening-name" data-reveal>Jhon M. Cuenca</p>\n'
         text = replace_once(text, name, name + '                        <p class="opening-availability" data-reveal>Laborfachkraft · zwei spanische Berufsabschlüsse</p>\n', "Germany secondary qualification")
-        partial = (ROOT / "data" / "market" / "germany-sections.html").read_text(encoding="utf-8")
+        partial = render_partial("de")
         marker = '            <section class="sequence-section projects-section"'
         text = replace_once(text, marker, partial + marker, "Germany professional sections")
         text = replace_once(text, "</head>", '    <link rel="stylesheet" href="../assets/css/spain-market.css?v=12a76b178193">\n</head>', "Germany stylesheet")
