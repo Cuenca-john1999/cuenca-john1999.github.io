@@ -16,7 +16,7 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 LANGUAGES = ("en", "de", "es")
-HTML_PAGES = ("index.html", "workbench/index.html", "privacy.html", "404.html", "es/index.html")
+HTML_PAGES = ("index.html", "workbench/index.html", "privacy.html", "404.html", "es/index.html", "de/index.html")
 
 
 def fail(message: str) -> None:
@@ -466,7 +466,7 @@ def check_localized_static_fallbacks() -> None:
             "Jhon_M_Cuenca_CV_DE.pdf",
             "bacteriophage-therapy-final-project_DE.pdf",
             "Profil im klinisch-biomedizinischen Labor mit praktischer Erfahrung",
-            'data-language-set="de" aria-pressed="true"',
+            'data-current-market="de"',
         ),
         "es/index.html": (
             "Técnico Superior en<br>Laboratorio Clínico y Biomédico",
@@ -474,7 +474,7 @@ def check_localized_static_fallbacks() -> None:
             "Jhon_M_Cuenca_CV_ES.pdf",
             "bacteriophage-therapy-final-project_ES.pdf",
             "Perfil de laboratorio clínico y biomédico con experiencia práctica",
-            'data-language-set="es" aria-pressed="true"',
+            'data-current-market="es"',
         ),
         "de/workbench/index.html": (
             "Ein lebendiger Raum zum<br><span>Entwickeln, Prüfen und Lernen.</span>",
@@ -585,6 +585,31 @@ def check_spain_market() -> None:
             fail(f"missing market selector: {relative}")
 
 
+def check_germany_market() -> None:
+    page = (ROOT / "de" / "index.html").read_text(encoding="utf-8")
+    for marker in ("Länderauswahl", "Raum Bonn/Köln", "BTA-/CTA", "eine deutsche Anerkennung als MTL ist hier nicht nachgewiesen", "MT-Berufe-Gesetz"):
+        if marker not in page:
+            fail(f"Germany market marker missing: {marker}")
+    for marker in ("9,25/10", "8,69/10", 'class="academic-result-list"'):
+        if marker in page:
+            fail(f"Germany market contains excluded academic detail: {marker}")
+    for section in ("berufsfelder", "anerkennung", "fachkatalog", "geraete", "dossiers"):
+        if f'id="{section}"' not in page:
+            fail(f"Germany market section missing: {section}")
+    if page.count("data-market-skill data-area=") != 46:
+        fail("Germany skills catalogue count mismatch")
+    for name in ("profil-forschung", "profil-analytik", "profil-klinik", "kompetenzkatalog"):
+        if not (ROOT / "assets" / "documents" / "de" / f"{name}.pdf").is_file():
+            fail(f"Germany dossier missing: {name}")
+    check_duplicate_ids(ROOT / "de" / "index.html")
+    for relative, current in (("index.html", "en"), ("de/index.html", "de"), ("es/index.html", "es")):
+        source = (ROOT / relative).read_text(encoding="utf-8")
+        if f'data-current-market="{current}"' not in source or '<ul class="market-menu"' not in source:
+            fail(f"market dropdown missing in {relative}")
+        if source.count('class="market-flag"') != 4:
+            fail(f"market flag/icon count mismatch in {relative}")
+
+
 def main() -> None:
     translations = load_translations()
     check_translation_parity(translations)
@@ -602,6 +627,7 @@ def main() -> None:
     check_cache_busting()
     check_required_content()
     check_spain_market()
+    check_germany_market()
     print("Portfolio integrity checks passed.")
 
 

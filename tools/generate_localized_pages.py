@@ -39,8 +39,8 @@ PERSON_META = {
 
 MAIN_META = {
     "de": {
-        "title": "Jhon M. Cuenca | Klinisch-biomedizinisches Laborprofil",
-        "description": "Professionelles Portfolio von Jhon M. Cuenca mit Schwerpunkt auf klinisch-biomedizinischer Laborpraxis, Molekularbiologie, Immunologie, analytischer Laborarbeit und Dokumentation.",
+        "title": "Jhon M. Cuenca | Laborfachkraft in Deutschland · Forschung und Analytik",
+        "description": "Laborfachkraft mit spanischen Berufsabschlüssen und Laborpraktika in Immunologie, Molekularbiologie und Biomasseanalytik. Raum Bonn/Köln, deutschlandweit umzugsbereit.",
         "locale": "de_DE",
         "site_name": "Jhon M. Cuenca | Klinisch-biomedizinisches Laborportfolio",
         "image_alt": "Wissenschaftliches Portfolio von Jhon M. Cuenca mit blauer DNA-Helix, Laborbereichen und Mikroskop.",
@@ -230,21 +230,25 @@ def localize_language_controls(text: str, language: str) -> str:
 
 def localize_market_profile(text: str, language: str) -> str:
     """Render the market selector and the Spain-specific presentation."""
-    labels = {
-        "en": ("Market selector", "International", "Germany", "Spain"),
-        "de": ("Länderauswahl", "International", "Deutschland", "Spanien"),
-        "es": ("Selector de país", "Internacional", "Alemania", "España"),
-    }
+    labels = {"en":["Market selector","International","Germany","Spain"],"de":["Länderauswahl","International","Deutschland","Spanien"],"es":["Selector de país","Internacional","Alemania","España"]}
+    flags = {"en":"<svg class=\"market-flag\" viewBox=\"0 0 24 18\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"9\" r=\"7.4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.3\"/><ellipse cx=\"12\" cy=\"9\" rx=\"3.4\" ry=\"7.4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.1\"/><path d=\"M5 9h14\" stroke=\"currentColor\" stroke-width=\"1.1\"/></svg>","de":"<svg class=\"market-flag\" viewBox=\"0 0 24 18\" aria-hidden=\"true\"><path fill=\"#151515\" d=\"M0 0h24v6H0z\"/><path fill=\"#DD0000\" d=\"M0 6h24v6H0z\"/><path fill=\"#FFCE00\" d=\"M0 12h24v6H0z\"/></svg>","es":"<svg class=\"market-flag\" viewBox=\"0 0 24 18\" aria-hidden=\"true\"><path fill=\"#AA151B\" d=\"M0 0h24v18H0z\"/><path fill=\"#F1BF00\" d=\"M0 4.5h24v9H0z\"/></svg>"}
     label, *names = labels[language]
-    buttons = "\n".join(
-        f'                <button type="button" data-language-set="{candidate}" aria-pressed="{str(candidate == language).lower()}" title="{name}">{name}</button>'
-        for candidate, name in zip(("en", "de", "es"), names)
-    )
+    codes = ("en", "de", "es")
+    prefix = "./" if language == "en" else "../"
+    links = []
+    for candidate, name in zip(codes, names):
+        target = prefix + ("" if candidate == "en" else candidate + "/")
+        selected = ' aria-current="page"' if candidate == language else ""
+        links.append(f'                    <li><a href="{target}"{selected}>{flags[candidate]}<span>{name}</span></a></li>')
+    chevron = '<svg class="market-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+    current = names[codes.index(language)]
     selector = (
-        f'<div class="language-switcher" aria-label="{label}" data-market-selector style="flex-wrap:wrap;justify-content:center;max-width:min(54vw, 22rem)">\n'
-        f'{buttons}\n            </div>'
+        f'<details class="language-switcher market-selector" aria-label="{label}" data-market-selector data-current-market="{language}">\n'
+        f'                <summary>{flags[language]}<span>{current}</span>{chevron}</summary>\n'
+        f'                <ul class="market-menu" aria-label="{label}">\n'
+        + "\n".join(links) + "\n                </ul>\n            </details>"
     )
-    text, count = re.subn(r'<div class="language-switcher"[^>]*data-market-selector[^>]*>.*?</div>', lambda _: selector, text, count=1, flags=re.S)
+    text, count = re.subn(r'<details class="language-switcher market-selector"[^>]*>.*?</details>', lambda _: selector, text, count=1, flags=re.S)
     if count != 1:
         raise SystemExit("[localized-pages] missing market selector")
     if language == "es":
@@ -267,6 +271,26 @@ def localize_market_profile(text: str, language: str) -> str:
         text = replace_once(text, '<input type="hidden" name="subject" value="New portfolio contact">', '<input type="hidden" name="subject" value="Contacto profesional · España">', "Spain contact subject")
         text = replace_once(text, '<h4>Higher Technician in Clinical and Biomedical Laboratory</h4>', '<h4>Técnico Superior en Laboratorio Clínico y Biomédico</h4>', "Spain Europass clinical title")
         text = replace_once(text, '<h4>Technician in Laboratory Operations</h4>', '<h4>Técnico en Operaciones de Laboratorio</h4>', "Spain Europass operations title")
+    if language == "de":
+        text, count = re.subn(
+            r'^ {32}<div class="document-slot">\n {36}<span data-i18n="commonLabels.selectedResults">[^\n]*\n.*?^ {32}</div>\n\n',
+            "", text, count=1, flags=re.M | re.S,
+        )
+        if count != 1:
+            raise SystemExit("[localized-pages] missing German academic results block")
+        name = '                        <p class="opening-name" data-reveal>Jhon M. Cuenca</p>\n'
+        text = replace_once(text, name, name + '                        <p class="opening-availability" data-reveal>Laborfachkraft · zwei spanische Berufsabschlüsse</p>\n', "Germany secondary qualification")
+        partial = (ROOT / "data" / "market" / "germany-sections.html").read_text(encoding="utf-8")
+        marker = '            <section class="sequence-section projects-section"'
+        text = replace_once(text, marker, partial + marker, "Germany professional sections")
+        text = replace_once(text, "</head>", '    <link rel="stylesheet" href="../assets/css/spain-market.css?v=12a76b178193">\n</head>', "Germany stylesheet")
+        text = replace_once(text, "</body>", '    <script src="../assets/js/germany-market.js?v=692fdc424157" defer></script>\n</body>', "Germany script")
+        shortcuts = '                <div class="market-actions" aria-label="Schnellzugriff Deutschland"><a class="document-link" href="#berufsfelder">Berufsfelder</a><a class="document-link" href="#anerkennung">Anerkennung</a><a class="document-link" href="#fachkatalog">Kompetenzkatalog</a><a class="document-link" href="#geraete">Geräte</a><a class="document-link" href="#dossiers">PDF-Dossiers</a></div>'
+        anchor = '            </section>\n\n            <section class="sequence-section experience-section"'
+        text = replace_once(text, anchor, shortcuts + '\n' + anchor, "Germany quick links")
+        text = replace_once(text, '<input type="hidden" name="subject" value="New portfolio contact">', '<input type="hidden" name="subject" value="Beruflicher Kontakt · Deutschland">', "Germany market detail 1")
+        text = replace_once(text, '<h4>Higher Technician in Clinical and Biomedical Laboratory</h4>', '<h4>Höherer Berufsabschluss im klinischen und biomedizinischen Labor</h4>', "Germany market detail 2")
+        text = replace_once(text, '<h4>Technician in Laboratory Operations</h4>', '<h4>Berufsabschluss im Laborbetrieb</h4>', "Germany market detail 3")
     return text
 
 
