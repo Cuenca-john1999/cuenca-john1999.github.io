@@ -362,7 +362,7 @@
           "level": "Prácticas de laboratorio",
           "name": "Western blot",
           "context": "Biología molecular · La Princesa",
-          "detail": "Preparación de geles, transferencia y bloqueo; no se presenta como ensayo completo independiente.",
+          "detail": "Preparación de geles, transferencia de proteínas a membrana y bloqueo.",
           "link": "workbench/#entry-laprincesa",
           "order": 10
         },
@@ -371,7 +371,7 @@
           "level": "Laborpraktikum",
           "name": "Western Blot",
           "context": "Molekularbiologie · La Princesa",
-          "detail": "Gelherstellung, Transfer und Blocking; kein eigenständig vollständiger Assay behauptet.",
+          "detail": "Gelherstellung, Proteintransfer auf eine Membran und Blocking.",
           "link": "workbench/#entry-laprincesa",
           "order": 4
         },
@@ -380,7 +380,7 @@
           "level": "Laboratory placement",
           "name": "Western blot",
           "context": "Molecular biology · La Princesa",
-          "detail": "Gel casting, transfer and blocking; not a complete independent assay.",
+          "detail": "Gel casting, protein transfer to a membrane and blocking.",
           "link": "workbench/#entry-laprincesa",
           "order": 10
         }
@@ -677,7 +677,7 @@
           "level": "Curso con prácticas supervisadas",
           "name": "Funciones A+B+C",
           "context": "Experimentación animal · Dynamimed",
-          "detail": "Diploma de curso; no acredita por sí solo una resolución administrativa individual.",
+          "detail": "Curso de experimentación animal sobre cuidado, eutanasia y realización de procedimientos.",
           "link": "#education",
           "order": 19
         },
@@ -686,7 +686,7 @@
           "level": "Kurs mit beaufsichtigter Praxis",
           "name": "Funktionen A+B+C",
           "context": "Versuchstierkunde · Dynamimed",
-          "detail": "Spanisches Kursdiplom; keine individuelle deutsche Anerkennung behauptet.",
+          "detail": "Spanischer Ausbildungskurs zu Tierpflege, Euthanasie und Verfahren.",
           "link": "#education",
           "order": 13
         },
@@ -695,7 +695,7 @@
           "level": "Course with supervised practice",
           "name": "Functions A+B+C",
           "context": "Animal experimentation · Dynamimed",
-          "detail": "Spanish course diploma; no individual authorisation abroad claimed.",
+          "detail": "Spanish training course in animal care, euthanasia and procedures.",
           "link": "#education",
           "order": 19
         }
@@ -712,7 +712,7 @@
           "level": "Curso con prácticas supervisadas",
           "name": "Manejo, anestesia y procedimientos",
           "context": "Experimentación animal · Dynamimed",
-          "detail": "Prácticas supervisadas de formación; no se presenta como autonomía profesional.",
+          "detail": "Manejo de animales, anestesia y procedimientos durante la formación práctica supervisada.",
           "link": "#education",
           "order": 20
         },
@@ -721,7 +721,7 @@
           "level": "Kurs mit beaufsichtigter Praxis",
           "name": "Tierhandling, Anästhesie und Verfahren",
           "context": "Versuchstierkunde · Dynamimed",
-          "detail": "Beaufsichtigte Ausbildungspraxis; keine selbstständige Berufsausübung behauptet.",
+          "detail": "Tierhandling, Anästhesie und Verfahren im beaufsichtigten Praxisteil.",
           "link": "#education",
           "order": 14
         },
@@ -730,7 +730,7 @@
           "level": "Course with supervised practice",
           "name": "Animal handling, anaesthesia and procedures",
           "context": "Animal experimentation · Dynamimed",
-          "detail": "Supervised course practice; no independent professional authorisation claimed.",
+          "detail": "Animal handling, anaesthesia and procedures during supervised practical training.",
           "link": "#education",
           "order": 20
         }
@@ -1027,7 +1027,7 @@
           "level": "Prácticas de laboratorio",
           "name": "ICP",
           "context": "Química analítica · Celignis",
-          "detail": "Técnica incluida en el alcance de las prácticas; no se especifica modelo.",
+          "detail": "ICP entre las técnicas analíticas incluidas en las prácticas de Celignis.",
           "link": "workbench/#entry-celignis",
           "order": 29
         },
@@ -1036,7 +1036,7 @@
           "level": "Laborpraktikum",
           "name": "ICP",
           "context": "Analytische Chemie · Celignis",
-          "detail": "Im Praktikumsumfang enthalten; kein Gerätemodell angegeben.",
+          "detail": "ICP gehörte zum analytischen Methodenspektrum des Praktikums bei Celignis.",
           "link": "workbench/#entry-celignis",
           "order": 23
         },
@@ -1045,7 +1045,7 @@
           "level": "Laboratory placement",
           "name": "ICP",
           "context": "Analytical chemistry · Celignis",
-          "detail": "Included in placement scope; no instrument model claimed.",
+          "detail": "ICP among the analytical methods covered during the Celignis placement.",
           "link": "workbench/#entry-celignis",
           "order": 29
         }
@@ -1272,7 +1272,7 @@
           "level": "Prácticas de laboratorio",
           "name": "Documentación técnica",
           "context": "Calidad y documentación · Celignis",
-          "detail": "Guías operativas, hojas de datos, instrucciones y troubleshooting.",
+          "detail": "Guías de trabajo, fichas de datos, instrucciones y resolución de incidencias.",
           "link": "workbench/#entry-celignis",
           "order": 36
         },
@@ -1281,7 +1281,7 @@
           "level": "Laborpraktikum",
           "name": "Technische Dokumentation",
           "context": "Qualität und Dokumentation · Celignis",
-          "detail": "Leitfäden, Datenblätter, Arbeitsanweisungen und Troubleshooting.",
+          "detail": "Leitfäden, Datenblätter, Arbeitsanweisungen und Fehlersuche.",
           "link": "workbench/#entry-celignis",
           "order": 30
         },
@@ -1517,7 +1517,7 @@
           "level": "Práctica académica",
           "name": "Antibiograma",
           "context": "Microbiología y técnicas generales · IES Virgen de la Paloma",
-          "detail": "Práctica académica, no diagnóstico clínico profesional.",
+          "detail": "Práctica de antibiograma durante la formación en microbiología.",
           "link": "#education",
           "order": 43
         },
@@ -1526,7 +1526,7 @@
           "level": "Ausbildungspraktische Übung",
           "name": "Antibiogramm",
           "context": "Mikrobiologie und Labortechnik · IES Virgen de la Paloma",
-          "detail": "Ausbildungsübung; keine berufliche klinische Diagnostik.",
+          "detail": "Antibiogramm als praktische Übung in der Mikrobiologieausbildung.",
           "link": "#education",
           "order": 43
         },
@@ -1535,7 +1535,7 @@
           "level": "Academic practical training",
           "name": "Antibiogram",
           "context": "Microbiology and general techniques · IES Virgen de la Paloma",
-          "detail": "Academic exercise, not professional clinical diagnostics.",
+          "detail": "Antibiogram exercise during microbiology training.",
           "link": "#education",
           "order": 43
         }
