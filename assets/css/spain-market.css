@@ -1,0 +1,31 @@
+/* Spain market extensions; scoped to the national page. */
+.market-section { display: block; min-height: auto; padding-block: clamp(2rem, 5vw, 4rem); }
+.market-section h2 { margin: .5rem 0 1rem; }
+.market-intro { max-width: 78ch; color: var(--color-text-muted); margin-bottom: 1.5rem; }
+.market-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr)); gap:1rem; }
+.market-card,.market-panel,.market-skill { border:1px solid var(--color-border); border-radius:var(--radius-lg); background:var(--color-surface); padding:clamp(1rem,2vw,1.5rem); min-width:0; }
+.market-card { display:flex; flex-direction:column; gap:.7rem; }
+.market-card h3,.market-panel h3,.market-skill h3 { font:var(--font-h3); margin:0; }
+.market-card p,.market-skill p,.market-panel p { margin:0; }
+.market-card ul { padding-left:1.2rem; list-style:disc; color:var(--color-text-muted); }
+.market-card li { margin:.25rem 0; }
+.market-eyebrow { font:var(--font-small); color:var(--color-text-muted); letter-spacing:.04em; }
+.market-evidence { font-weight:600; color:var(--color-text); }
+.market-actions { display:flex; flex-wrap:wrap; gap:.75rem 1.25rem; align-items:center; margin-top:1rem; }
+.market-card .market-actions { margin-top:auto; padding-top:.75rem; }
+.market-panel { margin-top:1rem; display:grid; gap:.75rem; }
+.market-note { color:var(--color-text-muted); font:var(--font-small); margin-block:1rem; }
+.market-filters { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,12rem),1fr)); gap:.8rem; align-items:end; margin:1rem 0; }
+.market-filters label { display:grid; gap:.35rem; font:var(--font-small); }
+.market-filters input,.market-filters select,.market-filters button { color:var(--color-text); background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-sm); padding:.7rem; min-width:0; font:inherit; }
+.market-filters button { cursor:pointer; }
+.market-filters :focus-visible,.market-section a:focus-visible { outline:2px solid var(--color-accent); outline-offset:3px; }
+.market-skill-list { display:grid; gap:.5rem; max-height:38rem; overflow:auto; padding:.15rem; }
+.market-skill { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.5fr); gap:1rem; }
+.market-skill h3 { font-size:1rem; }
+.market-skill p,.market-skill a { font:var(--font-small); }
+.market-skill [class=market-evidence] { font-weight:600; }
+.market-section [hidden] { display:none !important; }
+.market-doc-grid { grid-template-columns:repeat(auto-fit,minmax(min(100%,14rem),1fr)); }
+@media(max-width:600px){.market-skill{grid-template-columns:1fr;gap:.4rem}.market-skill-list{max-height:32rem}.market-filters{grid-template-columns:1fr}}
+@media print{.market-filters,.market-actions{display:none!important}.market-skill-list{max-height:none;overflow:visible}.market-card,.market-skill{break-inside:avoid}}

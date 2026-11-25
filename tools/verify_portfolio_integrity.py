@@ -569,6 +569,15 @@ def check_spain_market() -> None:
     for marker in ("Anerkennung", "Bonn–Colonia", "9,25/10", "8,69/10", 'class="academic-result-list"'):
         if marker in page:
             fail(f"Spain market contains obsolete or excluded content: {marker}")
+    for section in ("areas-profesionales", "catalogo-tecnico", "instrumentacion", "dosieres"):
+        if f'id="{section}"' not in page:
+            fail(f"Spain section missing: {section}")
+    if page.count("data-market-skill data-area=") < 35:
+        fail("Spain skills catalogue is incomplete")
+    for name in ("perfil-clinico", "perfil-investigacion", "perfil-analitico", "catalogo-competencias"):
+        if not (ROOT / "assets" / "documents" / "es" / f"{name}.pdf").is_file():
+            fail(f"Spain dossier missing: {name}")
+    check_duplicate_ids(ROOT / "es" / "index.html")
     if dictionary["snapshot"]["location"]["value"] != "Madrid, España":
         fail("Spain market runtime location differs from static content")
     for relative in ("index.html", "de/index.html", "es/index.html"):

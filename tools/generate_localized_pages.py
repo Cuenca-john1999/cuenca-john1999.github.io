@@ -256,6 +256,16 @@ def localize_market_profile(text: str, language: str) -> str:
             raise SystemExit("[localized-pages] missing academic results block")
         name = '                        <p class="opening-name" data-reveal>Jhon M. Cuenca</p>\n'
         text = replace_once(text, name, name + '                        <p class="opening-availability" data-reveal>Técnico en Operaciones de Laboratorio</p>\n', "Spain secondary qualification")
+        partial = (ROOT / "data" / "market" / "spain-sections.html").read_text(encoding="utf-8")
+        marker = '            <section class="sequence-section projects-section"'
+        text = replace_once(text, marker, partial + marker, "Spain professional sections")
+        text = replace_once(text, "</head>", '    <link rel="stylesheet" href="../assets/css/spain-market.css">\n</head>', "Spain stylesheet")
+        text = replace_once(text, "</body>", '    <script src="../assets/js/spain-market.js" defer></script>\n</body>', "Spain script")
+        nav = '                <a href="#skills" data-i18n="nav.skills">Habilidades</a>'
+        text = replace_once(text, nav, nav + '\n                <a href="#catalogo-tecnico">Catálogo técnico</a>', "Spain catalog nav")
+        text = replace_once(text, '<input type="hidden" name="subject" value="New portfolio contact">', '<input type="hidden" name="subject" value="Contacto profesional · España">', "Spain contact subject")
+        text = replace_once(text, '<h4>Higher Technician in Clinical and Biomedical Laboratory</h4>', '<h4>Técnico Superior en Laboratorio Clínico y Biomédico</h4>', "Spain Europass clinical title")
+        text = replace_once(text, '<h4>Technician in Laboratory Operations</h4>', '<h4>Técnico en Operaciones de Laboratorio</h4>', "Spain Europass operations title")
     return text
 
 
