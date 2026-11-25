@@ -16,7 +16,7 @@ import json
 import re
 import subprocess
 from pathlib import Path
-from render_market_evidence import render_partial
+from render_market_evidence import render_partial, replace_marked, marked
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://cuenca-john1999.github.io"
@@ -253,19 +253,11 @@ def localize_market_profile(text: str, language: str) -> str:
     if count != 1:
         raise SystemExit("[localized-pages] missing market selector")
     if language == "es":
-        text, count = re.subn(
-            r'^ {32}<div class="document-slot">\n {36}<span data-i18n="commonLabels.selectedResults">[^\n]*\n.*?^ {32}</div>\n\n',
-            "", text, count=1, flags=re.M | re.S,
-        )
-        if count != 1:
-            raise SystemExit("[localized-pages] missing academic results block")
         name = '                        <p class="opening-name" data-reveal>Jhon M. Cuenca</p>\n'
         text = replace_once(text, name, name + '                        <p class="opening-availability" data-reveal>Técnico en Operaciones de Laboratorio</p>\n', "Spain secondary qualification")
         partial = render_partial("es")
         marker = '            <section class="sequence-section projects-section"'
         text = replace_once(text, marker, partial + marker, "Spain professional sections")
-        text = replace_once(text, "</head>", '    <link rel="stylesheet" href="../assets/css/spain-market.css?v=12a76b178193">\n</head>', "Spain stylesheet")
-        text = replace_once(text, "</body>", '    <script src="../assets/js/spain-market.js?v=d57881c1585b" defer></script>\n</body>', "Spain script")
         shortcuts = '                <div class="market-actions" aria-label="Accesos rápidos al perfil español"><a class="document-link" href="#areas-profesionales">Áreas profesionales</a><a class="document-link" href="#catalogo-tecnico">Catálogo técnico</a><a class="document-link" href="#instrumentacion">Instrumentación</a><a class="document-link" href="#dosieres">Dosieres PDF</a></div>'
         anchor = '            </section>\n\n            <section class="sequence-section experience-section"'
         text = replace_once(text, anchor, shortcuts + '\n' + anchor, "Spain quick links")
@@ -273,19 +265,11 @@ def localize_market_profile(text: str, language: str) -> str:
         text = replace_once(text, '<h4>Higher Technician in Clinical and Biomedical Laboratory</h4>', '<h4>Técnico Superior en Laboratorio Clínico y Biomédico</h4>', "Spain Europass clinical title")
         text = replace_once(text, '<h4>Technician in Laboratory Operations</h4>', '<h4>Técnico en Operaciones de Laboratorio</h4>', "Spain Europass operations title")
     if language == "de":
-        text, count = re.subn(
-            r'^ {32}<div class="document-slot">\n {36}<span data-i18n="commonLabels.selectedResults">[^\n]*\n.*?^ {32}</div>\n\n',
-            "", text, count=1, flags=re.M | re.S,
-        )
-        if count != 1:
-            raise SystemExit("[localized-pages] missing German academic results block")
         name = '                        <p class="opening-name" data-reveal>Jhon M. Cuenca</p>\n'
         text = replace_once(text, name, name + '                        <p class="opening-availability" data-reveal>Laborfachkraft · zwei spanische Berufsabschlüsse</p>\n', "Germany secondary qualification")
         partial = render_partial("de")
         marker = '            <section class="sequence-section projects-section"'
         text = replace_once(text, marker, partial + marker, "Germany professional sections")
-        text = replace_once(text, "</head>", '    <link rel="stylesheet" href="../assets/css/spain-market.css?v=12a76b178193">\n</head>', "Germany stylesheet")
-        text = replace_once(text, "</body>", '    <script src="../assets/js/germany-market.js?v=692fdc424157" defer></script>\n</body>', "Germany script")
         shortcuts = '                <div class="market-actions" aria-label="Schnellzugriff Deutschland"><a class="document-link" href="#berufsfelder">Berufsfelder</a><a class="document-link" href="#anerkennung">Anerkennung</a><a class="document-link" href="#fachkatalog">Kompetenzkatalog</a><a class="document-link" href="#geraete">Geräte</a><a class="document-link" href="#dossiers">PDF-Dossiers</a></div>'
         anchor = '            </section>\n\n            <section class="sequence-section experience-section"'
         text = replace_once(text, anchor, shortcuts + '\n' + anchor, "Germany quick links")
@@ -312,6 +296,8 @@ def localize_profile_json_ld(text: str, language: str) -> str:
 
 def render_main(language: str) -> str:
     source = (ROOT / "index.html").read_text(encoding="utf-8")
+    source = replace_marked(source, "INTERNATIONAL-MARKET")
+    source = replace_marked(source, "INTERNATIONAL-QUICK")
     meta = MAIN_META[language]
     url = f"{BASE_URL}/{language}/"
 
@@ -409,6 +395,7 @@ def normalize_generated_html(text: str) -> str:
 
 def outputs() -> dict[Path, str]:
     return {
+        ROOT / "index.html": normalize_generated_html(replace_marked((ROOT / "index.html").read_text(encoding="utf-8"), "INTERNATIONAL-MARKET", marked("INTERNATIONAL-MARKET", render_partial("en")))),
         ROOT / "de" / "index.html": normalize_generated_html(render_main("de")),
         ROOT / "es" / "index.html": normalize_generated_html(render_main("es")),
         ROOT / "de" / "workbench" / "index.html": normalize_generated_html(render_workbench("de")),

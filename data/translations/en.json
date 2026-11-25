@@ -61,8 +61,8 @@
   "hero": {
     "title": "Clinical &amp; Biomedical<br>Laboratory Profile",
     "philosophy": "Committed to a lifetime of learning, discovery and helping others.",
-    "availability": "Available in the Bonn–Cologne region, Berlin and Madrid, with relocation open throughout Germany and internationally.",
-    "cvCta": "Download CV",
+    "availability": "Available internationally · Bonn–Cologne region, Berlin and Madrid · Open to relocation.",
+    "cvCta": "Download international CV",
     "contactCta": "Contact",
     "projectsCta": "Explore projects",
     "scroll": "Scroll to discover"
@@ -71,8 +71,8 @@
     "profile": {
       "kicker": "Profile",
       "title": "A laboratory profile shaped by precision, research and continuous learning.",
-      "body": "I hold Spanish vocational qualifications as Técnico Superior en Laboratorio Clínico y Biomédico (Higher Technician in Clinical and Biomedical Laboratory) and Técnico en Operaciones de Laboratorio (Technician in Laboratory Operations). I am currently based in the Bonn–Cologne region, with additional geographic availability in Berlin and Madrid, and I apply this training to clinical diagnostics, molecular biology, immunology and analytical laboratory work under GLP standards.",
-      "pointPractice": "Clinical & biomedical laboratory practice",
+      "body": "I hold two official Spanish vocational qualifications in clinical and biomedical laboratory science and laboratory operations. My practical laboratory experience comes from placements in immunology and molecular biology in Madrid and biomass analysis in Ireland. I combine formal clinical laboratory training with research support, analytical instrumentation and GLP/SOP documentation.",
+      "pointPractice": "Clinical laboratory science · Formal vocational training",
       "pointBiomedical": "Molecular biology · Immunology · PCR · ELISA",
       "pointAnalytical": "Analytical workflows · SOPs · GLP documentation"
     },
@@ -86,8 +86,8 @@
     },
     "education": {
       "kicker": "Education",
-      "title": "Two laboratory vocational qualifications with strong results and a clinical, analytical and biomedical foundation.",
-      "body": "I completed two Spanish vocational qualifications—Técnico Superior en Laboratorio Clínico y Biomédico and Técnico en Operaciones de Laboratorio—with final grades of 9.25/10 and 8.69/10.",
+      "title": "Two official Spanish vocational qualifications in healthcare and chemistry.",
+      "body": "Completed Spanish vocational qualifications: Técnico Superior en Laboratorio Clínico y Biomédico and Técnico en Operaciones de Laboratorio. English descriptions are translations, not professional equivalence decisions.",
       "pointClinical": "Técnico Superior en Laboratorio Clínico y Biomédico · CEAC FP Oficial · 2025",
       "pointOperations": "Técnico en Operaciones de Laboratorio · IES Virgen de la Paloma · 2023",
       "pointAdditional": "Certifications: Animal Experimentation A+B+C · Healthcare Centre Management · Basic Risk Prevention"
@@ -124,7 +124,7 @@
     "contact": {
       "kicker": "Contact",
       "title": "Open to laboratory, clinical research and biomedical science opportunities.",
-      "body": "Available in the Bonn–Cologne region, Berlin and Madrid, and open to relocation throughout Germany and internationally. My professional interests include molecular biology, immunology, translational research, scientific communication and international collaboration in laboratory environments."
+      "body": "Available internationally, with Bonn–Cologne, Berlin and Madrid as geographic options. Interested in research support, biotechnology, analytical laboratories and clinical roles subject to local professional requirements."
     }
   },
   "readiness": {
@@ -142,7 +142,7 @@
     },
     "roles": {
       "label": "Target roles",
-      "value": "Laboratory Technician · Technical Assistant · Research Support · Biomedical and analytical laboratories · Non-regulated technical roles"
+      "value": "Research Technician · Laboratory Technician · Technical Assistant · Biomedical research · Biotechnology · Analytical laboratories"
     },
     "languages": {
       "label": "Languages",
@@ -150,11 +150,11 @@
     },
     "availability": {
       "label": "Availability & mobility",
-      "value": "Bonn–Cologne region · Berlin · Madrid · Open to relocation throughout Germany and internationally"
+      "value": "Bonn–Cologne region · Berlin · Madrid · Open to international relocation"
     },
     "recognition": {
       "label": "Professional recognition",
-      "value": "Regulated clinical or hospital roles may require Anerkennung, depending on the role, federal state and competent authority. Previous German university acceptance concerned academic admission only—not professional recognition."
+      "value": "Original Spanish vocational qualifications. Professional recognition, registration and language requirements depend on the country and role; no automatic equivalence or clinical authorisation is claimed."
     },
     "documents": {
       "label": "Documents",
@@ -190,12 +190,12 @@
   },
   "educationCards": {
     "clinical": {
-      "grade": "9.25/10",
+      "grade": "Higher vocational qualification · Healthcare",
       "title": "Técnico Superior en Laboratorio Clínico y Biomédico",
       "center": "CEAC FP Oficial · Madrid, Spain",
       "period": "2023–2025",
       "practiceCta": "Placement: Hospital Universitario de La Princesa →",
-      "body": "Spanish qualification: Técnico Superior en Laboratorio Clínico y Biomédico (translated as Higher Technician in Clinical and Biomedical Laboratory), CEAC FP Oficial, 2023-2025. Official final grade: 9.25/10, with honours distinctions in General Laboratory Techniques, Immunodiagnostic Techniques and Hematological Analysis Techniques.",
+      "body": "Official Spanish qualification: Técnico Superior en Laboratorio Clínico y Biomédico, CEAC FP Oficial, 2023–2025. Training in biological samples, general laboratory methods, molecular biology and cytogenetics, physiopathology, biochemistry, immunodiagnostics, clinical microbiology and haematology.",
       "finalProject": "<strong>Bacteriophage Therapy: Rediscovering an Innovative Therapy.</strong> Co-authored with Luis Gonzalo Legua Pérez and published with co-author permission.<br><br><strong>Document language:</strong> the linked English PDF is an unofficial translation/adaptation and is not a certified or sworn translation. The original academic work is the Spanish version.<br><br><strong>Original interdisciplinary hypothesis:</strong> exploring whether phage specificity and chitosan-based adsorption could be combined in future laboratory models to study microplastic-associated biofilms, without claiming clinical efficacy.",
       "contribution": "My contribution: literature review, scientific writing, project structure, conceptual development and defense preparation, including the future-oriented connection between bacteriophage therapy, chitosan and microplastic-related biomedical questions.",
       "exploreProject": "Explore project",
@@ -203,12 +203,12 @@
       "reference": "Tamara Díaz Jáuregui, biology teacher at CEAC FP Madrid, highlights technical skill, dedication, problem-solving, rapid learning, communication and responsibility."
     },
     "operations": {
-      "grade": "8.69/10",
+      "grade": "Vocational qualification · Chemistry",
       "title": "Técnico en Operaciones de Laboratorio",
       "center": "IES Virgen de la Paloma · Madrid, Spain",
       "period": "2021–2023",
       "practiceCta": "Erasmus+ / placement: Celignis Biomass Analysis Laboratory · Limerick, Ireland →",
-      "body": "Spanish qualification: Técnico en Operaciones de Laboratorio (Technician in Laboratory Operations), IES Virgen de la Paloma, 2021–2023. Official final grade: 8.69/10. The official academic record covers laboratory safety and organization, applied chemistry, physicochemical testing, sampling and unit operations, chemical analysis, microbiology and biochemistry, materials testing, auxiliary laboratory services and technical English.",
+      "body": "Official Spanish qualification: Técnico en Operaciones de Laboratorio, IES Virgen de la Paloma, 2021–2023. Training in laboratory safety, applied chemistry, physicochemical testing, sampling, chemical analysis, microbiology and biochemistry, materials testing, laboratory support and technical English.",
       "recognition": "Diploma for excellent academic performance in the second year of the Técnico en Operaciones de Laboratorio programme.",
       "results10": "Laboratory Auxiliary Services · Technical English",
       "results9": "Applied Chemistry · Physicochemical Testing · Safety and Organization in the Laboratory · Chemical Analysis Operations · Materials Testing",
@@ -221,11 +221,11 @@
     "additional": {
       "badge": "3 documented credentials",
       "title": "Certifications & Additional Training",
-      "body": "Animal Experimentation - Functions A+B+C (Order ECC/566/2015) · 70 h with in-person practical training. A: care of animals; B: euthanasia of animals; C: performance of procedures. The formal programme covers animal welfare and the 3Rs, recognition of pain, suffering and distress, humane killing methods, minimally invasive procedures, anaesthesia for minor procedures, advanced anaesthesia for surgical or prolonged procedures, and principles of surgery. During the supervised practical component, I personally performed animal handling, injections, anaesthesia, surgical procedures for sample/tissue collection and collection/extraction of animal samples. I also participated in supervised procedures that included euthanasia; this is not presented as independent practice. Healthcare Centre Management · 100 h · 2025. Basic Level Occupational Risk Prevention · 2023.",
+      "body": "Animal Experimentation - Functions A+B+C (Order ECC/566/2015) · supervised practical course. A: care of animals; B: euthanasia of animals; C: performance of procedures. The formal programme covers animal welfare and the 3Rs, recognition of pain, suffering and distress, humane killing methods, minimally invasive procedures, anaesthesia for minor procedures, advanced anaesthesia for surgical or prolonged procedures, and principles of surgery. During the supervised practical component, I personally performed animal handling, injections, anaesthesia, surgical procedures for sample/tissue collection and collection/extraction of animal samples. I also participated in supervised procedures that included euthanasia; this is not presented as independent practice. Healthcare Centre Management · 100 h · 2025. Basic Level Occupational Risk Prevention · 2023.",
       "animal": {
-        "meta": "Order ECC/566/2015 · 70 h · in-person practical training",
-        "title": "Animal Experimentation · Functions A+B+C",
-        "scope": "Formal certification scope: A · care of animals; B · euthanasia of animals; C · performance of procedures.",
+        "meta": "Spanish Order ECC/566/2015 · Course diploma 2024",
+        "title": "Animal Experimentation course · Functions A+B+C",
+        "scope": "Course covering the Spanish functions A (animal care), B (euthanasia) and C (procedures). The diploma records course completion; it is not proof of individual authorisation or recognition in another country.",
         "programWelfare": "Animal welfare & 3Rs · recognition of pain, suffering and distress · humane killing methods",
         "programProcedures": "Minimally invasive procedures · anaesthesia for minor procedures · advanced anaesthesia for surgical or prolonged procedures",
         "programSurgery": "Principles of surgery",
@@ -289,7 +289,7 @@
       "description": "Covered through formal vocational training, certified coursework or academic projects; not presented as placement-based practical experience.",
       "microbiology": "Clinical microbiology",
       "virology": "Virology · Bacteriophage literature review",
-      "animalModels": "Animal Experimentation course · Functions A+B+C · 70 h · in-person practical training · care, euthanasia and performance of procedures · anaesthesia and surgical principles"
+      "animalModels": "Animal Experimentation course · Functions A+B+C · supervised practical training · care, euthanasia, procedures, anaesthesia and surgical principles"
     }
   },
   "projectCards": {

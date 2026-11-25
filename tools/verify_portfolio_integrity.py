@@ -615,8 +615,8 @@ def check_shared_evidence() -> None:
     keys = {item["id"] for item in data["skills"]}
     if len(keys) != 46 or len(data["skills"]) != len(keys):
         fail("shared evidence IDs are not unique and complete")
-    for lang in ("es", "de"):
-        source = (ROOT / lang / "index.html").read_text(encoding="utf-8")
+    for lang, path in (("en","index.html"),("es","es/index.html"),("de","de/index.html")):
+        source = (ROOT / path).read_text(encoding="utf-8")
         if set(re.findall(r'data-skill-key="([^"]+)"', source)) != keys:
             fail(f"catalogue differs from shared evidence for {lang}")
 

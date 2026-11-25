@@ -22,3 +22,14 @@ def render_partial(language):
     if source.count("<!-- COMMON-SKILLS -->") != 1:
         raise SystemExit("Missing or duplicated shared catalogue marker")
     return source.replace("<!-- COMMON-SKILLS -->", render_rows(language))
+
+def marked(key, text):
+    return f"<!-- {key}:BEGIN -->\n{text}<!-- {key}:END -->\n"
+
+def replace_marked(source, key, text=""):
+    import re
+    pattern = rf"<!-- {re.escape(key)}:BEGIN -->\n.*?<!-- {re.escape(key)}:END -->\n"
+    result, count = re.subn(pattern, lambda _: text, source, flags=re.S)
+    if count != 1:
+        raise SystemExit(f"Invalid generated block: {key}")
+    return result
