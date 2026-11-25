@@ -1,0 +1,408 @@
+{
+  "notes": [
+    {
+      "id": "pcr",
+      "kind": "technical",
+      "skill": "pcr",
+      "evidence": "entry-laprincesa",
+      "source": "NHGRI · Polymerase Chain Reaction",
+      "url": "https://www.genome.gov/about-genomics/fact-sheets/Polymerase-Chain-Reaction-Fact-Sheet",
+      "en": [
+        "Polymerase chain reaction (PCR)",
+        "PCR amplifies a DNA region using primers and repeated synthesis cycles. RNA targets require conversion to cDNA before conventional DNA amplification.",
+        "Placement: PCR and RNA extraction documented; no independent assay validation or diagnostic interpretation claimed."
+      ],
+      "es": [
+        "Reacción en cadena de la polimerasa (PCR)",
+        "La PCR amplifica una región de ADN mediante cebadores y ciclos de síntesis. Los objetivos de ARN requieren conversión a ADNc antes de una amplificación convencional de ADN.",
+        "Prácticas: PCR y extracción de ARN documentadas; no se atribuye validación del ensayo ni interpretación diagnóstica autónoma."
+      ],
+      "de": [
+        "Polymerase-Kettenreaktion (PCR)",
+        "PCR vervielfältigt einen DNA-Abschnitt mithilfe von Primern und wiederholten Synthesezyklen. RNA-Ziele benötigen vor konventioneller DNA-Amplifikation eine Umschreibung in cDNA.",
+        "Praktikum: PCR und RNA-Extraktion dokumentiert; keine Assayvalidierung oder eigenständige Diagnostik beansprucht."
+      ]
+    },
+    {
+      "id": "elisa",
+      "kind": "technical",
+      "skill": "elisa",
+      "evidence": "entry-laprincesa",
+      "source": "Thermo Fisher · ELISA overview",
+      "url": "https://www.thermofisher.com/us/en/home/life-science/protein-biology/protein-biology-learning-center/protein-biology-resource-library/pierce-protein-methods/overview-elisa.html",
+      "en": [
+        "Enzyme-linked immunosorbent assay (ELISA)",
+        "Antibody binding and an enzyme-linked readout support detection or quantification of an analyte. Controls and assay format determine how signals can be interpreted.",
+        "Placement: ELISA documented; no independent clinical reporting or assay validation claimed."
+      ],
+      "es": [
+        "Ensayo de inmunoadsorción enzimática (ELISA)",
+        "La unión de anticuerpos y una señal enzimática permiten detectar o cuantificar un analito. Los controles y el formato del ensayo condicionan la interpretación de la señal.",
+        "Prácticas: ELISA documentado; no se atribuye emisión de informes clínicos ni validación autónoma."
+      ],
+      "de": [
+        "Enzyme-linked Immunosorbent Assay (ELISA)",
+        "Antikörperbindung und enzymgekoppelte Signale unterstützen Nachweis oder Quantifizierung eines Analyten. Kontrollen und Assayformat bestimmen die Auswertung.",
+        "Praktikum: ELISA dokumentiert; keine eigenständige klinische Befundung oder Validierung beansprucht."
+      ]
+    },
+    {
+      "id": "western-blot",
+      "kind": "technical",
+      "skill": "western-blot",
+      "evidence": "entry-laprincesa",
+      "source": "Thermo Fisher · Protein analysis guide",
+      "url": "https://www.thermofisher.com/us/en/home/references/protein-analysis-guide.html",
+      "en": [
+        "Western blot",
+        "Proteins are separated, transferred to a membrane and detected using antibodies. Blocking reduces unwanted binding; controls support interpretation.",
+        "Placement: gel casting, transfer and blocking documented; not a claim of complete independent assay execution."
+      ],
+      "es": [
+        "Western blot",
+        "Las proteínas se separan, se transfieren a una membrana y se detectan con anticuerpos. El bloqueo reduce la unión inespecífica; los controles permiten interpretar el resultado.",
+        "Prácticas: preparación de geles, transferencia y bloqueo documentados; no se atribuye ejecución autónoma del ensayo completo."
+      ],
+      "de": [
+        "Western Blot",
+        "Proteine werden getrennt, auf eine Membran übertragen und mit Antikörpern nachgewiesen. Blocking reduziert unspezifische Bindung; Kontrollen unterstützen die Interpretation.",
+        "Praktikum: Gelherstellung, Transfer und Blocking dokumentiert; kein vollständiger eigenständiger Assay beansprucht."
+      ]
+    },
+    {
+      "id": "cell-culture",
+      "kind": "technical",
+      "skill": "hacat",
+      "evidence": "entry-laprincesa",
+      "source": "ATCC · Primary Cell Culture Guide",
+      "url": "https://www.atcc.org/resources/culture-guides/primary-cell-culture-guide",
+      "en": [
+        "Cell culture and aseptic work",
+        "Cell culture maintains cells under controlled conditions. Medium, cell identity, contamination control and culture history influence downstream observations.",
+        "Placement: HaCaT handling, media, passaging and freezing documented; no cell-line authentication or culture validation claimed."
+      ],
+      "es": [
+        "Cultivo celular y trabajo aséptico",
+        "El cultivo celular mantiene células en condiciones controladas. El medio, la identidad celular, el control de contaminación y el historial del cultivo influyen en las observaciones posteriores.",
+        "Prácticas: manejo de HaCaT, medios, pases y congelación documentados; no se atribuye autenticación de líneas ni validación de cultivos."
+      ],
+      "de": [
+        "Zellkultur und aseptisches Arbeiten",
+        "Zellkultur erhält Zellen unter kontrollierten Bedingungen. Medium, Zellidentität, Kontaminationskontrolle und Kulturhistorie beeinflussen nachfolgende Beobachtungen.",
+        "Praktikum: HaCaT, Medien, Passagieren und Einfrieren dokumentiert; keine Zelllinienauthentifizierung oder Kulturvalidierung beansprucht."
+      ]
+    },
+    {
+      "id": "tga",
+      "kind": "technical",
+      "skill": "tga",
+      "evidence": "entry-celignis",
+      "source": "IUPAC Gold Book · thermogravimetry",
+      "url": "https://goldbook.iupac.org/terms/view/T06324",
+      "en": [
+        "Thermogravimetric analysis (TGA)",
+        "TGA follows changes in sample mass during a controlled temperature programme. Mass-loss regions can reflect several processes and require context for interpretation.",
+        "Placement: operation of TGA Q500 in biomass analysis documented; no independent method validation claimed."
+      ],
+      "es": [
+        "Análisis termogravimétrico (TGA)",
+        "La TGA sigue los cambios de masa de una muestra durante un programa de temperatura controlado. Las pérdidas de masa pueden responder a varios procesos y requieren contexto.",
+        "Prácticas: operación del TGA Q500 en análisis de biomasa documentada; no se atribuye validación autónoma del método."
+      ],
+      "de": [
+        "Thermogravimetrische Analyse (TGA)",
+        "TGA erfasst Massenänderungen einer Probe während eines kontrollierten Temperaturprogramms. Massenverluste können unterschiedliche Ursachen haben und benötigen Kontext.",
+        "Praktikum: Betrieb des TGA Q500 in der Biomasseanalytik dokumentiert; keine eigenständige Methodenvalidierung beansprucht."
+      ]
+    },
+    {
+      "id": "elemental-analysis",
+      "kind": "technical",
+      "skill": "chnos",
+      "evidence": "entry-celignis",
+      "source": "Natural History Museum · CHNS elemental analysis",
+      "url": "https://www.nhm.ac.uk/our-science/services/facilities/imaging-analysis/chemical-analysis/chns-elemental-analysis.html",
+      "en": [
+        "Elemental analysis (CHNS/O)",
+        "Combustion-based CHNS methods quantify carbon, hydrogen, nitrogen and sulfur through analysis of reaction gases. Oxygen determination depends on the analytical configuration.",
+        "Placement: CHNOS and biomass analyses documented; no additional analyser model specified."
+      ],
+      "es": [
+        "Análisis elemental (CHNS/O)",
+        "Los métodos CHNS basados en combustión cuantifican carbono, hidrógeno, nitrógeno y azufre mediante el análisis de gases de reacción. La determinación de oxígeno depende de la configuración analítica.",
+        "Prácticas: CHNOS y análisis de biomasa documentados; no se atribuye un modelo de analizador adicional."
+      ],
+      "de": [
+        "Elementaranalyse (CHNS/O)",
+        "Verbrennungsbasierte CHNS-Verfahren quantifizieren Kohlenstoff, Wasserstoff, Stickstoff und Schwefel anhand der Reaktionsgase. Die Sauerstoffbestimmung hängt von der Gerätekonfiguration ab.",
+        "Praktikum: CHNOS und Biomasseanalysen dokumentiert; kein zusätzliches Gerätemodell angegeben."
+      ]
+    },
+    {
+      "id": "phage",
+      "kind": "reading",
+      "skill": null,
+      "evidence": "entry-phage",
+      "source": "Bacteriophage Therapy: Developments and Directions",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7148498/",
+      "en": [
+        "Bacteriophage therapy",
+        "Phages infect bacteria; therapeutic approaches investigate selected lytic phages. Host specificity, bacterial resistance and clinical evidence remain central challenges.",
+        "Related co-authored academic literature review; not an experimental study or clinical efficacy claim."
+      ],
+      "es": [
+        "Bacteriofagoterapia",
+        "Los fagos infectan bacterias; las aproximaciones terapéuticas investigan fagos líticos seleccionados. Especificidad, resistencia bacteriana y evidencia clínica son retos centrales.",
+        "Trabajo académico bibliográfico en coautoría relacionado; no estudio experimental ni afirmación de eficacia clínica."
+      ],
+      "de": [
+        "Bakteriophagentherapie",
+        "Phagen infizieren Bakterien; therapeutische Ansätze untersuchen ausgewählte lytische Phagen. Wirtsspezifität, bakterielle Resistenz und klinische Evidenz bleiben zentrale Herausforderungen.",
+        "Bezug zur gemeinsam verfassten Literaturarbeit; keine experimentelle Studie oder Wirksamkeitsbehauptung."
+      ]
+    },
+    {
+      "id": "immunology",
+      "kind": "reading",
+      "skill": null,
+      "evidence": "entry-laprincesa",
+      "source": "Thermo Fisher · ELISA overview",
+      "url": "https://www.thermofisher.com/us/en/home/life-science/protein-biology/protein-biology-learning-center/protein-biology-resource-library/pierce-protein-methods/overview-elisa.html",
+      "en": [
+        "Immunology: cells and soluble signals",
+        "Immune-cell populations and soluble mediators provide complementary information. Cell isolation and immunoassays answer different questions; neither alone establishes a clinical diagnosis.",
+        "Related placement: CD4/CD14 isolation and ELISA. Educational synthesis, not an additional experiment."
+      ],
+      "es": [
+        "Inmunología: células y señales solubles",
+        "Las poblaciones inmunitarias y los mediadores solubles aportan información complementaria. El aislamiento celular y los inmunoensayos responden a preguntas diferentes; por sí solos no establecen un diagnóstico clínico.",
+        "Prácticas relacionadas: aislamiento CD4/CD14 y ELISA. Síntesis educativa, no experimento adicional."
+      ],
+      "de": [
+        "Immunologie: Zellen und lösliche Signale",
+        "Immunzellpopulationen und lösliche Mediatoren liefern ergänzende Informationen. Zellisolierung und Immunassays beantworten unterschiedliche Fragen; allein begründen sie keine klinische Diagnose.",
+        "Bezug zum Praktikum: CD4/CD14-Isolierung und ELISA. Lernnotiz, kein zusätzliches Experiment."
+      ]
+    },
+    {
+      "id": "viral-entry",
+      "kind": "reading",
+      "skill": null,
+      "evidence": null,
+      "source": "NCBI Bookshelf · Cell Biology of Infection",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26833/",
+      "en": [
+        "Molecular virology: viral entry",
+        "Viruses use host-cell components to enter cells; routes differ and may involve receptor binding, endocytosis or membrane fusion. Entry is distinct from productive replication.",
+        "Learning note; no claim of viral culture, infection assays or experimental results."
+      ],
+      "es": [
+        "Virología molecular: entrada viral",
+        "Los virus utilizan componentes celulares para entrar en las células; las rutas varían y pueden incluir unión a receptores, endocitosis o fusión de membranas. La entrada no equivale a replicación productiva.",
+        "Nota de aprendizaje; no se atribuye cultivo viral, ensayos de infección ni resultados experimentales."
+      ],
+      "de": [
+        "Molekulare Virologie: Viruseintritt",
+        "Viren nutzen Wirtszellkomponenten für den Eintritt; die Wege variieren und können Rezeptorbindung, Endozytose oder Membranfusion umfassen. Eintritt ist nicht mit produktiver Replikation gleichzusetzen.",
+        "Lernnotiz; keine Viruskultur, Infektionsassays oder experimentellen Ergebnisse beansprucht."
+      ]
+    },
+    {
+      "id": "chitosan",
+      "kind": "reading",
+      "skill": null,
+      "evidence": "entry-chitosan",
+      "source": "Recent Advances of Chitosan Formulations in Biomedical Applications",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9504745/",
+      "en": [
+        "Chitosan and biomaterials",
+        "Chitosan-based materials are being studied for biomedical applications. Properties depend on formulation and conditions; environmental adsorption does not establish biomedical efficacy.",
+        "Related internal conceptual proposal; no experimental validation or clinical application claimed."
+      ],
+      "es": [
+        "Quitosano y biomateriales",
+        "Los materiales basados en quitosano se estudian para aplicaciones biomédicas. Sus propiedades dependen de la formulación y condiciones experimentales; la adsorción ambiental no demuestra eficacia biomédica.",
+        "Propuesta conceptual interna relacionada; sin validación experimental ni aplicación clínica acreditada."
+      ],
+      "de": [
+        "Chitosan und Biomaterialien",
+        "Chitosanbasierte Materialien werden für biomedizinische Anwendungen untersucht. Eigenschaften hängen von Formulierung und Bedingungen ab; Umweltadsorption belegt keine biomedizinische Wirksamkeit.",
+        "Bezug zum internen Konzept; keine experimentelle Validierung oder klinische Anwendung beansprucht."
+      ]
+    }
+  ],
+  "flows": [
+    {
+      "en": [
+        "Molecular analysis",
+        [
+          "Sample",
+          "Nucleic acid preparation",
+          "DNA amplification (PCR)",
+          "Electrophoretic readout"
+        ],
+        "RNA-based workflows may require reverse transcription; this is a conceptual relationship, not a record of a single independently executed protocol."
+      ],
+      "es": [
+        "Análisis molecular",
+        [
+          "Muestra",
+          "Preparación de ácidos nucleicos",
+          "Amplificación de ADN (PCR)",
+          "Lectura electroforética"
+        ],
+        "Los flujos basados en ARN pueden requerir retrotranscripción; es un esquema conceptual, no un protocolo completo ejecutado de forma autónoma."
+      ],
+      "de": [
+        "Molekularanalytik",
+        [
+          "Probe",
+          "Nukleinsäureaufarbeitung",
+          "DNA-Amplifikation (PCR)",
+          "Elektrophoretische Auswertung"
+        ],
+        "RNA-basierte Abläufe können Reverse Transkription benötigen; konzeptionelle Darstellung, kein eigenständig ausgeführtes Gesamtprotokoll."
+      ]
+    },
+    {
+      "en": [
+        "Cell culture",
+        [
+          "Cell material",
+          "Aseptic culture",
+          "Maintenance and passage",
+          "Downstream study"
+        ],
+        "Cell line and study-specific conditions govern each step."
+      ],
+      "es": [
+        "Cultivo celular",
+        [
+          "Material celular",
+          "Cultivo aséptico",
+          "Mantenimiento y pase",
+          "Estudio posterior"
+        ],
+        "Cada paso depende de la línea celular y las condiciones del estudio."
+      ],
+      "de": [
+        "Zellkultur",
+        [
+          "Zellmaterial",
+          "Aseptische Kultur",
+          "Erhaltung und Passage",
+          "Nachfolgende Untersuchung"
+        ],
+        "Zelllinie und Studienbedingungen bestimmen jeden Schritt."
+      ]
+    },
+    {
+      "en": [
+        "Immunological sample processing",
+        [
+          "Biological sample",
+          "Sample preparation",
+          "Cell isolation or immunoassay",
+          "Contextual interpretation"
+        ],
+        "Cell isolation and immunoassays are alternative or complementary branches, not mandatory sequential steps."
+      ],
+      "es": [
+        "Procesamiento inmunológico",
+        [
+          "Muestra biológica",
+          "Preparación",
+          "Aislamiento celular o inmunoensayo",
+          "Interpretación contextual"
+        ],
+        "El aislamiento y los inmunoensayos son ramas alternativas o complementarias, no pasos obligatoriamente sucesivos."
+      ],
+      "de": [
+        "Immunologische Probenaufarbeitung",
+        [
+          "Biologische Probe",
+          "Aufarbeitung",
+          "Zellisolierung oder Immunassay",
+          "Kontextbezogene Interpretation"
+        ],
+        "Zellisolierung und Immunassays sind alternative oder ergänzende Zweige, keine zwingende Sequenz."
+      ]
+    },
+    {
+      "en": [
+        "Biomass and traceability",
+        [
+          "Sample registration",
+          "Preparation",
+          "Method-specific analysis",
+          "QC and traceable records"
+        ],
+        "The selected method and laboratory SOP determine the actual procedure."
+      ],
+      "es": [
+        "Biomasa y trazabilidad",
+        [
+          "Registro de muestra",
+          "Preparación",
+          "Análisis según método",
+          "Control interno y registro trazable"
+        ],
+        "El método elegido y el PNT del laboratorio determinan el procedimiento real."
+      ],
+      "de": [
+        "Biomasse und Rückverfolgbarkeit",
+        [
+          "Probenregistrierung",
+          "Aufarbeitung",
+          "Methodenspezifische Analyse",
+          "QC und nachvollziehbare Dokumentation"
+        ],
+        "Methode und Labor-SOP bestimmen den tatsächlichen Ablauf."
+      ]
+    }
+  ],
+  "labels": {
+    "en": {
+      "library": "Scientific and technical library",
+      "intro": "Educational reference notes prepared for this portfolio with AI assistance; not peer-reviewed publications, original experiments or evidence of additional practical experience. Drafts for author review.",
+      "technical": "Technical notes",
+      "reading": "Scientific reading notes",
+      "workflow": "Illustrative laboratory workflows",
+      "flowintro": "Conceptual diagrams, not operating procedures or records of independent execution.",
+      "scope": "Documented scope / limitation",
+      "ref": "Further reading",
+      "context": "Evidence / context",
+      "note": "Technical note",
+      "date": "Prepared 25 November 2026",
+      "nav": "Library"
+    },
+    "es": {
+      "library": "Biblioteca científica y técnica",
+      "intro": "Notas educativas preparadas para este portafolio con asistencia de IA; no son publicaciones revisadas por pares, experimentos originales ni prueba de nuevas competencias prácticas. Borradores para revisión del autor.",
+      "technical": "Notas técnicas",
+      "reading": "Notas de lectura científica",
+      "workflow": "Flujos de laboratorio ilustrativos",
+      "flowintro": "Diagramas conceptuales, no PNT ni registro de ejecución independiente.",
+      "scope": "Alcance documentado / limitación",
+      "ref": "Lectura de referencia",
+      "context": "Evidencia / contexto",
+      "note": "Nota técnica",
+      "date": "Preparado el 25 de noviembre de 2026",
+      "nav": "Biblioteca"
+    },
+    "de": {
+      "library": "Wissenschaftliche und technische Bibliothek",
+      "intro": "Lernnotizen für dieses Portfolio mit KI-Unterstützung; keine begutachteten Veröffentlichungen, eigenen Experimente oder Nachweise zusätzlicher Praxiskompetenz. Entwürfe zur Prüfung durch den Autor.",
+      "technical": "Technische Notizen",
+      "reading": "Wissenschaftliche Lesenotizen",
+      "workflow": "Illustrative Laborabläufe",
+      "flowintro": "Konzeptionelle Diagramme, keine SOPs oder Nachweise eigenständiger Durchführung.",
+      "scope": "Dokumentierter Umfang / Grenze",
+      "ref": "Weiterführende Literatur",
+      "context": "Nachweis / Kontext",
+      "note": "Technische Notiz",
+      "date": "Erstellt am 25. November 2026",
+      "nav": "Bibliothek"
+    }
+  }
+}
