@@ -57,7 +57,7 @@ def hub(lang):
     controls_html = "\n".join(controls)
     return f'''            <section class="sequence-section market-section" id="recruitment-hub" data-sequence-section aria-labelledby="recruitment-title">
                 <div class="section-kicker">{e(t["title"])}</div>
-                <h2 id="recruitment-title">{e(t["title"])}</h2><p class="market-intro" data-reveal>{e(t["intro"])}</p>
+                <h2 id="recruitment-title">{e(t["title"])}</h2><p class="market-intro">{e(t["intro"])}</p>
                 <div class="market-grid market-doc-grid">
 {body}
                 </div>
