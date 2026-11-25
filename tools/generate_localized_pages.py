@@ -16,7 +16,7 @@ import json
 import re
 import subprocess
 from pathlib import Path
-from render_market_evidence import render_partial, replace_marked, marked, refresh_hub, refresh_library
+from render_market_evidence import render_partial, replace_marked, marked, refresh_hub, refresh_library, hub
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://cuenca-john1999.github.io"
@@ -298,6 +298,7 @@ def render_main(language: str) -> str:
     source = (ROOT / "index.html").read_text(encoding="utf-8")
     source = replace_marked(source, "INTERNATIONAL-MARKET")
     source = replace_marked(source, "INTERNATIONAL-QUICK")
+    source = replace_marked(source, "RECRUITMENT-HUB")
     meta = MAIN_META[language]
     url = f"{BASE_URL}/{language}/"
 
@@ -339,7 +340,8 @@ def render_main(language: str) -> str:
     source = source.replace('../assets/documents/bacteriophage-therapy-defense_EN.pdf', f'../assets/documents/bacteriophage-therapy-defense_{language.upper()}.pdf')
     source = localize_markup(source, load_main_translation(language))
     source = localize_market_profile(source, language)
-    source = refresh_hub(source, language)
+    marker = '            <section class="sequence-section experience-section"'
+    source = replace_once(source, marker, marked("RECRUITMENT-HUB", hub(language)) + marker, "recruitment hub")
     source = localize_profile_json_ld(source, language)
     return source
 
@@ -417,6 +419,11 @@ def main() -> None:
         if args.check:
             if not path.is_file() or path.read_text(encoding="utf-8") != expected:
                 stale.append(str(path.relative_to(ROOT)))
+                if path.is_file():
+                    import difflib
+                    actual = path.read_text(encoding="utf-8")
+                    for line in list(difflib.unified_diff(actual.splitlines(), expected.splitlines(), fromfile=str(path.relative_to(ROOT)), tofile="expected", n=2))[:100]:
+                        print(line)
             continue
 
         path.parent.mkdir(parents=True, exist_ok=True)
