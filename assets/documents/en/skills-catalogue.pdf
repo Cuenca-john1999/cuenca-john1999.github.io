@@ -3,7 +3,7 @@
 << /Type /Catalog /Pages 2 0 R >>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R] /Count 3 >>
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R] /Count 4 >>
 endobj
 3 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
@@ -15,149 +15,331 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
 endobj
 6 0 obj
-<< /Length 4358 >>
+<< /Length 5161 >>
 stream
-0.12 0.24 0.38 rg 0 750 595 92 re f
-BT /F2 12 Tf 1 1 1 rg 1 0 0 1 42 811 Tm (JHON M. CUENCA | PROFESSIONAL PORTFOLIO) Tj ET
-BT /F2 17 Tf 1 1 1 rg 1 0 0 1 42 786 Tm (Technical skills catalogue) Tj ET
-BT /F2 10 Tf 0.12 0.32 0.49 rg 1 0 0 1 42 729 Tm (INTERNATIONAL / TECHNICAL DOSSIER) Tj ET
-BT /F1 9 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 32 Tm (cuenca-john1999.github.io/) Tj ET
-BT /F1 9 Tf 0.12 0.18 0.25 rg 1 0 0 1 330 32 Tm (Education and laboratory placements) Tj ET
-BT /F2 13 Tf 0.12 0.32 0.49 rg 1 0 0 1 42 704 Tm (Biomedical research and biotechnology) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 683 Tm (RNA extraction | Laboratory placement - La Princesa. Practical nucleic acid) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 669 Tm (preparation.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 648 Tm (PCR | Laboratory placement - La Princesa. Practical work with polymerase chain) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 634 Tm (reaction.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 613 Tm (Electrophoresis | Laboratory placement - La Princesa. Nucleic acid separation.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 592 Tm (Transgenic mouse genotyping | Laboratory placement - La Princesa. Participation in) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 578 Tm (genotyping workflows.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 557 Tm (Western blot | Laboratory placement - La Princesa. Gel casting, transfer and) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 543 Tm (blocking.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 522 Tm (HaCaT cell culture | Laboratory placement - La Princesa. Adherent culture, sterile) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 508 Tm (technique, media, passaging and freezing.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 487 Tm (Cytokine-stimulated cell culture | Laboratory placement - La Princesa.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 473 Tm (Participation in cell culture workflows.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 452 Tm (Human sample processing | Laboratory placement - La Princesa. Serum, peripheral) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 438 Tm (blood and Buffy Coat handling.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 417 Tm (CD4/CD14 isolation | Laboratory placement - La Princesa. Work with immune cells.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 396 Tm (Animal samples and tissues | Laboratory placement - La Princesa. Processing murine) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 382 Tm (lymphoid organs; supervised sample collection.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 361 Tm (ELISA | Laboratory placement - La Princesa. Practical work with immunological) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 347 Tm (assays.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 326 Tm (Immunohistochemistry | Laboratory placement - La Princesa. Participation in) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 312 Tm (staining workflows.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 291 Tm (Immunofluorescence | Laboratory placement - La Princesa. Participation in staining) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 277 Tm (workflows.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 256 Tm (Functions A+B+C | Course with supervised practice - Dynamimed. Spanish course) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 242 Tm (diploma in animal care, euthanasia and procedures.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 221 Tm (Animal handling, anaesthesia and procedures | Course with supervised practice -) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 207 Tm (Dynamimed. Animal handling, anaesthesia and supervised practical procedures.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 193 Tm () Tj ET
-BT /F2 13 Tf 0.12 0.32 0.49 rg 1 0 0 1 42 164 Tm (Analytical chemistry and industrial laboratories) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 143 Tm (Moisture and ash | Laboratory placement - Celignis. Biomass and residue analysis.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 122 Tm (Volatile matter | Laboratory placement - Celignis. Progressive responsibility) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 108 Tm (within the analytical workflow.) Tj ET
-BT /F1 9 Tf 1 0 0 1 510 32 Tm (1/3) Tj ET
+0.09 0.17 0.27 rg 0 825 595 17 re f
+BT /F2 11.5 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 798.00 Tm (JHON M. CUENCA) Tj ET
+BT /F2 9.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 422.18 798.00 Tm (PROFESSIONAL PORTFOLIO) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 787 m 551 787 l S
+BT /F2 9.4 Tf 0.12 0.36 0.58 rg 1 0 0 1 44.00 765.00 Tm (INTERNATIONAL  /  TECHNICAL PROFILE) Tj ET
+BT /F2 24 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 733.00 Tm (Technical skills catalogue) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 693 m 551 693 l S
+0.82 0.86 0.90 RG 0.6 w 44 49 m 551 49 l S
+BT /F1 9 Tf 0.29 0.36 0.44 rg 1 0 0 1 44.00 31.00 Tm (cuenca-john1999.github.io/) Tj ET
+BT /F1 9 Tf 0.29 0.36 0.44 rg 1 0 0 1 533.49 31.00 Tm (1 / 4) Tj ET
+BT /F2 14.5 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 669.00 Tm (Clinical and diagnostic laboratories) Tj ET
+BT /F1 10.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 44.00 642.00 Tm (Methods and techniques grouped by field, with the setting in which each skill was developed.) Tj ET
+0.09 0.17 0.27 rg 44 610.8 507 22 re f
+BT /F2 9.3 Tf 1 1 1 rg 1 0 0 1 51.00 617.80 Tm (Technique and context) Tj ET
+BT /F2 9.3 Tf 1 1 1 rg 1 0 0 1 238.00 617.80 Tm (Application or training) Tj ET
+0.95 0.97 0.99 rg 44 568.6999999999999 507 37.1 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 594.80 Tm (Haematology) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 581.30 Tm (Vocational qualification | CEAC FP Oficial) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 594.80 Tm (Vocational module in haematological analysis.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 568.6999999999999 m 551 568.6999999999999 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 557.70 Tm (Biochemical analysis) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 544.20 Tm (Vocational qualification | CEAC FP Oficial) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 557.70 Tm (Vocational module in biochemical analysis.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 531.5999999999999 m 551 531.5999999999999 l S
+0.95 0.97 0.99 rg 44 494.4999999999999 507 37.1 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 520.60 Tm (Clinical microbiology) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 507.10 Tm (Vocational qualification | CEAC FP Oficial) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 520.60 Tm (Vocational module in clinical microbiology.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 494.4999999999999 m 551 494.4999999999999 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 483.50 Tm (Immunodiagnostics) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 470.00 Tm (Vocational qualification | CEAC FP Oficial) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 483.50 Tm (Vocational module in immunodiagnostic methods.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 457.39999999999986 m 551 457.39999999999986 l S
+0.95 0.97 0.99 rg 44 420.29999999999984 507 37.1 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 446.40 Tm (Biological sample management) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 432.90 Tm (Vocational qualification | CEAC FP Oficial) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 446.40 Tm (Vocational training in biological sample handling.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 420.29999999999984 m 551 420.29999999999984 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 409.30 Tm (Molecular biology and cytogenetics) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 395.80 Tm (Vocational qualification | CEAC FP Oficial) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 409.30 Tm (Vocational training module.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 383.1999999999998 m 551 383.1999999999998 l S
+0.95 0.97 0.99 rg 44 335.49999999999983 507 47.7 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 372.20 Tm (Antibiogram) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 358.70 Tm (Academic practical training | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 348.10 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 372.20 Tm (Antibiogram exercise during microbiology training.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 335.49999999999983 m 551 335.49999999999983 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 324.50 Tm (Microscopy and culture media) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 311.00 Tm (Academic practical training | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 300.40 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 324.50 Tm (Practical laboratory training.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 287.79999999999984 m 551 287.79999999999984 l S
+0.95 0.97 0.99 rg 44 240.09999999999985 507 47.7 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 276.80 Tm (Membrane filtration) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 263.30 Tm (Academic practical training | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 252.70 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 276.80 Tm (Water analysis in an academic context.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 240.09999999999985 m 551 240.09999999999985 l S
+BT /F1 9.1 Tf 0.29 0.36 0.44 rg 1 0 0 1 44.00 225.10 Tm (Professional recognition and registration depend on the destination and role.) Tj ET
 endstream
 endobj
 7 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
 endobj
 8 0 obj
-<< /Length 4416 >>
+<< /Length 6805 >>
 stream
-0.12 0.24 0.38 rg 0 750 595 92 re f
-BT /F2 12 Tf 1 1 1 rg 1 0 0 1 42 811 Tm (JHON M. CUENCA | PROFESSIONAL PORTFOLIO) Tj ET
-BT /F2 17 Tf 1 1 1 rg 1 0 0 1 42 786 Tm (Technical skills catalogue) Tj ET
-BT /F2 10 Tf 0.12 0.32 0.49 rg 1 0 0 1 42 729 Tm (INTERNATIONAL / TECHNICAL DOSSIER) Tj ET
-BT /F1 9 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 32 Tm (cuenca-john1999.github.io/) Tj ET
-BT /F1 9 Tf 0.12 0.18 0.25 rg 1 0 0 1 330 32 Tm (Education and laboratory placements) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 704 Tm (Fixed carbon | Laboratory placement - Celignis. Work within biomass analysis.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 683 Tm (TGA | Laboratory placement - Celignis. Thermogravimetric analysis.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 662 Tm (CHNOS | Laboratory placement - Celignis. Elemental analysis.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 641 Tm (Ash melting | Laboratory placement - Celignis. Thermal testing.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 620 Tm (BMP and biogas | Laboratory placement - Celignis. Work with BMP units and gas) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 606 Tm (analysis.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 585 Tm (FOS/TAC | Laboratory placement - Celignis. Analytical parameters of biogas) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 571 Tm (processes.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 550 Tm (ICP | Laboratory placement - Celignis. Part of the analytical methods covered.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 536 Tm () Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 515 Tm (COD \(CSB/DQO\) | Laboratory placement - Celignis. Chemical oxygen demand.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 494 Tm (Ammonium | Laboratory placement - Celignis. Determination within placement scope.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 473 Tm (NIR/VISION | Laboratory placement - Celignis. Near-infrared spectroscopy and) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 459 Tm (workflow documentation.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 438 Tm (Vacuum filtration | Laboratory placement - Celignis. Sample preparation and) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 424 Tm (processing.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 403 Tm (GLP and SOPs | Laboratory placement - Celignis. Work to standard operating) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 389 Tm (procedures and GLP.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 368 Tm (Internal statistical quality control | Laboratory placement - Celignis. Internal) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 354 Tm (QC self-checks.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 333 Tm (Technical documentation | Laboratory placement - Celignis. Operational guides,) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 319 Tm (data sheets, work instructions and troubleshooting.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 298 Tm (Traceability and Thermal Excel | Laboratory placement - Celignis. Records,) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 284 Tm (batches, labels and database updates.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 263 Tm (Instrumentation and maintenance | Laboratory placement - Celignis. Support for) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 249 Tm (calibration, operation, monitoring and troubleshooting.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 228 Tm (HCl/NaOH titrations | Academic practical training - IES Virgen de la Paloma.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 214 Tm (Practical vocational chemistry exercise.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 193 Tm (Conductimetry and potentiometry | Academic practical training - IES Virgen de la) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 179 Tm (Paloma. Vocational physicochemical exercises.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 158 Tm (Turbidity and nitrates | Academic practical training - IES Virgen de la Paloma.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 144 Tm (Practical academic analysis.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 123 Tm (Solution preparation | Academic practical training - IES Virgen de la Paloma.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 109 Tm (Practical vocational training.) Tj ET
-BT /F1 9 Tf 1 0 0 1 510 32 Tm (2/3) Tj ET
+0.09 0.17 0.27 rg 0 825 595 17 re f
+BT /F2 11.5 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 798.00 Tm (JHON M. CUENCA) Tj ET
+BT /F2 9.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 422.18 798.00 Tm (PROFESSIONAL PORTFOLIO) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 787 m 551 787 l S
+BT /F2 9.4 Tf 0.12 0.36 0.58 rg 1 0 0 1 44.00 765.00 Tm (INTERNATIONAL  /  TECHNICAL PROFILE) Tj ET
+BT /F2 24 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 733.00 Tm (Technical skills catalogue) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 693 m 551 693 l S
+0.82 0.86 0.90 RG 0.6 w 44 49 m 551 49 l S
+BT /F1 9 Tf 0.29 0.36 0.44 rg 1 0 0 1 44.00 31.00 Tm (cuenca-john1999.github.io/) Tj ET
+BT /F1 9 Tf 0.29 0.36 0.44 rg 1 0 0 1 533.49 31.00 Tm (2 / 4) Tj ET
+BT /F2 14.5 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 669.00 Tm (Biomedical research and biotechnology) Tj ET
+0.09 0.17 0.27 rg 44 635 507 22 re f
+BT /F2 9.3 Tf 1 1 1 rg 1 0 0 1 51.00 642.00 Tm (Technique and context) Tj ET
+BT /F2 9.3 Tf 1 1 1 rg 1 0 0 1 238.00 642.00 Tm (Application or training) Tj ET
+0.95 0.97 0.99 rg 44 602 507 28 re f
+BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 621.00 Tm (RNA extraction) Tj ET
+BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 608.70 Tm (Laboratory placement | La Princesa) Tj ET
+BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 621.00 Tm (Practical nucleic acid preparation.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 602 m 551 602 l S
+BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 593.00 Tm (PCR) Tj ET
+BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 580.70 Tm (Laboratory placement | La Princesa) Tj ET
+BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 593.00 Tm (Practical work with polymerase chain reaction.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 574 m 551 574 l S
+0.95 0.97 0.99 rg 44 546 507 28 re f
+BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 565.00 Tm (Electrophoresis) Tj ET
+BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 552.70 Tm (Laboratory placement | La Princesa) Tj ET
+BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 565.00 Tm (Nucleic acid separation.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 546 m 551 546 l S
+BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 537.00 Tm (Transgenic mouse genotyping) Tj ET
+BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 524.70 Tm (Laboratory placement | La Princesa) Tj ET
+BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 537.00 Tm (Participation in genotyping workflows.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 518 m 551 518 l S
+0.95 0.97 0.99 rg 44 490 507 28 re f
+BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 509.00 Tm (Western blot) Tj ET
+BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 496.70 Tm (Laboratory placement | La Princesa) Tj ET
+BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 509.00 Tm (Gel casting, protein transfer to a membrane and blocking.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 490 m 551 490 l S
+BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 481.00 Tm (HaCaT cell culture) Tj ET
+BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 468.70 Tm (Laboratory placement | La Princesa) Tj ET
+BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 481.00 Tm (Adherent culture, sterile technique, media, passaging and freezing.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 462 m 551 462 l S
+0.95 0.97 0.99 rg 44 434 507 28 re f
+BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 453.00 Tm (Cytokine-stimulated cell culture) Tj ET
+BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 440.70 Tm (Laboratory placement | La Princesa) Tj ET
+BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 453.00 Tm (Participation in cell culture workflows.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 434 m 551 434 l S
+BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 425.00 Tm (Human sample processing) Tj ET
+BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 412.70 Tm (Laboratory placement | La Princesa) Tj ET
+BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 425.00 Tm (Serum, peripheral blood and Buffy Coat handling.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 406 m 551 406 l S
+0.95 0.97 0.99 rg 44 378 507 28 re f
+BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 397.00 Tm (CD4/CD14 isolation) Tj ET
+BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 384.70 Tm (Laboratory placement | La Princesa) Tj ET
+BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 397.00 Tm (Work with immune cells.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 378 m 551 378 l S
+BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 369.00 Tm (Animal samples and tissues) Tj ET
+BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 356.70 Tm (Laboratory placement | La Princesa) Tj ET
+BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 369.00 Tm (Processing murine lymphoid organs; supervised sample collection.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 350 m 551 350 l S
+0.95 0.97 0.99 rg 44 322 507 28 re f
+BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 341.00 Tm (ELISA) Tj ET
+BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 328.70 Tm (Laboratory placement | La Princesa) Tj ET
+BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 341.00 Tm (Practical work with immunological assays.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 322 m 551 322 l S
+BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 313.00 Tm (Immunohistochemistry) Tj ET
+BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 300.70 Tm (Laboratory placement | La Princesa) Tj ET
+BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 313.00 Tm (Participation in staining workflows.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 294 m 551 294 l S
+0.95 0.97 0.99 rg 44 266 507 28 re f
+BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 285.00 Tm (Immunofluorescence) Tj ET
+BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 272.70 Tm (Laboratory placement | La Princesa) Tj ET
+BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 285.00 Tm (Participation in staining workflows.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 266 m 551 266 l S
+BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 257.00 Tm (Functions A+B+C) Tj ET
+BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 244.70 Tm (Course with supervised practice | Dynamimed) Tj ET
+BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 257.00 Tm (Spanish training course in animal care, euthanasia and procedures.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 238 m 551 238 l S
+0.95 0.97 0.99 rg 44 198.7 507 39.3 re f
+BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 229.00 Tm (Animal handling, anaesthesia and) Tj ET
+BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 217.70 Tm (procedures) Tj ET
+BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 205.40 Tm (Course with supervised practice | Dynamimed) Tj ET
+BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 229.00 Tm (Animal handling, anaesthesia and procedures during supervised) Tj ET
+BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 217.30 Tm (practical training.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 198.7 m 551 198.7 l S
+BT /F1 9.1 Tf 0.29 0.36 0.44 rg 1 0 0 1 44.00 183.70 Tm (The A+B+C course diploma records training. Individual authorisation and recognition depend on the applicable national) Tj ET
+BT /F1 9.1 Tf 0.29 0.36 0.44 rg 1 0 0 1 44.00 171.70 Tm (procedures.) Tj ET
 endstream
 endobj
 9 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 10 0 R >>
 endobj
 10 0 obj
-<< /Length 2680 >>
+<< /Length 5153 >>
 stream
-0.12 0.24 0.38 rg 0 750 595 92 re f
-BT /F2 12 Tf 1 1 1 rg 1 0 0 1 42 811 Tm (JHON M. CUENCA | PROFESSIONAL PORTFOLIO) Tj ET
-BT /F2 17 Tf 1 1 1 rg 1 0 0 1 42 786 Tm (Technical skills catalogue) Tj ET
-BT /F2 10 Tf 0.12 0.32 0.49 rg 1 0 0 1 42 729 Tm (INTERNATIONAL / TECHNICAL DOSSIER) Tj ET
-BT /F1 9 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 32 Tm (cuenca-john1999.github.io/) Tj ET
-BT /F1 9 Tf 0.12 0.18 0.25 rg 1 0 0 1 330 32 Tm (Education and laboratory placements) Tj ET
-BT /F2 13 Tf 0.12 0.32 0.49 rg 1 0 0 1 42 704 Tm (Clinical and diagnostic laboratories) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 683 Tm (Haematology | Vocational qualification - CEAC FP Oficial. Vocational module in) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 669 Tm (haematological analysis.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 648 Tm (Biochemical analysis | Vocational qualification - CEAC FP Oficial. Vocational) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 634 Tm (module in biochemical analysis.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 613 Tm (Clinical microbiology | Vocational qualification - CEAC FP Oficial. Vocational) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 599 Tm (module in clinical microbiology.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 578 Tm (Immunodiagnostics | Vocational qualification - CEAC FP Oficial. Vocational module) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 564 Tm (in immunodiagnostic methods.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 543 Tm (Biological sample management | Vocational qualification - CEAC FP Oficial.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 529 Tm (Vocational training in biological sample handling.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 508 Tm (Molecular biology and cytogenetics | Vocational qualification - CEAC FP Oficial.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 494 Tm (Vocational training module.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 473 Tm (Antibiogram | Academic practical training - IES Virgen de la Paloma. Academic) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 459 Tm (exercise in microbiology training.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 438 Tm (Microscopy and culture media | Academic practical training - IES Virgen de la) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 424 Tm (Paloma. Practical laboratory training.) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 403 Tm (Membrane filtration | Academic practical training - IES Virgen de la Paloma. Water) Tj ET
-BT /F1 10.5 Tf 0.12 0.18 0.25 rg 1 0 0 1 42 389 Tm (analysis in an academic context.) Tj ET
-BT /F1 9 Tf 1 0 0 1 510 32 Tm (3/3) Tj ET
+0.09 0.17 0.27 rg 0 825 595 17 re f
+BT /F2 11.5 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 798.00 Tm (JHON M. CUENCA) Tj ET
+BT /F2 9.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 422.18 798.00 Tm (PROFESSIONAL PORTFOLIO) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 787 m 551 787 l S
+BT /F2 9.4 Tf 0.12 0.36 0.58 rg 1 0 0 1 44.00 765.00 Tm (INTERNATIONAL  /  TECHNICAL PROFILE) Tj ET
+BT /F2 24 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 733.00 Tm (Technical skills catalogue) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 693 m 551 693 l S
+0.82 0.86 0.90 RG 0.6 w 44 49 m 551 49 l S
+BT /F1 9 Tf 0.29 0.36 0.44 rg 1 0 0 1 44.00 31.00 Tm (cuenca-john1999.github.io/) Tj ET
+BT /F1 9 Tf 0.29 0.36 0.44 rg 1 0 0 1 533.49 31.00 Tm (3 / 4) Tj ET
+BT /F2 14.5 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 669.00 Tm (Analytical chemistry and industrial laboratories \(1/2\)) Tj ET
+0.09 0.17 0.27 rg 44 635 507 22 re f
+BT /F2 9.3 Tf 1 1 1 rg 1 0 0 1 51.00 642.00 Tm (Technique and context) Tj ET
+BT /F2 9.3 Tf 1 1 1 rg 1 0 0 1 238.00 642.00 Tm (Application or training) Tj ET
+0.95 0.97 0.99 rg 44 592.9 507 37.1 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 619.00 Tm (Moisture and ash) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 605.50 Tm (Laboratory placement | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 619.00 Tm (Biomass and residue analysis.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 592.9 m 551 592.9 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 581.90 Tm (Volatile matter) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 568.40 Tm (Laboratory placement | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 581.90 Tm (Progressive responsibility within the analytical workflow.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 555.8 m 551 555.8 l S
+0.95 0.97 0.99 rg 44 518.6999999999999 507 37.1 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 544.80 Tm (Fixed carbon) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 531.30 Tm (Laboratory placement | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 544.80 Tm (Work within biomass analysis.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 518.6999999999999 m 551 518.6999999999999 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 507.70 Tm (TGA) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 494.20 Tm (Laboratory placement | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 507.70 Tm (Thermogravimetric analysis.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 481.5999999999999 m 551 481.5999999999999 l S
+0.95 0.97 0.99 rg 44 444.4999999999999 507 37.1 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 470.60 Tm (CHNOS) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 457.10 Tm (Laboratory placement | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 470.60 Tm (Elemental analysis.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 444.4999999999999 m 551 444.4999999999999 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 433.50 Tm (Ash melting) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 420.00 Tm (Laboratory placement | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 433.50 Tm (Thermal testing.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 407.39999999999986 m 551 407.39999999999986 l S
+0.95 0.97 0.99 rg 44 370.29999999999984 507 37.1 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 396.40 Tm (BMP and biogas) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 382.90 Tm (Laboratory placement | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 396.40 Tm (Work with BMP units and gas analysis.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 370.29999999999984 m 551 370.29999999999984 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 359.30 Tm (FOS/TAC) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 345.80 Tm (Laboratory placement | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 359.30 Tm (Analytical parameters of biogas processes.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 333.1999999999998 m 551 333.1999999999998 l S
+0.95 0.97 0.99 rg 44 293.79999999999984 507 39.4 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 322.20 Tm (ICP) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 308.70 Tm (Laboratory placement | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 322.20 Tm (ICP among the analytical methods covered during the Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 309.00 Tm (placement.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 293.79999999999984 m 551 293.79999999999984 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 282.80 Tm (COD \(CSB/DQO\)) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 269.30 Tm (Laboratory placement | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 282.80 Tm (Chemical oxygen demand.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 256.6999999999998 m 551 256.6999999999998 l S
+0.95 0.97 0.99 rg 44 219.59999999999982 507 37.1 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 245.70 Tm (Ammonium) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 232.20 Tm (Laboratory placement | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 245.70 Tm (Determination within placement scope.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 219.59999999999982 m 551 219.59999999999982 l S
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 12 0 R >>
+endobj
+12 0 obj
+<< /Length 5725 >>
+stream
+0.09 0.17 0.27 rg 0 825 595 17 re f
+BT /F2 11.5 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 798.00 Tm (JHON M. CUENCA) Tj ET
+BT /F2 9.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 422.18 798.00 Tm (PROFESSIONAL PORTFOLIO) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 787 m 551 787 l S
+BT /F2 9.4 Tf 0.12 0.36 0.58 rg 1 0 0 1 44.00 765.00 Tm (INTERNATIONAL  /  TECHNICAL PROFILE) Tj ET
+BT /F2 24 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 733.00 Tm (Technical skills catalogue) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 693 m 551 693 l S
+0.82 0.86 0.90 RG 0.6 w 44 49 m 551 49 l S
+BT /F1 9 Tf 0.29 0.36 0.44 rg 1 0 0 1 44.00 31.00 Tm (cuenca-john1999.github.io/) Tj ET
+BT /F1 9 Tf 0.29 0.36 0.44 rg 1 0 0 1 533.49 31.00 Tm (4 / 4) Tj ET
+BT /F2 14.5 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 669.00 Tm (Analytical chemistry and industrial laboratories \(2/2\)) Tj ET
+0.09 0.17 0.27 rg 44 635 507 22 re f
+BT /F2 9.3 Tf 1 1 1 rg 1 0 0 1 51.00 642.00 Tm (Technique and context) Tj ET
+BT /F2 9.3 Tf 1 1 1 rg 1 0 0 1 238.00 642.00 Tm (Application or training) Tj ET
+0.95 0.97 0.99 rg 44 592.9 507 37.1 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 619.00 Tm (NIR/VISION) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 605.50 Tm (Laboratory placement | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 619.00 Tm (Near-infrared spectroscopy and workflow documentation.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 592.9 m 551 592.9 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 581.90 Tm (Vacuum filtration) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 568.40 Tm (Laboratory placement | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 581.90 Tm (Sample preparation and processing.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 555.8 m 551 555.8 l S
+0.95 0.97 0.99 rg 44 518.6999999999999 507 37.1 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 544.80 Tm (GLP and SOPs) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 531.30 Tm (Laboratory placement | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 544.80 Tm (Work to standard operating procedures and GLP.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 518.6999999999999 m 551 518.6999999999999 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 507.70 Tm (Internal statistical quality control) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 494.20 Tm (Laboratory placement | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 507.70 Tm (Internal QC self-checks.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 481.5999999999999 m 551 481.5999999999999 l S
+0.95 0.97 0.99 rg 44 442.19999999999993 507 39.4 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 470.60 Tm (Technical documentation) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 457.10 Tm (Laboratory placement | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 470.60 Tm (Operational guides, data sheets, work instructions and) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 457.40 Tm (troubleshooting.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 442.19999999999993 m 551 442.19999999999993 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 431.20 Tm (Traceability and Thermal Excel) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 417.70 Tm (Laboratory placement | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 431.20 Tm (Records, batches, labels and database updates.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 405.0999999999999 m 551 405.0999999999999 l S
+0.95 0.97 0.99 rg 44 367.9999999999999 507 37.1 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 394.10 Tm (Instrumentation and maintenance) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 380.60 Tm (Laboratory placement | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 394.10 Tm (Support for calibration, operation, monitoring and troubleshooting.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 367.9999999999999 m 551 367.9999999999999 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 357.00 Tm (HCl/NaOH titrations) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 343.50 Tm (Academic practical training | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 332.90 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 357.00 Tm (Practical vocational chemistry exercise.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 320.2999999999999 m 551 320.2999999999999 l S
+0.95 0.97 0.99 rg 44 272.5999999999999 507 47.7 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 309.30 Tm (Conductimetry and potentiometry) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 295.80 Tm (Academic practical training | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 285.20 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 309.30 Tm (Vocational physicochemical exercises.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 272.5999999999999 m 551 272.5999999999999 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 261.60 Tm (Turbidity and nitrates) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 248.10 Tm (Academic practical training | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 237.50 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 261.60 Tm (Practical academic analysis.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 224.89999999999992 m 551 224.89999999999992 l S
+0.95 0.97 0.99 rg 44 177.19999999999993 507 47.7 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 213.90 Tm (Solution preparation) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 200.40 Tm (Academic practical training | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 189.80 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 213.90 Tm (Practical vocational training.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 177.19999999999993 m 551 177.19999999999993 l S
 endstream
 endobj
 xref
-0 11
+0 13
 0000000000 65535 f 
 0000000009 00000 n 
 0000000058 00000 n 
-0000000127 00000 n 
-0000000224 00000 n 
-0000000326 00000 n 
-0000000462 00000 n 
-0000004871 00000 n 
-0000005007 00000 n 
-0000009474 00000 n 
-0000009611 00000 n 
+0000000134 00000 n 
+0000000231 00000 n 
+0000000333 00000 n 
+0000000469 00000 n 
+0000005681 00000 n 
+0000005817 00000 n 
+0000012673 00000 n 
+0000012810 00000 n 
+0000018015 00000 n 
+0000018153 00000 n 
 trailer
-<< /Size 11 /Root 1 0 R >>
+<< /Size 13 /Root 1 0 R >>
 startxref
-12343
+23930
 %%EOF

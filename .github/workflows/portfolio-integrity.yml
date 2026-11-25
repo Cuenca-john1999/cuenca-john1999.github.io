@@ -23,6 +23,8 @@ jobs:
         run: python3 tools/generate_localized_pages.py --check
       - name: Install PDF privacy checker
         run: python3 -m pip install 'pypdf==6.15.0'
+      - name: Verify generated dossier consistency
+        run: node tools/generate_market_dossiers.mjs --check
       - name: Verify public PDF privacy
         run: python3 tools/verify_public_pdfs.py
       - name: Render market PDF dossiers
