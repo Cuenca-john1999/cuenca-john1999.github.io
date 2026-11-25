@@ -88,6 +88,7 @@
     
     <!-- 5. Temas (dark/light) -->
     <link rel="stylesheet" href="assets/css/themes.css?v=1499b45a762d">
+    <link rel="stylesheet" href="assets/css/market-selector.css?v=49bdaeac068c">
 </head>
 <body>
     <a class="skip-link" href="#main-content" data-i18n="accessibility.skipToContent">Skip to main content</a>
@@ -105,11 +106,14 @@
                 <a href="#references-professional" data-i18n="nav.references">References</a>
                 <a href="#contact" data-i18n="nav.contact">Contact</a>
             </nav>
-            <div class="language-switcher" aria-label="Market selector" data-market-selector style="flex-wrap:wrap;justify-content:center;max-width:min(54vw, 22rem)">
-                <button type="button" data-language-set="en" aria-pressed="true" title="International">International</button>
-                <button type="button" data-language-set="de" aria-pressed="false" title="Germany">Germany</button>
-                <button type="button" data-language-set="es" aria-pressed="false" title="Spain">Spain</button>
-            </div>
+            <details class="language-switcher market-selector" aria-label="Market selector" data-market-selector data-current-market="en">
+                <summary><svg class="market-flag" viewBox="0 0 24 18" aria-hidden="true"><circle cx="12" cy="9" r="7.4" fill="none" stroke="currentColor" stroke-width="1.3"/><ellipse cx="12" cy="9" rx="3.4" ry="7.4" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M5 9h14" stroke="currentColor" stroke-width="1.1"/></svg><span>International</span><svg class="market-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+                <ul class="market-menu" aria-label="Market selector">
+                    <li><a href="./" aria-current="page"><svg class="market-flag" viewBox="0 0 24 18" aria-hidden="true"><circle cx="12" cy="9" r="7.4" fill="none" stroke="currentColor" stroke-width="1.3"/><ellipse cx="12" cy="9" rx="3.4" ry="7.4" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M5 9h14" stroke="currentColor" stroke-width="1.1"/></svg><span>International</span></a></li>
+                    <li><a href="./de/"><svg class="market-flag" viewBox="0 0 24 18" aria-hidden="true"><path fill="#151515" d="M0 0h24v6H0z"/><path fill="#DD0000" d="M0 6h24v6H0z"/><path fill="#FFCE00" d="M0 12h24v6H0z"/></svg><span>Germany</span></a></li>
+                    <li><a href="./es/"><svg class="market-flag" viewBox="0 0 24 18" aria-hidden="true"><path fill="#AA151B" d="M0 0h24v18H0z"/><path fill="#F1BF00" d="M0 4.5h24v9H0z"/></svg><span>Spain</span></a></li>
+                </ul>
+            </details>
         </header>
 
         <main id="main-content" class="opening-stage" aria-label="Main portfolio page" data-i18n-aria-label="accessibility.mainPortfolioPage" tabindex="-1">

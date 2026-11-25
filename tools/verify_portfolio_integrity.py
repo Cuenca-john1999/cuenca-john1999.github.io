@@ -466,7 +466,7 @@ def check_localized_static_fallbacks() -> None:
             "Jhon_M_Cuenca_CV_DE.pdf",
             "bacteriophage-therapy-final-project_DE.pdf",
             "Profil im klinisch-biomedizinischen Labor mit praktischer Erfahrung",
-            'data-language-set="de" aria-pressed="true"',
+            'data-current-market="de"',
         ),
         "es/index.html": (
             "Técnico Superior en<br>Laboratorio Clínico y Biomédico",
@@ -474,7 +474,7 @@ def check_localized_static_fallbacks() -> None:
             "Jhon_M_Cuenca_CV_ES.pdf",
             "bacteriophage-therapy-final-project_ES.pdf",
             "Perfil de laboratorio clínico y biomédico con experiencia práctica",
-            'data-language-set="es" aria-pressed="true"',
+            'data-current-market="es"',
         ),
         "de/workbench/index.html": (
             "Ein lebendiger Raum zum<br><span>Entwickeln, Prüfen und Lernen.</span>",

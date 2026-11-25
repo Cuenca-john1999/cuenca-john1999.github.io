@@ -230,21 +230,25 @@ def localize_language_controls(text: str, language: str) -> str:
 
 def localize_market_profile(text: str, language: str) -> str:
     """Render the market selector and the Spain-specific presentation."""
-    labels = {
-        "en": ("Market selector", "International", "Germany", "Spain"),
-        "de": ("Länderauswahl", "International", "Deutschland", "Spanien"),
-        "es": ("Selector de país", "Internacional", "Alemania", "España"),
-    }
+    labels = {"en":["Market selector","International","Germany","Spain"],"de":["Länderauswahl","International","Deutschland","Spanien"],"es":["Selector de país","Internacional","Alemania","España"]}
+    flags = {"en":"<svg class=\"market-flag\" viewBox=\"0 0 24 18\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"9\" r=\"7.4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.3\"/><ellipse cx=\"12\" cy=\"9\" rx=\"3.4\" ry=\"7.4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.1\"/><path d=\"M5 9h14\" stroke=\"currentColor\" stroke-width=\"1.1\"/></svg>","de":"<svg class=\"market-flag\" viewBox=\"0 0 24 18\" aria-hidden=\"true\"><path fill=\"#151515\" d=\"M0 0h24v6H0z\"/><path fill=\"#DD0000\" d=\"M0 6h24v6H0z\"/><path fill=\"#FFCE00\" d=\"M0 12h24v6H0z\"/></svg>","es":"<svg class=\"market-flag\" viewBox=\"0 0 24 18\" aria-hidden=\"true\"><path fill=\"#AA151B\" d=\"M0 0h24v18H0z\"/><path fill=\"#F1BF00\" d=\"M0 4.5h24v9H0z\"/></svg>"}
     label, *names = labels[language]
-    buttons = "\n".join(
-        f'                <button type="button" data-language-set="{candidate}" aria-pressed="{str(candidate == language).lower()}" title="{name}">{name}</button>'
-        for candidate, name in zip(("en", "de", "es"), names)
-    )
+    codes = ("en", "de", "es")
+    prefix = "./" if language == "en" else "../"
+    links = []
+    for candidate, name in zip(codes, names):
+        target = prefix + ("" if candidate == "en" else candidate + "/")
+        selected = ' aria-current="page"' if candidate == language else ""
+        links.append(f'                    <li><a href="{target}"{selected}>{flags[candidate]}<span>{name}</span></a></li>')
+    chevron = '<svg class="market-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+    current = names[codes.index(language)]
     selector = (
-        f'<div class="language-switcher" aria-label="{label}" data-market-selector style="flex-wrap:wrap;justify-content:center;max-width:min(54vw, 22rem)">\n'
-        f'{buttons}\n            </div>'
+        f'<details class="language-switcher market-selector" aria-label="{label}" data-market-selector data-current-market="{language}">\n'
+        f'                <summary>{flags[language]}<span>{current}</span>{chevron}</summary>\n'
+        f'                <ul class="market-menu" aria-label="{label}">\n'
+        + "\n".join(links) + "\n                </ul>\n            </details>"
     )
-    text, count = re.subn(r'<div class="language-switcher"[^>]*data-market-selector[^>]*>.*?</div>', lambda _: selector, text, count=1, flags=re.S)
+    text, count = re.subn(r'<details class="language-switcher market-selector"[^>]*>.*?</details>', lambda _: selector, text, count=1, flags=re.S)
     if count != 1:
         raise SystemExit("[localized-pages] missing market selector")
     if language == "es":
