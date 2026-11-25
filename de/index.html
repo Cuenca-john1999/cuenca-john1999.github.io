@@ -725,22 +725,10 @@
         </div>
     </div>
 
-    <script>
-        // Profile routes select a professional market, independently of stored Workbench language.
-        if (!document.documentElement.dataset.localizedLanguage) {
-            document.documentElement.dataset.localizedLanguage = 'en';
-            const legacyLanguage = new URL(window.location.href).searchParams.get('lang');
-            if (legacyLanguage === 'es' || legacyLanguage === 'de') {
-                const target = new URL(legacyLanguage + '/', window.location.href);
-                target.hash = window.location.hash;
-                window.location.replace(target.href);
-            }
-        }
-    </script>
     <!-- JavaScript - Orden de carga importante -->
     <!-- 1. Módulos core (theme, language) -->
     <script src="../assets/js/theme.js?v=541165f835ae"></script>
-    <script src="../assets/js/language.js?v=ee2b3e1dc913"></script>
+    <script src="../assets/js/language.js?v=444c333a1827"></script>
 
     <!-- 2. Inicializador principal (debe cargarse al final) -->
     <script src="../assets/js/app.js?v=080393900b0c"></script>
