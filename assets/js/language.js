@@ -27,7 +27,7 @@
 const Language = (() => {
     const STORAGE_KEY = 'portfolio-language';
     const URL_LANGUAGE_PARAM = 'lang';
-    const TRANSLATION_VERSION = '20260810-llc-portfolio-migration';
+    const TRANSLATION_VERSION = '20261125-spain-market';
     const DEFAULT_LANGUAGE = 'en';
     const AVAILABLE_LANGUAGES = ['en', 'de', 'es'];
     const LOCALIZED_LANGUAGE = document.documentElement.dataset.localizedLanguage?.slice(0, 2).toLowerCase() || null;
@@ -152,6 +152,10 @@ const Language = (() => {
             return LOCALIZED_LANGUAGE;
         }
 
+        // The canonical professional profile is the international market.
+        // Only auxiliary pages use the stored or browser language.
+        if (LANGUAGE_ROUTE === 'profile') return DEFAULT_LANGUAGE;
+
         const urlLanguage = getUrlLanguage();
         const savedLanguage = getSavedLanguage();
         const documentLanguage = document.documentElement.lang.slice(0, 2).toLowerCase();
@@ -180,7 +184,7 @@ const Language = (() => {
      * Mantener el idioma activo en la URL sin recargar ni perder el hash.
      */
     function syncLanguageInUrl(language) {
-        if (isSupportedLanguage(LOCALIZED_LANGUAGE)) return;
+        if (LANGUAGE_ROUTE === 'profile' || isSupportedLanguage(LOCALIZED_LANGUAGE)) return;
 
         try {
             const url = new URL(window.location.href);
@@ -349,6 +353,16 @@ const Language = (() => {
          */
         async init() {
             console.log('[LANGUAGE] Módulo inicializado');
+            // Preserve existing shared ?lang=es/de profile links by routing to their market.
+            if (LANGUAGE_ROUTE === 'profile' && !isSupportedLanguage(LOCALIZED_LANGUAGE)) {
+                const legacyLanguage = getUrlLanguage();
+                if (legacyLanguage && legacyLanguage !== DEFAULT_LANGUAGE) {
+                    const target = getProfileUrl(legacyLanguage);
+                    target.hash = window.location.hash;
+                    window.location.replace(target.href);
+                    return;
+                }
+            }
             const initialLanguage = getInitialLanguage();
             const initialTranslations = await loadTranslations(initialLanguage);
 

@@ -90,7 +90,7 @@ def check_known_compatibility_aliases(hashes: dict[str, str]) -> None:
 
 
 def main() -> None:
-    pdfs = sorted(DOCUMENTS.glob("*.pdf"))
+    pdfs = sorted(DOCUMENTS.rglob("*.pdf"))
     if not pdfs:
         raise SystemExit("[pdf-privacy] no public PDFs found")
 
@@ -103,6 +103,10 @@ def main() -> None:
         if path.name.startswith("Jhon_M_Cuenca_CV_"):
             check_cv(path, combined)
         check_academic_project(path, text)
+        if path.parent.name == "es":
+            check_cv(path, combined)
+            if re.search(r"\b(?:nota final|horas de prácticas)\b", text, re.I):
+                block(path.name, "excluded academic detail in Spain dossier")
 
     check_known_compatibility_aliases(hashes)
 
