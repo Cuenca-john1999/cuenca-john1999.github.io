@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   verify:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04 # Playwright 1.58.2 supports this runner; ubuntu-latest moved to 26.04.
     steps:
       - uses: actions/checkout@v6
       - name: Verify content and translations
