@@ -7,6 +7,7 @@
     const area = section.querySelector('[data-market-area]');
     const level = section.querySelector('[data-market-level]');
     const topic = section.querySelector('[data-market-topic]');
+    const route = section.querySelector('[data-market-route]');
     const reset = section.querySelector('[data-market-reset]');
     const count = section.querySelector('[data-market-count]');
     const empty = section.querySelector('[data-market-empty]');
@@ -19,6 +20,7 @@
             const match = (!area.value || area.value === node.dataset.area) &&
                 (!level.value || level.value === node.dataset.level) &&
                 (!topic.value || topic.value === node.dataset.topic) &&
+                (!route.value || node.dataset.routes.split(' ').includes(route.value)) &&
                 words.every(word => text.includes(word));
             node.hidden = !match;
             if (match) visible++;
@@ -30,7 +32,10 @@
     area.addEventListener('change',render);
     level.addEventListener('change',render);
     topic.addEventListener('change',render);
-    reset.addEventListener('click',() => {search.value=''; area.value=''; level.value=''; topic.value=''; render(); search.focus();});
+    route.addEventListener('change',render);
+    reset.addEventListener('click',() => {search.value=''; area.value=''; level.value=''; topic.value=''; route.value=''; render(); search.focus();});
+    const focus = new URLSearchParams(location.search).get('focus');
+    if (focus && Array.from(route.options).some(o => o.value === focus)) route.value=focus;
     filters.hidden=false;
     render();
 })();

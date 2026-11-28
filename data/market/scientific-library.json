@@ -543,6 +543,41 @@
         ],
         "Konzeptioneller Ablauf aus dem Ausbildungsprojekt mit getrennten Bereichen."
       ]
+    },
+    {
+      "es": [
+        "Mapa conceptual de procesos de laboratorio",
+        [
+          "Recepción e identificación",
+          "Preparación y trazabilidad",
+          "Análisis clínico, molecular, microbiológico o químico",
+          "Tratamiento de datos",
+          "Documentación y calidad"
+        ],
+        "Relación conceptual entre competencias adquiridas en diferentes contextos; no un procedimiento único ejecutado íntegramente."
+      ],
+      "en": [
+        "Conceptual laboratory process map",
+        [
+          "Reception and identification",
+          "Preparation and traceability",
+          "Clinical, molecular, microbiological or chemical analysis",
+          "Data processing",
+          "Documentation and quality"
+        ],
+        "Conceptual relationship between skills acquired in different settings; not a single end-to-end procedure performed."
+      ],
+      "de": [
+        "Konzeptionelle Laborprozesskarte",
+        [
+          "Annahme und Identifizierung",
+          "Vorbereitung und Rückverfolgbarkeit",
+          "Klinische, molekulare, mikrobiologische oder chemische Analytik",
+          "Datenauswertung",
+          "Dokumentation und Qualität"
+        ],
+        "Konzeptionelle Verbindung von Kompetenzen aus verschiedenen Kontexten; kein vollständig durchgeführter Einzelprozess."
+      ]
     }
   ],
   "labels": {
@@ -559,7 +594,12 @@
       "note": "Technical note",
       "date": "Updated 28 November 2026",
       "nav": "Library",
-      "projects": "Academic projects and practical work"
+      "projects": "Academic projects and practical work",
+      "cases": "Experimental troubleshooting",
+      "observations": "Observations",
+      "interpretation": "Interpretation and limitations",
+      "exhibit": "Selected experimental evidence",
+      "projectDetail": "Objective, methods and scope"
     },
     "es": {
       "library": "Biblioteca científica y técnica",
@@ -574,7 +614,12 @@
       "note": "Nota técnica",
       "date": "Actualizado el 28 de noviembre de 2026",
       "nav": "Biblioteca",
-      "projects": "Proyectos y prácticas académicas"
+      "projects": "Proyectos y prácticas académicas",
+      "cases": "Resolución de problemas experimentales",
+      "observations": "Observaciones",
+      "interpretation": "Interpretación y límites",
+      "exhibit": "Evidencia experimental seleccionada",
+      "projectDetail": "Objetivo, métodos y alcance"
     },
     "de": {
       "library": "Wissenschaftliche und technische Bibliothek",
@@ -589,7 +634,12 @@
       "note": "Technische Notiz",
       "date": "Aktualisiert am 28. November 2026",
       "nav": "Bibliothek",
-      "projects": "Ausbildungsprojekte und praktische Arbeiten"
+      "projects": "Ausbildungsprojekte und praktische Arbeiten",
+      "cases": "Experimentelle Fehleranalyse",
+      "observations": "Beobachtungen",
+      "interpretation": "Interpretation und Grenzen",
+      "exhibit": "Ausgewählte experimentelle Daten",
+      "projectDetail": "Ziel, Methoden und Umfang"
     }
   },
   "projects": [
@@ -609,7 +659,24 @@
         "Planung eines molekularbiologischen und zytogenetischen Labors",
         "Konzeptionelles Ausbildungsprojekt · CEAC FP Oficial",
         "Grundrisse und Beschreibung von Annahme, Lagerung, Prä-PCR, Amplifikation, Post-PCR, Zytogenetik und Abfallentsorgung. Planung der Geräteanordnung und Arbeitsabläufe zur Verringerung von Überschneidungen."
-      ]
+      ],
+      "extra": {
+        "es": [
+          "Objetivo: organizar áreas y equipos de un laboratorio conceptual.",
+          "Zonas: recepción, almacén, pesada, análisis de datos, descontaminación y residuos; pre-PCR, PCR y post-PCR; cultivo y citogenética.",
+          "Alcance: diseño académico con planos y memoria; no instalación construida ni certificada."
+        ],
+        "en": [
+          "Objective: organise the areas and equipment of a conceptual laboratory.",
+          "Zones: reception, storage, weighing, data analysis, decontamination and waste; pre-PCR, PCR and post-PCR; culture and cytogenetics.",
+          "Scope: academic design with floor plans and descriptive documentation; not a built or certified facility."
+        ],
+        "de": [
+          "Ziel: Bereiche und Geräte eines konzeptionellen Labors organisieren.",
+          "Zonen: Annahme, Lagerung, Wägen, Datenanalyse, Dekontamination und Abfall; Prä-PCR, PCR und Post-PCR; Kultur und Zytogenetik.",
+          "Umfang: Ausbildungsentwurf mit Grundrissen und Beschreibung; keine gebaute oder zertifizierte Einrichtung."
+        ]
+      }
     },
     {
       "id": "materials-testing",
@@ -627,7 +694,24 @@
         "Werkstoffprüfung",
         "Experimentelle Gruppenarbeit · IES Virgen de la Paloma",
         "Härte-, Zug- und Charpy-Kerbschlagversuche sowie Metallografie. Probenvorbereitung, Datenerfassung und Auswertung sowie Diskussion von Versuchsschwierigkeiten."
-      ]
+      ],
+      "extra": {
+        "es": [
+          "Objetivo: comparar propiedades mecánicas y microestructura.",
+          "Métodos: dureza, tracción, impacto y metalografía; trabajo grupal.",
+          "Alcance: ensayos académicos, sin certificación industrial."
+        ],
+        "en": [
+          "Objective: compare mechanical properties and microstructure.",
+          "Methods: hardness, tensile, impact and metallography; group work.",
+          "Scope: academic tests, not industrial certification."
+        ],
+        "de": [
+          "Ziel: mechanische Eigenschaften und Gefüge vergleichen.",
+          "Methoden: Härte, Zug, Schlag und Metallografie; Gruppenarbeit.",
+          "Umfang: Ausbildungsversuche, keine Industriezertifizierung."
+        ]
+      }
     },
     {
       "id": "academic-microbiology",
@@ -645,7 +729,24 @@
         "Angewandte Mikrobiologie",
         "Praktische Ausbildungsreihe · IES Virgen de la Paloma",
         "Umgebungskontrolle, Nährmedienherstellung, Isolierung, Färbungen, Keimzählung und Untersuchung von Wasser, Boden und Lebensmitteln. Einschließlich Ergebnisauswertung und Methodengrenzen."
-      ]
+      ],
+      "extra": {
+        "es": [
+          "Objetivo: caracterizar microorganismos cultivables en matrices ambientales y alimentarias.",
+          "Métodos: dilución, siembra, incubación, recuento, tinción e identificación presuntiva.",
+          "Alcance: prácticas académicas; no liberación de lotes ni ensayos farmacopéicos."
+        ],
+        "en": [
+          "Objective: characterise cultivable microorganisms in environmental and food matrices.",
+          "Methods: dilution, inoculation, incubation, enumeration, staining and presumptive identification.",
+          "Scope: academic training; no batch release or pharmacopoeial testing."
+        ],
+        "de": [
+          "Ziel: kultivierbare Mikroorganismen in Umwelt- und Lebensmittelmatrices charakterisieren.",
+          "Methoden: Verdünnung, Animpfen, Inkubation, Zählung, Färbung und präsumtive Identifizierung.",
+          "Umfang: Ausbildungsübungen; keine Chargenfreigabe oder Arzneibuchprüfung."
+        ]
+      }
     },
     {
       "id": "academic-metrology",
@@ -663,7 +764,24 @@
         "Messtechnik und Gerätewartung",
         "Ausbildungsübungen und Dokumentation · IES Virgen de la Paloma und CEAC FP Oficial",
         "Thermometerkalibrierung, pH, Volumenmessung, Wägen und Geräte-SOPs. Wartungs- und Störungsprotokolle als Teil der Labororganisation."
-      ]
+      ],
+      "extra": {
+        "es": [
+          "Objetivo: comprender la calidad de las mediciones y el cuidado de los equipos.",
+          "Métodos: calibración docente, pesaje, volumetría, pH y registros de mantenimiento.",
+          "Alcance: comprobaciones formativas, no acreditación metrológica."
+        ],
+        "en": [
+          "Objective: understand measurement quality and equipment care.",
+          "Methods: training calibration, weighing, volumetry, pH and maintenance records.",
+          "Scope: educational checks, not metrology accreditation."
+        ],
+        "de": [
+          "Ziel: Messqualität und Gerätepflege verstehen.",
+          "Methoden: Ausbildungskalibrierung, Wägen, Volumenmessung, pH und Wartungsprotokolle.",
+          "Umfang: Ausbildungsprüfungen, keine metrologische Akkreditierung."
+        ]
+      }
     },
     {
       "id": "gut-microbiota",
@@ -681,7 +799,131 @@
         "Darmmikrobiota",
         "Literaturarbeit in der Ausbildung",
         "Literaturrecherche zu Darmmikrobiota, Dysbiose und Methoden zur Untersuchung mikrobieller Gemeinschaften."
+      ],
+      "extra": {
+        "es": [
+          "Objetivo: estudiar la microbiota intestinal y la disbiosis a través de literatura.",
+          "Método: revisión bibliográfica de conceptos y métodos de estudio.",
+          "Alcance: trabajo de revisión, sin experimentación propia."
+        ],
+        "en": [
+          "Objective: study gut microbiota and dysbiosis through literature.",
+          "Method: literature review of concepts and study methods.",
+          "Scope: review work, without original experiments."
+        ],
+        "de": [
+          "Ziel: Darmmikrobiota und Dysbiose anhand von Literatur untersuchen.",
+          "Methode: Literaturrecherche zu Konzepten und Untersuchungsmethoden.",
+          "Umfang: Literaturarbeit ohne eigene Experimente."
+        ]
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "gel-results",
+      "skill": "electrophoresis",
+      "es": [
+        "Electroforesis: interpretar un resultado incompleto",
+        "Informe grupal · CEAC FP Oficial · enero de 2024",
+        "Se prepararon dos geles: ADN genómico de kiwi y amplicones de PCR purificada. En el segundo se observaron bandas; en el primero no se visualizaron bandas. Se registró posible arrastre en algunos carriles.",
+        "El informe discutió degradación del ADN, tiempo transcurrido desde la extracción y preparación como explicaciones posibles, sin confirmarlas experimentalmente."
+      ],
+      "en": [
+        "Electrophoresis: interpreting an incomplete result",
+        "Group report · CEAC FP Oficial · January 2024",
+        "Two gels were prepared: kiwi genomic DNA and purified PCR amplicons. Bands were visible in the latter, but not in the former. Possible smearing was recorded in some lanes.",
+        "The report discussed DNA degradation, time since extraction and preparation as possible explanations, without experimentally establishing them."
+      ],
+      "de": [
+        "Elektrophorese: Auswertung eines unvollständigen Ergebnisses",
+        "Gruppenbericht · CEAC FP Oficial · Januar 2024",
+        "Zwei Gele mit genomischer Kiwi-DNA und gereinigten PCR-Amplikons wurden hergestellt. Im zweiten waren Banden sichtbar, im ersten nicht. In einigen Spuren wurde mögliches Schmieren beobachtet.",
+        "Der Bericht diskutierte DNA-Abbau, Zeit seit Extraktion und Präparation als mögliche, nicht experimentell bestätigte Erklärungen."
+      ]
+    },
+    {
+      "id": "temperature-deviation",
+      "skill": "thermometer-calibration",
+      "es": [
+        "Calibración: desviaciones y correcciones",
+        "Informe grupal · IES Virgen de la Paloma · marzo de 2022",
+        "Se compararon lecturas del termómetro con referencias de fusión y ebullición del agua, registrando series de temperatura y considerando la presión atmosférica.",
+        "Se calcularon desviaciones y factores de corrección. El informe contiene discrepancias entre algunas lecturas y la conclusión; no se presenta una desviación numérica como calibración validada."
+      ],
+      "en": [
+        "Calibration: deviations and corrections",
+        "Group report · IES Virgen de la Paloma · March 2022",
+        "Thermometer readings were compared with water melting and boiling reference points, recording temperature series and considering atmospheric pressure.",
+        "Deviations and correction factors were calculated. Some readings and the conclusion are inconsistent; no numeric deviation is presented as a validated calibration."
+      ],
+      "de": [
+        "Kalibrierung: Abweichungen und Korrekturen",
+        "Gruppenbericht · IES Virgen de la Paloma · März 2022",
+        "Thermometeranzeigen wurden mit Schmelz- und Siedereferenzen des Wassers verglichen, Temperaturreihen erfasst und Luftdruck berücksichtigt.",
+        "Abweichungen und Korrekturfaktoren wurden berechnet. Einzelne Messwerte und Schlussfolgerung sind nicht konsistent; keine numerische Abweichung wird als validierte Kalibrierung dargestellt."
+      ]
+    },
+    {
+      "id": "reaction-yield",
+      "skill": "gas-volume",
+      "es": [
+        "Rendimiento de reacción: evaluación de pérdidas",
+        "Informe individual · IES Virgen de la Paloma · enero de 2023",
+        "Se recogió gas, se midió su volumen y se comparó el rendimiento con el esperado mediante cálculos estequiométricos.",
+        "El rendimiento fue incompleto. El informe consideró pérdidas de producto, pureza, reacciones secundarias y posibles errores de ejecución; no atribuyó una causa definitiva."
+      ],
+      "en": [
+        "Reaction yield: evaluating losses",
+        "Individual report · IES Virgen de la Paloma · January 2023",
+        "Gas was collected, its volume measured and the yield compared with the expected amount using stoichiometric calculations.",
+        "Yield was incomplete. The report considered product loss, purity, side reactions and possible execution errors, without establishing a definitive cause."
+      ],
+      "de": [
+        "Reaktionsausbeute: Bewertung von Verlusten",
+        "Einzelbericht · IES Virgen de la Paloma · Januar 2023",
+        "Gas wurde gesammelt, das Volumen gemessen und die Ausbeute stöchiometrisch mit dem Erwartungswert verglichen.",
+        "Die Ausbeute war unvollständig. Der Bericht erwog Produktverluste, Reinheit, Nebenreaktionen und mögliche Durchführungsfehler ohne eindeutigen Ursachennachweis."
       ]
     }
-  ]
+  ],
+  "exhibit": {
+    "id": "ir-peaks",
+    "values": [
+      [
+        3005.52,
+        95.13
+      ],
+      [
+        2922.07,
+        61.98
+      ],
+      [
+        2852.94,
+        71.14
+      ],
+      [
+        1743.74,
+        57.87
+      ]
+    ],
+    "es": [
+      "Registro IR de aceite de oliva",
+      "Selección de cuatro picos del registro académico del 16 de febrero de 2023. No es el espectro completo ni una identificación validada.",
+      "Número de onda (cm⁻¹)",
+      "Transmitancia (%)"
+    ],
+    "en": [
+      "Olive oil IR record",
+      "Four selected peaks from the academic record dated 16 February 2023. Not the complete spectrum or a validated identification.",
+      "Wavenumber (cm⁻¹)",
+      "Transmittance (%)"
+    ],
+    "de": [
+      "IR-Datensatz von Olivenöl",
+      "Vier ausgewählte Banden aus dem Ausbildungsdatensatz vom 16. Februar 2023. Kein vollständiges Spektrum und keine validierte Identifizierung.",
+      "Wellenzahl (cm⁻¹)",
+      "Transmission (%)"
+    ]
+  }
 }

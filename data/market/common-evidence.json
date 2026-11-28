@@ -323,7 +323,21 @@
           "order": 8
         }
       },
-      "topic": "molecular"
+      "topic": "molecular",
+      "expanded": {
+        "es": [
+          "Gel de agarosa, cubeta, fuente, marcador de tamaño y visualización de geles.",
+          "El informe grupal distingue bandas visibles en amplicones y ausencia de bandas en ADN genómico."
+        ],
+        "en": [
+          "Agarose gel, chamber, power supply, size marker and gel visualisation.",
+          "The group report distinguishes visible amplicon bands from absent genomic DNA bands."
+        ],
+        "de": [
+          "Agarosegel, Kammer, Netzgerät, Größenmarker und Geldokumentation.",
+          "Der Gruppenbericht unterscheidet sichtbare Amplikonbanden und fehlende genomische DNA-Banden."
+        ]
+      }
     },
     {
       "id": "genotyping",
@@ -539,7 +553,21 @@
           "order": 14
         }
       },
-      "topic": "molecular"
+      "topic": "molecular",
+      "expanded": {
+        "es": [
+          "Preparación de PBMC y separación de poblaciones CD4/CD14.",
+          "Prácticas de investigación; no implica diagnóstico clínico autónomo."
+        ],
+        "en": [
+          "PBMC preparation and isolation of CD4/CD14 populations.",
+          "Research placement; not independent clinical diagnosis."
+        ],
+        "de": [
+          "PBMC-Aufarbeitung und Isolierung von CD4/CD14-Populationen.",
+          "Forschungspraktikum; keine eigenständige klinische Diagnostik."
+        ]
+      }
     },
     {
       "id": "animal-samples",
@@ -1259,7 +1287,21 @@
           "order": 34
         }
       },
-      "topic": "quality"
+      "topic": "quality",
+      "expanded": {
+        "es": [
+          "Documentación operativa, PNT, registros de muestras y controles internos.",
+          "Experiencia en Celignis, diferenciada de GMP farmacéutica."
+        ],
+        "en": [
+          "Operational documentation, SOPs, sample records and internal checks.",
+          "Celignis placement experience, distinct from pharmaceutical GMP."
+        ],
+        "de": [
+          "Betriebsdokumentation, SOPs, Probenprotokolle und interne Kontrollen.",
+          "Praktikum bei Celignis, abzugrenzen von pharmazeutischer GMP."
+        ]
+      }
     },
     {
       "id": "internal-qc",
@@ -1691,7 +1733,21 @@
           "order": 46
         }
       },
-      "topic": "micro"
+      "topic": "micro",
+      "expanded": {
+        "es": [
+          "Placas de sedimentación y RODAC, hisopos, incubadora, medios de cultivo.",
+          "Base transferible a control ambiental; no acredita salas limpias GMP."
+        ],
+        "en": [
+          "Settle and RODAC plates, swabs, incubator, culture media.",
+          "Transferable environmental monitoring foundation; not GMP cleanroom experience."
+        ],
+        "de": [
+          "Sedimentations- und RODAC-Platten, Tupfer, Brutschrank, Nährmedien.",
+          "Übertragbare Grundlage der Umgebungskontrolle; keine GMP-Reinraumerfahrung."
+        ]
+      }
     },
     {
       "id": "microbial-enumeration",
@@ -1799,7 +1855,21 @@
           "order": 49
         }
       },
-      "topic": "micro"
+      "topic": "micro",
+      "expanded": {
+        "es": [
+          "Medios deshidratados, balanza, autoclave, placas y tubos.",
+          "Práctica académica; los indicadores químicos no demuestran esterilidad por sí solos."
+        ],
+        "en": [
+          "Dehydrated media, balance, autoclave, plates and tubes.",
+          "Academic training; chemical indicators alone do not establish sterility."
+        ],
+        "de": [
+          "Dehydrierte Medien, Waage, Autoklav, Platten und Röhrchen.",
+          "Ausbildungsübung; chemische Indikatoren allein belegen keine Sterilität."
+        ]
+      }
     },
     {
       "id": "food-microbiology",
@@ -2051,7 +2121,21 @@
           "order": 56
         }
       },
-      "topic": "instrumental"
+      "topic": "instrumental",
+      "expanded": {
+        "es": [
+          "Patrones, cubetas y espectrofotómetro; absorbancia y calibración.",
+          "Prácticas cuantitativas de nitratos y proteínas, sin atribuir validación de métodos."
+        ],
+        "en": [
+          "Standards, cuvettes and spectrophotometer; absorbance and calibration.",
+          "Quantitative nitrate and protein exercises, without claiming method validation."
+        ],
+        "de": [
+          "Standards, Küvetten und Spektrofotometer; Absorption und Kalibrierung.",
+          "Quantitative Nitrat- und Proteinübungen, ohne Anspruch auf Methodenvalidierung."
+        ]
+      }
     },
     {
       "id": "bradford-protein",
@@ -2411,6 +2495,20 @@
           "link": "#education",
           "order": 66
         }
+      },
+      "expanded": {
+        "es": [
+          "Registros de números de onda y transmitancia de aceites vegetales.",
+          "Lectura de picos; modelo del instrumento no confirmado."
+        ],
+        "en": [
+          "Wavenumber and transmittance records for vegetable oils.",
+          "Peak reading; instrument model not confirmed."
+        ],
+        "de": [
+          "Wellenzahl- und Transmissionsdaten pflanzlicher Öle.",
+          "Bandenauswertung; Gerätemodell nicht bestätigt."
+        ]
       }
     },
     {
@@ -2447,6 +2545,20 @@
           "link": "#education",
           "order": 67
         }
+      },
+      "expanded": {
+        "es": [
+          "Termómetro de alcohol, puntos de fusión y ebullición del agua, corrección por presión.",
+          "Ejercicio académico; no constituye una calibración acreditada."
+        ],
+        "en": [
+          "Alcohol thermometer, water melting and boiling points, pressure correction.",
+          "Academic exercise; not an accredited calibration."
+        ],
+        "de": [
+          "Alkoholthermometer, Schmelz- und Siedepunkt des Wassers, Luftdruckkorrektur.",
+          "Ausbildungsübung; keine akkreditierte Kalibrierung."
+        ]
       }
     },
     {
@@ -2627,6 +2739,20 @@
           "link": "#education",
           "order": 72
         }
+      },
+      "expanded": {
+        "es": [
+          "Documentos académicos de pH-metro, estufa y micropipetas.",
+          "Elaboración de documentos formativos, no aprobación oficial de PNT industriales."
+        ],
+        "en": [
+          "Academic pH meter, drying oven and micropipette documents.",
+          "Training document preparation, not official approval of industrial SOPs."
+        ],
+        "de": [
+          "Ausbildungsunterlagen zu pH-Meter, Trockenschrank und Mikropipetten.",
+          "Erstellung von Ausbildungsunterlagen, keine offizielle Freigabe industrieller SOPs."
+        ]
       }
     },
     {
@@ -2843,6 +2969,20 @@
           "link": "#education",
           "order": 78
         }
+      },
+      "expanded": {
+        "es": [
+          "Recogida de gas y medida volumétrica; cálculos estequiométricos.",
+          "El informe registra rendimiento incompleto y posibles causas, no una causa demostrada."
+        ],
+        "en": [
+          "Gas collection and volume measurement; stoichiometric calculations.",
+          "The report records incomplete yield and possible causes, not a proven cause."
+        ],
+        "de": [
+          "Gassammlung und Volumenmessung; stöchiometrische Berechnungen.",
+          "Der Bericht dokumentiert unvollständige Ausbeute und mögliche, nicht bewiesene Ursachen."
+        ]
       }
     },
     {
@@ -2963,6 +3103,183 @@
       "es": "Formación complementaria",
       "en": "Additional training",
       "de": "Zusatzqualifikationen"
+    }
+  },
+  "routes": {
+    "clinical": {
+      "labels": {
+        "es": "Diagnóstico hospitalario",
+        "en": "Hospital diagnostics",
+        "de": "Klinische Diagnostik"
+      },
+      "skills": [
+        "haematology",
+        "biochemistry",
+        "sample-management",
+        "clinical-microbiology",
+        "immunodiagnostics",
+        "urinalysis",
+        "capillary-blood-smear",
+        "buccal-cytology"
+      ]
+    },
+    "research": {
+      "labels": {
+        "es": "Investigación biomédica",
+        "en": "Biomedical research",
+        "de": "Biomedizinische Forschung"
+      },
+      "skills": [
+        "rna-extraction",
+        "pcr",
+        "electrophoresis",
+        "genotyping",
+        "western-blot",
+        "hacat",
+        "cytokine-culture",
+        "human-samples",
+        "cd4-cd14",
+        "animal-samples",
+        "elisa",
+        "ihc",
+        "if",
+        "animal-functions"
+      ]
+    },
+    "pharma": {
+      "labels": {
+        "es": "Microbiología farmacéutica (formación relacionada)",
+        "en": "Pharmaceutical microbiology (related training)",
+        "de": "Pharma-Mikrobiologie (verwandte Ausbildung)"
+      },
+      "skills": [
+        "microbial-environmental-sampling",
+        "microbial-enumeration",
+        "microbial-staining",
+        "culture-media-preparation",
+        "membrane-filtration",
+        "microbial-isolation-identification",
+        "academic-sops",
+        "glp-sop",
+        "internal-qc",
+        "traceability"
+      ]
+    },
+    "food": {
+      "labels": {
+        "es": "Industria alimentaria",
+        "en": "Food laboratories",
+        "de": "Lebensmittellabore"
+      },
+      "skills": [
+        "food-microbiology",
+        "microbial-enumeration",
+        "microbial-isolation-identification",
+        "culture-media-preparation",
+        "lipid-extraction",
+        "carbohydrate-testing",
+        "refractometry",
+        "ir-spectroscopy",
+        "bradford-protein"
+      ]
+    },
+    "analytical": {
+      "labels": {
+        "es": "Química analítica",
+        "en": "Analytical chemistry",
+        "de": "Analytische Chemie"
+      },
+      "skills": [
+        "uv-vis-spectrophotometry",
+        "ir-spectroscopy",
+        "icp",
+        "nir",
+        "titration",
+        "redox-complexometric-titration",
+        "conductimetry",
+        "turbidity",
+        "solutions",
+        "gravimetry",
+        "ph-measurement",
+        "analytical-weighing"
+      ]
+    },
+    "environment": {
+      "labels": {
+        "es": "Medioambiente y biomasa",
+        "en": "Environment and biomass",
+        "de": "Umwelt und Biomasse"
+      },
+      "skills": [
+        "soil-microbiology",
+        "soil-sampling",
+        "lab-water-quality",
+        "membrane-filtration",
+        "moisture-ash",
+        "volatile-matter",
+        "fixed-carbon",
+        "tga",
+        "chnos",
+        "ash-melting",
+        "bmp",
+        "fos-tac",
+        "cod",
+        "ammonium"
+      ]
+    },
+    "quality": {
+      "labels": {
+        "es": "Calidad y metrología",
+        "en": "Quality and metrology",
+        "de": "Qualität und Messtechnik"
+      },
+      "skills": [
+        "glp-sop",
+        "internal-qc",
+        "technical-documentation",
+        "traceability",
+        "instrumentation",
+        "microscope-care",
+        "thermometer-calibration",
+        "pipette-maintenance",
+        "ph-measurement",
+        "volumetric-measurement",
+        "analytical-weighing",
+        "academic-sops",
+        "emergency-equipment"
+      ]
+    }
+  },
+  "labels": {
+    "es": {
+      "details": "Instrumentación, contexto y alcance",
+      "equipment": "Métodos y materiales",
+      "scope": "Alcance",
+      "route": "Perfil de selección",
+      "all": "Todos los perfiles",
+      "routes": "Explorar según la vacante",
+      "routeIntro": "Selecciones orientativas del mismo catálogo; no constituyen habilitaciones profesionales.",
+      "view": "Ver competencias relacionadas"
+    },
+    "en": {
+      "details": "Equipment, context and scope",
+      "equipment": "Methods and materials",
+      "scope": "Scope",
+      "route": "Recruitment focus",
+      "all": "All profiles",
+      "routes": "Explore by role",
+      "routeIntro": "Curated views of the same catalogue; they do not constitute professional authorisation.",
+      "view": "View related skills"
+    },
+    "de": {
+      "details": "Geräte, Kontext und Umfang",
+      "equipment": "Methoden und Materialien",
+      "scope": "Umfang",
+      "route": "Stellenprofil",
+      "all": "Alle Profile",
+      "routes": "Nach Stellenprofil erkunden",
+      "routeIntro": "Auswahl aus demselben Katalog; keine berufliche Zulassung.",
+      "view": "Verwandte Kompetenzen ansehen"
     }
   }
 }
