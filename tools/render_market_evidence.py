@@ -58,6 +58,12 @@ def hub(lang):
     body = "\n".join(f'                    <article class="market-card"><h3>{e(title)}</h3><a class="document-link" href="{link}">{e(title)}</a></article>' for title,link in zip(t["cards"],links))
     r = DATA["labels"][lang]
     route_cards = "\n".join(f'                    <article class="market-card"><h3>{e(route["labels"][lang])}</h3><p>{e(r["routeIntro"])}</p><a class="document-link" href="?focus={a(key)}#{a(t["skills"])}">{e(r["view"])}</a></article>' for key, route in DATA["routes"].items())
+    cv = json.loads((ROOT / "data/market/cv.json").read_text(encoding="utf-8"))[lang]
+    cv_cards = []
+    for role, label in cv["labels"].items():
+        url = root + (f"Jhon_M_Cuenca_CV_{lang.upper()}.pdf" if role == "general" else f"{lang}/cv-{role}.pdf")
+        cv_cards.append(f'                    <article class="market-card"><h3>{e(label)}</h3><a class="document-link" href="{a(url)}" download>{e(cv["download"])}</a></article>')
+    cv_cards = "\n".join(cv_cards)
     controls = []
     for j,(title,link) in enumerate(zip(t["files"],files)):
         checked = " checked" if j == 0 else ""
@@ -71,6 +77,9 @@ def hub(lang):
                 </div>
                 <div class="market-panel"><h3>{e(r["routes"])}</h3><div class="market-grid">
 {route_cards}
+                </div></div>
+                <div class="market-panel"><h3>{e(cv["cvMenu"])}</h3><p>{e(cv["cvMenuIntro"])}</p><div class="market-grid">
+{cv_cards}
                 </div></div>
                 <div class="market-panel" data-application-package data-loading="{a(t["loading"])}" data-error="{a(t["error"])}" data-none="{a(t["none"])}">
                     <h3>{e(t["package"])}</h3>

@@ -64,6 +64,7 @@ for (const [engine,launcher] of Object.entries({chromium,webkit})) {
                 assert.equal(await page.locator('[data-market-skill]:not([hidden])').count(),expectedSkills);
                 await page.locator('#recruitment-hub').scrollIntoViewIfNeeded();
                 assert.equal(await page.locator('[data-application-package] input[type=checkbox]').count(),7);
+                assert.equal(await page.locator('#recruitment-hub a[href*="/cv-"][download]').count(),4);
                 if(viewport.width===1440) {
                     const downloaded=page.waitForEvent('download',{timeout:30000});
                     await page.locator('[data-package-download]').click();

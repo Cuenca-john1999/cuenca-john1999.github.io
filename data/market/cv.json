@@ -1,0 +1,256 @@
+{
+  "es": {
+    "title": "Currículum vitae",
+    "labels": {
+      "general": "Perfil general",
+      "clinical": "Diagnóstico clínico",
+      "research": "Investigación biomédica",
+      "pharma": "Microbiología y calidad",
+      "analytical": "Química analítica"
+    },
+    "headings": [
+      "Perfil profesional",
+      "Experiencia de laboratorio",
+      "Titulaciones oficiales",
+      "Competencias seleccionadas",
+      "Formación complementaria",
+      "Idiomas y herramientas digitales",
+      "Experiencia adicional"
+    ],
+    "profile": "Técnico de laboratorio con dos titulaciones oficiales españolas de FP, en Sanidad y Química. Prácticas en investigación inmunológica y molecular en Madrid y análisis de biomasa en Irlanda. Formación práctica académica en microbiología ambiental, clínica y alimentaria, química analítica, instrumentación y metrología.",
+    "mobility": "Madrid como base de disponibilidad. Movilidad en España e internacional. Contacto a través del portafolio.",
+    "exp": [
+      [
+        "Fundación para la Investigación Biomédica del Hospital Universitario de La Princesa",
+        "Madrid | Prácticas FCT, Inmunología y Biología Molecular | 03/2025-06/2025",
+        "Cultivo adherente (HaCaT), medios, pases y congelación; preparación de PBMC y aislamiento CD4/CD14; procesamiento de muestras humanas y animales.",
+        "Extracción de ARN, PCR, electroforesis, genotipado, ELISA, preparación de Western blot, inmunohistoquímica e inmunofluorescencia. Protocolos, inventario y web científica bilingüe."
+      ],
+      [
+        "Celignis Biomass Analysis Laboratory",
+        "Limerick, Irlanda | Prácticas Erasmus+, Análisis de Biomasa | 03/2023-05/2023",
+        "Análisis de humedad, cenizas, materia volátil, CHNOS, BMP/biogás, FOS/TAC, ICP, DQO, amonio y NIR. Operación de TGA Q500, CHNOS, hornos CARBOLITE y Biogas 5000.",
+        "GLP, PNT, controles estadísticos internos, documentación operativa, trazabilidad, apoyo en mantenimiento y resolución de incidencias. Responsabilidad progresiva en materia volátil y formación de relevo."
+      ]
+    ],
+    "qual": [
+      "CEAC FP Oficial, Madrid | 2023-2025",
+      "IES Virgen de la Paloma, Madrid | 2021-2023"
+    ],
+    "project": "Proyecto final en coautoría: Bacteriofagoterapia | Redescubriendo una terapia innovadora (revisión bibliográfica).",
+    "cert": [
+      "Experimentación Animal, funciones A+B+C (Dynamimed; curso 2023, diploma 2024). Curso con prácticas supervisadas; no acredita por sí solo capacitación individual.",
+      "Gestión de Centros Sanitarios (2025); Prevención de Riesgos Laborales, nivel básico (2023).",
+      "Formación en Automatización y Robótica (Instituto Tecnológico MasterD, 2018-2020)."
+    ],
+    "languages": "Español nativo | Inglés B2 | Alemán A2, preparando certificación. Microsoft Office, Google Workspace y bases de datos científicas.",
+    "other": "FORM-ED / WASHI, instructor de robótica educativa (2020-2021); KARMA SUMINISTROS INTEGRALES, auxiliar administrativo (veranos 2015-2017).",
+    "focus": {
+      "general": "Perfil transversal de laboratorio clínico, biomédico y analítico.",
+      "clinical": "Formación sanitaria y prácticas académicas de diagnóstico; prácticas de investigación como experiencia complementaria.",
+      "research": "Apoyo técnico a investigación biomédica, con experiencia formativa en inmunología y biología molecular.",
+      "pharma": "Formación práctica relacionada con monitorización microbiológica, recuentos, medios y trabajo de calidad. No se atribuye experiencia GMP ni ensayos farmacopéicos.",
+      "analytical": "Prácticas analíticas en biomasa, con formación académica complementaria en química instrumental, metrología y operaciones de laboratorio."
+    },
+    "cvMenu": "CV para cada perfil",
+    "cvMenuIntro": "Versiones públicas con texto seleccionable, en una columna y sin datos de contacto privados. Selecciona el perfil más relevante para la vacante.",
+    "download": "Descargar CV (PDF)"
+  },
+  "en": {
+    "title": "Curriculum vitae",
+    "labels": {
+      "general": "General profile",
+      "clinical": "Clinical diagnostics",
+      "research": "Biomedical research",
+      "pharma": "Microbiology and quality",
+      "analytical": "Analytical chemistry"
+    },
+    "headings": [
+      "Professional profile",
+      "Laboratory experience",
+      "Official Spanish qualifications",
+      "Selected technical skills",
+      "Additional training",
+      "Languages and digital tools",
+      "Additional experience"
+    ],
+    "profile": "Laboratory technician with two official Spanish vocational qualifications in healthcare and chemistry. Placements in immunology and molecular biology in Madrid and biomass analysis in Ireland. Academic practical training in environmental, clinical and food microbiology, analytical chemistry, instrumentation and metrology.",
+    "mobility": "Bonn-Cologne region; additional bases in Berlin and Madrid. Open to international relocation. Contact through the portfolio.",
+    "exp": [
+      [
+        "Fundación para la Investigación Biomédica del Hospital Universitario de La Princesa",
+        "Madrid, Spain | FCT placement, Immunology and Molecular Biology | 03/2025-06/2025",
+        "Adherent cell culture (HaCaT), media, passaging and freezing; PBMC preparation and CD4/CD14 isolation; human and animal sample processing.",
+        "RNA extraction, PCR, electrophoresis, genotyping, ELISA, Western blot preparation, immunohistochemistry and immunofluorescence. Protocols, inventory and bilingual scientific website."
+      ],
+      [
+        "Celignis Biomass Analysis Laboratory",
+        "Limerick, Ireland | Erasmus+ placement, Biomass Analysis | 03/2023-05/2023",
+        "Moisture, ash, volatile matter, CHNOS, BMP/biogas, FOS/TAC, ICP, COD, ammonium and NIR. TGA Q500, CHNOS analyser, CARBOLITE furnaces and Biogas 5000.",
+        "GLP, SOPs, internal statistical quality checks, operational documentation, traceability, maintenance and troubleshooting support. Progressive responsibility for volatile matter and handover training."
+      ]
+    ],
+    "qual": [
+      "CEAC FP Oficial, Madrid | 2023-2025",
+      "IES Virgen de la Paloma, Madrid | 2021-2023"
+    ],
+    "project": "Co-authored final project: Bacteriofagoterapia | Redescubriendo una terapia innovadora (literature review).",
+    "cert": [
+      "Animal experimentation functions A+B+C (Dynamimed; course 2023, diploma 2024). Supervised practical course; not individual authorisation.",
+      "Healthcare Centre Management (2025); basic occupational risk prevention training (2023).",
+      "Automation and Robotics training (Instituto Tecnológico MasterD, 2018-2020)."
+    ],
+    "languages": "Native Spanish | English B2 | German A2, preparing for certification. Microsoft Office, Google Workspace and scientific databases.",
+    "other": "Private household, au pair and daily-living support (from 01/2026, as recorded in CV); FORM-ED / WASHI, educational robotics instructor (2020-2021); KARMA SUMINISTROS INTEGRALES, administrative assistant (summers 2015-2017).",
+    "focus": {
+      "general": "Cross-disciplinary clinical, biomedical and analytical laboratory profile.",
+      "clinical": "Formal clinical laboratory training and academic diagnostic exercises; research placement as complementary experience. National authorisation requirements apply.",
+      "research": "Technical support for biomedical research, with placement experience in immunology and molecular biology.",
+      "pharma": "Relevant academic practical training in environmental monitoring, enumeration and media preparation; placement experience in quality routines. No claimed GMP or pharmacopoeial testing experience.",
+      "analytical": "Biomass analysis placement, complemented by vocational analytical chemistry, instrumental analysis and metrology training."
+    },
+    "cvMenu": "CVs by professional focus",
+    "cvMenuIntro": "Public, single-column, text-selectable CVs without private contact details. Choose the focus relevant to the role.",
+    "download": "Download CV (PDF)"
+  },
+  "de": {
+    "title": "Lebenslauf",
+    "labels": {
+      "general": "Allgemeines Profil",
+      "clinical": "Klinische Analytik",
+      "research": "Biomedizinische Forschung",
+      "pharma": "Mikrobiologie und Qualität",
+      "analytical": "Analytische Chemie"
+    },
+    "headings": [
+      "Berufliches Profil",
+      "Laborpraktika",
+      "Offizielle spanische Berufsabschlüsse",
+      "Ausgewählte Fachkenntnisse",
+      "Zusatzqualifikationen",
+      "Sprachen und digitale Werkzeuge",
+      "Weitere Erfahrung"
+    ],
+    "profile": "Laborfachkraft mit zwei offiziellen spanischen Berufsabschlüssen im Gesundheits- und Chemiebereich. Praktika in Immunologie und Molekularbiologie in Madrid und Biomasseanalytik in Irland. Ausbildungspraktische Erfahrung in Umwelt-, klinischer und Lebensmittelmikrobiologie, analytischer Chemie, Instrumentierung und Messtechnik.",
+    "mobility": "Raum Bonn/Köln, weitere Standortmöglichkeit Berlin. Deutschlandweit und international umzugsbereit. Kontakt über das Portfolio.",
+    "exp": [
+      [
+        "Fundación para la Investigación Biomédica del Hospital Universitario de La Princesa",
+        "Madrid, Spanien | FCT-Praktikum, Immunologie und Molekularbiologie | 03/2025-06/2025",
+        "Adhärente Zellkultur (HaCaT), Medien, Passagieren und Einfrieren; PBMC-Aufarbeitung und CD4/CD14-Isolierung; humane und tierische Proben.",
+        "RNA-Extraktion, PCR, Elektrophorese, Genotypisierung, ELISA, Western-Blot-Vorbereitung, Immunhistochemie und Immunfluoreszenz. Protokolle, Inventar und zweisprachige wissenschaftliche Website."
+      ],
+      [
+        "Celignis Biomass Analysis Laboratory",
+        "Limerick, Irland | Erasmus+-Praktikum, Biomasseanalytik | 03/2023-05/2023",
+        "Feuchte, Asche, flüchtige Bestandteile, CHNOS, BMP/Biogas, FOS/TAC, ICP, CSB, Ammonium und NIR. TGA Q500, CHNOS-Analysator, CARBOLITE-Öfen und Biogas 5000.",
+        "GLP, SOPs, interne statistische Qualitätskontrollen, Betriebsdokumentation, Rückverfolgbarkeit, Unterstützung bei Wartung und Fehleranalyse. Zunehmende Verantwortung für flüchtige Bestandteile und Einarbeitung bei der Übergabe."
+      ]
+    ],
+    "qual": [
+      "CEAC FP Oficial, Madrid | 2023-2025",
+      "IES Virgen de la Paloma, Madrid | 2021-2023"
+    ],
+    "project": "Abschlussprojekt in Koautorenschaft: Bacteriofagoterapia | Redescubriendo una terapia innovadora (Literaturarbeit).",
+    "cert": [
+      "Tierexperimentelle Funktionen A+B+C (Dynamimed; Kurs 2023, Diplom 2024). Praktischer Kurs unter Aufsicht; keine individuelle Sachkundeanerkennung.",
+      "Management von Gesundheitseinrichtungen (2025); Grundausbildung Arbeitsschutz (2023).",
+      "Ausbildung in Automatisierung und Robotik (Instituto Tecnológico MasterD, 2018-2020)."
+    ],
+    "languages": "Spanisch Muttersprache | Englisch B2 | Deutsch A2, Zertifizierung in Vorbereitung. Microsoft Office, Google Workspace und wissenschaftliche Datenbanken.",
+    "other": "Privathaushalt, Au-pair und Alltagsunterstützung (ab 01/2026 laut Lebenslauf); FORM-ED / WASHI, Dozent für Bildungsrobotik (2020-2021); KARMA SUMINISTROS INTEGRALES, Verwaltungsassistenz (Sommer 2015-2017).",
+    "focus": {
+      "general": "Fachübergreifendes Profil für klinische, biomedizinische und analytische Labore.",
+      "clinical": "Spanische Ausbildung und praktische Ausbildungsübungen im klinischen Labor. Deutsche MTL-Anerkennung nicht nachgewiesen; die rechtlichen Voraussetzungen sind maßgeblich.",
+      "research": "Technische Unterstützung biomedizinischer Forschung mit Praktikumserfahrung in Immunologie und Molekularbiologie.",
+      "pharma": "Verwandte praktische Ausbildung in Umgebungskontrolle, Keimzählung und Nährmedien; Qualitätsroutinen im Praktikum. Keine behauptete GMP- oder Arzneibuchprüfungserfahrung.",
+      "analytical": "Praktikum in Biomasseanalytik, ergänzt durch die chemische Berufsausbildung, instrumentelle Analytik und Messtechnik."
+    },
+    "cvMenu": "Lebensläufe nach Fachprofil",
+    "cvMenuIntro": "Öffentliche, einspaltige Lebensläufe mit auswählbarem Text ohne private Kontaktdaten. Passend zur Stelle auswählen.",
+    "download": "Lebenslauf herunterladen (PDF)"
+  },
+  "selections": {
+    "general": [
+      "pcr",
+      "electrophoresis",
+      "hacat",
+      "cd4-cd14",
+      "elisa",
+      "chnos",
+      "tga",
+      "glp-sop",
+      "microbial-environmental-sampling",
+      "microbial-enumeration",
+      "culture-media-preparation",
+      "uv-vis-spectrophotometry",
+      "ir-spectroscopy",
+      "thermometer-calibration",
+      "ph-measurement",
+      "academic-sops",
+      "haematology",
+      "biochemistry"
+    ],
+    "clinical": [
+      "haematology",
+      "biochemistry",
+      "sample-management",
+      "clinical-microbiology",
+      "immunodiagnostics",
+      "urinalysis",
+      "capillary-blood-smear",
+      "buccal-cytology",
+      "microbial-staining",
+      "culture-media-preparation",
+      "microscopy",
+      "elisa"
+    ],
+    "research": [
+      "rna-extraction",
+      "pcr",
+      "electrophoresis",
+      "genotyping",
+      "western-blot",
+      "hacat",
+      "cytokine-culture",
+      "human-samples",
+      "cd4-cd14",
+      "animal-samples",
+      "elisa",
+      "ihc",
+      "if",
+      "animal-functions"
+    ],
+    "pharma": [
+      "microbial-environmental-sampling",
+      "microbial-enumeration",
+      "microbial-staining",
+      "culture-media-preparation",
+      "membrane-filtration",
+      "microbial-isolation-identification",
+      "academic-sops",
+      "glp-sop",
+      "internal-qc",
+      "traceability"
+    ],
+    "analytical": [
+      "uv-vis-spectrophotometry",
+      "ir-spectroscopy",
+      "icp",
+      "nir",
+      "titration",
+      "redox-complexometric-titration",
+      "conductimetry",
+      "turbidity",
+      "solutions",
+      "gravimetry",
+      "ph-measurement",
+      "analytical-weighing",
+      "chnos",
+      "tga",
+      "glp-sop",
+      "internal-qc",
+      "technical-documentation"
+    ]
+  }
+}

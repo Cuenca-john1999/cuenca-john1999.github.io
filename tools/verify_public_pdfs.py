@@ -103,7 +103,7 @@ def main() -> None:
         if path.name.startswith("Jhon_M_Cuenca_CV_"):
             check_cv(path, combined)
         check_academic_project(path, text)
-        if path.parent.name in ("en", "es", "de"):
+        if path.parent.name in ("en", "es", "de") or path.name.startswith("Jhon_M_Cuenca_CV_"):
             check_cv(path, combined)
             if re.search(r"\b(?:nota final|horas de prácticas|Abschlussnote|Praktikumsstunden|final grade|placement hours)\b", text, re.I):
                 block(path.name, "excluded academic detail in public market dossier")

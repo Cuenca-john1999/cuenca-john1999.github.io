@@ -32,7 +32,7 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y poppler-utils
           mkdir -p test-output
-          for doc in assets/documents/{es,de,en}/*.pdf; do
+          for doc in assets/documents/{es,de,en}/*.pdf assets/documents/Jhon_M_Cuenca_CV_*.pdf; do
             lang="$(basename "$(dirname "$doc")")"
             name="$(basename "$doc" .pdf)"
             pdftoppm -r 110 -png "$doc" "test-output/pdf-$lang-$name"

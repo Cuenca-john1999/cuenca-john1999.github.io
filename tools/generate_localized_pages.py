@@ -23,17 +23,19 @@ BASE_URL = "https://cuenca-john1999.github.io"
 
 PERSON_META = {
     "de": {
-        "description": "Profil im klinisch-biomedizinischen Labor mit praktischer Erfahrung in Molekularbiologie, Immunologie, analytischer Laborarbeit und wissenschaftlicher Dokumentation.",
+        "description": "Profil im klinisch-biomedizinischen Labor mit praktischer Erfahrung in Molekularbiologie, Immunologie, analytischer Laborarbeit und wissenschaftlicher Dokumentation. Ausbildungspraktische Kenntnisse in Umweltmikrobiologie, Messtechnik und instrumenteller Analytik.",
         "knowsAbout": [
             "Klinische und biomedizinische Laborwissenschaft", "Molekularbiologie", "Immunologie", "PCR", "ELISA",
             "Western Blot", "Zellkultur", "Analytische Laborarbeit", "Gute Laborpraxis (GLP)", "SOP-Dokumentation",
+            "Umweltmikrobiologie", "Messtechnik", "Infrarotspektroskopie", "Analytische Chemie", "Laborqualitätskontrolle",
         ],
     },
     "es": {
-        "description": "Perfil de laboratorio clínico y biomédico con experiencia práctica en biología molecular, inmunología, trabajo analítico de laboratorio y documentación científica.",
+        "description": "Perfil de laboratorio clínico y biomédico con experiencia práctica en biología molecular, inmunología, trabajo analítico de laboratorio y documentación científica. Formación práctica en microbiología ambiental, metrología y análisis instrumental.",
         "knowsAbout": [
             "Laboratorio clínico y biomédico", "Biología molecular", "Inmunología", "PCR", "ELISA",
             "Western blot", "Cultivo celular", "Trabajo analítico de laboratorio", "Buenas Prácticas de Laboratorio (GLP)", "Documentación SOP",
+            "Microbiología ambiental", "Metrología", "Espectroscopía infrarroja", "Química analítica", "Control de calidad de laboratorio",
         ],
     },
 }
@@ -41,14 +43,14 @@ PERSON_META = {
 MAIN_META = {
     "de": {
         "title": "Jhon M. Cuenca | Laborfachkraft in Deutschland · Forschung und Analytik",
-        "description": "Laborfachkraft mit spanischen Berufsabschlüssen und Laborpraktika in Immunologie, Molekularbiologie und Biomasseanalytik. Raum Bonn/Köln, deutschlandweit umzugsbereit.",
+        "description": "Laborfachkraft mit spanischen Berufsabschlüssen und Laborpraktika in Immunologie, Molekularbiologie und Biomasseanalytik. Raum Bonn/Köln, deutschlandweit umzugsbereit. Ausbildungspraktische Kenntnisse in Umweltmikrobiologie, Messtechnik und instrumenteller Analytik.",
         "locale": "de_DE",
         "site_name": "Jhon M. Cuenca | Klinisch-biomedizinisches Laborportfolio",
         "image_alt": "Wissenschaftliches Portfolio von Jhon M. Cuenca mit blauer DNA-Helix, Laborbereichen und Mikroskop.",
     },
     "es": {
         "title": "Jhon M. Cuenca | Técnico de Laboratorio en España",
-        "description": "Portafolio profesional para España: Técnico Superior en Laboratorio Clínico y Biomédico y Técnico en Operaciones de Laboratorio, con experiencia práctica en investigación biomédica y análisis de laboratorio.",
+        "description": "Portafolio profesional para España: Técnico Superior en Laboratorio Clínico y Biomédico y Técnico en Operaciones de Laboratorio, con experiencia práctica en investigación biomédica y análisis de laboratorio. Formación práctica en microbiología ambiental, metrología y análisis instrumental.",
         "locale": "es_ES",
         "site_name": "Jhon M. Cuenca | Portafolio de Laboratorio Clínico y Biomédico",
         "image_alt": "Portafolio científico de Jhon M. Cuenca con una hélice de ADN azul, áreas de laboratorio y un microscopio.",
@@ -254,7 +256,7 @@ def localize_market_profile(text: str, language: str) -> str:
         raise SystemExit("[localized-pages] missing market selector")
     if language == "es":
         name = '                        <p class="opening-name" data-reveal>Jhon M. Cuenca</p>\n'
-        text = replace_once(text, name, name + '                        <p class="opening-availability" data-reveal>Técnico en Operaciones de Laboratorio</p>\n', "Spain secondary qualification")
+        text = replace_once(text, name, name + '                        <p class="opening-availability" data-reveal>Técnico Superior en Laboratorio Clínico y Biomédico · Técnico en Operaciones de Laboratorio</p>\n', "Spain secondary qualification")
         partial = render_partial("es")
         marker = '            <section class="sequence-section projects-section"'
         text = replace_once(text, marker, partial + marker, "Spain professional sections")

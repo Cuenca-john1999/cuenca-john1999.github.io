@@ -4,7 +4,7 @@ import {fileURLToPath} from 'node:url';
 import {resolve} from 'node:path';
 const root=fileURLToPath(new URL('../',import.meta.url));
 function buildDossiers(read){
- const data=JSON.parse(read("data/market/common-evidence.json")),recruit=JSON.parse(read("data/market/recruitment.json"));
+ const data=JSON.parse(read("data/market/common-evidence.json")),recruit=JSON.parse(read("data/market/recruitment.json")),cv=JSON.parse(read("data/market/cv.json"));
  const W=[278,278,355,556,556,889,667,191,333,333,389,584,278,333,278,278,556,556,556,556,556,556,556,556,556,556,278,278,584,584,584,556,1015,667,667,722,722,667,611,778,722,278,500,667,556,833,722,778,667,778,722,667,611,722,667,944,667,667,611,278,278,278,469,556,333,556,556,500,556,556,278,556,556,222,222,500,222,833,556,556,556,556,333,500,278,556,500,722,500,500,500,334,260,334,584];
  const B=[278,333,474,556,556,889,722,238,333,333,389,584,278,333,278,278,556,556,556,556,556,556,556,556,556,556,333,333,584,584,584,611,975,722,722,722,722,667,611,778,722,278,556,722,611,833,722,778,667,778,722,667,611,722,667,944,667,667,611,333,278,333,584,556,333,556,611,556,611,556,333,611,611,278,278,556,278,889,611,611,611,611,389,556,333,611,556,778,556,556,500,389,280,389,584];
  const norm=s=>s.replace(/[–—]/g,"-").replace(/[’‘]/g,"'").replace(/[“”]/g,'"').replace(/\u00a0/g," ");
@@ -75,8 +75,50 @@ function buildDossiers(read){
    pages.push(c.raw());
  }
  out[`assets/documents/${lang}/${r.names[3]}.pdf`]=pdf(pages);
+
+ const cvLocale=cv[lang];
+ for(const [role,ids] of Object.entries(cv.selections)){
+   const profileTitle=cvLocale.title+" - "+cvLocale.labels[role];
+   const first=canvas(),second=canvas();
+   let y=header(first,lang,profileTitle,t.market,1,2);
+   function writeSection(c,y,label,paragraphs){
+      y=c.para(label,L,y,12.1,M,15.7,true,C.blue)-5;
+      for(const p of paragraphs)y=c.para(p,L,y,10.5,M,13.9)-5;
+      return y-10;
+   }
+   y=writeSection(first,y,cvLocale.headings[0],[cvLocale.focus[role],cvLocale.profile,cvLocale.mobility]);
+   y=first.para(cvLocale.headings[1],L,y,12.1,M,15.7,true,C.blue)-6;
+   for(const row of cvLocale.exp){
+     y=first.para(row[0],L,y,10.8,M,13.9,true);
+     y=first.para(row[1],L,y,9.9,M,13,false,C.muted)-5;
+     for(const p of row.slice(2))y=first.para(p,L,y,10.5,M,13.9)-5;
+     y-=8;
+   }
+   y=first.para(cvLocale.headings[2],L,y,12.1,M,15.7,true,C.blue)-5;
+   for(const [i,q] of ["Técnico Superior en Laboratorio Clínico y Biomédico","Técnico en Operaciones de Laboratorio"].entries()){
+     y=first.para(q,L,y,10.8,M,13.9,true);
+     y=first.para(cvLocale.qual[i],L,y,10.1,M,13,false,C.muted)-6;
+   }
+   if(y<59)throw Error("CV page 1 overflow "+lang+" "+role+" "+y);
+   y=header(second,lang,profileTitle,t.market,2,2);
+   y=second.para(cvLocale.headings[3],L,y,12.1,M,15.7,true,C.blue)-5;
+   const selected=ids.map(id=>{const row=data.skills.find(s=>s.id===id);if(!row)throw Error("Unknown skill "+id);return row;});
+   const grouped=new Map();
+   for(const row of selected){const v=row.locales[lang],key=v.level+" | "+row.source;if(!grouped.has(key))grouped.set(key,[]);grouped.get(key).push(v.name);}
+   for(const [label,items] of grouped){
+     y=second.para(label,L,y,10.1,M,13,true,C.muted)-2;
+     y=second.para(items.join(" · "),L,y,10.5,M,13.9)-7;
+   }
+   y-=4;
+   y=writeSection(second,y,cvLocale.headings[4],[cvLocale.project,...cvLocale.cert]);
+   y=writeSection(second,y,cvLocale.headings[5],[cvLocale.languages]);
+   y=writeSection(second,y,cvLocale.headings[6],[cvLocale.other]);
+   if(y<59)throw Error("CV page 2 overflow "+lang+" "+role+" "+y);
+   const path=role==="general"?"assets/documents/Jhon_M_Cuenca_CV_"+lang.toUpperCase()+".pdf":"assets/documents/"+lang+"/cv-"+role+".pdf";
+   out[path]=pdf([first.raw(),second.raw()]);
+ }
  }return out;
 }
 const files=buildDossiers(p=>readFileSync(resolve(root,p),'utf8'));
 for(const [p,content] of Object.entries(files)){const path=resolve(root,p);if(process.argv.includes('--check')){if(readFileSync(path,'utf8')!==content)throw Error('Stale dossier: '+p);}else writeFileSync(path,content,'ascii');}
-console.log('Verified/generated '+Object.keys(files).length+' dossiers.');
+console.log('Verified/generated '+Object.keys(files).length+' public dossiers and CVs.');
