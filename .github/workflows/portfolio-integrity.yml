@@ -29,6 +29,8 @@ jobs:
         run: |
           node --check assets/js/cv-builder.mjs
           node tools/test_cv_builder.mjs
+          node --check assets/js/cv-semantic-worker.mjs
+          node tools/test_cv_semantic.mjs
       - name: Verify public PDF privacy
         run: python3 tools/verify_public_pdfs.py
       - name: Render market PDF dossiers
@@ -73,6 +75,7 @@ jobs:
           for i in {1..20}; do curl -fsS http://127.0.0.1:8765/ >/dev/null && break; sleep 1; done
           node tools/browser_smoke.mjs
           node tools/cv_builder_smoke.mjs
+          node tools/cv_semantic_live.mjs
       - name: Upload visual checks
         if: always()
         uses: actions/upload-artifact@v4

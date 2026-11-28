@@ -1,12 +1,14 @@
 import {analyse,compose,generate,MAX_SKILLS,focusRoutes,facts} from './cv-builder-core.mjs?v=2';
 import {zip} from './cv-builder-zip.mjs';
+import {evidenceIndex,validateSuggestions} from './cv-semantic.mjs?v=1';
 const root=new URL('../../',import.meta.url),mount=document.querySelector('[data-cv-builder]'),$=id=>mount?.querySelector('#'+id);
 const el=(tag,txt,cls)=>{const n=document.createElement(tag);if(txt!==undefined)n.textContent=txt;if(cls)n.className=cls;return n;};
 const fetchJSON=async path=>{const r=await fetch(new URL(path,root));if(!r.ok)throw Error('Load');return r.json();};
 let lang=mount?.dataset.cvLang||new URLSearchParams(location.search).get('lang')||document.documentElement.lang;if(!['es','en','de'].includes(lang))lang='en';
 const standalone=mount?.dataset.cvStandalone==='true';
 const state={lang,role:'general',ids:[],offer:'',second:'',search:'',personal:false,contact:'',analysis:null,comparison:null,docs:new Set(),all:false,topic:'',advanced:false,extra:false,details:false};
-let data,cv,copy,recruit,refs={};
+let data,cv,copy,recruit,refs={},semanticWorker=null,semanticTimer=null;
+const semantic={busy:false,status:'',rows:[],offer:'',passages:0};
 const skill=id=>data.skills.find(s=>s.id===id),t=()=>copy[state.lang];
 const label=(name,node)=>{const e=el('label');e.append(el('span',name),node);return e;};
 const btn=(text,fn,id,primary=false)=>{const n=el('button',text,primary?'primary':'');n.type='button';n.id=id;n.addEventListener('click',fn);return n;};
@@ -18,7 +20,7 @@ const presetIds=()=>recommended().slice(0,8);
 const norm=s=>String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
 function status(s){refs.status.textContent=s;}
 function choose(ids){state.ids=[...new Set(ids)].slice(0,MAX_SKILLS);renderSelection();renderPreview();}
-function runAnalysis(){state.analysis=analyse(data,state.offer);state.comparison=state.second.trim()?analyse(data,state.second):null;if(state.analysis.matches.length||state.analysis.route==='school'){state.role=state.analysis.route;refs.role.value=state.role;}renderAnalysis();renderSelection();renderPreview();}
+function runAnalysis(){cancelSemantic();semantic.rows=[];semantic.offer='';semantic.status='';renderSemantic();state.analysis=analyse(data,state.offer);state.comparison=state.second.trim()?analyse(data,state.second):null;if(state.analysis.matches.length||state.analysis.route==='school'){state.role=state.analysis.route;refs.role.value=state.role;}renderAnalysis();renderSelection();renderPreview();}
 function renderAnalysis(){
  const box=refs.results;box.replaceChildren();if(!state.analysis)return;
  const m=t();
@@ -32,6 +34,55 @@ function renderAnalysis(){
  if(state.comparison){box.append(show(state.comparison,m.second));const a=new Set(state.analysis.matches.map(x=>x.id)),b=new Set(state.comparison.matches.map(x=>x.id)),cmp=el('div',undefined,'comparison');for(const [title,ids] of [[m.shared,[...a].filter(id=>b.has(id))],[m.only1,[...a].filter(id=>!b.has(id))],[m.only2,[...b].filter(id=>!a.has(id))]]){const d=el('div');d.append(el('h3',title),ids.length?list(ids.map(id=>skill(id).locales[state.lang].name)):el('p','—'));cmp.append(d);}box.append(cmp);}
  const picks=state.analysis.matches.map(x=>x.id),use=btn(m.use,()=>{state.search='';state.topic='';refs.search.value='';refs.topic.value='';choose(picks);},'cv-use-suggestions',true);use.disabled=!picks.length;box.append(use);
 }
+
+function cancelSemantic(){
+ if(semantic.busy&&semanticWorker){semanticWorker.terminate();semanticWorker=null;}
+ clearTimeout(semanticTimer);semantic.busy=false;semantic.status='';
+}
+function invalidateSemantic(){cancelSemantic();semantic.rows=[];semantic.offer='';semantic.passages=0;renderSemantic();}
+function renderSemantic(){
+ if(!refs.semantic)return;const m=t(),box=refs.semantic;box.replaceChildren();
+ const run=btn(m.semanticRun,runSemantic,'cv-semantic-run',false);run.disabled=semantic.busy;box.append(run);
+ if(semantic.busy)box.append(btn(m.semanticCancel,()=>{cancelSemantic();renderSemantic();},'cv-semantic-cancel'));
+ box.append(el('p',m.semanticNotice,'muted'));
+ const status=el('p',semantic.status,'muted');status.id='cv-semantic-status';status.setAttribute('role','status');box.append(status);
+ if(!semantic.rows.length)return;
+ box.append(el('h4',m.semanticResults),el('p',m.semanticCaution,'muted'));
+ const chosen=new Set(),details=el('div'),checks=[];
+ for(const hit of semantic.rows){
+  const [kind,id]=hit.key.split(':'),row=el('div',undefined,'match'),v=kind==='skill'?skill(id).locales[state.lang]:null;
+  const title=el('strong',v?v.name:facts[id][state.lang]);
+  if(v){const c=el('input');c.type='checkbox';c.checked=state.ids.includes(id);c.dataset.semanticSkill=id;if(c.checked)chosen.add(id);c.addEventListener('change',()=>c.checked?chosen.add(id):chosen.delete(id));checks.push(c);const lab=el('label',undefined,'cv-inline');lab.append(c,title);row.append(lab,el('small',v.level+' · '+skill(id).source));}
+  else row.append(title,el('small',m.transferable));
+  const d=el('details');d.append(el('summary',m.semanticPassage),el('p',hit.passage,'muted'));row.append(d);details.append(row);
+ }
+ box.append(details,btn(m.semanticApply,()=>{const ids=[...state.ids,...chosen];if(new Set(ids).size>MAX_SKILLS){semantic.status=m.semanticLimit;const n=$('cv-semantic-status');if(n)n.textContent=semantic.status;return;}choose(ids);semantic.status=m.semanticApplied;renderSemantic();},'cv-semantic-apply',true));
+}
+function runSemantic(){
+ const offer=state.offer.trim();if(!offer){semantic.status=t().semanticEmpty;renderSemantic();return;}
+ cancelSemantic();state.analysis=analyse(data,offer);state.comparison=state.second.trim()?analyse(data,state.second):null;
+ if(state.analysis.matches.length||state.analysis.route==='school'){state.role=state.analysis.route;refs.role.value=state.role;}
+ renderAnalysis();renderSelection();renderPreview();
+ semantic.offer=offer;semantic.rows=[];semantic.busy=true;semantic.status=t().semanticLoading;renderSemantic();
+ try{
+  if(!semanticWorker)semanticWorker=new Worker(new URL('./cv-semantic-worker.mjs?v=1',import.meta.url),{type:'module'});
+  const worker=semanticWorker;
+  function fail(){if(worker!==semanticWorker)return;worker.terminate();semanticWorker=null;clearTimeout(semanticTimer);semantic.busy=false;semantic.status=t().semanticError;renderSemantic();}
+  worker.onerror=fail;worker.onmessageerror=fail;
+  worker.onmessage=({data:m})=>{
+   if(worker!==semanticWorker||!semantic.busy||semantic.offer!==state.offer.trim())return;
+   if(m.type==='error'){fail();return;}
+   if(m.type==='result'){clearTimeout(semanticTimer);semantic.busy=false;semantic.passages=m.passages;semantic.rows=validateSuggestions(m.rows,data,facts,state.analysis);semantic.status=semantic.rows.length?t().semanticDone+' · '+m.passages+' '+t().semanticFragments:t().semanticNone;renderSemantic();return;}
+   if(m.type==='download')semantic.status=t().semanticLoading+' '+m.percent+'%';
+   if(m.type==='progress')semantic.status=(m.phase==='index'?t().semanticIndex:t().semanticSearching)+' '+m.done+'/'+m.total;
+   const n=$('cv-semantic-status');if(n)n.textContent=semantic.status;
+  };
+  // Timeout is a fallback, not a promise of speed. Cancellation is available immediately.
+  semanticTimer=setTimeout(fail,300000);
+  worker.postMessage({type:'analyse',entries:evidenceIndex(data,facts),offer});
+ }catch(e){clearTimeout(semanticTimer);semantic.busy=false;semantic.status=t().semanticError;renderSemantic();}
+}
+
 function renderSelection(){
  const box=refs.list,focused=document.activeElement?.dataset.skillId,scroll=box.scrollTop;box.replaceChildren();
  const selected=new Set(state.ids),q=norm(state.search),suggested=new Set([...recommended(),...(state.analysis?.matches||[]).map(x=>x.id)]);
@@ -68,8 +119,8 @@ function render(){
  for(const [id,title] of [['general',m.general],...Object.entries(focusRoutes(data)).map(([id,r])=>[id,r.labels[state.lang]])]){const o=el('option',title);o.value=id;role.append(o);}role.value=state.role;role.addEventListener('change',()=>{state.role=role.value;state.all=false;state.topic='';state.search='';refs.search.value='';refs.topic.value='';choose(presetIds());});refs.role=role;
  const language=el('select');language.id='cv-language';for(const [id,title] of [['es','Español'],['en','English'],['de','Deutsch']]){const o=el('option',title);o.value=id;language.append(o);}language.value=state.lang;language.addEventListener('change',()=>{state.lang=language.value;state.docs.clear();render();$('cv-language')?.focus();});controls.append(label(m.role,role),label(m.language,language));profile.append(controls);app.append(profile);
  const advanced=el('details',undefined,'cv-disclosure');advanced.id='cv-advanced';advanced.open=state.advanced;advanced.addEventListener('toggle',()=>state.advanced=advanced.open);
- const input=field('textarea','cv-offer',state.offer,v=>state.offer=v),other=field('textarea','cv-second-offer',state.second,v=>state.second=v);input.maxLength=60000;other.maxLength=60000;const det=el('details',undefined,'cv-subdisclosure');det.open=!!state.second;det.append(el('summary',m.second),label(m.second,other));
- const inner=el('div',undefined,'cv-disclosure-body');inner.append(label(m.offer,input),det,btn(m.analyse,runAnalysis,'cv-analyse',true),el('p',m.warning,'muted'));refs.results=el('div');refs.results.id='cv-analysis-results';inner.append(refs.results);advanced.append(el('summary',m.advanced),inner);app.append(advanced);
+ const input=field('textarea','cv-offer',state.offer,v=>{state.offer=v;invalidateSemantic();}),other=field('textarea','cv-second-offer',state.second,v=>state.second=v);input.maxLength=60000;other.maxLength=60000;const det=el('details',undefined,'cv-subdisclosure');det.open=!!state.second;det.append(el('summary',m.second),label(m.second,other));
+ const inner=el('div',undefined,'cv-disclosure-body');inner.append(label(m.offer,input),det,btn(m.analyse,runAnalysis,'cv-analyse',true),el('p',m.warning,'muted'));refs.results=el('div');refs.results.id='cv-analysis-results';refs.semantic=el('div',undefined,'cv-panel');refs.semantic.id='cv-semantic';inner.append(refs.semantic,refs.results);advanced.append(el('summary',m.advanced),inner);app.append(advanced);
  const cols=el('div',undefined,'cv-columns'),left=panel(m.step2),right=panel(m.step3),filter=el('div',undefined,'cv-controls'),search=field('input','cv-skill-search',state.search,v=>{state.search=v;renderSelection();});search.type='search';search.placeholder=m.search;refs.search=search;
  const topic=el('select');topic.id='cv-topic';const any=el('option',m.all);any.value='';topic.append(any);for(const [id,labels] of Object.entries(data.topics)){const o=el('option',labels[state.lang]);o.value=id;topic.append(o);}topic.value=state.topic;topic.addEventListener('change',()=>{state.topic=topic.value;renderSelection();});refs.topic=topic;filter.append(label(m.search,search),label(m.topic,topic));left.append(filter);
  const tally=el('div',undefined,'cv-tally');refs.count=el('span');refs.count.id='cv-selected-count';refs.count.setAttribute('aria-live','polite');refs.progress=el('progress');refs.progress.setAttribute('aria-label',m.count);tally.append(refs.count,refs.progress);left.append(tally);
@@ -83,7 +134,7 @@ function render(){
  const check=el('input');check.type='checkbox';check.id='cv-personal-mode';check.checked=state.personal;const contact=field('input','cv-contact-input',state.contact,v=>{state.contact=v;renderPreview();});contact.maxLength=150;contact.autocomplete='off';const contactLabel=label(m.contact,contact);contactLabel.hidden=!state.personal;check.addEventListener('change',()=>{state.personal=check.checked;contactLabel.hidden=!state.personal;if(!state.personal){state.contact='';contact.value='';}renderPreview();});
  const personal=el('label',undefined,'cv-inline');personal.append(check,el('span',m.personal));pack.append(personal,el('p',m.privacy,'muted'),contactLabel,el('h4',m.package),el('p',m.packageNote,'muted'));const docs=el('fieldset',undefined,'cv-docs');docs.append(el('legend',m.package));const paths=['assets/documents/europass-clinical-biomedical-laboratory.pdf','assets/documents/europass-laboratory-operations.pdf',...recruit[state.lang].names.map(n=>'assets/documents/'+state.lang+'/'+n+'.pdf')];for(const [i,path] of paths.entries()){const c=el('input');c.type='checkbox';c.checked=state.docs.has(path);c.addEventListener('change',()=>c.checked?state.docs.add(path):state.docs.delete(path));const l=el('label',undefined,'cv-inline');l.append(c,el('span',recruit[state.lang].files[i+1]));docs.append(l);}const z=btn(m.zip,downloadZIP,'cv-download-zip',true);pack.append(docs,z);extra.append(pack);app.append(extra);
  if(!standalone){const link=el('a',m.full,'cv-full-link');link.href=new URL('cv-builder/?lang='+state.lang,root).href;app.append(link);}
- refs.exports=[pdf,view,z];renderAnalysis();renderSelection();renderPreview();
+ refs.exports=[pdf,view,z];renderAnalysis();renderSelection();renderPreview();renderSemantic();
 }
 if(mount){
  try{[data,cv,copy,recruit]=await Promise.all([fetchJSON('data/market/common-evidence.json'),fetchJSON('data/market/cv.json'),fetchJSON('data/market/cv-builder-ui.json'),fetchJSON('data/market/recruitment.json')]);state.ids=presetIds();render();}catch(e){console.warn('[CV Builder]',e);const n=mount.querySelector('[data-cv-status]');if(n)n.textContent=copy?.[lang]?.loadError||'Could not load catalogue / No se pudo cargar el catálogo / Katalog konnte nicht geladen werden';}

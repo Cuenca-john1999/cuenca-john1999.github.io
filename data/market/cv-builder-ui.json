@@ -71,7 +71,24 @@
       "unspecified": "Prioridad no especificada",
       "not-required": "No exigido explícitamente"
     },
-    "notRequired": "Términos indicados como no exigidos"
+    "notRequired": "Términos indicados como no exigidos",
+    "semanticRun": "Análisis profundo con IA semántica",
+    "semanticCancel": "Cancelar análisis",
+    "semanticNotice": "Modelo multilingüe local. La primera ejecución descarga unos 135 MB de pesos y tokenizador, más archivos de ejecución desde Hugging Face y jsDelivr. No utiliza una API de inferencia ni envía el texto de la oferta a esos servicios.",
+    "semanticResults": "Sugerencias semánticas para revisar",
+    "semanticCaution": "La similitud de significado no demuestra experiencia, equivalencia técnica ni habilitación. Estas sugerencias no se incorporan automáticamente al CV.",
+    "semanticPassage": "Ver fragmento de la oferta",
+    "semanticApply": "Añadir competencias marcadas",
+    "semanticLimit": "Máximo de 12 competencias: desmarca algunas en el selector principal antes de añadir más.",
+    "semanticApplied": "Selección actualizada.",
+    "semanticEmpty": "Pega una oferta antes de analizar.",
+    "semanticLoading": "Cargando modelo…",
+    "semanticIndex": "Indexando evidencias…",
+    "semanticSearching": "Analizando fragmentos…",
+    "semanticDone": "Análisis semántico completado",
+    "semanticFragments": "fragmentos",
+    "semanticNone": "No se encontraron sugerencias con el umbral experimental.",
+    "semanticError": "La IA semántica no está disponible. Puedes seguir usando el análisis rápido."
   },
   "en": {
     "title": "Personalised CV Builder",
@@ -145,7 +162,24 @@
       "unspecified": "Priority unspecified",
       "not-required": "Explicitly not required"
     },
-    "notRequired": "Terms stated as not required"
+    "notRequired": "Terms stated as not required",
+    "semanticRun": "Deep analysis with semantic AI",
+    "semanticCancel": "Cancel analysis",
+    "semanticNotice": "Local multilingual model. First use downloads about 135 MB of weights and tokenizer, plus runtime files from Hugging Face and jsDelivr. No inference API is used and job text is not sent to those services.",
+    "semanticResults": "Semantic suggestions to review",
+    "semanticCaution": "Semantic similarity does not establish experience, technical equivalence or authorisation. Suggestions are not automatically inserted into your CV.",
+    "semanticPassage": "View vacancy excerpt",
+    "semanticApply": "Add checked skills",
+    "semanticLimit": "Maximum 12 skills: deselect some in the main selector before adding more.",
+    "semanticApplied": "Selection updated.",
+    "semanticEmpty": "Paste a vacancy first.",
+    "semanticLoading": "Loading model…",
+    "semanticIndex": "Indexing evidence…",
+    "semanticSearching": "Analysing passages…",
+    "semanticDone": "Semantic analysis complete",
+    "semanticFragments": "passages",
+    "semanticNone": "No suggestions met the experimental threshold.",
+    "semanticError": "Semantic AI unavailable. You can continue with quick analysis."
   },
   "de": {
     "title": "Individueller Lebenslauf-Generator",
@@ -219,6 +253,23 @@
       "unspecified": "Priorität nicht angegeben",
       "not-required": "Explizit nicht erforderlich"
     },
-    "notRequired": "Als nicht erforderlich genannte Begriffe"
+    "notRequired": "Als nicht erforderlich genannte Begriffe",
+    "semanticRun": "Vertiefte Analyse mit semantischer KI",
+    "semanticCancel": "Analyse abbrechen",
+    "semanticNotice": "Lokales mehrsprachiges Modell. Beim ersten Start werden ca. 135 MB Modellgewichte und Tokenizer sowie Laufzeitdateien von Hugging Face und jsDelivr geladen. Keine Inferenz-API; der Anzeigentext wird nicht an diese Dienste gesendet.",
+    "semanticResults": "Semantische Vorschläge zur Prüfung",
+    "semanticCaution": "Semantische Ähnlichkeit belegt keine Erfahrung, technische Gleichwertigkeit oder Zulassung. Vorschläge werden nicht automatisch in den Lebenslauf übernommen.",
+    "semanticPassage": "Ausschnitt der Anzeige ansehen",
+    "semanticApply": "Markierte Kompetenzen hinzufügen",
+    "semanticLimit": "Maximal 12 Kompetenzen: zuerst im Hauptbereich einige abwählen.",
+    "semanticApplied": "Auswahl aktualisiert.",
+    "semanticEmpty": "Zuerst eine Stellenanzeige einfügen.",
+    "semanticLoading": "Modell wird geladen…",
+    "semanticIndex": "Nachweise werden indexiert…",
+    "semanticSearching": "Textabschnitte werden analysiert…",
+    "semanticDone": "Semantische Analyse abgeschlossen",
+    "semanticFragments": "Abschnitte",
+    "semanticNone": "Keine Vorschläge über dem experimentellen Schwellenwert.",
+    "semanticError": "Semantische KI nicht verfügbar. Die Schnellanalyse bleibt nutzbar."
   }
 }
