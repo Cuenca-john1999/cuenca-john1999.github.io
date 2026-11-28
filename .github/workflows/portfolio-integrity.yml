@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   verify:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04 # Playwright 1.58.2 supports this runner; ubuntu-latest moved to 26.04.
     steps:
       - uses: actions/checkout@v6
       - name: Verify content and translations
@@ -23,8 +23,35 @@ jobs:
         run: python3 tools/generate_localized_pages.py --check
       - name: Install PDF privacy checker
         run: python3 -m pip install 'pypdf==6.15.0'
+      - name: Verify generated dossier consistency
+        run: node tools/generate_market_dossiers.mjs --check
+      - name: Verify CV Builder
+        run: |
+          node --check assets/js/cv-builder.mjs
+          node tools/test_cv_builder.mjs
+          node --check assets/js/cv-semantic-worker.mjs
+          node tools/test_cv_semantic.mjs
       - name: Verify public PDF privacy
         run: python3 tools/verify_public_pdfs.py
+      - name: Render market PDF dossiers
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y poppler-utils zbar-tools
+          mkdir -p test-output
+          node tools/render_custom_cv_samples.mjs
+          python3 tools/verify_public_pdfs.py --include-generated
+          for doc in test-output/custom-cv-*.pdf; do
+            pdftoppm -f 2 -l 2 -r 300 -png -singlefile "$doc" /tmp/portfolio-qr
+            decoded="$(zbarimg --quiet --raw /tmp/portfolio-qr.png)"
+            test "$decoded" = 'https://cuenca-john1999.github.io/' || { echo "Unexpected QR target in $(basename "$doc")"; exit 1; }
+          done
+          for doc in assets/documents/{es,de,en}/*.pdf assets/documents/Jhon_M_Cuenca_CV_*.pdf test-output/custom-cv-*.pdf; do
+            lang="$(basename "$(dirname "$doc")")"
+            name="$(basename "$doc" .pdf)"
+            pdftoppm -r 110 -png "$doc" "test-output/pdf-$lang-$name"
+            pdftotext -bbox "$doc" "/tmp/pdf-$lang-$name.html"
+            python3 -c 'import sys,xml.etree.ElementTree as E; root=E.parse(sys.argv[1]).getroot(); ns="{http://www.w3.org/1999/xhtml}"; pages=list(root.iter(ns+"page")); assert pages; assert all(0<=float(w.attrib["xMin"])<=float(w.attrib["xMax"])<=float(p.attrib["width"])+0.5 and 0<=float(w.attrib["yMin"])<=float(w.attrib["yMax"])<=float(p.attrib["height"])+0.5 for p in pages for w in p.iter(ns+"word"))' "/tmp/pdf-$lang-$name.html"
+          done
       - name: Verify Google Search Console file
         run: |
           set -euo pipefail
@@ -36,7 +63,37 @@ jobs:
           node --check assets/js/language.js
           node --check assets/js/spain-market.js
           node --check assets/js/germany-market.js
+          node --check assets/js/market-catalogue.js
+          node --check assets/js/application-package.js
           node --check assets/js/app.js
           node --check workbench/js/workbench-data.js
           node --check workbench/js/workbench.js
           node --check assets/js/auxiliary-pages.js
+
+      - name: Install browser test dependencies
+        run: |
+          npm install --no-save --no-package-lock playwright@1.58.2 @axe-core/playwright@4.11.1
+          npx playwright install --with-deps chromium webkit
+      - name: Browser smoke tests (desktop and mobile)
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/portfolio-server.log 2>&1 &
+          server=$!
+          trap 'kill "$server" || true' EXIT
+          for i in {1..20}; do curl -fsS http://127.0.0.1:8765/ >/dev/null && break; sleep 1; done
+          node tools/browser_smoke.mjs
+          node tools/cv_builder_smoke.mjs
+          node tools/cv_semantic_live.mjs
+          node tools/cv_semantic_benchmark.mjs
+          node tools/explorer_accessibility.mjs
+      - name: Upload visual checks
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-browser-checks
+          path: |
+            test-output/*.png
+            test-output/custom-cv-*.pdf
+            test-output/cv-semantic-benchmark.json
+            test-output/cv-semantic-summary.json
+            test-output/accessibility.json
+          if-no-files-found: ignore

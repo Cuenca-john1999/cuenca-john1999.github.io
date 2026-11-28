@@ -1,0 +1,104 @@
+{
+  "en": {
+    "title": "Recruitment Hub",
+    "intro": "Quick access for recruitment. Public documents only; originals and references can be requested when relevant.",
+    "cards": [
+      "Public CV",
+      "Qualifications and Europass",
+      "Technical skills",
+      "Technical dossiers",
+      "Contact and references"
+    ],
+    "skills": "technical-catalogue",
+    "docs": "dossiers",
+    "package": "Application package",
+    "select": "Select public documents",
+    "download": "Download selected PDFs (ZIP)",
+    "loading": "Preparing package…",
+    "error": "Could not prepare the package. Download individual PDFs instead.",
+    "none": "Select at least one document.",
+    "files": [
+      "Public CV",
+      "Europass: clinical and biomedical laboratory",
+      "Europass: laboratory operations",
+      "Research profile",
+      "Analytical profile",
+      "Clinical profile",
+      "Skills catalogue"
+    ],
+    "names": [
+      "research-profile",
+      "analytical-profile",
+      "clinical-profile",
+      "skills-catalogue"
+    ]
+  },
+  "es": {
+    "title": "Centro de selección profesional",
+    "intro": "Acceso rápido para procesos de selección. Solo documentos públicos; los originales y referencias se pueden solicitar cuando proceda.",
+    "cards": [
+      "CV público",
+      "Titulaciones y Europass",
+      "Competencias técnicas",
+      "Dosieres técnicos",
+      "Contacto y referencias"
+    ],
+    "skills": "catalogo-tecnico",
+    "docs": "dosieres",
+    "package": "Paquete de candidatura",
+    "select": "Seleccionar documentos públicos",
+    "download": "Descargar PDF seleccionados (ZIP)",
+    "loading": "Preparando paquete…",
+    "error": "No se pudo preparar el paquete. Descarga los PDF individualmente.",
+    "none": "Selecciona al menos un documento.",
+    "files": [
+      "CV público",
+      "Europass: laboratorio clínico y biomédico",
+      "Europass: operaciones de laboratorio",
+      "Perfil de investigación",
+      "Perfil analítico",
+      "Perfil clínico",
+      "Catálogo de competencias"
+    ],
+    "names": [
+      "perfil-investigacion",
+      "perfil-analitico",
+      "perfil-clinico",
+      "catalogo-competencias"
+    ]
+  },
+  "de": {
+    "title": "Bewerbungszentrum",
+    "intro": "Kompakter Einstieg für die Personalauswahl. Nur öffentliche Unterlagen; Originale und Referenzen können bei Bedarf angefragt werden.",
+    "cards": [
+      "Öffentlicher Lebenslauf",
+      "Abschlüsse und Europass",
+      "Fachkompetenzen",
+      "Technische Dossiers",
+      "Kontakt und Referenzen"
+    ],
+    "skills": "fachkatalog",
+    "docs": "dossiers",
+    "package": "Bewerbungspaket",
+    "select": "Öffentliche Dokumente auswählen",
+    "download": "Ausgewählte PDFs herunterladen (ZIP)",
+    "loading": "Paket wird vorbereitet…",
+    "error": "Paket konnte nicht erstellt werden. Bitte einzelne PDFs herunterladen.",
+    "none": "Mindestens ein Dokument auswählen.",
+    "files": [
+      "Öffentlicher Lebenslauf",
+      "Europass: klinisch-biomedizinisches Labor",
+      "Europass: Laborbetrieb",
+      "Forschungsprofil",
+      "Analytikprofil",
+      "Klinisches Profil",
+      "Kompetenzkatalog"
+    ],
+    "names": [
+      "profil-forschung",
+      "profil-analytik",
+      "profil-klinik",
+      "kompetenzkatalog"
+    ]
+  }
+}

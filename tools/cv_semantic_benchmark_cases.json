@@ -1,0 +1,193 @@
+[
+  {
+    "id": "school-en",
+    "lang": "en",
+    "source": "https://www.jobs.service.gov.uk/jobs/6ad69a0fb0af0cb429b5e634",
+    "text": "Science technician in a school. Prepare apparatus for practical lessons, make solutions, maintain equipment and stock records. Safeguarding and risk assessments required.",
+    "expected": [
+      "skill:solutions",
+      "skill:instrumentation",
+      "fact:teaching",
+      "fact:inventory",
+      "fact:safety"
+    ],
+    "gaps": [
+      "safeguarding",
+      "risk-assessment"
+    ],
+    "route": "school"
+  },
+  {
+    "id": "school-paraphrase",
+    "lang": "en",
+    "source": "Synthetic paraphrase",
+    "text": "Set out everything pupils need before their lessons. Keep supplies replenished and help the teachers deliver hands-on science.",
+    "expected": [
+      "fact:teaching",
+      "fact:inventory",
+      "skill:solutions"
+    ],
+    "gaps": [],
+    "route": "school"
+  },
+  {
+    "id": "research-en",
+    "lang": "en",
+    "source": "https://careers.epfl.ch/job/Lausanne-Technician-Technicien%28ne%29-Mammalian-Cell-Culture-%26-Immunoengineering/1165788355/",
+    "text": "Isolate primary human immune cells and maintain mammalian cell cultures. RNA extraction, PCR and ELISA. A bachelor's degree is required.",
+    "expected": [
+      "skill:cd4-cd14",
+      "skill:hacat",
+      "skill:rna-extraction",
+      "skill:pcr",
+      "skill:elisa"
+    ],
+    "gaps": [
+      "degree"
+    ],
+    "route": "research"
+  },
+  {
+    "id": "qc-en",
+    "lang": "en",
+    "source": "https://agcbio.wd5.myworkdayjobs.com/en-US/agcbio_careers/job/Copenhagen-Denmark/Technician--QC-Microbiology---Environmental-Monitoring_JR102946",
+    "text": "Environmental monitoring in GMP cleanrooms. Viable microorganism enumeration, endotoxin and bioburden testing.",
+    "expected": [
+      "skill:microbial-environmental-sampling",
+      "skill:microbial-enumeration"
+    ],
+    "gaps": [
+      "gmp",
+      "lal",
+      "bioburden"
+    ],
+    "route": "pharma"
+  },
+  {
+    "id": "clinical-de",
+    "lang": "de",
+    "source": "https://www.umh.de/stellenangebote/medizinischer-technologe-fuer-laboratoriumsmedizin-mwd",
+    "text": "MTL mit staatlicher Anerkennung. Klinische Chemie, Hämatologie und technische Validierung.",
+    "expected": [
+      "skill:haematology",
+      "skill:biochemistry"
+    ],
+    "gaps": [
+      "mtl",
+      "validation"
+    ],
+    "route": "clinical"
+  },
+  {
+    "id": "analytical-de",
+    "lang": "de",
+    "source": "https://jobs.smartrecruiters.com/Eurofins/744000152328929",
+    "text": "Probenvorbereitung, Wartung und Kalibrierung von Analysengeräten. HPLC und GC unter GMP-Bedingungen.",
+    "expected": [
+      "skill:instrumentation"
+    ],
+    "gaps": [
+      "hplc",
+      "gmp"
+    ],
+    "route": "analytical"
+  },
+  {
+    "id": "analytical-es",
+    "lang": "es",
+    "source": "https://www.aguasresiduales.info/empleo/ofertas-de-trabajo/laboratorios-tecnologicos-de-levante-analista-de-l-PPge",
+    "text": "Ensayos fisicoquímicos de muestras medioambientales, espectroscopía infrarroja y calibración de equipos.",
+    "expected": [
+      "skill:ir-spectroscopy",
+      "skill:instrumentation"
+    ],
+    "gaps": [],
+    "route": "analytical"
+  },
+  {
+    "id": "school-es",
+    "lang": "es",
+    "source": "Synthetic multilingual control",
+    "text": "En un colegio, preparar disoluciones para clases prácticas, revisar equipos, gestionar inventario y apoyar a docentes. Prevención de riesgos.",
+    "expected": [
+      "skill:solutions",
+      "skill:instrumentation",
+      "fact:teaching",
+      "fact:inventory",
+      "fact:safety"
+    ],
+    "gaps": [],
+    "route": "school"
+  },
+  {
+    "id": "school-de",
+    "lang": "de",
+    "source": "Synthetic multilingual control",
+    "text": "Schule: Experimente vorbereiten, Geräte warten, Laborbedarf verwalten und Arbeitsschutz beachten.",
+    "expected": [
+      "skill:solutions",
+      "skill:instrumentation",
+      "fact:teaching",
+      "fact:inventory",
+      "fact:safety"
+    ],
+    "gaps": [],
+    "route": "school"
+  },
+  {
+    "id": "negation",
+    "lang": "en",
+    "source": "Synthetic negation control",
+    "text": "PCR is not required. ELISA is essential. No GMP experience is required.",
+    "expected": [
+      "skill:elisa"
+    ],
+    "gaps": [],
+    "route": "research",
+    "blocked": [
+      "skill:pcr"
+    ],
+    "excludedGaps": [
+      "gmp"
+    ]
+  },
+  {
+    "id": "generic",
+    "lang": "en",
+    "source": "Synthetic boilerplate control",
+    "text": "We offer excellent benefits, flexible working hours, a friendly team and opportunities for career development.",
+    "expected": [],
+    "gaps": [],
+    "route": "general"
+  },
+  {
+    "id": "medical-school",
+    "lang": "en",
+    "source": "Synthetic ambiguous sector control",
+    "text": "School of Medicine research laboratory. Maintain equipment and perform PCR and ELISA.",
+    "expected": [
+      "skill:instrumentation",
+      "skill:pcr",
+      "skill:elisa"
+    ],
+    "gaps": [],
+    "route": "research",
+    "blocked": [
+      "fact:teaching"
+    ]
+  },
+  {
+    "id": "long-tail",
+    "lang": "en",
+    "source": "Synthetic long input control",
+    "text": " Isolation of immune cells and PCR are essential.",
+    "expected": [
+      "skill:cd4-cd14",
+      "skill:pcr"
+    ],
+    "gaps": [],
+    "route": "research",
+    "prefix": "Our company offers an inclusive workplace. ",
+    "repeat": 900
+  }
+]

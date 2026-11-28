@@ -59,8 +59,8 @@
     "workbench": "Workbench"
   },
   "hero": {
-    "title": "Técnico Superior en<br>Laboratorio Clínico y Biomédico",
-    "philosophy": "Comprometido con una vida de aprendizaje, descubrimiento y ayuda a los demás.",
+    "title": "Laboratorio clínico, biomédico<br>y analítico",
+    "philosophy": "Dos titulaciones oficiales: Sanidad y Química · Prácticas en investigación biomédica y análisis de biomasa.",
     "availability": "Madrid como base de disponibilidad · Movilidad en toda España e internacional.",
     "cvCta": "Descargar CV — España",
     "contactCta": "Contacto",
@@ -142,7 +142,7 @@
     },
     "roles": {
       "label": "Puestos de interés",
-      "value": "Técnico Superior en Laboratorio Clínico y Biomédico · Técnico Especialista en Laboratorio (TEL) · Técnico de apoyo a la investigación · Técnico de laboratorio químico, analítico, industrial o de control de calidad"
+      "value": "Técnico Superior en Laboratorio Clínico y Biomédico · Técnico Especialista en Laboratorio (TEL) · Técnico de microbiología y control de calidad · Técnico de apoyo a la investigación · Técnico de laboratorio químico y analítico"
     },
     "languages": {
       "label": "Idiomas",
@@ -210,26 +210,24 @@
       "practiceCta": "Erasmus+ / prácticas: Celignis Biomass Analysis Laboratory · Limerick, Irlanda →",
       "body": "Titulación oficial española: Técnico en Operaciones de Laboratorio, IES Virgen de la Paloma, 2021–2023. Formación en seguridad y organización del laboratorio, química aplicada, pruebas fisicoquímicas, muestreo y operaciones unitarias, análisis químico, microbiología y bioquímica, ensayos de materiales, servicios auxiliares e inglés técnico.",
       "recognition": "Diploma por excelente aprovechamiento en el segundo curso del ciclo de Técnico en Operaciones de Laboratorio.",
-      "results10": "Servicios Auxiliares en el Laboratorio · Inglés Técnico",
-      "results9": "Química Aplicada · Pruebas Fisicoquímicas · Seguridad y Organización en el Laboratorio · Operaciones de Análisis Químico · Ensayos de Materiales",
-      "evidenceIntro": "Los materiales académicos aportados para este portafolio documentan trabajo práctico formativo mediante informes de laboratorio, documentos tipo PNT/SOP, cálculos y materiales de proyectos. Se presenta como evidencia de formación, no como experiencia profesional de las prácticas externas.",
+      "evidenceIntro": "Durante el ciclo realicé prácticas de microbiología, química analítica, ensayos fisicoquímicos y de materiales, con informes, cálculos, procedimientos de trabajo y registros de laboratorio.",
       "evidenceDocumentation": "Documentación y equipos de laboratorio: PNT de pH-metro y estufa de secado, documentación de micropipeta, calibrado de termómetro, registros de inventario y mantenimiento, informes de medida de masas/volúmenes y muestreo.",
-      "evidenceAnalytical": "Química analítica y trabajo fisicoquímico: preparación de disoluciones, valoraciones de HCl/NaOH, acidez, rendimiento de reacción, conductimetría, potenciometría, turbidez, nitratos, proteínas y mediciones fisicoquímicas.",
-      "evidenceMicrobiology": "Microbiología y materiales: uso del microscopio, preparación de medios de cultivo, análisis de agua por filtración de membrana, antibiograma, identificación de plásticos/materiales y trabajos relacionados con corrosión.",
+      "evidenceAnalytical": "Química analítica: disoluciones, valoraciones ácido-base, redox y complexométricas, conductimetría, potenciometría, UV-Vis, nitratos, Bradford, gravimetría y extracción Soxhlet. Operaciones unitarias: cuarteo, muestreo y destilación.",
+      "evidenceMicrobiology": "Microbiología: monitorización de aire y superficies (RODAC), muestreo con hisopos, preparación de medios y autoclave, aislamiento y recuento, filtración de membrana, tinciones, antibiograma e identificación bioquímica. Ensayos de materiales: dureza, tracción, Charpy y metalografía.",
       "placement": "FCT / Erasmus+ en Celignis Biomass Analysis Laboratory, Limerick, Irlanda, del 20 de marzo al 31 de mayo de 2023. El trabajo y las responsabilidades de la estancia se documentan por separado en Experiencia y Workbench."
     },
     "additional": {
       "badge": "3 credenciales documentadas",
       "title": "Certificaciones y formación complementaria",
-      "body": "Funciones A+B+C en Experimentación Animal (Orden ECC/566/2015) · curso con prácticas presenciales. A: cuidado de animales; B: eutanasia; C: realización de procedimientos. El programa formal incluye bienestar animal y 3R, reconocimiento del dolor, sufrimiento y angustia, métodos humanitarios de sacrificio, procedimientos mínimamente invasivos, anestesia para procedimientos menores, anestesia avanzada para procedimientos quirúrgicos o prolongados y principios de cirugía. Durante la parte práctica supervisada realicé personalmente manejo de animales, inyecciones, anestesia, procedimientos quirúrgicos para la obtención de muestras/tejidos y obtención/extracción de muestras animales. También participé en procedimientos supervisados que incluían eutanasia; no se presenta como una realización independiente. Gestión de Centros Sanitarios · 100 h · 2025. Prevención de Riesgos Laborales de nivel básico · 2023.",
+      "body": "Funciones A+B+C en Experimentación Animal (Orden ECC/566/2015) · curso con prácticas presenciales. A: cuidado de animales; B: eutanasia; C: realización de procedimientos. El programa formal incluye bienestar animal y 3R, reconocimiento del dolor, sufrimiento y angustia, métodos humanitarios de sacrificio, procedimientos mínimamente invasivos, anestesia para procedimientos menores, anestesia avanzada para procedimientos quirúrgicos o prolongados y principios de cirugía. Durante la parte práctica supervisada realicé personalmente manejo de animales, inyecciones, anestesia, procedimientos quirúrgicos para la obtención de muestras/tejidos y obtención/extracción de muestras animales. También participé en procedimientos supervisados que incluían eutanasia. Gestión de Centros Sanitarios · 100 h · 2025. Prevención de Riesgos Laborales de nivel básico · 2023.",
       "animal": {
         "meta": "Dynamimed · Orden ECC/566/2015 · Diploma expedido en 2024",
         "title": "Curso de Experimentación Animal · Funciones A+B+C",
-        "scope": "Curso reconocido que abarca las funciones A (cuidado de animales), B (eutanasia) y C (realización de procedimientos). El diploma acredita la superación del curso, no una resolución administrativa individual de capacitación.",
+        "scope": "Curso reconocido que abarca las funciones A (cuidado de animales), B (eutanasia) y C (realización de procedimientos). El diploma acredita la superación del curso. La capacitación individual requiere el procedimiento administrativo correspondiente.",
         "programWelfare": "Bienestar animal y 3R · reconocimiento del dolor, sufrimiento y angustia · métodos humanitarios de sacrificio",
         "programProcedures": "Procedimientos mínimamente invasivos · anestesia para procedimientos menores · anestesia avanzada para procedimientos quirúrgicos o prolongados",
         "programSurgery": "Principios de cirugía",
-        "practice": "Durante la parte práctica supervisada realicé personalmente manejo de animales, inyecciones, anestesia, procedimientos quirúrgicos para la obtención de muestras/tejidos y obtención/extracción de muestras animales. También participé en procedimientos supervisados que incluían eutanasia; no se presenta como una realización independiente."
+        "practice": "Durante la parte práctica supervisada realicé personalmente manejo de animales, inyecciones, anestesia, procedimientos quirúrgicos para la obtención de muestras/tejidos y obtención/extracción de muestras animales. También participé en procedimientos supervisados que incluían eutanasia."
       },
       "healthcare": {
         "meta": "100 h · 2025",
@@ -285,9 +283,9 @@
       "organization": "Trazabilidad de muestras · inventario · organización de laboratorio"
     },
     "academic": {
-      "title": "Formación y conocimiento técnico",
-      "description": "Adquiridos mediante formación profesional, cursos certificados o proyectos académicos; no se presentan como experiencia práctica de las estancias en laboratorio.",
-      "microbiology": "Microbiología clínica",
+      "title": "Prácticas académicas y formación técnica",
+      "description": "Competencias adquiridas durante la formación profesional, cursos certificados y proyectos académicos.",
+      "microbiology": "Microbiología clínica y ambiental · placas RODAC · medios y autoclave · aislamiento, UFC, tinciones y filtración",
       "virology": "Virología · revisión bibliográfica sobre bacteriofagoterapia",
       "animalModels": "Curso de Experimentación Animal · Funciones A+B+C · prácticas supervisadas · cuidado, eutanasia, procedimientos, anestesia y principios quirúrgicos"
     }
@@ -395,7 +393,7 @@
     "abstractIntro": "La resistencia a los antimicrobianos ha renovado el interés científico por la bacteriofagoterapia, especialmente en infecciones donde los tratamientos convencionales presentan limitaciones.",
     "abstractReview": "Este trabajo académico final realizado en coautoría es una revisión bibliográfica estructurada: se evaluaron 75 artículos y se seleccionaron 51 mediante criterios explícitos en fuentes en español, inglés, portugués y ruso. No presenta resultados experimentales ni clínicos propios.",
     "abstractScope": "La revisión explica los bacteriófagos, sus ciclos de replicación, posibles aplicaciones, limitaciones, vías de administración y barreras regulatorias para un uso clínico más amplio.",
-    "abstractInterpretation": "La literatura citada describe aplicaciones prometedoras y limitaciones importantes. Cualquier mención a especificidad, efectos sobre la microbiota o modulación inmunitaria procede de la evidencia revisada y no constituye validación clínica por parte de los autores.",
+    "abstractInterpretation": "La literatura revisada recoge aplicaciones prometedoras y limitaciones importantes, especialmente en relación con la especificidad, la microbiota y la modulación inmunitaria. El trabajo analiza estos resultados publicados desde una perspectiva bibliográfica.",
     "abstractConclusion": "El proyecto también propone un concepto futuro que conecta bacteriófagos, quitosano y biopelículas asociadas a microplásticos. Esta contribución sigue siendo conceptual y requiere validación experimental independiente.",
     "keywords": "Palabras clave: bacteriofagoterapia, bacterias multirresistentes, tratamiento con fagos, antibióticos, terapia alternativa, Staphylococcus aureus, Pseudomonas aeruginosa.",
     "spanishOriginal": "Redacción original en español"
@@ -409,7 +407,7 @@
   "privacyPage": {
     "kicker": "Privacidad",
     "title": "Información de privacidad para el contacto profesional.",
-    "intro": "Esta página explica el flujo actual de datos cuando se utiliza el formulario de contacto del portafolio.",
+    "intro": "Esta página explica el flujo de datos del contacto profesional y del análisis local del CV.",
     "back": "Volver al perfil profesional",
     "controllerTitle": "Responsable",
     "controllerBody": "Jhon M. Cuenca es responsable de los datos personales enviados mediante el formulario de contacto de este portafolio. El contacto está disponible a través del formulario profesional del propio portafolio.",
@@ -425,7 +423,9 @@
     "rightsBody": "Cuando sea aplicable el RGPD, pueden existir derechos de acceso, rectificación, supresión, limitación, oposición y el derecho a presentar una reclamación ante una autoridad de protección de datos competente.",
     "trackingTitle": "Analítica y perfilado",
     "trackingBody": "Este portafolio no utiliza rastreadores publicitarios, perfilado de comportamiento ni servicios de analítica.",
-    "updated": "Última actualización: 8 de agosto de 2026"
+    "localAnalysisTitle": "Análisis local del CV y almacenamiento del navegador",
+        "localAnalysisBody": "El generador de CV procesa el texto de las ofertas en el navegador. Su código no envía las descripciones a un servicio de inferencia ni las guarda en almacenamiento persistente. El análisis semántico opcional descarga el modelo y archivos de ejecución desde Hugging Face y jsDelivr; estas solicitudes pueden revelar metadatos habituales de conexión, como la dirección IP. El navegador puede almacenar estos archivos en caché y los vectores de evidencias profesionales públicas en IndexedDB. Puedes borrar los textos de las ofertas con el botón correspondiente o recargando la página. Para retirar los archivos y vectores en caché, borra los datos de este sitio en la configuración del navegador. Evita introducir información confidencial, especialmente datos personales de terceros.",
+        "updated": "Última actualización: 28 de noviembre de 2026"
   },
   "notFoundPage": {
     "kicker": "404",

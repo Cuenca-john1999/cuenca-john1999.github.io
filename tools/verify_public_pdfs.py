@@ -9,6 +9,7 @@ Matched sensitive values are never printed into CI logs.
 
 from __future__ import annotations
 
+import argparse
 import hashlib
 import re
 from pathlib import Path
@@ -90,9 +91,18 @@ def check_known_compatibility_aliases(hashes: dict[str, str]) -> None:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--include-generated', action='store_true', help='Also inspect freshly rendered custom CV samples')
+    args = parser.parse_args()
     pdfs = sorted(DOCUMENTS.rglob("*.pdf"))
     if not pdfs:
         raise SystemExit("[pdf-privacy] no public PDFs found")
+
+    if args.include_generated:
+        generated = sorted((ROOT / 'test-output').glob('custom-cv-*.pdf'))
+        if not generated:
+            raise SystemExit('[pdf-privacy] no generated CV samples found')
+        pdfs.extend(generated)
 
     hashes: dict[str, str] = {}
     for path in pdfs:
@@ -103,10 +113,10 @@ def main() -> None:
         if path.name.startswith("Jhon_M_Cuenca_CV_"):
             check_cv(path, combined)
         check_academic_project(path, text)
-        if path.parent.name in ("es", "de"):
+        if path.parent.name in ("en", "es", "de") or path.name.startswith(("Jhon_M_Cuenca_CV_", "custom-cv-")):
             check_cv(path, combined)
-            if re.search(r"\b(?:nota final|horas de prácticas|Abschlussnote|Praktikumsstunden)\b", text, re.I):
-                block(path.name, "excluded academic detail in Spain dossier")
+            if re.search(r"\b(?:nota final|horas de prácticas|Abschlussnote|Praktikumsstunden|final grade|placement hours)\b|\b(?:9[.,]25|8[.,]69)\s*/\s*10\b|\b(?:370|380)\s*(?:h\b|hours\b|horas\b|std\b|stunden\b)", combined, re.I):
+                block(path.name, "excluded academic detail in public market dossier")
 
     check_known_compatibility_aliases(hashes)
 

@@ -1,0 +1,747 @@
+{
+  "es": {
+    "title": "Currículum vitae",
+    "labels": {
+      "general": "Perfil general",
+      "clinical": "Diagnóstico clínico",
+      "research": "Investigación biomédica",
+      "pharma": "Microbiología y calidad",
+      "analytical": "Química analítica"
+    },
+    "headings": [
+      "Perfil profesional",
+      "Experiencia de laboratorio",
+      "Titulaciones oficiales",
+      "Competencias seleccionadas",
+      "Formación complementaria",
+      "Idiomas y herramientas digitales",
+      "Experiencia adicional"
+    ],
+    "profile": "Técnico de laboratorio con dos titulaciones oficiales españolas de FP, en Sanidad y Química. Prácticas en investigación inmunológica y molecular en Madrid y análisis de biomasa en Irlanda. Formación práctica académica en microbiología ambiental, clínica y alimentaria, química analítica, instrumentación y metrología.",
+    "mobility": "Madrid como base de disponibilidad. Movilidad en España e internacional. Contacto a través del portafolio.",
+    "exp": [
+      [
+        "Fundación para la Investigación Biomédica del Hospital Universitario de La Princesa",
+        "Madrid | Prácticas FCT, Inmunología y Biología Molecular | 03/2025-06/2025",
+        "Cultivo adherente (HaCaT), medios, pases y congelación; preparación de PBMC y aislamiento CD4/CD14; procesamiento de muestras humanas y animales.",
+        "Extracción de ARN, PCR, electroforesis, genotipado, ELISA, preparación de Western blot, inmunohistoquímica e inmunofluorescencia. Protocolos, inventario y web científica bilingüe."
+      ],
+      [
+        "Celignis Biomass Analysis Laboratory",
+        "Limerick, Irlanda | Prácticas Erasmus+, Análisis de Biomasa | 03/2023-05/2023",
+        "Análisis de humedad, cenizas, materia volátil, CHNOS, BMP/biogás, FOS/TAC, ICP, DQO, amonio y NIR. Operación de TGA Q500, CHNOS, hornos CARBOLITE y Biogas 5000.",
+        "GLP, PNT, controles estadísticos internos, documentación operativa, trazabilidad, apoyo en mantenimiento y resolución de incidencias. Responsabilidad progresiva en materia volátil y formación de relevo."
+      ]
+    ],
+    "qual": [
+      "CEAC FP Oficial, Madrid | 2023-2025",
+      "IES Virgen de la Paloma, Madrid | 2021-2023"
+    ],
+    "project": "Proyecto final en coautoría: Bacteriofagoterapia | Redescubriendo una terapia innovadora (revisión bibliográfica).",
+    "cert": [
+      "Experimentación Animal, funciones A+B+C (Dynamimed; curso 2023, diploma 2024). Curso con prácticas supervisadas; no acredita por sí solo capacitación individual.",
+      "Gestión de Centros Sanitarios (2025); Prevención de Riesgos Laborales, nivel básico (2023).",
+      "Formación en Automatización y Robótica (Instituto Tecnológico MasterD, 2018-2020)."
+    ],
+    "languages": "Español nativo | Inglés B2 | Alemán A2, preparando certificación. Microsoft Office, Google Workspace y bases de datos científicas.",
+    "other": "FORM-ED / WASHI, instructor de robótica educativa (2020-2021); KARMA SUMINISTROS INTEGRALES, auxiliar administrativo (veranos 2015-2017).",
+    "focus": {
+      "general": "Perfil transversal de laboratorio clínico, biomédico y analítico.",
+      "clinical": "Formación sanitaria y prácticas académicas de diagnóstico; prácticas de investigación como experiencia complementaria.",
+      "research": "Apoyo técnico a investigación biomédica, con experiencia formativa en inmunología y biología molecular.",
+      "pharma": "Formación práctica relacionada con monitorización microbiológica, recuentos, medios y trabajo de calidad. No se atribuye experiencia GMP ni ensayos farmacopéicos.",
+      "analytical": "Prácticas analíticas en biomasa, con formación académica complementaria en química instrumental, metrología y operaciones de laboratorio."
+    },
+    "cvMenu": "CV para cada perfil",
+    "cvMenuIntro": "Versiones públicas con texto seleccionable, en una columna y sin datos de contacto privados. Selecciona el perfil más relevante para la vacante.",
+    "download": "Descargar CV (PDF)",
+    "layout": {
+      "education": "FORMACIÓN",
+      "cert": "CURSOS Y CERTIFICACIONES",
+      "skills": "COMPETENCIAS TÉCNICAS",
+      "academic": "PRÁCTICAS ACADÉMICAS RELEVANTES",
+      "experience": "EXPERIENCIA DE LABORATORIO",
+      "profile": "PERFIL PROFESIONAL",
+      "additional": "EXPERIENCIA ADICIONAL",
+      "formal": "Titulación oficial española de Formación Profesional",
+      "location": [
+        "Madrid, España",
+        "Limerick, Irlanda"
+      ],
+      "job": [
+        "Prácticas FCT - Inmunología y Biología Molecular",
+        "Prácticas Erasmus+ - Análisis de Biomasa"
+      ],
+      "certNames": [
+        "CEAC FP OFICIAL",
+        "DYNAMIMED S.L.U.",
+        "IES VIRGEN DE LA PALOMA",
+        "Instituto Tecnológico MasterD"
+      ],
+      "certBodies": [
+        "Curso de especialidad en Gestión de Centros Sanitarios",
+        "Experimentación Animal: funciones A+B+C (Orden ECC/566/2015); curso con prácticas supervisadas, no capacitación individual.",
+        "Formación de nivel básico en Prevención de Riesgos Laborales",
+        "Formación en Automatización y Robótica"
+      ],
+      "additionalRows": [
+        [
+          "FORM-ED / WASHI",
+          "Instructor de Robótica Educativa",
+          "Madrid, España",
+          "FORM-ED 2020-2021 | WASHI 2020",
+          "Docencia STEM; preparación de materiales didácticos y organización de clases."
+        ],
+        [
+          "KARMA SUMINISTROS INTEGRALES",
+          "Auxiliar Administrativo",
+          "Madrid, España",
+          "Veranos 2015-2017",
+          "Apoyo en tareas administrativas y de documentación."
+        ]
+      ]
+    },
+    "variants": {
+      "general": {
+        "subtitle": "Técnico de laboratorio | Clínico, biomédico y analítico",
+        "profile": "Técnico de laboratorio con dos titulaciones oficiales españolas de FP en Sanidad y Química. Prácticas en inmunología y biología molecular en Madrid y análisis de biomasa en Irlanda. Formación práctica en microbiología, química instrumental, análisis clínico y calidad de laboratorio.",
+        "priority": "princesa",
+        "academic": [
+          "Microbiología ambiental y alimentaria: muestreo, medios, tinciones, aislamiento y recuento de microorganismos.",
+          "Análisis clínico básico, UV-Vis, IR, valoraciones, gravimetría, calibración y mantenimiento de equipos."
+        ],
+        "placements": [
+          [
+            "Cultivo celular adherente (HaCaT), preparación de medios y procesamiento de muestras humanas y animales.",
+            "Preparación de PBMC y aislamiento de poblaciones CD4/CD14; apoyo a procedimientos con células inmunes.",
+            "Extracción de ARN, PCR, electroforesis y genotipado de ratones transgénicos; ELISA y preparación de geles, transferencia y bloqueo para Western blot.",
+            "Participación en inmunohistoquímica e inmunofluorescencia, protocolos, bases de datos científicas e inventario de laboratorio.",
+            "Desarrollo de una web científica bilingüe para el grupo de investigación."
+          ],
+          [
+            "Análisis de biomasa y residuos: humedad, cenizas, materia volátil, composición elemental CHNOS y fusibilidad de cenizas.",
+            "Trabajo con BMP/biogás, FOS/TAC, ICP, DQO, amonio y NIR; preparación de muestras y operación de TGA Q500, analizador CHNOS, hornos CARBOLITE y Biogas 5000.",
+            "Trabajo conforme a GLP y PNT, controles estadísticos internos, apoyo a calibración, mantenimiento y resolución de incidencias; elaboración de documentación técnica.",
+            "Responsabilidad progresiva en el flujo de materia volátil y formación de los practicantes de relevo.",
+            "Apoyo a trabajos para clientes y proyectos SteamBioAfrica y BIO4Africa."
+          ]
+        ]
+      },
+      "clinical": {
+        "subtitle": "Técnico Superior en Laboratorio Clínico y Biomédico",
+        "profile": "Técnico Superior en Laboratorio Clínico y Biomédico, con formación sanitaria en hematología, bioquímica clínica, inmunodiagnóstico y microbiología clínica. Prácticas académicas de análisis de orina, frotis, tinciones y manejo de muestras. Experiencia complementaria en procesamiento de muestras humanas e inmunología en La Princesa.",
+        "priority": "academic",
+        "academic": [
+          "CEAC FP Oficial: prácticas de punción capilar, preparación y tinción de frotis, morfología celular, tiras reactivas de orina y examen de sedimento en trabajo grupal.",
+          "Formación en hematología diagnóstica, bioquímica clínica, inmunodiagnóstico y gestión de muestras; prácticas de microscopía y citología de mucosa bucal.",
+          "IES Virgen de la Paloma: tinción de Gram, preparación de medios, siembra, aislamiento, antibiograma académico y recuento de colonias."
+        ],
+        "placements": [
+          [
+            "Procesamiento de muestras humanas y animales en un laboratorio de investigación inmunológica; preparación de PBMC y aislamiento CD4/CD14.",
+            "Trabajo práctico con ELISA, extracción de ARN, PCR, electroforesis y preparación de Western blot; participación en tinciones inmunohistoquímicas e inmunofluorescentes.",
+            "Preparación de medios, cultivo celular adherente, documentación de protocolos y organización de material. Contexto de investigación, no validación diagnóstica."
+          ],
+          [
+            "Preparación de muestras, análisis fisicoquímico, documentación conforme a PNT, controles internos de calidad y trazabilidad en un laboratorio de biomasa."
+          ]
+        ]
+      },
+      "research": {
+        "subtitle": "Técnico de laboratorio | Investigación biomédica",
+        "profile": "Técnico de apoyo a la investigación biomédica con prácticas FCT en inmunología y biología molecular en La Princesa. Experiencia práctica en cultivo celular adherente, preparación de PBMC, aislamiento CD4/CD14, extracción de ARN, PCR, ELISA y preparación de Western blot. Formación complementaria en experimentación animal y documentación científica.",
+        "priority": "princesa",
+        "academic": [
+          "Electroforesis en agarosa con ADN genómico y amplicones de PCR; interpretación de bandas y discusión de resultados incompletos en práctica grupal.",
+          "Formación en fundamentos de citometría de flujo, FACS e inmunofenotipado; proyecto bibliográfico de bacteriofagoterapia en coautoría."
+        ],
+        "placements": [
+          [
+            "Cultivo celular adherente (HaCaT), preparación de medios y procesamiento de muestras humanas y animales.",
+            "Preparación de PBMC y aislamiento de poblaciones CD4/CD14; apoyo a procedimientos con células inmunes.",
+            "Extracción de ARN, PCR, electroforesis y genotipado de ratones transgénicos; ELISA y preparación de geles, transferencia y bloqueo para Western blot.",
+            "Participación en inmunohistoquímica e inmunofluorescencia, protocolos, bases de datos científicas e inventario de laboratorio.",
+            "Desarrollo de una web científica bilingüe para el grupo de investigación."
+          ],
+          [
+            "Análisis instrumental de biomasa (CHNOS, TGA y NIR, entre otros), preparación de muestras y controles internos conforme a PNT y GLP.",
+            "Documentación técnica, apoyo a trabajos para clientes y proyectos SteamBioAfrica y BIO4Africa."
+          ]
+        ]
+      },
+      "pharma": {
+        "subtitle": "Técnico de laboratorio | Microbiología y control de calidad",
+        "profile": "Técnico de laboratorio con formación práctica en control microbiológico de aire, superficies y manipuladores, preparación de medios, autoclave, filtración por membrana, aislamiento y recuento de UFC. Experiencia de prácticas en documentación conforme a PNT, trazabilidad y controles internos en Celignis. Orientado a puestos de microbiología y control de calidad; formación transferible, sin experiencia GMP acreditada.",
+        "priority": "academic",
+        "academic": [
+          "Control microbiológico ambiental: placas de sedimentación para aire, placas RODAC para superficies e hisopos para manipuladores; incubación y cálculo de UFC.",
+          "Preparación y esterilización de medios con autoclave, técnicas asépticas, diluciones, siembra, tinciones y recuento de microorganismos.",
+          "Análisis de agua por filtración de membrana; aislamiento e identificación presuntiva de microorganismos de suelo y alimentos; PNT académicos y mantenimiento básico."
+        ],
+        "placements": [
+          [
+            "Preparación de medios y trabajo con cultivos celulares adherentes; procesamiento de muestras biológicas en inmunología.",
+            "Participación en protocolos experimentales, ELISA y técnicas moleculares; documentación y gestión de material de laboratorio."
+          ],
+          [
+            "Trabajo conforme a PNT y GLP en análisis de biomasa; controles estadísticos internos y trazabilidad de muestras.",
+            "Elaboración de guías operativas, hojas de datos, instrucciones y documentación de incidencias; apoyo al mantenimiento y comprobación de equipos.",
+            "Responsabilidad progresiva en materia volátil y formación de relevo. Experiencia analítica industrial, diferenciada de microbiología farmacéutica."
+          ]
+        ]
+      },
+      "analytical": {
+        "subtitle": "Técnico de laboratorio | Química analítica e instrumentación",
+        "profile": "Técnico en Operaciones de Laboratorio y Técnico Superior en Laboratorio Clínico y Biomédico, con prácticas Erasmus+ en análisis de biomasa en Celignis. Experiencia en materia volátil, humedad, cenizas, CHNOS, TGA, NIR y análisis de biogás, complementada por prácticas académicas de UV-Vis, IR, volumetría, gravimetría y metrología. Orientado al análisis químico e instrumental.",
+        "priority": "celignis",
+        "academic": [
+          "Química instrumental: espectrofotometría UV-Vis y espectros IR de aceites, absorbancia y rectas de calibración; refractometría y pH.",
+          "Análisis clásico: valoraciones ácido-base, redox y complexometría, gravimetría, extracción Soxhlet, destilación y cristalización.",
+          "Metrología: pesaje, material volumétrico, calibración de termómetros, mantenimiento de micropipetas y elaboración de registros de equipos."
+        ],
+        "placements": [
+          [
+            "Preparación y procesamiento de muestras biológicas, medios y reactivos; trabajo con protocolos experimentales.",
+            "Extracción de ARN, PCR, electroforesis y ELISA; documentación e inventario de laboratorio."
+          ],
+          [
+            "Análisis de biomasa y residuos: humedad, cenizas, materia volátil, composición elemental CHNOS y fusibilidad de cenizas.",
+            "Trabajo con BMP/biogás, FOS/TAC, ICP, DQO, amonio y NIR; preparación de muestras y operación de TGA Q500, analizador CHNOS, hornos CARBOLITE y Biogas 5000.",
+            "Trabajo conforme a GLP y PNT, controles estadísticos internos, apoyo a calibración, mantenimiento y resolución de incidencias; elaboración de documentación técnica.",
+            "Responsabilidad progresiva en el flujo de materia volátil y formación de los practicantes de relevo.",
+            "Apoyo a trabajos para clientes y proyectos SteamBioAfrica y BIO4Africa."
+          ]
+        ]
+      }
+    }
+  },
+  "en": {
+    "title": "Curriculum vitae",
+    "labels": {
+      "general": "General profile",
+      "clinical": "Clinical diagnostics",
+      "research": "Biomedical research",
+      "pharma": "Microbiology and quality",
+      "analytical": "Analytical chemistry"
+    },
+    "headings": [
+      "Professional profile",
+      "Laboratory experience",
+      "Official Spanish qualifications",
+      "Selected technical skills",
+      "Additional training",
+      "Languages and digital tools",
+      "Additional experience"
+    ],
+    "profile": "Laboratory technician with two official Spanish vocational qualifications in healthcare and chemistry. Placements in immunology and molecular biology in Madrid and biomass analysis in Ireland. Academic practical training in environmental, clinical and food microbiology, analytical chemistry, instrumentation and metrology.",
+    "mobility": "Bonn-Cologne region; additional bases in Berlin and Madrid. Open to international relocation. Contact through the portfolio.",
+    "exp": [
+      [
+        "Fundación para la Investigación Biomédica del Hospital Universitario de La Princesa",
+        "Madrid, Spain | FCT placement, Immunology and Molecular Biology | 03/2025-06/2025",
+        "Adherent cell culture (HaCaT), media, passaging and freezing; PBMC preparation and CD4/CD14 isolation; human and animal sample processing.",
+        "RNA extraction, PCR, electrophoresis, genotyping, ELISA, Western blot preparation, immunohistochemistry and immunofluorescence. Protocols, inventory and bilingual scientific website."
+      ],
+      [
+        "Celignis Biomass Analysis Laboratory",
+        "Limerick, Ireland | Erasmus+ placement, Biomass Analysis | 03/2023-05/2023",
+        "Moisture, ash, volatile matter, CHNOS, BMP/biogas, FOS/TAC, ICP, COD, ammonium and NIR. TGA Q500, CHNOS analyser, CARBOLITE furnaces and Biogas 5000.",
+        "GLP, SOPs, internal statistical quality checks, operational documentation, traceability, maintenance and troubleshooting support. Progressive responsibility for volatile matter and handover training."
+      ]
+    ],
+    "qual": [
+      "CEAC FP Oficial, Madrid | 2023-2025",
+      "IES Virgen de la Paloma, Madrid | 2021-2023"
+    ],
+    "project": "Co-authored final project: Bacteriofagoterapia | Redescubriendo una terapia innovadora (literature review).",
+    "cert": [
+      "Animal experimentation functions A+B+C (Dynamimed; course 2023, diploma 2024). Supervised practical course; not individual authorisation.",
+      "Healthcare Centre Management (2025); basic occupational risk prevention training (2023).",
+      "Automation and Robotics training (Instituto Tecnológico MasterD, 2018-2020)."
+    ],
+    "languages": "Native Spanish | English B2 | German A2, preparing for certification. Microsoft Office, Google Workspace and scientific databases.",
+    "other": "Private household, au pair and daily-living support (from 01/2026, as recorded in CV); FORM-ED / WASHI, educational robotics instructor (2020-2021); KARMA SUMINISTROS INTEGRALES, administrative assistant (summers 2015-2017).",
+    "focus": {
+      "general": "Cross-disciplinary clinical, biomedical and analytical laboratory profile.",
+      "clinical": "Formal clinical laboratory training and academic diagnostic exercises; research placement as complementary experience. National authorisation requirements apply.",
+      "research": "Technical support for biomedical research, with placement experience in immunology and molecular biology.",
+      "pharma": "Relevant academic practical training in environmental monitoring, enumeration and media preparation; placement experience in quality routines. No claimed GMP or pharmacopoeial testing experience.",
+      "analytical": "Biomass analysis placement, complemented by vocational analytical chemistry, instrumental analysis and metrology training."
+    },
+    "cvMenu": "CVs by professional focus",
+    "cvMenuIntro": "Public, single-column, text-selectable CVs without private contact details. Choose the focus relevant to the role.",
+    "download": "Download CV (PDF)",
+    "layout": {
+      "education": "EDUCATION",
+      "cert": "COURSES & CERTIFICATIONS",
+      "skills": "TECHNICAL SKILLS",
+      "academic": "RELEVANT ACADEMIC PRACTICAL WORK",
+      "experience": "LABORATORY EXPERIENCE",
+      "profile": "PROFESSIONAL PROFILE",
+      "additional": "ADDITIONAL EXPERIENCE",
+      "formal": "Official Spanish vocational qualification",
+      "location": [
+        "Madrid, Spain",
+        "Limerick, Ireland"
+      ],
+      "job": [
+        "FCT Placement - Immunology & Molecular Biology",
+        "Erasmus+ Placement - Biomass Analysis"
+      ],
+      "certNames": [
+        "CEAC FP OFICIAL",
+        "DYNAMIMED S.L.U.",
+        "IES VIRGEN DE LA PALOMA",
+        "Instituto Tecnológico MasterD"
+      ],
+      "certBodies": [
+        "Healthcare Centre Management specialisation course",
+        "Animal experimentation, functions A+B+C (Order ECC/566/2015); supervised practical course, not individual authorisation.",
+        "Basic-level occupational risk prevention training",
+        "Automation and Robotics training"
+      ],
+      "additionalRows": [
+        [
+          "PRIVATE HOUSEHOLD",
+          "Au pair - daily-living support",
+          "Germany",
+          "From 01/2026",
+          "Daily routines, organisation and practical support."
+        ],
+        [
+          "FORM-ED / WASHI",
+          "Educational Robotics Instructor",
+          "Madrid, Spain",
+          "FORM-ED 2020-2021 | WASHI 2020",
+          "STEM teaching, materials and class organisation."
+        ],
+        [
+          "KARMA SUMINISTROS INTEGRALES",
+          "Administrative Assistant",
+          "Madrid, Spain",
+          "Summers 2015-2017",
+          "Administrative and documentation support."
+        ]
+      ]
+    },
+    "variants": {
+      "general": {
+        "subtitle": "Laboratory Technician | Clinical, Biomedical & Analytical",
+        "profile": "Laboratory technician with two official Spanish vocational qualifications in healthcare and chemistry. Placements in immunology and molecular biology in Madrid and biomass analysis in Ireland. Academic practical training in microbiology, instrumental chemistry, clinical analysis and laboratory quality.",
+        "priority": "princesa",
+        "academic": [
+          "Environmental and food microbiology: sampling, media, staining, isolation and microbial enumeration.",
+          "Basic clinical analysis, UV-Vis, IR, titration, gravimetry, calibration and equipment maintenance."
+        ],
+        "placements": [
+          [
+            "Adherent cell culture (HaCaT), media preparation and human and animal sample processing.",
+            "PBMC preparation and CD4/CD14 population isolation; support for immune-cell procedures.",
+            "RNA extraction, PCR, electrophoresis and transgenic-mouse genotyping; ELISA and gel preparation, transfer and blocking for Western blot.",
+            "Participation in immunohistochemistry and immunofluorescence, protocols, scientific databases and laboratory inventory.",
+            "Developed a bilingual scientific website for the research group."
+          ],
+          [
+            "Biomass and waste analysis: moisture, ash, volatile matter, CHNOS elemental composition and ash fusibility.",
+            "Work with BMP/biogas, FOS/TAC, ICP, COD, ammonium and NIR; sample preparation and operation of TGA Q500, CHNOS analyser, CARBOLITE furnaces and Biogas 5000.",
+            "Work according to GLP and SOPs, internal statistical checks, calibration, maintenance and troubleshooting support; preparation of technical documentation.",
+            "Progressive responsibility for the volatile-matter workflow and training of incoming interns.",
+            "Supported customer work and SteamBioAfrica and BIO4Africa projects."
+          ]
+        ]
+      },
+      "clinical": {
+        "subtitle": "Laboratory Technician | Clinical Laboratory Training",
+        "profile": "Holder of the official Spanish higher vocational qualification in Clinical and Biomedical Laboratory. Training in haematology, clinical biochemistry, immunodiagnostics and clinical microbiology; academic practical work in urinalysis, smears, staining and sample handling. Complementary research placement in human sample processing and immunology. Regulated clinical roles depend on local authorisation.",
+        "priority": "academic",
+        "academic": [
+          "CEAC FP Oficial: capillary blood sampling, smear preparation and staining, cell morphology, urine test strips and sediment examination in group practical work.",
+          "Training in diagnostic haematology, clinical biochemistry, immunodiagnostics and sample handling; microscopy and buccal cytology exercises.",
+          "IES Virgen de la Paloma: Gram staining, media preparation, inoculation, isolation, academic disk diffusion and colony counting."
+        ],
+        "placements": [
+          [
+            "Human and animal sample processing in an immunology research laboratory; PBMC preparation and CD4/CD14 isolation.",
+            "Hands-on ELISA, RNA extraction, PCR, electrophoresis and Western blot preparation; participation in immunohistochemical and immunofluorescent staining.",
+            "Media preparation, adherent cell culture, protocol documentation and material organisation. Research setting, not diagnostic validation."
+          ],
+          [
+            "Sample preparation, physicochemical analysis, SOP-based documentation, internal quality controls and traceability in a biomass laboratory."
+          ]
+        ]
+      },
+      "research": {
+        "subtitle": "Laboratory Technician | Biomedical Research",
+        "profile": "Biomedical research technician profile with an immunology and molecular biology placement at La Princesa. Hands-on work in adherent cell culture, PBMC preparation, CD4/CD14 isolation, RNA extraction, PCR, ELISA and Western blot preparation. Additional training in animal experimentation and scientific documentation.",
+        "priority": "princesa",
+        "academic": [
+          "Agarose electrophoresis of genomic DNA and PCR amplicons; band interpretation and discussion of incomplete results in group practical work.",
+          "Training in flow cytometry, FACS and immunophenotyping principles; co-authored literature review on bacteriophage therapy."
+        ],
+        "placements": [
+          [
+            "Adherent cell culture (HaCaT), media preparation and human and animal sample processing.",
+            "PBMC preparation and CD4/CD14 population isolation; support for immune-cell procedures.",
+            "RNA extraction, PCR, electrophoresis and transgenic-mouse genotyping; ELISA and gel preparation, transfer and blocking for Western blot.",
+            "Participation in immunohistochemistry and immunofluorescence, protocols, scientific databases and laboratory inventory.",
+            "Developed a bilingual scientific website for the research group."
+          ],
+          [
+            "Instrumental biomass analysis (including CHNOS, TGA and NIR), sample preparation and internal checks according to SOPs and GLP.",
+            "Technical documentation and support for customer work and SteamBioAfrica and BIO4Africa projects."
+          ]
+        ]
+      },
+      "pharma": {
+        "subtitle": "Laboratory Technician | Microbiology & Quality Control",
+        "profile": "Laboratory technician with academic practical training in air, surface and personnel monitoring, media preparation, autoclaving, membrane filtration, isolation and CFU enumeration. Placement experience in SOP-based documentation, traceability and internal quality checks at Celignis. Seeking microbiology and quality-control roles; transferable training, not accredited GMP experience.",
+        "priority": "academic",
+        "academic": [
+          "Environmental microbiological monitoring: settle plates for air, RODAC plates for surfaces and personnel swabs; incubation and CFU calculation.",
+          "Media preparation and autoclave sterilisation, aseptic techniques, dilution, inoculation, staining and microbial enumeration.",
+          "Water analysis by membrane filtration; isolation and presumptive identification of soil and food microorganisms; academic SOPs and basic maintenance."
+        ],
+        "placements": [
+          [
+            "Media preparation and adherent cell culture; biological sample processing in immunology.",
+            "Participation in experimental protocols, ELISA and molecular methods; documentation and laboratory material management."
+          ],
+          [
+            "SOP- and GLP-based work in biomass analysis; internal statistical controls and sample traceability.",
+            "Preparation of operational guides, data sheets, work instructions and troubleshooting documentation; support for equipment maintenance and checks.",
+            "Progressive responsibility for volatile matter and handover training. Industrial analytical experience, distinct from pharmaceutical microbiology."
+          ]
+        ]
+      },
+      "analytical": {
+        "subtitle": "Laboratory Technician | Analytical Chemistry & Instrumentation",
+        "profile": "Laboratory technician holding two official Spanish vocational qualifications, with an Erasmus+ placement in biomass analysis at Celignis. Practical experience in volatile matter, moisture, ash, CHNOS, TGA, NIR and biogas analysis, complemented by academic UV-Vis, IR, titration, gravimetry and metrology exercises. Focus on chemical and instrumental analysis.",
+        "priority": "celignis",
+        "academic": [
+          "Instrumental chemistry: UV-Vis spectrophotometry and IR spectra of oils, absorbance and calibration curves; refractometry and pH.",
+          "Classical analysis: acid-base, redox and complexometric titrations, gravimetry, Soxhlet extraction, distillation and crystallisation.",
+          "Metrology: weighing, volumetric glassware, thermometer calibration, micropipette maintenance and equipment records."
+        ],
+        "placements": [
+          [
+            "Biological sample, media and reagent preparation; work with experimental protocols.",
+            "RNA extraction, PCR, electrophoresis and ELISA; documentation and laboratory inventory."
+          ],
+          [
+            "Biomass and waste analysis: moisture, ash, volatile matter, CHNOS elemental composition and ash fusibility.",
+            "Work with BMP/biogas, FOS/TAC, ICP, COD, ammonium and NIR; sample preparation and operation of TGA Q500, CHNOS analyser, CARBOLITE furnaces and Biogas 5000.",
+            "Work according to GLP and SOPs, internal statistical checks, calibration, maintenance and troubleshooting support; preparation of technical documentation.",
+            "Progressive responsibility for the volatile-matter workflow and training of incoming interns.",
+            "Supported customer work and SteamBioAfrica and BIO4Africa projects."
+          ]
+        ]
+      }
+    }
+  },
+  "de": {
+    "title": "Lebenslauf",
+    "labels": {
+      "general": "Allgemeines Profil",
+      "clinical": "Klinische Analytik",
+      "research": "Biomedizinische Forschung",
+      "pharma": "Mikrobiologie und Qualität",
+      "analytical": "Analytische Chemie"
+    },
+    "headings": [
+      "Berufliches Profil",
+      "Laborpraktika",
+      "Offizielle spanische Berufsabschlüsse",
+      "Ausgewählte Fachkenntnisse",
+      "Zusatzqualifikationen",
+      "Sprachen und digitale Werkzeuge",
+      "Weitere Erfahrung"
+    ],
+    "profile": "Laborfachkraft mit zwei offiziellen spanischen Berufsabschlüssen im Gesundheits- und Chemiebereich. Praktika in Immunologie und Molekularbiologie in Madrid und Biomasseanalytik in Irland. Ausbildungspraktische Erfahrung in Umwelt-, klinischer und Lebensmittelmikrobiologie, analytischer Chemie, Instrumentierung und Messtechnik.",
+    "mobility": "Raum Bonn/Köln, weitere Standortmöglichkeit Berlin. Deutschlandweit und international umzugsbereit. Kontakt über das Portfolio.",
+    "exp": [
+      [
+        "Fundación para la Investigación Biomédica del Hospital Universitario de La Princesa",
+        "Madrid, Spanien | FCT-Praktikum, Immunologie und Molekularbiologie | 03/2025-06/2025",
+        "Adhärente Zellkultur (HaCaT), Medien, Passagieren und Einfrieren; PBMC-Aufarbeitung und CD4/CD14-Isolierung; humane und tierische Proben.",
+        "RNA-Extraktion, PCR, Elektrophorese, Genotypisierung, ELISA, Western-Blot-Vorbereitung, Immunhistochemie und Immunfluoreszenz. Protokolle, Inventar und zweisprachige wissenschaftliche Website."
+      ],
+      [
+        "Celignis Biomass Analysis Laboratory",
+        "Limerick, Irland | Erasmus+-Praktikum, Biomasseanalytik | 03/2023-05/2023",
+        "Feuchte, Asche, flüchtige Bestandteile, CHNOS, BMP/Biogas, FOS/TAC, ICP, CSB, Ammonium und NIR. TGA Q500, CHNOS-Analysator, CARBOLITE-Öfen und Biogas 5000.",
+        "GLP, SOPs, interne statistische Qualitätskontrollen, Betriebsdokumentation, Rückverfolgbarkeit, Unterstützung bei Wartung und Fehleranalyse. Zunehmende Verantwortung für flüchtige Bestandteile und Einarbeitung bei der Übergabe."
+      ]
+    ],
+    "qual": [
+      "CEAC FP Oficial, Madrid | 2023-2025",
+      "IES Virgen de la Paloma, Madrid | 2021-2023"
+    ],
+    "project": "Abschlussprojekt in Koautorenschaft: Bacteriofagoterapia | Redescubriendo una terapia innovadora (Literaturarbeit).",
+    "cert": [
+      "Tierexperimentelle Funktionen A+B+C (Dynamimed; Kurs 2023, Diplom 2024). Praktischer Kurs unter Aufsicht; keine individuelle Sachkundeanerkennung.",
+      "Management von Gesundheitseinrichtungen (2025); Grundausbildung Arbeitsschutz (2023).",
+      "Ausbildung in Automatisierung und Robotik (Instituto Tecnológico MasterD, 2018-2020)."
+    ],
+    "languages": "Spanisch Muttersprache | Englisch B2 | Deutsch A2, Zertifizierung in Vorbereitung. Microsoft Office, Google Workspace und wissenschaftliche Datenbanken.",
+    "other": "Privathaushalt, Au-pair und Alltagsunterstützung (ab 01/2026 laut Lebenslauf); FORM-ED / WASHI, Dozent für Bildungsrobotik (2020-2021); KARMA SUMINISTROS INTEGRALES, Verwaltungsassistenz (Sommer 2015-2017).",
+    "focus": {
+      "general": "Fachübergreifendes Profil für klinische, biomedizinische und analytische Labore.",
+      "clinical": "Spanische Ausbildung und praktische Ausbildungsübungen im klinischen Labor. Deutsche MTL-Anerkennung nicht nachgewiesen; die rechtlichen Voraussetzungen sind maßgeblich.",
+      "research": "Technische Unterstützung biomedizinischer Forschung mit Praktikumserfahrung in Immunologie und Molekularbiologie.",
+      "pharma": "Verwandte praktische Ausbildung in Umgebungskontrolle, Keimzählung und Nährmedien; Qualitätsroutinen im Praktikum. Keine behauptete GMP- oder Arzneibuchprüfungserfahrung.",
+      "analytical": "Praktikum in Biomasseanalytik, ergänzt durch die chemische Berufsausbildung, instrumentelle Analytik und Messtechnik."
+    },
+    "cvMenu": "Lebensläufe nach Fachprofil",
+    "cvMenuIntro": "Öffentliche, einspaltige Lebensläufe mit auswählbarem Text ohne private Kontaktdaten. Passend zur Stelle auswählen.",
+    "download": "Lebenslauf herunterladen (PDF)",
+    "layout": {
+      "education": "AUSBILDUNG",
+      "cert": "FORTBILDUNGEN & ZERTIFIKATE",
+      "skills": "FACHKENNTNISSE",
+      "academic": "RELEVANTE PRAKTISCHE AUSBILDUNGSÜBUNGEN",
+      "experience": "LABORERFAHRUNG",
+      "profile": "KURZPROFIL",
+      "additional": "WEITERE BERUFSERFAHRUNG",
+      "formal": "Offizieller spanischer Berufsabschluss",
+      "location": [
+        "Madrid, Spanien",
+        "Limerick, Irland"
+      ],
+      "job": [
+        "FCT-Praktikum - Immunologie & Molekularbiologie",
+        "Erasmus+-Praktikum - Biomasseanalytik"
+      ],
+      "certNames": [
+        "CEAC FP OFICIAL",
+        "DYNAMIMED S.L.U.",
+        "IES VIRGEN DE LA PALOMA",
+        "Instituto Tecnológico MasterD"
+      ],
+      "certBodies": [
+        "Spezialisierungskurs Management von Gesundheitseinrichtungen",
+        "Tierexperimentelle Funktionen A+B+C (Orden ECC/566/2015); praktischer Kurs unter Aufsicht, keine individuelle Sachkundeanerkennung.",
+        "Grundausbildung Arbeitsschutz",
+        "Ausbildung in Automatisierung und Robotik"
+      ],
+      "additionalRows": [
+        [
+          "PRIVATHAUSHALT",
+          "Au-pair - Alltagsunterstützung",
+          "Deutschland",
+          "Ab 01/2026",
+          "Alltagsroutinen, Organisation und praktische Unterstützung."
+        ],
+        [
+          "FORM-ED / WASHI",
+          "Dozent für Bildungsrobotik",
+          "Madrid, Spanien",
+          "FORM-ED 2020-2021 | WASHI 2020",
+          "STEM-Unterricht, Unterrichtsmaterialien und Organisation."
+        ],
+        [
+          "KARMA SUMINISTROS INTEGRALES",
+          "Verwaltungsassistenz",
+          "Madrid, Spanien",
+          "Sommer 2015-2017",
+          "Unterstützung bei Verwaltung und Dokumentation."
+        ]
+      ]
+    },
+    "variants": {
+      "general": {
+        "subtitle": "Laborfachkraft | Klinische, biomedizinische & analytische Labore",
+        "profile": "Laborfachkraft mit zwei offiziellen spanischen Berufsabschlüssen im Gesundheits- und Chemiebereich. Praktika in Immunologie und Molekularbiologie in Madrid sowie Biomasseanalytik in Irland. Praktische Ausbildung in Mikrobiologie, instrumenteller Chemie, klinischer Analytik und Laborqualität.",
+        "priority": "princesa",
+        "academic": [
+          "Umwelt- und Lebensmittelmikrobiologie: Probenahme, Nährmedien, Färbungen, Isolierung und Keimzählung.",
+          "Klinische Grundlagenanalytik, UV-Vis, IR, Titration, Gravimetrie, Kalibrierung und Gerätewartung."
+        ],
+        "placements": [
+          [
+            "Adhärente Zellkultur (HaCaT), Medienvorbereitung und Aufarbeitung humaner und tierischer Proben.",
+            "PBMC-Aufarbeitung und Isolierung von CD4/CD14-Populationen; Unterstützung bei Immunzellverfahren.",
+            "RNA-Extraktion, PCR, Elektrophorese und Genotypisierung transgener Mäuse; ELISA sowie Gelvorbereitung, Transfer und Blockierung für Western Blot.",
+            "Mitarbeit bei Immunhistochemie und Immunfluoreszenz, Protokollen, wissenschaftlichen Datenbanken und Laborinventar.",
+            "Entwicklung einer zweisprachigen wissenschaftlichen Website für die Forschungsgruppe."
+          ],
+          [
+            "Biomasse- und Abfallanalytik: Feuchte, Asche, flüchtige Bestandteile, CHNOS-Elementaranalyse und Ascheschmelzverhalten.",
+            "Arbeit mit BMP/Biogas, FOS/TAC, ICP, CSB, Ammonium und NIR; Probenvorbereitung und Bedienung von TGA Q500, CHNOS-Analysator, CARBOLITE-Öfen und Biogas 5000.",
+            "Arbeit nach GLP und SOPs, interne statistische Kontrollen, Unterstützung bei Kalibrierung, Wartung und Fehleranalyse; Erstellung technischer Dokumentation.",
+            "Zunehmende Verantwortung im Workflow zur Bestimmung flüchtiger Bestandteile und Einarbeitung nachfolgender Praktikanten.",
+            "Unterstützung bei Kundenaufträgen und den Projekten SteamBioAfrica und BIO4Africa."
+          ]
+        ]
+      },
+      "clinical": {
+        "subtitle": "Laborfachkraft | Klinisch-biomedizinische Ausbildung",
+        "profile": "Offizieller spanischer höherer Berufsabschluss im klinisch-biomedizinischen Labor. Ausbildung in Hämatologie, klinischer Biochemie, Immundiagnostik und klinischer Mikrobiologie; praktische Übungen in Urinanalytik, Ausstrichen, Färbungen und Probenaufarbeitung. Ergänzendes Forschungspraktikum in der Immunologie. Eine deutsche MTL-Anerkennung ist nicht nachgewiesen.",
+        "priority": "academic",
+        "academic": [
+          "CEAC FP Oficial: Kapillarblutentnahme, Ausstrichpräparation und Färbung, Zellmorphologie, Urinteststreifen und Sedimentuntersuchung in Gruppenübungen.",
+          "Ausbildung in diagnostischer Hämatologie, klinischer Biochemie, Immundiagnostik und Probenmanagement; Mikroskopie und Mundschleimhautzytologie.",
+          "IES Virgen de la Paloma: Gram-Färbung, Nährmedienherstellung, Animpfen, Isolierung, Ausbildungs-Antibiogramm und Keimzählung."
+        ],
+        "placements": [
+          [
+            "Aufarbeitung humaner und tierischer Proben im immunologischen Forschungslabor; PBMC-Aufarbeitung und CD4/CD14-Isolierung.",
+            "Praktische Arbeit mit ELISA, RNA-Extraktion, PCR, Elektrophorese und Western-Blot-Vorbereitung; Mitarbeit bei immunhistochemischen und immunfluoreszenten Färbungen.",
+            "Medienvorbereitung, adhärente Zellkultur, Protokolldokumentation und Materialorganisation. Forschungskontext, keine diagnostische Validierung."
+          ],
+          [
+            "Probenvorbereitung, physikochemische Analytik, SOP-Dokumentation, interne Qualitätskontrollen und Rückverfolgbarkeit im Biomasselabor."
+          ]
+        ]
+      },
+      "research": {
+        "subtitle": "Laborfachkraft | Biomedizinische Forschung",
+        "profile": "Profil für technische Assistenz in der biomedizinischen Forschung mit Praktikum in Immunologie und Molekularbiologie bei La Princesa. Praktische Erfahrung mit adhärenter Zellkultur, PBMC-Aufarbeitung, CD4/CD14-Isolierung, RNA-Extraktion, PCR, ELISA und Western-Blot-Vorbereitung. Ergänzende Ausbildung in Versuchstierkunde und wissenschaftlicher Dokumentation.",
+        "priority": "princesa",
+        "academic": [
+          "Agarosegelelektrophorese genomischer DNA und PCR-Amplikons; Bandeninterpretation und Diskussion unvollständiger Ergebnisse in Gruppenübungen.",
+          "Ausbildung in Grundlagen von Durchflusszytometrie, FACS und Immunphänotypisierung; Literaturarbeit zur Bakteriophagentherapie in Koautorenschaft."
+        ],
+        "placements": [
+          [
+            "Adhärente Zellkultur (HaCaT), Medienvorbereitung und Aufarbeitung humaner und tierischer Proben.",
+            "PBMC-Aufarbeitung und Isolierung von CD4/CD14-Populationen; Unterstützung bei Immunzellverfahren.",
+            "RNA-Extraktion, PCR, Elektrophorese und Genotypisierung transgener Mäuse; ELISA sowie Gelvorbereitung, Transfer und Blockierung für Western Blot.",
+            "Mitarbeit bei Immunhistochemie und Immunfluoreszenz, Protokollen, wissenschaftlichen Datenbanken und Laborinventar.",
+            "Entwicklung einer zweisprachigen wissenschaftlichen Website für die Forschungsgruppe."
+          ],
+          [
+            "Instrumentelle Biomasseanalytik (u. a. CHNOS, TGA und NIR), Probenvorbereitung und interne Kontrollen nach SOPs und GLP.",
+            "Technische Dokumentation, Unterstützung bei Kundenaufträgen sowie SteamBioAfrica und BIO4Africa."
+          ]
+        ]
+      },
+      "pharma": {
+        "subtitle": "Laborfachkraft | Mikrobiologie und Qualitätskontrolle",
+        "profile": "Laborfachkraft mit praktischer Ausbildung in mikrobiologischen Luft-, Oberflächen- und Personalkontrollen, Nährmedienherstellung, Autoklavieren, Membranfiltration, Isolierung und KBE-Zählung. Praktikumserfahrung mit SOP-Dokumentation, Rückverfolgbarkeit und internen Qualitätskontrollen bei Celignis. Ziel: Mikrobiologie und Qualitätskontrolle; keine nachgewiesene GMP-Erfahrung.",
+        "priority": "academic",
+        "academic": [
+          "Mikrobiologische Umgebungskontrolle: Sedimentationsplatten für Luft, RODAC-Abklatschplatten für Oberflächen und Personaltupfer; Inkubation und KBE-Berechnung.",
+          "Nährmedienherstellung und Sterilisation im Autoklaven, aseptische Techniken, Verdünnen, Animpfen, Färbungen und Keimzählung.",
+          "Wasseranalyse mittels Membranfiltration; Isolierung und präsumtive Identifizierung von Boden- und Lebensmittelkeimen; Ausbildungs-SOPs und Grundwartung."
+        ],
+        "placements": [
+          [
+            "Medienvorbereitung und adhärente Zellkultur; Aufarbeitung biologischer Proben in der Immunologie.",
+            "Mitarbeit bei Versuchsprotokollen, ELISA und molekularen Methoden; Dokumentation und Labormaterialverwaltung."
+          ],
+          [
+            "Arbeit nach SOPs und GLP in der Biomasseanalytik; interne statistische Kontrollen und Probenrückverfolgbarkeit.",
+            "Erstellung von Betriebsleitfäden, Datenblättern, Arbeitsanweisungen und Fehlerdokumentation; Unterstützung bei Gerätewartung und Prüfungen.",
+            "Zunehmende Verantwortung bei flüchtigen Bestandteilen und Einarbeitung bei der Übergabe. Industrielle Analytik, abzugrenzen von Pharma-Mikrobiologie."
+          ]
+        ]
+      },
+      "analytical": {
+        "subtitle": "Laborfachkraft | Chemische und instrumentelle Analytik",
+        "profile": "Laborfachkraft mit zwei offiziellen spanischen Berufsabschlüssen und Erasmus+-Praktikum in der Biomasseanalytik bei Celignis. Praktische Erfahrung mit flüchtigen Bestandteilen, Feuchte, Asche, CHNOS, TGA, NIR und Biogasanalytik; ergänzt durch Ausbildungsübungen in UV-Vis, IR, Titration, Gravimetrie und Messtechnik. Schwerpunkt chemische und instrumentelle Analytik.",
+        "priority": "celignis",
+        "academic": [
+          "Instrumentelle Chemie: UV-Vis-Spektrofotometrie und IR-Spektren von Ölen, Absorption und Kalibrierkurven; Refraktometrie und pH.",
+          "Klassische Analytik: Säure-Base-, Redox- und komplexometrische Titration, Gravimetrie, Soxhlet-Extraktion, Destillation und Kristallisation.",
+          "Messtechnik: Wägen, Volumenmessgeräte, Thermometerkalibrierung, Mikropipettenwartung und Geräteprotokolle."
+        ],
+        "placements": [
+          [
+            "Vorbereitung und Aufarbeitung biologischer Proben, Medien und Reagenzien; Arbeit mit Versuchsprotokollen.",
+            "RNA-Extraktion, PCR, Elektrophorese und ELISA; Dokumentation und Laborinventar."
+          ],
+          [
+            "Biomasse- und Abfallanalytik: Feuchte, Asche, flüchtige Bestandteile, CHNOS-Elementaranalyse und Ascheschmelzverhalten.",
+            "Arbeit mit BMP/Biogas, FOS/TAC, ICP, CSB, Ammonium und NIR; Probenvorbereitung und Bedienung von TGA Q500, CHNOS-Analysator, CARBOLITE-Öfen und Biogas 5000.",
+            "Arbeit nach GLP und SOPs, interne statistische Kontrollen, Unterstützung bei Kalibrierung, Wartung und Fehleranalyse; Erstellung technischer Dokumentation.",
+            "Zunehmende Verantwortung im Workflow zur Bestimmung flüchtiger Bestandteile und Einarbeitung nachfolgender Praktikanten.",
+            "Unterstützung bei Kundenaufträgen und den Projekten SteamBioAfrica und BIO4Africa."
+          ]
+        ]
+      }
+    }
+  },
+  "selections": {
+    "general": [
+      "pcr",
+      "electrophoresis",
+      "hacat",
+      "cd4-cd14",
+      "elisa",
+      "chnos",
+      "tga",
+      "glp-sop",
+      "microbial-environmental-sampling",
+      "microbial-enumeration",
+      "culture-media-preparation",
+      "uv-vis-spectrophotometry",
+      "ir-spectroscopy",
+      "thermometer-calibration",
+      "ph-measurement",
+      "academic-sops",
+      "haematology",
+      "biochemistry"
+    ],
+    "clinical": [
+      "haematology",
+      "biochemistry",
+      "sample-management",
+      "clinical-microbiology",
+      "immunodiagnostics",
+      "urinalysis",
+      "capillary-blood-smear",
+      "buccal-cytology",
+      "microbial-staining",
+      "culture-media-preparation",
+      "microscopy",
+      "elisa"
+    ],
+    "research": [
+      "rna-extraction",
+      "pcr",
+      "electrophoresis",
+      "genotyping",
+      "western-blot",
+      "hacat",
+      "cytokine-culture",
+      "human-samples",
+      "cd4-cd14",
+      "animal-samples",
+      "elisa",
+      "ihc",
+      "if",
+      "animal-functions"
+    ],
+    "pharma": [
+      "microbial-environmental-sampling",
+      "microbial-enumeration",
+      "microbial-staining",
+      "culture-media-preparation",
+      "membrane-filtration",
+      "microbial-isolation-identification",
+      "academic-sops",
+      "glp-sop",
+      "internal-qc",
+      "traceability"
+    ],
+    "analytical": [
+      "uv-vis-spectrophotometry",
+      "ir-spectroscopy",
+      "icp",
+      "nir",
+      "titration",
+      "redox-complexometric-titration",
+      "conductimetry",
+      "turbidity",
+      "solutions",
+      "gravimetry",
+      "ph-measurement",
+      "analytical-weighing",
+      "chnos",
+      "tga",
+      "glp-sop",
+      "internal-qc",
+      "technical-documentation"
+    ]
+  }
+}

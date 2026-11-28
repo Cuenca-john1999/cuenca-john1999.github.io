@@ -16,7 +16,7 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 LANGUAGES = ("en", "de", "es")
-HTML_PAGES = ("index.html", "workbench/index.html", "privacy.html", "404.html", "es/index.html", "de/index.html")
+HTML_PAGES = ("index.html", "workbench/index.html", "privacy.html", "404.html", "es/index.html", "de/index.html", "es/workbench/index.html", "de/workbench/index.html")
 
 
 def fail(message: str) -> None:
@@ -178,7 +178,7 @@ def check_required_content() -> None:
 
     required_animal_scope = (
         "animal handling, injections, anaesthesia",
-        "included euthanasia; not presented as independent practice",
+        "supervised procedures involving euthanasia",
     )
     for phrase in required_animal_scope:
         if phrase not in published_text:
@@ -271,12 +271,12 @@ def check_required_content() -> None:
 
     education_markers = (
         'data-education-evidence="operations"',
-        'Official final grade: 8.69/10',
+        'Official Spanish qualification: Técnico en Operaciones de Laboratorio',
         'Diploma for excellent academic performance in the second year',
-        'Laboratory Auxiliary Services · Technical English',
+        'laboratory support and technical English',
         'Applied academic evidence',
         'data-education-evidence="credentials"',
-        'Animal Experimentation · Functions A+B+C',
+        'Animal Experimentation course · Functions A+B+C',
         'Healthcare Centre Management',
         'Basic Level Occupational Risk Prevention',
     )
@@ -380,6 +380,7 @@ def check_structured_data_and_privacy(translations: dict[str, dict]) -> None:
         "https://web3forms.com/privacy",
         "https://web3forms.com/dpa",
         "privacyPage.rightsBody",
+        "privacyPage.localAnalysisBody",
     ):
         if marker not in privacy:
             fail(f"privacy information marker missing: {marker}")
@@ -392,6 +393,8 @@ def check_structured_data_and_privacy(translations: dict[str, dict]) -> None:
         "retentionBody",
         "rightsBody",
         "trackingBody",
+        "localAnalysisTitle",
+        "localAnalysisBody",
         "updated",
     )
     privacy_texts = [privacy]
@@ -461,7 +464,7 @@ def check_search_discovery() -> None:
 def check_localized_static_fallbacks() -> None:
     expectations = {
         "de/index.html": (
-            "Klinisch-biomedizinisches<br>Laborprofil",
+            "Klinische, biomedizinische<br>und analytische Laborarbeit",
             "Ein Laborprofil geprägt von",
             "Jhon_M_Cuenca_CV_DE.pdf",
             "bacteriophage-therapy-final-project_DE.pdf",
@@ -469,7 +472,7 @@ def check_localized_static_fallbacks() -> None:
             'data-current-market="de"',
         ),
         "es/index.html": (
-            "Técnico Superior en<br>Laboratorio Clínico y Biomédico",
+            "Laboratorio clínico, biomédico<br>y analítico",
             "Un perfil de laboratorio definido por la precisión",
             "Jhon_M_Cuenca_CV_ES.pdf",
             "bacteriophage-therapy-final-project_ES.pdf",
@@ -488,8 +491,8 @@ def check_localized_static_fallbacks() -> None:
         ),
     }
     forbidden_fallbacks = {
-        "de/index.html": ("Clinical &amp; Biomedical<br>Laboratory Profile", "independent laboratory responsibility"),
-        "es/index.html": ("Clinical &amp; Biomedical<br>Laboratory Profile", "independent laboratory responsibility"),
+        "de/index.html": ("Clinical, biomedical<br>&amp; analytical laboratory profile", "independent laboratory responsibility"),
+        "es/index.html": ("Clinical, biomedical<br>&amp; analytical laboratory profile", "independent laboratory responsibility"),
         "de/workbench/index.html": ("A living space for<br><span>building, testing and learning.</span>",),
         "es/workbench/index.html": ("A living space for<br><span>building, testing and learning.</span>",),
     }
@@ -513,11 +516,26 @@ def check_localized_static_fallbacks() -> None:
 
 
 def check_public_privacy_guards() -> None:
-    text = "\n".join((ROOT / relative).read_text(encoding="utf-8") for relative in HTML_PAGES)
-    for marker in ("/Volumes/", "/Users/", "djxmaicolx", ".continue/", "BEGIN OPENSSH PRIVATE KEY"):
-        if marker in text:
-            fail(f"private/local marker found in public HTML: {marker}")
-
+    # Inspect the complete public content surface, including generated pages,
+    # translations, search/semantic evidence, and Workbench data.
+    paths = set(ROOT.glob("*.html"))
+    for directory in ("es", "en", "de", "technical", "documents", "cv-builder", "workbench"):
+        paths.update((ROOT / directory).rglob("*.html"))
+    for extension in ("*.json", "*.html"):
+        paths.update((ROOT / "data").rglob(extension))
+    paths.add(ROOT / "workbench/js/workbench-data.js")
+    rules = {
+        "private filesystem or key marker": re.compile(r"/Volumes/|/Users/|djxmaicolx|\.continue/|BEGIN (?:OPENSSH |RSA )?PRIVATE KEY"),
+        "identity-document pattern": re.compile(r"\b(?:\d{8}[A-Z]|[XYZ]\d{7}[A-Z])\b", re.I),
+        "excluded academic grade": re.compile(r"\b(?:nota final|final grade|abschlussnote|endnote des bildungsgangs)\b|\b(?:9[.,]25|8[.,]69)\s*/\s*10\b", re.I),
+        "excluded placement hours": re.compile(r"\b(?:placement hours|horas de prácticas|praktikumsstunden)\b|\b(?:370|380)\s*(?:h\b|hours\b|horas\b|std\b|stunden\b)", re.I),
+    }
+    for path in sorted(paths):
+        text = path.read_text(encoding="utf-8")
+        for category, pattern in rules.items():
+            # Report category and path only, never the matched personal value.
+            if pattern.search(text):
+                fail(f"{category} in public content: {path.relative_to(ROOT)}")
 
 
 def check_cache_busting() -> None:
@@ -528,11 +546,11 @@ def check_cache_busting() -> None:
     refreshed, preventing stale browser caches after publication.
     """
     asset_pattern = re.compile(
-        r'(?:href|src)="([^"?#]+\.(?:css|js))(?:\?v=([^"#]+))?"'
+        r'(?:href|src)="([^"?#]+\.(?:css|m?js))(?:\?v=([^"#]+))?"'
     )
     checked = 0
 
-    for relative in HTML_PAGES:
+    for relative in HTML_PAGES + ("cv-builder/index.html",) + tuple(f"{p}{kind}/index.html" for p in ("", "es/", "de/") for kind in ("technical", "documents")):
         page = ROOT / relative
         html = page.read_text(encoding="utf-8")
         for asset_url, version in asset_pattern.findall(html):
@@ -563,7 +581,7 @@ def check_cache_busting() -> None:
 def check_spain_market() -> None:
     page = (ROOT / "es" / "index.html").read_text(encoding="utf-8")
     dictionary = load_translations()["es"]
-    for marker in ("Selector de país", "Madrid, España", "Movilidad en toda España", "FP de Grado Superior · Sanidad", "FP de Grado Medio · Química", "no una resolución administrativa individual de capacitación"):
+    for marker in ("Selector de país", "Madrid, España", "Movilidad en toda España", "FP de Grado Superior · Sanidad", "FP de Grado Medio · Química", "La capacitación individual requiere el procedimiento administrativo correspondiente"):
         if marker not in page:
             fail(f"Spain market marker missing: {marker}")
     for marker in ("Anerkennung", "Bonn–Colonia", "9,25/10", "8,69/10", 'class="academic-result-list"'):
@@ -572,7 +590,7 @@ def check_spain_market() -> None:
     for section in ("areas-profesionales", "catalogo-tecnico", "instrumentacion", "dosieres"):
         if f'id="{section}"' not in page:
             fail(f"Spain section missing: {section}")
-    if page.count("data-market-skill data-area=") < 35:
+    if page.count("data-market-skill data-area=") != len(json.loads((ROOT / "data/market/common-evidence.json").read_text(encoding="utf-8"))["skills"]):
         fail("Spain skills catalogue is incomplete")
     for name in ("perfil-clinico", "perfil-investigacion", "perfil-analitico", "catalogo-competencias"):
         if not (ROOT / "assets" / "documents" / "es" / f"{name}.pdf").is_file():
@@ -596,7 +614,7 @@ def check_germany_market() -> None:
     for section in ("berufsfelder", "anerkennung", "fachkatalog", "geraete", "dossiers"):
         if f'id="{section}"' not in page:
             fail(f"Germany market section missing: {section}")
-    if page.count("data-market-skill data-area=") != 46:
+    if page.count("data-market-skill data-area=") != len(json.loads((ROOT / "data/market/common-evidence.json").read_text(encoding="utf-8"))["skills"]):
         fail("Germany skills catalogue count mismatch")
     for name in ("profil-forschung", "profil-analytik", "profil-klinik", "kompetenzkatalog"):
         if not (ROOT / "assets" / "documents" / "de" / f"{name}.pdf").is_file():
@@ -609,6 +627,39 @@ def check_germany_market() -> None:
         if source.count('class="market-flag"') != 4:
             fail(f"market flag/icon count mismatch in {relative}")
 
+
+def check_shared_evidence() -> None:
+    data = json.loads((ROOT / "data/market/common-evidence.json").read_text(encoding="utf-8"))
+    keys = {item["id"] for item in data["skills"]}
+    if not keys or len(data["skills"]) != len(keys) or any(item.get("topic") not in data["topics"] for item in data["skills"]):
+        fail("shared evidence IDs are not unique and complete")
+    for lang, path in (("en","index.html"),("es","es/index.html"),("de","de/index.html")):
+        source = (ROOT / path).read_text(encoding="utf-8")
+        if 'id="recruitment-hub"' not in source or source.count("data-application-package") != 1:
+            fail(f"recruitment hub missing in {lang}")
+        found = re.findall(r'data-skill-key="([^"]+)"', source)
+        if set(found) != keys or len(found) != len(keys):
+            fail(f"catalogue differs from shared evidence for {lang}")
+
+def check_scientific_library() -> None:
+    data = json.loads((ROOT / "data/market/scientific-library.json").read_text(encoding="utf-8"))
+    for lang, profile, wb in (("en","index.html","workbench/index.html"),("es","es/index.html","es/workbench/index.html"),("de","de/index.html","de/workbench/index.html")):
+        page = (ROOT / profile).read_text(encoding="utf-8")
+        library = (ROOT / wb).read_text(encoding="utf-8")
+        sections = re.findall(r'<section class="sequence-section market-section"[^>]*>', page)
+        if not sections or any("data-sequence-section" not in section for section in sections):
+            fail(f"untracked market sections in {lang}")
+        if 'id="scientific-library" data-reveal' in library:
+            fail(f"library must reveal individual blocks, not the entire long section in {lang}")
+        if 'id="scientific-library" ' not in library:
+            fail(f"missing scientific library in {lang}")
+        for note in data["notes"]:
+            if f'id="note-{note["id"]}"' not in library:
+                fail(f"missing scientific note in {lang}: {note['id']}")
+        for marker in ("9.25/10","8.69/10","9,25/10","8,69/10","10/10"):
+            if marker in page or marker in library:
+                fail(f"excluded grades in {lang}")
+        check_duplicate_ids(ROOT / wb)
 
 def main() -> None:
     translations = load_translations()
@@ -628,6 +679,8 @@ def main() -> None:
     check_required_content()
     check_spain_market()
     check_germany_market()
+    check_shared_evidence()
+    check_scientific_library()
     print("Portfolio integrity checks passed.")
 
 

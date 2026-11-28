@@ -16,23 +16,27 @@ import json
 import re
 import subprocess
 from pathlib import Path
+from render_market_evidence import render_partial, replace_marked, marked, refresh_hub, refresh_library, hub
+from generate_explorer_pages import outputs as explorer_outputs
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://cuenca-john1999.github.io"
 
 PERSON_META = {
     "de": {
-        "description": "Profil im klinisch-biomedizinischen Labor mit praktischer Erfahrung in Molekularbiologie, Immunologie, analytischer Laborarbeit und wissenschaftlicher Dokumentation.",
+        "description": "Profil im klinisch-biomedizinischen Labor mit praktischer Erfahrung in Molekularbiologie, Immunologie, analytischer Laborarbeit und wissenschaftlicher Dokumentation. Ausbildungspraktische Kenntnisse in Umweltmikrobiologie, Messtechnik und instrumenteller Analytik.",
         "knowsAbout": [
             "Klinische und biomedizinische Laborwissenschaft", "Molekularbiologie", "Immunologie", "PCR", "ELISA",
             "Western Blot", "Zellkultur", "Analytische Laborarbeit", "Gute Laborpraxis (GLP)", "SOP-Dokumentation",
+            "Umweltmikrobiologie", "Messtechnik", "Infrarotspektroskopie", "Analytische Chemie", "Laborqualitätskontrolle",
         ],
     },
     "es": {
-        "description": "Perfil de laboratorio clínico y biomédico con experiencia práctica en biología molecular, inmunología, trabajo analítico de laboratorio y documentación científica.",
+        "description": "Perfil de laboratorio clínico y biomédico con experiencia práctica en biología molecular, inmunología, trabajo analítico de laboratorio y documentación científica. Formación práctica en microbiología ambiental, metrología y análisis instrumental.",
         "knowsAbout": [
             "Laboratorio clínico y biomédico", "Biología molecular", "Inmunología", "PCR", "ELISA",
             "Western blot", "Cultivo celular", "Trabajo analítico de laboratorio", "Buenas Prácticas de Laboratorio (GLP)", "Documentación SOP",
+            "Microbiología ambiental", "Metrología", "Espectroscopía infrarroja", "Química analítica", "Control de calidad de laboratorio",
         ],
     },
 }
@@ -40,14 +44,14 @@ PERSON_META = {
 MAIN_META = {
     "de": {
         "title": "Jhon M. Cuenca | Laborfachkraft in Deutschland · Forschung und Analytik",
-        "description": "Laborfachkraft mit spanischen Berufsabschlüssen und Laborpraktika in Immunologie, Molekularbiologie und Biomasseanalytik. Raum Bonn/Köln, deutschlandweit umzugsbereit.",
+        "description": "Laborfachkraft mit spanischen Berufsabschlüssen und Laborpraktika in Immunologie, Molekularbiologie und Biomasseanalytik. Raum Bonn/Köln, deutschlandweit umzugsbereit. Ausbildungspraktische Kenntnisse in Umweltmikrobiologie, Messtechnik und instrumenteller Analytik.",
         "locale": "de_DE",
         "site_name": "Jhon M. Cuenca | Klinisch-biomedizinisches Laborportfolio",
         "image_alt": "Wissenschaftliches Portfolio von Jhon M. Cuenca mit blauer DNA-Helix, Laborbereichen und Mikroskop.",
     },
     "es": {
         "title": "Jhon M. Cuenca | Técnico de Laboratorio en España",
-        "description": "Portafolio profesional para España: Técnico Superior en Laboratorio Clínico y Biomédico y Técnico en Operaciones de Laboratorio, con experiencia práctica en investigación biomédica y análisis de laboratorio.",
+        "description": "Portafolio profesional para España: Técnico Superior en Laboratorio Clínico y Biomédico y Técnico en Operaciones de Laboratorio, con experiencia práctica en investigación biomédica y análisis de laboratorio. Formación práctica en microbiología ambiental, metrología y análisis instrumental.",
         "locale": "es_ES",
         "site_name": "Jhon M. Cuenca | Portafolio de Laboratorio Clínico y Biomédico",
         "image_alt": "Portafolio científico de Jhon M. Cuenca con una hélice de ADN azul, áreas de laboratorio y un microscopio.",
@@ -252,19 +256,11 @@ def localize_market_profile(text: str, language: str) -> str:
     if count != 1:
         raise SystemExit("[localized-pages] missing market selector")
     if language == "es":
-        text, count = re.subn(
-            r'^ {32}<div class="document-slot">\n {36}<span data-i18n="commonLabels.selectedResults">[^\n]*\n.*?^ {32}</div>\n\n',
-            "", text, count=1, flags=re.M | re.S,
-        )
-        if count != 1:
-            raise SystemExit("[localized-pages] missing academic results block")
         name = '                        <p class="opening-name" data-reveal>Jhon M. Cuenca</p>\n'
-        text = replace_once(text, name, name + '                        <p class="opening-availability" data-reveal>Técnico en Operaciones de Laboratorio</p>\n', "Spain secondary qualification")
-        partial = (ROOT / "data" / "market" / "spain-sections.html").read_text(encoding="utf-8")
+        text = replace_once(text, name, name + '                        <p class="opening-availability" data-reveal>Técnico Superior en Laboratorio Clínico y Biomédico · Técnico en Operaciones de Laboratorio</p>\n', "Spain secondary qualification")
+        partial = render_partial("es")
         marker = '            <section class="sequence-section projects-section"'
         text = replace_once(text, marker, partial + marker, "Spain professional sections")
-        text = replace_once(text, "</head>", '    <link rel="stylesheet" href="../assets/css/spain-market.css?v=12a76b178193">\n</head>', "Spain stylesheet")
-        text = replace_once(text, "</body>", '    <script src="../assets/js/spain-market.js?v=d57881c1585b" defer></script>\n</body>', "Spain script")
         shortcuts = '                <div class="market-actions" aria-label="Accesos rápidos al perfil español"><a class="document-link" href="#areas-profesionales">Áreas profesionales</a><a class="document-link" href="#catalogo-tecnico">Catálogo técnico</a><a class="document-link" href="#instrumentacion">Instrumentación</a><a class="document-link" href="#dosieres">Dosieres PDF</a></div>'
         anchor = '            </section>\n\n            <section class="sequence-section experience-section"'
         text = replace_once(text, anchor, shortcuts + '\n' + anchor, "Spain quick links")
@@ -272,19 +268,11 @@ def localize_market_profile(text: str, language: str) -> str:
         text = replace_once(text, '<h4>Higher Technician in Clinical and Biomedical Laboratory</h4>', '<h4>Técnico Superior en Laboratorio Clínico y Biomédico</h4>', "Spain Europass clinical title")
         text = replace_once(text, '<h4>Technician in Laboratory Operations</h4>', '<h4>Técnico en Operaciones de Laboratorio</h4>', "Spain Europass operations title")
     if language == "de":
-        text, count = re.subn(
-            r'^ {32}<div class="document-slot">\n {36}<span data-i18n="commonLabels.selectedResults">[^\n]*\n.*?^ {32}</div>\n\n',
-            "", text, count=1, flags=re.M | re.S,
-        )
-        if count != 1:
-            raise SystemExit("[localized-pages] missing German academic results block")
         name = '                        <p class="opening-name" data-reveal>Jhon M. Cuenca</p>\n'
         text = replace_once(text, name, name + '                        <p class="opening-availability" data-reveal>Laborfachkraft · zwei spanische Berufsabschlüsse</p>\n', "Germany secondary qualification")
-        partial = (ROOT / "data" / "market" / "germany-sections.html").read_text(encoding="utf-8")
+        partial = render_partial("de")
         marker = '            <section class="sequence-section projects-section"'
         text = replace_once(text, marker, partial + marker, "Germany professional sections")
-        text = replace_once(text, "</head>", '    <link rel="stylesheet" href="../assets/css/spain-market.css?v=12a76b178193">\n</head>', "Germany stylesheet")
-        text = replace_once(text, "</body>", '    <script src="../assets/js/germany-market.js?v=692fdc424157" defer></script>\n</body>', "Germany script")
         shortcuts = '                <div class="market-actions" aria-label="Schnellzugriff Deutschland"><a class="document-link" href="#berufsfelder">Berufsfelder</a><a class="document-link" href="#anerkennung">Anerkennung</a><a class="document-link" href="#fachkatalog">Kompetenzkatalog</a><a class="document-link" href="#geraete">Geräte</a><a class="document-link" href="#dossiers">PDF-Dossiers</a></div>'
         anchor = '            </section>\n\n            <section class="sequence-section experience-section"'
         text = replace_once(text, anchor, shortcuts + '\n' + anchor, "Germany quick links")
@@ -311,6 +299,9 @@ def localize_profile_json_ld(text: str, language: str) -> str:
 
 def render_main(language: str) -> str:
     source = (ROOT / "index.html").read_text(encoding="utf-8")
+    source = replace_marked(source, "INTERNATIONAL-MARKET")
+    source = replace_marked(source, "INTERNATIONAL-QUICK")
+    source = replace_marked(source, "RECRUITMENT-HUB")
     meta = MAIN_META[language]
     url = f"{BASE_URL}/{language}/"
 
@@ -351,7 +342,11 @@ def render_main(language: str) -> str:
     source = source.replace('../assets/documents/bacteriophage-therapy-final-project_EN.pdf', f'../assets/documents/bacteriophage-therapy-final-project_{language.upper()}.pdf')
     source = source.replace('../assets/documents/bacteriophage-therapy-defense_EN.pdf', f'../assets/documents/bacteriophage-therapy-defense_{language.upper()}.pdf')
     source = localize_markup(source, load_main_translation(language))
+    builder = json.loads((ROOT / "data/market/cv-builder-ui.json").read_text(encoding="utf-8"))[language]
+    source = replace_once(source, '<a class="opening-action" href="#cv-builder">Build a tailored CV</a>', f'<a class="opening-action" href="#cv-builder">{builder["hero"]}</a>', "CV Builder hero shortcut")
     source = localize_market_profile(source, language)
+    marker = '            <section class="sequence-section experience-section"'
+    source = replace_once(source, marker, marked("RECRUITMENT-HUB", hub(language)) + marker, "recruitment hub")
     source = localize_profile_json_ld(source, language)
     return source
 
@@ -385,6 +380,7 @@ def render_workbench(language: str) -> str:
     source = source.replace('src="js/', 'src="../../workbench/js/')
     source = localize_markup(source, load_workbench_translation(language))
     source = localize_language_controls(source, language)
+    source = refresh_library(source, language)
     return source
 
 
@@ -397,6 +393,7 @@ def render_sitemap() -> str:
         f"{BASE_URL}/de/workbench/",
         f"{BASE_URL}/es/workbench/",
         f"{BASE_URL}/privacy.html",
+        *(f"{BASE_URL}/{prefix}{kind}/" for prefix in ("", "es/", "de/") for kind in ("technical", "documents")),
     )
     body = "\n".join(f"  <url>\n    <loc>{url}</loc>\n  </url>" for url in urls)
     return f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{body}\n</urlset>\n'
@@ -407,13 +404,17 @@ def normalize_generated_html(text: str) -> str:
 
 
 def outputs() -> dict[Path, str]:
-    return {
+    pages = {
+        ROOT / "index.html": normalize_generated_html(refresh_hub(replace_marked((ROOT / "index.html").read_text(encoding="utf-8"), "INTERNATIONAL-MARKET", marked("INTERNATIONAL-MARKET", render_partial("en"))), "en")),
+        ROOT / "workbench" / "index.html": normalize_generated_html(refresh_library((ROOT / "workbench" / "index.html").read_text(encoding="utf-8"), "en")),
         ROOT / "de" / "index.html": normalize_generated_html(render_main("de")),
         ROOT / "es" / "index.html": normalize_generated_html(render_main("es")),
         ROOT / "de" / "workbench" / "index.html": normalize_generated_html(render_workbench("de")),
         ROOT / "es" / "workbench" / "index.html": normalize_generated_html(render_workbench("es")),
         ROOT / "sitemap.xml": render_sitemap(),
     }
+    pages.update(explorer_outputs({"en": pages[ROOT / "index.html"], "es": pages[ROOT / "es/index.html"], "de": pages[ROOT / "de/index.html"]}))
+    return pages
 
 
 def main() -> None:
@@ -426,6 +427,11 @@ def main() -> None:
         if args.check:
             if not path.is_file() or path.read_text(encoding="utf-8") != expected:
                 stale.append(str(path.relative_to(ROOT)))
+                if path.is_file():
+                    import difflib
+                    actual = path.read_text(encoding="utf-8")
+                    for line in list(difflib.unified_diff(actual.splitlines(), expected.splitlines(), fromfile=str(path.relative_to(ROOT)), tofile="expected", n=2))[:100]:
+                        print(line)
             continue
 
         path.parent.mkdir(parents=True, exist_ok=True)

@@ -1,0 +1,107 @@
+[
+  {
+    "id": "independent-research-indirect-en",
+    "lang": "en",
+    "text": "Keep adherent human keratinocytes healthy between experiments, collect RNA from samples, amplify target sequences and quantify secreted proteins using an immunoassay.",
+    "expected": [
+      "skill:hacat",
+      "skill:rna-extraction",
+      "skill:pcr",
+      "skill:elisa"
+    ],
+    "gaps": [],
+    "source": "New synthetic holdout; not used to tune matcher",
+    "set": "holdout"
+  },
+  {
+    "id": "independent-food-es",
+    "lang": "es",
+    "text": "Controlar la carga microbiana de alimentos, preparar medios de crecimiento, diluir las muestras y contar colonias. Se valorará experiencia con pruebas de identificación bacteriana.",
+    "expected": [
+      "skill:food-microbiology",
+      "skill:culture-media-preparation",
+      "skill:microbial-enumeration",
+      "skill:microbial-isolation-identification"
+    ],
+    "gaps": [],
+    "source": "New synthetic holdout; not used to tune matcher",
+    "set": "holdout"
+  },
+  {
+    "id": "independent-analytical-en",
+    "lang": "en",
+    "text": "Characterise solid fuels by measuring ash residue, volatile fraction and elemental composition. Maintain sample records and prepare work instructions.",
+    "expected": [
+      "skill:moisture-ash",
+      "skill:volatile-matter",
+      "skill:chnos",
+      "skill:technical-documentation"
+    ],
+    "gaps": [],
+    "source": "New synthetic holdout; not used to tune matcher",
+    "set": "holdout"
+  },
+  {
+    "id": "independent-clinical-es",
+    "lang": "es",
+    "text": "Apoyar el procesamiento de sangre y orina; preparar extensiones sanguíneas y observar el sedimento urinario. Realizar determinaciones de bioquímica clínica.",
+    "expected": [
+      "skill:capillary-blood-smear",
+      "skill:urinalysis",
+      "skill:biochemistry"
+    ],
+    "gaps": [],
+    "source": "New synthetic holdout; not used to tune matcher",
+    "set": "holdout"
+  },
+  {
+    "id": "independent-school-de",
+    "lang": "de",
+    "text": "Für den naturwissenschaftlichen Unterricht sollen Materialien bereitgestellt, Lösungen angesetzt und Laborbestände gepflegt werden. Lehrkräfte bei praktischen Versuchen unterstützen.",
+    "expected": [
+      "fact:teaching",
+      "skill:solutions",
+      "fact:inventory"
+    ],
+    "gaps": [],
+    "source": "New synthetic holdout; not used to tune matcher",
+    "set": "holdout"
+  },
+  {
+    "id": "independent-quality-de",
+    "lang": "de",
+    "text": "Messgeräte überprüfen, Volumenmessungen dokumentieren und die Handhabung von Mikropipetten sicherstellen. Technische Arbeitsanweisungen pflegen.",
+    "expected": [
+      "skill:instrumentation",
+      "skill:volumetric-measurement",
+      "skill:pipette-maintenance",
+      "skill:technical-documentation"
+    ],
+    "gaps": [],
+    "source": "New synthetic holdout; not used to tune matcher",
+    "set": "holdout"
+  },
+  {
+    "id": "independent-requirements-en",
+    "lang": "en",
+    "text": "The successful applicant must hold a professional registration and a master's degree. HPLC method validation is required. Previous GMP experience is not required.",
+    "expected": [],
+    "gaps": [
+      "mtl",
+      "degree",
+      "hplc",
+      "validation"
+    ],
+    "source": "New synthetic holdout; not used to tune matcher",
+    "set": "holdout"
+  },
+  {
+    "id": "independent-boilerplate-es",
+    "lang": "es",
+    "text": "Ofrecemos horarios flexibles, un entorno inclusivo, beneficios sociales y oportunidades de promoción.",
+    "expected": [],
+    "gaps": [],
+    "source": "New synthetic holdout; not used to tune matcher",
+    "set": "holdout"
+  }
+]

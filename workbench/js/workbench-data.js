@@ -31,7 +31,7 @@
                 research: 'Research notes',
                 learning: 'Technical & learning',
                 milestones: 'Milestones',
-                principles: 'Method'
+                principles: 'Method', library: 'Library'
             },
             hero: {
                 eyebrow: 'Independent projects · scientific notes · applied learning',
@@ -104,13 +104,13 @@
                 learningItem2: 'Scientific Portfolio · Published multilingual delivery',
                 learningItem3: 'La Princesa · Clinical and biomedical laboratory placement',
                 learningItem4: 'Celignis · Analytical and biomass laboratory placement',
-                learningItem5: 'Animal Experimentation A+B+C · 70 h · in-person practical training',
+                learningItem5: 'Animal Experimentation A+B+C · in-person practical training',
                 milestones: 'Milestones',
                 milestonesBody: 'Documented progress points with direct evidence.',
                 milestonesItem1: '2026 · Portfolio publication on GitHub Pages with automated integrity checks',
                 milestonesItem2: '2026 · Functional DeutschOS system began transition into LLC — Laboratory Language Companion',
                 milestonesItem3: '2025 · FCT placement at Hospital Universitario de La Princesa',
-                milestonesItem4: '2025 · Completed co-authored bacteriophage final project · 10/10',
+                milestonesItem4: '2025 · Completed co-authored bacteriophage final project',
                 milestonesItem5: '2023 · Erasmus+ analytical biomass placement at Celignis'
             },
             entriesData: {
@@ -122,7 +122,7 @@
                 chitosan: 'Early-stage, literature-informed hypothesis proposed for future controlled laboratory validation.'
             },
             professionalContext: {
-                animalTraining: { kicker: 'Animal Experimentation · Functions A+B+C', body: 'Certified 70-hour course under Order ECC/566/2015 with in-person practical training. The formal programme covers animal care, euthanasia and performance of procedures, together with welfare/3Rs, recognition of pain and distress, humane killing methods, minimally invasive procedures, anaesthesia and principles of surgery.', pointFunctions: 'Functions: A · care of animals; B · euthanasia of animals; C · performance of procedures', pointProgramme: 'Programme: welfare & 3Rs · pain/suffering/distress recognition · humane killing · minimally invasive procedures · minor and advanced anaesthesia · principles of surgery', pointHandsOn: 'Personally performed during supervised practical training: animal handling, injections, anaesthesia and surgical procedures for sample/tissue collection', pointSamples: 'Personally performed: collection/extraction of animal samples. Also participated in supervised procedures that included euthanasia; not presented as independent practice.', scope: 'Scope note: supervised training and practical experience; no claim of independent veterinary or surgical practice.' },
+                animalTraining: { kicker: 'Animal Experimentation · Functions A+B+C', body: 'Certified course under Order ECC/566/2015 with in-person practical training. The formal programme covers animal care, euthanasia and performance of procedures, together with welfare/3Rs, recognition of pain and distress, humane killing methods, minimally invasive procedures, anaesthesia and principles of surgery.', pointFunctions: 'Functions: A · care of animals; B · euthanasia of animals; C · performance of procedures', pointProgramme: 'Programme: welfare & 3Rs · pain/suffering/distress recognition · humane killing · minimally invasive procedures · minor and advanced anaesthesia · principles of surgery', pointHandsOn: 'Personally performed during supervised practical training: animal handling, injections, anaesthesia and surgical procedures for sample/tissue collection', pointSamples: 'Personally performed: collection/extraction of animal samples. Also took part in supervised procedures involving euthanasia.', scope: 'Context: supervised practical training.' },
                 development: {
                     kicker: 'Current Development',
                     title: 'Continuing professional development while preparing for laboratory opportunities.',
@@ -188,7 +188,7 @@
                 research: 'Notas de investigación',
                 learning: 'Técnica y aprendizaje',
                 milestones: 'Hitos',
-                principles: 'Método'
+                principles: 'Método', library: 'Biblioteca'
             },
             hero: {
                 eyebrow: 'Proyectos independientes · notas científicas · aprendizaje aplicado',
@@ -261,13 +261,13 @@
                 learningItem2: 'Portafolio científico · Entrega multilingüe publicada',
                 learningItem3: 'La Princesa · Prácticas en laboratorio clínico y biomédico',
                 learningItem4: 'Celignis · Prácticas en laboratorio analítico y de biomasa',
-                learningItem5: 'Experimentación Animal A+B+C · 70 h · prácticas presenciales',
+                learningItem5: 'Experimentación Animal A+B+C · prácticas presenciales',
                 milestones: 'Hitos',
                 milestonesBody: 'Avances documentados con evidencia directa.',
                 milestonesItem1: '2026 · Publicación del portafolio en GitHub Pages con controles automáticos de integridad',
                 milestonesItem2: '2026 · El sistema funcional DeutschOS inició su transición a LLC — Laboratory Language Companion',
                 milestonesItem3: '2025 · Prácticas FCT en el Hospital Universitario de La Princesa',
-                milestonesItem4: '2025 · Proyecto final de bacteriofagoterapia en coautoría completado · 10/10',
+                milestonesItem4: '2025 · Proyecto final de bacteriofagoterapia en coautoría completado',
                 milestonesItem5: '2023 · Prácticas Erasmus+ de análisis de biomasa en Celignis'
             },
             entriesData: {
@@ -279,7 +279,7 @@
                 chitosan: 'Hipótesis preliminar basada en literatura y propuesta para una futura validación controlada en laboratorio.'
             },
             professionalContext: {
-                animalTraining: { kicker: 'Experimentación Animal · Funciones A+B+C', body: 'Curso certificado de 70 horas conforme a la Orden ECC/566/2015 con prácticas presenciales. El programa formal cubre cuidado de animales, eutanasia y realización de procedimientos, junto con bienestar/3R, reconocimiento del dolor y la angustia, métodos humanitarios de sacrificio, procedimientos mínimamente invasivos, anestesia y principios de cirugía.', pointFunctions: 'Funciones: A · cuidado de animales; B · eutanasia; C · realización de procedimientos', pointProgramme: 'Programa: bienestar y 3R · reconocimiento de dolor/sufrimiento/angustia · sacrificio humanitario · procedimientos mínimamente invasivos · anestesia básica y avanzada · principios de cirugía', pointHandsOn: 'Realizado personalmente durante prácticas supervisadas: manejo de animales, inyecciones, anestesia y procedimientos quirúrgicos para obtención de muestras/tejidos', pointSamples: 'Realizado personalmente: obtención/extracción de muestras animales. También participé en procedimientos supervisados que incluían eutanasia; no se presenta como una realización independiente.', scope: 'Nota de alcance: formación y experiencia práctica supervisada; no se afirma ejercicio veterinario o quirúrgico independiente.' },
+                animalTraining: { kicker: 'Experimentación Animal · Funciones A+B+C', body: 'Curso certificado conforme a la Orden ECC/566/2015 con prácticas presenciales. El programa formal cubre cuidado de animales, eutanasia y realización de procedimientos, junto con bienestar/3R, reconocimiento del dolor y la angustia, métodos humanitarios de sacrificio, procedimientos mínimamente invasivos, anestesia y principios de cirugía.', pointFunctions: 'Funciones: A · cuidado de animales; B · eutanasia; C · realización de procedimientos', pointProgramme: 'Programa: bienestar y 3R · reconocimiento de dolor/sufrimiento/angustia · sacrificio humanitario · procedimientos mínimamente invasivos · anestesia básica y avanzada · principios de cirugía', pointHandsOn: 'Realizado personalmente durante prácticas supervisadas: manejo de animales, inyecciones, anestesia y procedimientos quirúrgicos para obtención de muestras/tejidos', pointSamples: 'Realizado personalmente: obtención/extracción de muestras animales. También participé en procedimientos supervisados que incluían eutanasia.', scope: 'Contexto: formación práctica bajo supervisión.' },
                 development: {
                     kicker: 'Desarrollo actual',
                     title: 'Desarrollo profesional continuo mientras preparo oportunidades de laboratorio.',
@@ -345,7 +345,7 @@
                 research: 'Forschungsnotizen',
                 learning: 'Technik & Lernen',
                 milestones: 'Meilensteine',
-                principles: 'Methode'
+                principles: 'Methode', library: 'Bibliothek'
             },
             hero: {
                 eyebrow: 'Eigene Projekte · wissenschaftliche Notizen · angewandtes Lernen',
@@ -418,13 +418,13 @@
                 learningItem2: 'Wissenschaftliches Portfolio · Veröffentlichte mehrsprachige Umsetzung',
                 learningItem3: 'La Princesa · Praktikum im klinisch-biomedizinischen Labor',
                 learningItem4: 'Celignis · Praktikum im analytischen Biomasse-Labor',
-                learningItem5: 'Versuchstierkunde A+B+C · 70 Std. · Präsenzpraxis',
+                learningItem5: 'Versuchstierkunde A+B+C · Präsenzpraxis',
                 milestones: 'Meilensteine',
                 milestonesBody: 'Dokumentierte Fortschritte mit direkter Evidenz.',
                 milestonesItem1: '2026 · Portfolio auf GitHub Pages veröffentlicht, mit automatischen Integritätsprüfungen',
                 milestonesItem2: '2026 · Das funktionsfähige DeutschOS-System begann den Übergang zu LLC — Laboratory Language Companion',
                 milestonesItem3: '2025 · FCT-Praktikum am Hospital Universitario de La Princesa',
-                milestonesItem4: '2025 · Gemeinsam verfasstes Abschlussprojekt zur Phagentherapie abgeschlossen · 10/10',
+                milestonesItem4: '2025 · Gemeinsam verfasstes Abschlussprojekt zur Phagentherapie abgeschlossen',
                 milestonesItem5: '2023 · Erasmus+-Praktikum in der Biomasseanalytik bei Celignis'
             },
             entriesData: {
@@ -436,7 +436,7 @@
                 chitosan: 'Frühe, literaturbasierte Hypothese für eine spätere kontrollierte Validierung im Labor.'
             },
             professionalContext: {
-                animalTraining: { kicker: 'Versuchstierkunde · Funktionen A+B+C', body: 'Zertifizierter 70-Stunden-Kurs gemäß Erlass ECC/566/2015 mit Präsenzpraxis. Das formale Programm umfasst Tierpflege, Tötung/Euthanasie und Durchführung von Verfahren sowie Tierwohl/3R, Erkennen von Schmerz und Angst, tierschutzgerechte Tötungsmethoden, minimalinvasive Verfahren, Anästhesie und chirurgische Grundlagen.', pointFunctions: 'Funktionen: A · Tierpflege; B · Tötung/Euthanasie; C · Durchführung von Verfahren', pointProgramme: 'Programm: Tierwohl & 3R · Erkennen von Schmerz/Leiden/Angst · tierschutzgerechte Tötung · minimalinvasive Verfahren · einfache und fortgeschrittene Anästhesie · chirurgische Grundlagen', pointHandsOn: 'Persönlich im beaufsichtigten Praxisteil durchgeführt: Tierhandling, Injektionen, Anästhesie und chirurgische Verfahren zur Proben-/Gewebegewinnung', pointSamples: 'Persönlich durchgeführt: Gewinnung/Entnahme tierischer Proben. Außerdem Beteiligung an beaufsichtigten Verfahren mit Euthanasie; nicht als eigenständige Durchführung dargestellt.', scope: 'Hinweis zum Umfang: beaufsichtigte Ausbildung und Praxiserfahrung; keine eigenständige tierärztliche oder chirurgische Tätigkeit.' },
+                animalTraining: { kicker: 'Versuchstierkunde · Funktionen A+B+C', body: 'Zertifizierter Kurs gemäß Erlass ECC/566/2015 mit Präsenzpraxis. Das formale Programm umfasst Tierpflege, Tötung/Euthanasie und Durchführung von Verfahren sowie Tierwohl/3R, Erkennen von Schmerz und Angst, tierschutzgerechte Tötungsmethoden, minimalinvasive Verfahren, Anästhesie und chirurgische Grundlagen.', pointFunctions: 'Funktionen: A · Tierpflege; B · Tötung/Euthanasie; C · Durchführung von Verfahren', pointProgramme: 'Programm: Tierwohl & 3R · Erkennen von Schmerz/Leiden/Angst · tierschutzgerechte Tötung · minimalinvasive Verfahren · einfache und fortgeschrittene Anästhesie · chirurgische Grundlagen', pointHandsOn: 'Persönlich im beaufsichtigten Praxisteil durchgeführt: Tierhandling, Injektionen, Anästhesie und chirurgische Verfahren zur Proben-/Gewebegewinnung', pointSamples: 'Persönlich durchgeführt: Gewinnung/Entnahme tierischer Proben. Außerdem Mitwirkung an Verfahren mit Euthanasie unter Aufsicht.', scope: 'Kontext: praktische Ausbildung unter Aufsicht.' },
                 development: {
                     kicker: 'Aktuelle Entwicklung',
                     title: 'Kontinuierliche berufliche Entwicklung während der Vorbereitung auf Laborchancen.',
@@ -562,7 +562,7 @@
                 problem: 'Microplastics are an emerging health concern, but human exposure, accumulation and clinical impact still require careful experimental confirmation.',
                 contribution: 'Original concept development, hypothesis framing, proposed methodology and scientific communication. The contribution includes the adsorption, biofilm-guided design, degradation-support and biomedical feasibility hypotheses, with scope and limitations stated explicitly.',
                 result: 'Current maturity is conceptual only. Proposed methods include biofilm sequencing, MiSeq-based microbial profiling, chitosan modification, FTIR characterization, adsorption assays and biocompatibility testing. No experimental validation was performed.',
-                next: 'The proposal requires in vitro validation, toxicity assessment, robust controls, reproducible analytical methods, independent scientific review and cautious interpretation before any biomedical or clinical interpretation. It does not claim demonstrated therapeutic efficacy.',
+                next: 'The proposal requires in vitro validation, toxicity assessment, robust controls, reproducible analytical methods, independent scientific review and cautious interpretation before any biomedical or clinical interpretation.',
                 disclosure: 'Scientific integrity note: literature-informed conceptual proposal with no original experimental validation. In vitro validation, toxicity assessment, robust controls and reproducible analytical methods are required before any biomedical or clinical interpretation.',
                 details: [
                     {
@@ -611,7 +611,7 @@
                     { title: 'Protocols, documentation & digital communication', body: 'work with laboratory protocols and scientific databases; material and inventory management; development of a bilingual scientific website for the research group' },
                     { title: 'Documentary basis & privacy', body: 'Supporting records remain private when publication would expose personal, third-party or confidential laboratory information. Public wording therefore separates documentary support from personally confirmed supervised practice.' }
                 ],
-                disclosure: 'Scope note: documented placement evidence, reference-supported responsibilities and personally confirmed supervised hands-on work are separated here. This is laboratory placement experience, not an independent clinical claim or therapeutic study, and it does not claim independent clinical, veterinary or surgical practice.'
+                disclosure: 'This placement combines documented laboratory activities, responsibilities supported by references and hands-on work under supervision.'
             },
             celignis: {
                 category: 'Laboratory Practice', status: 'Completed', title: 'Analytical & Biomass Laboratory Practice · Celignis',
@@ -629,7 +629,7 @@
                     { title: 'Responsibility & handover', body: 'progressive responsibility for the volatile-matter workflow, including handover training and supervision of replacement interns. This foundation supports continued development in method validation, uncertainty analysis and cross-method interpretation.' },
                     { title: 'Documentary basis & confidentiality', body: 'Internal or client-related operational material is not republished; only a public-safe summary is shown. Public wording distinguishes placement records and reference support from the wider practical scope confirmed for the portfolio.' }
                 ],
-                disclosure: 'Scope note: documented placement evidence, reference-supported responsibilities and confirmed supervised analytical practice are separated here. No client-confidential material is republished.'
+                disclosure: 'This summary brings together my documented placement activities, reference-supported responsibilities and supervised analytical work while respecting client confidentiality.'
             }
         },
         es: {
@@ -696,7 +696,7 @@
                 details: [
                     {
                         title: 'Alcance académico',
-                        body: 'Bacteriophage Therapy: Rediscovering an Innovative Therapy es un trabajo académico final de revisión bibliográfica realizado en coautoría. La evidencia disponible es el trabajo escrito completado y el material de defensa; no se afirman resultados experimentales ni clínicos propios.'
+                        body: 'Bacteriophage Therapy: Rediscovering an Innovative Therapy es un trabajo académico final de revisión bibliográfica realizado en coautoría. El documento y el material de defensa recogen el análisis de la literatura científica.'
                     },
                     {
                         title: 'Hipótesis interdisciplinar original',
@@ -723,7 +723,7 @@
                 details: [
                     {
                         title: 'Idea central',
-                        body: 'Explorar materiales basados en quitosano como candidatos para la adsorción, retención o estudio controlado de microplásticos en laboratorio, sin atribuirles eficacia terapéutica.'
+                        body: 'Explorar el potencial de los materiales basados en quitosano para la adsorción, retención y estudio controlado de microplásticos en el laboratorio.'
                     },
                     {
                         title: 'Hipótesis de adsorción',
@@ -767,7 +767,7 @@
                     { title: 'Protocolos, documentación y comunicación digital', body: 'trabajo con protocolos de laboratorio y bases de datos científicas; gestión de material e inventario; desarrollo de una web científica bilingüe para el grupo de investigación' },
                     { title: 'Base documental y privacidad', body: 'La documentación de apoyo se mantiene privada cuando su publicación expondría información personal, de terceros o confidencial del laboratorio. La redacción pública distingue por ello el respaldo documental de la práctica supervisada confirmada personalmente.' }
                 ],
-                disclosure: 'Nota de alcance: aquí se separan la evidencia documental de las prácticas, las responsabilidades respaldadas por referencia y el trabajo práctico supervisado confirmado personalmente. Se trata de experiencia de prácticas de laboratorio, no de una afirmación clínica independiente ni de un estudio terapéutico, y no se afirma ejercicio clínico, veterinario o quirúrgico independiente.'
+                disclosure: 'Esta experiencia reúne actividades de prácticas documentadas, responsabilidades respaldadas por referencias y trabajo experimental bajo supervisión.'
             },
             celignis: {
                 category: 'Prácticas de laboratorio', status: 'Completado', title: 'Prácticas en Laboratorio Analítico y de Biomasa · Celignis',
@@ -783,9 +783,9 @@
                     { title: 'Calidad y trazabilidad', body: 'trabajo conforme a SOP establecidos, autocontroles estadísticos de calidad, registros en Thermal Excel, actualización de bases de datos, lotes, etiquetas y trazabilidad de resultados' },
                     { title: 'Documentación operativa creada', body: 'guías operativas, hojas de datos, instrucciones de trabajo y documentación de troubleshooting sobre métodos analíticos, inicio de análisis, batches, muestras y NIR, etiquetado, Thermal Excel y trazabilidad' },
                     { title: 'Responsabilidad y transferencia', body: 'responsabilidad progresiva sobre el flujo de materia volátil, incluida la formación de relevo y supervisión de las personas en prácticas que continuaron el puesto. Esta base permite seguir avanzando en validación de métodos, análisis de incertidumbre e interpretación cruzada de técnicas.' },
-                    { title: 'Base documental y confidencialidad', body: 'El material operativo interno o relacionado con clientes no se republica; solo se muestra un resumen seguro para publicación. La redacción pública distingue los registros de las prácticas y el respaldo de la referencia del alcance práctico más amplio confirmado para el portafolio.' }
+                    { title: 'Base documental y confidencialidad', body: 'Este resumen describe mi experiencia de laboratorio respetando la confidencialidad de los procedimientos internos y de los clientes. Distingue las actividades documentadas, las responsabilidades respaldadas por referencias y otras tareas prácticas confirmadas.' }
                 ],
-                disclosure: 'Nota de alcance: aquí se separan la evidencia documental de las prácticas, las responsabilidades respaldadas por referencia y la práctica analítica supervisada confirmada. No se republica material confidencial de clientes.'
+                disclosure: 'Este resumen reúne mis actividades de prácticas documentadas, las responsabilidades respaldadas por referencias y el trabajo analítico supervisado, respetando la confidencialidad de los clientes.'
             }
         },
         de: {
@@ -852,7 +852,7 @@
                 details: [
                     {
                         title: 'Akademischer Umfang',
-                        body: 'Bacteriophage Therapy: Rediscovering an Innovative Therapy ist eine gemeinsam verfasste akademische Abschlussarbeit in Form einer Literaturübersicht. Die verfügbare Evidenz besteht aus der abgeschlossenen schriftlichen Arbeit und dem Verteidigungsmaterial; eigene experimentelle oder klinische Ergebnisse werden nicht beansprucht.'
+                        body: 'Bacteriophage Therapy: Rediscovering an Innovative Therapy ist eine gemeinsam verfasste akademische Abschlussarbeit in Form einer Literaturübersicht. Die schriftliche Arbeit und die Präsentation zur Verteidigung dokumentieren die Auswertung der wissenschaftlichen Literatur.'
                     },
                     {
                         title: 'Ursprüngliche interdisziplinäre Hypothese',
@@ -874,7 +874,7 @@
                 problem: 'Mikroplastik ist ein aufkommendes Gesundheitsthema, aber menschliche Exposition, mögliche Akkumulation und klinische Auswirkungen erfordern weiterhin sorgfältige experimentelle Bestätigung.',
                 contribution: 'Originale Konzeptentwicklung, Hypothesenformulierung, vorgeschlagene Methodik und wissenschaftliche Kommunikation. Der Beitrag umfasst die Adsorptionshypothese, die biofilm-geleitete Designhypothese, die Hypothese zur Unterstützung des Abbaus und die Hypothese zur biomedizinischen Machbarkeit mit ausdrücklich benanntem Umfang und Grenzen.',
                 result: 'Der aktuelle Reifegrad ist rein konzeptionell. Zu den vorgeschlagenen Methoden gehören Biofilm-Sequenzierung, MiSeq-basierte mikrobielle Profilierung, Chitosanmodifikation, FTIR-Charakterisierung, Adsorptionsassays und Biokompatibilitätstests. Es wurde keine experimentelle Validierung durchgeführt.',
-                next: 'Der Vorschlag erfordert In-vitro-Validierung, Toxizitätsbewertung, robuste Kontrollen, reproduzierbare analytische Methoden, unabhängige wissenschaftliche Prüfung und vorsichtige Interpretation vor jeder biomedizinischen oder klinischen Deutung. Er beansprucht keine nachgewiesene therapeutische Wirksamkeit.',
+                next: 'Der Vorschlag erfordert In-vitro-Validierung, Toxizitätsbewertung, robuste Kontrollen, reproduzierbare analytische Methoden, unabhängige wissenschaftliche Prüfung und vorsichtige Interpretation vor jeder biomedizinischen oder klinischen Deutung.',
                 disclosure: 'Hinweis zur wissenschaftlichen Integrität: literaturgestützter Konzeptvorschlag ohne eigene experimentelle Validierung. Vor jeder biomedizinischen oder klinischen Interpretation sind In-vitro-Validierung, Toxizitätsbewertung, robuste Kontrollen und reproduzierbare analytische Methoden erforderlich.',
                 details: [
                     {
@@ -923,7 +923,7 @@
                     { title: 'Protokolle, Dokumentation & digitale Kommunikation', body: 'Arbeit mit Laborprotokollen und wissenschaftlichen Datenbanken; Material- und Bestandsverwaltung; Entwicklung einer zweisprachigen wissenschaftlichen Website für die Forschungsgruppe' },
                     { title: 'Dokumentarische Grundlage & Datenschutz', body: 'Unterstützende Unterlagen bleiben privat, wenn eine Veröffentlichung personenbezogene, fremde oder vertrauliche Laborinformationen offenlegen würde. Die öffentliche Darstellung trennt deshalb dokumentarische Unterstützung von persönlich bestätigter beaufsichtigter Praxis.' }
                 ],
-                disclosure: 'Hinweis zum Umfang: dokumentierte Praktikumsnachweise, durch Referenz gestützte Verantwortlichkeiten und persönlich bestätigte beaufsichtigte Praxis werden hier getrennt dargestellt. Es handelt sich um Laborpraktikumserfahrung, nicht um einen eigenständigen klinischen Wirksamkeitsnachweis oder eine therapeutische Studie; ebenso wird keine eigenständige klinische, tierärztliche oder chirurgische Tätigkeit beansprucht.'
+                disclosure: 'Diese Praktikumserfahrung umfasst dokumentierte Labortätigkeiten, durch Referenzen gestützte Verantwortlichkeiten und praktische Arbeit unter Aufsicht.'
             },
             celignis: {
                 category: 'Laborpraktikum', status: 'Abgeschlossen', title: 'Praktikum im analytischen Biomasse-Labor · Celignis',
@@ -939,9 +939,9 @@
                     { title: 'Qualität & Rückverfolgbarkeit', body: 'Arbeit nach festgelegten SOPs, statistische Qualitäts-Selbstkontrollen, Thermal-Excel-Datensätze, Datenbankaktualisierungen, Chargen, Etiketten und Ergebnisrückverfolgbarkeit' },
                     { title: 'Erstellte operative Dokumentation', body: 'operative Leitfäden, Datenblätter, Arbeitsanweisungen und Troubleshooting-Dokumentation zu Analysemethoden, Analysestart, Chargen, Proben und NIR, Etikettierung, Thermal Excel und Rückverfolgbarkeit' },
                     { title: 'Verantwortung & Übergabe', body: 'schrittweise Verantwortung für den Workflow der Bestimmung flüchtiger Bestandteile, einschließlich Einarbeitung und Betreuung der nachfolgenden Praktikantinnen und Praktikanten. Diese Grundlage unterstützt die weitere Entwicklung in Methodenvalidierung, Unsicherheitsanalyse und methodenübergreifender Interpretation.' },
-                    { title: 'Dokumentarische Grundlage & Vertraulichkeit', body: 'Internes oder kundenbezogenes Arbeitsmaterial wird nicht erneut veröffentlicht; gezeigt wird nur eine veröffentlichungssichere Zusammenfassung. Die öffentliche Darstellung trennt Praktikumsnachweise und Referenzunterstützung vom weiter gefassten, für das Portfolio bestätigten praktischen Umfang.' }
+                    { title: 'Dokumentarische Grundlage & Vertraulichkeit', body: 'Diese Zusammenfassung beschreibt meine Laborpraxis unter Wahrung der Vertraulichkeit interner Abläufe und Kundendaten. Sie unterscheidet dokumentierte Tätigkeiten, durch Referenzen gestützte Verantwortlichkeiten und weitere bestätigte praktische Arbeiten.' }
                 ],
-                disclosure: 'Hinweis zum Umfang: dokumentierte Praktikumsnachweise, durch Referenz gestützte Verantwortlichkeiten und bestätigte beaufsichtigte analytische Praxis werden hier getrennt dargestellt. Vertrauliches Kundenmaterial wird nicht erneut veröffentlicht.'
+                disclosure: 'Diese Zusammenfassung verbindet dokumentierte Tätigkeiten, durch Referenzen gestützte Verantwortlichkeiten und analytische Praxis unter Aufsicht. Die Vertraulichkeit der Kundendaten bleibt gewahrt.'
             }
         }
     };

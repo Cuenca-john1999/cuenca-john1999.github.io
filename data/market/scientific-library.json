@@ -1,0 +1,1057 @@
+{
+  "notes": [
+    {
+      "id": "pcr",
+      "kind": "technical",
+      "skill": "pcr",
+      "evidence": "entry-laprincesa",
+      "source": "NHGRI · Polymerase Chain Reaction",
+      "url": "https://www.genome.gov/about-genomics/fact-sheets/Polymerase-Chain-Reaction-Fact-Sheet",
+      "en": [
+        "Polymerase chain reaction (PCR)",
+        "PCR amplifies a DNA region using primers and repeated synthesis cycles. RNA targets require conversion to cDNA before conventional DNA amplification.",
+        "During my placement at La Princesa, I worked with PCR and RNA extraction."
+      ],
+      "es": [
+        "Reacción en cadena de la polimerasa (PCR)",
+        "La PCR amplifica una región de ADN mediante cebadores y ciclos de síntesis. Los objetivos de ARN requieren conversión a ADNc antes de una amplificación convencional de ADN.",
+        "Durante mis prácticas en La Princesa trabajé con PCR y extracción de ARN."
+      ],
+      "de": [
+        "Polymerase-Kettenreaktion (PCR)",
+        "PCR vervielfältigt einen DNA-Abschnitt mithilfe von Primern und wiederholten Synthesezyklen. RNA-Ziele benötigen vor konventioneller DNA-Amplifikation eine Umschreibung in cDNA.",
+        "Im Praktikum bei La Princesa arbeitete ich mit PCR und RNA-Extraktion."
+      ]
+    },
+    {
+      "id": "elisa",
+      "kind": "technical",
+      "skill": "elisa",
+      "evidence": "entry-laprincesa",
+      "source": "Thermo Fisher · ELISA overview",
+      "url": "https://www.thermofisher.com/us/en/home/life-science/protein-biology/protein-biology-learning-center/protein-biology-resource-library/pierce-protein-methods/overview-elisa.html",
+      "en": [
+        "Enzyme-linked immunosorbent assay (ELISA)",
+        "Antibody binding and an enzyme-linked readout support detection or quantification of an analyte. Controls and assay format determine how signals can be interpreted.",
+        "I worked with ELISA during my immunology placement at La Princesa."
+      ],
+      "es": [
+        "Ensayo de inmunoadsorción enzimática (ELISA)",
+        "La unión de anticuerpos y una señal enzimática permiten detectar o cuantificar un analito. Los controles y el formato del ensayo condicionan la interpretación de la señal.",
+        "Trabajé con ensayos ELISA durante mis prácticas en inmunología en La Princesa."
+      ],
+      "de": [
+        "Enzyme-linked Immunosorbent Assay (ELISA)",
+        "Antikörperbindung und enzymgekoppelte Signale unterstützen Nachweis oder Quantifizierung eines Analyten. Kontrollen und Assayformat bestimmen die Auswertung.",
+        "Im immunologischen Praktikum bei La Princesa arbeitete ich mit ELISA."
+      ]
+    },
+    {
+      "id": "western-blot",
+      "kind": "technical",
+      "skill": "western-blot",
+      "evidence": "entry-laprincesa",
+      "source": "Thermo Fisher · Protein analysis guide",
+      "url": "https://www.thermofisher.com/us/en/home/references/protein-analysis-guide.html",
+      "en": [
+        "Western blot",
+        "Proteins are separated, transferred to a membrane and detected using antibodies. Blocking reduces unwanted binding; controls support interpretation.",
+        "My work at La Princesa included gel casting, transfer and blocking."
+      ],
+      "es": [
+        "Western blot",
+        "Las proteínas se separan, se transfieren a una membrana y se detectan con anticuerpos. El bloqueo reduce la unión inespecífica; los controles permiten interpretar el resultado.",
+        "Mi trabajo en La Princesa incluyó la preparación de geles, la transferencia y el bloqueo."
+      ],
+      "de": [
+        "Western Blot",
+        "Proteine werden getrennt, auf eine Membran übertragen und mit Antikörpern nachgewiesen. Blocking reduziert unspezifische Bindung; Kontrollen unterstützen die Interpretation.",
+        "Zu meinen Tätigkeiten bei La Princesa gehörten Gelherstellung, Transfer und Blocking."
+      ]
+    },
+    {
+      "id": "cell-culture",
+      "kind": "technical",
+      "skill": "hacat",
+      "evidence": "entry-laprincesa",
+      "source": "ATCC · Primary Cell Culture Guide",
+      "url": "https://www.atcc.org/resources/culture-guides/primary-cell-culture-guide",
+      "en": [
+        "Cell culture and aseptic work",
+        "Cell culture maintains cells under controlled conditions. Medium, cell identity, contamination control and culture history influence downstream observations.",
+        "At La Princesa I worked with HaCaT cells, media preparation, passaging and freezing."
+      ],
+      "es": [
+        "Cultivo celular y trabajo aséptico",
+        "El cultivo celular mantiene células en condiciones controladas. El medio, la identidad celular, el control de contaminación y el historial del cultivo influyen en las observaciones posteriores.",
+        "En La Princesa trabajé con células HaCaT, preparación de medios, pases y congelación."
+      ],
+      "de": [
+        "Zellkultur und aseptisches Arbeiten",
+        "Zellkultur erhält Zellen unter kontrollierten Bedingungen. Medium, Zellidentität, Kontaminationskontrolle und Kulturhistorie beeinflussen nachfolgende Beobachtungen.",
+        "Bei La Princesa arbeitete ich mit HaCaT-Zellen, Medienherstellung, Passagieren und Einfrieren."
+      ]
+    },
+    {
+      "id": "tga",
+      "kind": "technical",
+      "skill": "tga",
+      "evidence": "entry-celignis",
+      "source": "IUPAC Gold Book · thermogravimetry",
+      "url": "https://goldbook.iupac.org/terms/view/T06324",
+      "en": [
+        "Thermogravimetric analysis (TGA)",
+        "TGA follows changes in sample mass during a controlled temperature programme. Mass-loss regions can reflect several processes and require context for interpretation.",
+        "I used the TGA Q500 for biomass analysis during my placement at Celignis."
+      ],
+      "es": [
+        "Análisis termogravimétrico (TGA)",
+        "La TGA sigue los cambios de masa de una muestra durante un programa de temperatura controlado. Las pérdidas de masa pueden responder a varios procesos y requieren contexto.",
+        "Utilicé el TGA Q500 para el análisis de biomasa durante mis prácticas en Celignis."
+      ],
+      "de": [
+        "Thermogravimetrische Analyse (TGA)",
+        "TGA erfasst Massenänderungen einer Probe während eines kontrollierten Temperaturprogramms. Massenverluste können unterschiedliche Ursachen haben und benötigen Kontext.",
+        "Im Praktikum bei Celignis setzte ich den TGA Q500 in der Biomasseanalytik ein."
+      ]
+    },
+    {
+      "id": "elemental-analysis",
+      "kind": "technical",
+      "skill": "chnos",
+      "evidence": "entry-celignis",
+      "source": "Natural History Museum · CHNS elemental analysis",
+      "url": "https://www.nhm.ac.uk/our-science/services/facilities/imaging-analysis/chemical-analysis/chns-elemental-analysis.html",
+      "en": [
+        "Elemental analysis (CHNS/O)",
+        "Combustion-based CHNS methods quantify carbon, hydrogen, nitrogen and sulfur through analysis of reaction gases. Oxygen determination depends on the analytical configuration.",
+        "I worked with CHNOS elemental analysis during my placement at Celignis."
+      ],
+      "es": [
+        "Análisis elemental (CHNS/O)",
+        "Los métodos CHNS basados en combustión cuantifican carbono, hidrógeno, nitrógeno y azufre mediante el análisis de gases de reacción. La determinación de oxígeno depende de la configuración analítica.",
+        "Trabajé con análisis elemental CHNOS durante las prácticas en Celignis."
+      ],
+      "de": [
+        "Elementaranalyse (CHNS/O)",
+        "Verbrennungsbasierte CHNS-Verfahren quantifizieren Kohlenstoff, Wasserstoff, Stickstoff und Schwefel anhand der Reaktionsgase. Die Sauerstoffbestimmung hängt von der Gerätekonfiguration ab.",
+        "Im Praktikum bei Celignis arbeitete ich mit der CHNOS-Elementaranalyse."
+      ]
+    },
+    {
+      "id": "phage",
+      "kind": "reading",
+      "skill": null,
+      "evidence": "entry-phage",
+      "source": "Bacteriophage Therapy: Developments and Directions",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7148498/",
+      "en": [
+        "Bacteriophage therapy",
+        "Phages infect bacteria; therapeutic approaches investigate selected lytic phages. Host specificity, bacterial resistance and clinical evidence remain central challenges.",
+        "This topic relates to my co-authored academic literature review."
+      ],
+      "es": [
+        "Bacteriofagoterapia",
+        "Los fagos infectan bacterias; las aproximaciones terapéuticas investigan fagos líticos seleccionados. Especificidad, resistencia bacteriana y evidencia clínica son retos centrales.",
+        "Tema relacionado con mi trabajo académico de revisión bibliográfica, realizado en coautoría."
+      ],
+      "de": [
+        "Bakteriophagentherapie",
+        "Phagen infizieren Bakterien; therapeutische Ansätze untersuchen ausgewählte lytische Phagen. Wirtsspezifität, bakterielle Resistenz und klinische Evidenz bleiben zentrale Herausforderungen.",
+        "Das Thema knüpft an meine gemeinsam verfasste akademische Literaturarbeit an."
+      ]
+    },
+    {
+      "id": "immunology",
+      "kind": "reading",
+      "skill": null,
+      "evidence": "entry-laprincesa",
+      "source": "Thermo Fisher · ELISA overview",
+      "url": "https://www.thermofisher.com/us/en/home/life-science/protein-biology/protein-biology-learning-center/protein-biology-resource-library/pierce-protein-methods/overview-elisa.html",
+      "en": [
+        "Immunology: cells and soluble signals",
+        "Immune-cell populations and soluble mediators provide complementary information. Cell isolation and immunoassays answer different questions; neither alone establishes a clinical diagnosis.",
+        "This note connects the theory with my practical experience of CD4/CD14 isolation and ELISA."
+      ],
+      "es": [
+        "Inmunología: células y señales solubles",
+        "Las poblaciones inmunitarias y los mediadores solubles aportan información complementaria. El aislamiento celular y los inmunoensayos responden a preguntas diferentes; por sí solos no establecen un diagnóstico clínico.",
+        "Esta nota conecta el fundamento teórico con mis prácticas de aislamiento CD4/CD14 y ELISA."
+      ],
+      "de": [
+        "Immunologie: Zellen und lösliche Signale",
+        "Immunzellpopulationen und lösliche Mediatoren liefern ergänzende Informationen. Zellisolierung und Immunassays beantworten unterschiedliche Fragen; allein begründen sie keine klinische Diagnose.",
+        "Die Notiz verbindet die Theorie mit meiner praktischen Erfahrung in der CD4/CD14-Isolierung und mit ELISA."
+      ]
+    },
+    {
+      "id": "viral-entry",
+      "kind": "reading",
+      "skill": null,
+      "evidence": null,
+      "source": "NCBI Bookshelf · Cell Biology of Infection",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26833/",
+      "en": [
+        "Molecular virology: viral entry",
+        "Viruses use host-cell components to enter cells; routes differ and may involve receptor binding, endocytosis or membrane fusion. Entry is distinct from productive replication.",
+        "Reading note on the mechanisms of viral entry."
+      ],
+      "es": [
+        "Virología molecular: entrada viral",
+        "Los virus utilizan componentes celulares para entrar en las células; las rutas varían y pueden incluir unión a receptores, endocitosis o fusión de membranas. La entrada no equivale a replicación productiva.",
+        "Nota de lectura centrada en los mecanismos de entrada viral."
+      ],
+      "de": [
+        "Molekulare Virologie: Viruseintritt",
+        "Viren nutzen Wirtszellkomponenten für den Eintritt; die Wege variieren und können Rezeptorbindung, Endozytose oder Membranfusion umfassen. Eintritt ist nicht mit produktiver Replikation gleichzusetzen.",
+        "Lesenotiz zu den Mechanismen des Viruseintritts."
+      ]
+    },
+    {
+      "id": "chitosan",
+      "kind": "reading",
+      "skill": null,
+      "evidence": "entry-chitosan",
+      "source": "Recent Advances of Chitosan Formulations in Biomedical Applications",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9504745/",
+      "en": [
+        "Chitosan and biomaterials",
+        "Chitosan-based materials are being studied for biomedical applications. Properties depend on formulation and conditions; environmental adsorption does not establish biomedical efficacy.",
+        "This topic relates to my conceptual proposal on chitosan, which would require experimental validation."
+      ],
+      "es": [
+        "Quitosano y biomateriales",
+        "Los materiales basados en quitosano se estudian para aplicaciones biomédicas. Sus propiedades dependen de la formulación y condiciones experimentales; la adsorción ambiental no demuestra eficacia biomédica.",
+        "Tema relacionado con mi propuesta conceptual sobre quitosano, pendiente de validación experimental."
+      ],
+      "de": [
+        "Chitosan und Biomaterialien",
+        "Chitosanbasierte Materialien werden für biomedizinische Anwendungen untersucht. Eigenschaften hängen von Formulierung und Bedingungen ab; Umweltadsorption belegt keine biomedizinische Wirksamkeit.",
+        "Bezug zu meinem Konzeptvorschlag zu Chitosan, der einer experimentellen Validierung bedarf."
+      ]
+    },
+    {
+      "id": "environmental-monitoring",
+      "kind": "technical",
+      "skill": "microbial-environmental-sampling",
+      "source": "CDC · Environmental sampling",
+      "url": "https://www.cdc.gov/infection-control/hcp/environmental-control/environmental-sampling.html",
+      "es": [
+        "Muestreo microbiológico ambiental",
+        "Las placas de sedimentación recogen partículas que se depositan por gravedad; las placas de contacto y los hisopos permiten muestrear superficies. Los resultados dependen del método y de las condiciones de recuperación.",
+        "Realicé estas técnicas en prácticas académicas de control ambiental y de manipuladores."
+      ],
+      "en": [
+        "Environmental microbiological sampling",
+        "Settle plates collect particles deposited by gravity; contact plates and swabs support surface sampling. Results depend on the sampling method and recovery conditions.",
+        "I performed these methods during academic environmental and personnel monitoring exercises."
+      ],
+      "de": [
+        "Mikrobiologische Umgebungsprobenahme",
+        "Sedimentationsplatten erfassen durch Schwerkraft abgesetzte Partikel; Abklatschplatten und Tupfer dienen der Oberflächenprobenahme. Ergebnisse hängen von Methode und Wiederfindung ab.",
+        "Diese Methoden habe ich in Ausbildungsübungen zur Umgebungs- und Personalkontrolle eingesetzt."
+      ]
+    },
+    {
+      "id": "colony-counts",
+      "kind": "technical",
+      "skill": "microbial-enumeration",
+      "source": "FDA · Aerobic plate count",
+      "url": "https://www.fda.gov/food/laboratory-methods-food/bam-chapter-3-aerobic-plate-count",
+      "es": [
+        "Recuento de microorganismos viables",
+        "Las UFC estiman microorganismos cultivables bajo las condiciones del método. La dilución, el volumen analizado y la selección de placas influyen en el cálculo.",
+        "Prácticas académicas con muestras de agua, suelo y alimentos."
+      ],
+      "en": [
+        "Viable microbial counts",
+        "CFU estimate organisms able to grow under the conditions of the method. Dilution, analysed volume and plate selection affect the calculation.",
+        "Academic exercises with water, soil and food samples."
+      ],
+      "de": [
+        "Bestimmung kultivierbarer Mikroorganismen",
+        "KBE schätzen die unter den Methodenbedingungen kultivierbaren Mikroorganismen. Verdünnung, Probenvolumen und Plattenauswahl beeinflussen die Berechnung.",
+        "Ausbildungsübungen mit Wasser-, Boden- und Lebensmittelproben."
+      ]
+    },
+    {
+      "id": "measurement-quality",
+      "kind": "technical",
+      "skill": "thermometer-calibration",
+      "source": "NIST · Metrological traceability",
+      "url": "https://www.nist.gov/metrology/metrological-traceability",
+      "es": [
+        "Metrología y trazabilidad",
+        "La trazabilidad metrológica vincula un resultado a una referencia mediante una cadena documentada de calibraciones. Las comprobaciones de aula permiten aprender el método, sus desviaciones y limitaciones.",
+        "Realicé ejercicios de calibración de termómetros y medición de pH, con cálculos y registros."
+      ],
+      "en": [
+        "Metrology and traceability",
+        "Metrological traceability connects a measurement result to a reference through a documented calibration chain. Classroom checks teach the method, deviations and limitations.",
+        "I completed thermometer calibration and pH measurement exercises with calculations and records."
+      ],
+      "de": [
+        "Messtechnik und Rückführbarkeit",
+        "Metrologische Rückführbarkeit verbindet ein Messergebnis über eine dokumentierte Kalibrierkette mit einer Referenz. Ausbildungsprüfungen vermitteln Methode, Abweichungen und Grenzen.",
+        "Ich führte Übungen zur Thermometerkalibrierung und pH-Messung mit Berechnungen und Aufzeichnungen durch."
+      ]
+    },
+    {
+      "id": "agarose-electrophoresis",
+      "kind": "technical",
+      "skill": "electrophoresis",
+      "source": "NHGRI · Electrophoresis",
+      "url": "https://www.genome.gov/genetics-glossary/Electrophoresis",
+      "es": [
+        "Electroforesis en agarosa",
+        "Los fragmentos de ADN se separan por migración en el gel. Un marcador permite estimar tamaños; la ausencia de bandas o el arrastre requieren revisar la preparación y la calidad de la muestra.",
+        "Práctica grupal con ADN genómico y productos de PCR, además de mi estancia en La Princesa."
+      ],
+      "en": [
+        "Agarose gel electrophoresis",
+        "DNA fragments separate by migration through a gel. A size marker supports estimation of fragment lengths; absent bands or smearing call for review of sample quality and preparation.",
+        "Group exercise using genomic DNA and PCR products, in addition to my placement at La Princesa."
+      ],
+      "de": [
+        "Agarosegelelektrophorese",
+        "DNA-Fragmente werden bei der Wanderung durch das Gel getrennt. Ein Größenmarker erlaubt die Abschätzung der Fragmentlänge; fehlende Banden oder Schmieren erfordern die Prüfung von Probe und Vorbereitung.",
+        "Gruppenübung mit genomischer DNA und PCR-Produkten sowie Praktikum bei La Princesa."
+      ]
+    }
+  ],
+  "flows": [
+    {
+      "en": [
+        "Molecular analysis",
+        [
+          "Sample",
+          "Nucleic acid preparation",
+          "DNA amplification (PCR)",
+          "Electrophoretic readout"
+        ],
+        "RNA-based workflows may require reverse transcription before amplification."
+      ],
+      "es": [
+        "Análisis molecular",
+        [
+          "Muestra",
+          "Preparación de ácidos nucleicos",
+          "Amplificación de ADN (PCR)",
+          "Lectura electroforética"
+        ],
+        "Los flujos basados en ARN pueden requerir una etapa de retrotranscripción antes de la amplificación."
+      ],
+      "de": [
+        "Molekularanalytik",
+        [
+          "Probe",
+          "Nukleinsäureaufarbeitung",
+          "DNA-Amplifikation (PCR)",
+          "Elektrophoretische Auswertung"
+        ],
+        "RNA-basierte Abläufe können vor der Amplifikation eine Reverse Transkription erfordern."
+      ]
+    },
+    {
+      "en": [
+        "Cell culture",
+        [
+          "Cell material",
+          "Aseptic culture",
+          "Maintenance and passage",
+          "Downstream study"
+        ],
+        "Cell line and study-specific conditions govern each step."
+      ],
+      "es": [
+        "Cultivo celular",
+        [
+          "Material celular",
+          "Cultivo aséptico",
+          "Mantenimiento y pase",
+          "Estudio posterior"
+        ],
+        "Cada paso depende de la línea celular y las condiciones del estudio."
+      ],
+      "de": [
+        "Zellkultur",
+        [
+          "Zellmaterial",
+          "Aseptische Kultur",
+          "Erhaltung und Passage",
+          "Nachfolgende Untersuchung"
+        ],
+        "Zelllinie und Studienbedingungen bestimmen jeden Schritt."
+      ]
+    },
+    {
+      "en": [
+        "Immunological sample processing",
+        [
+          "Biological sample",
+          "Sample preparation",
+          "Cell isolation or immunoassay",
+          "Contextual interpretation"
+        ],
+        "Cell isolation and immunoassays are alternative or complementary branches, not mandatory sequential steps."
+      ],
+      "es": [
+        "Procesamiento inmunológico",
+        [
+          "Muestra biológica",
+          "Preparación",
+          "Aislamiento celular o inmunoensayo",
+          "Interpretación contextual"
+        ],
+        "El aislamiento y los inmunoensayos son ramas alternativas o complementarias, no pasos obligatoriamente sucesivos."
+      ],
+      "de": [
+        "Immunologische Probenaufarbeitung",
+        [
+          "Biologische Probe",
+          "Aufarbeitung",
+          "Zellisolierung oder Immunassay",
+          "Kontextbezogene Interpretation"
+        ],
+        "Zellisolierung und Immunassays sind alternative oder ergänzende Zweige, keine zwingende Sequenz."
+      ]
+    },
+    {
+      "en": [
+        "Biomass and traceability",
+        [
+          "Sample registration",
+          "Preparation",
+          "Method-specific analysis",
+          "QC and traceable records"
+        ],
+        "The selected method and laboratory SOP determine the actual procedure."
+      ],
+      "es": [
+        "Biomasa y trazabilidad",
+        [
+          "Registro de muestra",
+          "Preparación",
+          "Análisis según método",
+          "Control interno y registro trazable"
+        ],
+        "El método elegido y el PNT del laboratorio determinan el procedimiento real."
+      ],
+      "de": [
+        "Biomasse und Rückverfolgbarkeit",
+        [
+          "Probenregistrierung",
+          "Aufarbeitung",
+          "Methodenspezifische Analyse",
+          "QC und nachvollziehbare Dokumentation"
+        ],
+        "Methode und Labor-SOP bestimmen den tatsächlichen Ablauf."
+      ]
+    },
+    {
+      "es": [
+        "Control microbiológico ambiental",
+        [
+          "Selección de método de muestreo",
+          "Recogida de muestra",
+          "Incubación y lectura",
+          "Recuento e interpretación"
+        ],
+        "Esquema de prácticas académicas, no un procedimiento de sala limpia."
+      ],
+      "en": [
+        "Environmental microbiological monitoring",
+        [
+          "Sampling method selection",
+          "Sample collection",
+          "Incubation and reading",
+          "Enumeration and interpretation"
+        ],
+        "Academic workflow illustration, not a cleanroom procedure."
+      ],
+      "de": [
+        "Mikrobiologische Umgebungskontrolle",
+        [
+          "Auswahl der Probenahme",
+          "Probenahme",
+          "Inkubation und Ablesung",
+          "Zählung und Auswertung"
+        ],
+        "Illustration einer Ausbildungsübung, keine Reinraum-SOP."
+      ]
+    },
+    {
+      "es": [
+        "Calidad de la medición",
+        [
+          "Preparación del equipo",
+          "Comprobación o calibración",
+          "Medición y registro",
+          "Revisión de desviaciones"
+        ],
+        "Esquema formativo de comprobaciones y documentación."
+      ],
+      "en": [
+        "Measurement quality",
+        [
+          "Equipment preparation",
+          "Check or calibration",
+          "Measurement and recording",
+          "Review of deviations"
+        ],
+        "Training illustration of checks and documentation."
+      ],
+      "de": [
+        "Messqualität",
+        [
+          "Gerätevorbereitung",
+          "Prüfung oder Kalibrierung",
+          "Messung und Aufzeichnung",
+          "Bewertung von Abweichungen"
+        ],
+        "Ausbildungsschema für Prüfungen und Dokumentation."
+      ]
+    },
+    {
+      "es": [
+        "Distribución conceptual de áreas PCR",
+        [
+          "Recepción y preparación",
+          "Zona pre-PCR",
+          "Amplificación",
+          "Zona post-PCR y lectura"
+        ],
+        "Flujo conceptual del proyecto de diseño académico, con separación de áreas."
+      ],
+      "en": [
+        "Conceptual PCR laboratory layout",
+        [
+          "Reception and preparation",
+          "Pre-PCR area",
+          "Amplification",
+          "Post-PCR area and readout"
+        ],
+        "Conceptual workflow from the academic design project, with separated areas."
+      ],
+      "de": [
+        "Konzeptionelle PCR-Laborplanung",
+        [
+          "Annahme und Vorbereitung",
+          "Prä-PCR-Bereich",
+          "Amplifikation",
+          "Post-PCR-Bereich und Auswertung"
+        ],
+        "Konzeptioneller Ablauf aus dem Ausbildungsprojekt mit getrennten Bereichen."
+      ]
+    },
+    {
+      "es": [
+        "Mapa conceptual de procesos de laboratorio",
+        [
+          "Recepción e identificación",
+          "Preparación y trazabilidad",
+          "Análisis clínico, molecular, microbiológico o químico",
+          "Tratamiento de datos",
+          "Documentación y calidad"
+        ],
+        "Relación conceptual entre competencias adquiridas en diferentes contextos; no un procedimiento único ejecutado íntegramente."
+      ],
+      "en": [
+        "Conceptual laboratory process map",
+        [
+          "Reception and identification",
+          "Preparation and traceability",
+          "Clinical, molecular, microbiological or chemical analysis",
+          "Data processing",
+          "Documentation and quality"
+        ],
+        "Conceptual relationship between skills acquired in different settings; not a single end-to-end procedure performed."
+      ],
+      "de": [
+        "Konzeptionelle Laborprozesskarte",
+        [
+          "Annahme und Identifizierung",
+          "Vorbereitung und Rückverfolgbarkeit",
+          "Klinische, molekulare, mikrobiologische oder chemische Analytik",
+          "Datenauswertung",
+          "Dokumentation und Qualität"
+        ],
+        "Konzeptionelle Verbindung von Kompetenzen aus verschiedenen Kontexten; kein vollständig durchgeführter Einzelprozess."
+      ]
+    }
+  ],
+  "labels": {
+    "en": {
+      "library": "Scientific and technical library",
+      "intro": "AI-assisted educational reference notes, pending author review. They complement the projects and practical experience presented in this portfolio.",
+      "technical": "Technical notes",
+      "reading": "Scientific reading notes",
+      "workflow": "Illustrative laboratory workflows",
+      "flowintro": "Conceptual diagrams showing how techniques relate to different laboratory processes.",
+      "scope": "Professional and academic context",
+      "ref": "Further reading",
+      "context": "Evidence / context",
+      "note": "Technical note",
+      "date": "Updated 28 November 2026",
+      "nav": "Library",
+      "projects": "Academic projects and practical work",
+      "cases": "Experimental troubleshooting",
+      "observations": "Observations",
+      "interpretation": "Interpretation and limitations",
+      "exhibit": "Selected experimental evidence",
+      "projectDetail": "Objective, methods and scope",
+      "gallery": "Academic evidence gallery",
+      "galleryIntro": "Original visualisations reconstructed from academic reports and plans. Experimental data are distinguished from conceptual illustrations.",
+      "galleryLink": "View evidence gallery and experimental cases"
+    },
+    "es": {
+      "library": "Biblioteca científica y técnica",
+      "intro": "Notas de aprendizaje y consulta científica elaboradas con asistencia de IA, pendientes de revisión por el autor. Complementan los proyectos y la experiencia práctica del portafolio.",
+      "technical": "Notas técnicas",
+      "reading": "Notas de lectura científica",
+      "workflow": "Flujos de laboratorio ilustrativos",
+      "flowintro": "Esquemas conceptuales que muestran cómo se relacionan las técnicas en distintos procesos de laboratorio.",
+      "scope": "Contexto profesional y académico",
+      "ref": "Lectura de referencia",
+      "context": "Evidencia / contexto",
+      "note": "Nota técnica",
+      "date": "Actualizado el 28 de noviembre de 2026",
+      "nav": "Biblioteca",
+      "projects": "Proyectos y prácticas académicas",
+      "cases": "Resolución de problemas experimentales",
+      "observations": "Observaciones",
+      "interpretation": "Interpretación y límites",
+      "exhibit": "Evidencia experimental seleccionada",
+      "projectDetail": "Objetivo, métodos y alcance",
+      "gallery": "Galería de evidencias académicas",
+      "galleryIntro": "Visualizaciones propias reconstruidas a partir de informes y planos académicos. Se distingue el dato experimental del esquema conceptual.",
+      "galleryLink": "Ver galería y casos experimentales"
+    },
+    "de": {
+      "library": "Wissenschaftliche und technische Bibliothek",
+      "intro": "KI-unterstützte Lern- und Nachschlagenotizen, die noch vom Autor geprüft werden. Sie ergänzen die Projekte und die Praxiserfahrung im Portfolio.",
+      "technical": "Technische Notizen",
+      "reading": "Wissenschaftliche Lesenotizen",
+      "workflow": "Illustrative Laborabläufe",
+      "flowintro": "Schematische Darstellungen der Zusammenhänge zwischen Methoden in verschiedenen Laborabläufen.",
+      "scope": "Beruflicher und akademischer Kontext",
+      "ref": "Weiterführende Literatur",
+      "context": "Nachweis / Kontext",
+      "note": "Technische Notiz",
+      "date": "Aktualisiert am 28. November 2026",
+      "nav": "Bibliothek",
+      "projects": "Ausbildungsprojekte und praktische Arbeiten",
+      "cases": "Experimentelle Fehleranalyse",
+      "observations": "Beobachtungen",
+      "interpretation": "Interpretation und Grenzen",
+      "exhibit": "Ausgewählte experimentelle Daten",
+      "projectDetail": "Ziel, Methoden und Umfang",
+      "gallery": "Galerie der Ausbildungsnachweise",
+      "galleryIntro": "Eigene Visualisierungen aus Ausbildungsberichten und Grundrissen. Experimentelle Daten und konzeptionelle Darstellungen werden unterschieden.",
+      "galleryLink": "Galerie und experimentelle Fallbeispiele ansehen"
+    }
+  },
+  "projects": [
+    {
+      "id": "laboratory-layout",
+      "es": [
+        "Diseño de laboratorio molecular y citogenético",
+        "Proyecto académico conceptual · CEAC FP Oficial",
+        "Planos y memoria descriptiva de áreas de recepción, almacenamiento, preparación pre-PCR, amplificación, post-PCR, citogenética y gestión de residuos. Diseño de distribución de equipos y flujos para reducir cruces de trabajo."
+      ],
+      "en": [
+        "Molecular and cytogenetics laboratory design",
+        "Conceptual academic project · CEAC FP Oficial",
+        "Floor plans and descriptive documentation for reception, storage, pre-PCR preparation, amplification, post-PCR, cytogenetics and waste management. Layout of equipment and workflows to limit crossover."
+      ],
+      "de": [
+        "Planung eines molekularbiologischen und zytogenetischen Labors",
+        "Konzeptionelles Ausbildungsprojekt · CEAC FP Oficial",
+        "Grundrisse und Beschreibung von Annahme, Lagerung, Prä-PCR, Amplifikation, Post-PCR, Zytogenetik und Abfallentsorgung. Planung der Geräteanordnung und Arbeitsabläufe zur Verringerung von Überschneidungen."
+      ],
+      "extra": {
+        "es": [
+          "Objetivo: organizar áreas y equipos de un laboratorio conceptual.",
+          "Zonas: recepción, almacén, pesada, análisis de datos, descontaminación y residuos; pre-PCR, PCR y post-PCR; cultivo y citogenética.",
+          "Alcance: diseño académico con planos y memoria; no instalación construida ni certificada."
+        ],
+        "en": [
+          "Objective: organise the areas and equipment of a conceptual laboratory.",
+          "Zones: reception, storage, weighing, data analysis, decontamination and waste; pre-PCR, PCR and post-PCR; culture and cytogenetics.",
+          "Scope: academic design with floor plans and descriptive documentation; not a built or certified facility."
+        ],
+        "de": [
+          "Ziel: Bereiche und Geräte eines konzeptionellen Labors organisieren.",
+          "Zonen: Annahme, Lagerung, Wägen, Datenanalyse, Dekontamination und Abfall; Prä-PCR, PCR und Post-PCR; Kultur und Zytogenetik.",
+          "Umfang: Ausbildungsentwurf mit Grundrissen und Beschreibung; keine gebaute oder zertifizierte Einrichtung."
+        ]
+      }
+    },
+    {
+      "id": "materials-testing",
+      "es": [
+        "Ensayos de materiales",
+        "Trabajo experimental grupal · IES Virgen de la Paloma",
+        "Ensayos de dureza, tracción, impacto Charpy y metalografía. Preparación de probetas, registro y tratamiento de datos, interpretación de resultados y discusión de incidencias."
+      ],
+      "en": [
+        "Materials testing",
+        "Group experimental work · IES Virgen de la Paloma",
+        "Hardness, tensile and Charpy impact tests and metallography. Specimen preparation, data recording and processing, interpretation and discussion of experimental issues."
+      ],
+      "de": [
+        "Werkstoffprüfung",
+        "Experimentelle Gruppenarbeit · IES Virgen de la Paloma",
+        "Härte-, Zug- und Charpy-Kerbschlagversuche sowie Metallografie. Probenvorbereitung, Datenerfassung und Auswertung sowie Diskussion von Versuchsschwierigkeiten."
+      ],
+      "extra": {
+        "es": [
+          "Objetivo: comparar propiedades mecánicas y microestructura.",
+          "Métodos: dureza, tracción, impacto y metalografía; trabajo grupal.",
+          "Alcance: ensayos académicos, sin certificación industrial."
+        ],
+        "en": [
+          "Objective: compare mechanical properties and microstructure.",
+          "Methods: hardness, tensile, impact and metallography; group work.",
+          "Scope: academic tests, not industrial certification."
+        ],
+        "de": [
+          "Ziel: mechanische Eigenschaften und Gefüge vergleichen.",
+          "Methoden: Härte, Zug, Schlag und Metallografie; Gruppenarbeit.",
+          "Umfang: Ausbildungsversuche, keine Industriezertifizierung."
+        ]
+      }
+    },
+    {
+      "id": "academic-microbiology",
+      "es": [
+        "Microbiología aplicada",
+        "Serie de prácticas académicas · IES Virgen de la Paloma",
+        "Control ambiental, preparación de medios, aislamiento, tinciones, recuento y análisis de agua, suelo y alimentos. Incluye interpretación de resultados y limitaciones de los ensayos."
+      ],
+      "en": [
+        "Applied microbiology",
+        "Academic practical series · IES Virgen de la Paloma",
+        "Environmental monitoring, media preparation, isolation, staining, enumeration and analysis of water, soil and food. Includes interpretation of results and limitations."
+      ],
+      "de": [
+        "Angewandte Mikrobiologie",
+        "Praktische Ausbildungsreihe · IES Virgen de la Paloma",
+        "Umgebungskontrolle, Nährmedienherstellung, Isolierung, Färbungen, Keimzählung und Untersuchung von Wasser, Boden und Lebensmitteln. Einschließlich Ergebnisauswertung und Methodengrenzen."
+      ],
+      "extra": {
+        "es": [
+          "Objetivo: caracterizar microorganismos cultivables en matrices ambientales y alimentarias.",
+          "Métodos: dilución, siembra, incubación, recuento, tinción e identificación presuntiva.",
+          "Alcance: prácticas académicas; no liberación de lotes ni ensayos farmacopéicos."
+        ],
+        "en": [
+          "Objective: characterise cultivable microorganisms in environmental and food matrices.",
+          "Methods: dilution, inoculation, incubation, enumeration, staining and presumptive identification.",
+          "Scope: academic training; no batch release or pharmacopoeial testing."
+        ],
+        "de": [
+          "Ziel: kultivierbare Mikroorganismen in Umwelt- und Lebensmittelmatrices charakterisieren.",
+          "Methoden: Verdünnung, Animpfen, Inkubation, Zählung, Färbung und präsumtive Identifizierung.",
+          "Umfang: Ausbildungsübungen; keine Chargenfreigabe oder Arzneibuchprüfung."
+        ]
+      }
+    },
+    {
+      "id": "academic-metrology",
+      "es": [
+        "Metrología y mantenimiento instrumental",
+        "Prácticas y documentación técnica · IES Virgen de la Paloma y CEAC FP Oficial",
+        "Calibración de termómetros, pH, volumetría, pesaje y PNT de equipos. Elaboración de registros de mantenimiento e incidencias como parte del aprendizaje de la organización del laboratorio."
+      ],
+      "en": [
+        "Metrology and instrument maintenance",
+        "Practical exercises and documentation · IES Virgen de la Paloma and CEAC FP Oficial",
+        "Thermometer calibration, pH, volumetric measurements, weighing and equipment SOPs. Maintenance and incident records as part of laboratory organisation training."
+      ],
+      "de": [
+        "Messtechnik und Gerätewartung",
+        "Ausbildungsübungen und Dokumentation · IES Virgen de la Paloma und CEAC FP Oficial",
+        "Thermometerkalibrierung, pH, Volumenmessung, Wägen und Geräte-SOPs. Wartungs- und Störungsprotokolle als Teil der Labororganisation."
+      ],
+      "extra": {
+        "es": [
+          "Objetivo: comprender la calidad de las mediciones y el cuidado de los equipos.",
+          "Métodos: calibración docente, pesaje, volumetría, pH y registros de mantenimiento.",
+          "Alcance: comprobaciones formativas, no acreditación metrológica."
+        ],
+        "en": [
+          "Objective: understand measurement quality and equipment care.",
+          "Methods: training calibration, weighing, volumetry, pH and maintenance records.",
+          "Scope: educational checks, not metrology accreditation."
+        ],
+        "de": [
+          "Ziel: Messqualität und Gerätepflege verstehen.",
+          "Methoden: Ausbildungskalibrierung, Wägen, Volumenmessung, pH und Wartungsprotokolle.",
+          "Umfang: Ausbildungsprüfungen, keine metrologische Akkreditierung."
+        ]
+      }
+    },
+    {
+      "id": "gut-microbiota",
+      "es": [
+        "Microbiota intestinal",
+        "Trabajo académico bibliográfico",
+        "Revisión de literatura sobre la microbiota intestinal, disbiosis y métodos de estudio de las comunidades microbianas."
+      ],
+      "en": [
+        "Gut microbiota",
+        "Academic literature review",
+        "Literature review on the gut microbiota, dysbiosis and methods for studying microbial communities."
+      ],
+      "de": [
+        "Darmmikrobiota",
+        "Literaturarbeit in der Ausbildung",
+        "Literaturrecherche zu Darmmikrobiota, Dysbiose und Methoden zur Untersuchung mikrobieller Gemeinschaften."
+      ],
+      "extra": {
+        "es": [
+          "Objetivo: estudiar la microbiota intestinal y la disbiosis a través de literatura.",
+          "Método: revisión bibliográfica de conceptos y métodos de estudio.",
+          "Alcance: trabajo de revisión, sin experimentación propia."
+        ],
+        "en": [
+          "Objective: study gut microbiota and dysbiosis through literature.",
+          "Method: literature review of concepts and study methods.",
+          "Scope: review work, without original experiments."
+        ],
+        "de": [
+          "Ziel: Darmmikrobiota und Dysbiose anhand von Literatur untersuchen.",
+          "Methode: Literaturrecherche zu Konzepten und Untersuchungsmethoden.",
+          "Umfang: Literaturarbeit ohne eigene Experimente."
+        ]
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "gel-results",
+      "skill": "electrophoresis",
+      "es": [
+        "Electroforesis: interpretar un resultado incompleto",
+        "Informe grupal · CEAC FP Oficial · enero de 2024",
+        "Se prepararon dos geles: ADN genómico de kiwi y amplicones de PCR purificada. En el segundo se observaron bandas; en el primero no se visualizaron bandas. Se registró posible arrastre en algunos carriles.",
+        "El informe discutió degradación del ADN, tiempo transcurrido desde la extracción y preparación como explicaciones posibles, sin confirmarlas experimentalmente."
+      ],
+      "en": [
+        "Electrophoresis: interpreting an incomplete result",
+        "Group report · CEAC FP Oficial · January 2024",
+        "Two gels were prepared: kiwi genomic DNA and purified PCR amplicons. Bands were visible in the latter, but not in the former. Possible smearing was recorded in some lanes.",
+        "The report discussed DNA degradation, time since extraction and preparation as possible explanations, without experimentally establishing them."
+      ],
+      "de": [
+        "Elektrophorese: Auswertung eines unvollständigen Ergebnisses",
+        "Gruppenbericht · CEAC FP Oficial · Januar 2024",
+        "Zwei Gele mit genomischer Kiwi-DNA und gereinigten PCR-Amplikons wurden hergestellt. Im zweiten waren Banden sichtbar, im ersten nicht. In einigen Spuren wurde mögliches Schmieren beobachtet.",
+        "Der Bericht diskutierte DNA-Abbau, Zeit seit Extraktion und Präparation als mögliche, nicht experimentell bestätigte Erklärungen."
+      ]
+    },
+    {
+      "id": "temperature-deviation",
+      "skill": "thermometer-calibration",
+      "es": [
+        "Calibración: desviaciones y correcciones",
+        "Informe grupal · IES Virgen de la Paloma · marzo de 2022",
+        "Se compararon lecturas del termómetro con referencias de fusión y ebullición del agua, registrando series de temperatura y considerando la presión atmosférica.",
+        "Se calcularon desviaciones y factores de corrección. El informe contiene discrepancias entre algunas lecturas y la conclusión; no se presenta una desviación numérica como calibración validada."
+      ],
+      "en": [
+        "Calibration: deviations and corrections",
+        "Group report · IES Virgen de la Paloma · March 2022",
+        "Thermometer readings were compared with water melting and boiling reference points, recording temperature series and considering atmospheric pressure.",
+        "Deviations and correction factors were calculated. Some readings and the conclusion are inconsistent; no numeric deviation is presented as a validated calibration."
+      ],
+      "de": [
+        "Kalibrierung: Abweichungen und Korrekturen",
+        "Gruppenbericht · IES Virgen de la Paloma · März 2022",
+        "Thermometeranzeigen wurden mit Schmelz- und Siedereferenzen des Wassers verglichen, Temperaturreihen erfasst und Luftdruck berücksichtigt.",
+        "Abweichungen und Korrekturfaktoren wurden berechnet. Einzelne Messwerte und Schlussfolgerung sind nicht konsistent; keine numerische Abweichung wird als validierte Kalibrierung dargestellt."
+      ]
+    },
+    {
+      "id": "reaction-yield",
+      "skill": "gas-volume",
+      "es": [
+        "Rendimiento de reacción: evaluación de pérdidas",
+        "Informe individual · IES Virgen de la Paloma · enero de 2023",
+        "Se recogió gas, se midió su volumen y se comparó el rendimiento con el esperado mediante cálculos estequiométricos.",
+        "El rendimiento fue incompleto. El informe consideró pérdidas de producto, pureza, reacciones secundarias y posibles errores de ejecución; no atribuyó una causa definitiva."
+      ],
+      "en": [
+        "Reaction yield: evaluating losses",
+        "Individual report · IES Virgen de la Paloma · January 2023",
+        "Gas was collected, its volume measured and the yield compared with the expected amount using stoichiometric calculations.",
+        "Yield was incomplete. The report considered product loss, purity, side reactions and possible execution errors, without establishing a definitive cause."
+      ],
+      "de": [
+        "Reaktionsausbeute: Bewertung von Verlusten",
+        "Einzelbericht · IES Virgen de la Paloma · Januar 2023",
+        "Gas wurde gesammelt, das Volumen gemessen und die Ausbeute stöchiometrisch mit dem Erwartungswert verglichen.",
+        "Die Ausbeute war unvollständig. Der Bericht erwog Produktverluste, Reinheit, Nebenreaktionen und mögliche Durchführungsfehler ohne eindeutigen Ursachennachweis."
+      ]
+    },
+    {
+      "id": "bradford-calibration",
+      "skill": "bradford-protein",
+      "es": [
+        "Bradford: revisión de una calibración deficiente",
+        "Informe individual · IES Virgen de la Paloma · febrero-marzo de 2023",
+        "El informe contiene seis patrones de albúmina, absorbancias a 595 nm y una recta cuyo R² informado es 0,4936. La muestra de leche se analizó una sola vez.",
+        "Se identificaron desviaciones de varios patrones respecto a la recta. Se consideraron errores de preparación o lectura; no se confirmó su origen. No se presenta el cálculo de concentración como resultado cuantitativo fiable."
+      ],
+      "en": [
+        "Bradford: review of a poor calibration",
+        "Individual report · IES Virgen de la Paloma · February-March 2023",
+        "The report contains six albumin standards, absorbance at 595 nm and a fitted line with a reported R² of 0.4936. One milk sample was analysed.",
+        "Several standards deviated from the fitted line. Preparation or reading errors were considered but not confirmed. The calculated concentration is not presented as a reliable quantitative result."
+      ],
+      "de": [
+        "Bradford: Bewertung einer unzureichenden Kalibrierung",
+        "Einzelbericht · IES Virgen de la Paloma · Februar-März 2023",
+        "Der Bericht enthält sechs Albuminstandards, Absorption bei 595 nm und eine Regressionsgerade mit angegebenem R² von 0,4936. Eine Milchprobe wurde einmal untersucht.",
+        "Mehrere Standards wichen von der Geraden ab. Fehler bei der Vorbereitung oder Messung wurden erwogen, aber nicht bestätigt. Die berechnete Konzentration wird nicht als zuverlässiges quantitatives Ergebnis dargestellt."
+      ]
+    }
+  ],
+  "exhibit": {
+    "id": "ir-peaks",
+    "values": [
+      [
+        3005.52,
+        95.13
+      ],
+      [
+        2922.07,
+        61.98
+      ],
+      [
+        2852.94,
+        71.14
+      ],
+      [
+        1743.74,
+        57.87
+      ]
+    ],
+    "es": [
+      "Registro IR de aceite de oliva",
+      "Selección de cuatro picos del registro académico del 16 de febrero de 2023. No es el espectro completo ni una identificación validada.",
+      "Número de onda (cm⁻¹)",
+      "Transmitancia (%)"
+    ],
+    "en": [
+      "Olive oil IR record",
+      "Four selected peaks from the academic record dated 16 February 2023. Not the complete spectrum or a validated identification.",
+      "Wavenumber (cm⁻¹)",
+      "Transmittance (%)"
+    ],
+    "de": [
+      "IR-Datensatz von Olivenöl",
+      "Vier ausgewählte Banden aus dem Ausbildungsdatensatz vom 16. Februar 2023. Kein vollständiges Spektrum und keine validierte Identifizierung.",
+      "Wellenzahl (cm⁻¹)",
+      "Transmission (%)"
+    ]
+  },
+  "gallery": {
+    "bradford": {
+      "values": [
+        [
+          0,
+          0
+        ],
+        [
+          0.084,
+          0.977
+        ],
+        [
+          0.21,
+          1.092
+        ],
+        [
+          0.42,
+          1.131
+        ],
+        [
+          0.63,
+          1.198
+        ],
+        [
+          0.83,
+          1.262
+        ]
+      ],
+      "fit": [
+        1.0231,
+        0.5726
+      ],
+      "reportedR2": 0.4936,
+      "es": [
+        "Calibración Bradford (595 nm)",
+        "Concentración nominal de albúmina (mg/mL)",
+        "Absorbancia",
+        "Patrones registrados",
+        "Recta del informe",
+        "Reconstrucción a partir de la tabla del informe individual. R² informado: 0,4936. No se corrigen ni validan los valores nominales del informe."
+      ],
+      "en": [
+        "Bradford calibration (595 nm)",
+        "Nominal albumin concentration (mg/mL)",
+        "Absorbance",
+        "Recorded standards",
+        "Reported fitted line",
+        "Reconstructed from the individual report's table. Reported R²: 0.4936. The report's nominal values are not corrected or validated."
+      ],
+      "de": [
+        "Bradford-Kalibrierung (595 nm)",
+        "Nominale Albuminkonzentration (mg/mL)",
+        "Absorption",
+        "Dokumentierte Standards",
+        "Angegebene Gerade",
+        "Rekonstruktion aus der Tabelle des Einzelberichts. Angegebenes R²: 0,4936. Die nominalen Werte des Berichts werden nicht korrigiert oder validiert."
+      ]
+    },
+    "layout": {
+      "es": [
+        "Diseño conceptual de un laboratorio molecular y citogenético",
+        "Planta de acceso",
+        "Recepción y muestras",
+        "Almacén y residuos",
+        "Planta de trabajo",
+        "Preparación pre-PCR",
+        "PCR",
+        "Electroforesis post-PCR",
+        "Citogenética y cultivo",
+        "Esquema conceptual reconstruido tras revisar el plano académico. No reproduce su escala, geometría ni rutas de circulación reales."
+      ],
+      "en": [
+        "Conceptual molecular and cytogenetics laboratory layout",
+        "Access level",
+        "Reception and samples",
+        "Storage and waste",
+        "Laboratory level",
+        "Pre-PCR preparation",
+        "PCR",
+        "Post-PCR electrophoresis",
+        "Cytogenetics and culture",
+        "Conceptual reconstruction after reviewing the academic floor plan. It does not reproduce its scale, geometry or actual circulation routes."
+      ],
+      "de": [
+        "Konzeptionelle Planung eines Molekular- und Zytogenetiklabors",
+        "Zugangsebene",
+        "Annahme und Proben",
+        "Lager und Abfall",
+        "Laborebene",
+        "Prä-PCR-Vorbereitung",
+        "PCR",
+        "Post-PCR-Elektrophorese",
+        "Zytogenetik und Kultur",
+        "Konzeptionelle Rekonstruktion nach Sichtung des Ausbildungsgrundrisses. Maßstab, Geometrie und tatsächliche Verkehrswege werden nicht wiedergegeben."
+      ]
+    }
+  }
+}
