@@ -46,3 +46,5 @@ Review the latest GitHub Actions run and visual artifacts before release. A pass
 
 ### Vacancy lifecycle and privacy notice
 Editing either vacancy invalidates the previous comparison and semantic suggestions without changing the manually selected CV skills. A dedicated clear action removes both vacancy texts and their analysis from the current UI. Vacancy fields opt out of autocomplete, autocorrect and spellcheck; browser-level behaviour remains outside the application's control. The localized privacy page describes the optional external model asset downloads, local analysis and public-evidence cache. Browser regression coverage verifies the invalidation and clear action.
+
+The vacancy edit handler avoids rebuilding the PDF preview on every keystroke; clearing the texts also terminates an idle semantic worker while retaining the public IndexedDB cache. Accessibility audits now wait for fonts and rendered theme changes, cover localized privacy and standalone CV pages, and inspect the expanded CV controls rather than only the collapsed home view. The expanded scope is subject to CI validation.

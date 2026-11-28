@@ -40,8 +40,8 @@ function cancelSemantic(){
  clearTimeout(semanticTimer);semantic.busy=false;semantic.status='';
 }
 function invalidateSemantic(){cancelSemantic();semantic.rows=[];semantic.offer='';semantic.passages=0;renderSemantic();}
-function invalidateVacancies(){state.analysis=null;state.comparison=null;invalidateSemantic();renderAnalysis();renderSelection();renderPreview();}
-function clearVacancies(){state.offer='';state.second='';$('cv-offer').value='';$('cv-second-offer').value='';invalidateVacancies();$('cv-offer').focus();}
+function invalidateVacancies(){const hadAnalysis=Boolean(state.analysis||state.comparison);state.analysis=null;state.comparison=null;if(semantic.busy||semantic.rows.length||semantic.offer||semantic.status)invalidateSemantic();if(hadAnalysis){renderAnalysis();renderSelection();}}
+function clearVacancies(){state.offer='';state.second='';$('cv-offer').value='';$('cv-second-offer').value='';invalidateVacancies();if(semanticWorker){semanticWorker.terminate();semanticWorker=null;}$('cv-offer').focus();}
 function recommendedSelection(){
  const primary=(state.analysis?.matches||[]).filter(h=>h.priority==='required'||h.priority==='duty'||h.kind==='direct').map(h=>h.id);
  const others=(state.analysis?.matches||[]).map(h=>h.id);
