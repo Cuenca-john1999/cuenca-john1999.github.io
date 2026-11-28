@@ -30,6 +30,17 @@ for (const [engine,launcher] of Object.entries({chromium,webkit})) {
                 assert.ok(bounds && bounds.x>=-1 && bounds.x+bounds.width<=viewport.width+1,'Country selector must fit viewport');
                 await page.screenshot({path:`test-output/${engine}-${viewport.width}-${lang}-selector.png`});
                 await selector.locator('summary').click();
+                await page.locator('.home-compact').waitFor({state:'attached'});
+                assert.equal(await page.locator('details[data-home-disclosure][open]').count(),0);
+                assert.equal(await page.locator('[data-market-skill]:visible').count(),0);
+                await page.screenshot({path:`test-output/${engine}-${viewport.width}-${lang}-compact-home.png`,fullPage:true});
+                await page.locator('#home-technical>summary').click();
+                await page.locator('#home-catalogue>summary').click();
+                assert.equal(await page.locator('[data-market-skill]:visible').count(),expectedSkills);
+                await page.locator('#home-equipment>summary').click();
+                await page.locator('#home-documents>summary').click();
+                await page.locator('#home-static-cvs>summary').click();
+                await page.locator('#home-package>summary').click();
                 // Scroll directly to each new section; contrast and layout must
                 // be restored even for very tall sections and direct anchor visits.
                 const marketSections=page.locator('.sequence-section.market-section');
@@ -74,6 +85,10 @@ for (const [engine,launcher] of Object.entries({chromium,webkit})) {
                     assert.equal((await readFile(file)).subarray(0,2).toString(),'PK');
                     execFileSync('python3',['-c','import sys,zipfile; z=zipfile.ZipFile(sys.argv[1]); assert z.testzip() is None; assert len(z.namelist())==1; assert z.read(z.namelist()[0]).startswith(b"%PDF-")',file]);
                 }
+                const catalogueId=({en:'technical-catalogue',es:'catalogo-tecnico',de:'fachkatalog'})[lang];
+                await page.goto(base+path+'?focus=pharma#'+catalogueId,{waitUntil:'domcontentloaded'});
+                await page.locator('#home-catalogue[open]').waitFor({state:'attached'});
+                assert.equal(await page.locator('#home-technical').getAttribute('open'),'');
                 await page.goto(base+path+'workbench/#scientific-library',{waitUntil:'domcontentloaded'});
                 assert.equal(await page.locator('#scientific-library article[id^="note-"]').count(),expectedNotes);
                 assert.equal(await page.locator('#scientific-library .science-flow').count(),expectedFlows);

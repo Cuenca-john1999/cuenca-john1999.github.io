@@ -7,7 +7,7 @@ for(const [engine,launcher] of Object.entries({chromium,webkit})){
  try{for(const width of [1440,390]){
  const page=await browser.newPage({viewport:{width,height:900},acceptDownloads:true});const errors=[];page.on('pageerror',e=>errors.push(e.message));
  for(const [lang,path] of [['es','es/'],['en',''],['de','de/']]){
-  await page.goto(base+path,{waitUntil:'domcontentloaded'});await page.locator('#cv-download-pdf').waitFor({state:'attached'});
+  await page.goto(base+path,{waitUntil:'domcontentloaded'});await page.locator('#cv-download-pdf').waitFor({state:'attached'});await page.locator('#home-cv').waitFor({state:'attached'});assert.equal(await page.locator('#home-cv').getAttribute('open'),null);
   assert.equal(await page.locator('#cv-builder').count(),1);assert.equal(await page.locator('#cv-language').inputValue(),lang);
   assert.equal(await page.locator('#cv-builder [data-skill-id]:checked').count(),8);assert.equal(await page.locator('#cv-download-pdf').isEnabled(),true);
   assert.equal(await page.locator('#cv-advanced').getAttribute('open'),null);assert.equal(await page.locator('#cv-extra').getAttribute('open'),null);
@@ -23,11 +23,11 @@ for(const [engine,launcher] of Object.entries({chromium,webkit})){
    await page.locator('#cv-use-suggestions').click();assert.match(await page.locator('#cv-summary').innerText(),/Recuento microbiol/);
    await page.locator('#cv-language').selectOption('en');assert.equal(await page.locator('html').getAttribute('lang'),'es');assert.equal(await page.locator('#cv-builder').getAttribute('lang'),'en');assert.match(await page.locator('#cv-summary').innerText(),/Microbial enumeration/);
    const pending=page.waitForEvent('download');await page.locator('#cv-download-pdf').click();const dl=await pending;assert.equal((await readFile(await dl.path())).subarray(0,8).toString(),'%PDF-1.4');
-   await page.locator('#cv-extra>summary').click();await page.locator('#cv-personal-mode').check();await page.locator('#cv-contact-input').fill('test@example.invalid');assert.match(await page.locator('#cv-content-preview').textContent(),/test@example.invalid/);await page.locator('#cv-personal-mode').uncheck();assert.doesNotMatch(await page.locator('#cv-content-preview').textContent(),/test@example.invalid/);
+   await page.locator('#cv-extra>summary').click();assert.equal(await page.locator('#cv-personal-mode,#cv-contact-input').count(),0);
    const z=page.waitForEvent('download');await page.locator('#cv-download-zip').click();assert.equal((await readFile(await (await z).path())).subarray(0,2).toString(),'PK');
   }
   await page.locator('#cv-builder').screenshot({path:'test-output/'+engine+'-'+width+'-'+lang+'-inline-cv-builder.png'});assert.deepEqual(errors,[]);
  }
- await page.goto(base+'cv-builder/?lang=es');await page.locator('#cv-download-pdf').waitFor();assert.equal(await page.locator('#cv-language').inputValue(),'es');assert.equal(await page.locator('#cv-builder [data-skill-id]:checked').count(),8);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);assert.deepEqual(errors,[]);await page.close();
+ await page.goto(base+'cv-builder/?lang=es');await page.locator('#cv-download-pdf').waitFor();assert.equal(await page.locator('#cv-language').inputValue(),'es');assert.equal(await page.locator('#cv-personal-mode,#cv-contact-input').count(),0);assert.equal(await page.locator('#cv-builder [data-skill-id]:checked').count(),8);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);assert.deepEqual(errors,[]);await page.close();
  }}finally{await browser.close();}
 }
