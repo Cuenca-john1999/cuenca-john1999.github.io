@@ -37,11 +37,12 @@ self.onmessage=async({data:m})=>{
  try{
   const entries=m.entries;if(!Array.isArray(entries)||entries.length<1||entries.length>500||entries.some(e=>typeof e.key!=='string'||typeof e.text!=='string'||e.text.length>2000))throw Error('Invalid evidence index');
   const queries=splitQueries(m.offer);if(!queries.length){notify('result',{rows:[],passages:0});return;}
-  notify('loading');const model=await getModel();
-  const key=JSON.stringify(entries);
-  if(indexCache?.key!==key){const id=await cacheKey(key).catch(()=>null);let vectors=id?await cached(id,entries.length):null;if(!vectors){vectors=await encode(model,entries.map(e=>e.text),'passage: ','index');if(id)await store(id,vectors);}indexCache={key,vectors};}
-  const vectors=await encode(model,queries,'query: ','offer');
-  notify('result',{rows:rankVectors(entries,indexCache.vectors,queries,vectors),passages:queries.length});
+  const started=performance.now();notify('loading');const model=await getModel();const modelMs=performance.now()-started;
+  const key=JSON.stringify(entries),indexStarted=performance.now();let indexSource='memory';
+  if(indexCache?.key!==key){const id=await cacheKey(key).catch(()=>null);let vectors=id?await cached(id,entries.length):null;indexSource=vectors?'indexeddb':'computed';if(!vectors){vectors=await encode(model,entries.map(e=>e.text),'passage: ','index');if(id)await store(id,vectors);}indexCache={key,vectors};}
+  const indexMs=performance.now()-indexStarted,queryStarted=performance.now();const vectors=await encode(model,queries,'query: ','offer');
+  const rows=rankVectors(entries,indexCache.vectors,queries,vectors);
+  notify('result',{rows,passages:queries.length,diagnostics:{indexSource,modelMs:Math.round(modelMs),indexMs:Math.round(indexMs),queryMs:Math.round(performance.now()-queryStarted)}});
  }catch(e){notify('error',{message:String(e?.message||e).slice(0,200)});}
  finally{busy=false;}
 };
