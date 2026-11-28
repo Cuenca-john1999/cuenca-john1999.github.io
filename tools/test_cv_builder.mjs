@@ -22,3 +22,12 @@ assert.equal(analyse(data,'En un colegio, preparar experimentos y disoluciones, 
 assert.equal(analyse(data,'Schule: Experimente vorbereiten, Geräte warten, Laborbedarf und Arbeitsschutz.').route,'school');
 assert.notEqual(analyse(data,'Research laboratory: HaCaT cell culture, PCR and ELISA.').route,'school');
 for(const l of ['es','en','de']){const pdf=generate(data,cv,compose(data,cv,l,'school',school.matches.slice(0,12).map(x=>x.id)));assert(pdf.includes('FORM-ED / WASHI'));assert(pdf.includes('/Count 2'));}
+
+const priority=analyse(data,'PCR is essential, but GMP is not required. ELISA is desirable.');
+assert.equal(priority.matches.find(x=>x.id==='pcr').priority,'required');
+assert.equal(priority.matches.find(x=>x.id==='elisa').priority,'preferred');
+assert(!priority.gaps.some(x=>x.id==='gmp'));assert(priority.notRequired.some(x=>x.id==='gmp'));
+assert(!has(analyse(data,'PCR is not required. ELISA is essential.'),'pcr'));
+assert(has(analyse(data,'Separate immune cells from blood and isolate nucleic acids.'),'cd4-cd14'));
+const long=analyse(data,'Organisation and laboratory resources. '.repeat(800)+'\nPCR and ELISA are required.');
+assert(has(long,'pcr')&&has(long,'elisa'));

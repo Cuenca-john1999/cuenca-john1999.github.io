@@ -1,5 +1,5 @@
-import {buildDossiers} from './cv-pdf-engine.mjs';
-import {interpret,focusRoutes,facts} from './cv-context.mjs';
+import {buildDossiers} from './cv-pdf-engine.mjs?v=2';
+import {interpret,focusRoutes,facts,clauses,modality,strongest} from './cv-context.mjs?v=2';
 export {focusRoutes,facts};
 export const MAX_SKILLS=12;
 const aliases={
@@ -76,19 +76,30 @@ export const gaps=[
 const norm=s=>String(s).replace(/ß/g,"ss").normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 function contains(text,term){const q=norm(term);return q.length>=2&&(' '+text+' ').includes(' '+q+' ');}
 export function analyse(data,offer){
- const text=norm(offer),context=interpret(offer),matches=new Map(),allowed=new Set(data.skills.map(s=>s.id));
+ const context=interpret(offer),matches=new Map(),allowed=new Set(data.skills.map(s=>s.id)),notRequired=[...context.notRequired];
+ // Split comma-separated requirements for term-level modality; preserve full clauses for task interpretation.
+ const chunks=clauses(offer).flatMap(s=>s.split(/\s*,\s*/)).map(s=>({text:norm(s),passage:s.slice(0,400),priority:modality(s)}));
+ const weight={required:4,duty:3,preferred:1,unspecified:2,'not-required':0};
+ const termHits=terms=>{
+   const rows=[];for(const term of terms)for(const chunk of chunks)if(contains(chunk.text,term))rows.push({...chunk,term});
+   return rows;
+ };
  for(const s of data.skills){
-   const terms=[...(aliases[s.id]||[]),...['es','en','de'].map(l=>s.locales[l].name)];
-   const found=[...new Set(terms.filter(t=>contains(text,t)))];
-   if(found.length)matches.set(s.id,{id:s.id,terms:found,score:8+Math.min(found.length,3),kind:'direct',reasons:[]});
+   const terms=[...(aliases[s.id]||[]),...['es','en','de'].map(l=>s.locales[l].name)],rows=termHits(terms);
+   if(!rows.length)continue;
+   const best=strongest(rows);if(best.priority==='not-required'){notRequired.push({id:s.id,label:Object.fromEntries(['es','en','de'].map(l=>[l,s.locales[l].name])),priority:best.priority,passage:best.passage});continue;}
+   const found=[...new Set(rows.filter(x=>x.priority!=='not-required').map(x=>x.term))];
+   matches.set(s.id,{id:s.id,terms:found,score:8+Math.min(found.length,3)+weight[best.priority],priority:best.priority,kind:'direct',reasons:[],passage:best.passage});
  }
  for(const hit of context.hits){for(const [i,id] of hit.skills.entries()){
-   if(!allowed.has(id))continue;const row=matches.get(id)||{id,terms:[],score:0,kind:'related',reasons:[]};
-   row.score+=Math.max(1,5-i);row.reasons.push(hit.id);matches.set(id,row);
+   if(!allowed.has(id)||notRequired.some(x=>x.id===id)&&!matches.has(id))continue;
+   const row=matches.get(id)||{id,terms:[],score:0,kind:'related',reasons:[],priority:hit.priority,passage:hit.passage};
+   row.score+=Math.max(1,5-i)+weight[hit.priority];row.reasons.push(hit.id);row.priority=strongest([row,hit]).priority;matches.set(id,row);
  }}
  const ranked=[...matches.values()].sort((a,b)=>b.score-a.score||Number(b.kind==='direct')-Number(a.kind==='direct')||a.id.localeCompare(b.id));
  const routeScores=Object.entries(data.routes).map(([id,r])=>[id,ranked.filter(x=>r.skills.includes(x.id)).reduce((n,x)=>n+x.score,0)]).sort((a,b)=>b[1]-a[1]);
- return {matches:ranked,gaps:[...gaps.filter(g=>g.terms.some(t=>contains(text,t))),...context.gaps],route:context.school?'school':routeScores[0]?.[1]>0?routeScores[0][0]:'general',context:context.hits,factIds:context.factIds};
+ const gapHits=[];for(const g of gaps){const rows=termHits(g.terms);if(!rows.length)continue;const best=strongest(rows),item={...g,priority:best.priority,passage:best.passage};if(best.priority==='not-required')notRequired.push(item);else gapHits.push(item);}
+ return {matches:ranked,gaps:[...gapHits,...context.gaps],notRequired,route:context.school?'school':routeScores[0]?.[1]>0?routeScores[0][0]:'general',context:context.hits,factIds:context.factIds};
 }
 export function selectIds(data,ids){
  const allowed=new Set(data.skills.map(s=>s.id)),unique=[...new Set(ids)];

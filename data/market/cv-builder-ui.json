@@ -10,7 +10,7 @@
     "analyse": "Analizar ofertas",
     "matches": "Coincidencias detectadas",
     "gaps": "Requisitos que necesitan comprobación",
-    "warning": "Análisis por términos y patrones de funciones. No es IA generativa; revisa requisitos obligatorios, negaciones, años de experiencia y alcance de las coincidencias.",
+    "warning": "El análisis combina términos y patrones de funciones. La prioridad y las negaciones son orientativas: revisa el texto de origen. Máximo 60.000 caracteres por oferta.",
     "noMatches": "No hay coincidencias detectadas",
     "noGaps": "Sin alertas del diccionario; otros requisitos pueden seguir pendientes.",
     "shared": "Coincidencias comunes",
@@ -63,7 +63,15 @@
     "transferable": "Evidencias transversales relevantes",
     "related": "Relación por función (revisar alcance)",
     "direct": "Coincidencia de término",
-    "teaching": "Experiencia docente"
+    "teaching": "Experiencia docente",
+    "priorities": {
+      "required": "Obligatorio indicado",
+      "duty": "Función del puesto",
+      "preferred": "Deseable indicado",
+      "unspecified": "Prioridad no especificada",
+      "not-required": "No exigido explícitamente"
+    },
+    "notRequired": "Términos indicados como no exigidos"
   },
   "en": {
     "title": "Personalised CV Builder",
@@ -76,7 +84,7 @@
     "analyse": "Analyse vacancies",
     "matches": "Detected matches",
     "gaps": "Requirements to review",
-    "warning": "Term and task-pattern analysis. Not generative AI; review mandatory requirements, negations, experience years and scope of matches.",
+    "warning": "Analysis combines terms and task patterns. Priority and negation hints are provisional: review the original passage. Maximum 60,000 characters per description.",
     "noMatches": "No matches detected",
     "noGaps": "No dictionary alerts; other requirements may remain unmet.",
     "shared": "Shared matches",
@@ -129,7 +137,15 @@
     "transferable": "Relevant transferable evidence",
     "related": "Task-related match (review scope)",
     "direct": "Term match",
-    "teaching": "Teaching experience"
+    "teaching": "Teaching experience",
+    "priorities": {
+      "required": "Stated requirement",
+      "duty": "Job duty",
+      "preferred": "Stated preference",
+      "unspecified": "Priority unspecified",
+      "not-required": "Explicitly not required"
+    },
+    "notRequired": "Terms stated as not required"
   },
   "de": {
     "title": "Individueller Lebenslauf-Generator",
@@ -142,7 +158,7 @@
     "analyse": "Anzeigen analysieren",
     "matches": "Erkannte Treffer",
     "gaps": "Anforderungen zur Prüfung",
-    "warning": "Begriffs- und Aufgabenmusteranalyse. Keine generative KI; Pflichtanforderungen, Verneinungen, Erfahrungsjahre und Umfang prüfen.",
+    "warning": "Begriffs- und Aufgabenmusteranalyse. Priorität und Verneinung sind Hinweise: Originaltext prüfen. Maximal 60.000 Zeichen pro Anzeige.",
     "noMatches": "Keine Treffer erkannt",
     "noGaps": "Keine Wörterbuchwarnungen; weitere Anforderungen können offen sein.",
     "shared": "Gemeinsame Treffer",
@@ -195,6 +211,14 @@
     "transferable": "Relevante übertragbare Nachweise",
     "related": "Aufgabenbezogener Treffer (Umfang prüfen)",
     "direct": "Begriffstreffer",
-    "teaching": "Unterrichtserfahrung"
+    "teaching": "Unterrichtserfahrung",
+    "priorities": {
+      "required": "Genannte Pflichtanforderung",
+      "duty": "Aufgabe",
+      "preferred": "Genannte Wunschanforderung",
+      "unspecified": "Priorität nicht angegeben",
+      "not-required": "Explizit nicht erforderlich"
+    },
+    "notRequired": "Als nicht erforderlich genannte Begriffe"
   }
 }

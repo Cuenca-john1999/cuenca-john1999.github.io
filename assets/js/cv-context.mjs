@@ -269,6 +269,100 @@ const rules=[
     "qualification"
   ]
 ];
+rules.push(...[
+  [
+    "blood-cells",
+    [
+      "Procesamiento de sangre y separación celular (tipo por confirmar)",
+      "Blood processing and cell separation (type to confirm)",
+      "Blutaufarbeitung und Zelltrennung (Art prüfen)"
+    ],
+    [
+      "(isolat\\w*|separat\\w*|purif\\w*)\\b.{0,65}\\b(mononuclear cells|immune cells|lymphocytes|blood cells)",
+      "(aisl\\w*|separ\\w*|purif\\w*)\\b.{0,55}\\b(celulas mononucleares|celulas inmunes|linfocitos)",
+      "(mononuklear\\w* zellen|immunzellen|lymphozyten)\\b.{0,50}\\b(isolier\\w*|trenn\\w*)"
+    ],
+    [
+      "cd4-cd14",
+      "human-samples"
+    ],
+    null
+  ],
+  [
+    "gene-assays",
+    [
+      "Preparación de ácidos nucleicos y análisis molecular",
+      "Nucleic acid preparation and molecular analysis",
+      "Nukleinsäureaufarbeitung und molekulare Analytik"
+    ],
+    [
+      "(extract\\w*|isolat\\w*|purif\\w*)\\b.{0,30}\\b(nucleic acids|rna)|gene expression analysis",
+      "(extrac\\w*|aisl\\w*|purif\\w*)\\b.{0,30}\\b(acidos nucleicos|arn)|analisis de expresion genica",
+      "(nukleinsaur\\w*|rna)\\b.{0,35}\\b(extrahier\\w*|isolier\\w*|aufarbeit\\w*)|genexpressionsanalyse"
+    ],
+    [
+      "rna-extraction",
+      "pcr",
+      "electrophoresis"
+    ],
+    null
+  ],
+  [
+    "blood-films",
+    [
+      "Preparación y observación de frotis sanguíneos",
+      "Blood film preparation and examination",
+      "Blutausstrich und mikroskopische Untersuchung"
+    ],
+    [
+      "(prepar\\w*|examin\\w*|stain\\w*)\\b.{0,35}\\b(blood films|blood smears)",
+      "(prepar\\w*|examin\\w*|ten\\w*)\\b.{0,35}\\b(frotis sanguineos|frotis de sangre)",
+      "blutausstrich\\w*\\b.{0,35}\\b(prapar\\w*|farb\\w*|untersuch\\w*)"
+    ],
+    [
+      "capillary-blood-smear",
+      "microscopy",
+      "haematology"
+    ],
+    null
+  ],
+  [
+    "viable-counts",
+    [
+      "Cuantificación de microorganismos viables",
+      "Viable microorganism enumeration",
+      "Bestimmung lebensfähiger Keime"
+    ],
+    [
+      "(count\\w*|enumerat\\w*|quantif\\w*|determin\\w*)\\b.{0,55}\\b(viable microorganisms|viable bacteria|bacterial colonies|microbial growth)",
+      "(recuent\\w*|cuantific\\w*|determin\\w*)\\b.{0,50}\\b(microorganismos viables|bacterias viables|colonias bacterianas)",
+      "(lebensfahig\\w* keime|bakterienkolonien)\\b.{0,35}\\b(zahl\\w*|bestimm\\w*)"
+    ],
+    [
+      "microbial-enumeration"
+    ],
+    null
+  ],
+  [
+    "instrumental-quant",
+    [
+      "Mediciones cuantitativas y preparación de patrones",
+      "Quantitative measurement and reference standards",
+      "Quantitative Messung und Standards"
+    ],
+    [
+      "(prepar\\w*|mak\\w*)\\b.{0,45}\\b(calibration standards|reference standards)|absorbance measurements",
+      "(prepar\\w*|elabor\\w*)\\b.{0,40}\\b(patrones de calibracion|soluciones patron)|medidas de absorbancia",
+      "(kalibrierstandard\\w*|standardlosung\\w*)\\b.{0,35}\\b(herstell\\w*|vorbereit\\w*)|absorptionsmessung\\w*"
+    ],
+    [
+      "uv-vis-spectrophotometry",
+      "solutions",
+      "volumetric-measurement"
+    ],
+    null
+  ]
+]);
 const alerts=[
   [
     "safeguarding",
@@ -312,14 +406,28 @@ export function passages(offer){
  const s=String(offer).replace(/&#xA0;|&nbsp;|&#160;/gi,' ').replace(/<[^>]{1,100}>/g,' ').replace(/\\\s*\n/g,'\n');
  return s.split(/[\n;]+|(?<=[.!?])\s+/).map(s=>s.trim()).filter(Boolean).flatMap(s=>s.length>1400?s.match(/.{1,1000}(?:\s|$)|.{1,1000}/g)||[s]:[s]);
 }
+
+// Modality is a conservative clause-level hint, not a legal or eligibility determination.
+export function clauses(offer){return passages(offer).flatMap(s=>s.split(/\s+(?:but|however|pero|sin embargo|jedoch|aber)\s+/i).map(x=>x.trim()).filter(Boolean));}
+export function modality(s){
+ const n=normalize(s);
+ if(/\b(?:not required|not essential|not necessary|no prior experience (?:is )?required|no experience (?:is )?required|no se requiere|no es (?:necesario|obligatorio|imprescindible)|nicht erforderlich|nicht notwendig|keine .{0,50} erforderlich)\b/.test(n))return 'not-required';
+ if(/\b(?:desirable|preferred|advantageous|nice to have|an advantage|a plus|beneficial|deseable|valorable|se valorara|preferiblemente|ventaja|wunschenswert|von vorteil|idealerweise)\b/.test(n))return 'preferred';
+ if(/\b(?:required|essential|mandatory|must|minimum|prerequisite|obligatori\w*|imprescindible|requisito minimo|debe\w*|erforderlich|zwingend|voraussetzung|mindestens)\b/.test(n))return 'required';
+ if(/\b(?:you will|responsible for|duties include|tasks include|se encargara|sera responsable|funciones incluyen|aufgaben umfassen|sie werden|verantwortlich fur)\b/.test(n))return 'duty';
+ return 'unspecified';
+}
+const rank={required:4,duty:3,preferred:2,unspecified:1,'not-required':0};
+export function strongest(items){return items.slice().sort((a,b)=>rank[b.priority]-rank[a.priority])[0];}
 export function interpret(offer){
- const chunks=passages(offer),hits=[],gaps=[];
+ const chunks=clauses(offer),hits=[],gaps=[],notRequired=[];
  for(const [id,labels,patterns,skills=[],fact=null] of [...rules,...alerts]){
-   const found=chunks.find(s=>patterns.some(p=>new RegExp('\\b(?:'+p+')\\b','i').test(normalize(s))));
-   if(!found)continue;
-   const item={id,label:locale(labels),passage:found.slice(0,400),skills,fact};
+   const found=chunks.filter(s=>patterns.some(p=>new RegExp('\\b(?:'+p+')\\b','i').test(normalize(s)))).map(s=>({passage:s.slice(0,400),priority:modality(s)}));
+   if(!found.length)continue;
+   const best=strongest(found),item={id,label:locale(labels),...best,skills,fact};
+   if(best.priority==='not-required'){notRequired.push(item);continue;}
    if(alerts.some(a=>a[0]===id))gaps.push(item);else hits.push(item);
  }
  const school=hits.some(x=>x.id==='school')&&(hits.some(x=>['experiments','stock','maintenance','safety'].includes(x.id))||/\b(school science laboratory|school laboratory technician|science technician|schullabor|laboratorio escolar)\b/.test(normalize(offer)));
- return {hits,gaps,school,factIds:[...new Set(hits.map(h=>h.fact).filter(Boolean))]};
+ return {hits,gaps,notRequired,school,factIds:[...new Set(hits.map(h=>h.fact).filter(Boolean))]};
 }
