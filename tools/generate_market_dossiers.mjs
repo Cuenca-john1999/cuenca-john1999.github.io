@@ -32,13 +32,49 @@ function buildDossiers(read){
  for(const [q,school] of [["Técnico Superior en Laboratorio Clínico y Biomédico","CEAC FP Oficial | 2023-2025"],["Técnico en Operaciones de Laboratorio","IES Virgen de la Paloma | 2021-2023"]]){y=c.para(q,L,y,11.2,M,15.5,true);y=c.para(school,L,y,10.3,M,14,false,C.muted)-10}y-=10;
  let extra=[t.contexts[field]];if(lang==="en")extra.push("English B2 | German A2 (certification in preparation) | Native Spanish");if(lang==="de")extra.push("Deutsch A2 (Zertifizierung in Vorbereitung) | Englisch B2 | Spanisch Muttersprache","Raum Bonn/Köln und Berlin; deutschlandweit umzugsbereit.");if(field==="research")extra.push(t.animal);section(t.context,extra);section(t.support,[t.supportText]);if(y<58)throw Error("Profile too long "+lang+" "+field+" "+y);out[`assets/documents/${lang}/${name}.pdf`]=pdf([c.raw()]);
  }
- const groups=["clinical","research","analytical"].map(field=>({field,rows:data.skills.filter(s=>s.area===field).sort((a,b)=>a.locales[lang].order-b.locales[lang].order)}));const batches=[groups[0],groups[1],{field:"analytical",rows:groups[2].rows.slice(0,11),part:1},{field:"analytical",rows:groups[2].rows.slice(11),part:2}];const pages=[];
- for(const [i,batch] of batches.entries()){const c=canvas();let y=header(c,lang,t.catalogue,t.market+"  /  "+t.dossier,i+1,batches.length);const subtitle=t.areas[batch.field]+(batch.part?" ("+batch.part+"/2)":"");y=c.para(subtitle,L,y,14.5,M,18,true,C.navy)-9;if(i===0)y=c.para(t.catalogIntro,L,y,10.2,M,13.2,false,C.muted)-11;
- const col=238,detailW=R-col-8; c.rect(L,y-7,M,22,C.navy);c.text(t.columns[0],L+7,y,9.3,true,C.white);c.text(t.columns[1],col,y,9.3,true,C.white);y-=12;
- const compact=batch.field==="research",nameZ=compact?9.8:10.1,metaZ=compact?8.2:8.7,detailZ=compact?9.7:10.3,nh=compact?11.3:12.5,mh=compact?9.2:10.6,dh=compact?11.7:13.2,pad=compact?4.5:11;
- for(const [j,s] of batch.rows.entries()){const v=s.locales[lang],n=wrap(v.name,nameZ,179,true),m=wrap(v.level+" | "+s.source,metaZ,179),d=wrap(v.detail,detailZ,detailW);const h=Math.max(n.length*nh+m.length*mh+1,d.length*dh)+pad+2;if(y-h<62)throw Error("Catalogue too long "+lang+" "+s.id+" "+y+" "+h);if(j%2===0)c.rect(L,y-h,M,h,C.pale);let yy=y-(compact?9:11);for(const line of n){c.text(line,L+7,yy,nameZ,true);yy-=nh}yy-=1;for(const line of m){c.text(line,L+7,yy,metaZ,false,C.muted);yy-=mh}yy=y-(compact?9:11);for(const line of d){c.text(line,col,yy,detailZ);yy-=dh}c.rule(L,y-h,M);y-=h}
- const note=batch.field==="research"?t.animal:batch.field==="clinical"?t.legal:null;if(note){y-=15;y=c.para(note,L,y,9.1,M,12,false,C.muted);if(y<57)throw Error("Note overflow "+lang+" "+y)}pages.push(c.raw())
- }out[`assets/documents/${lang}/${r.names[3]}.pdf`]=pdf(pages);
+
+ const groups=["clinical","research","analytical"].map(field=>({field,rows:data.skills.filter(s=>s.area===field).sort((a,b)=>a.locales[lang].order-b.locales[lang].order)}));
+ const col=238,detailW=R-col-8;
+ const nameZ=10.1,metaZ=8.7,detailZ=10.3,nh=12.5,mh=10.6,dh=13.2,pad=11;
+ const noteFor=field=>field==="research"?t.animal:field==="clinical"?t.legal:null;
+ function measureRow(s){
+   const v=s.locales[lang],n=wrap(v.name,nameZ,179,true),m=wrap(v.level+" | "+s.source,metaZ,179),d=wrap(v.detail,detailZ,detailW);
+   return {s,n,m,d,h:Math.max(n.length*nh+m.length*mh+1,d.length*dh)+pad+2};
+ }
+ function startCataloguePage(field,first,page,total){
+   const c=canvas();let y=header(c,lang,t.catalogue,t.market+"  /  "+t.dossier,page,total);
+   y=c.para(t.areas[field],L,y,14.5,M,18,true,C.navy)-9;
+   if(first)y=c.para(t.catalogIntro,L,y,10.2,M,13.2,false,C.muted)-11;
+   c.rect(L,y-7,M,22,C.navy);c.text(t.columns[0],L+7,y,9.3,true,C.white);c.text(t.columns[1],col,y,9.3,true,C.white);
+   return {c,y:y-12};
+ }
+ const batches=[];
+ for(const group of groups){
+   const rows=group.rows.map(measureRow);if(!rows.length)continue;
+   const note=noteFor(group.field),bottom=note?Math.max(62,57+15+wrap(note,9.1,M).length*12):62;
+   let offset=0;
+   while(offset<rows.length){
+     let {y}=startCataloguePage(group.field,batches.length===0,1,1),start=offset;
+     while(offset<rows.length&&y-rows[offset].h>=bottom){y-=rows[offset].h;offset++;}
+     if(offset===start)throw Error("Catalogue row too tall: "+lang+" "+rows[offset].s.id);
+     batches.push({field:group.field,rows:rows.slice(start,offset),note:offset===rows.length?note:null});
+   }
+ }
+ const pages=[];
+ for(const [i,batch] of batches.entries()){
+   let {c,y}=startCataloguePage(batch.field,i===0,i+1,batches.length);
+   for(const [j,row] of batch.rows.entries()){
+     const {s,n,m,d,h}=row;if(y-h<62)throw Error("Catalogue overflow "+lang+" "+s.id);
+     if(j%2===0)c.rect(L,y-h,M,h,C.pale);
+     let yy=y-11;for(const line of n){c.text(line,L+7,yy,nameZ,true);yy-=nh}
+     yy-=1;for(const line of m){c.text(line,L+7,yy,metaZ,false,C.muted);yy-=mh}
+     yy=y-11;for(const line of d){c.text(line,col,yy,detailZ);yy-=dh}
+     c.rule(L,y-h,M);y-=h;
+   }
+   if(batch.note){y-=15;y=c.para(batch.note,L,y,9.1,M,12,false,C.muted);if(y<57)throw Error("Note overflow "+lang+" "+y)}
+   pages.push(c.raw());
+ }
+ out[`assets/documents/${lang}/${r.names[3]}.pdf`]=pdf(pages);
  }return out;
 }
 const files=buildDossiers(p=>readFileSync(resolve(root,p),'utf8'));

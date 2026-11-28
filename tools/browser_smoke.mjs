@@ -4,12 +4,19 @@ import { execFileSync } from 'node:child_process';
 import { chromium, webkit } from 'playwright';
 
 const base = process.env.PORTFOLIO_URL || 'http://127.0.0.1:8765/';
+const catalogue = JSON.parse(await readFile(new URL('../data/market/common-evidence.json',import.meta.url),'utf8'));
+const library = JSON.parse(await readFile(new URL('../data/market/scientific-library.json',import.meta.url),'utf8'));
+const expectedSkills = catalogue.skills.length;
+const expectedNotes = library.notes.length;
+const expectedFlows = library.flows.length;
 await mkdir('test-output', {recursive:true});
 for (const [engine,launcher] of Object.entries({chromium,webkit})) {
     const browser = await launcher.launch({headless:true});
     try {
         for (const viewport of [{width:1440,height:900},{width:390,height:844}]) {
             const page = await browser.newPage({viewport,acceptDownloads:true,locale:'en-US'});
+            const pageErrors=[];
+            page.on('pageerror',error=>pageErrors.push(error.message));
             for (const [lang,path] of [['en',''],['es','es/'],['de','de/']]) {
                 await page.goto(base+path,{waitUntil:'domcontentloaded'});
                 const selector=page.locator('[data-market-selector]');
@@ -41,12 +48,12 @@ for (const [engine,launcher] of Object.entries({chromium,webkit})) {
                 await search.waitFor({state:'visible'});
                 const controlHeights=await page.locator('[data-market-filters] input,[data-market-filters] select,[data-market-filters] button').evaluateAll(nodes=>nodes.map(n=>n.getBoundingClientRect().height));
                 assert.ok(Math.max(...controlHeights)-Math.min(...controlHeights)<2,'Filter controls must have a consistent height');
-                assert.equal(await page.locator('[data-market-skill]').count(),46);
+                assert.equal(await page.locator('[data-market-skill]').count(),expectedSkills);
                 await search.fill('PCR');
                 const count=await page.locator('[data-market-skill]:not([hidden])').count();
-                assert.ok(count>0 && count<46,'Search must filter skills');
+                assert.ok(count>0 && count<expectedSkills,'Search must filter skills');
                 await page.locator('[data-market-reset]').click();
-                assert.equal(await page.locator('[data-market-skill]:not([hidden])').count(),46);
+                assert.equal(await page.locator('[data-market-skill]:not([hidden])').count(),expectedSkills);
                 await page.locator('#recruitment-hub').scrollIntoViewIfNeeded();
                 assert.equal(await page.locator('[data-application-package] input[type=checkbox]').count(),7);
                 if(viewport.width===1440) {
@@ -59,12 +66,12 @@ for (const [engine,launcher] of Object.entries({chromium,webkit})) {
                     execFileSync('python3',['-c','import sys,zipfile; z=zipfile.ZipFile(sys.argv[1]); assert z.testzip() is None; assert len(z.namelist())==1; assert z.read(z.namelist()[0]).startswith(b"%PDF-")',file]);
                 }
                 await page.goto(base+path+'workbench/#scientific-library',{waitUntil:'domcontentloaded'});
-                assert.equal(await page.locator('#scientific-library article[id^="note-"]').count(),10);
-                assert.equal(await page.locator('#scientific-library .science-flow').count(),4);
+                assert.equal(await page.locator('#scientific-library article[id^="note-"]').count(),expectedNotes);
+                assert.equal(await page.locator('#scientific-library .science-flow').count(),expectedFlows);
                 assert.equal(await page.locator('html').getAttribute('lang'),lang);
                 await page.locator('#scientific-library-title').scrollIntoViewIfNeeded();
                 await page.waitForFunction(()=>document.getElementById('scientific-library-title').classList.contains('is-visible'));
-                assert.equal(await page.locator('#scientific-library article[data-reveal]').count(),14);
+                assert.equal(await page.locator('#scientific-library article[data-reveal]').count(),expectedNotes+expectedFlows);
                 await page.screenshot({path:`test-output/${engine}-${viewport.width}-${lang}-library.png`});
             }
             // Verify real navigation through the country dropdown.
@@ -73,6 +80,7 @@ for (const [engine,launcher] of Object.entries({chromium,webkit})) {
             await page.locator('[data-market-selector] a[href="./de/"]').click();
             await page.waitForURL('**/de/');
             assert.equal(await page.locator('[data-current-market]').getAttribute('data-current-market'),'de');
+            assert.deepEqual(pageErrors,[],'Unexpected page errors');
             await page.close();
         }
     } finally { await browser.close(); }

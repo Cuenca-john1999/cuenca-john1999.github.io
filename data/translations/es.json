@@ -142,7 +142,7 @@
     },
     "roles": {
       "label": "Puestos de interés",
-      "value": "Técnico Superior en Laboratorio Clínico y Biomédico · Técnico Especialista en Laboratorio (TEL) · Técnico de apoyo a la investigación · Técnico de laboratorio químico, analítico, industrial o de control de calidad"
+      "value": "Técnico Superior en Laboratorio Clínico y Biomédico · Técnico Especialista en Laboratorio (TEL) · Técnico de microbiología y control de calidad · Técnico de apoyo a la investigación · Técnico de laboratorio químico y analítico"
     },
     "languages": {
       "label": "Idiomas",
@@ -212,10 +212,10 @@
       "recognition": "Diploma por excelente aprovechamiento en el segundo curso del ciclo de Técnico en Operaciones de Laboratorio.",
       "results10": "Servicios Auxiliares en el Laboratorio · Inglés Técnico",
       "results9": "Química Aplicada · Pruebas Fisicoquímicas · Seguridad y Organización en el Laboratorio · Operaciones de Análisis Químico · Ensayos de Materiales",
-      "evidenceIntro": "Los materiales académicos aportados para este portafolio documentan trabajo práctico formativo mediante informes de laboratorio, documentos tipo PNT/SOP, cálculos y materiales de proyectos. Se presenta como evidencia de formación, no como experiencia profesional de las prácticas externas.",
+      "evidenceIntro": "Durante el ciclo realicé prácticas de microbiología, química analítica, ensayos fisicoquímicos y de materiales, con informes, cálculos, procedimientos de trabajo y registros de laboratorio.",
       "evidenceDocumentation": "Documentación y equipos de laboratorio: PNT de pH-metro y estufa de secado, documentación de micropipeta, calibrado de termómetro, registros de inventario y mantenimiento, informes de medida de masas/volúmenes y muestreo.",
-      "evidenceAnalytical": "Química analítica y trabajo fisicoquímico: preparación de disoluciones, valoraciones de HCl/NaOH, acidez, rendimiento de reacción, conductimetría, potenciometría, turbidez, nitratos, proteínas y mediciones fisicoquímicas.",
-      "evidenceMicrobiology": "Microbiología y materiales: uso del microscopio, preparación de medios de cultivo, análisis de agua por filtración de membrana, antibiograma, identificación de plásticos/materiales y trabajos relacionados con corrosión.",
+      "evidenceAnalytical": "Química analítica: disoluciones, valoraciones ácido-base, redox y complexométricas, conductimetría, potenciometría, UV-Vis, nitratos, Bradford, gravimetría y extracción Soxhlet. Operaciones unitarias: cuarteo, muestreo y destilación.",
+      "evidenceMicrobiology": "Microbiología: monitorización de aire y superficies (RODAC), muestreo con hisopos, preparación de medios y autoclave, aislamiento y recuento, filtración de membrana, tinciones, antibiograma e identificación bioquímica. Ensayos de materiales: dureza, tracción, Charpy y metalografía.",
       "placement": "FCT / Erasmus+ en Celignis Biomass Analysis Laboratory, Limerick, Irlanda, del 20 de marzo al 31 de mayo de 2023. El trabajo y las responsabilidades de la estancia se documentan por separado en Experiencia y Workbench."
     },
     "additional": {
@@ -285,9 +285,9 @@
       "organization": "Trazabilidad de muestras · inventario · organización de laboratorio"
     },
     "academic": {
-      "title": "Formación y conocimiento técnico",
+      "title": "Prácticas académicas y formación técnica",
       "description": "Competencias adquiridas durante la formación profesional, cursos certificados y proyectos académicos.",
-      "microbiology": "Microbiología clínica",
+      "microbiology": "Microbiología clínica y ambiental · placas RODAC · medios y autoclave · aislamiento, UFC, tinciones y filtración",
       "virology": "Virología · revisión bibliográfica sobre bacteriofagoterapia",
       "animalModels": "Curso de Experimentación Animal · Funciones A+B+C · prácticas supervisadas · cuidado, eutanasia, procedimientos, anestesia y principios quirúrgicos"
     }

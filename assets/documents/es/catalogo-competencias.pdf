@@ -3,7 +3,7 @@
 << /Type /Catalog /Pages 2 0 R >>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R] /Count 4 >>
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R] /Count 7 >>
 endobj
 3 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
@@ -15,7 +15,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
 endobj
 6 0 obj
-<< /Length 5280 >>
+<< /Length 7296 >>
 stream
 0.09 0.17 0.27 rg 0 825 595 17 re f
 BT /F2 11.5 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 798.00 Tm (JHON M. CUENCA) Tj ET
@@ -26,7 +26,7 @@ BT /F2 24 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 733.00 Tm (Cat\341logo de competenc
 0.82 0.86 0.90 RG 0.6 w 44 693 m 551 693 l S
 0.82 0.86 0.90 RG 0.6 w 44 49 m 551 49 l S
 BT /F1 9 Tf 0.29 0.36 0.44 rg 1 0 0 1 44.00 31.00 Tm (cuenca-john1999.github.io/es/) Tj ET
-BT /F1 9 Tf 0.29 0.36 0.44 rg 1 0 0 1 533.49 31.00 Tm (1 / 4) Tj ET
+BT /F1 9 Tf 0.29 0.36 0.44 rg 1 0 0 1 533.49 31.00 Tm (1 / 7) Tj ET
 BT /F2 14.5 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 669.00 Tm (Laboratorio cl\355nico y hospitalario) Tj ET
 BT /F1 10.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 44.00 642.00 Tm (M\351todos y t\351cnicas agrupados por \341rea, con el contexto en el que adquir\355 cada competencia.) Tj ET
 0.09 0.17 0.27 rg 44 610.8 507 22 re f
@@ -41,49 +41,69 @@ BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 557.70 Tm (An\341lisis bioqu\355m
 BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 544.20 Tm (Formaci\363n reglada | CEAC FP Oficial) Tj ET
 BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 557.70 Tm (M\363dulo de an\341lisis bioqu\355mico.) Tj ET
 0.82 0.86 0.90 RG 0.6 w 44 531.5999999999999 m 551 531.5999999999999 l S
-0.95 0.97 0.99 rg 44 494.4999999999999 507 37.1 re f
+0.95 0.97 0.99 rg 44 478.9999999999999 507 52.599999999999994 re f
 BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 520.60 Tm (Microbiolog\355a cl\355nica) Tj ET
 BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 507.10 Tm (Formaci\363n reglada | CEAC FP Oficial) Tj ET
-BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 520.60 Tm (M\363dulo de microbiolog\355a cl\355nica.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 494.4999999999999 m 551 494.4999999999999 l S
-BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 483.50 Tm (Inmunodiagn\363stico) Tj ET
-BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 470.00 Tm (Formaci\363n reglada | CEAC FP Oficial) Tj ET
-BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 483.50 Tm (M\363dulo de t\351cnicas de inmunodiagn\363stico.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 457.39999999999986 m 551 457.39999999999986 l S
-0.95 0.97 0.99 rg 44 420.29999999999984 507 37.1 re f
-BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 446.40 Tm (Gesti\363n de muestras biol\363gicas) Tj ET
-BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 432.90 Tm (Formaci\363n reglada | CEAC FP Oficial) Tj ET
-BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 446.40 Tm (Formaci\363n en gesti\363n de muestras.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 420.29999999999984 m 551 420.29999999999984 l S
-BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 409.30 Tm (Biolog\355a molecular y citogen\351tica) Tj ET
-BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 395.80 Tm (Formaci\363n reglada | CEAC FP Oficial) Tj ET
-BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 409.30 Tm (M\363dulo de formaci\363n profesional.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 383.1999999999998 m 551 383.1999999999998 l S
-0.95 0.97 0.99 rg 44 335.49999999999983 507 47.7 re f
-BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 372.20 Tm (Antibiograma) Tj ET
-BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 358.70 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
-BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 348.10 Tm (Paloma) Tj ET
-BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 372.20 Tm (Pr\341ctica de antibiograma durante la formaci\363n en microbiolog\355a.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 335.49999999999983 m 551 335.49999999999983 l S
-BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 324.50 Tm (Microscop\355a y medios de cultivo) Tj ET
-BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 311.00 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
-BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 300.40 Tm (Paloma) Tj ET
-BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 324.50 Tm (Formaci\363n pr\341ctica de laboratorio.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 287.79999999999984 m 551 287.79999999999984 l S
-0.95 0.97 0.99 rg 44 240.09999999999985 507 47.7 re f
-BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 276.80 Tm (Filtraci\363n de membrana) Tj ET
-BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 263.30 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
-BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 252.70 Tm (Paloma) Tj ET
-BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 276.80 Tm (An\341lisis de agua en contexto acad\351mico.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 240.09999999999985 m 551 240.09999999999985 l S
-BT /F1 9.1 Tf 0.29 0.36 0.44 rg 1 0 0 1 44.00 225.10 Tm (La formaci\363n cl\355nica y las pr\341cticas de investigaci\363n se describen por separado en el cat\341logo.) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 520.60 Tm (Formaci\363n en microbiolog\355a cl\355nica: cultivo, recuento,) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 507.40 Tm (identificaci\363n de microorganismos, sensibilidad antimicrobiana y) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 494.20 Tm (seguridad biol\363gica.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 478.9999999999999 m 551 478.9999999999999 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 468.00 Tm (Inmunodiagn\363stico) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 454.50 Tm (Formaci\363n reglada | CEAC FP Oficial) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 468.00 Tm (M\363dulo de t\351cnicas de inmunodiagn\363stico.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 441.89999999999986 m 551 441.89999999999986 l S
+0.95 0.97 0.99 rg 44 404.79999999999984 507 37.1 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 430.90 Tm (Gesti\363n de muestras biol\363gicas) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 417.40 Tm (Formaci\363n reglada | CEAC FP Oficial) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 430.90 Tm (Formaci\363n en gesti\363n de muestras.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 404.79999999999984 m 551 404.79999999999984 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 393.80 Tm (Biolog\355a molecular y citogen\351tica) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 380.30 Tm (Formaci\363n reglada | CEAC FP Oficial) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 393.80 Tm (M\363dulo de formaci\363n profesional.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 367.6999999999998 m 551 367.6999999999998 l S
+0.95 0.97 0.99 rg 44 319.99999999999983 507 47.7 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 356.70 Tm (Antibiograma) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 343.20 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 332.60 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 356.70 Tm (Pr\341ctica de difusi\363n en disco y medici\363n de halos de inhibici\363n,) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 343.50 Tm (con registro de incidencias experimentales.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 319.99999999999983 m 551 319.99999999999983 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 309.00 Tm (Microscop\355a \363ptica) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 295.50 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 284.90 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 309.00 Tm (Microscop\355a de campo claro con preparaciones en fresco y) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 295.80 Tm (te\361idas; observaci\363n de bacterias, levaduras y hongos) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 282.60 Tm (filamentosos.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 267.39999999999986 m 551 267.39999999999986 l S
+0.95 0.97 0.99 rg 44 219.69999999999987 507 47.7 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 256.40 Tm (Filtraci\363n de membrana) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 242.90 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 232.30 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 256.40 Tm (An\341lisis microbiol\363gico de aguas mediante membrana de 0,45) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 243.20 Tm (\265m, incubaci\363n en medios de cultivo y c\341lculo de UFC/100 mL.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 219.69999999999987 m 551 219.69999999999987 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 208.70 Tm (Recuento microbiol\363gico y UFC) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 195.20 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 184.60 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 208.70 Tm (Diluciones y recuento de colonias en pr\341cticas de agua, suelo y) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 195.50 Tm (alimentos; c\341lculo de UFC por volumen o masa y registro de) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 182.30 Tm (resultados.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 167.09999999999988 m 551 167.09999999999988 l S
+0.95 0.97 0.99 rg 44 114.49999999999989 507 52.599999999999994 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 156.10 Tm (Tinciones microbiol\363gicas) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 142.60 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 132.00 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 156.10 Tm (Preparaci\363n y observaci\363n de tinciones de Gram, simples,) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 142.90 Tm (negativas y de endosporas, con registro de caracter\355sticas) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 129.70 Tm (morfol\363gicas.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 114.49999999999989 m 551 114.49999999999989 l S
 endstream
 endobj
 7 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
 endobj
 8 0 obj
-<< /Length 7404 >>
+<< /Length 4724 >>
 stream
 0.09 0.17 0.27 rg 0 825 595 17 re f
 BT /F2 11.5 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 798.00 Tm (JHON M. CUENCA) Tj ET
@@ -94,91 +114,56 @@ BT /F2 24 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 733.00 Tm (Cat\341logo de competenc
 0.82 0.86 0.90 RG 0.6 w 44 693 m 551 693 l S
 0.82 0.86 0.90 RG 0.6 w 44 49 m 551 49 l S
 BT /F1 9 Tf 0.29 0.36 0.44 rg 1 0 0 1 44.00 31.00 Tm (cuenca-john1999.github.io/es/) Tj ET
-BT /F1 9 Tf 0.29 0.36 0.44 rg 1 0 0 1 533.49 31.00 Tm (2 / 4) Tj ET
-BT /F2 14.5 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 669.00 Tm (Investigaci\363n biom\351dica) Tj ET
+BT /F1 9 Tf 0.29 0.36 0.44 rg 1 0 0 1 533.49 31.00 Tm (2 / 7) Tj ET
+BT /F2 14.5 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 669.00 Tm (Laboratorio cl\355nico y hospitalario) Tj ET
 0.09 0.17 0.27 rg 44 635 507 22 re f
 BT /F2 9.3 Tf 1 1 1 rg 1 0 0 1 51.00 642.00 Tm (T\351cnica y contexto) Tj ET
 BT /F2 9.3 Tf 1 1 1 rg 1 0 0 1 238.00 642.00 Tm (Aplicaci\363n o formaci\363n) Tj ET
-0.95 0.97 0.99 rg 44 602 507 28 re f
-BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 621.00 Tm (Extracci\363n de ARN) Tj ET
-BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 608.70 Tm (Pr\341cticas de laboratorio | La Princesa) Tj ET
-BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 621.00 Tm (Preparaci\363n de \341cidos nucleicos.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 602 m 551 602 l S
-BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 593.00 Tm (PCR) Tj ET
-BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 580.70 Tm (Pr\341cticas de laboratorio | La Princesa) Tj ET
-BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 593.00 Tm (Trabajo pr\341ctico con reacci\363n en cadena de la polimerasa.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 574 m 551 574 l S
-0.95 0.97 0.99 rg 44 546 507 28 re f
-BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 565.00 Tm (Electroforesis) Tj ET
-BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 552.70 Tm (Pr\341cticas de laboratorio | La Princesa) Tj ET
-BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 565.00 Tm (Separaci\363n de \341cidos nucleicos.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 546 m 551 546 l S
-BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 537.00 Tm (Genotipado de ratones transg\351nicos) Tj ET
-BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 524.70 Tm (Pr\341cticas de laboratorio | La Princesa) Tj ET
-BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 537.00 Tm (Participaci\363n en flujos de genotipado.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 518 m 551 518 l S
-0.95 0.97 0.99 rg 44 488.1 507 29.9 re f
-BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 509.00 Tm (Western blot) Tj ET
-BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 496.70 Tm (Pr\341cticas de laboratorio | La Princesa) Tj ET
-BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 509.00 Tm (Preparaci\363n de geles, transferencia de prote\355nas a membrana y) Tj ET
-BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 497.30 Tm (bloqueo.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 488.1 m 551 488.1 l S
-BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 479.10 Tm (Cultivo celular HaCaT) Tj ET
-BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 466.80 Tm (Pr\341cticas de laboratorio | La Princesa) Tj ET
-BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 479.10 Tm (Cultivo adherente, t\351cnica est\351ril, medios, pases y congelaci\363n.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 460.1 m 551 460.1 l S
-0.95 0.97 0.99 rg 44 432.1 507 28 re f
-BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 451.10 Tm (Cultivos estimulados por citocinas) Tj ET
-BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 438.80 Tm (Pr\341cticas de laboratorio | La Princesa) Tj ET
-BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 451.10 Tm (Participaci\363n en procedimientos de cultivo celular.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 432.1 m 551 432.1 l S
-BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 423.10 Tm (Procesamiento de muestras humanas) Tj ET
-BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 410.80 Tm (Pr\341cticas de laboratorio | La Princesa) Tj ET
-BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 423.10 Tm (Suero, sangre perif\351rica y manejo de Buffy Coat.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 404.1 m 551 404.1 l S
-0.95 0.97 0.99 rg 44 376.1 507 28 re f
-BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 395.10 Tm (Aislamiento CD4/CD14) Tj ET
-BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 382.80 Tm (Pr\341cticas de laboratorio | La Princesa) Tj ET
-BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 395.10 Tm (Trabajo con c\351lulas inmunitarias.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 376.1 m 551 376.1 l S
-BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 367.10 Tm (Muestras animales y tejidos) Tj ET
-BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 354.80 Tm (Pr\341cticas de laboratorio | La Princesa) Tj ET
-BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 367.10 Tm (Procesamiento de muestras y \363rganos linfoides murinos; obtenci\363n) Tj ET
-BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 355.40 Tm (supervisada.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 346.20000000000005 m 551 346.20000000000005 l S
-0.95 0.97 0.99 rg 44 318.20000000000005 507 28 re f
-BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 337.20 Tm (ELISA) Tj ET
-BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 324.90 Tm (Pr\341cticas de laboratorio | La Princesa) Tj ET
-BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 337.20 Tm (Trabajo pr\341ctico con ensayos inmunol\363gicos.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 318.20000000000005 m 551 318.20000000000005 l S
-BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 309.20 Tm (Inmunohistoqu\355mica) Tj ET
-BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 296.90 Tm (Pr\341cticas de laboratorio | La Princesa) Tj ET
-BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 309.20 Tm (Participaci\363n en tinciones.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 290.20000000000005 m 551 290.20000000000005 l S
-0.95 0.97 0.99 rg 44 262.20000000000005 507 28 re f
-BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 281.20 Tm (Inmunofluorescencia) Tj ET
-BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 268.90 Tm (Pr\341cticas de laboratorio | La Princesa) Tj ET
-BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 281.20 Tm (Participaci\363n en tinciones.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 262.20000000000005 m 551 262.20000000000005 l S
-BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 253.20 Tm (Funciones A+B+C) Tj ET
-BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 240.90 Tm (Curso con pr\341cticas supervisadas | Dynamimed) Tj ET
-BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 253.20 Tm (Curso de experimentaci\363n animal sobre cuidado, eutanasia y) Tj ET
-BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 241.50 Tm (realizaci\363n de procedimientos.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 232.30000000000004 m 551 232.30000000000004 l S
-0.95 0.97 0.99 rg 44 202.40000000000003 507 29.9 re f
-BT /F2 9.8 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 223.30 Tm (Manejo, anestesia y procedimientos) Tj ET
-BT /F1 8.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 211.00 Tm (Curso con pr\341cticas supervisadas | Dynamimed) Tj ET
-BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 223.30 Tm (Manejo de animales, anestesia y procedimientos durante la formaci\363n) Tj ET
-BT /F1 9.7 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 211.60 Tm (pr\341ctica supervisada.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 202.40000000000003 m 551 202.40000000000003 l S
-BT /F1 9.1 Tf 0.29 0.36 0.44 rg 1 0 0 1 44.00 187.40 Tm (El curso A+B+C acredita la formaci\363n; la capacitaci\363n individual se rige por el procedimiento administrativo correspondiente.) Tj ET
+0.95 0.97 0.99 rg 44 577.4 507 52.599999999999994 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 619.00 Tm (Preparaci\363n de medios y autoclave) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 605.50 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 594.90 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 619.00 Tm (Preparaci\363n de medios deshidratados, pesaje y disoluci\363n,) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 605.80 Tm (esterilizaci\363n en autoclave con cinta indicadora y distribuci\363n) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 592.60 Tm (as\351ptica en placas, tubos inclinados y medios l\355quidos.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 577.4 m 551 577.4 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 566.40 Tm (Aislamiento e identificaci\363n) Tj ET
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 553.90 Tm (presuntiva) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 540.40 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 529.80 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 566.40 Tm (Pr\341ctica grupal con resiembras por agotamiento, medios) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 553.20 Tm (diferenciales y lectura de pruebas bioqu\355micas, incluida una) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 540.00 Tm (galer\355a API 20 E.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 517.1999999999999 m 551 517.1999999999999 l S
+0.95 0.97 0.99 rg 44 456.99999999999994 507 60.2 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 506.20 Tm (Mantenimiento b\341sico del) Tj ET
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 493.70 Tm (microscopio) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 480.20 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 469.60 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 506.20 Tm (Limpieza, comprobaci\363n funcional, registro de mantenimiento y) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 493.00 Tm (elaboraci\363n de un parte de aver\355a de un microscopio de campo) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 479.80 Tm (claro.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 456.99999999999994 m 551 456.99999999999994 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 446.00 Tm (An\341lisis de orina y sedimento) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 432.50 Tm (Pr\341ctica acad\351mica | CEAC FP Oficial) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 446.00 Tm (Pr\341ctica acad\351mica en grupo con tiras reactivas, centrifugaci\363n,) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 432.80 Tm (observaci\363n del sedimento y evaluaci\363n de las limitaciones de la) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 419.60 Tm (preparaci\363n.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 404.4 m 551 404.4 l S
+0.95 0.97 0.99 rg 44 365 507 39.4 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 393.40 Tm (Punci\363n capilar y frotis sangu\355neo) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 379.90 Tm (Pr\341ctica acad\351mica | CEAC FP Oficial) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 393.40 Tm (Pr\341ctica acad\351mica de obtenci\363n capilar, preparaci\363n y tinci\363n de) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 380.20 Tm (frotis y observaci\363n microsc\363pica de c\351lulas sangu\355neas.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 365 m 551 365 l S
+BT /F1 9.1 Tf 0.29 0.36 0.44 rg 1 0 0 1 44.00 350.00 Tm (La formaci\363n cl\355nica y las pr\341cticas de investigaci\363n se describen por separado en el cat\341logo.) Tj ET
 endstream
 endobj
 9 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 10 0 R >>
 endobj
 10 0 obj
-<< /Length 5352 >>
+<< /Length 6519 >>
 stream
 0.09 0.17 0.27 rg 0 825 595 17 re f
 BT /F2 11.5 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 798.00 Tm (JHON M. CUENCA) Tj ET
@@ -189,8 +174,129 @@ BT /F2 24 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 733.00 Tm (Cat\341logo de competenc
 0.82 0.86 0.90 RG 0.6 w 44 693 m 551 693 l S
 0.82 0.86 0.90 RG 0.6 w 44 49 m 551 49 l S
 BT /F1 9 Tf 0.29 0.36 0.44 rg 1 0 0 1 44.00 31.00 Tm (cuenca-john1999.github.io/es/) Tj ET
-BT /F1 9 Tf 0.29 0.36 0.44 rg 1 0 0 1 533.49 31.00 Tm (3 / 4) Tj ET
-BT /F2 14.5 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 669.00 Tm (Laboratorio qu\355mico, anal\355tico e industrial \(1/2\)) Tj ET
+BT /F1 9 Tf 0.29 0.36 0.44 rg 1 0 0 1 533.49 31.00 Tm (3 / 7) Tj ET
+BT /F2 14.5 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 669.00 Tm (Investigaci\363n biom\351dica) Tj ET
+0.09 0.17 0.27 rg 44 635 507 22 re f
+BT /F2 9.3 Tf 1 1 1 rg 1 0 0 1 51.00 642.00 Tm (T\351cnica y contexto) Tj ET
+BT /F2 9.3 Tf 1 1 1 rg 1 0 0 1 238.00 642.00 Tm (Aplicaci\363n o formaci\363n) Tj ET
+0.95 0.97 0.99 rg 44 592.9 507 37.1 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 619.00 Tm (Extracci\363n de ARN) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 605.50 Tm (Pr\341cticas de laboratorio | La Princesa) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 619.00 Tm (Preparaci\363n de \341cidos nucleicos.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 592.9 m 551 592.9 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 581.90 Tm (PCR) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 568.40 Tm (Pr\341cticas de laboratorio | La Princesa) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 581.90 Tm (Trabajo pr\341ctico con reacci\363n en cadena de la polimerasa.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 555.8 m 551 555.8 l S
+0.95 0.97 0.99 rg 44 518.6999999999999 507 37.1 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 544.80 Tm (Electroforesis) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 531.30 Tm (Pr\341cticas de laboratorio | La Princesa) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 544.80 Tm (Separaci\363n de \341cidos nucleicos.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 518.6999999999999 m 551 518.6999999999999 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 507.70 Tm (Genotipado de ratones transg\351nicos) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 494.20 Tm (Pr\341cticas de laboratorio | La Princesa) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 507.70 Tm (Participaci\363n en flujos de genotipado.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 481.5999999999999 m 551 481.5999999999999 l S
+0.95 0.97 0.99 rg 44 442.19999999999993 507 39.4 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 470.60 Tm (Western blot) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 457.10 Tm (Pr\341cticas de laboratorio | La Princesa) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 470.60 Tm (Preparaci\363n de geles, montaje de transferencia a membrana y) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 457.40 Tm (bloqueo en flujos de Western blot.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 442.19999999999993 m 551 442.19999999999993 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 431.20 Tm (Cultivo celular HaCaT) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 417.70 Tm (Pr\341cticas de laboratorio | La Princesa) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 431.20 Tm (Cultivo adherente, t\351cnica est\351ril, medios, pases y congelaci\363n.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 405.0999999999999 m 551 405.0999999999999 l S
+0.95 0.97 0.99 rg 44 367.9999999999999 507 37.1 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 394.10 Tm (Cultivos estimulados por citocinas) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 380.60 Tm (Pr\341cticas de laboratorio | La Princesa) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 394.10 Tm (Participaci\363n en procedimientos de cultivo celular.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 367.9999999999999 m 551 367.9999999999999 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 357.00 Tm (Procesamiento de muestras) Tj ET
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 344.50 Tm (humanas) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 331.00 Tm (Pr\341cticas de laboratorio | La Princesa) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 357.00 Tm (Suero, sangre perif\351rica y manejo de Buffy Coat.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 318.39999999999986 m 551 318.39999999999986 l S
+0.95 0.97 0.99 rg 44 281.29999999999984 507 37.1 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 307.40 Tm (Aislamiento CD4/CD14) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 293.90 Tm (Pr\341cticas de laboratorio | La Princesa) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 307.40 Tm (Trabajo con c\351lulas inmunitarias.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 281.29999999999984 m 551 281.29999999999984 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 270.30 Tm (Muestras animales y tejidos) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 256.80 Tm (Pr\341cticas de laboratorio | La Princesa) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 270.30 Tm (Procesamiento de muestras y \363rganos linfoides murinos;) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 257.10 Tm (obtenci\363n supervisada.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 241.89999999999984 m 551 241.89999999999984 l S
+0.95 0.97 0.99 rg 44 204.79999999999984 507 37.1 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 230.90 Tm (ELISA) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 217.40 Tm (Pr\341cticas de laboratorio | La Princesa) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 230.90 Tm (Trabajo pr\341ctico con ensayos inmunol\363gicos.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 204.79999999999984 m 551 204.79999999999984 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 193.80 Tm (Inmunohistoqu\355mica) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 180.30 Tm (Pr\341cticas de laboratorio | La Princesa) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 193.80 Tm (Participaci\363n en tinciones.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 167.69999999999985 m 551 167.69999999999985 l S
+0.95 0.97 0.99 rg 44 130.59999999999985 507 37.1 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 156.70 Tm (Inmunofluorescencia) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 143.20 Tm (Pr\341cticas de laboratorio | La Princesa) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 156.70 Tm (Participaci\363n en tinciones.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 130.59999999999985 m 551 130.59999999999985 l S
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 12 0 R >>
+endobj
+12 0 obj
+<< /Length 2463 >>
+stream
+0.09 0.17 0.27 rg 0 825 595 17 re f
+BT /F2 11.5 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 798.00 Tm (JHON M. CUENCA) Tj ET
+BT /F2 9.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 421.68 798.00 Tm (PORTAFOLIO PROFESIONAL) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 787 m 551 787 l S
+BT /F2 9.4 Tf 0.12 0.36 0.58 rg 1 0 0 1 44.00 765.00 Tm (ESPA\321A  /  DOSIER T\311CNICO) Tj ET
+BT /F2 24 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 733.00 Tm (Cat\341logo de competencias t\351cnicas) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 693 m 551 693 l S
+0.82 0.86 0.90 RG 0.6 w 44 49 m 551 49 l S
+BT /F1 9 Tf 0.29 0.36 0.44 rg 1 0 0 1 44.00 31.00 Tm (cuenca-john1999.github.io/es/) Tj ET
+BT /F1 9 Tf 0.29 0.36 0.44 rg 1 0 0 1 533.49 31.00 Tm (4 / 7) Tj ET
+BT /F2 14.5 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 669.00 Tm (Investigaci\363n biom\351dica) Tj ET
+0.09 0.17 0.27 rg 44 635 507 22 re f
+BT /F2 9.3 Tf 1 1 1 rg 1 0 0 1 51.00 642.00 Tm (T\351cnica y contexto) Tj ET
+BT /F2 9.3 Tf 1 1 1 rg 1 0 0 1 238.00 642.00 Tm (Aplicaci\363n o formaci\363n) Tj ET
+0.95 0.97 0.99 rg 44 582.3 507 47.7 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 619.00 Tm (Funciones A+B+C) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 605.50 Tm (Curso con pr\341cticas supervisadas |) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 594.90 Tm (Dynamimed) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 619.00 Tm (Curso de experimentaci\363n animal sobre cuidado, eutanasia y) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 605.80 Tm (realizaci\363n de procedimientos.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 582.3 m 551 582.3 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 571.30 Tm (Manejo, anestesia y procedimientos) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 557.80 Tm (Curso con pr\341cticas supervisadas |) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 547.20 Tm (Dynamimed) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 571.30 Tm (Programa de experimentaci\363n animal que incluye manejo,) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 558.10 Tm (bienestar, principios de anestesia y procedimientos; curso con) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 544.90 Tm (componente pr\341ctico presencial.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 529.6999999999999 m 551 529.6999999999999 l S
+BT /F1 9.1 Tf 0.29 0.36 0.44 rg 1 0 0 1 44.00 514.70 Tm (El curso A+B+C acredita la formaci\363n; la capacitaci\363n individual se rige por el procedimiento administrativo correspondiente.) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 14 0 R >>
+endobj
+14 0 obj
+<< /Length 7064 >>
+stream
+0.09 0.17 0.27 rg 0 825 595 17 re f
+BT /F2 11.5 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 798.00 Tm (JHON M. CUENCA) Tj ET
+BT /F2 9.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 421.68 798.00 Tm (PORTAFOLIO PROFESIONAL) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 787 m 551 787 l S
+BT /F2 9.4 Tf 0.12 0.36 0.58 rg 1 0 0 1 44.00 765.00 Tm (ESPA\321A  /  DOSIER T\311CNICO) Tj ET
+BT /F2 24 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 733.00 Tm (Cat\341logo de competencias t\351cnicas) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 693 m 551 693 l S
+0.82 0.86 0.90 RG 0.6 w 44 49 m 551 49 l S
+BT /F1 9 Tf 0.29 0.36 0.44 rg 1 0 0 1 44.00 31.00 Tm (cuenca-john1999.github.io/es/) Tj ET
+BT /F1 9 Tf 0.29 0.36 0.44 rg 1 0 0 1 533.49 31.00 Tm (5 / 7) Tj ET
+BT /F2 14.5 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 669.00 Tm (Laboratorio qu\355mico, anal\355tico e industrial) Tj ET
 0.09 0.17 0.27 rg 44 635 507 22 re f
 BT /F2 9.3 Tf 1 1 1 rg 1 0 0 1 51.00 642.00 Tm (T\351cnica y contexto) Tj ET
 BT /F2 9.3 Tf 1 1 1 rg 1 0 0 1 238.00 642.00 Tm (Aplicaci\363n o formaci\363n) Tj ET
@@ -212,46 +318,63 @@ BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 507.70 Tm (TGA) Tj ET
 BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 494.20 Tm (Pr\341cticas de laboratorio | Celignis) Tj ET
 BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 507.70 Tm (An\341lisis termogravim\351trico.) Tj ET
 0.82 0.86 0.90 RG 0.6 w 44 481.5999999999999 m 551 481.5999999999999 l S
-0.95 0.97 0.99 rg 44 444.4999999999999 507 37.1 re f
+0.95 0.97 0.99 rg 44 428.9999999999999 507 52.599999999999994 re f
 BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 470.60 Tm (CHNOS) Tj ET
 BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 457.10 Tm (Pr\341cticas de laboratorio | Celignis) Tj ET
-BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 470.60 Tm (An\341lisis elemental.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 444.4999999999999 m 551 444.4999999999999 l S
-BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 433.50 Tm (Fusi\363n de cenizas) Tj ET
-BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 420.00 Tm (Pr\341cticas de laboratorio | Celignis) Tj ET
-BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 433.50 Tm (Ensayos t\351rmicos.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 407.39999999999986 m 551 407.39999999999986 l S
-0.95 0.97 0.99 rg 44 370.29999999999984 507 37.1 re f
-BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 396.40 Tm (BMP y biog\341s) Tj ET
-BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 382.90 Tm (Pr\341cticas de laboratorio | Celignis) Tj ET
-BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 396.40 Tm (Trabajo con unidades BMP y an\341lisis de gases.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 370.29999999999984 m 551 370.29999999999984 l S
-BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 359.30 Tm (FOS/TAC) Tj ET
-BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 345.80 Tm (Pr\341cticas de laboratorio | Celignis) Tj ET
-BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 359.30 Tm (An\341lisis de par\341metros en procesos de biog\341s.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 333.1999999999998 m 551 333.1999999999998 l S
-0.95 0.97 0.99 rg 44 293.79999999999984 507 39.4 re f
-BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 322.20 Tm (ICP) Tj ET
-BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 308.70 Tm (Pr\341cticas de laboratorio | Celignis) Tj ET
-BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 322.20 Tm (ICP entre las t\351cnicas anal\355ticas incluidas en las pr\341cticas de) Tj ET
-BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 309.00 Tm (Celignis.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 293.79999999999984 m 551 293.79999999999984 l S
-BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 282.80 Tm (DQO) Tj ET
-BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 269.30 Tm (Pr\341cticas de laboratorio | Celignis) Tj ET
-BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 282.80 Tm (Demanda qu\355mica de ox\355geno \(COD\).) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 256.6999999999998 m 551 256.6999999999998 l S
-0.95 0.97 0.99 rg 44 219.59999999999982 507 37.1 re f
-BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 245.70 Tm (Amonio) Tj ET
-BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 232.20 Tm (Pr\341cticas de laboratorio | Celignis) Tj ET
-BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 245.70 Tm (Determinaci\363n incluida en el alcance anal\355tico.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 219.59999999999982 m 551 219.59999999999982 l S
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 470.60 Tm (An\341lisis elemental de biomasa con Elementar Vario MACRO) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 457.40 Tm (Cube; preparaci\363n de muestras y c\341lculo de ox\355geno por) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 444.20 Tm (diferencia.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 428.9999999999999 m 551 428.9999999999999 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 418.00 Tm (Fusi\363n de cenizas) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 404.50 Tm (Pr\341cticas de laboratorio | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 418.00 Tm (Ensayos de fusibilidad de cenizas con horno Carbolite Gero CAF) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 404.80 Tm (G5 BIO, preparaci\363n de muestras y seguimiento del ensayo) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 391.60 Tm (t\351rmico.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 376.39999999999986 m 551 376.39999999999986 l S
+0.95 0.97 0.99 rg 44 339.29999999999984 507 37.1 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 365.40 Tm (BMP y biog\341s) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 351.90 Tm (Pr\341cticas de laboratorio | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 365.40 Tm (Trabajo con unidades BMP y an\341lisis de gases.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 339.29999999999984 m 551 339.29999999999984 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 328.30 Tm (FOS/TAC) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 314.80 Tm (Pr\341cticas de laboratorio | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 328.30 Tm (An\341lisis de par\341metros en procesos de biog\341s.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 302.1999999999998 m 551 302.1999999999998 l S
+0.95 0.97 0.99 rg 44 262.79999999999984 507 39.4 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 291.20 Tm (ICP) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 277.70 Tm (Pr\341cticas de laboratorio | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 291.20 Tm (ICP entre las t\351cnicas anal\355ticas incluidas en las pr\341cticas de) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 278.00 Tm (Celignis.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 262.79999999999984 m 551 262.79999999999984 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 251.80 Tm (DQO) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 238.30 Tm (Pr\341cticas de laboratorio | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 251.80 Tm (Demanda qu\355mica de ox\355geno \(COD\).) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 225.69999999999985 m 551 225.69999999999985 l S
+0.95 0.97 0.99 rg 44 188.59999999999985 507 37.1 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 214.70 Tm (Amonio) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 201.20 Tm (Pr\341cticas de laboratorio | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 214.70 Tm (Determinaci\363n incluida en el alcance anal\355tico.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 188.59999999999985 m 551 188.59999999999985 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 177.60 Tm (NIR/VISION) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 164.10 Tm (Pr\341cticas de laboratorio | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 177.60 Tm (Espectroscop\355a de infrarrojo cercano y documentaci\363n de flujo.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 151.49999999999986 m 551 151.49999999999986 l S
+0.95 0.97 0.99 rg 44 114.39999999999986 507 37.1 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 140.50 Tm (Filtraci\363n al vac\355o) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 127.00 Tm (Pr\341cticas de laboratorio | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 140.50 Tm (Preparaci\363n y tratamiento de muestras.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 114.39999999999986 m 551 114.39999999999986 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 103.40 Tm (GLP y PNT \(SOP\)) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 89.90 Tm (Pr\341cticas de laboratorio | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 103.40 Tm (Trabajo seg\372n procedimientos y buenas pr\341cticas de laboratorio.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 77.29999999999987 m 551 77.29999999999987 l S
 endstream
 endobj
-11 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 12 0 R >>
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 16 0 R >>
 endobj
-12 0 obj
-<< /Length 6015 >>
+16 0 obj
+<< /Length 7150 >>
 stream
 0.09 0.17 0.27 rg 0 825 595 17 re f
 BT /F2 11.5 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 798.00 Tm (JHON M. CUENCA) Tj ET
@@ -262,86 +385,198 @@ BT /F2 24 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 733.00 Tm (Cat\341logo de competenc
 0.82 0.86 0.90 RG 0.6 w 44 693 m 551 693 l S
 0.82 0.86 0.90 RG 0.6 w 44 49 m 551 49 l S
 BT /F1 9 Tf 0.29 0.36 0.44 rg 1 0 0 1 44.00 31.00 Tm (cuenca-john1999.github.io/es/) Tj ET
-BT /F1 9 Tf 0.29 0.36 0.44 rg 1 0 0 1 533.49 31.00 Tm (4 / 4) Tj ET
-BT /F2 14.5 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 669.00 Tm (Laboratorio qu\355mico, anal\355tico e industrial \(2/2\)) Tj ET
+BT /F1 9 Tf 0.29 0.36 0.44 rg 1 0 0 1 533.49 31.00 Tm (6 / 7) Tj ET
+BT /F2 14.5 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 669.00 Tm (Laboratorio qu\355mico, anal\355tico e industrial) Tj ET
 0.09 0.17 0.27 rg 44 635 507 22 re f
 BT /F2 9.3 Tf 1 1 1 rg 1 0 0 1 51.00 642.00 Tm (T\351cnica y contexto) Tj ET
 BT /F2 9.3 Tf 1 1 1 rg 1 0 0 1 238.00 642.00 Tm (Aplicaci\363n o formaci\363n) Tj ET
 0.95 0.97 0.99 rg 44 592.9 507 37.1 re f
-BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 619.00 Tm (NIR/VISION) Tj ET
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 619.00 Tm (Control estad\355stico interno) Tj ET
 BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 605.50 Tm (Pr\341cticas de laboratorio | Celignis) Tj ET
-BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 619.00 Tm (Espectroscop\355a de infrarrojo cercano y documentaci\363n de flujo.) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 619.00 Tm (Autocontrol mediante controles internos.) Tj ET
 0.82 0.86 0.90 RG 0.6 w 44 592.9 m 551 592.9 l S
-BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 581.90 Tm (Filtraci\363n al vac\355o) Tj ET
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 581.90 Tm (Documentaci\363n t\351cnica) Tj ET
 BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 568.40 Tm (Pr\341cticas de laboratorio | Celignis) Tj ET
-BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 581.90 Tm (Preparaci\363n y tratamiento de muestras.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 555.8 m 551 555.8 l S
-0.95 0.97 0.99 rg 44 518.6999999999999 507 37.1 re f
-BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 544.80 Tm (GLP y PNT \(SOP\)) Tj ET
-BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 531.30 Tm (Pr\341cticas de laboratorio | Celignis) Tj ET
-BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 544.80 Tm (Trabajo seg\372n procedimientos y buenas pr\341cticas de laboratorio.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 518.6999999999999 m 551 518.6999999999999 l S
-BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 507.70 Tm (Control estad\355stico interno) Tj ET
-BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 494.20 Tm (Pr\341cticas de laboratorio | Celignis) Tj ET
-BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 507.70 Tm (Autocontrol mediante controles internos.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 481.5999999999999 m 551 481.5999999999999 l S
-0.95 0.97 0.99 rg 44 442.19999999999993 507 39.4 re f
-BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 470.60 Tm (Documentaci\363n t\351cnica) Tj ET
-BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 457.10 Tm (Pr\341cticas de laboratorio | Celignis) Tj ET
-BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 470.60 Tm (Gu\355as de trabajo, fichas de datos, instrucciones y resoluci\363n de) Tj ET
-BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 457.40 Tm (incidencias.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 442.19999999999993 m 551 442.19999999999993 l S
-BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 431.20 Tm (Trazabilidad y Thermal Excel) Tj ET
-BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 417.70 Tm (Pr\341cticas de laboratorio | Celignis) Tj ET
-BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 431.20 Tm (Registros, lotes, etiquetas y actualizaci\363n de bases de datos.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 405.0999999999999 m 551 405.0999999999999 l S
-0.95 0.97 0.99 rg 44 365.69999999999993 507 39.4 re f
-BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 394.10 Tm (Instrumentaci\363n y mantenimiento) Tj ET
-BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 380.60 Tm (Pr\341cticas de laboratorio | Celignis) Tj ET
-BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 394.10 Tm (Apoyo a calibraci\363n, operaci\363n, monitorizaci\363n y resoluci\363n de) Tj ET
-BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 380.90 Tm (incidencias.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 365.69999999999993 m 551 365.69999999999993 l S
-BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 354.70 Tm (Valoraciones HCl/NaOH) Tj ET
-BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 341.20 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
-BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 330.60 Tm (Paloma) Tj ET
-BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 354.70 Tm (Pr\341ctica formativa de qu\355mica anal\355tica.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 317.99999999999994 m 551 317.99999999999994 l S
-0.95 0.97 0.99 rg 44 270.29999999999995 507 47.7 re f
-BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 307.00 Tm (Conductimetr\355a y potenciometr\355a) Tj ET
-BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 293.50 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
-BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 282.90 Tm (Paloma) Tj ET
-BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 307.00 Tm (Pr\341cticas acad\351micas fisicoqu\355micas.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 270.29999999999995 m 551 270.29999999999995 l S
-BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 259.30 Tm (Turbidez y nitratos) Tj ET
-BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 245.80 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
-BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 235.20 Tm (Paloma) Tj ET
-BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 259.30 Tm (Pr\341cticas acad\351micas de an\341lisis.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 222.59999999999997 m 551 222.59999999999997 l S
-0.95 0.97 0.99 rg 44 174.89999999999998 507 47.7 re f
-BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 211.60 Tm (Preparaci\363n de disoluciones) Tj ET
-BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 198.10 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
-BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 187.50 Tm (Paloma) Tj ET
-BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 211.60 Tm (Pr\341ctica formativa.) Tj ET
-0.82 0.86 0.90 RG 0.6 w 44 174.89999999999998 m 551 174.89999999999998 l S
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 581.90 Tm (Gu\355as de trabajo, fichas de datos, instrucciones y resoluci\363n de) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 568.70 Tm (incidencias.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 553.5 m 551 553.5 l S
+0.95 0.97 0.99 rg 44 516.4 507 37.1 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 542.50 Tm (Trazabilidad y Thermal Excel) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 529.00 Tm (Pr\341cticas de laboratorio | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 542.50 Tm (Registros, lotes, etiquetas y actualizaci\363n de bases de datos.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 516.4 m 551 516.4 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 505.40 Tm (Instrumentaci\363n y mantenimiento) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 491.90 Tm (Pr\341cticas de laboratorio | Celignis) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 505.40 Tm (Apoyo a calibraci\363n, operaci\363n, monitorizaci\363n y resoluci\363n de) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 492.20 Tm (incidencias.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 477 m 551 477 l S
+0.95 0.97 0.99 rg 44 429.3 507 47.7 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 466.00 Tm (Valoraciones HCl/NaOH) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 452.50 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 441.90 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 466.00 Tm (Pr\341ctica formativa de qu\355mica anal\355tica.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 429.3 m 551 429.3 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 418.30 Tm (Conductimetr\355a y potenciometr\355a) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 404.80 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 394.20 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 418.30 Tm (Pr\341cticas acad\351micas fisicoqu\355micas.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 381.6 m 551 381.6 l S
+0.95 0.97 0.99 rg 44 333.90000000000003 507 47.7 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 370.60 Tm (Turbidez y nitratos) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 357.10 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 346.50 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 370.60 Tm (Pr\341cticas acad\351micas de an\341lisis.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 333.90000000000003 m 551 333.90000000000003 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 322.90 Tm (Preparaci\363n de disoluciones) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 309.40 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 298.80 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 322.90 Tm (Pr\341ctica formativa.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 286.20000000000005 m 551 286.20000000000005 l S
+0.95 0.97 0.99 rg 44 220.40000000000003 507 65.8 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 275.20 Tm (Monitorizaci\363n microbiol\363gica) Tj ET
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 262.70 Tm (ambiental) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 249.20 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 238.60 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 275.20 Tm (Control microbiol\363gico del aire con placas de sedimentaci\363n,) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 262.00 Tm (superficies con placas RODAC y manipuladores con hisopos;) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 248.80 Tm (incubaci\363n, recuento y c\341lculo de UFC por superficie y, cuando) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 235.60 Tm (corresponde, tiempo de exposici\363n.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 220.40000000000003 m 551 220.40000000000003 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 209.40 Tm (An\341lisis microbiol\363gico de) Tj ET
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 196.90 Tm (alimentos) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 183.40 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 172.80 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 209.40 Tm (Pr\341ctica de an\341lisis de alimentos con recuento en placa,) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 196.20 Tm (diluciones, observaci\363n de mohos y evaluaci\363n de resultados en) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 183.00 Tm (grupo.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 160.20000000000005 m 551 160.20000000000005 l S
+0.95 0.97 0.99 rg 44 107.60000000000005 507 52.599999999999994 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 149.20 Tm (Microbiolog\355a de suelos) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 135.70 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 125.10 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 149.20 Tm (Homogeneizaci\363n de muestras de suelo, diluciones seriadas,) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 136.00 Tm (siembra en superficie, incubaci\363n, aislamiento, recuento de) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 122.80 Tm (colonias, c\341lculo de UFC por gramo y tinci\363n de Gram.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 107.60000000000005 m 551 107.60000000000005 l S
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 18 0 R >>
+endobj
+18 0 obj
+<< /Length 7778 >>
+stream
+0.09 0.17 0.27 rg 0 825 595 17 re f
+BT /F2 11.5 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 798.00 Tm (JHON M. CUENCA) Tj ET
+BT /F2 9.2 Tf 0.29 0.36 0.44 rg 1 0 0 1 421.68 798.00 Tm (PORTAFOLIO PROFESIONAL) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 787 m 551 787 l S
+BT /F2 9.4 Tf 0.12 0.36 0.58 rg 1 0 0 1 44.00 765.00 Tm (ESPA\321A  /  DOSIER T\311CNICO) Tj ET
+BT /F2 24 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 733.00 Tm (Cat\341logo de competencias t\351cnicas) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 693 m 551 693 l S
+0.82 0.86 0.90 RG 0.6 w 44 49 m 551 49 l S
+BT /F1 9 Tf 0.29 0.36 0.44 rg 1 0 0 1 44.00 31.00 Tm (cuenca-john1999.github.io/es/) Tj ET
+BT /F1 9 Tf 0.29 0.36 0.44 rg 1 0 0 1 533.49 31.00 Tm (7 / 7) Tj ET
+BT /F2 14.5 Tf 0.09 0.17 0.27 rg 1 0 0 1 44.00 669.00 Tm (Laboratorio qu\355mico, anal\355tico e industrial) Tj ET
+0.09 0.17 0.27 rg 44 635 507 22 re f
+BT /F2 9.3 Tf 1 1 1 rg 1 0 0 1 51.00 642.00 Tm (T\351cnica y contexto) Tj ET
+BT /F2 9.3 Tf 1 1 1 rg 1 0 0 1 238.00 642.00 Tm (Aplicaci\363n o formaci\363n) Tj ET
+0.95 0.97 0.99 rg 44 582.3 507 47.7 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 619.00 Tm (Espectrofotometr\355a UV-Vis) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 605.50 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 594.90 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 619.00 Tm (Preparaci\363n de patrones, medida de absorbancia y rectas de) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 605.80 Tm (calibraci\363n en pr\341cticas de nitratos y prote\355nas.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 582.3 m 551 582.3 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 571.30 Tm (Cuantificaci\363n de prote\355nas por) Tj ET
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 558.80 Tm (Bradford) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 545.30 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 534.70 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 571.30 Tm (Pr\341cticas de cuantificaci\363n de prote\355nas con colorante) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 558.10 Tm (Coomassie, curva de calibraci\363n y revisi\363n de la calidad del) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 544.90 Tm (ajuste.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 522.0999999999999 m 551 522.0999999999999 l S
+0.95 0.97 0.99 rg 44 474.3999999999999 507 47.7 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 511.10 Tm (Gravimetr\355a) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 497.60 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 487.00 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 511.10 Tm (Pr\341cticas de gravimetr\355a por evaporaci\363n y an\341lisis mediante) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 497.90 Tm (diferencias de masa, con registro de datos y c\341lculos.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 474.3999999999999 m 551 474.3999999999999 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 463.40 Tm (Valoraciones redox y) Tj ET
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 450.90 Tm (complexom\351tricas) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 437.40 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 426.80 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 463.40 Tm (Preparaci\363n y valoraci\363n de permanganato y determinaci\363n de) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 450.20 Tm (dureza del agua mediante EDTA, con c\341lculos de concentraci\363n.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 414.19999999999993 m 551 414.19999999999993 l S
+0.95 0.97 0.99 rg 44 366.49999999999994 507 47.7 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 403.20 Tm (Extracci\363n y an\341lisis de l\355pidos) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 389.70 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 379.10 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 403.20 Tm (Extracci\363n de grasas mediante Soxhlet y cuantificaci\363n) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 390.00 Tm (gravim\351trica en una pr\341ctica de an\341lisis de alimentos.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 366.49999999999994 m 551 366.49999999999994 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 355.50 Tm (Muestreo de suelos y) Tj ET
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 343.00 Tm (caracterizaci\363n) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 329.50 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 318.90 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 355.50 Tm (Muestreo y registro de propiedades f\355sicas y qu\355micas del suelo,) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 342.30 Tm (incluidas humedad, pH, textura y densidad aparente.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 306.29999999999995 m 551 306.29999999999995 l S
+0.95 0.97 0.99 rg 44 246.09999999999997 507 60.2 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 295.30 Tm (Reducci\363n y homogeneizaci\363n de) Tj ET
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 282.80 Tm (muestras) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 269.30 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 258.70 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 295.30 Tm (Reducci\363n del tama\361o de muestras s\363lidas mediante cuarteo) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 282.10 Tm (manual, con control de masas y representatividad.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 246.09999999999997 m 551 246.09999999999997 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 235.10 Tm (Destilaci\363n simple) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 221.60 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 211.00 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 235.10 Tm (Montaje de destilaci\363n y registro de temperaturas y fracciones) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 221.90 Tm (durante una pr\341ctica de separaci\363n.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 198.39999999999998 m 551 198.39999999999998 l S
+0.95 0.97 0.99 rg 44 138.2 507 60.2 re f
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 187.40 Tm (Ensayos mec\341nicos y) Tj ET
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 174.90 Tm (metalogr\341ficos) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 161.40 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 150.80 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 187.40 Tm (Proyecto pr\341ctico grupal con ensayos de dureza, tracci\363n,) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 174.20 Tm (impacto Charpy, preparaci\363n de probetas y observaci\363n) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 161.00 Tm (metalogr\341fica.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 138.2 m 551 138.2 l S
+BT /F2 10.1 Tf 0.12 0.19 0.27 rg 1 0 0 1 51.00 127.20 Tm (Calidad del agua de laboratorio) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 113.70 Tm (Pr\341ctica acad\351mica | IES Virgen de la) Tj ET
+BT /F1 8.7 Tf 0.29 0.36 0.44 rg 1 0 0 1 51.00 103.10 Tm (Paloma) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 127.20 Tm (Comparaci\363n de aguas de red, destiladas y osmotizadas) Tj ET
+BT /F1 10.3 Tf 0.12 0.19 0.27 rg 1 0 0 1 238.00 114.00 Tm (mediante conductividad y pruebas de composici\363n i\363nica.) Tj ET
+0.82 0.86 0.90 RG 0.6 w 44 90.49999999999999 m 551 90.49999999999999 l S
 endstream
 endobj
 xref
-0 13
+0 19
 0000000000 65535 f 
 0000000009 00000 n 
 0000000058 00000 n 
-0000000134 00000 n 
-0000000231 00000 n 
-0000000333 00000 n 
-0000000469 00000 n 
-0000005800 00000 n 
-0000005936 00000 n 
-0000013391 00000 n 
-0000013528 00000 n 
-0000018932 00000 n 
-0000019070 00000 n 
+0000000155 00000 n 
+0000000252 00000 n 
+0000000354 00000 n 
+0000000490 00000 n 
+0000007837 00000 n 
+0000007973 00000 n 
+0000012748 00000 n 
+0000012885 00000 n 
+0000019456 00000 n 
+0000019594 00000 n 
+0000022109 00000 n 
+0000022247 00000 n 
+0000029363 00000 n 
+0000029501 00000 n 
+0000036703 00000 n 
+0000036841 00000 n 
 trailer
-<< /Size 13 /Root 1 0 R >>
+<< /Size 19 /Root 1 0 R >>
 startxref
-25137
+44671
 %%EOF

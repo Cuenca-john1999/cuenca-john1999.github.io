@@ -572,7 +572,7 @@ def check_spain_market() -> None:
     for section in ("areas-profesionales", "catalogo-tecnico", "instrumentacion", "dosieres"):
         if f'id="{section}"' not in page:
             fail(f"Spain section missing: {section}")
-    if page.count("data-market-skill data-area=") < 35:
+    if page.count("data-market-skill data-area=") != len(json.loads((ROOT / "data/market/common-evidence.json").read_text(encoding="utf-8"))["skills"]):
         fail("Spain skills catalogue is incomplete")
     for name in ("perfil-clinico", "perfil-investigacion", "perfil-analitico", "catalogo-competencias"):
         if not (ROOT / "assets" / "documents" / "es" / f"{name}.pdf").is_file():
@@ -596,7 +596,7 @@ def check_germany_market() -> None:
     for section in ("berufsfelder", "anerkennung", "fachkatalog", "geraete", "dossiers"):
         if f'id="{section}"' not in page:
             fail(f"Germany market section missing: {section}")
-    if page.count("data-market-skill data-area=") != 46:
+    if page.count("data-market-skill data-area=") != len(json.loads((ROOT / "data/market/common-evidence.json").read_text(encoding="utf-8"))["skills"]):
         fail("Germany skills catalogue count mismatch")
     for name in ("profil-forschung", "profil-analytik", "profil-klinik", "kompetenzkatalog"):
         if not (ROOT / "assets" / "documents" / "de" / f"{name}.pdf").is_file():
@@ -613,13 +613,14 @@ def check_germany_market() -> None:
 def check_shared_evidence() -> None:
     data = json.loads((ROOT / "data/market/common-evidence.json").read_text(encoding="utf-8"))
     keys = {item["id"] for item in data["skills"]}
-    if len(keys) != 46 or len(data["skills"]) != len(keys):
+    if not keys or len(data["skills"]) != len(keys):
         fail("shared evidence IDs are not unique and complete")
     for lang, path in (("en","index.html"),("es","es/index.html"),("de","de/index.html")):
         source = (ROOT / path).read_text(encoding="utf-8")
         if 'id="recruitment-hub"' not in source or source.count("data-application-package") != 1:
             fail(f"recruitment hub missing in {lang}")
-        if set(re.findall(r'data-skill-key="([^"]+)"', source)) != keys:
+        found = re.findall(r'data-skill-key="([^"]+)"', source)
+        if set(found) != keys or len(found) != len(keys):
             fail(f"catalogue differs from shared evidence for {lang}")
 
 def check_scientific_library() -> None:
