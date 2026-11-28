@@ -89,6 +89,21 @@ for (const [engine,launcher] of Object.entries({chromium,webkit})) {
                 assert.equal(await page.locator('#scientific-library article[id^="academic-"]').count(),expectedProjects);
                 await page.screenshot({path:`test-output/${engine}-${viewport.width}-${lang}-library.png`});
             }
+            // Exercise partial source failure, recovery and keyboard clearing on a fresh homepage.
+            await page.goto(base,{waitUntil:'domcontentloaded'});
+            await page.locator('.home-compact').waitFor({state:'attached'});
+            await page.route('**/data/market/scientific-library.json', route=>route.fulfill({status:503,body:'unavailable'}),{times:1});
+            const globalSearch=page.locator('#portfolio-search'),globalResults=page.locator('.portfolio-search-results');
+            await globalSearch.fill('PCR');
+            await globalResults.getByText('Some search sources could not be loaded. Try again.').waitFor();
+            assert.ok(await globalResults.locator('a').count()>0,'Available search sources must remain usable');
+            await globalSearch.fill('Bradford');
+            await page.waitForFunction(()=>!document.querySelector('.portfolio-search-results')?.hasAttribute('aria-busy'));
+            assert.equal(await globalResults.getByText('Some search sources could not be loaded. Try again.').count(),0);
+            assert.ok(await globalResults.locator('a').count()>0,'Search must recover after retry');
+            await globalSearch.press('Escape');
+            assert.equal(await globalSearch.inputValue(),'');
+            assert.equal(await globalResults.locator('a').count(),0);
             // Verify real navigation through the country dropdown.
             await page.goto(base,{waitUntil:'domcontentloaded'});
             await page.locator('[data-market-selector] summary').click();
