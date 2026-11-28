@@ -13,4 +13,5 @@ for(const lang of ['es','en','de']){
  for(let i=0;i<data.skills.length;i+=9){const ids=data.skills.slice(i,i+MAX_SKILLS).map(s=>s.id);assert(generate(data,cv,compose(data,cv,lang,'general',ids)).includes('/Count 2'));}
 }
 assert.throws(()=>compose(data,cv,'es','general',['fake-id']));assert.throws(()=>compose(data,cv,'es','general',[]));assert.throws(()=>compose(data,cv,'es','general',data.skills.slice(0,MAX_SKILLS+1).map(s=>s.id)));
+const env=compose(data,cv,'es','pharma',['microbial-environmental-sampling','glp-sop']);assert(env.variant.academic.join(' ').includes('RODAC'));assert(env.variant.placements[1].join(' ').includes('Celignis'));
 const ids=['pcr','hacat','cd4-cd14'];const publicPDF=generate(data,cv,compose(data,cv,'en','research',ids));assert(generate(data,cv,compose(data,cv,'en','research',ids,'test@example.invalid')).includes('test@example.invalid'));assert(!publicPDF.includes('test@example.invalid'));assert.notEqual(publicPDF,generate(data,cv,compose(data,cv,'en','research',['elisa'])));console.log('CV builder matcher and PDF tests passed.');

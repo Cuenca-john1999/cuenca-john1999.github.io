@@ -71,7 +71,7 @@ export const gaps=[
 {id:"hplc",terms:["HPLC","UHPLC","UPLC","GC-MS","LC-MS"],label:{es:"HPLC / técnicas cromatográficas instrumentales específicas",en:"HPLC / specific instrumental chromatography",de:"HPLC / spezifische instrumentelle Chromatografie"}},
 {id:"language",terms:["German B2","Deutsch B2","aleman B2","German C1","Deutsch C1","aleman C1","English C1","Englisch C1","ingles C1"],label:{es:"Nivel de idioma superior al documentado: revisar",en:"Language level above documented level: review",de:"Sprachniveau über dem dokumentierten Niveau: prüfen"}}
 ];
-const norm=s=>String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+const norm=s=>String(s).replace(/ß/g,"ss").normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 function contains(text,term){const q=norm(term);return q.length>=2&&(' '+text+' ').includes(' '+q+' ');}
 export function analyse(data,offer){
  const text=norm(offer),matches=[];
@@ -101,12 +101,18 @@ export function compose(data,cv,lang,route,ids,contact=''){
  const placed=['La Princesa','Celignis'].map(src=>skills.filter(s=>s.source===src));
  const academic=skills.filter(s=>!['La Princesa','Celignis'].includes(s.source));
  // Compact source-labelled claims avoid turning curriculum topics into hands-on experience.
- const group=items=>{const groups=new Map();for(const s of items){const v=s.locales[lang],key=v.level+' | '+s.source;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(v.name);}
- return [...groups].map(([k,v])=>k+': '+v.join('; ')+'.');};
+ const group=items=>{const groups=new Map();for(const s of items){const v=s.locales[lang],key=v.level+' | '+s.source;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(v);}
+ return [...groups].flatMap(([k,v],index)=>{
+   // Give the first selected method in each source/level a full, audited description.
+   const first=v[0],d=first.detail;
+   if(index===0&&d&&d.length<=360)return [k+': '+first.name+'. '+d,...(v.length>1?[k+': '+v.slice(1).map(x=>x.name).join('; ')+'.']:[])];
+   return [k+': '+v.map(x=>x.name).join('; ')+'.'];
+ });};
  const placement=placed.map((arr,i)=>arr.length?group(arr):[m.fallback[i]]);
  const order=placed[1].length>placed[0].length?[1,0]:[0,1];
  const priority=academic.length>=Math.max(placed[0].length,placed[1].length)&&academic.length?'academic':order[0]===1?'celignis':'princesa';
- const profile=m.intro+' '+m.focus+'. '+(role==='clinical'&&lang==='de'?'Eine deutsche MTL-Anerkennung ist nicht nachgewiesen.':role==='clinical'&&lang==='en'?'Regulated clinical roles depend on local authorisation.':role==='pharma'?({es:'Formación relacionada; no experiencia GMP acreditada.',en:'Related training; no documented GMP experience.',de:'Verwandte Ausbildung; keine nachgewiesene GMP-Erfahrung.'})[lang]:'');
+ const topicNames=[...new Set(skills.map(s=>data.topics[s.topic][lang]))].slice(0,3);
+ const profile=m.intro+' '+m.focus+': '+topicNames.join('; ')+'. '+(role==='clinical'&&lang==='de'?'Eine deutsche MTL-Anerkennung ist nicht nachgewiesen.':role==='clinical'&&lang==='en'?'Regulated clinical roles depend on local authorisation.':role==='pharma'?({es:'Formación relacionada; no experiencia GMP acreditada.',en:'Related training; no documented GMP experience.',de:'Verwandte Ausbildung; keine nachgewiesene GMP-Erfahrung.'})[lang]:'');
  if(contact.length>150||/[\r\n]/.test(contact)||Array.from(contact).some(c=>c.charCodeAt(0)>255||c.charCodeAt(0)<32))throw Error('Invalid contact');
  return {lang,role,route,ids,contact,variant:{subtitle:m.labels[route]||base.subtitle,profile,placements:placement,academic:group(academic),priority,order}};
 }

@@ -98,7 +98,7 @@ export function buildDossiers(read, custom=null){
    center(first,"cuenca-john1999.github.io"+(lang==="en"?"/":"/"+lang+"/"),y-2,8.4);y-=19;
    first.rule(L+4,y,M-8);y-=19;
    y=heading(first,layout.profile,y);y=p(first,v.profile,y)-10;
-   const acad=()=>{y=heading(first,layout.academic,y);for(const b of v.academic)y=bullet(first,b,y);y-=8};
+   const acad=()=>{if(custom&&!v.academic.length)return;const label=custom?({es:"FORMACIÓN Y PRÁCTICAS ACADÉMICAS",en:"ACADEMIC TRAINING AND PRACTICAL WORK",de:"AUSBILDUNG UND PRAKTISCHE ÜBUNGEN"})[lang]:layout.academic;y=heading(first,label,y);for(const b of v.academic)y=bullet(first,b,y);y-=8};
    if(v.priority==="academic")acad();
    y=heading(first,layout.experience,y);
    const order=custom?v.order:(v.priority==="celignis"||role==="pharma"?[1,0]:[0,1]);
