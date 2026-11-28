@@ -36,9 +36,15 @@ jobs:
       - name: Render market PDF dossiers
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y poppler-utils
+          sudo apt-get install -y poppler-utils zbar-tools
           mkdir -p test-output
           node tools/render_custom_cv_samples.mjs
+          python3 tools/verify_public_pdfs.py --include-generated
+          for doc in test-output/custom-cv-*.pdf; do
+            pdftoppm -f 2 -l 2 -r 300 -png -singlefile "$doc" /tmp/portfolio-qr
+            decoded="$(zbarimg --quiet --raw /tmp/portfolio-qr.png)"
+            test "$decoded" = 'https://cuenca-john1999.github.io/' || { echo "Unexpected QR target in $(basename "$doc")"; exit 1; }
+          done
           for doc in assets/documents/{es,de,en}/*.pdf assets/documents/Jhon_M_Cuenca_CV_*.pdf test-output/custom-cv-*.pdf; do
             lang="$(basename "$(dirname "$doc")")"
             name="$(basename "$doc" .pdf)"
@@ -88,5 +94,6 @@ jobs:
             test-output/*.png
             test-output/custom-cv-*.pdf
             test-output/cv-semantic-benchmark.json
+            test-output/cv-semantic-summary.json
             test-output/accessibility.json
           if-no-files-found: ignore
