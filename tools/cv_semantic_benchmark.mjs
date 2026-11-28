@@ -9,7 +9,7 @@ const entries=evidenceIndex(data,facts),browser=await chromium.launch({headless:
 const score=(keys,expected)=>({expected:expected.length,found:expected.filter(k=>keys.includes(k)),missing:expected.filter(k=>!keys.includes(k)),other:keys.filter(k=>!expected.includes(k))});
 try{
  const page=await browser.newPage();await page.goto((process.env.PORTFOLIO_URL||'http://127.0.0.1:8765/')+'cv-builder/?lang=en');
- await page.evaluate(()=>{window.benchWorker=new Worker(new URL('../assets/js/cv-semantic-worker.mjs?v=3',location.href),{type:'module'});});
+ await page.evaluate(()=>{window.benchWorker=new Worker(new URL('../assets/js/cv-semantic-worker.mjs?v=4',location.href),{type:'module'});});
  for(const c of cases){
   const offer=(c.prefix||'').repeat(c.repeat||0)+c.text,baseline=analyse(data,offer);
   const quickKeys=[...baseline.matches.map(x=>'skill:'+x.id),...baseline.factIds.map(x=>'fact:'+x)];

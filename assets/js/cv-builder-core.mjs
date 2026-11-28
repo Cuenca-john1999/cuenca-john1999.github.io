@@ -1,4 +1,4 @@
-import {buildDossiers} from './cv-pdf-engine.mjs?v=3';
+import {buildDossiers} from './cv-pdf-engine.mjs?v=4';
 import {interpret,focusRoutes,facts,clauses,modality,strongest} from './cv-context.mjs?v=3';
 export {focusRoutes,facts};
 export const MAX_SKILLS=12;

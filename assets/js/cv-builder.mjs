@@ -1,4 +1,4 @@
-import {analyse,compose,generate,MAX_SKILLS,focusRoutes,facts} from './cv-builder-core.mjs?v=4';
+import {analyse,compose,generate,MAX_SKILLS,focusRoutes,facts} from './cv-builder-core.mjs?v=5';
 import {zip} from './cv-builder-zip.mjs';
 import {evidenceIndex,validateSuggestions} from './cv-semantic.mjs?v=3';
 const root=new URL('../../',import.meta.url),mount=document.querySelector('[data-cv-builder]'),$=id=>mount?.querySelector('#'+id);
@@ -32,7 +32,7 @@ function renderAnalysis(){
  block.append(el('h3',m.gaps),result.gaps.length?list(result.gaps.map(g=>g.label[state.lang]+' · '+m.priorities[g.priority])):el('p',m.noGaps,'muted'));if(result.notRequired?.length){const d=el('details');d.append(el('summary',m.notRequired),list(result.notRequired.map(g=>g.label[state.lang])));block.append(d);}return block;}
  box.append(show(state.analysis,m.offer));
  if(state.comparison){box.append(show(state.comparison,m.second));const a=new Set(state.analysis.matches.map(x=>x.id)),b=new Set(state.comparison.matches.map(x=>x.id)),cmp=el('div',undefined,'comparison');for(const [title,ids] of [[m.shared,[...a].filter(id=>b.has(id))],[m.only1,[...a].filter(id=>!b.has(id))],[m.only2,[...b].filter(id=>!a.has(id))]]){const d=el('div');d.append(el('h3',title),ids.length?list(ids.map(id=>skill(id).locales[state.lang].name)):el('p','—'));cmp.append(d);}box.append(cmp);}
- const picks=state.analysis.matches.map(x=>x.id),use=btn(m.use,()=>{state.search='';state.topic='';refs.search.value='';refs.topic.value='';choose(picks);},'cv-use-suggestions',true);use.disabled=!picks.length;box.append(use);
+ const picks=state.analysis.matches.map(x=>x.id),use=btn(m.use,applyRecommended,'cv-use-suggestions',true);use.disabled=!picks.length;box.append(use);
 }
 
 function cancelSemantic(){
@@ -40,6 +40,19 @@ function cancelSemantic(){
  clearTimeout(semanticTimer);semantic.busy=false;semantic.status='';
 }
 function invalidateSemantic(){cancelSemantic();semantic.rows=[];semantic.offer='';semantic.passages=0;renderSemantic();}
+function recommendedSelection(){
+ const primary=(state.analysis?.matches||[]).filter(h=>h.priority==='required'||h.priority==='duty'||h.kind==='direct').map(h=>h.id);
+ const others=(state.analysis?.matches||[]).map(h=>h.id);
+ const semanticIds=semantic.rows.filter(h=>h.key.startsWith('skill:')).map(h=>h.key.slice(6));
+ return [...new Set([...primary,...semanticIds,...others])].slice(0,MAX_SKILLS);
+}
+function applyRecommended(){state.search='';state.topic='';refs.search.value='';refs.topic.value='';choose(recommendedSelection());}
+let previewUrl=null;
+function refreshPDFPreview(){
+ if(previewUrl){URL.revokeObjectURL(previewUrl);previewUrl=null;}
+ if(!refs.pdfFrame||!refs.pdfDetails?.open||!state.ids.length){if(refs.pdfFrame)refs.pdfFrame.removeAttribute('data');return;}
+ try{previewUrl=URL.createObjectURL(pdfBlob());refs.pdfFrame.data=previewUrl;}catch(e){status(t().error);}
+}
 function renderSemantic(){
  if(!refs.semantic)return;const m=t(),box=refs.semantic;box.replaceChildren();
  const run=btn(m.semanticRun,runSemantic,'cv-semantic-run',false);run.disabled=semantic.busy;box.append(run);
@@ -49,9 +62,10 @@ function renderSemantic(){
  if(!semantic.rows.length)return;
  box.append(el('h4',m.semanticResults),el('p',m.semanticCaution,'muted'));
  const chosen=new Set(),details=el('div'),checks=[];
- for(const hit of semantic.rows){
+ box.append(btn(m.applyRecommended,applyRecommended,'cv-apply-recommended',true));
+ for(const hit of [...semantic.rows].sort((a,b)=>{const group=x=>x.key.startsWith('fact:')?2:x.corroborated?0:1;return group(a)-group(b);})){
   const [kind,id]=hit.key.split(':'),row=el('div',undefined,'match'),v=kind==='skill'?skill(id).locales[state.lang]:null;
-  const title=el('strong',v?v.name:facts[id][state.lang]);
+  const title=el('strong',v?v.name:facts[id][state.lang]);row.append(el('small',kind==='fact'?m.experienceGroup:hit.corroborated?m.primaryGroup:m.complementGroup,'muted'));
   if(v){const c=el('input');c.type='checkbox';c.checked=state.ids.includes(id);c.dataset.semanticSkill=id;if(c.checked)chosen.add(id);c.addEventListener('change',()=>c.checked?chosen.add(id):chosen.delete(id));checks.push(c);const lab=el('label',undefined,'cv-inline');lab.append(c,title);row.append(lab,el('small',v.level+' · '+skill(id).source));}
   else row.append(title,el('small',m.transferable));
   const d=el('details');d.append(el('summary',m.semanticPassage),el('p',hit.passage,'muted'));row.append(d);details.append(row);
@@ -65,7 +79,7 @@ function runSemantic(){
  renderAnalysis();renderSelection();renderPreview();
  semantic.offer=offer;semantic.rows=[];semantic.busy=true;semantic.status=t().semanticLoading;renderSemantic();
  try{
-  if(!semanticWorker)semanticWorker=new Worker(new URL('./cv-semantic-worker.mjs?v=3',import.meta.url),{type:'module'});
+  if(!semanticWorker)semanticWorker=new Worker(new URL('./cv-semantic-worker.mjs?v=4',import.meta.url),{type:'module'});
   const worker=semanticWorker;
   function fail(){if(worker!==semanticWorker)return;worker.terminate();semanticWorker=null;clearTimeout(semanticTimer);semantic.busy=false;semantic.status=t().semanticError;renderSemantic();}
   worker.onerror=fail;worker.onmessageerror=fail;
@@ -97,12 +111,12 @@ function renderSelection(){
 function model(){return compose(data,cv,state.lang,state.role,state.ids);}
 function renderPreview(){
  const m=t(),box=refs.preview,summary=refs.summary;box.replaceChildren();summary.replaceChildren();for(const b of refs.exports)b.disabled=!state.ids.length;
- if(!state.ids.length){summary.append(el('p',m.none));return;}
+ if(!state.ids.length){summary.append(el('p',m.none));refreshPDFPreview();return;}
  try{const c=model(),v=c.variant,locale=cv[state.lang];summary.append(el('p',v.subtitle,'cv-summary-role'),el('p',m.format,'muted'));const tags=el('div',undefined,'cv-tags');for(const id of state.ids)tags.append(el('span',skill(id).locales[state.lang].name,'cv-tag'));summary.append(tags);box.append(el('h2','Jhon M. Cuenca'),el('p',v.subtitle,'subtitle'),el('p',locale.mobility),el('hr'),el('h3',m.profile),el('p',v.profile));
  const academic=()=>{if(v.academic.length)box.append(el('h3',m.academic),list(v.academic));};if(v.priority==='academic')academic();
  box.append(el('h3',m.placements));for(const i of v.order)box.append(el('strong',locale.exp[i][0]),el('p',locale.exp[i][1]),list(v.placements[i]));if(v.priority!=='academic')academic();if(v.school)box.append(el('h3',m.teaching),el('p',facts.teaching[state.lang]));
  box.append(el('hr'),el('h3',m.skills),list(c.ids.map(id=>{const s=skill(id),v=s.locales[state.lang];return v.name+' — '+v.level+' · '+s.source;})),el('h3',locale.layout.education),list(['Técnico Superior en Laboratorio Clínico y Biomédico','Técnico en Operaciones de Laboratorio']));}
- catch(e){summary.append(el('p',m.error));for(const b of refs.exports)b.disabled=true;}
+ catch(e){summary.append(el('p',m.error));for(const b of refs.exports)b.disabled=true;}refreshPDFPreview();
 }
 function save(blob,name,preview=false){const url=URL.createObjectURL(blob),a=el('a');a.href=url;if(preview){a.target='_blank';a.rel='noopener';}else a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),preview?300000:60000);}
 function pdfBlob(){return new Blob([generate(data,cv,model())],{type:'application/pdf'});}
@@ -113,7 +127,7 @@ async function downloadZIP(){
  catch(e){status(t().error);}finally{renderPreview();}
 }
 function render(){
- const m=t(),app=mount;app.lang=state.lang;if(standalone){document.documentElement.lang=state.lang;document.title=m.title+' | Jhon M. Cuenca';const back=document.getElementById('cv-back');if(back){back.textContent='Jhon M. Cuenca · '+m.back;back.href=new URL(state.lang==='en'?'':state.lang+'/',root).href;}}app.replaceChildren();
+ const m=t(),app=mount;app.lang=state.lang;if(standalone){document.documentElement.lang=state.lang;document.title=m.title+' | Jhon M. Cuenca';const back=document.getElementById('cv-back');if(back){back.textContent='Jhon M. Cuenca · '+m.back;back.href=new URL(state.lang==='en'?'':state.lang+'/',root).href;}}if(previewUrl){URL.revokeObjectURL(previewUrl);previewUrl=null;}app.replaceChildren();
  const head=el('div',undefined,'cv-head'),headText=el('div'),meta=el('div',undefined,'cv-meta');headText.append(el(standalone?'h1':'h3',m.title,'cv-title'),el('p',m.intro,'cv-intro'));meta.append(el('span',m.format,'cv-format'),el('small',m.local));head.append(headText,meta);app.append(head);
  const profile=panel(m.step1),controls=el('div',undefined,'cv-controls'),role=el('select');role.id='cv-role';
  for(const [id,title] of [['general',m.general],...Object.entries(focusRoutes(data)).map(([id,r])=>[id,r.labels[state.lang]])]){const o=el('option',title);o.value=id;role.append(o);}role.value=state.role;role.addEventListener('change',()=>{state.role=role.value;state.all=false;state.topic='';state.search='';refs.search.value='';refs.topic.value='';choose(presetIds());});refs.role=role;
@@ -129,6 +143,7 @@ function render(){
  refs.summary=el('div',undefined,'cv-summary');refs.summary.id='cv-summary';right.append(refs.summary);
  const pdf=btn(m.pdf,()=>downloadPDF(),'cv-download-pdf',true),view=btn(m.open,()=>downloadPDF(true),'cv-open-pdf');const downloads=el('div',undefined,'cv-downloads');downloads.append(pdf,view);right.append(downloads);
  const content=el('details',undefined,'cv-disclosure cv-preview-details');content.id='cv-preview-details';content.open=state.details;content.addEventListener('toggle',()=>state.details=content.open);refs.preview=el('div',undefined,'cv-paper');refs.preview.id='cv-content-preview';content.append(el('summary',m.details),el('p',m.previewNote,'muted'),refs.preview);right.append(content);
+ const actual=el('details',undefined,'cv-disclosure');actual.id='cv-pdf-preview';const object=el('object');object.id='cv-pdf-frame';object.type='application/pdf';object.setAttribute('aria-label',m.actualPreview);object.className='cv-pdf-frame';object.append(el('p',m.previewFallback));actual.append(el('summary',m.actualPreview),object,btn(m.open,()=>downloadPDF(true),'cv-preview-open'));refs.pdfFrame=object;refs.pdfDetails=actual;actual.addEventListener('toggle',refreshPDFPreview);right.append(actual);
  refs.status=el('p',undefined,'cv-status');refs.status.setAttribute('role','status');right.append(refs.status);cols.append(left,right);app.append(cols);
  const extra=el('details',undefined,'cv-disclosure');extra.id='cv-extra';extra.open=state.extra;extra.addEventListener('toggle',()=>state.extra=extra.open);extra.append(el('summary',m.extra));const pack=el('div',undefined,'cv-disclosure-body');
  pack.append(el('p',m.packageNote,'muted'));const docs=el('fieldset',undefined,'cv-docs');docs.append(el('legend',m.package));const paths=['assets/documents/europass-clinical-biomedical-laboratory.pdf','assets/documents/europass-laboratory-operations.pdf',...recruit[state.lang].names.map(n=>'assets/documents/'+state.lang+'/'+n+'.pdf')];for(const [i,path] of paths.entries()){const c=el('input');c.type='checkbox';c.checked=state.docs.has(path);c.addEventListener('change',()=>c.checked?state.docs.add(path):state.docs.delete(path));const l=el('label',undefined,'cv-inline');l.append(c,el('span',recruit[state.lang].files[i+1]));docs.append(l);}const z=btn(m.zip,downloadZIP,'cv-download-zip',true);pack.append(docs,z);extra.append(pack);app.append(extra);

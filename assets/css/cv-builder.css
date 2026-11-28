@@ -4,3 +4,5 @@
 .cv-standalone{margin:0;background:#f5f7fa;color:#182434;font:400 1rem/1.5 system-ui,sans-serif}.cv-standalone>header,.cv-standalone>main{max-width:1120px;margin:auto;padding:1rem clamp(1rem,4vw,2.5rem)}.cv-standalone>header a{color:inherit}.cv-standalone .cv-builder{margin:0}
 @media(prefers-color-scheme:dark){.cv-standalone{background:#0b0d10;color:#e5edf5}.cv-standalone .cv-builder{--cv-bg:#0b0d10;--cv-surface:#151b22;--cv-ink:#e5edf5;--cv-muted:#a5b6c8;--cv-line:#354250;--cv-accent:#91c0f5;--cv-button:#285dae}}
 @media(max-width:740px){.cv-builder{padding:.85rem;border-radius:.8rem}.cv-builder .cv-head{display:block}.cv-builder .cv-meta{max-width:none;text-align:left;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}.cv-builder .cv-columns,.cv-builder .comparison{grid-template-columns:1fr}.cv-builder .cv-panel{padding:.8rem}.cv-builder .cv-selection{max-height:19rem}.cv-builder .cv-controls{grid-template-columns:1fr}.cv-builder .cv-downloads button{width:100%}}
+
+.cv-builder .cv-pdf-frame{display:block;width:100%;height:clamp(400px,65vh,760px);background:#fff;border:0}.cv-builder #cv-pdf-preview>button{margin:.65rem;width:calc(100% - 1.3rem)}

@@ -66,7 +66,7 @@ jobs:
 
       - name: Install browser test dependencies
         run: |
-          npm install --no-save --no-package-lock playwright@1.58.2
+          npm install --no-save --no-package-lock playwright@1.58.2 @axe-core/playwright@4.11.1
           npx playwright install --with-deps chromium webkit
       - name: Browser smoke tests (desktop and mobile)
         run: |
@@ -78,6 +78,7 @@ jobs:
           node tools/cv_builder_smoke.mjs
           node tools/cv_semantic_live.mjs
           node tools/cv_semantic_benchmark.mjs
+          node tools/explorer_accessibility.mjs
       - name: Upload visual checks
         if: always()
         uses: actions/upload-artifact@v4
@@ -87,4 +88,5 @@ jobs:
             test-output/*.png
             test-output/custom-cv-*.pdf
             test-output/cv-semantic-benchmark.json
+            test-output/accessibility.json
           if-no-files-found: ignore

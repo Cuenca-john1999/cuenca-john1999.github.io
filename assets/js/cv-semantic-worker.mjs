@@ -21,6 +21,17 @@ async function encode(model,texts,prefix,phase){
  }
  return vectors;
 }
+async function cacheKey(key){
+ const raw=new TextEncoder().encode(MODEL.id+'|'+MODEL.revision+'|'+MODEL.dtype+'|'+key);
+ const digest=await crypto.subtle.digest('SHA-256',raw);return Array.from(new Uint8Array(digest),b=>b.toString(16).padStart(2,'0')).join('');
+}
+async function db(){return new Promise((resolve,reject)=>{const req=indexedDB.open('portfolio-public-evidence-v1',1);req.onupgradeneeded=()=>req.result.createObjectStore('vectors');req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);req.onblocked=()=>reject(Error('Cache blocked'));});}
+async function cached(key,count){
+ try{const d=await db();try{return await new Promise(resolve=>{const req=d.transaction('vectors').objectStore('vectors').get(key);req.onsuccess=()=>{const rows=req.result;resolve(Array.isArray(rows)&&rows.length===count&&rows.every(v=>v instanceof Float32Array&&v.length===MODEL.dimensions&&v.every(Number.isFinite))?rows:null);};req.onerror=()=>resolve(null);});}finally{d.close();}}catch{return null;}
+}
+async function store(key,vectors){
+ try{const d=await db();try{await new Promise((resolve,reject)=>{const tx=d.transaction('vectors','readwrite'),s=tx.objectStore('vectors');s.clear();s.put(vectors,key);tx.oncomplete=resolve;tx.onerror=reject;tx.onabort=reject;});}finally{d.close();}}catch{}
+}
 self.onmessage=async({data:m})=>{
  if(m?.type!=='analyse'||busy)return;busy=true;
  try{
@@ -28,7 +39,7 @@ self.onmessage=async({data:m})=>{
   const queries=splitQueries(m.offer);if(!queries.length){notify('result',{rows:[],passages:0});return;}
   notify('loading');const model=await getModel();
   const key=JSON.stringify(entries);
-  if(indexCache?.key!==key){const vectors=await encode(model,entries.map(e=>e.text),'passage: ','index');indexCache={key,vectors};}
+  if(indexCache?.key!==key){const id=await cacheKey(key).catch(()=>null);let vectors=id?await cached(id,entries.length):null;if(!vectors){vectors=await encode(model,entries.map(e=>e.text),'passage: ','index');if(id)await store(id,vectors);}indexCache={key,vectors};}
   const vectors=await encode(model,queries,'query: ','offer');
   notify('result',{rows:rankVectors(entries,indexCache.vectors,queries,vectors),passages:queries.length});
  }catch(e){notify('error',{message:String(e?.message||e).slice(0,200)});}

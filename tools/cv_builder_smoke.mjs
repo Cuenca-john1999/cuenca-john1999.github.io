@@ -22,6 +22,7 @@ for(const [engine,launcher] of Object.entries({chromium,webkit})){
    assert.match(await page.locator('#cv-analysis-results').innerText(),/GMP/);assert.match(await page.locator('#cv-analysis-results').innerText(),/LAL/);
    await page.locator('#cv-use-suggestions').click();assert.match(await page.locator('#cv-summary').innerText(),/Recuento microbiol/);
    await page.locator('#cv-language').selectOption('en');assert.equal(await page.locator('html').getAttribute('lang'),'es');assert.equal(await page.locator('#cv-builder').getAttribute('lang'),'en');assert.match(await page.locator('#cv-summary').innerText(),/Microbial enumeration/);
+   await page.locator('#cv-pdf-preview>summary').click();await page.waitForFunction(()=>document.querySelector('#cv-pdf-frame')?.getAttribute('data')?.startsWith('blob:'));await page.locator('#cv-pdf-preview>summary').click();
    const pending=page.waitForEvent('download');await page.locator('#cv-download-pdf').click();const dl=await pending;assert.equal((await readFile(await dl.path())).subarray(0,8).toString(),'%PDF-1.4');
    await page.locator('#cv-extra>summary').click();assert.equal(await page.locator('#cv-personal-mode,#cv-contact-input').count(),0);
    const z=page.waitForEvent('download');await page.locator('#cv-download-zip').click();assert.equal((await readFile(await (await z).path())).subarray(0,2).toString(),'PK');

@@ -86,7 +86,13 @@
     "semanticDone": "Análisis semántico completado",
     "semanticFragments": "fragmentos",
     "semanticNone": "No se encontraron recomendaciones adicionales. Puedes utilizar la selección del análisis rápido.",
-    "semanticError": "La IA semántica no está disponible. Puedes seguir usando el análisis rápido."
+    "semanticError": "La IA semántica no está disponible. Puedes seguir usando el análisis rápido.",
+    "applyRecommended": "Aplicar selección recomendada",
+    "primaryGroup": "Competencias principales",
+    "complementGroup": "Competencias complementarias",
+    "experienceGroup": "Experiencia relevante",
+    "actualPreview": "Vista previa real del PDF",
+    "previewFallback": "Si el navegador no muestra el PDF, utiliza el botón inferior."
   },
   "en": {
     "title": "Personalised CV Builder",
@@ -175,7 +181,13 @@
     "semanticDone": "Semantic analysis complete",
     "semanticFragments": "passages",
     "semanticNone": "No additional recommendations found. You can use the quick analysis selection.",
-    "semanticError": "Semantic AI unavailable. You can continue with quick analysis."
+    "semanticError": "Semantic AI unavailable. You can continue with quick analysis.",
+    "applyRecommended": "Apply recommended selection",
+    "primaryGroup": "Primary skills",
+    "complementGroup": "Complementary skills",
+    "experienceGroup": "Relevant experience",
+    "actualPreview": "Actual PDF preview",
+    "previewFallback": "If the browser does not display the PDF, use the button below."
   },
   "de": {
     "title": "Individueller Lebenslauf-Generator",
@@ -264,6 +276,12 @@
     "semanticDone": "Semantische Analyse abgeschlossen",
     "semanticFragments": "Abschnitte",
     "semanticNone": "Keine weiteren Empfehlungen gefunden. Die Auswahl der Schnellanalyse bleibt verfügbar.",
-    "semanticError": "Semantische KI nicht verfügbar. Die Schnellanalyse bleibt nutzbar."
+    "semanticError": "Semantische KI nicht verfügbar. Die Schnellanalyse bleibt nutzbar.",
+    "applyRecommended": "Empfohlene Auswahl übernehmen",
+    "primaryGroup": "Zentrale Kompetenzen",
+    "complementGroup": "Ergänzende Kompetenzen",
+    "experienceGroup": "Relevante Erfahrung",
+    "actualPreview": "Echte PDF-Vorschau",
+    "previewFallback": "Falls der Browser die PDF nicht anzeigt, nutzen Sie die Schaltfläche unten."
   }
 }
