@@ -1,4 +1,4 @@
-import {buildDossiers} from './cv-pdf-engine.mjs?v=2';
+import {buildDossiers} from './cv-pdf-engine.mjs?v=3';
 import {interpret,focusRoutes,facts,clauses,modality,strongest} from './cv-context.mjs?v=3';
 export {focusRoutes,facts};
 export const MAX_SKILLS=12;
@@ -133,7 +133,7 @@ export function compose(data,cv,lang,route,ids,contact=''){
  const order=placed[1].length>placed[0].length?[1,0]:[0,1];
  const priority=academic.length>=Math.max(placed[0].length,placed[1].length)&&academic.length?'academic':order[0]===1?'celignis':'princesa';
  const topicNames=[...new Set(skills.map(s=>data.topics[s.topic][lang]))].slice(0,3);
- let profile=m.intro+' '+m.focus+': '+topicNames.join('; ')+'. '+(role==='clinical'&&lang==='de'?'Eine deutsche MTL-Anerkennung ist nicht nachgewiesen.':role==='clinical'&&lang==='en'?'Regulated clinical roles depend on local authorisation.':role==='pharma'?({es:'Formación relacionada; no experiencia GMP acreditada.',en:'Related training; no documented GMP experience.',de:'Verwandte Ausbildung; keine nachgewiesene GMP-Erfahrung.'})[lang]:'');
+ let profile=m.intro+' '+({es:'Experiencia práctica de laboratorio y formación especializada en',en:'Practical laboratory experience and specialised training in',de:'Praktische Laborerfahrung und fachliche Ausbildung in'})[lang]+' '+topicNames.join('; ')+'.';
  if(contact.length>150||/[\r\n]/.test(contact)||Array.from(contact).some(c=>c.charCodeAt(0)>255||c.charCodeAt(0)<32))throw Error('Invalid contact');
  if(route==='school')profile=({es:'Técnico de laboratorio con dos titulaciones oficiales españolas de FP y experiencia como instructor de robótica educativa STEM. Formación práctica de laboratorio, complementada con prácticas de organización de material y documentación. Formación básica en prevención de riesgos laborales.',en:'Laboratory technician with two official Spanish vocational qualifications and experience as an educational robotics instructor. Academic laboratory practical training, complemented by placement experience in laboratory organisation and documentation. Basic occupational risk prevention training.',de:'Laborfachkraft mit zwei offiziellen spanischen Berufsabschlüssen und Erfahrung als Dozent für Bildungsrobotik. Praktische Laborausbildung, ergänzt durch Praktikumserfahrung in Labororganisation und Dokumentation. Grundausbildung Arbeitsschutz.'})[lang];
  return {lang,role,route,ids,contact,variant:{subtitle:route==='school'?({es:'Técnico de laboratorio | Apoyo a la enseñanza de ciencias',en:'Laboratory Technician | Science Education Support',de:'Laborfachkraft | Naturwissenschaftlicher Unterricht'})[lang]:m.labels[route]||base.subtitle,profile,placements:placement,academic:group(academic),priority,order,school:route==='school'}};

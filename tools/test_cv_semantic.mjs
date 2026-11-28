@@ -4,8 +4,8 @@ import {evidenceIndex,splitQueries,rankVectors,validateSuggestions,MODEL} from '
 import {facts,analyse} from '../assets/js/cv-builder-core.mjs';
 const data=JSON.parse(readFileSync(new URL('../data/market/common-evidence.json',import.meta.url),'utf8'));
 const entries=evidenceIndex(data,facts);
-assert.equal(entries.length,data.skills.length+Object.keys(facts).length);
-assert.equal(new Set(entries.map(x=>x.key)).size,entries.length);
+assert.equal(entries.length,3*(data.skills.length+Object.keys(facts).length));
+assert.equal(new Set(entries.map(x=>x.key+':'+x.lang)).size,entries.length);assert.equal(new Set(entries.map(x=>x.key)).size,entries.length/3);
 assert(entries.some(x=>x.key==='fact:teaching'));
 assert.equal(MODEL.dimensions,384);
 const chunks=splitQueries('Prepare teaching apparatus. GMP is not required. Make solutions and reagents.');
@@ -16,6 +16,13 @@ assert(tail.every(x=>x.length<=420));
 const hits=rankVectors([{key:'skill:solutions'},{key:'skill:pcr'},{key:'fact:teaching'}],[[1,0],[0,1],[.9,.1]],['prepare liquids','support learning'],[[1,0],[1,0]]);
 assert.equal(hits[0].key,'skill:solutions');assert.equal(hits.length,2);
 const baseline=analyse(data,'PCR is not required.');
-const clean=validateSuggestions([{key:'skill:pcr',score:.99,passage:'PCR'},{key:'skill:fake',score:.99,passage:'fake'},{key:'skill:solutions',score:.9,passage:'Prepare solutions'},{key:'skill:solutions',score:.9,passage:'duplicate'},{key:'fact:teaching',score:.85,passage:'Teaching'}],data,facts,baseline);
+const clean=validateSuggestions([{key:'skill:pcr',score:.99,passage:'PCR'},{key:'skill:fake',score:.99,passage:'fake'},{key:'skill:solutions',score:.9,passage:'Prepare solutions'},{key:'skill:solutions',score:.9,passage:'duplicate'},{key:'fact:teaching',score:.85,passage:'Teaching'}],data,facts,baseline,{rerank:false});
 assert.deepEqual(clean.map(x=>x.key),['skill:solutions','fact:teaching']);
 console.log('Semantic indexing, chunk coverage, ranking and evidence constraints passed (synthetic vectors).');
+
+assert.equal(splitQueries('We offer excellent benefits and flexible working hours.').length,0);
+const dup=rankVectors([{key:'skill:solutions',lang:'es'},{key:'skill:solutions',lang:'en'},{key:'skill:pcr',lang:'de'}],[[1,0],[.95,.05],[.9,.1]],['prepare liquids'],[[1,0]]);
+assert.equal(dup.filter(x=>x.key==='skill:solutions').length,1);
+const q=analyse(data,'PCR is essential.');
+const filtered=validateSuggestions([{key:'skill:pcr',score:.81,passage:'PCR is essential'},{key:'skill:chnos',score:.84,passage:'PCR is essential'}],data,facts,q);
+assert.deepEqual(filtered.map(x=>x.key),['skill:pcr']);

@@ -76,27 +76,31 @@ export function buildDossiers(read, custom=null){
 
  const cvLocale=cv[lang],layout=cvLocale.layout;
  for(const [role,ids] of (custom?[[custom.role,custom.ids]]:Object.entries(cv.selections))){
-   const v=custom?custom.variant:cvLocale.variants[role],first=canvas(),second=canvas(),black="0 0 0",grey="0.32 0.32 0.32";
+   const v=custom?custom.variant:cvLocale.variants[role];
+   let lastError;
+   for(const compact of custom?[false,true]:[true]){try{
+   const first=canvas(),second=canvas(),black="0 0 0",grey="0.32 0.32 0.32",polished=!!custom&&!compact;
+   const bodySize=polished?9.6:9.1,leading=polished?13.1:12;
    const center=(c,s,y,z,b=false,color=black)=>c.text(s,(595-width(s,z,b))/2,y,z,b,color);
-   const right=(c,s,y,z=8.8)=>c.text(s,R-width(s,z),y,z,false,black);
-   const p=(c,s,y,x=L+4,z=9.1,b=false)=>c.para(s,x,y,z,R-x,12,b,black);
-   const heading=(c,s,y)=>{center(c,s,y,10.7,true);return y-18};
-   const bullet=(c,s,y)=>{c.rect(L+10,y+2,2.4,2.4,black);return p(c,s,y,L+18,9.1)-2};
-   const footer=c=>center(c,"Jhon M. Cuenca · cuenca-john1999.github.io",24.5,7.8,false,grey);
+   const right=(c,s,y,z=8.8)=>c.text(s,R-width(s,z),y,z,false,custom?grey:black);
+   const p=(c,s,y,x=L+4,z=bodySize,b=false)=>c.para(s,x,y,z,R-x,leading,b,black);
+   const heading=(c,s,y)=>{const z=polished?11.2:10.7;center(c,s,y,z,true);if(custom){const half=(M-width(s,z,true))/2-11;if(half>10){c.rect(L,y+3,half,.55,"0.67 0.67 0.67");c.rect(R-half,y+3,half,.55,"0.67 0.67 0.67");}}return y-(polished?21:18)};
+   const bullet=(c,s,y)=>{c.rect(L+10,y+2,2.4,2.4,black);return p(c,s,y,L+18,bodySize)-(polished?2.7:2)};
+   const footer=(c,page)=>{if(custom){c.rect(L,43,M,.5,"0.72 0.72 0.72");right(c,page+" / 2",29,8);center(c,"Jhon M. Cuenca · cuenca-john1999.github.io",29,7.8,false,grey);}else center(c,"Jhon M. Cuenca · cuenca-john1999.github.io",24.5,7.8,false,grey);};
    function entry(c,company,job,place,date,y,bullets){
      const avail=R-L-width(place,8.8)-12;
      for(const line of wrap(company.toUpperCase(),9.2,avail,true)){c.text(line,L,y,9.2,true,black);if(line===wrap(company.toUpperCase(),9.2,avail,true)[0])right(c,place,y);y-=12}
      const jobLines=wrap(job,9.2,R-L-width(date,8.8)-12,true);
      for(const [i,line] of jobLines.entries()){c.text(line,L,y,9.2,true,black);if(i===0)right(c,date,y);y-=12}
      for(const b of bullets)y=bullet(c,b,y);
-     return y-7;
+     return y-(polished?10:7);
    }
-   center(first,"Jhon M. Cuenca",792,16.5,true);
+   center(first,"Jhon M. Cuenca",792,custom?18.2:16.5,true);
    let y=773;
    for(const line of wrap(v.subtitle,10.4,M,true)){center(first,line,y,10.4,true);y-=13}
    for(const line of wrap(cvLocale.mobility+(custom?.contact?" | "+custom.contact:""),8.4,M)){center(first,line,y-1,8.4);y-=11}
    center(first,"cuenca-john1999.github.io"+(lang==="en"?"/":"/"+lang+"/"),y-2,8.4);y-=19;
-   first.rule(L+4,y,M-8);y-=19;
+   first.rule(L+4,y,M-8);y-=polished?22:19;
    y=heading(first,layout.profile,y);y=p(first,v.profile,y)-10;
    const acad=()=>{if(custom&&!v.academic.length)return;const label=custom?({es:"FORMACIÓN Y PRÁCTICAS ACADÉMICAS",en:"ACADEMIC TRAINING AND PRACTICAL WORK",de:"AUSBILDUNG UND PRAKTISCHE ÜBUNGEN"})[lang]:layout.academic;y=heading(first,label,y);for(const b of v.academic)y=bullet(first,b,y);y-=8};
    if(v.priority==="academic")acad();
@@ -107,8 +111,8 @@ export function buildDossiers(read, custom=null){
    const teaching=custom&&v.school?layout.additionalRows.find(row=>row[0]==="FORM-ED / WASHI"):null;
    if(teaching){y=heading(first,({es:"EXPERIENCIA DOCENTE",en:"TEACHING EXPERIENCE",de:"UNTERRICHTSERFAHRUNG"})[lang],y);y=entry(first,...teaching.slice(0,4),y,[teaching[4]]);}
    if(y<49)throw Error("CV page 1 overflow "+lang+" "+role+" "+y);
-   footer(first);
-   y=797;
+   footer(first,1);
+   y=797;if(polished){center(second,"Jhon M. Cuenca",813,9.2,true,grey);y=789;}
    y=heading(second,layout.additional,y);
    for(const [company,job,place,date,body] of layout.additionalRows){if(teaching&&company===teaching[0])continue;y=entry(second,company,job,place,date,y,[body]);}
    y=heading(second,layout.education,y);
@@ -135,9 +139,11 @@ export function buildDossiers(read, custom=null){
    for(const [label,items] of grouped){y=p(second,label,y,L+4,9.2,true);y=p(second,items.join(" · "),y,L+4,9)-4}
    y=p(second,cvLocale.languages,y,L+4,9)-4;
    if(y<49)throw Error("CV page 2 overflow "+lang+" "+role+" "+y);
-   footer(second);
+   footer(second,2);
    const path=role==="general"?"assets/documents/Jhon_M_Cuenca_CV_"+lang.toUpperCase()+".pdf":"assets/documents/"+lang+"/cv-"+role+".pdf";
-   out[path]=pdf([first.raw(),second.raw()]);
+   out[path]=pdf([first.raw(),second.raw()]);lastError=null;break;
+   }catch(error){lastError=error;if(!custom)throw error;}}
+   if(lastError)throw lastError;
  }
  }return out;
 }
