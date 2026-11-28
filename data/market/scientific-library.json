@@ -599,7 +599,10 @@
       "observations": "Observations",
       "interpretation": "Interpretation and limitations",
       "exhibit": "Selected experimental evidence",
-      "projectDetail": "Objective, methods and scope"
+      "projectDetail": "Objective, methods and scope",
+      "gallery": "Academic evidence gallery",
+      "galleryIntro": "Original visualisations reconstructed from academic reports and plans. Experimental data are distinguished from conceptual illustrations.",
+      "galleryLink": "View evidence gallery and experimental cases"
     },
     "es": {
       "library": "Biblioteca científica y técnica",
@@ -619,7 +622,10 @@
       "observations": "Observaciones",
       "interpretation": "Interpretación y límites",
       "exhibit": "Evidencia experimental seleccionada",
-      "projectDetail": "Objetivo, métodos y alcance"
+      "projectDetail": "Objetivo, métodos y alcance",
+      "gallery": "Galería de evidencias académicas",
+      "galleryIntro": "Visualizaciones propias reconstruidas a partir de informes y planos académicos. Se distingue el dato experimental del esquema conceptual.",
+      "galleryLink": "Ver galería y casos experimentales"
     },
     "de": {
       "library": "Wissenschaftliche und technische Bibliothek",
@@ -639,7 +645,10 @@
       "observations": "Beobachtungen",
       "interpretation": "Interpretation und Grenzen",
       "exhibit": "Ausgewählte experimentelle Daten",
-      "projectDetail": "Ziel, Methoden und Umfang"
+      "projectDetail": "Ziel, Methoden und Umfang",
+      "gallery": "Galerie der Ausbildungsnachweise",
+      "galleryIntro": "Eigene Visualisierungen aus Ausbildungsberichten und Grundrissen. Experimentelle Daten und konzeptionelle Darstellungen werden unterschieden.",
+      "galleryLink": "Galerie und experimentelle Fallbeispiele ansehen"
     }
   },
   "projects": [
@@ -885,6 +894,28 @@
         "Gas wurde gesammelt, das Volumen gemessen und die Ausbeute stöchiometrisch mit dem Erwartungswert verglichen.",
         "Die Ausbeute war unvollständig. Der Bericht erwog Produktverluste, Reinheit, Nebenreaktionen und mögliche Durchführungsfehler ohne eindeutigen Ursachennachweis."
       ]
+    },
+    {
+      "id": "bradford-calibration",
+      "skill": "bradford-protein",
+      "es": [
+        "Bradford: revisión de una calibración deficiente",
+        "Informe individual · IES Virgen de la Paloma · febrero-marzo de 2023",
+        "El informe contiene seis patrones de albúmina, absorbancias a 595 nm y una recta cuyo R² informado es 0,4936. La muestra de leche se analizó una sola vez.",
+        "Se identificaron desviaciones de varios patrones respecto a la recta. Se consideraron errores de preparación o lectura; no se confirmó su origen. No se presenta el cálculo de concentración como resultado cuantitativo fiable."
+      ],
+      "en": [
+        "Bradford: review of a poor calibration",
+        "Individual report · IES Virgen de la Paloma · February-March 2023",
+        "The report contains six albumin standards, absorbance at 595 nm and a fitted line with a reported R² of 0.4936. One milk sample was analysed.",
+        "Several standards deviated from the fitted line. Preparation or reading errors were considered but not confirmed. The calculated concentration is not presented as a reliable quantitative result."
+      ],
+      "de": [
+        "Bradford: Bewertung einer unzureichenden Kalibrierung",
+        "Einzelbericht · IES Virgen de la Paloma · Februar-März 2023",
+        "Der Bericht enthält sechs Albuminstandards, Absorption bei 595 nm und eine Regressionsgerade mit angegebenem R² von 0,4936. Eine Milchprobe wurde einmal untersucht.",
+        "Mehrere Standards wichen von der Geraden ab. Fehler bei der Vorbereitung oder Messung wurden erwogen, aber nicht bestätigt. Die berechnete Konzentration wird nicht als zuverlässiges quantitatives Ergebnis dargestellt."
+      ]
     }
   ],
   "exhibit": {
@@ -925,5 +956,102 @@
       "Wellenzahl (cm⁻¹)",
       "Transmission (%)"
     ]
+  },
+  "gallery": {
+    "bradford": {
+      "values": [
+        [
+          0,
+          0
+        ],
+        [
+          0.084,
+          0.977
+        ],
+        [
+          0.21,
+          1.092
+        ],
+        [
+          0.42,
+          1.131
+        ],
+        [
+          0.63,
+          1.198
+        ],
+        [
+          0.83,
+          1.262
+        ]
+      ],
+      "fit": [
+        1.0231,
+        0.5726
+      ],
+      "reportedR2": 0.4936,
+      "es": [
+        "Calibración Bradford (595 nm)",
+        "Concentración nominal de albúmina (mg/mL)",
+        "Absorbancia",
+        "Patrones registrados",
+        "Recta del informe",
+        "Reconstrucción a partir de la tabla del informe individual. R² informado: 0,4936. No se corrigen ni validan los valores nominales del informe."
+      ],
+      "en": [
+        "Bradford calibration (595 nm)",
+        "Nominal albumin concentration (mg/mL)",
+        "Absorbance",
+        "Recorded standards",
+        "Reported fitted line",
+        "Reconstructed from the individual report's table. Reported R²: 0.4936. The report's nominal values are not corrected or validated."
+      ],
+      "de": [
+        "Bradford-Kalibrierung (595 nm)",
+        "Nominale Albuminkonzentration (mg/mL)",
+        "Absorption",
+        "Dokumentierte Standards",
+        "Angegebene Gerade",
+        "Rekonstruktion aus der Tabelle des Einzelberichts. Angegebenes R²: 0,4936. Die nominalen Werte des Berichts werden nicht korrigiert oder validiert."
+      ]
+    },
+    "layout": {
+      "es": [
+        "Diseño conceptual de un laboratorio molecular y citogenético",
+        "Planta de acceso",
+        "Recepción y muestras",
+        "Almacén y residuos",
+        "Planta de trabajo",
+        "Preparación pre-PCR",
+        "PCR",
+        "Electroforesis post-PCR",
+        "Citogenética y cultivo",
+        "Esquema conceptual reconstruido tras revisar el plano académico. No reproduce su escala, geometría ni rutas de circulación reales."
+      ],
+      "en": [
+        "Conceptual molecular and cytogenetics laboratory layout",
+        "Access level",
+        "Reception and samples",
+        "Storage and waste",
+        "Laboratory level",
+        "Pre-PCR preparation",
+        "PCR",
+        "Post-PCR electrophoresis",
+        "Cytogenetics and culture",
+        "Conceptual reconstruction after reviewing the academic floor plan. It does not reproduce its scale, geometry or actual circulation routes."
+      ],
+      "de": [
+        "Konzeptionelle Planung eines Molekular- und Zytogenetiklabors",
+        "Zugangsebene",
+        "Annahme und Proben",
+        "Lager und Abfall",
+        "Laborebene",
+        "Prä-PCR-Vorbereitung",
+        "PCR",
+        "Post-PCR-Elektrophorese",
+        "Zytogenetik und Kultur",
+        "Konzeptionelle Rekonstruktion nach Sichtung des Ausbildungsgrundrisses. Maßstab, Geometrie und tatsächliche Verkehrswege werden nicht wiedergegeben."
+      ]
+    }
   }
 }

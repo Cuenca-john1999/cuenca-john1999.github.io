@@ -83,6 +83,8 @@ for (const [engine,launcher] of Object.entries({chromium,webkit})) {
                 assert.equal(await page.locator('#scientific-library article[data-reveal]').count(),expectedNotes+expectedFlows+expectedProjects+expectedCases);
                 assert.equal(await page.locator('#scientific-library article[id^="case-"]').count(),expectedCases);
                 assert.equal(await page.locator('#evidence-ir-peaks tbody tr').count(),library.exhibit.values.length);
+                assert.equal(await page.locator('#evidence-gallery svg[role=img]').count(),2);
+                assert.equal(await page.locator('#evidence-gallery tbody tr').count(),library.gallery.bradford.values.length);
                 assert.equal(await page.locator('#scientific-library article[id^="academic-"]').count(),expectedProjects);
                 await page.screenshot({path:`test-output/${engine}-${viewport.width}-${lang}-library.png`});
             }

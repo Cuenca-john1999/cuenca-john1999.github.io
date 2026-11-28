@@ -77,7 +77,7 @@ def hub(lang):
                 </div>
                 <div class="market-panel"><h3>{e(r["routes"])}</h3><div class="market-grid">
 {route_cards}
-                </div></div>
+                </div><a class="document-link" href="workbench/#evidence-gallery">{e(LIB["labels"][lang]["galleryLink"])}</a></div>
                 <div class="market-panel"><h3>{e(cv["cvMenu"])}</h3><p>{e(cv["cvMenuIntro"])}</p><div class="market-grid">
 {cv_cards}
                 </div></div>
@@ -102,6 +102,25 @@ def note_html(n, lang):
     title,body,scope = n[lang]
     extra = f'<a class="document-link" href="#{n["evidence"]}">{e(t["context"])}</a>' if n.get("evidence") else ""
     return f'                    <article class="market-card" data-reveal id="note-{n["id"]}"><h4>{e(title)}</h4><p>{e(body)}</p><p class="market-note"><strong>{e(t["scope"])}:</strong> {e(scope)}</p><div class="market-actions"><a class="document-link" href="{a(n["url"])}" target="_blank" rel="noopener noreferrer">{e(t["ref"])}: {e(n["source"])}</a>{extra}</div></article>'
+
+def evidence_gallery(lang):
+    t = LIB["labels"][lang]
+    b = LIB["gallery"]["bradford"]
+    title, x, y, points, fitted, caption = b[lang]
+    dots = "".join(f'<circle cx="{52 + px * 480:.2f}" cy="{280 - py * 155:.2f}" r="4.5" fill="#168ca5" stroke="currentColor" stroke-width="1"/>' for px, py in b["values"])
+    end = b["fit"][0] * .83 + b["fit"][1]
+    grid = "".join(f'<line x1="52" y1="{280 - n * 31}" x2="484" y2="{280 - n * 31}" stroke="currentColor" opacity=".15"/><text x="45" y="{284 - n * 31}" text-anchor="end">{n/5:.1f}</text>' for n in range(8))
+    ticks = "".join(f'<text x="{52 + n * 48}" y="298" text-anchor="middle">{n/10:.1f}</text>' for n in range(10))
+    table = "".join(f"<tr><td>{px:.3f}</td><td>{py:.3f}</td></tr>" for px, py in b["values"])
+    plot = f'<svg viewBox="0 0 510 340" width="100%" role="img" aria-labelledby="bradford-plot-title"><title id="bradford-plot-title">{e(title)} — R² {b["reportedR2"]}</title><g font-size="10" fill="currentColor">{grid}{ticks}<line x1="52" y1="32" x2="52" y2="280" stroke="currentColor"/><line x1="52" y1="280" x2="484" y2="280" stroke="currentColor"/><text x="268" y="324" text-anchor="middle">{e(x)}</text><text transform="translate(12 155) rotate(-90)" text-anchor="middle">{e(y)}</text><line x1="52" y1="{280 - b["fit"][1] * 155:.2f}" x2="{52 + .83 * 480:.2f}" y2="{280 - end * 155:.2f}" stroke="#b98136" stroke-width="2" stroke-dasharray="5 4"/>{dots}<circle cx="62" cy="17" r="4" fill="#168ca5"/><text x="73" y="20">{e(points)}</text><line x1="270" y1="17" x2="292" y2="17" stroke="#b98136" stroke-width="2" stroke-dasharray="5 4"/><text x="299" y="20">{e(fitted)}</text></g></svg>'
+    p = LIB["gallery"]["layout"][lang]
+    blocks = [(24,54,224,48,p[2]),(262,54,224,48,p[3]),(24,164,148,48,p[5]),(181,164,148,48,p[6]),(338,164,148,48,p[7]),(24,232,462,48,p[8])]
+    boxes = "".join(f'<rect x="{bx}" y="{by}" width="{bw}" height="{bh}" rx="6" fill="#168ca5" fill-opacity=".12" stroke="currentColor" stroke-opacity=".45"/><text x="{bx + bw/2:g}" y="{by + bh/2 + 4:g}" text-anchor="middle">{e(label)}</text>' for bx,by,bw,bh,label in blocks)
+    plan = f'<svg viewBox="0 0 510 310" width="100%" role="img" aria-labelledby="layout-plot-title"><title id="layout-plot-title">{e(p[0])}</title><g fill="currentColor" font-size="11"><rect x="12" y="12" width="486" height="110" rx="9" fill="none" stroke="currentColor" opacity=".55"/><rect x="12" y="134" width="486" height="164" rx="9" fill="none" stroke="currentColor" opacity=".55"/><text x="24" y="34" font-weight="bold">{e(p[1])}</text><text x="24" y="151" font-weight="bold">{e(p[4])}</text>{boxes}</g></svg>'
+    return f'''<div class="market-panel" id="evidence-gallery"><h3>{e(t["gallery"])}</h3><p>{e(t["galleryIntro"])}</p><div class="market-grid">
+                    <article class="market-card"><h4>{e(title)}</h4>{plot}<p class="market-note">{e(caption)}</p><details><summary>{e(points)}</summary><table><thead><tr><th scope="col">{e(x)}</th><th scope="col">{e(y)}</th></tr></thead><tbody>{table}</tbody></table></details></article>
+                    <article class="market-card"><h4>{e(p[0])}</h4>{plan}<p class="market-note">{e(p[9])}</p></article>
+                </div></div>'''
 
 def library(lang):
     t = LIB["labels"][lang]
@@ -136,6 +155,7 @@ def library(lang):
                 </div><h3 id="experimental-cases">{e(t["cases"])}</h3><div class="market-grid">
 {cases}
                 </div><h3 id="experimental-evidence">{e(t["exhibit"])}</h3>{evidence}
+                {evidence_gallery(lang)}
             </section>
 '''
 
