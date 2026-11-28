@@ -6,6 +6,7 @@
     const search = section.querySelector('[data-market-search]');
     const area = section.querySelector('[data-market-area]');
     const level = section.querySelector('[data-market-level]');
+    const topic = section.querySelector('[data-market-topic]');
     const reset = section.querySelector('[data-market-reset]');
     const count = section.querySelector('[data-market-count]');
     const empty = section.querySelector('[data-market-empty]');
@@ -17,6 +18,7 @@
         for (const {node,text} of entries) {
             const match = (!area.value || area.value === node.dataset.area) &&
                 (!level.value || level.value === node.dataset.level) &&
+                (!topic.value || topic.value === node.dataset.topic) &&
                 words.every(word => text.includes(word));
             node.hidden = !match;
             if (match) visible++;
@@ -27,7 +29,8 @@
     search.addEventListener('input',render);
     area.addEventListener('change',render);
     level.addEventListener('change',render);
-    reset.addEventListener('click',() => {search.value=''; area.value=''; level.value=''; render(); search.focus();});
+    topic.addEventListener('change',render);
+    reset.addEventListener('click',() => {search.value=''; area.value=''; level.value=''; topic.value=''; render(); search.focus();});
     filters.hidden=false;
     render();
 })();

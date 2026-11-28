@@ -229,6 +229,94 @@
         "Chitosanbasierte Materialien werden für biomedizinische Anwendungen untersucht. Eigenschaften hängen von Formulierung und Bedingungen ab; Umweltadsorption belegt keine biomedizinische Wirksamkeit.",
         "Bezug zu meinem Konzeptvorschlag zu Chitosan, der einer experimentellen Validierung bedarf."
       ]
+    },
+    {
+      "id": "environmental-monitoring",
+      "kind": "technical",
+      "skill": "microbial-environmental-sampling",
+      "source": "CDC · Environmental sampling",
+      "url": "https://www.cdc.gov/infection-control/hcp/environmental-control/environmental-sampling.html",
+      "es": [
+        "Muestreo microbiológico ambiental",
+        "Las placas de sedimentación recogen partículas que se depositan por gravedad; las placas de contacto y los hisopos permiten muestrear superficies. Los resultados dependen del método y de las condiciones de recuperación.",
+        "Realicé estas técnicas en prácticas académicas de control ambiental y de manipuladores."
+      ],
+      "en": [
+        "Environmental microbiological sampling",
+        "Settle plates collect particles deposited by gravity; contact plates and swabs support surface sampling. Results depend on the sampling method and recovery conditions.",
+        "I performed these methods during academic environmental and personnel monitoring exercises."
+      ],
+      "de": [
+        "Mikrobiologische Umgebungsprobenahme",
+        "Sedimentationsplatten erfassen durch Schwerkraft abgesetzte Partikel; Abklatschplatten und Tupfer dienen der Oberflächenprobenahme. Ergebnisse hängen von Methode und Wiederfindung ab.",
+        "Diese Methoden habe ich in Ausbildungsübungen zur Umgebungs- und Personalkontrolle eingesetzt."
+      ]
+    },
+    {
+      "id": "colony-counts",
+      "kind": "technical",
+      "skill": "microbial-enumeration",
+      "source": "FDA · Aerobic plate count",
+      "url": "https://www.fda.gov/food/laboratory-methods-food/bam-chapter-3-aerobic-plate-count",
+      "es": [
+        "Recuento de microorganismos viables",
+        "Las UFC estiman microorganismos cultivables bajo las condiciones del método. La dilución, el volumen analizado y la selección de placas influyen en el cálculo.",
+        "Prácticas académicas con muestras de agua, suelo y alimentos."
+      ],
+      "en": [
+        "Viable microbial counts",
+        "CFU estimate organisms able to grow under the conditions of the method. Dilution, analysed volume and plate selection affect the calculation.",
+        "Academic exercises with water, soil and food samples."
+      ],
+      "de": [
+        "Bestimmung kultivierbarer Mikroorganismen",
+        "KBE schätzen die unter den Methodenbedingungen kultivierbaren Mikroorganismen. Verdünnung, Probenvolumen und Plattenauswahl beeinflussen die Berechnung.",
+        "Ausbildungsübungen mit Wasser-, Boden- und Lebensmittelproben."
+      ]
+    },
+    {
+      "id": "measurement-quality",
+      "kind": "technical",
+      "skill": "thermometer-calibration",
+      "source": "NIST · Metrological traceability",
+      "url": "https://www.nist.gov/metrology/metrological-traceability",
+      "es": [
+        "Metrología y trazabilidad",
+        "La trazabilidad metrológica vincula un resultado a una referencia mediante una cadena documentada de calibraciones. Las comprobaciones de aula permiten aprender el método, sus desviaciones y limitaciones.",
+        "Realicé ejercicios de calibración de termómetros y medición de pH, con cálculos y registros."
+      ],
+      "en": [
+        "Metrology and traceability",
+        "Metrological traceability connects a measurement result to a reference through a documented calibration chain. Classroom checks teach the method, deviations and limitations.",
+        "I completed thermometer calibration and pH measurement exercises with calculations and records."
+      ],
+      "de": [
+        "Messtechnik und Rückführbarkeit",
+        "Metrologische Rückführbarkeit verbindet ein Messergebnis über eine dokumentierte Kalibrierkette mit einer Referenz. Ausbildungsprüfungen vermitteln Methode, Abweichungen und Grenzen.",
+        "Ich führte Übungen zur Thermometerkalibrierung und pH-Messung mit Berechnungen und Aufzeichnungen durch."
+      ]
+    },
+    {
+      "id": "agarose-electrophoresis",
+      "kind": "technical",
+      "skill": "electrophoresis",
+      "source": "NHGRI · Electrophoresis",
+      "url": "https://www.genome.gov/genetics-glossary/Electrophoresis",
+      "es": [
+        "Electroforesis en agarosa",
+        "Los fragmentos de ADN se separan por migración en el gel. Un marcador permite estimar tamaños; la ausencia de bandas o el arrastre requieren revisar la preparación y la calidad de la muestra.",
+        "Práctica grupal con ADN genómico y productos de PCR, además de mi estancia en La Princesa."
+      ],
+      "en": [
+        "Agarose gel electrophoresis",
+        "DNA fragments separate by migration through a gel. A size marker supports estimation of fragment lengths; absent bands or smearing call for review of sample quality and preparation.",
+        "Group exercise using genomic DNA and PCR products, in addition to my placement at La Princesa."
+      ],
+      "de": [
+        "Agarosegelelektrophorese",
+        "DNA-Fragmente werden bei der Wanderung durch das Gel getrennt. Ein Größenmarker erlaubt die Abschätzung der Fragmentlänge; fehlende Banden oder Schmieren erfordern die Prüfung von Probe und Vorbereitung.",
+        "Gruppenübung mit genomischer DNA und PCR-Produkten sowie Praktikum bei La Princesa."
+      ]
     }
   ],
   "flows": [
@@ -359,6 +447,102 @@
         ],
         "Methode und Labor-SOP bestimmen den tatsächlichen Ablauf."
       ]
+    },
+    {
+      "es": [
+        "Control microbiológico ambiental",
+        [
+          "Selección de método de muestreo",
+          "Recogida de muestra",
+          "Incubación y lectura",
+          "Recuento e interpretación"
+        ],
+        "Esquema de prácticas académicas, no un procedimiento de sala limpia."
+      ],
+      "en": [
+        "Environmental microbiological monitoring",
+        [
+          "Sampling method selection",
+          "Sample collection",
+          "Incubation and reading",
+          "Enumeration and interpretation"
+        ],
+        "Academic workflow illustration, not a cleanroom procedure."
+      ],
+      "de": [
+        "Mikrobiologische Umgebungskontrolle",
+        [
+          "Auswahl der Probenahme",
+          "Probenahme",
+          "Inkubation und Ablesung",
+          "Zählung und Auswertung"
+        ],
+        "Illustration einer Ausbildungsübung, keine Reinraum-SOP."
+      ]
+    },
+    {
+      "es": [
+        "Calidad de la medición",
+        [
+          "Preparación del equipo",
+          "Comprobación o calibración",
+          "Medición y registro",
+          "Revisión de desviaciones"
+        ],
+        "Esquema formativo de comprobaciones y documentación."
+      ],
+      "en": [
+        "Measurement quality",
+        [
+          "Equipment preparation",
+          "Check or calibration",
+          "Measurement and recording",
+          "Review of deviations"
+        ],
+        "Training illustration of checks and documentation."
+      ],
+      "de": [
+        "Messqualität",
+        [
+          "Gerätevorbereitung",
+          "Prüfung oder Kalibrierung",
+          "Messung und Aufzeichnung",
+          "Bewertung von Abweichungen"
+        ],
+        "Ausbildungsschema für Prüfungen und Dokumentation."
+      ]
+    },
+    {
+      "es": [
+        "Distribución conceptual de áreas PCR",
+        [
+          "Recepción y preparación",
+          "Zona pre-PCR",
+          "Amplificación",
+          "Zona post-PCR y lectura"
+        ],
+        "Flujo conceptual del proyecto de diseño académico, con separación de áreas."
+      ],
+      "en": [
+        "Conceptual PCR laboratory layout",
+        [
+          "Reception and preparation",
+          "Pre-PCR area",
+          "Amplification",
+          "Post-PCR area and readout"
+        ],
+        "Conceptual workflow from the academic design project, with separated areas."
+      ],
+      "de": [
+        "Konzeptionelle PCR-Laborplanung",
+        [
+          "Annahme und Vorbereitung",
+          "Prä-PCR-Bereich",
+          "Amplifikation",
+          "Post-PCR-Bereich und Auswertung"
+        ],
+        "Konzeptioneller Ablauf aus dem Ausbildungsprojekt mit getrennten Bereichen."
+      ]
     }
   ],
   "labels": {
@@ -373,8 +557,9 @@
       "ref": "Further reading",
       "context": "Evidence / context",
       "note": "Technical note",
-      "date": "Prepared 25 November 2026",
-      "nav": "Library"
+      "date": "Updated 28 November 2026",
+      "nav": "Library",
+      "projects": "Academic projects and practical work"
     },
     "es": {
       "library": "Biblioteca científica y técnica",
@@ -387,8 +572,9 @@
       "ref": "Lectura de referencia",
       "context": "Evidencia / contexto",
       "note": "Nota técnica",
-      "date": "Preparado el 25 de noviembre de 2026",
-      "nav": "Biblioteca"
+      "date": "Actualizado el 28 de noviembre de 2026",
+      "nav": "Biblioteca",
+      "projects": "Proyectos y prácticas académicas"
     },
     "de": {
       "library": "Wissenschaftliche und technische Bibliothek",
@@ -401,8 +587,101 @@
       "ref": "Weiterführende Literatur",
       "context": "Nachweis / Kontext",
       "note": "Technische Notiz",
-      "date": "Erstellt am 25. November 2026",
-      "nav": "Bibliothek"
+      "date": "Aktualisiert am 28. November 2026",
+      "nav": "Bibliothek",
+      "projects": "Ausbildungsprojekte und praktische Arbeiten"
     }
-  }
+  },
+  "projects": [
+    {
+      "id": "laboratory-layout",
+      "es": [
+        "Diseño de laboratorio molecular y citogenético",
+        "Proyecto académico conceptual · CEAC FP Oficial",
+        "Planos y memoria descriptiva de áreas de recepción, almacenamiento, preparación pre-PCR, amplificación, post-PCR, citogenética y gestión de residuos. Diseño de distribución de equipos y flujos para reducir cruces de trabajo."
+      ],
+      "en": [
+        "Molecular and cytogenetics laboratory design",
+        "Conceptual academic project · CEAC FP Oficial",
+        "Floor plans and descriptive documentation for reception, storage, pre-PCR preparation, amplification, post-PCR, cytogenetics and waste management. Layout of equipment and workflows to limit crossover."
+      ],
+      "de": [
+        "Planung eines molekularbiologischen und zytogenetischen Labors",
+        "Konzeptionelles Ausbildungsprojekt · CEAC FP Oficial",
+        "Grundrisse und Beschreibung von Annahme, Lagerung, Prä-PCR, Amplifikation, Post-PCR, Zytogenetik und Abfallentsorgung. Planung der Geräteanordnung und Arbeitsabläufe zur Verringerung von Überschneidungen."
+      ]
+    },
+    {
+      "id": "materials-testing",
+      "es": [
+        "Ensayos de materiales",
+        "Trabajo experimental grupal · IES Virgen de la Paloma",
+        "Ensayos de dureza, tracción, impacto Charpy y metalografía. Preparación de probetas, registro y tratamiento de datos, interpretación de resultados y discusión de incidencias."
+      ],
+      "en": [
+        "Materials testing",
+        "Group experimental work · IES Virgen de la Paloma",
+        "Hardness, tensile and Charpy impact tests and metallography. Specimen preparation, data recording and processing, interpretation and discussion of experimental issues."
+      ],
+      "de": [
+        "Werkstoffprüfung",
+        "Experimentelle Gruppenarbeit · IES Virgen de la Paloma",
+        "Härte-, Zug- und Charpy-Kerbschlagversuche sowie Metallografie. Probenvorbereitung, Datenerfassung und Auswertung sowie Diskussion von Versuchsschwierigkeiten."
+      ]
+    },
+    {
+      "id": "academic-microbiology",
+      "es": [
+        "Microbiología aplicada",
+        "Serie de prácticas académicas · IES Virgen de la Paloma",
+        "Control ambiental, preparación de medios, aislamiento, tinciones, recuento y análisis de agua, suelo y alimentos. Incluye interpretación de resultados y limitaciones de los ensayos."
+      ],
+      "en": [
+        "Applied microbiology",
+        "Academic practical series · IES Virgen de la Paloma",
+        "Environmental monitoring, media preparation, isolation, staining, enumeration and analysis of water, soil and food. Includes interpretation of results and limitations."
+      ],
+      "de": [
+        "Angewandte Mikrobiologie",
+        "Praktische Ausbildungsreihe · IES Virgen de la Paloma",
+        "Umgebungskontrolle, Nährmedienherstellung, Isolierung, Färbungen, Keimzählung und Untersuchung von Wasser, Boden und Lebensmitteln. Einschließlich Ergebnisauswertung und Methodengrenzen."
+      ]
+    },
+    {
+      "id": "academic-metrology",
+      "es": [
+        "Metrología y mantenimiento instrumental",
+        "Prácticas y documentación técnica · IES Virgen de la Paloma y CEAC FP Oficial",
+        "Calibración de termómetros, pH, volumetría, pesaje y PNT de equipos. Elaboración de registros de mantenimiento e incidencias como parte del aprendizaje de la organización del laboratorio."
+      ],
+      "en": [
+        "Metrology and instrument maintenance",
+        "Practical exercises and documentation · IES Virgen de la Paloma and CEAC FP Oficial",
+        "Thermometer calibration, pH, volumetric measurements, weighing and equipment SOPs. Maintenance and incident records as part of laboratory organisation training."
+      ],
+      "de": [
+        "Messtechnik und Gerätewartung",
+        "Ausbildungsübungen und Dokumentation · IES Virgen de la Paloma und CEAC FP Oficial",
+        "Thermometerkalibrierung, pH, Volumenmessung, Wägen und Geräte-SOPs. Wartungs- und Störungsprotokolle als Teil der Labororganisation."
+      ]
+    },
+    {
+      "id": "gut-microbiota",
+      "es": [
+        "Microbiota intestinal",
+        "Trabajo académico bibliográfico",
+        "Revisión de literatura sobre la microbiota intestinal, disbiosis y métodos de estudio de las comunidades microbianas."
+      ],
+      "en": [
+        "Gut microbiota",
+        "Academic literature review",
+        "Literature review on the gut microbiota, dysbiosis and methods for studying microbial communities."
+      ],
+      "de": [
+        "Darmmikrobiota",
+        "Literaturarbeit in der Ausbildung",
+        "Literaturrecherche zu Darmmikrobiota, Dysbiose und Methoden zur Untersuchung mikrobieller Gemeinschaften."
+      ]
+    }
+  ]
 }

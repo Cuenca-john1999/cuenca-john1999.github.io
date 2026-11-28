@@ -9,6 +9,7 @@ const library = JSON.parse(await readFile(new URL('../data/market/scientific-lib
 const expectedSkills = catalogue.skills.length;
 const expectedNotes = library.notes.length;
 const expectedFlows = library.flows.length;
+const expectedProjects = library.projects.length;
 await mkdir('test-output', {recursive:true});
 for (const [engine,launcher] of Object.entries({chromium,webkit})) {
     const browser = await launcher.launch({headless:true});
@@ -49,6 +50,9 @@ for (const [engine,launcher] of Object.entries({chromium,webkit})) {
                 const controlHeights=await page.locator('[data-market-filters] input,[data-market-filters] select,[data-market-filters] button').evaluateAll(nodes=>nodes.map(n=>n.getBoundingClientRect().height));
                 assert.ok(Math.max(...controlHeights)-Math.min(...controlHeights)<2,'Filter controls must have a consistent height');
                 assert.equal(await page.locator('[data-market-skill]').count(),expectedSkills);
+                await page.locator('[data-market-topic]').selectOption('metrology');
+                assert.equal(await page.locator('[data-market-skill]:not([hidden])').count(),catalogue.skills.filter(s=>s.topic==='metrology').length);
+                await page.locator('[data-market-reset]').click();
                 await search.fill('PCR');
                 const count=await page.locator('[data-market-skill]:not([hidden])').count();
                 assert.ok(count>0 && count<expectedSkills,'Search must filter skills');
@@ -71,7 +75,8 @@ for (const [engine,launcher] of Object.entries({chromium,webkit})) {
                 assert.equal(await page.locator('html').getAttribute('lang'),lang);
                 await page.locator('#scientific-library-title').scrollIntoViewIfNeeded();
                 await page.waitForFunction(()=>document.getElementById('scientific-library-title').classList.contains('is-visible'));
-                assert.equal(await page.locator('#scientific-library article[data-reveal]').count(),expectedNotes+expectedFlows);
+                assert.equal(await page.locator('#scientific-library article[data-reveal]').count(),expectedNotes+expectedFlows+expectedProjects);
+                assert.equal(await page.locator('#scientific-library article[id^="academic-"]').count(),expectedProjects);
                 await page.screenshot({path:`test-output/${engine}-${viewport.width}-${lang}-library.png`});
             }
             // Verify real navigation through the country dropdown.

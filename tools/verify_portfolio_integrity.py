@@ -613,7 +613,7 @@ def check_germany_market() -> None:
 def check_shared_evidence() -> None:
     data = json.loads((ROOT / "data/market/common-evidence.json").read_text(encoding="utf-8"))
     keys = {item["id"] for item in data["skills"]}
-    if not keys or len(data["skills"]) != len(keys):
+    if not keys or len(data["skills"]) != len(keys) or any(item.get("topic") not in data["topics"] for item in data["skills"]):
         fail("shared evidence IDs are not unique and complete")
     for lang, path in (("en","index.html"),("es","es/index.html"),("de","de/index.html")):
         source = (ROOT / path).read_text(encoding="utf-8")

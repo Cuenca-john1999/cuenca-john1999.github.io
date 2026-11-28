@@ -15,7 +15,7 @@ def render_rows(language):
         note = next((n for n in LIB["notes"] if n.get("skill") == item["id"]), None)
         note_label = LIB["labels"][language]["note"]
         extra = f' · <a class="document-link" href="workbench/#note-{note["id"]}">{note_label}</a>' if note else ""
-        output.append(f'''                    <article class="market-skill" data-market-skill data-area="{a(v["area"])}" data-level="{a(v["level"])}" data-skill-key="{item["id"]}">
+        output.append(f'''                    <article class="market-skill" data-market-skill data-area="{a(v["area"])}" data-level="{a(v["level"])}" data-topic="{a(item["topic"])}" data-skill-key="{item["id"]}">
                         <div><h3>{e(v["name"])}</h3><p>{e(v["context"])}</p></div>
                         <div><p class="market-evidence">{e(v["level"])}</p><p>{e(v["detail"])}</p><a class="document-link" href="{v["link"]}">{cta}</a>{extra}</div>
                     </article>''')
@@ -25,7 +25,8 @@ def render_partial(language):
     source = (ROOT / "data/market" / f"{name}-sections.html").read_text(encoding="utf-8")
     if source.count("<!-- COMMON-SKILLS -->") != 1:
         raise SystemExit("Missing or duplicated shared catalogue marker")
-    return source.replace("<!-- COMMON-SKILLS -->", render_rows(language))
+    topics = "".join(f'<option value="{html.escape(key)}">{html.escape(labels[language], quote=False)}</option>' for key, labels in DATA["topics"].items())
+    return source.replace("<!-- COMMON-TOPICS -->", topics).replace("<!-- COMMON-SKILLS -->", render_rows(language))
 
 def marked(key, text):
     return f"<!-- {key}:BEGIN -->\n{text}<!-- {key}:END -->\n"
@@ -93,6 +94,7 @@ def library(lang):
         steps_html = "".join(f"<li>{e(s)}</li>" for s in steps)
         flows.append(f'                    <article class="market-card" data-reveal><h4>{e(title)}</h4><ol class="science-flow">{steps_html}</ol><p class="market-note">{e(limit)}</p></article>')
     flow_html = "\n".join(flows)
+    projects = "\n".join(f'                    <article class="market-card" data-reveal id="academic-{item["id"]}"><h4>{e(item[lang][0])}</h4><p class="market-evidence">{e(item[lang][1])}</p><p>{e(item[lang][2])}</p></article>' for item in LIB["projects"])
     return f'''            <section class="workbench-section market-section" id="scientific-library" aria-labelledby="scientific-library-title">
                 <div class="section-kicker" data-reveal>{e(t["library"])}</div><h2 id="scientific-library-title" data-reveal>{e(t["library"])}</h2><p class="market-intro" data-reveal>{e(t["intro"])}</p><p class="market-note">{e(t["date"])}</p>
                 <h3>{e(t["technical"])}</h3><div class="market-grid">
@@ -101,6 +103,8 @@ def library(lang):
 {reading}
                 </div><h3>{e(t["workflow"])}</h3><p class="market-intro">{e(t["flowintro"])}</p><div class="market-grid">
 {flow_html}
+                </div><h3 id="academic-projects">{e(t["projects"])}</h3><div class="market-grid">
+{projects}
                 </div>
             </section>
 '''

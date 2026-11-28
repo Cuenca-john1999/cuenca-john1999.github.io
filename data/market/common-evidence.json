@@ -12,7 +12,7 @@
           "level": "Formación reglada",
           "name": "Hematología",
           "context": "Diagnóstico clínico · CEAC FP Oficial",
-          "detail": "Módulo de técnicas de análisis hematológico.",
+          "detail": "Formación en índices eritrocitarios, morfología celular, hemoglobina, alteraciones de la serie roja y fundamentos de hematología diagnóstica.",
           "link": "#education",
           "order": 0
         },
@@ -21,7 +21,7 @@
           "level": "Berufsausbildung",
           "name": "Hämatologie",
           "context": "Klinische Diagnostik · CEAC FP Oficial",
-          "detail": "Ausbildungsmodul hämatologische Analyseverfahren.",
+          "detail": "Ausbildung in Erythrozytenindizes, Zellmorphologie, Hämoglobin, Veränderungen der roten Reihe und diagnostischer Hämatologie.",
           "link": "#education",
           "order": 37
         },
@@ -30,11 +30,12 @@
           "level": "Vocational qualification",
           "name": "Haematology",
           "context": "Clinical diagnostics · CEAC FP Oficial",
-          "detail": "Vocational module in haematological analysis.",
+          "detail": "Training in red-cell indices, cell morphology, haemoglobin, erythrocyte disorders and diagnostic haematology.",
           "link": "#education",
           "order": 0
         }
-      }
+      },
+      "topic": "clinical"
     },
     {
       "id": "biochemistry",
@@ -47,7 +48,7 @@
           "level": "Formación reglada",
           "name": "Análisis bioquímico",
           "context": "Diagnóstico clínico · CEAC FP Oficial",
-          "detail": "Módulo de análisis bioquímico.",
+          "detail": "Formación en parámetros bioquímicos, equilibrio hidroelectrolítico y ácido-base, electrolitos y métodos de determinación enzimática.",
           "link": "#education",
           "order": 1
         },
@@ -56,7 +57,7 @@
           "level": "Berufsausbildung",
           "name": "Biochemische Analytik",
           "context": "Klinische Diagnostik · CEAC FP Oficial",
-          "detail": "Ausbildungsmodul biochemische Analytik.",
+          "detail": "Ausbildung in biochemischen Parametern, Wasser- und Elektrolythaushalt, Säure-Basen-Haushalt und enzymatischen Bestimmungsmethoden.",
           "link": "#education",
           "order": 38
         },
@@ -65,11 +66,12 @@
           "level": "Vocational qualification",
           "name": "Biochemical analysis",
           "context": "Clinical diagnostics · CEAC FP Oficial",
-          "detail": "Vocational module in biochemical analysis.",
+          "detail": "Training in biochemical parameters, fluid and electrolyte balance, acid-base balance, electrolytes and enzymatic measurement methods.",
           "link": "#education",
           "order": 1
         }
-      }
+      },
+      "topic": "clinical"
     },
     {
       "id": "clinical-microbiology",
@@ -104,7 +106,8 @@
           "link": "#education",
           "order": 2
         }
-      }
+      },
+      "topic": "micro"
     },
     {
       "id": "immunodiagnostics",
@@ -117,7 +120,7 @@
           "level": "Formación reglada",
           "name": "Inmunodiagnóstico",
           "context": "Diagnóstico clínico · CEAC FP Oficial",
-          "detail": "Módulo de técnicas de inmunodiagnóstico.",
+          "detail": "Formación en inmunoensayos, inmunodifusión, principios de citometría de flujo, FACS e inmunofenotipado.",
           "link": "#education",
           "order": 3
         },
@@ -126,7 +129,7 @@
           "level": "Berufsausbildung",
           "name": "Immunodiagnostik",
           "context": "Klinische Diagnostik · CEAC FP Oficial",
-          "detail": "Ausbildungsmodul immunodiagnostische Techniken.",
+          "detail": "Ausbildung in Immunassays, Immundiffusion, Grundlagen der Durchflusszytometrie, FACS und Immunphänotypisierung.",
           "link": "#education",
           "order": 40
         },
@@ -135,11 +138,12 @@
           "level": "Vocational qualification",
           "name": "Immunodiagnostics",
           "context": "Clinical diagnostics · CEAC FP Oficial",
-          "detail": "Vocational module in immunodiagnostic methods.",
+          "detail": "Training in immunoassays, immunodiffusion, principles of flow cytometry, FACS and immunophenotyping.",
           "link": "#education",
           "order": 3
         }
-      }
+      },
+      "topic": "molecular"
     },
     {
       "id": "sample-management",
@@ -174,7 +178,8 @@
           "link": "#education",
           "order": 4
         }
-      }
+      },
+      "topic": "clinical"
     },
     {
       "id": "cytogenetics",
@@ -209,7 +214,8 @@
           "link": "#education",
           "order": 5
         }
-      }
+      },
+      "topic": "molecular"
     },
     {
       "id": "rna-extraction",
@@ -244,7 +250,8 @@
           "link": "workbench/#entry-laprincesa",
           "order": 6
         }
-      }
+      },
+      "topic": "molecular"
     },
     {
       "id": "pcr",
@@ -279,7 +286,8 @@
           "link": "workbench/#entry-laprincesa",
           "order": 7
         }
-      }
+      },
+      "topic": "molecular"
     },
     {
       "id": "electrophoresis",
@@ -292,7 +300,7 @@
           "level": "Prácticas de laboratorio",
           "name": "Electroforesis",
           "context": "Biología molecular · La Princesa",
-          "detail": "Separación de ácidos nucleicos.",
+          "detail": "Separación de ácidos nucleicos en La Princesa; práctica grupal en CEAC con gel de agarosa, marcador de tamaño, ADN genómico y productos de PCR, visualización e interpretación de bandas.",
           "link": "workbench/#entry-laprincesa",
           "order": 8
         },
@@ -301,7 +309,7 @@
           "level": "Laborpraktikum",
           "name": "Elektrophorese",
           "context": "Molekularbiologie · La Princesa",
-          "detail": "Trennung von Nukleinsäuren.",
+          "detail": "Nukleinsäuretrennung bei La Princesa; Gruppenübung bei CEAC mit Agarosegel, Größenmarker, genomischer DNA und PCR-Produkten sowie Bandauswertung.",
           "link": "workbench/#entry-laprincesa",
           "order": 2
         },
@@ -310,11 +318,12 @@
           "level": "Laboratory placement",
           "name": "Electrophoresis",
           "context": "Molecular biology · La Princesa",
-          "detail": "Nucleic acid separation.",
+          "detail": "Nucleic acid separation at La Princesa; group agarose-gel exercise at CEAC using a size marker, genomic DNA and PCR products, with band visualisation and interpretation.",
           "link": "workbench/#entry-laprincesa",
           "order": 8
         }
-      }
+      },
+      "topic": "molecular"
     },
     {
       "id": "genotyping",
@@ -349,7 +358,8 @@
           "link": "workbench/#entry-laprincesa",
           "order": 9
         }
-      }
+      },
+      "topic": "molecular"
     },
     {
       "id": "western-blot",
@@ -384,7 +394,8 @@
           "link": "workbench/#entry-laprincesa",
           "order": 10
         }
-      }
+      },
+      "topic": "molecular"
     },
     {
       "id": "hacat",
@@ -419,7 +430,8 @@
           "link": "workbench/#entry-laprincesa",
           "order": 11
         }
-      }
+      },
+      "topic": "molecular"
     },
     {
       "id": "cytokine-culture",
@@ -454,7 +466,8 @@
           "link": "workbench/#entry-laprincesa",
           "order": 12
         }
-      }
+      },
+      "topic": "molecular"
     },
     {
       "id": "human-samples",
@@ -489,7 +502,8 @@
           "link": "workbench/#entry-laprincesa",
           "order": 13
         }
-      }
+      },
+      "topic": "molecular"
     },
     {
       "id": "cd4-cd14",
@@ -502,7 +516,7 @@
           "level": "Prácticas de laboratorio",
           "name": "Aislamiento CD4/CD14",
           "context": "Cultivo y muestras · La Princesa",
-          "detail": "Trabajo con células inmunitarias.",
+          "detail": "Preparación de PBMC a partir de muestras de sangre y aislamiento de poblaciones CD4/CD14 durante las prácticas.",
           "link": "workbench/#entry-laprincesa",
           "order": 14
         },
@@ -511,7 +525,7 @@
           "level": "Laborpraktikum",
           "name": "CD4/CD14-Isolierung",
           "context": "Zellkultur und Proben · La Princesa",
-          "detail": "Arbeit mit Immunzellen.",
+          "detail": "PBMC-Aufarbeitung aus Blutproben und Isolierung von CD4/CD14-Populationen während des Praktikums.",
           "link": "workbench/#entry-laprincesa",
           "order": 8
         },
@@ -520,11 +534,12 @@
           "level": "Laboratory placement",
           "name": "CD4/CD14 isolation",
           "context": "Cell culture and samples · La Princesa",
-          "detail": "Work with immune cells.",
+          "detail": "PBMC preparation from blood samples and isolation of CD4/CD14 populations during the placement.",
           "link": "workbench/#entry-laprincesa",
           "order": 14
         }
-      }
+      },
+      "topic": "molecular"
     },
     {
       "id": "animal-samples",
@@ -559,7 +574,8 @@
           "link": "workbench/#entry-laprincesa",
           "order": 15
         }
-      }
+      },
+      "topic": "molecular"
     },
     {
       "id": "elisa",
@@ -594,7 +610,8 @@
           "link": "workbench/#entry-laprincesa",
           "order": 16
         }
-      }
+      },
+      "topic": "molecular"
     },
     {
       "id": "ihc",
@@ -629,7 +646,8 @@
           "link": "workbench/#entry-laprincesa",
           "order": 17
         }
-      }
+      },
+      "topic": "molecular"
     },
     {
       "id": "if",
@@ -664,7 +682,8 @@
           "link": "workbench/#entry-laprincesa",
           "order": 18
         }
-      }
+      },
+      "topic": "molecular"
     },
     {
       "id": "animal-functions",
@@ -699,7 +718,8 @@
           "link": "#education",
           "order": 19
         }
-      }
+      },
+      "topic": "training"
     },
     {
       "id": "animal-procedures",
@@ -734,7 +754,8 @@
           "link": "#education",
           "order": 20
         }
-      }
+      },
+      "topic": "training"
     },
     {
       "id": "moisture-ash",
@@ -769,7 +790,8 @@
           "link": "workbench/#entry-celignis",
           "order": 21
         }
-      }
+      },
+      "topic": "biomass"
     },
     {
       "id": "volatile-matter",
@@ -804,7 +826,8 @@
           "link": "workbench/#entry-celignis",
           "order": 22
         }
-      }
+      },
+      "topic": "biomass"
     },
     {
       "id": "fixed-carbon",
@@ -839,7 +862,8 @@
           "link": "workbench/#entry-celignis",
           "order": 23
         }
-      }
+      },
+      "topic": "biomass"
     },
     {
       "id": "tga",
@@ -874,7 +898,8 @@
           "link": "workbench/#entry-celignis",
           "order": 24
         }
-      }
+      },
+      "topic": "biomass"
     },
     {
       "id": "chnos",
@@ -887,7 +912,7 @@
           "level": "Prácticas de laboratorio",
           "name": "CHNOS",
           "context": "Química analítica · Celignis",
-          "detail": "Análisis elemental de biomasa con Elementar Vario MACRO Cube; preparación de muestras y cálculo de oxígeno por diferencia.",
+          "detail": "Análisis elemental de biomasa con el equipo Elementar Vario MACRO Cube.",
           "link": "workbench/#entry-celignis",
           "order": 25
         },
@@ -896,7 +921,7 @@
           "level": "Laborpraktikum",
           "name": "CHNOS",
           "context": "Analytische Chemie · Celignis",
-          "detail": "Elementaranalyse von Biomasse mit dem Elementar Vario MACRO Cube, Probenvorbereitung und Sauerstoffbestimmung durch Differenzrechnung.",
+          "detail": "Elementaranalyse von Biomasse mit dem Elementar Vario MACRO Cube.",
           "link": "workbench/#entry-celignis",
           "order": 19
         },
@@ -905,11 +930,12 @@
           "level": "Laboratory placement",
           "name": "CHNOS",
           "context": "Analytical chemistry · Celignis",
-          "detail": "Biomass elemental analysis with an Elementar Vario MACRO Cube; sample preparation and oxygen calculated by difference.",
+          "detail": "Biomass elemental analysis with the Elementar Vario MACRO Cube.",
           "link": "workbench/#entry-celignis",
           "order": 25
         }
-      }
+      },
+      "topic": "biomass"
     },
     {
       "id": "ash-melting",
@@ -922,7 +948,7 @@
           "level": "Prácticas de laboratorio",
           "name": "Fusión de cenizas",
           "context": "Química analítica · Celignis",
-          "detail": "Ensayos de fusibilidad de cenizas con horno Carbolite Gero CAF G5 BIO, preparación de muestras y seguimiento del ensayo térmico.",
+          "detail": "Ensayos de fusibilidad de cenizas con horno Carbolite Gero CAF G5 BIO.",
           "link": "workbench/#entry-celignis",
           "order": 26
         },
@@ -931,7 +957,7 @@
           "level": "Laborpraktikum",
           "name": "Ascheschmelzverhalten",
           "context": "Analytische Chemie · Celignis",
-          "detail": "Bestimmung des Ascheschmelzverhaltens mit Carbolite Gero CAF G5 BIO, Probenvorbereitung und Überwachung der thermischen Prüfung.",
+          "detail": "Ascheschmelzprüfungen mit dem Carbolite Gero CAF G5 BIO.",
           "link": "workbench/#entry-celignis",
           "order": 20
         },
@@ -940,11 +966,12 @@
           "level": "Laboratory placement",
           "name": "Ash melting",
           "context": "Analytical chemistry · Celignis",
-          "detail": "Ash fusion testing with a Carbolite Gero CAF G5 BIO furnace, sample preparation and thermal test monitoring.",
+          "detail": "Ash fusibility testing with the Carbolite Gero CAF G5 BIO furnace.",
           "link": "workbench/#entry-celignis",
           "order": 26
         }
-      }
+      },
+      "topic": "biomass"
     },
     {
       "id": "bmp",
@@ -979,7 +1006,8 @@
           "link": "workbench/#entry-celignis",
           "order": 27
         }
-      }
+      },
+      "topic": "biomass"
     },
     {
       "id": "fos-tac",
@@ -1014,7 +1042,8 @@
           "link": "workbench/#entry-celignis",
           "order": 28
         }
-      }
+      },
+      "topic": "biomass"
     },
     {
       "id": "icp",
@@ -1049,7 +1078,8 @@
           "link": "workbench/#entry-celignis",
           "order": 29
         }
-      }
+      },
+      "topic": "instrumental"
     },
     {
       "id": "cod",
@@ -1084,7 +1114,8 @@
           "link": "workbench/#entry-celignis",
           "order": 30
         }
-      }
+      },
+      "topic": "biomass"
     },
     {
       "id": "ammonium",
@@ -1119,7 +1150,8 @@
           "link": "workbench/#entry-celignis",
           "order": 31
         }
-      }
+      },
+      "topic": "biomass"
     },
     {
       "id": "nir",
@@ -1154,7 +1186,8 @@
           "link": "workbench/#entry-celignis",
           "order": 32
         }
-      }
+      },
+      "topic": "instrumental"
     },
     {
       "id": "vacuum-filtration",
@@ -1189,7 +1222,8 @@
           "link": "workbench/#entry-celignis",
           "order": 33
         }
-      }
+      },
+      "topic": "materials"
     },
     {
       "id": "glp-sop",
@@ -1224,7 +1258,8 @@
           "link": "workbench/#entry-celignis",
           "order": 34
         }
-      }
+      },
+      "topic": "quality"
     },
     {
       "id": "internal-qc",
@@ -1259,7 +1294,8 @@
           "link": "workbench/#entry-celignis",
           "order": 35
         }
-      }
+      },
+      "topic": "quality"
     },
     {
       "id": "technical-documentation",
@@ -1294,7 +1330,8 @@
           "link": "workbench/#entry-celignis",
           "order": 36
         }
-      }
+      },
+      "topic": "quality"
     },
     {
       "id": "traceability",
@@ -1329,7 +1366,8 @@
           "link": "workbench/#entry-celignis",
           "order": 37
         }
-      }
+      },
+      "topic": "quality"
     },
     {
       "id": "instrumentation",
@@ -1364,7 +1402,8 @@
           "link": "workbench/#entry-celignis",
           "order": 38
         }
-      }
+      },
+      "topic": "metrology"
     },
     {
       "id": "titration",
@@ -1399,7 +1438,8 @@
           "link": "#education",
           "order": 39
         }
-      }
+      },
+      "topic": "instrumental"
     },
     {
       "id": "conductimetry",
@@ -1434,7 +1474,8 @@
           "link": "#education",
           "order": 40
         }
-      }
+      },
+      "topic": "instrumental"
     },
     {
       "id": "turbidity",
@@ -1469,7 +1510,8 @@
           "link": "#education",
           "order": 41
         }
-      }
+      },
+      "topic": "instrumental"
     },
     {
       "id": "solutions",
@@ -1504,7 +1546,8 @@
           "link": "#education",
           "order": 42
         }
-      }
+      },
+      "topic": "instrumental"
     },
     {
       "id": "antibiogram",
@@ -1539,7 +1582,8 @@
           "link": "#education",
           "order": 43
         }
-      }
+      },
+      "topic": "micro"
     },
     {
       "id": "microscopy",
@@ -1574,7 +1618,8 @@
           "link": "#education",
           "order": 44
         }
-      }
+      },
+      "topic": "micro"
     },
     {
       "id": "membrane-filtration",
@@ -1609,7 +1654,8 @@
           "link": "#education",
           "order": 45
         }
-      }
+      },
+      "topic": "micro"
     },
     {
       "id": "microbial-environmental-sampling",
@@ -1644,7 +1690,8 @@
           "link": "#education",
           "order": 46
         }
-      }
+      },
+      "topic": "micro"
     },
     {
       "id": "microbial-enumeration",
@@ -1679,7 +1726,8 @@
           "link": "#education",
           "order": 47
         }
-      }
+      },
+      "topic": "micro"
     },
     {
       "id": "microbial-staining",
@@ -1714,7 +1762,8 @@
           "link": "#education",
           "order": 48
         }
-      }
+      },
+      "topic": "micro"
     },
     {
       "id": "culture-media-preparation",
@@ -1749,7 +1798,8 @@
           "link": "#education",
           "order": 49
         }
-      }
+      },
+      "topic": "micro"
     },
     {
       "id": "food-microbiology",
@@ -1784,7 +1834,8 @@
           "link": "#education",
           "order": 50
         }
-      }
+      },
+      "topic": "micro"
     },
     {
       "id": "microbial-isolation-identification",
@@ -1819,7 +1870,8 @@
           "link": "#education",
           "order": 51
         }
-      }
+      },
+      "topic": "micro"
     },
     {
       "id": "soil-microbiology",
@@ -1854,7 +1906,8 @@
           "link": "#education",
           "order": 52
         }
-      }
+      },
+      "topic": "micro"
     },
     {
       "id": "microscope-care",
@@ -1889,7 +1942,8 @@
           "link": "#education",
           "order": 53
         }
-      }
+      },
+      "topic": "metrology"
     },
     {
       "id": "urinalysis",
@@ -1924,7 +1978,8 @@
           "link": "#education",
           "order": 54
         }
-      }
+      },
+      "topic": "clinical"
     },
     {
       "id": "capillary-blood-smear",
@@ -1959,7 +2014,8 @@
           "link": "#education",
           "order": 55
         }
-      }
+      },
+      "topic": "clinical"
     },
     {
       "id": "uv-vis-spectrophotometry",
@@ -1994,7 +2050,8 @@
           "link": "#education",
           "order": 56
         }
-      }
+      },
+      "topic": "instrumental"
     },
     {
       "id": "bradford-protein",
@@ -2029,7 +2086,8 @@
           "link": "#education",
           "order": 57
         }
-      }
+      },
+      "topic": "instrumental"
     },
     {
       "id": "gravimetry",
@@ -2064,7 +2122,8 @@
           "link": "#education",
           "order": 58
         }
-      }
+      },
+      "topic": "instrumental"
     },
     {
       "id": "redox-complexometric-titration",
@@ -2099,7 +2158,8 @@
           "link": "#education",
           "order": 59
         }
-      }
+      },
+      "topic": "instrumental"
     },
     {
       "id": "lipid-extraction",
@@ -2134,7 +2194,8 @@
           "link": "#education",
           "order": 60
         }
-      }
+      },
+      "topic": "instrumental"
     },
     {
       "id": "soil-sampling",
@@ -2169,7 +2230,8 @@
           "link": "#education",
           "order": 61
         }
-      }
+      },
+      "topic": "biomass"
     },
     {
       "id": "sample-reduction",
@@ -2204,7 +2266,8 @@
           "link": "#education",
           "order": 62
         }
-      }
+      },
+      "topic": "materials"
     },
     {
       "id": "simple-distillation",
@@ -2239,7 +2302,8 @@
           "link": "#education",
           "order": 63
         }
-      }
+      },
+      "topic": "materials"
     },
     {
       "id": "materials-testing",
@@ -2274,7 +2338,8 @@
           "link": "#education",
           "order": 64
         }
-      }
+      },
+      "topic": "materials"
     },
     {
       "id": "lab-water-quality",
@@ -2309,7 +2374,595 @@
           "link": "#education",
           "order": 65
         }
+      },
+      "topic": "biomass"
+    },
+    {
+      "id": "ir-spectroscopy",
+      "area": "analytical",
+      "topic": "instrumental",
+      "source": "IES Virgen de la Paloma",
+      "link": "#education",
+      "locales": {
+        "es": {
+          "area": "analitico",
+          "level": "Práctica académica",
+          "name": "Espectroscopía infrarroja",
+          "context": "Química y análisis instrumental · IES Virgen de la Paloma",
+          "detail": "Análisis de espectros IR de aceites de oliva y girasol: números de onda, transmitancia y lectura de picos.",
+          "link": "#education",
+          "order": 66
+        },
+        "en": {
+          "area": "analytical",
+          "level": "Academic practical training",
+          "name": "Infrared spectroscopy",
+          "context": "Chemistry and instrumental analysis · IES Virgen de la Paloma",
+          "detail": "Analysis of IR spectra of olive and sunflower oils: wavenumbers, transmittance and peak reading.",
+          "link": "#education",
+          "order": 66
+        },
+        "de": {
+          "area": "analytik",
+          "level": "Ausbildungspraktische Übung",
+          "name": "Infrarotspektroskopie",
+          "context": "Chemie und instrumentelle Analytik · IES Virgen de la Paloma",
+          "detail": "Auswertung von IR-Spektren von Oliven- und Sonnenblumenöl: Wellenzahlen, Transmission und Banden.",
+          "link": "#education",
+          "order": 66
+        }
+      }
+    },
+    {
+      "id": "thermometer-calibration",
+      "area": "analytical",
+      "topic": "metrology",
+      "source": "IES Virgen de la Paloma",
+      "link": "#education",
+      "locales": {
+        "es": {
+          "area": "analitico",
+          "level": "Práctica académica",
+          "name": "Calibración de termómetros",
+          "context": "Metrología y mantenimiento · IES Virgen de la Paloma",
+          "detail": "Práctica grupal de calibración a dos puntos, registro de temperatura, corrección por presión atmosférica y cálculo de desviaciones.",
+          "link": "#education",
+          "order": 67
+        },
+        "en": {
+          "area": "analytical",
+          "level": "Academic practical training",
+          "name": "Thermometer calibration",
+          "context": "Metrology and maintenance · IES Virgen de la Paloma",
+          "detail": "Group exercise in two-point calibration, temperature recording, atmospheric-pressure correction and deviation calculations.",
+          "link": "#education",
+          "order": 67
+        },
+        "de": {
+          "area": "analytik",
+          "level": "Ausbildungspraktische Übung",
+          "name": "Thermometerkalibrierung",
+          "context": "Messtechnik und Wartung · IES Virgen de la Paloma",
+          "detail": "Gruppenübung zur Zweipunktkalibrierung, Temperaturaufzeichnung, Luftdruckkorrektur und Berechnung von Abweichungen.",
+          "link": "#education",
+          "order": 67
+        }
+      }
+    },
+    {
+      "id": "pipette-maintenance",
+      "area": "analytical",
+      "topic": "metrology",
+      "source": "IES Virgen de la Paloma",
+      "link": "#education",
+      "locales": {
+        "es": {
+          "area": "analitico",
+          "level": "Práctica académica",
+          "name": "Micropipetas y mantenimiento básico",
+          "context": "Metrología y mantenimiento · IES Virgen de la Paloma",
+          "detail": "Dosificación con micropipetas y práctica de mantenimiento de primer nivel: inspección, estanqueidad, limpieza y montaje según el PNT docente.",
+          "link": "#education",
+          "order": 68
+        },
+        "en": {
+          "area": "analytical",
+          "level": "Academic practical training",
+          "name": "Micropipettes and routine maintenance",
+          "context": "Metrology and maintenance · IES Virgen de la Paloma",
+          "detail": "Micropipette dispensing and basic maintenance training: inspection, leak checks, cleaning and reassembly following a training SOP.",
+          "link": "#education",
+          "order": 68
+        },
+        "de": {
+          "area": "analytik",
+          "level": "Ausbildungspraktische Übung",
+          "name": "Mikropipetten und Grundwartung",
+          "context": "Messtechnik und Wartung · IES Virgen de la Paloma",
+          "detail": "Dosieren mit Mikropipetten und Grundwartung: Sichtprüfung, Dichtheitsprüfung, Reinigung und Zusammenbau nach Ausbildungs-SOP.",
+          "link": "#education",
+          "order": 68
+        }
+      }
+    },
+    {
+      "id": "ph-measurement",
+      "area": "analytical",
+      "topic": "metrology",
+      "source": "IES Virgen de la Paloma / CEAC FP Oficial",
+      "link": "#education",
+      "locales": {
+        "es": {
+          "area": "analitico",
+          "level": "Práctica académica",
+          "name": "Medición y calibración de pH",
+          "context": "Metrología y mantenimiento · IES Virgen de la Paloma / CEAC FP Oficial",
+          "detail": "Uso de pH-metro y tiras indicadoras, calibración y cuidado del electrodo en prácticas de química y técnicas generales.",
+          "link": "#education",
+          "order": 69
+        },
+        "en": {
+          "area": "analytical",
+          "level": "Academic practical training",
+          "name": "pH measurement and calibration",
+          "context": "Metrology and maintenance · IES Virgen de la Paloma / CEAC FP Oficial",
+          "detail": "Use of a pH meter and indicator strips, calibration and electrode care in chemistry and general laboratory exercises.",
+          "link": "#education",
+          "order": 69
+        },
+        "de": {
+          "area": "analytik",
+          "level": "Ausbildungspraktische Übung",
+          "name": "pH-Messung und Kalibrierung",
+          "context": "Messtechnik und Wartung · IES Virgen de la Paloma / CEAC FP Oficial",
+          "detail": "Einsatz von pH-Meter und Indikatorstreifen, Kalibrierung und Elektrodenpflege in Laborübungen.",
+          "link": "#education",
+          "order": 69
+        }
+      }
+    },
+    {
+      "id": "volumetric-measurement",
+      "area": "analytical",
+      "topic": "metrology",
+      "source": "CEAC FP Oficial",
+      "link": "#education",
+      "locales": {
+        "es": {
+          "area": "analitico",
+          "level": "Práctica académica",
+          "name": "Medición volumétrica",
+          "context": "Metrología y mantenimiento · CEAC FP Oficial",
+          "detail": "Manejo de material graduado y aforado, pipetas, probetas y matraces; lectura de menisco y comparación de mediciones en prácticas grupales.",
+          "link": "#education",
+          "order": 70
+        },
+        "en": {
+          "area": "analytical",
+          "level": "Academic practical training",
+          "name": "Volumetric measurement",
+          "context": "Metrology and maintenance · CEAC FP Oficial",
+          "detail": "Use of graduated and volumetric glassware, pipettes, cylinders and flasks; meniscus reading and comparison of measurements in group exercises.",
+          "link": "#education",
+          "order": 70
+        },
+        "de": {
+          "area": "analytik",
+          "level": "Ausbildungspraktische Übung",
+          "name": "Volumenmessung",
+          "context": "Messtechnik und Wartung · CEAC FP Oficial",
+          "detail": "Umgang mit graduierten und geeichten Volumengeräten, Pipetten, Messzylindern und Messkolben; Meniskusablesung und Messvergleich in Gruppenübungen.",
+          "link": "#education",
+          "order": 70
+        }
+      }
+    },
+    {
+      "id": "analytical-weighing",
+      "area": "analytical",
+      "topic": "metrology",
+      "source": "CEAC FP Oficial",
+      "link": "#education",
+      "locales": {
+        "es": {
+          "area": "analitico",
+          "level": "Práctica académica",
+          "name": "Pesaje y medida de masas",
+          "context": "Metrología y mantenimiento · CEAC FP Oficial",
+          "detail": "Práctica grupal con balanzas de laboratorio, tara, medida de masas, cuidado del equipo y registro de resultados.",
+          "link": "#education",
+          "order": 71
+        },
+        "en": {
+          "area": "analytical",
+          "level": "Academic practical training",
+          "name": "Weighing and mass measurement",
+          "context": "Metrology and maintenance · CEAC FP Oficial",
+          "detail": "Group training in laboratory balances, taring, mass measurement, equipment care and recording results.",
+          "link": "#education",
+          "order": 71
+        },
+        "de": {
+          "area": "analytik",
+          "level": "Ausbildungspraktische Übung",
+          "name": "Wägen und Massenmessung",
+          "context": "Messtechnik und Wartung · CEAC FP Oficial",
+          "detail": "Gruppenübung mit Laborwaagen, Tarieren, Massenmessung, Gerätepflege und Ergebnisdokumentation.",
+          "link": "#education",
+          "order": 71
+        }
+      }
+    },
+    {
+      "id": "academic-sops",
+      "area": "analytical",
+      "topic": "quality",
+      "source": "IES Virgen de la Paloma",
+      "link": "#education",
+      "locales": {
+        "es": {
+          "area": "analitico",
+          "level": "Práctica académica",
+          "name": "Elaboración de PNT de laboratorio",
+          "context": "Calidad, seguridad y organización · IES Virgen de la Paloma",
+          "detail": "Elaboración de procedimientos académicos para pH-metro, micropipetas y estufa de secado, con instrucciones y registros de mantenimiento.",
+          "link": "#education",
+          "order": 72
+        },
+        "en": {
+          "area": "analytical",
+          "level": "Academic practical training",
+          "name": "Laboratory SOP writing",
+          "context": "Quality, safety and organisation · IES Virgen de la Paloma",
+          "detail": "Preparation of academic procedures for a pH meter, micropipettes and drying oven, including instructions and maintenance records.",
+          "link": "#education",
+          "order": 72
+        },
+        "de": {
+          "area": "analytik",
+          "level": "Ausbildungspraktische Übung",
+          "name": "Erstellung von Labor-SOPs",
+          "context": "Qualität, Sicherheit und Organisation · IES Virgen de la Paloma",
+          "detail": "Erstellung von Ausbildungs-SOPs für pH-Meter, Mikropipetten und Trockenschrank mit Anweisungen und Wartungsprotokollen.",
+          "link": "#education",
+          "order": 72
+        }
+      }
+    },
+    {
+      "id": "emergency-equipment",
+      "area": "analytical",
+      "topic": "quality",
+      "source": "IES Virgen de la Paloma",
+      "link": "#education",
+      "locales": {
+        "es": {
+          "area": "analitico",
+          "level": "Práctica académica",
+          "name": "Equipos de seguridad y emergencia",
+          "context": "Calidad, seguridad y organización · IES Virgen de la Paloma",
+          "detail": "Práctica de limpieza, inspección y mantenimiento de ducha de seguridad y lavaojos, con registro de comprobaciones.",
+          "link": "#education",
+          "order": 73
+        },
+        "en": {
+          "area": "analytical",
+          "level": "Academic practical training",
+          "name": "Safety and emergency equipment",
+          "context": "Quality, safety and organisation · IES Virgen de la Paloma",
+          "detail": "Training in cleaning, inspection and maintenance of safety showers and eyewash stations, with documented checks.",
+          "link": "#education",
+          "order": 73
+        },
+        "de": {
+          "area": "analytik",
+          "level": "Ausbildungspraktische Übung",
+          "name": "Sicherheits- und Notfalleinrichtungen",
+          "context": "Qualität, Sicherheit und Organisation · IES Virgen de la Paloma",
+          "detail": "Übung zur Reinigung, Prüfung und Wartung von Notduschen und Augenspülstationen mit dokumentierten Kontrollen.",
+          "link": "#education",
+          "order": 73
+        }
+      }
+    },
+    {
+      "id": "crystallisation",
+      "area": "analytical",
+      "topic": "materials",
+      "source": "CEAC FP Oficial",
+      "link": "#education",
+      "locales": {
+        "es": {
+          "area": "analitico",
+          "level": "Práctica académica",
+          "name": "Cristalización y purificación",
+          "context": "Materiales y operaciones unitarias · CEAC FP Oficial",
+          "detail": "Práctica grupal de separación y purificación de sustancias por cristalización, con observación de los cristales obtenidos.",
+          "link": "#education",
+          "order": 74
+        },
+        "en": {
+          "area": "analytical",
+          "level": "Academic practical training",
+          "name": "Crystallisation and purification",
+          "context": "Materials and unit operations · CEAC FP Oficial",
+          "detail": "Group exercise in separation and purification by crystallisation, with observation of the crystals obtained.",
+          "link": "#education",
+          "order": 74
+        },
+        "de": {
+          "area": "analytik",
+          "level": "Ausbildungspraktische Übung",
+          "name": "Kristallisation und Reinigung",
+          "context": "Werkstoffe und Grundoperationen · CEAC FP Oficial",
+          "detail": "Gruppenübung zur Stofftrennung und Reinigung durch Kristallisation mit Beobachtung der erhaltenen Kristalle.",
+          "link": "#education",
+          "order": 74
+        }
+      }
+    },
+    {
+      "id": "carbohydrate-testing",
+      "area": "analytical",
+      "topic": "instrumental",
+      "source": "IES Virgen de la Paloma",
+      "link": "#education",
+      "locales": {
+        "es": {
+          "area": "analitico",
+          "level": "Práctica académica",
+          "name": "Identificación de glúcidos",
+          "context": "Química y análisis instrumental · IES Virgen de la Paloma",
+          "detail": "Ensayos cualitativos de azúcares reductores mediante Fehling y detección de almidón con Lugol; hidrólisis y comparación de resultados en alimentos.",
+          "link": "#education",
+          "order": 75
+        },
+        "en": {
+          "area": "analytical",
+          "level": "Academic practical training",
+          "name": "Carbohydrate identification",
+          "context": "Chemistry and instrumental analysis · IES Virgen de la Paloma",
+          "detail": "Qualitative reducing-sugar tests with Fehling reagent and starch detection with iodine; hydrolysis and comparison of food-sample results.",
+          "link": "#education",
+          "order": 75
+        },
+        "de": {
+          "area": "analytik",
+          "level": "Ausbildungspraktische Übung",
+          "name": "Kohlenhydratnachweis",
+          "context": "Chemie und instrumentelle Analytik · IES Virgen de la Paloma",
+          "detail": "Qualitative Tests auf reduzierende Zucker mit Fehling-Reagenz und Stärkenachweis mit Iod; Hydrolyse und Vergleich von Lebensmittelproben.",
+          "link": "#education",
+          "order": 75
+        }
+      }
+    },
+    {
+      "id": "refractometry",
+      "area": "analytical",
+      "topic": "instrumental",
+      "source": "IES Virgen de la Paloma",
+      "link": "#education",
+      "locales": {
+        "es": {
+          "area": "analitico",
+          "level": "Práctica académica",
+          "name": "Refractometría",
+          "context": "Química y análisis instrumental · IES Virgen de la Paloma",
+          "detail": "Manejo de refractómetro de mano en prácticas de análisis de zumos y glúcidos.",
+          "link": "#education",
+          "order": 76
+        },
+        "en": {
+          "area": "analytical",
+          "level": "Academic practical training",
+          "name": "Refractometry",
+          "context": "Chemistry and instrumental analysis · IES Virgen de la Paloma",
+          "detail": "Use of a handheld refractometer in juice and carbohydrate analysis exercises.",
+          "link": "#education",
+          "order": 76
+        },
+        "de": {
+          "area": "analytik",
+          "level": "Ausbildungspraktische Übung",
+          "name": "Refraktometrie",
+          "context": "Chemie und instrumentelle Analytik · IES Virgen de la Paloma",
+          "detail": "Einsatz eines Handrefraktometers in Übungen zur Saft- und Kohlenhydratanalyse.",
+          "link": "#education",
+          "order": 76
+        }
+      }
+    },
+    {
+      "id": "electrochemical-corrosion",
+      "area": "analytical",
+      "topic": "materials",
+      "source": "IES Virgen de la Paloma",
+      "link": "#education",
+      "locales": {
+        "es": {
+          "area": "analitico",
+          "level": "Práctica académica",
+          "name": "Corrosión electroquímica",
+          "context": "Materiales y operaciones unitarias · IES Virgen de la Paloma",
+          "detail": "Ensayo grupal de corrosión del acero en distintos ambientes, pesaje inicial y final, cálculo de pérdida de masa y observación de cambios.",
+          "link": "#education",
+          "order": 77
+        },
+        "en": {
+          "area": "analytical",
+          "level": "Academic practical training",
+          "name": "Electrochemical corrosion",
+          "context": "Materials and unit operations · IES Virgen de la Paloma",
+          "detail": "Group steel-corrosion experiment under different environmental conditions, initial and final weighing, mass-loss calculations and observations.",
+          "link": "#education",
+          "order": 77
+        },
+        "de": {
+          "area": "analytik",
+          "level": "Ausbildungspraktische Übung",
+          "name": "Elektrochemische Korrosion",
+          "context": "Werkstoffe und Grundoperationen · IES Virgen de la Paloma",
+          "detail": "Gruppenversuch zur Stahlkorrosion unter verschiedenen Umgebungsbedingungen, Anfangs- und Endwägung, Massenverlustberechnung und Beobachtung.",
+          "link": "#education",
+          "order": 77
+        }
+      }
+    },
+    {
+      "id": "gas-volume",
+      "area": "analytical",
+      "topic": "materials",
+      "source": "IES Virgen de la Paloma",
+      "link": "#education",
+      "locales": {
+        "es": {
+          "area": "analitico",
+          "level": "Práctica académica",
+          "name": "Producción y medida de gases",
+          "context": "Materiales y operaciones unitarias · IES Virgen de la Paloma",
+          "detail": "Práctica de obtención y recogida de gas, medición de volumen y cálculos estequiométricos y de rendimiento de reacción.",
+          "link": "#education",
+          "order": 78
+        },
+        "en": {
+          "area": "analytical",
+          "level": "Academic practical training",
+          "name": "Gas production and volume measurement",
+          "context": "Materials and unit operations · IES Virgen de la Paloma",
+          "detail": "Training in gas generation and collection, volume measurement, stoichiometric calculations and reaction yield.",
+          "link": "#education",
+          "order": 78
+        },
+        "de": {
+          "area": "analytik",
+          "level": "Ausbildungspraktische Übung",
+          "name": "Gaserzeugung und Volumenmessung",
+          "context": "Werkstoffe und Grundoperationen · IES Virgen de la Paloma",
+          "detail": "Übung zur Gaserzeugung und -sammlung, Volumenmessung sowie Berechnung von Stöchiometrie und Reaktionsausbeute.",
+          "link": "#education",
+          "order": 78
+        }
+      }
+    },
+    {
+      "id": "buccal-cytology",
+      "area": "clinical",
+      "topic": "clinical",
+      "source": "CEAC FP Oficial",
+      "link": "#education",
+      "locales": {
+        "es": {
+          "area": "clinico",
+          "level": "Práctica académica",
+          "name": "Citología exfoliativa básica",
+          "context": "Diagnóstico clínico · CEAC FP Oficial",
+          "detail": "Práctica grupal de toma de muestra de mucosa bucal, preparación, tinción, microscopía e identificación morfológica de células epiteliales.",
+          "link": "#education",
+          "order": 79
+        },
+        "en": {
+          "area": "clinical",
+          "level": "Academic practical training",
+          "name": "Basic exfoliative cytology",
+          "context": "Clinical diagnostics · CEAC FP Oficial",
+          "detail": "Group exercise in buccal mucosa sampling, preparation, staining, microscopy and morphological recognition of epithelial cells.",
+          "link": "#education",
+          "order": 79
+        },
+        "de": {
+          "area": "klinik",
+          "level": "Ausbildungspraktische Übung",
+          "name": "Grundlagen der Exfoliativzytologie",
+          "context": "Klinische Diagnostik · CEAC FP Oficial",
+          "detail": "Gruppenübung zur Mundschleimhaut-Probenahme, Präparation, Färbung, Mikroskopie und morphologischen Erkennung von Epithelzellen.",
+          "link": "#education",
+          "order": 79
+        }
+      }
+    },
+    {
+      "id": "bioelement-identification",
+      "area": "clinical",
+      "topic": "clinical",
+      "source": "CEAC FP Oficial",
+      "link": "#education",
+      "locales": {
+        "es": {
+          "area": "clinico",
+          "level": "Práctica académica",
+          "name": "Reconocimiento de bioelementos",
+          "context": "Diagnóstico clínico · CEAC FP Oficial",
+          "detail": "Práctica grupal de reconocimiento cualitativo de elementos en muestras biológicas y discusión de observaciones y limitaciones experimentales.",
+          "link": "#education",
+          "order": 80
+        },
+        "en": {
+          "area": "clinical",
+          "level": "Academic practical training",
+          "name": "Qualitative bioelement identification",
+          "context": "Clinical diagnostics · CEAC FP Oficial",
+          "detail": "Group exercise in qualitative identification of elements in biological samples and discussion of observations and experimental limitations.",
+          "link": "#education",
+          "order": 80
+        },
+        "de": {
+          "area": "klinik",
+          "level": "Ausbildungspraktische Übung",
+          "name": "Qualitativer Bioelementnachweis",
+          "context": "Klinische Diagnostik · CEAC FP Oficial",
+          "detail": "Gruppenübung zum qualitativen Nachweis von Elementen in biologischen Proben und Diskussion von Beobachtungen und Versuchsgrenzen.",
+          "link": "#education",
+          "order": 80
+        }
       }
     }
-  ]
+  ],
+  "topics": {
+    "micro": {
+      "es": "Microbiología",
+      "en": "Microbiology",
+      "de": "Mikrobiologie"
+    },
+    "clinical": {
+      "es": "Diagnóstico clínico",
+      "en": "Clinical diagnostics",
+      "de": "Klinische Diagnostik"
+    },
+    "molecular": {
+      "es": "Biología molecular, inmunología y células",
+      "en": "Molecular biology, immunology and cells",
+      "de": "Molekularbiologie, Immunologie und Zellen"
+    },
+    "instrumental": {
+      "es": "Química y análisis instrumental",
+      "en": "Chemistry and instrumental analysis",
+      "de": "Chemie und instrumentelle Analytik"
+    },
+    "biomass": {
+      "es": "Biomasa y medioambiente",
+      "en": "Biomass and environment",
+      "de": "Biomasse und Umwelt"
+    },
+    "metrology": {
+      "es": "Metrología y mantenimiento",
+      "en": "Metrology and maintenance",
+      "de": "Messtechnik und Wartung"
+    },
+    "quality": {
+      "es": "Calidad, seguridad y organización",
+      "en": "Quality, safety and organisation",
+      "de": "Qualität, Sicherheit und Organisation"
+    },
+    "materials": {
+      "es": "Materiales y operaciones unitarias",
+      "en": "Materials and unit operations",
+      "de": "Werkstoffe und Grundoperationen"
+    },
+    "training": {
+      "es": "Formación complementaria",
+      "en": "Additional training",
+      "de": "Zusatzqualifikationen"
+    }
+  }
 }
