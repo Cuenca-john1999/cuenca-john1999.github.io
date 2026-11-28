@@ -43,8 +43,8 @@ function invalidateSemantic(){cancelSemantic();semantic.rows=[];semantic.offer='
 function recommendedSelection(){
  const primary=(state.analysis?.matches||[]).filter(h=>h.priority==='required'||h.priority==='duty'||h.kind==='direct').map(h=>h.id);
  const others=(state.analysis?.matches||[]).map(h=>h.id);
- const semanticIds=semantic.rows.filter(h=>h.key.startsWith('skill:')).map(h=>h.key.slice(6));
- return [...new Set([...primary,...semanticIds,...others])].slice(0,MAX_SKILLS);
+ // Semantic-only suggestions remain advisory until explicitly selected by the visitor.
+ return [...new Set([...primary,...others])].slice(0,MAX_SKILLS);
 }
 function applyRecommended(){state.search='';state.topic='';refs.search.value='';refs.topic.value='';choose(recommendedSelection());}
 let previewUrl=null;
@@ -62,7 +62,7 @@ function renderSemantic(){
  if(!semantic.rows.length)return;
  box.append(el('h4',m.semanticResults),el('p',m.semanticCaution,'muted'));
  const chosen=new Set(),details=el('div'),checks=[];
- box.append(btn(m.applyRecommended,applyRecommended,'cv-apply-recommended',true));
+ const recommendedButton=btn(m.applyRecommended,applyRecommended,'cv-apply-recommended',true);recommendedButton.disabled=!recommendedSelection().length;box.append(recommendedButton);
  for(const hit of [...semantic.rows].sort((a,b)=>{const group=x=>x.key.startsWith('fact:')?2:x.corroborated?0:1;return group(a)-group(b);})){
   const [kind,id]=hit.key.split(':'),row=el('div',undefined,'match'),v=kind==='skill'?skill(id).locales[state.lang]:null;
   const title=el('strong',v?v.name:facts[id][state.lang]);row.append(el('small',kind==='fact'?m.experienceGroup:hit.corroborated?m.primaryGroup:m.complementGroup,'muted'));
