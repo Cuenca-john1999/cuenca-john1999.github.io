@@ -48,3 +48,7 @@
 .home-compact .opening-scene{min-height:min(690px,calc(100svh - 4rem))}.home-compact .opening-content{padding-block:clamp(1rem,3vw,2.5rem)}.home-compact .opening-profession{font-size:clamp(2.1rem,5.3vw,4.2rem);line-height:1.08}
 @media(max-width:740px){.explorer-shell{width:calc(100% - 1.5rem)}.portfolio-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.home-compact .opening-scene{min-height:0}.home-compact .opening-profession{font-size:clamp(1.9rem,7vw,3rem)}}
 @media(prefers-reduced-motion:reduce){.explorer-page *,.home-compact *{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* Preserve readable reference-card labels in both themes. */
+.explorer-page .focus-index,.home-compact .focus-index{color:var(--color-text-muted)}
+:root[data-theme="light"] :is(.explorer-page,.home-compact){--color-accent:#285BB4;--color-accent-secondary:#5B36C8}
