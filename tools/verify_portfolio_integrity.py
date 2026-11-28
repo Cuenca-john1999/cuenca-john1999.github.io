@@ -543,11 +543,11 @@ def check_cache_busting() -> None:
     refreshed, preventing stale browser caches after publication.
     """
     asset_pattern = re.compile(
-        r'(?:href|src)="([^"?#]+\.(?:css|js))(?:\?v=([^"#]+))?"'
+        r'(?:href|src)="([^"?#]+\.(?:css|m?js))(?:\?v=([^"#]+))?"'
     )
     checked = 0
 
-    for relative in HTML_PAGES + tuple(f"{p}{kind}/index.html" for p in ("", "es/", "de/") for kind in ("technical", "documents")):
+    for relative in HTML_PAGES + ("cv-builder/index.html",) + tuple(f"{p}{kind}/index.html" for p in ("", "es/", "de/") for kind in ("technical", "documents")):
         page = ROOT / relative
         html = page.read_text(encoding="utf-8")
         for asset_url, version in asset_pattern.findall(html):

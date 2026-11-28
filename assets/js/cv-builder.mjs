@@ -79,7 +79,7 @@ function runSemantic(){
  renderAnalysis();renderSelection();renderPreview();
  semantic.offer=offer;semantic.rows=[];semantic.busy=true;semantic.status=t().semanticLoading;renderSemantic();
  try{
-  if(!semanticWorker)semanticWorker=new Worker(new URL('./cv-semantic-worker.mjs?v=4',import.meta.url),{type:'module'});
+  if(!semanticWorker)semanticWorker=new Worker(new URL('./cv-semantic-worker.mjs?v=d225b78e0d20',import.meta.url),{type:'module'});
   const worker=semanticWorker;
   function fail(){if(worker!==semanticWorker)return;worker.terminate();semanticWorker=null;clearTimeout(semanticTimer);semantic.busy=false;semantic.status=t().semanticError;renderSemantic();}
   worker.onerror=fail;worker.onmessageerror=fail;

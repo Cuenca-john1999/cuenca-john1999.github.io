@@ -10,7 +10,7 @@ let persistentCache=null;
 const score=(keys,expected)=>({expected:expected.length,found:expected.filter(k=>keys.includes(k)),missing:expected.filter(k=>!keys.includes(k)),other:keys.filter(k=>!expected.includes(k))});
 try{
  const context=await browser.newContext();const page=await context.newPage();await page.goto((process.env.PORTFOLIO_URL||'http://127.0.0.1:8765/')+'cv-builder/?lang=en');
- await page.evaluate(()=>{window.benchWorker=new Worker(new URL('../assets/js/cv-semantic-worker.mjs?v=4',location.href),{type:'module'});});
+ await page.evaluate(()=>{window.benchWorker=new Worker(new URL('../assets/js/cv-semantic-worker.mjs?v=d225b78e0d20',location.href),{type:'module'});});
  const request=(offer)=>page.evaluate(({entries,offer})=>new Promise((resolve,reject)=>{
    const w=window.benchWorker,timer=setTimeout(()=>reject(Error('Benchmark timeout')),300000);
    w.onerror=e=>{clearTimeout(timer);reject(Error(e.message));};
@@ -30,7 +30,7 @@ try{
   for(const id of c.excludedGaps||[])assert(!row.gaps.includes(id),'Excluded requirement reported: '+id);
  }
  // Restart only the worker, retaining the same browser context and its persistent cache.
- await page.evaluate(()=>{window.benchWorker.terminate();window.benchWorker=new Worker(new URL('../assets/js/cv-semantic-worker.mjs?v=4',location.href),{type:'module'});});
+ await page.evaluate(()=>{window.benchWorker.terminate();window.benchWorker=new Worker(new URL('../assets/js/cv-semantic-worker.mjs?v=d225b78e0d20',location.href),{type:'module'});});
  const warm=await request(cases[0].text);persistentCache=warm.diagnostics||null;
  assert.equal(persistentCache?.indexSource,'indexeddb','Public evidence vectors must survive worker restart');
 }finally{await browser.close();mkdirSync('test-output',{recursive:true});writeFileSync('test-output/cv-semantic-benchmark.json',JSON.stringify(report,null,2)+'\n');}
