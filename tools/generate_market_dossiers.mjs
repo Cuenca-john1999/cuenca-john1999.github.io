@@ -76,44 +76,67 @@ function buildDossiers(read){
  }
  out[`assets/documents/${lang}/${r.names[3]}.pdf`]=pdf(pages);
 
- const cvLocale=cv[lang];
+
+ const cvLocale=cv[lang],layout=cvLocale.layout;
  for(const [role,ids] of Object.entries(cv.selections)){
-   const profileTitle=cvLocale.title+" - "+cvLocale.labels[role];
-   const first=canvas(),second=canvas();
-   let y=header(first,lang,profileTitle,t.market,1,2);
-   function writeSection(c,y,label,paragraphs){
-      y=c.para(label,L,y,12.1,M,15.7,true,C.blue)-5;
-      for(const p of paragraphs)y=c.para(p,L,y,10.5,M,13.9)-5;
-      return y-10;
+   const v=cvLocale.variants[role],first=canvas(),second=canvas(),black="0 0 0",grey="0.32 0.32 0.32";
+   const center=(c,s,y,z,b=false,color=black)=>c.text(s,(595-width(s,z,b))/2,y,z,b,color);
+   const right=(c,s,y,z=8.8)=>c.text(s,R-width(s,z),y,z,false,black);
+   const p=(c,s,y,x=L+4,z=9.1,b=false)=>c.para(s,x,y,z,R-x,12,b,black);
+   const heading=(c,s,y)=>{center(c,s,y,10.7,true);return y-18};
+   const bullet=(c,s,y)=>{c.rect(L+10,y+2,2.4,2.4,black);return p(c,s,y,L+18,9.1)-2};
+   const footer=c=>center(c,"Jhon M. Cuenca · cuenca-john1999.github.io",24.5,7.8,false,grey);
+   function entry(c,company,job,place,date,y,bullets){
+     const avail=R-L-width(place,8.8)-12;
+     for(const line of wrap(company.toUpperCase(),9.2,avail,true)){c.text(line,L,y,9.2,true,black);if(line===wrap(company.toUpperCase(),9.2,avail,true)[0])right(c,place,y);y-=12}
+     const jobLines=wrap(job,9.2,R-L-width(date,8.8)-12,true);
+     for(const [i,line] of jobLines.entries()){c.text(line,L,y,9.2,true,black);if(i===0)right(c,date,y);y-=12}
+     for(const b of bullets)y=bullet(c,b,y);
+     return y-7;
    }
-   y=writeSection(first,y,cvLocale.headings[0],[cvLocale.focus[role],cvLocale.profile,cvLocale.mobility]);
-   y=first.para(cvLocale.headings[1],L,y,12.1,M,15.7,true,C.blue)-6;
-   for(const row of cvLocale.exp){
-     y=first.para(row[0],L,y,10.8,M,13.9,true);
-     y=first.para(row[1],L,y,9.9,M,13,false,C.muted)-5;
-     for(const p of row.slice(2))y=first.para(p,L,y,10.5,M,13.9)-5;
-     y-=8;
+   center(first,"Jhon M. Cuenca",792,16.5,true);
+   let y=773;
+   for(const line of wrap(v.subtitle,10.4,M,true)){center(first,line,y,10.4,true);y-=13}
+   for(const line of wrap(cvLocale.mobility,8.4,M)){center(first,line,y-1,8.4);y-=11}
+   center(first,"cuenca-john1999.github.io"+(lang==="en"?"/":"/"+lang+"/"),y-2,8.4);y-=19;
+   first.rule(L+4,y,M-8);y-=19;
+   y=heading(first,layout.profile,y);y=p(first,v.profile,y)-10;
+   const acad=()=>{y=heading(first,layout.academic,y);for(const b of v.academic)y=bullet(first,b,y);y-=8};
+   if(v.priority==="academic")acad();
+   y=heading(first,layout.experience,y);
+   const order=v.priority==="celignis"||role==="pharma"?[1,0]:[0,1];
+   for(const i of order)y=entry(first,cvLocale.exp[i][0],layout.job[i],layout.location[i],i===0?"03/2025 - 06/2025":"03/2023 - 05/2023",y,v.placements[i]);
+   if(v.priority!=="academic")acad();
+   if(y<49)throw Error("CV page 1 overflow "+lang+" "+role+" "+y);
+   footer(first);
+   y=797;
+   y=heading(second,layout.additional,y);
+   for(const [company,job,place,date,body] of layout.additionalRows)y=entry(second,company,job,place,date,y,[body]);
+   y=heading(second,layout.education,y);
+   const quals=["Técnico Superior en Laboratorio Clínico y Biomédico","Técnico en Operaciones de Laboratorio"];
+   const schools=["CEAC FP OFICIAL","IES VIRGEN DE LA PALOMA"];
+   const qorder=role==="analytical"||role==="pharma"?[1,0]:[0,1];
+   for(const i of qorder){
+     cEducation(schools[i],quals[i],i===0?"2023 - 2025":"2021 - 2023",i);
    }
-   y=first.para(cvLocale.headings[2],L,y,12.1,M,15.7,true,C.blue)-5;
-   for(const [i,q] of ["Técnico Superior en Laboratorio Clínico y Biomédico","Técnico en Operaciones de Laboratorio"].entries()){
-     y=first.para(q,L,y,10.8,M,13.9,true);
-     y=first.para(cvLocale.qual[i],L,y,10.1,M,13,false,C.muted)-6;
+   function cEducation(school,qual,date,i){
+     second.text(school,L,y,9.4,true,black);right(second,layout.location[0],y);y-=12;
+     second.text(qual,L,y,9.2,true,black);right(second,date,y);y-=12;
+     y=p(second,layout.formal,y,L+8,8.9)-2;
+     if(i===0&&(role==="general"||role==="research"))y=bullet(second,cvLocale.project,y);
+     y-=7;
    }
-   if(y<59)throw Error("CV page 1 overflow "+lang+" "+role+" "+y);
-   y=header(second,lang,profileTitle,t.market,2,2);
-   y=second.para(cvLocale.headings[3],L,y,12.1,M,15.7,true,C.blue)-5;
-   const selected=ids.map(id=>{const row=data.skills.find(s=>s.id===id);if(!row)throw Error("Unknown skill "+id);return row;});
+   y=heading(second,layout.cert,y);
+   const certOrder=role==="research"?[1,2,0,3]:role==="clinical"?[0,2,1,3]:[2,3,0,1];
+   for(const i of certOrder){second.text(layout.certNames[i],L,y,9.2,true,black);right(second,["2025","2023 / 2024","2023","2018 - 2020"][i],y);y-=12;y=p(second,layout.certBodies[i],y,L+8,8.9)-5}
+   y-=5;y=heading(second,layout.skills,y);
+   const selected=ids.map(id=>{const s=data.skills.find(s=>s.id===id);if(!s)throw Error("Unknown skill "+id);return s;});
    const grouped=new Map();
-   for(const row of selected){const v=row.locales[lang],key=v.level+" | "+row.source;if(!grouped.has(key))grouped.set(key,[]);grouped.get(key).push(v.name);}
-   for(const [label,items] of grouped){
-     y=second.para(label,L,y,10.1,M,13,true,C.muted)-2;
-     y=second.para(items.join(" · "),L,y,10.5,M,13.9)-7;
-   }
-   y-=4;
-   y=writeSection(second,y,cvLocale.headings[4],[cvLocale.project,...cvLocale.cert]);
-   y=writeSection(second,y,cvLocale.headings[5],[cvLocale.languages]);
-   y=writeSection(second,y,cvLocale.headings[6],[cvLocale.other]);
-   if(y<59)throw Error("CV page 2 overflow "+lang+" "+role+" "+y);
+   for(const s of selected){const item=s.locales[lang],key=item.level;if(!grouped.has(key))grouped.set(key,[]);grouped.get(key).push(item.name);}
+   for(const [label,items] of grouped){y=p(second,label,y,L+4,9.2,true);y=p(second,items.join(" · "),y,L+4,9)-4}
+   y=p(second,cvLocale.languages,y,L+4,9)-4;
+   if(y<49)throw Error("CV page 2 overflow "+lang+" "+role+" "+y);
+   footer(second);
    const path=role==="general"?"assets/documents/Jhon_M_Cuenca_CV_"+lang.toUpperCase()+".pdf":"assets/documents/"+lang+"/cv-"+role+".pdf";
    out[path]=pdf([first.raw(),second.raw()]);
  }
