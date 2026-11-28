@@ -532,7 +532,7 @@ def check_cache_busting() -> None:
     )
     checked = 0
 
-    for relative in HTML_PAGES:
+    for relative in HTML_PAGES + tuple(f"{p}{kind}/index.html" for p in ("", "es/", "de/") for kind in ("technical", "documents")):
         page = ROOT / relative
         html = page.read_text(encoding="utf-8")
         for asset_url, version in asset_pattern.findall(html):

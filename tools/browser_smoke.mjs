@@ -34,29 +34,12 @@ for (const [engine,launcher] of Object.entries({chromium,webkit})) {
                 assert.equal(await page.locator('details[data-home-disclosure][open]').count(),0);
                 assert.equal(await page.locator('[data-market-skill]:visible').count(),0);
                 await page.screenshot({path:`test-output/${engine}-${viewport.width}-${lang}-compact-home.png`,fullPage:true});
-                await page.locator('#home-technical>summary').click();
-                await page.locator('#home-catalogue>summary').click();
+                assert.equal(await page.locator('[data-market-skill]').count(),0);
+                await page.locator('#home-technical-link').click();
+                await page.waitForURL('**/technical/');
                 assert.equal(await page.locator('[data-market-skill]:visible').count(),expectedSkills);
-                await page.locator('#home-equipment>summary').click();
-                await page.locator('#home-documents>summary').click();
-                await page.locator('#home-static-cvs>summary').click();
-                await page.locator('#home-package>summary').click();
-                // Scroll directly to each new section; contrast and layout must
-                // be restored even for very tall sections and direct anchor visits.
-                const marketSections=page.locator('.sequence-section.market-section');
-                for(let i=0;i<await marketSections.count();i++){
-                    const section=marketSections.nth(i),heading=section.locator('h2').first();
-                    await heading.scrollIntoViewIfNeeded();
-                    await page.waitForFunction(id=>document.getElementById(id).classList.contains('is-sequence-revealed'),await section.getAttribute('id'));
-                    await page.waitForFunction(id=>{
-                        const s=document.getElementById(id),h=s.querySelector('h2'),p=s.querySelector('.market-intro'),g=s.querySelector('.market-grid,.market-filters');
-                        if(!h||!p||!g)return false;
-                        const css=n=>getComputedStyle(n),pr=p.getBoundingClientRect(),gr=g.getBoundingClientRect();
-                        return Number(css(s).opacity)>.99&&Number(css(h).opacity)>.99&&Number(css(p).opacity)>.99&&gr.top-pr.bottom>=12;
-                    },await section.getAttribute('id'));
-                    const id=await section.getAttribute('id');
-                    await page.screenshot({path:`test-output/${engine}-${viewport.width}-${lang}-${id}.png`});
-                }
+                assert.equal(await page.locator('html').getAttribute('lang'),lang);
+                await page.screenshot({path:'test-output/'+engine+'-'+viewport.width+'-'+lang+'-technical.png',fullPage:true});
                 const search=page.locator('[data-market-search]');
                 await search.waitFor({state:'visible'});
                 const controlHeights=await page.locator('[data-market-filters] input,[data-market-filters] select,[data-market-filters] button').evaluateAll(nodes=>nodes.map(n=>n.getBoundingClientRect().height));
@@ -73,9 +56,9 @@ for (const [engine,launcher] of Object.entries({chromium,webkit})) {
                 assert.ok(count>0 && count<expectedSkills,'Search must filter skills');
                 await page.locator('[data-market-reset]').click();
                 assert.equal(await page.locator('[data-market-skill]:not([hidden])').count(),expectedSkills);
-                await page.locator('#recruitment-hub').scrollIntoViewIfNeeded();
+                await page.goto(base+path+'documents/',{waitUntil:'domcontentloaded'});
                 assert.equal(await page.locator('[data-application-package] input[type=checkbox]').count(),7);
-                assert.equal(await page.locator('#recruitment-hub a[href*="/cv-"][download]').count(),4);
+                assert.equal(await page.locator('main a[href*="/cv-"][download]').count(),4);
                 if(viewport.width===1440) {
                     const downloaded=page.waitForEvent('download',{timeout:30000});
                     await page.locator('[data-package-download]').click();
@@ -87,8 +70,8 @@ for (const [engine,launcher] of Object.entries({chromium,webkit})) {
                 }
                 const catalogueId=({en:'technical-catalogue',es:'catalogo-tecnico',de:'fachkatalog'})[lang];
                 await page.goto(base+path+'?focus=pharma#'+catalogueId,{waitUntil:'domcontentloaded'});
-                await page.locator('#home-catalogue[open]').waitFor({state:'attached'});
-                assert.equal(await page.locator('#home-technical').getAttribute('open'),'');
+                await page.waitForURL('**/technical/**');
+                await page.locator('[data-market-route]').waitFor();assert.equal(await page.locator('[data-market-route]').inputValue(),'pharma');
                 await page.goto(base+path+'workbench/#scientific-library',{waitUntil:'domcontentloaded'});
                 assert.equal(await page.locator('#scientific-library article[id^="note-"]').count(),expectedNotes);
                 assert.equal(await page.locator('#scientific-library .science-flow').count(),expectedFlows);

@@ -34,7 +34,8 @@
     topic.addEventListener('change',render);
     route.addEventListener('change',render);
     reset.addEventListener('click',() => {search.value=''; area.value=''; level.value=''; topic.value=''; route.value=''; render(); search.focus();});
-    const focus = new URLSearchParams(location.search).get('focus');
+    const params=new URLSearchParams(location.search),focus=params.get('focus');
+    if(params.has('q'))search.value=params.get('q').slice(0,120);
     if (focus && Array.from(route.options).some(o => o.value === focus)) route.value=focus;
     filters.hidden=false;
     render();

@@ -17,6 +17,7 @@ import re
 import subprocess
 from pathlib import Path
 from render_market_evidence import render_partial, replace_marked, marked, refresh_hub, refresh_library, hub
+from generate_explorer_pages import outputs as explorer_outputs
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://cuenca-john1999.github.io"
@@ -392,6 +393,7 @@ def render_sitemap() -> str:
         f"{BASE_URL}/de/workbench/",
         f"{BASE_URL}/es/workbench/",
         f"{BASE_URL}/privacy.html",
+        *(f"{BASE_URL}/{prefix}{kind}/" for prefix in ("", "es/", "de/") for kind in ("technical", "documents")),
     )
     body = "\n".join(f"  <url>\n    <loc>{url}</loc>\n  </url>" for url in urls)
     return f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{body}\n</urlset>\n'
@@ -402,7 +404,7 @@ def normalize_generated_html(text: str) -> str:
 
 
 def outputs() -> dict[Path, str]:
-    return {
+    pages = {
         ROOT / "index.html": normalize_generated_html(refresh_hub(replace_marked((ROOT / "index.html").read_text(encoding="utf-8"), "INTERNATIONAL-MARKET", marked("INTERNATIONAL-MARKET", render_partial("en"))), "en")),
         ROOT / "workbench" / "index.html": normalize_generated_html(refresh_library((ROOT / "workbench" / "index.html").read_text(encoding="utf-8"), "en")),
         ROOT / "de" / "index.html": normalize_generated_html(render_main("de")),
@@ -411,6 +413,8 @@ def outputs() -> dict[Path, str]:
         ROOT / "es" / "workbench" / "index.html": normalize_generated_html(render_workbench("es")),
         ROOT / "sitemap.xml": render_sitemap(),
     }
+    pages.update(explorer_outputs({"en": pages[ROOT / "index.html"], "es": pages[ROOT / "es/index.html"], "de": pages[ROOT / "de/index.html"]}))
+    return pages
 
 
 def main() -> None:
