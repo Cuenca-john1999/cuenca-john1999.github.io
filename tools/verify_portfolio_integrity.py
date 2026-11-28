@@ -513,11 +513,26 @@ def check_localized_static_fallbacks() -> None:
 
 
 def check_public_privacy_guards() -> None:
-    text = "\n".join((ROOT / relative).read_text(encoding="utf-8") for relative in HTML_PAGES)
-    for marker in ("/Volumes/", "/Users/", "djxmaicolx", ".continue/", "BEGIN OPENSSH PRIVATE KEY"):
-        if marker in text:
-            fail(f"private/local marker found in public HTML: {marker}")
-
+    # Inspect the complete public content surface, including generated pages,
+    # translations, search/semantic evidence, and Workbench data.
+    paths = set(ROOT.glob("*.html"))
+    for directory in ("es", "en", "de", "technical", "documents", "cv-builder", "workbench"):
+        paths.update((ROOT / directory).rglob("*.html"))
+    for extension in ("*.json", "*.html"):
+        paths.update((ROOT / "data").rglob(extension))
+    paths.add(ROOT / "workbench/js/workbench-data.js")
+    rules = {
+        "private filesystem or key marker": re.compile(r"/Volumes/|/Users/|djxmaicolx|\.continue/|BEGIN (?:OPENSSH |RSA )?PRIVATE KEY"),
+        "identity-document pattern": re.compile(r"\b(?:\d{8}[A-Z]|[XYZ]\d{7}[A-Z])\b", re.I),
+        "excluded academic grade": re.compile(r"\b(?:nota final|final grade|abschlussnote|endnote des bildungsgangs)\b|\b(?:9[.,]25|8[.,]69)\s*/\s*10\b", re.I),
+        "excluded placement hours": re.compile(r"\b(?:placement hours|horas de prácticas|praktikumsstunden)\b|\b(?:370|380)\s*(?:h\b|hours\b|horas\b|std\b|stunden\b)", re.I),
+    }
+    for path in sorted(paths):
+        text = path.read_text(encoding="utf-8")
+        for category, pattern in rules.items():
+            # Report category and path only, never the matched personal value.
+            if pattern.search(text):
+                fail(f"{category} in public content: {path.relative_to(ROOT)}")
 
 
 def check_cache_busting() -> None:
