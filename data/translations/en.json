@@ -407,7 +407,7 @@
   "privacyPage": {
     "kicker": "Privacy",
     "title": "Privacy information for professional contact.",
-    "intro": "This page explains the current data flow when the portfolio contact form is used.",
+    "intro": "This page explains the data flow for professional contact and local CV analysis.",
     "back": "Back to professional profile",
     "controllerTitle": "Controller",
     "controllerBody": "Jhon M. Cuenca is responsible for the personal data submitted through this portfolio contact form. Contact is available through the professional contact form on the portfolio.",
@@ -423,7 +423,9 @@
     "rightsBody": "Where the GDPR applies, you may have rights including access, rectification, erasure, restriction, objection and the right to lodge a complaint with a competent data protection supervisory authority.",
     "trackingTitle": "Analytics and profiling",
     "trackingBody": "This portfolio does not use advertising trackers, behavioural profiling or analytics services.",
-    "updated": "Last updated: 8 August 2026"
+    "localAnalysisTitle": "Local CV analysis and browser storage",
+        "localAnalysisBody": "The CV builder processes vacancy text in the browser. Its code does not send vacancy descriptions to an inference service or save them to persistent storage. Optional semantic analysis downloads model and runtime assets from Hugging Face and jsDelivr; these requests can expose normal connection metadata, such as IP address. The browser may cache these assets and the vectors of public professional evidence in IndexedDB. You can remove the vacancy text using the clear button or by reloading the page. To remove cached assets and vectors, clear this site's data in your browser settings. Avoid pasting confidential information, especially personal data about other people.",
+        "updated": "Last updated: 28 November 2026"
   },
   "notFoundPage": {
     "kicker": "404",

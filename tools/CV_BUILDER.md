@@ -43,3 +43,6 @@ Additional release checks:
 - Content hashes cover module entry points, including the standalone CV builder, to prevent stale deployed JS entry points.
 
 Review the latest GitHub Actions run and visual artifacts before release. A passing build alone is not a passing accessibility, privacy or semantic-quality review. The original academic-project dedications remain non-blocking advisories and need an explicit editorial decision. The working branch is public; it is not a private document store.
+
+### Vacancy lifecycle and privacy notice
+Editing either vacancy invalidates the previous comparison and semantic suggestions without changing the manually selected CV skills. A dedicated clear action removes both vacancy texts and their analysis from the current UI. Vacancy fields opt out of autocomplete, autocorrect and spellcheck; browser-level behaviour remains outside the application's control. The localized privacy page describes the optional external model asset downloads, local analysis and public-evidence cache. Browser regression coverage verifies the invalidation and clear action.

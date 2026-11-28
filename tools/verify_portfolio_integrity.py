@@ -380,6 +380,7 @@ def check_structured_data_and_privacy(translations: dict[str, dict]) -> None:
         "https://web3forms.com/privacy",
         "https://web3forms.com/dpa",
         "privacyPage.rightsBody",
+        "privacyPage.localAnalysisBody",
     ):
         if marker not in privacy:
             fail(f"privacy information marker missing: {marker}")
@@ -392,6 +393,8 @@ def check_structured_data_and_privacy(translations: dict[str, dict]) -> None:
         "retentionBody",
         "rightsBody",
         "trackingBody",
+        "localAnalysisTitle",
+        "localAnalysisBody",
         "updated",
     )
     privacy_texts = [privacy]

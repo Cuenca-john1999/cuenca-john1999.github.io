@@ -407,7 +407,7 @@
   "privacyPage": {
     "kicker": "Datenschutz",
     "title": "Datenschutzhinweise für die berufliche Kontaktaufnahme.",
-    "intro": "Diese Seite beschreibt den aktuellen Datenfluss bei Nutzung des Kontaktformulars im Portfolio.",
+    "intro": "Diese Seite beschreibt den Datenfluss bei beruflicher Kontaktaufnahme und lokaler Lebenslaufanalyse.",
     "back": "Zurück zum beruflichen Profil",
     "controllerTitle": "Verantwortlicher",
     "controllerBody": "Jhon M. Cuenca ist für die personenbezogenen Daten verantwortlich, die über das Kontaktformular dieses Portfolios übermittelt werden. Eine Kontaktaufnahme ist über das berufliche Kontaktformular im Portfolio möglich.",
@@ -423,7 +423,9 @@
     "rightsBody": "Soweit die DSGVO anwendbar ist, können insbesondere Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch sowie das Recht auf Beschwerde bei einer zuständigen Datenschutzaufsichtsbehörde bestehen.",
     "trackingTitle": "Analyse und Profiling",
     "trackingBody": "Dieses Portfolio verwendet keine Werbetracker, kein verhaltensbezogenes Profiling und keine Analysedienste.",
-    "updated": "Zuletzt aktualisiert: 8. August 2026"
+    "localAnalysisTitle": "Lokale Lebenslaufanalyse und Browserspeicher",
+        "localAnalysisBody": "Der Lebenslaufgenerator verarbeitet Anzeigentexte im Browser. Sein Code übermittelt die Texte nicht an einen Inferenzdienst und speichert sie nicht dauerhaft. Die optionale semantische Analyse lädt Modell- und Laufzeitdateien von Hugging Face und jsDelivr; dabei können übliche Verbindungsmetadaten wie die IP-Adresse anfallen. Der Browser kann diese Dateien und die Vektoren öffentlich zugänglicher beruflicher Nachweise in IndexedDB zwischenspeichern. Die Anzeigentexte können über die Löschschaltfläche oder durch Neuladen der Seite entfernt werden. Zum Entfernen zwischengespeicherter Dateien und Vektoren löschen Sie die Daten dieser Website in den Browsereinstellungen. Geben Sie keine vertraulichen Informationen ein, insbesondere keine personenbezogenen Daten Dritter.",
+        "updated": "Zuletzt aktualisiert: 28. November 2026"
   },
   "notFoundPage": {
     "kicker": "404",

@@ -407,7 +407,7 @@
   "privacyPage": {
     "kicker": "Privacidad",
     "title": "Información de privacidad para el contacto profesional.",
-    "intro": "Esta página explica el flujo actual de datos cuando se utiliza el formulario de contacto del portafolio.",
+    "intro": "Esta página explica el flujo de datos del contacto profesional y del análisis local del CV.",
     "back": "Volver al perfil profesional",
     "controllerTitle": "Responsable",
     "controllerBody": "Jhon M. Cuenca es responsable de los datos personales enviados mediante el formulario de contacto de este portafolio. El contacto está disponible a través del formulario profesional del propio portafolio.",
@@ -423,7 +423,9 @@
     "rightsBody": "Cuando sea aplicable el RGPD, pueden existir derechos de acceso, rectificación, supresión, limitación, oposición y el derecho a presentar una reclamación ante una autoridad de protección de datos competente.",
     "trackingTitle": "Analítica y perfilado",
     "trackingBody": "Este portafolio no utiliza rastreadores publicitarios, perfilado de comportamiento ni servicios de analítica.",
-    "updated": "Última actualización: 8 de agosto de 2026"
+    "localAnalysisTitle": "Análisis local del CV y almacenamiento del navegador",
+        "localAnalysisBody": "El generador de CV procesa el texto de las ofertas en el navegador. Su código no envía las descripciones a un servicio de inferencia ni las guarda en almacenamiento persistente. El análisis semántico opcional descarga el modelo y archivos de ejecución desde Hugging Face y jsDelivr; estas solicitudes pueden revelar metadatos habituales de conexión, como la dirección IP. El navegador puede almacenar estos archivos en caché y los vectores de evidencias profesionales públicas en IndexedDB. Puedes borrar los textos de las ofertas con el botón correspondiente o recargando la página. Para retirar los archivos y vectores en caché, borra los datos de este sitio en la configuración del navegador. Evita introducir información confidencial, especialmente datos personales de terceros.",
+        "updated": "Última actualización: 28 de noviembre de 2026"
   },
   "notFoundPage": {
     "kicker": "404",

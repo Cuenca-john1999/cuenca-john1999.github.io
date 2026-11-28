@@ -26,6 +26,11 @@ for(const [engine,launcher] of Object.entries({chromium,webkit})){
    const pending=page.waitForEvent('download');await page.locator('#cv-download-pdf').click();const dl=await pending;assert.equal((await readFile(await dl.path())).subarray(0,8).toString(),'%PDF-1.4');
    await page.locator('#cv-extra>summary').click();assert.equal(await page.locator('#cv-personal-mode,#cv-contact-input').count(),0);
    const z=page.waitForEvent('download');await page.locator('#cv-download-zip').click();assert.equal((await readFile(await (await z).path())).subarray(0,2).toString(),'PK');
+   assert.equal(await page.locator('#cv-offer').getAttribute('spellcheck'),'false');assert.equal(await page.locator('#cv-offer').getAttribute('autocomplete'),'off');
+   await page.locator('#cv-second-offer').fill('Haematology');assert.equal(await page.locator('#cv-use-suggestions').count(),0);
+   await page.locator('#cv-analyse').click();assert.equal(await page.locator('#cv-use-suggestions').count(),1);
+   await page.locator('#cv-offer').fill('PCR');assert.equal(await page.locator('#cv-use-suggestions').count(),0);
+   await page.locator('#cv-analyse').click();await page.locator('#cv-clear-offers').click();assert.equal(await page.locator('#cv-offer').inputValue(),'');assert.equal(await page.locator('#cv-second-offer').inputValue(),'');assert.equal(await page.locator('#cv-use-suggestions').count(),0);
   }
   await page.locator('#cv-builder').screenshot({path:'test-output/'+engine+'-'+width+'-'+lang+'-inline-cv-builder.png'});assert.deepEqual(errors,[]);
  }
