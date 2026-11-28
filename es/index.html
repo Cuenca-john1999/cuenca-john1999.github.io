@@ -96,6 +96,7 @@
     <link rel="stylesheet" href="../assets/css/market-selector.css?v=49bdaeac068c">
     <link rel="stylesheet" href="../assets/css/spain-market.css?v=7de4b8dfe6e5">
     <link rel="stylesheet" href="../assets/css/portfolio-enhancements.css?v=5097e880bb76">
+    <link rel="stylesheet" href="../assets/css/cv-builder.css?v=de222ddaa41c">
 </head>
 <body>
     <a class="skip-link" href="#main-content" data-i18n="accessibility.skipToContent">Saltar al contenido principal</a>
@@ -136,6 +137,7 @@
                             <a class="opening-action" href="../assets/documents/Jhon_M_Cuenca_CV_ES.pdf" target="_blank" rel="noopener" data-cv-link data-i18n="hero.cvCta">Descargar CV — España</a>
                             <a class="opening-action opening-action--primary" href="#contact" data-i18n="hero.contactCta">Contacto</a>
                             <a class="opening-action" href="#projects" data-i18n="hero.projectsCta">Explorar proyectos</a>
+                            <a class="opening-action" href="#cv-builder">Crear CV a medida</a>
                         </div>
                     </div>
                     <div class="opening-divider" data-reveal aria-hidden="true"></div>
@@ -205,6 +207,9 @@
             <section class="sequence-section market-section" id="recruitment-hub" data-sequence-section aria-labelledby="recruitment-title">
                 <div class="section-kicker">Centro de selección profesional</div>
                 <h2 id="recruitment-title">Centro de selección profesional</h2><p class="market-intro">Acceso rápido para procesos de selección. Solo documentos públicos; los originales y referencias se pueden solicitar cuando proceda.</p>
+                <div class="cv-builder" id="cv-builder" data-cv-builder data-cv-lang="es" aria-label="Generador de CV personalizado">
+                    <h3>Generador de CV personalizado</h3><p>Elige las técnicas relevantes para la vacante. Descarga un CV de dos páginas con el formato original recuperado.</p><p data-cv-status role="status">Cargando catálogo…</p><a class="document-link" href="../cv-builder/?lang=es">Abrir herramienta en página propia</a>
+                </div>
                 <div class="market-grid market-doc-grid">
                     <article class="market-card"><h3>CV público</h3><a class="document-link" href="../assets/documents/Jhon_M_Cuenca_CV_ES.pdf">CV público</a></article>
                     <article class="market-card"><h3>Titulaciones y Europass</h3><a class="document-link" href="#education">Titulaciones y Europass</a></article>
@@ -229,7 +234,6 @@
                     <article class="market-card"><h3>Microbiología y calidad</h3><a class="document-link" href="../assets/documents/es/cv-pharma.pdf" download>Descargar CV (PDF)</a></article>
                     <article class="market-card"><h3>Química analítica</h3><a class="document-link" href="../assets/documents/es/cv-analytical.pdf" download>Descargar CV (PDF)</a></article>
                 </div></div>
-                <div class="market-panel"><h3>Generar CV personalizado</h3><p>Selecciona técnicas o analiza una oferta y descarga un CV adaptado con la plantilla original.</p><a class="document-link" href="../cv-builder/?lang=es">Generar CV personalizado</a></div>
                 <div class="market-panel" data-application-package data-loading="Preparando paquete…" data-error="No se pudo preparar el paquete. Descarga los PDF individualmente." data-none="Selecciona al menos un documento.">
                     <h3>Paquete de candidatura</h3>
                     <fieldset class="package-options"><legend>Seleccionar documentos públicos</legend>
@@ -1212,5 +1216,6 @@
     <script src="../assets/js/app.js?v=e702024730b0"></script>
     <script src="../assets/js/market-catalogue.js?v=e624f8db0b09" defer></script>
     <script src="../assets/js/application-package.js?v=549bba70d29c" defer></script>
+    <script type="module" src="../assets/js/cv-builder.mjs?v=f1c3b4df08aa"></script>
 </body>
 </html>

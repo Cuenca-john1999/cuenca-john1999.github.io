@@ -96,6 +96,7 @@
     <link rel="stylesheet" href="assets/css/market-selector.css?v=49bdaeac068c">
     <link rel="stylesheet" href="assets/css/spain-market.css?v=7de4b8dfe6e5">
     <link rel="stylesheet" href="assets/css/portfolio-enhancements.css?v=5097e880bb76">
+    <link rel="stylesheet" href="assets/css/cv-builder.css?v=de222ddaa41c">
 </head>
 <body>
     <a class="skip-link" href="#main-content" data-i18n="accessibility.skipToContent">Skip to main content</a>
@@ -135,6 +136,7 @@
                             <a class="opening-action" href="assets/documents/Jhon_M_Cuenca_CV_EN.pdf" target="_blank" rel="noopener" data-cv-link data-i18n="hero.cvCta">Download international CV</a>
                             <a class="opening-action opening-action--primary" href="#contact" data-i18n="hero.contactCta">Contact</a>
                             <a class="opening-action" href="#projects" data-i18n="hero.projectsCta">Explore projects</a>
+                            <a class="opening-action" href="#cv-builder">Build a tailored CV</a>
                         </div>
                     </div>
                     <div class="opening-divider" data-reveal aria-hidden="true"></div>
@@ -206,6 +208,9 @@
             <section class="sequence-section market-section" id="recruitment-hub" data-sequence-section aria-labelledby="recruitment-title">
                 <div class="section-kicker">Recruitment Hub</div>
                 <h2 id="recruitment-title">Recruitment Hub</h2><p class="market-intro">Quick access for recruitment. Public documents only; originals and references can be requested when relevant.</p>
+                <div class="cv-builder" id="cv-builder" data-cv-builder data-cv-lang="en" aria-label="Personalised CV Builder">
+                    <h3>Personalised CV Builder</h3><p>Choose techniques relevant to the vacancy. Download a two-page CV using the restored original layout.</p><p data-cv-status role="status">Loading catalogue…</p><a class="document-link" href="cv-builder/?lang=en">Open standalone tool</a>
+                </div>
                 <div class="market-grid market-doc-grid">
                     <article class="market-card"><h3>Public CV</h3><a class="document-link" href="assets/documents/Jhon_M_Cuenca_CV_EN.pdf">Public CV</a></article>
                     <article class="market-card"><h3>Qualifications and Europass</h3><a class="document-link" href="#education">Qualifications and Europass</a></article>
@@ -230,7 +235,6 @@
                     <article class="market-card"><h3>Microbiology and quality</h3><a class="document-link" href="assets/documents/en/cv-pharma.pdf" download>Download CV (PDF)</a></article>
                     <article class="market-card"><h3>Analytical chemistry</h3><a class="document-link" href="assets/documents/en/cv-analytical.pdf" download>Download CV (PDF)</a></article>
                 </div></div>
-                <div class="market-panel"><h3>Build a personalised CV</h3><p>Select skills or analyse a vacancy and download a tailored CV using the original template.</p><a class="document-link" href="cv-builder/?lang=en">Build a personalised CV</a></div>
                 <div class="market-panel" data-application-package data-loading="Preparing package…" data-error="Could not prepare the package. Download individual PDFs instead." data-none="Select at least one document.">
                     <h3>Application package</h3>
                     <fieldset class="package-options"><legend>Select public documents</legend>
@@ -1167,5 +1171,6 @@
     <script src="assets/js/app.js?v=e702024730b0"></script>
     <script src="assets/js/market-catalogue.js?v=e624f8db0b09" defer></script>
     <script src="assets/js/application-package.js?v=549bba70d29c" defer></script>
+    <script type="module" src="assets/js/cv-builder.mjs?v=f1c3b4df08aa"></script>
 </body>
 </html>

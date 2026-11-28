@@ -64,8 +64,7 @@ def hub(lang):
         url = root + (f"Jhon_M_Cuenca_CV_{lang.upper()}.pdf" if role == "general" else f"{lang}/cv-{role}.pdf")
         cv_cards.append(f'                    <article class="market-card"><h3>{e(label)}</h3><a class="document-link" href="{a(url)}" download>{e(cv["download"])}</a></article>')
     cv_cards = "\n".join(cv_cards)
-    builder_title = {"es": "Generar CV personalizado", "en": "Build a personalised CV", "de": "Individuellen Lebenslauf erstellen"}[lang]
-    builder_intro = {"es": "Selecciona técnicas o analiza una oferta y descarga un CV adaptado con la plantilla original.", "en": "Select skills or analyse a vacancy and download a tailored CV using the original template.", "de": "Kompetenzen auswählen oder eine Stellenanzeige analysieren und einen individuellen Lebenslauf im ursprünglichen Layout herunterladen."}[lang]
+    builder = json.loads((ROOT / "data/market/cv-builder-ui.json").read_text(encoding="utf-8"))[lang]
     builder_url = ("" if lang == "en" else "../") + "cv-builder/?lang=" + lang
     controls = []
     for j,(title,link) in enumerate(zip(t["files"],files)):
@@ -75,6 +74,9 @@ def hub(lang):
     return f'''            <section class="sequence-section market-section" id="recruitment-hub" data-sequence-section aria-labelledby="recruitment-title">
                 <div class="section-kicker">{e(t["title"])}</div>
                 <h2 id="recruitment-title">{e(t["title"])}</h2><p class="market-intro">{e(t["intro"])}</p>
+                <div class="cv-builder" id="cv-builder" data-cv-builder data-cv-lang="{lang}" aria-label="{a(builder["title"])}">
+                    <h3>{e(builder["title"])}</h3><p>{e(builder["intro"])}</p><p data-cv-status role="status">{e(builder["loading"])}</p><a class="document-link" href="{a(builder_url)}">{e(builder["full"])}</a>
+                </div>
                 <div class="market-grid market-doc-grid">
 {body}
                 </div>
@@ -84,7 +86,6 @@ def hub(lang):
                 <div class="market-panel"><h3>{e(cv["cvMenu"])}</h3><p>{e(cv["cvMenuIntro"])}</p><div class="market-grid">
 {cv_cards}
                 </div></div>
-                <div class="market-panel"><h3>{e(builder_title)}</h3><p>{e(builder_intro)}</p><a class="document-link" href="{a(builder_url)}">{e(builder_title)}</a></div>
                 <div class="market-panel" data-application-package data-loading="{a(t["loading"])}" data-error="{a(t["error"])}" data-none="{a(t["none"])}">
                     <h3>{e(t["package"])}</h3>
                     <fieldset class="package-options"><legend>{e(t["select"])}</legend>

@@ -341,6 +341,8 @@ def render_main(language: str) -> str:
     source = source.replace('../assets/documents/bacteriophage-therapy-final-project_EN.pdf', f'../assets/documents/bacteriophage-therapy-final-project_{language.upper()}.pdf')
     source = source.replace('../assets/documents/bacteriophage-therapy-defense_EN.pdf', f'../assets/documents/bacteriophage-therapy-defense_{language.upper()}.pdf')
     source = localize_markup(source, load_main_translation(language))
+    builder = json.loads((ROOT / "data/market/cv-builder-ui.json").read_text(encoding="utf-8"))[language]
+    source = replace_once(source, '<a class="opening-action" href="#cv-builder">Build a tailored CV</a>', f'<a class="opening-action" href="#cv-builder">{builder["hero"]}</a>', "CV Builder hero shortcut")
     source = localize_market_profile(source, language)
     marker = '            <section class="sequence-section experience-section"'
     source = replace_once(source, marker, marked("RECRUITMENT-HUB", hub(language)) + marker, "recruitment hub")
