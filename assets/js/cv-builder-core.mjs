@@ -1,5 +1,5 @@
 import {buildDossiers} from './cv-pdf-engine.mjs?v=2';
-import {interpret,focusRoutes,facts,clauses,modality,strongest} from './cv-context.mjs?v=2';
+import {interpret,focusRoutes,facts,clauses,modality,strongest} from './cv-context.mjs?v=3';
 export {focusRoutes,facts};
 export const MAX_SKILLS=12;
 const aliases={
@@ -97,7 +97,8 @@ export function analyse(data,offer){
    row.score+=Math.max(1,5-i)+weight[hit.priority];row.reasons.push(hit.id);row.priority=strongest([row,hit]).priority;matches.set(id,row);
  }}
  const ranked=[...matches.values()].sort((a,b)=>b.score-a.score||Number(b.kind==='direct')-Number(a.kind==='direct')||a.id.localeCompare(b.id));
- const routeScores=Object.entries(data.routes).map(([id,r])=>[id,ranked.filter(x=>r.skills.includes(x.id)).reduce((n,x)=>n+x.score,0)]).sort((a,b)=>b[1]-a[1]);
+ const text=norm(offer),roleHints={analytical:/\b(?:instrumentelle analytik|analytische chemie|analysengerat\w*|analytical chemistry|instrumental analysis|analisis fisicoquimic\w*|ensayos fisicoquimic\w*|quimica analitica)\b/,food:/\b(?:food laboratory|food microbiology|lebensmittelmikrobiologie|industria alimentaria|microbiologia alimentaria)\b/,environment:/\b(?:biomass analysis|biomasseanalytik|analisis de biomasa)\b/,clinical:/\b(?:klinische chemie|clinical diagnostics|diagnostico clinico)\b/};
+ const routeScores=Object.entries(data.routes).map(([id,r])=>[id,ranked.filter(x=>r.skills.includes(x.id)).reduce((n,x)=>n+x.score,0)+(roleHints[id]?.test(text)?24:0)]).sort((a,b)=>b[1]-a[1]);
  const gapHits=[];for(const g of gaps){const rows=termHits(g.terms);if(!rows.length)continue;const best=strongest(rows),item={...g,priority:best.priority,passage:best.passage};if(best.priority==='not-required')notRequired.push(item);else gapHits.push(item);}
  return {matches:ranked,gaps:[...gapHits,...context.gaps],notRequired,route:context.school?'school':routeScores[0]?.[1]>0?routeScores[0][0]:'general',context:context.hits,factIds:context.factIds};
 }

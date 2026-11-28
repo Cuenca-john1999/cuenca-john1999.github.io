@@ -1,4 +1,4 @@
-import {MODEL,rankVectors,splitQueries} from './cv-semantic.mjs?v=1';
+import {MODEL,rankVectors,splitQueries} from './cv-semantic.mjs?v=2';
 let pipelinePromise,indexCache=null,busy=false;
 const notify=(type,payload={})=>self.postMessage({type,...payload});
 async function getModel(){

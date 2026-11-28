@@ -76,10 +76,13 @@ jobs:
           node tools/browser_smoke.mjs
           node tools/cv_builder_smoke.mjs
           node tools/cv_semantic_live.mjs
+          node tools/cv_semantic_benchmark.mjs
       - name: Upload visual checks
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: portfolio-browser-checks
-          path: test-output/*.png
+          path: |
+            test-output/*.png
+            test-output/cv-semantic-benchmark.json
           if-no-files-found: ignore

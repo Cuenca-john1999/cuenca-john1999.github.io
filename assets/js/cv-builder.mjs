@@ -1,6 +1,6 @@
-import {analyse,compose,generate,MAX_SKILLS,focusRoutes,facts} from './cv-builder-core.mjs?v=2';
+import {analyse,compose,generate,MAX_SKILLS,focusRoutes,facts} from './cv-builder-core.mjs?v=3';
 import {zip} from './cv-builder-zip.mjs';
-import {evidenceIndex,validateSuggestions} from './cv-semantic.mjs?v=1';
+import {evidenceIndex,validateSuggestions} from './cv-semantic.mjs?v=2';
 const root=new URL('../../',import.meta.url),mount=document.querySelector('[data-cv-builder]'),$=id=>mount?.querySelector('#'+id);
 const el=(tag,txt,cls)=>{const n=document.createElement(tag);if(txt!==undefined)n.textContent=txt;if(cls)n.className=cls;return n;};
 const fetchJSON=async path=>{const r=await fetch(new URL(path,root));if(!r.ok)throw Error('Load');return r.json();};
@@ -65,7 +65,7 @@ function runSemantic(){
  renderAnalysis();renderSelection();renderPreview();
  semantic.offer=offer;semantic.rows=[];semantic.busy=true;semantic.status=t().semanticLoading;renderSemantic();
  try{
-  if(!semanticWorker)semanticWorker=new Worker(new URL('./cv-semantic-worker.mjs?v=1',import.meta.url),{type:'module'});
+  if(!semanticWorker)semanticWorker=new Worker(new URL('./cv-semantic-worker.mjs?v=2',import.meta.url),{type:'module'});
   const worker=semanticWorker;
   function fail(){if(worker!==semanticWorker)return;worker.terminate();semanticWorker=null;clearTimeout(semanticTimer);semantic.busy=false;semantic.status=t().semanticError;renderSemantic();}
   worker.onerror=fail;worker.onmessageerror=fail;

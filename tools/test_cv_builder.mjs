@@ -31,3 +31,15 @@ assert(!has(analyse(data,'PCR is not required. ELISA is essential.'),'pcr'));
 assert(has(analyse(data,'Separate immune cells from blood and isolate nucleic acids.'),'cd4-cd14'));
 const long=analyse(data,'Organisation and laboratory resources. '.repeat(800)+'\nPCR and ELISA are required.');
 assert(has(long,'pcr')&&has(long,'elisa'));
+
+const regression=JSON.parse(readFileSync(new URL('./cv_semantic_benchmark_cases.json',import.meta.url),'utf8'));
+for(const c of regression){
+ const result=analyse(data,(c.prefix||'').repeat(c.repeat||0)+c.text);
+ const keys=[...result.matches.map(x=>'skill:'+x.id),...result.factIds.map(x=>'fact:'+x)];
+ for(const id of c.expected)assert(keys.includes(id),c.id+' missing '+id);
+ for(const id of c.gaps)assert(result.gaps.some(x=>x.id===id),c.id+' missing gap '+id);
+ for(const id of c.blocked||[])assert(!keys.includes(id),c.id+' blocked '+id);
+ for(const id of c.excludedGaps||[])assert(!result.gaps.some(x=>x.id===id),c.id+' excluded gap '+id);
+ assert.equal(result.route,c.route,c.id);
+}
+console.log('13 vacancy regressions passed.');

@@ -1,5 +1,5 @@
 // Pure retrieval logic. Scores are ranking signals, never probabilities of competence.
-import {clauses,modality} from './cv-context.mjs?v=2';
+import {clauses,modality} from './cv-context.mjs?v=3';
 export const MODEL={id:'Xenova/multilingual-e5-small',revision:'761b726dd34fb83930e26aab4e9ac3899aa1fa78',dtype:'int8',dimensions:384};
 export const THRESHOLD=.79; // provisional, to be calibrated on independent vacancies
 export function evidenceIndex(data,facts){

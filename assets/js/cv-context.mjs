@@ -363,6 +363,89 @@ rules.push(...[
     null
   ]
 ]);
+rules.push(...[
+  [
+    "mammalian-culture",
+    [
+      "Cultivo de células de mamífero (tipo por confirmar)",
+      "Mammalian cell culture (cell type to confirm)",
+      "Säugerzellkultur (Zelltyp prüfen)"
+    ],
+    [
+      "mammalian cell cultures?|mammalian cell lines|cultivos? de celulas de mamiferos|saugerzellkultur\\w*|kultur\\w* von saugerzellen"
+    ],
+    [
+      "hacat"
+    ],
+    null
+  ],
+  [
+    "instrument-upkeep",
+    [
+      "Mantenimiento y calibración de instrumental (alcance por confirmar)",
+      "Instrument maintenance and calibration (scope to confirm)",
+      "Gerätewartung und Kalibrierung (Umfang prüfen)"
+    ],
+    [
+      "(maintenance|calibration|servicing)\\b.{0,60}\\b(analytical instruments|laboratory equipment|instruments|equipment)",
+      "(calibracion|mantenimiento|reparacion)\\b.{0,55}\\b(equipos|instrumentos|instrumental)",
+      "(wartung|kalibrierung|instandhaltung)\\b.{0,65}\\b(analysengerat\\w*|laborgerat\\w*|messgerat\\w*|gerat\\w*)"
+    ],
+    [
+      "instrumentation"
+    ],
+    null
+  ],
+  [
+    "viable-count-reverse",
+    [
+      "Recuento de microorganismos viables",
+      "Viable microorganism counts",
+      "Lebendkeimzahl"
+    ],
+    [
+      "viable microorganism\\w* (?:enumeration|counts?|counting)|viable microbial counts|lebendkeimzahl\\w*|keimzahlbestimmung"
+    ],
+    [
+      "microbial-enumeration"
+    ],
+    null
+  ],
+  [
+    "teaching-preparation",
+    [
+      "Preparación de recursos para clases prácticas",
+      "Preparation of practical teaching resources",
+      "Vorbereitung von Unterrichtsmaterial"
+    ],
+    [
+      "(set out|lay out|arrang\\w*|provid\\w*)\\b.{0,100}\\b(pupils|lessons|classroom)|hands on science|practical lessons",
+      "(dispon\\w*|organiz\\w*|prepar\\w*)\\b.{0,65}\\b(clases practicas|material docente|recursos didacticos)",
+      "(unterrichtsmaterial\\w*|schulversuch\\w*)\\b.{0,45}\\b(vorbereit\\w*|bereitstell\\w*)"
+    ],
+    [
+      "solutions",
+      "volumetric-measurement"
+    ],
+    "teaching"
+  ],
+  [
+    "stock-replenishment",
+    [
+      "Reposición y control de material",
+      "Replenishment and stock checks",
+      "Materialnachschub und Bestandskontrolle"
+    ],
+    [
+      "(supplies|stock|consumables)\\b.{0,40}\\b(replenish\\w*|restock\\w*|up to date)|stock records|keeping stock",
+      "reposicion de material|control de material|bestande auffullen"
+    ],
+    [
+      "technical-documentation"
+    ],
+    "inventory"
+  ]
+]);
 const alerts=[
   [
     "safeguarding",
@@ -399,6 +482,30 @@ const alerts=[
   ]
 ];
 
+alerts.push(...[
+  [
+    "degree",
+    [
+      "Grado universitario solicitado: comprobar si acepta FP",
+      "University degree requested: check whether vocational qualifications are accepted",
+      "Hochschulabschluss verlangt: prüfen, ob Berufsabschluss akzeptiert wird"
+    ],
+    [
+      "bachelor(?:s| s)? degree|master(?:s| s)? degree|university degree|grado universitario|licenciatura|hochschulabschluss|universitatsabschluss"
+    ]
+  ],
+  [
+    "validation",
+    [
+      "Validación de métodos o resultados: autonomía no acreditada",
+      "Method or result validation: independent responsibility not documented",
+      "Methoden- oder Ergebnisvalidierung: eigenständige Verantwortung nicht belegt"
+    ],
+    [
+      "technical validation|method validation|validat\\w* analytical methods|validacion tecnica|validacion de metodos|validacion de resultados|technische validierung|methodenvalidierung|validierung analytischer"
+    ]
+  ]
+]);
 export function focusRoutes(data){return {...data.routes,school:schoolFocus};}
 const locale=v=>({es:v[0],en:v[1],de:v[2]});
 export const normalize=s=>String(s).replace(/ß/g,'ss').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
@@ -411,7 +518,7 @@ export function passages(offer){
 export function clauses(offer){return passages(offer).flatMap(s=>s.split(/\s+(?:but|however|pero|sin embargo|jedoch|aber)\s+/i).map(x=>x.trim()).filter(Boolean));}
 export function modality(s){
  const n=normalize(s);
- if(/\b(?:not required|not essential|not necessary|no prior experience (?:is )?required|no experience (?:is )?required|no se requiere|no es (?:necesario|obligatorio|imprescindible)|nicht erforderlich|nicht notwendig|keine .{0,50} erforderlich)\b/.test(n))return 'not-required';
+ if(/\b(?:not required|not essential|not necessary|no (?:prior )?experience (?:is )?required|no (?:prior )?[a-z0-9 ]{1,55} experience (?:is )?required|no se requiere|no es (?:necesario|obligatorio|imprescindible)|nicht erforderlich|nicht notwendig|keine .{0,50} erforderlich)\b/.test(n))return 'not-required';
  if(/\b(?:desirable|preferred|advantageous|nice to have|an advantage|a plus|beneficial|deseable|valorable|se valorara|preferiblemente|ventaja|wunschenswert|von vorteil|idealerweise)\b/.test(n))return 'preferred';
  if(/\b(?:required|essential|mandatory|must|minimum|prerequisite|obligatori\w*|imprescindible|requisito minimo|debe\w*|erforderlich|zwingend|voraussetzung|mindestens)\b/.test(n))return 'required';
  if(/\b(?:you will|responsible for|duties include|tasks include|se encargara|sera responsable|funciones incluyen|aufgaben umfassen|sie werden|verantwortlich fur)\b/.test(n))return 'duty';
@@ -428,6 +535,7 @@ export function interpret(offer){
    if(best.priority==='not-required'){notRequired.push(item);continue;}
    if(alerts.some(a=>a[0]===id))gaps.push(item);else hits.push(item);
  }
- const school=hits.some(x=>x.id==='school')&&(hits.some(x=>['experiments','stock','maintenance','safety'].includes(x.id))||/\b(school science laboratory|school laboratory technician|science technician|schullabor|laboratorio escolar)\b/.test(normalize(offer)));
- return {hits,gaps,notRequired,school,factIds:[...new Set(hits.map(h=>h.fact).filter(Boolean))]};
+ const educationText=normalize(offer).replace(/\bschool of (?:medicine|engineering|health|public health|biological sciences|pharmacy)\b/g,'');
+ const school=hits.some(x=>x.id==='school')&&/\b(?:school|pupils|classroom|teachers|science lessons|colegio|centro educativo|alumnado|docentes|schul\w*|lehrkrafte)\b/.test(educationText)&&(hits.some(x=>['experiments','stock','maintenance','safety','teaching-preparation','stock-replenishment','instrument-upkeep'].includes(x.id))||/\b(school science laboratory|school laboratory technician|science technician|schullabor|laboratorio escolar)\b/.test(normalize(offer)));
+ return {hits:school?hits:hits.filter(h=>h.id!=='school'),gaps,notRequired,school,factIds:[...new Set(hits.filter(h=>h.id!=='school'||school).map(h=>h.fact).filter(Boolean))]};
 }
