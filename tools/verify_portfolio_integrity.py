@@ -461,7 +461,7 @@ def check_search_discovery() -> None:
 def check_localized_static_fallbacks() -> None:
     expectations = {
         "de/index.html": (
-            "Klinisch-biomedizinisches<br>Laborprofil",
+            "Klinische, biomedizinische<br>und analytische Laborarbeit",
             "Ein Laborprofil geprägt von",
             "Jhon_M_Cuenca_CV_DE.pdf",
             "bacteriophage-therapy-final-project_DE.pdf",
@@ -469,7 +469,7 @@ def check_localized_static_fallbacks() -> None:
             'data-current-market="de"',
         ),
         "es/index.html": (
-            "Técnico Superior en<br>Laboratorio Clínico y Biomédico",
+            "Laboratorio clínico, biomédico<br>y analítico",
             "Un perfil de laboratorio definido por la precisión",
             "Jhon_M_Cuenca_CV_ES.pdf",
             "bacteriophage-therapy-final-project_ES.pdf",
@@ -488,8 +488,8 @@ def check_localized_static_fallbacks() -> None:
         ),
     }
     forbidden_fallbacks = {
-        "de/index.html": ("Clinical &amp; Biomedical<br>Laboratory Profile", "independent laboratory responsibility"),
-        "es/index.html": ("Clinical &amp; Biomedical<br>Laboratory Profile", "independent laboratory responsibility"),
+        "de/index.html": ("Clinical, biomedical<br>&amp; analytical laboratory profile", "independent laboratory responsibility"),
+        "es/index.html": ("Clinical, biomedical<br>&amp; analytical laboratory profile", "independent laboratory responsibility"),
         "de/workbench/index.html": ("A living space for<br><span>building, testing and learning.</span>",),
         "es/workbench/index.html": ("A living space for<br><span>building, testing and learning.</span>",),
     }
