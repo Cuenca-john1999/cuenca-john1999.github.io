@@ -35,10 +35,13 @@ for (const [engine,launcher] of Object.entries({chromium,webkit})) {
                 assert.equal(await page.locator('[data-market-skill]:visible').count(),0);
                 await page.screenshot({path:`test-output/${engine}-${viewport.width}-${lang}-compact-home.png`,fullPage:true});
                 assert.equal(await page.locator('[data-market-skill]').count(),0);
+                await page.locator('#portfolio-search').fill('PCR');await page.locator('.portfolio-search-results a').first().waitFor();
+                await page.locator('#portfolio-search').fill('');
                 await page.locator('#home-technical-link').click();
                 await page.waitForURL('**/technical/');
                 assert.equal(await page.locator('[data-market-skill]:visible').count(),expectedSkills);
                 assert.equal(await page.locator('html').getAttribute('lang'),lang);
+                const theme=await page.locator('html').getAttribute('data-theme');await page.locator('#explorer-theme').click();assert.notEqual(await page.locator('html').getAttribute('data-theme'),theme);await page.locator('#explorer-theme').click();
                 await page.screenshot({path:'test-output/'+engine+'-'+viewport.width+'-'+lang+'-technical.png',fullPage:true});
                 const search=page.locator('[data-market-search]');
                 await search.waitFor({state:'visible'});

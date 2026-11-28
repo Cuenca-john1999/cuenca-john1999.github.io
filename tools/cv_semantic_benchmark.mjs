@@ -4,7 +4,7 @@ import {chromium} from 'playwright';
 import {analyse,facts} from '../assets/js/cv-builder-core.mjs';
 import {evidenceIndex,validateSuggestions,THRESHOLD} from '../assets/js/cv-semantic.mjs';
 const load=p=>JSON.parse(readFileSync(new URL(p,import.meta.url),'utf8'));
-const data=load('../data/market/common-evidence.json'),cases=load('./cv_semantic_benchmark_cases.json');
+const data=load('../data/market/common-evidence.json'),cases=[...load('./cv_semantic_benchmark_cases.json'),...load('./cv_semantic_holdout.json')];
 const entries=evidenceIndex(data,facts),browser=await chromium.launch({headless:true}),report=[];
 const score=(keys,expected)=>({expected:expected.length,found:expected.filter(k=>keys.includes(k)),missing:expected.filter(k=>!keys.includes(k)),other:keys.filter(k=>!expected.includes(k))});
 try{
@@ -21,7 +21,7 @@ try{
    w.postMessage({type:'analyse',entries,offer});
   }),{entries,offer});
   const rawHits=validateSuggestions(raw.rows,data,facts,baseline,{rerank:false}),hits=validateSuggestions(raw.rows,data,facts,baseline),keys=hits.map(x=>x.key),union=[...new Set([...quickKeys,...keys])];
-  const row={id:c.id,language:c.lang,source:c.source,route:baseline.route,expectedRoute:c.route,passages:raw.passages,elapsedMs:Date.now()-start,quick:score(quickKeys,c.expected),semanticRaw:score(rawHits.map(x=>x.key),c.expected),semantic:score(keys,c.expected),hybrid:score(union,c.expected),gaps:baseline.gaps.map(x=>x.id),missingGaps:c.gaps.filter(g=>!baseline.gaps.some(x=>x.id===g)),thresholds:[THRESHOLD,.82,.85,.88].map(threshold=>({threshold,...score(rawHits.filter(h=>h.score>=threshold).map(h=>h.key),c.expected)})),ranked:hits.map(h=>({key:h.key,score:Number(h.score.toFixed(5))}))};
+  const row={id:c.id,set:c.set||'regression',language:c.lang,source:c.source,route:baseline.route,expectedRoute:c.route,passages:raw.passages,elapsedMs:Date.now()-start,quick:score(quickKeys,c.expected),semanticRaw:score(rawHits.map(x=>x.key),c.expected),semantic:score(keys,c.expected),hybrid:score(union,c.expected),gaps:baseline.gaps.map(x=>x.id),missingGaps:c.gaps.filter(g=>!baseline.gaps.some(x=>x.id===g)),thresholds:[THRESHOLD,.82,.85,.88].map(threshold=>({threshold,...score(rawHits.filter(h=>h.score>=threshold).map(h=>h.key),c.expected)})),ranked:hits.map(h=>({key:h.key,score:Number(h.score.toFixed(5))}))};
   report.push(row);console.log(JSON.stringify(row));
   // Known explicit skill exclusions are hard constraints. Other semantic links remain advisory.
   if(c.id==='negation')assert(!union.includes('skill:pcr'),'Explicitly excluded PCR returned');

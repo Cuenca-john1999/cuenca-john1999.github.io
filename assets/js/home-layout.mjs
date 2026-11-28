@@ -58,17 +58,23 @@ if(main){
  const legacy=location.hash.slice(1),kind=redirect(legacy);
  if(kind){const url=new URL(kind+'/',location.href);url.search=location.search;url.hash=legacy.startsWith('home-')?'':legacy;location.replace(url.href);}
  function tile(title,sub,href,id){const a=node('a','explorer-link');a.href=href;a.id=id;a.append(node('strong','',title),node('small','',sub));return a;}
+ const extraSearch=[];
+ for(const a of byId('home-documents')?.querySelectorAll('a[href]')||[]){const href=a.getAttribute('href'),title=a.closest('article')?.querySelector('h3')?.textContent.trim()||a.textContent.trim();if(title&&/\.pdf(?:$|[?#])/.test(href))extraSearch.push([title,href,a.textContent.trim()]);}
+ for(const card of equipment?.querySelectorAll('.market-card')||[]){const title=card.querySelector('h3')?.textContent.trim();if(title)extraSearch.push([title,'technical/#'+equipment.id,card.textContent]);}
  byId('home-technical')?.replaceWith(tile(words[0],words[4],'technical/','home-technical-link'));
  byId('home-documents')?.replaceWith(tile(words[1],words[5],'documents/','home-documents-link'));
  for(const a of main.querySelectorAll('a[href]')){const href=a.getAttribute('href');if(href.startsWith('#')){const id=href.slice(1),to=redirect(id);if(to)a.href=to+'/'+(id.startsWith('home-')?'':href);}else if(href.startsWith('?focus='))a.href='technical/'+href;}
  const hero=main.querySelector('.opening-composition');
  if(hero){const stats=node('div','portfolio-metrics');for(const [n,label] of [['81',words[9]],['2',words[10]],['2',words[11]],['3',words[12]]]){const item=node('div','portfolio-metric');item.append(node('strong','',n),node('small','',label));stats.append(item);}hero.querySelector('.opening-actions')?.before(stats);
  const form=node('form','portfolio-search'),lab=node('label','',words[6]),input=node('input');input.id='portfolio-search';input.type='search';input.placeholder=words[7];input.maxLength=120;lab.htmlFor=input.id;const results=node('div','portfolio-search-results');results.setAttribute('aria-live','polite');form.append(lab,input,results);hero.append(form);
- const root=new URL('../../',import.meta.url),norm=s=>String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();let promise=null,revision=0;
+ const root=new URL('../../',import.meta.url),norm=s=>String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();let promise=null,libraryPromise=null,revision=0;
  const pages=[[words[0],words[4],'technical/'],[words[1],words[5],'documents/'],[words[2],'projects science research investigación proyectos projekte','workbench/'],[words[10],'education formación ausbildung','#education'],[l.cv,'CV curriculum lebenslauf','#cv-builder'],[l.contact,'contact contacto kontakt','#contact']];
- async function search(){const id=++revision,q=norm(input.value.trim());results.replaceChildren();if(!q)return;if(!promise)promise=fetch(new URL('data/market/common-evidence.json',root)).then(r=>r.ok?r.json():null).catch(()=>null);const data=await promise;if(id!==revision)return;const match=s=>q.split(/\s+/).every(w=>norm(s).includes(w));const hits=pages.filter(p=>match(p[0]+' '+p[1])).map(p=>[p[0],p[2]]);
+ async function search(){const id=++revision,q=norm(input.value.trim());results.replaceChildren();if(!q)return;if(!promise)promise=fetch(new URL('data/market/common-evidence.json',root)).then(r=>r.ok?r.json():null).catch(()=>null);if(!libraryPromise)libraryPromise=fetch(new URL('data/market/scientific-library.json',root)).then(r=>r.ok?r.json():null).catch(()=>null);const [data,library]=await Promise.all([promise,libraryPromise]);if(id!==revision)return;const match=s=>q.split(/\s+/).every(w=>norm(s).includes(w));const hits=pages.filter(p=>match(p[0]+' '+p[1])).map(p=>[p[0],p[2]]);
  for(const s of data?.skills||[]){const v=s.locales[lang];if(match(v.name+' '+v.detail+' '+v.context))hits.push([v.name,'technical/?q='+encodeURIComponent(v.name)+'#'+catalogue.id]);}
- for(const [title,href] of hits.slice(0,7)){const a=node('a','',title);a.href=href;results.append(a);}if(!hits.length)results.append(node('small','',words[8]));}
+ for(const [title,href,detail] of extraSearch)if(match(title+' '+detail))hits.push([title,href]);
+ for(const [group,prefix] of [['notes','note-'],['projects','academic-'],['cases','case-']])for(const item of library?.[group]||[]){const v=item[lang];if(v?.length&&match(v.join(' ')))hits.push([v[0],'workbench/#'+prefix+item.id]);}
+ const unique=[...new Map(hits.map(h=>[h[0]+'|'+h[1],h])).values()];
+ for(const [title,href] of unique.slice(0,9)){const a=node('a','',title);a.href=href;results.append(a);}if(!hits.length)results.append(node('small','',words[8]));}
  input.addEventListener('input',search);form.addEventListener('submit',e=>{e.preventDefault();const first=results.querySelector('a');if(first)location.href=first.href;else search();});}
 
  const profile=byId('profile');if(profile){const more=direct(profile,'.readiness-strip,.market-actions');disclosure('home-profile-more',l.more,'',more);}
