@@ -24,7 +24,7 @@ def render(h,l,k):
     alts="\n".join(f'<link rel="alternate" hreflang="{x}" href="{BASE+("" if x=="en" else x+"/")+k+"/"}">' for x in ("en","es","de"))
     locale={"en":{"skip":"Skip to content","theme":"Switch theme","privacy":"Privacy","qual":"Qualifications and Europass","references":"References"},"es":{"skip":"Saltar al contenido","theme":"Cambiar tema","privacy":"Privacidad","qual":"Titulaciones y Europass","references":"Referencias"},"de":{"skip":"Zum Inhalt springen","theme":"Design wechseln","privacy":"Datenschutz","qual":"Abschlüsse und Europass","references":"Referenzen"}}
     z=locale[l]
-    quick="".join('<a href="#'+id+'">'+re.search(r'<h2[^>]*>([\\s\\S]*?)</h2>',section(h,id)).group(1)+'</a> ' for id in i[:3]) if k=="technical" else f'<a href="../#education">{e(z["qual"])}</a> · <a href="#{i[3]}">{e(m[1])}</a> · <a href="#references">{e(z["references"])}</a>'
+    quick="".join('<a href="#'+id+'">'+re.search(r'<h2[^>]*>([\s\S]*?)</h2>',section(h,id)).group(1)+'</a> ' for id in i[:3]) if k=="technical" else f'<a href="../#education">{e(z["qual"])}</a> · <a href="#{i[3]}">{e(m[1])}</a> · <a href="#references">{e(z["references"])}</a>'
     asset="market-catalogue.js" if k=="technical" else "application-package.js";digest=hashlib.sha256((ROOT/"assets/js"/asset).read_bytes()).hexdigest()[:12]
     script=f'<script src="{root}assets/js/{asset}?v={digest}" defer></script>'
     return f'''<!doctype html>
