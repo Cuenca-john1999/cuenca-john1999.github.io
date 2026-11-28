@@ -10,7 +10,7 @@
     "analyse": "Analizar ofertas",
     "matches": "Coincidencias detectadas",
     "gaps": "Requisitos que necesitan comprobación",
-    "warning": "Análisis por términos y sinónimos, no una evaluación completa. Revisa requisitos obligatorios, deseables, negaciones, años de experiencia, títulos, idiomas y habilitación. Una coincidencia no acredita todas las condiciones.",
+    "warning": "Análisis por términos y patrones de funciones. No es IA generativa; revisa requisitos obligatorios, negaciones, años de experiencia y alcance de las coincidencias.",
     "noMatches": "No hay coincidencias detectadas",
     "noGaps": "Sin alertas del diccionario; otros requisitos pueden seguir pendientes.",
     "shared": "Coincidencias comunes",
@@ -58,7 +58,12 @@
     "noResults": "No se encontraron técnicas.",
     "local": "Sin registro · Procesamiento local",
     "full": "Abrir herramienta en página propia",
-    "topic": "Especialidad"
+    "topic": "Especialidad",
+    "tasks": "Funciones detectadas por contexto",
+    "transferable": "Evidencias transversales relevantes",
+    "related": "Relación por función (revisar alcance)",
+    "direct": "Coincidencia de término",
+    "teaching": "Experiencia docente"
   },
   "en": {
     "title": "Personalised CV Builder",
@@ -71,7 +76,7 @@
     "analyse": "Analyse vacancies",
     "matches": "Detected matches",
     "gaps": "Requirements to review",
-    "warning": "Keyword and synonym matching, not a complete assessment. Review mandatory and preferred requirements, negations, experience years, qualifications, languages and authorisation. A match does not establish every condition.",
+    "warning": "Term and task-pattern analysis. Not generative AI; review mandatory requirements, negations, experience years and scope of matches.",
     "noMatches": "No matches detected",
     "noGaps": "No dictionary alerts; other requirements may remain unmet.",
     "shared": "Shared matches",
@@ -119,7 +124,12 @@
     "noResults": "No techniques found.",
     "local": "No sign-in · Local processing",
     "full": "Open standalone tool",
-    "topic": "Specialty"
+    "topic": "Specialty",
+    "tasks": "Detected job functions",
+    "transferable": "Relevant transferable evidence",
+    "related": "Task-related match (review scope)",
+    "direct": "Term match",
+    "teaching": "Teaching experience"
   },
   "de": {
     "title": "Individueller Lebenslauf-Generator",
@@ -132,7 +142,7 @@
     "analyse": "Anzeigen analysieren",
     "matches": "Erkannte Treffer",
     "gaps": "Anforderungen zur Prüfung",
-    "warning": "Abgleich anhand von Schlüsselwörtern und Synonymen, keine vollständige Bewertung. Pflicht- und Wunschkriterien, Verneinungen, Erfahrungsjahre, Abschlüsse, Sprachen und Zulassung prüfen. Ein Treffer belegt nicht alle Anforderungen.",
+    "warning": "Begriffs- und Aufgabenmusteranalyse. Keine generative KI; Pflichtanforderungen, Verneinungen, Erfahrungsjahre und Umfang prüfen.",
     "noMatches": "Keine Treffer erkannt",
     "noGaps": "Keine Wörterbuchwarnungen; weitere Anforderungen können offen sein.",
     "shared": "Gemeinsame Treffer",
@@ -180,6 +190,11 @@
     "noResults": "Keine Techniken gefunden.",
     "local": "Ohne Anmeldung · Lokale Verarbeitung",
     "full": "Eigenständige Ansicht öffnen",
-    "topic": "Fachgebiet"
+    "topic": "Fachgebiet",
+    "tasks": "Erkannte Aufgaben",
+    "transferable": "Relevante übertragbare Nachweise",
+    "related": "Aufgabenbezogener Treffer (Umfang prüfen)",
+    "direct": "Begriffstreffer",
+    "teaching": "Unterrichtserfahrung"
   }
 }

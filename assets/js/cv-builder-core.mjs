@@ -1,4 +1,6 @@
 import {buildDossiers} from './cv-pdf-engine.mjs';
+import {interpret,focusRoutes,facts} from './cv-context.mjs';
+export {focusRoutes,facts};
 export const MAX_SKILLS=12;
 const aliases={
 "haematology":["hematologia","hematology","haematology","hamatologie","hemograma","blood count","blutbild"],
@@ -74,13 +76,19 @@ export const gaps=[
 const norm=s=>String(s).replace(/ß/g,"ss").normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 function contains(text,term){const q=norm(term);return q.length>=2&&(' '+text+' ').includes(' '+q+' ');}
 export function analyse(data,offer){
- const text=norm(offer),matches=[];
+ const text=norm(offer),context=interpret(offer),matches=new Map(),allowed=new Set(data.skills.map(s=>s.id));
  for(const s of data.skills){
    const terms=[...(aliases[s.id]||[]),...['es','en','de'].map(l=>s.locales[l].name)];
-   const found=[...new Set(terms.filter(t=>contains(text,t)))];if(found.length)matches.push({id:s.id,terms:found});
+   const found=[...new Set(terms.filter(t=>contains(text,t)))];
+   if(found.length)matches.set(s.id,{id:s.id,terms:found,score:8+Math.min(found.length,3),kind:'direct',reasons:[]});
  }
- const routeScores=Object.entries(data.routes).map(([id,r])=>[id,matches.filter(x=>r.skills.includes(x.id)).length]).sort((a,b)=>b[1]-a[1]);
- return {matches,gaps:gaps.filter(g=>g.terms.some(t=>contains(text,t))),route:routeScores[0]?.[1]>0?routeScores[0][0]:'general'};
+ for(const hit of context.hits){for(const [i,id] of hit.skills.entries()){
+   if(!allowed.has(id))continue;const row=matches.get(id)||{id,terms:[],score:0,kind:'related',reasons:[]};
+   row.score+=Math.max(1,5-i);row.reasons.push(hit.id);matches.set(id,row);
+ }}
+ const ranked=[...matches.values()].sort((a,b)=>b.score-a.score||Number(b.kind==='direct')-Number(a.kind==='direct')||a.id.localeCompare(b.id));
+ const routeScores=Object.entries(data.routes).map(([id,r])=>[id,ranked.filter(x=>r.skills.includes(x.id)).reduce((n,x)=>n+x.score,0)]).sort((a,b)=>b[1]-a[1]);
+ return {matches:ranked,gaps:[...gaps.filter(g=>g.terms.some(t=>contains(text,t))),...context.gaps],route:context.school?'school':routeScores[0]?.[1]>0?routeScores[0][0]:'general',context:context.hits,factIds:context.factIds};
 }
 export function selectIds(data,ids){
  const allowed=new Set(data.skills.map(s=>s.id)),unique=[...new Set(ids)];
@@ -95,8 +103,8 @@ de:{intro:"Laborfachkraft mit zwei offiziellen spanischen Berufsabschlüssen.",f
 export function compose(data,cv,lang,route,ids,contact=''){
  if(!['es','en','de'].includes(lang))throw Error('Invalid language');
  ids=selectIds(data,ids);
- if(route!=='general'&&!data.routes[route])throw Error('Invalid role');
- const role=({food:'pharma',environment:'analytical',quality:'analytical'})[route]||route;
+ if(route!=='general'&&!focusRoutes(data)[route])throw Error('Invalid role');
+ const role=({food:'pharma',environment:'analytical',quality:'analytical',school:'general'})[route]||route;
  const m=messages[lang],base=cv[lang].variants[role],skills=ids.map(id=>data.skills.find(s=>s.id===id));
  const placed=['La Princesa','Celignis'].map(src=>skills.filter(s=>s.source===src));
  const academic=skills.filter(s=>!['La Princesa','Celignis'].includes(s.source));
@@ -109,12 +117,14 @@ export function compose(data,cv,lang,route,ids,contact=''){
    return [k+': '+v.map(x=>x.name).join('; ')+'.'];
  });};
  const placement=placed.map((arr,i)=>arr.length?group(arr):[m.fallback[i]]);
+ if(route==='school')placement[0].push(facts.inventory[lang]);
  const order=placed[1].length>placed[0].length?[1,0]:[0,1];
  const priority=academic.length>=Math.max(placed[0].length,placed[1].length)&&academic.length?'academic':order[0]===1?'celignis':'princesa';
  const topicNames=[...new Set(skills.map(s=>data.topics[s.topic][lang]))].slice(0,3);
- const profile=m.intro+' '+m.focus+': '+topicNames.join('; ')+'. '+(role==='clinical'&&lang==='de'?'Eine deutsche MTL-Anerkennung ist nicht nachgewiesen.':role==='clinical'&&lang==='en'?'Regulated clinical roles depend on local authorisation.':role==='pharma'?({es:'Formación relacionada; no experiencia GMP acreditada.',en:'Related training; no documented GMP experience.',de:'Verwandte Ausbildung; keine nachgewiesene GMP-Erfahrung.'})[lang]:'');
+ let profile=m.intro+' '+m.focus+': '+topicNames.join('; ')+'. '+(role==='clinical'&&lang==='de'?'Eine deutsche MTL-Anerkennung ist nicht nachgewiesen.':role==='clinical'&&lang==='en'?'Regulated clinical roles depend on local authorisation.':role==='pharma'?({es:'Formación relacionada; no experiencia GMP acreditada.',en:'Related training; no documented GMP experience.',de:'Verwandte Ausbildung; keine nachgewiesene GMP-Erfahrung.'})[lang]:'');
  if(contact.length>150||/[\r\n]/.test(contact)||Array.from(contact).some(c=>c.charCodeAt(0)>255||c.charCodeAt(0)<32))throw Error('Invalid contact');
- return {lang,role,route,ids,contact,variant:{subtitle:m.labels[route]||base.subtitle,profile,placements:placement,academic:group(academic),priority,order}};
+ if(route==='school')profile=({es:'Técnico de laboratorio con dos titulaciones oficiales españolas de FP y experiencia como instructor de robótica educativa STEM. Formación práctica de laboratorio, complementada con prácticas de organización de material y documentación. Formación básica en prevención de riesgos laborales.',en:'Laboratory technician with two official Spanish vocational qualifications and experience as an educational robotics instructor. Academic laboratory practical training, complemented by placement experience in laboratory organisation and documentation. Basic occupational risk prevention training.',de:'Laborfachkraft mit zwei offiziellen spanischen Berufsabschlüssen und Erfahrung als Dozent für Bildungsrobotik. Praktische Laborausbildung, ergänzt durch Praktikumserfahrung in Labororganisation und Dokumentation. Grundausbildung Arbeitsschutz.'})[lang];
+ return {lang,role,route,ids,contact,variant:{subtitle:route==='school'?({es:'Técnico de laboratorio | Apoyo a la enseñanza de ciencias',en:'Laboratory Technician | Science Education Support',de:'Laborfachkraft | Naturwissenschaftlicher Unterricht'})[lang]:m.labels[route]||base.subtitle,profile,placements:placement,academic:group(academic),priority,order,school:route==='school'}};
 }
 export function generate(data,cv,custom){
  const files=buildDossiers(p=>p.endsWith('common-evidence.json')?JSON.stringify(data):p.endsWith('cv.json')?JSON.stringify(cv):'',custom);

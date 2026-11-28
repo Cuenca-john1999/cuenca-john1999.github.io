@@ -15,3 +15,10 @@ for(const lang of ['es','en','de']){
 assert.throws(()=>compose(data,cv,'es','general',['fake-id']));assert.throws(()=>compose(data,cv,'es','general',[]));assert.throws(()=>compose(data,cv,'es','general',data.skills.slice(0,MAX_SKILLS+1).map(s=>s.id)));
 const env=compose(data,cv,'es','pharma',['microbial-environmental-sampling','glp-sop']);assert(env.variant.academic.join(' ').includes('RODAC'));assert(env.variant.placements[1].join(' ').includes('Celignis'));
 const ids=['pcr','hacat','cd4-cd14'];const publicPDF=generate(data,cv,compose(data,cv,'en','research',ids));assert(generate(data,cv,compose(data,cv,'en','research',ids,'test@example.invalid')).includes('test@example.invalid'));assert(!publicPDF.includes('test@example.invalid'));assert.notEqual(publicPDF,generate(data,cv,compose(data,cv,'en','research',['elisa'])));console.log('CV builder matcher and PDF tests passed.');
+
+const school=analyse(data,'Our school science department needs someone to assemble apparatus for practical experiments, make solutions, prepare cultures, maintain equipment, manage inventory and follow health and safety regulations. Support teachers and students. Microsoft Office and English B2. Safeguarding and risk assessments are required.');
+assert.equal(school.route,'school');for(const id of ['solutions','instrumentation','culture-media-preparation','emergency-equipment'])assert(has(school,id));assert(school.factIds.includes('teaching'));assert(school.factIds.includes('digital'));assert(school.gaps.some(x=>x.id==='safeguarding'));
+assert.equal(analyse(data,'En un colegio, preparar experimentos y disoluciones, mantener equipos y gestionar inventario.').route,'school');
+assert.equal(analyse(data,'Schule: Experimente vorbereiten, Geräte warten, Laborbedarf und Arbeitsschutz.').route,'school');
+assert.notEqual(analyse(data,'Research laboratory: HaCaT cell culture, PCR and ELISA.').route,'school');
+for(const l of ['es','en','de']){const pdf=generate(data,cv,compose(data,cv,l,'school',school.matches.slice(0,12).map(x=>x.id)));assert(pdf.includes('FORM-ED / WASHI'));assert(pdf.includes('/Count 2'));}

@@ -104,11 +104,13 @@ export function buildDossiers(read, custom=null){
    const order=custom?v.order:(v.priority==="celignis"||role==="pharma"?[1,0]:[0,1]);
    for(const i of order)y=entry(first,cvLocale.exp[i][0],layout.job[i],layout.location[i],i===0?"03/2025 - 06/2025":"03/2023 - 05/2023",y,v.placements[i]);
    if(v.priority!=="academic")acad();
+   const teaching=custom&&v.school?layout.additionalRows.find(row=>row[0]==="FORM-ED / WASHI"):null;
+   if(teaching){y=heading(first,({es:"EXPERIENCIA DOCENTE",en:"TEACHING EXPERIENCE",de:"UNTERRICHTSERFAHRUNG"})[lang],y);y=entry(first,...teaching.slice(0,4),y,[teaching[4]]);}
    if(y<49)throw Error("CV page 1 overflow "+lang+" "+role+" "+y);
    footer(first);
    y=797;
    y=heading(second,layout.additional,y);
-   for(const [company,job,place,date,body] of layout.additionalRows)y=entry(second,company,job,place,date,y,[body]);
+   for(const [company,job,place,date,body] of layout.additionalRows){if(teaching&&company===teaching[0])continue;y=entry(second,company,job,place,date,y,[body]);}
    y=heading(second,layout.education,y);
    const quals=["Técnico Superior en Laboratorio Clínico y Biomédico","Técnico en Operaciones de Laboratorio"];
    const schools=["CEAC FP OFICIAL","IES VIRGEN DE LA PALOMA"];
